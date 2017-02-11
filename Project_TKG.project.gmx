@@ -59,16 +59,12 @@
       <sprite>sprites\spr_barrel</sprite>
       <sprite>sprites\spr_rock</sprite>
       <sprite>sprites\spr_vase</sprite>
-      <sprite>sprites\spr_crate</sprite>
-      <sprite>sprites\spr_chest</sprite>
     </sprites>
     <sprites name="walls">
       <sprite>sprites\spr_wall_up</sprite>
       <sprite>sprites\spr_wall_left</sprite>
       <sprite>sprites\spr_wall_right</sprite>
       <sprite>sprites\spr_wall_down</sprite>
-      <sprite>sprites\spr_dungeon_wall</sprite>
-      <sprite>sprites\spr_torch</sprite>
     </sprites>
     <sprites name="floor+">
       <sprite>sprites\spr_fl_up</sprite>
@@ -99,50 +95,27 @@
       <sprite>sprites\sword_spr</sprite>
       <sprite>sprites\spr_sword</sprite>
       <sprite>sprites\spr_swing</sprite>
-      <sprite>sprites\spr_equip</sprite>
-      <sprite>sprites\spr_fheart</sprite>
-      <sprite>sprites\spr_hheart</sprite>
-      <sprite>sprites\spr_gui</sprite>
-      <sprite>sprites\spr_hands</sprite>
-      <sprite>sprites\spr_full_body</sprite>
     </sprites>
     <sprites name="enemy">
-      <sprites name="bat">
-        <sprite>sprites\spr_bat_back</sprite>
-        <sprite>sprites\spr_bat_side</sprite>
-        <sprite>sprites\spr_bat_front</sprite>
-      </sprites>
-      <sprites name="slimes">
-        <sprites name="slime">
-          <sprite>sprites\spr_slime_hit</sprite>
-          <sprite>sprites\spr_slime_side</sprite>
-          <sprite>sprites\spr_slime_up</sprite>
-          <sprite>sprites\spr_slime_down</sprite>
-        </sprites>
-        <sprite>sprites\spr_enemy</sprite>
-        <sprite>sprites\spr_slm_b_f</sprite>
-        <sprite>sprites\spr_slm_b_w</sprite>
-        <sprite>sprites\spr_creep</sprite>
-        <sprite>sprites\spr_slmbullet</sprite>
-        <sprite>sprites\spr_tumey_1</sprite>
-        <sprite>sprites\spr_tumey_2</sprite>
-        <sprite>sprites\spr_tumey_3w</sprite>
-        <sprite>sprites\spr_green_puff</sprite>
-        <sprite>sprites\spr_tumey_3e</sprite>
-        <sprite>sprites\spr_red_puff</sprite>
-        <sprite>sprites\spr_blue_puff</sprite>
-      </sprites>
-      <sprite>sprites\spr_mimic_a</sprite>
-      <sprite>sprites\spr_mimic_i</sprite>
+      <sprite>sprites\spr_slmbullet</sprite>
+      <sprite>sprites\spr_slm_b_f</sprite>
+      <sprite>sprites\spr_slm_b_w</sprite>
+      <sprite>sprites\spr_enemy</sprite>
     </sprites>
     <sprite>sprites\spr_explsion</sprite>
     <sprite>sprites\spr_test</sprite>
+    <sprite>sprites\spr_equip</sprite>
+    <sprite>sprites\spr_fheart</sprite>
+    <sprite>sprites\spr_hheart</sprite>
+    <sprite>sprites\spr_tumey_1</sprite>
+    <sprite>sprites\spr_tumey_2</sprite>
+    <sprite>sprites\spr_gui</sprite>
+    <sprite>sprites\spr_tumey_3w</sprite>
+    <sprite>sprites\spr_green_puff</sprite>
+    <sprite>sprites\spr_blue_puff</sprite>
+    <sprite>sprites\spr_red_puff</sprite>
+    <sprite>sprites\spr_tumey_3e</sprite>
     <sprite>sprites\spr_cursor</sprite>
-    <sprites name="mermaid">
-      <sprite>sprites\spr_mer_body_down</sprite>
-      <sprite>sprites\spr_mer_head</sprite>
-    </sprites>
-    <sprite>sprites\sprite79</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -154,7 +127,6 @@
     <script>scripts\scr_dash_state.gml</script>
     <script>scripts\scr_get_input.gml</script>
     <script>scripts\scr_move_state.gml</script>
-    <script>scripts\scr_part_fire_init.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
@@ -177,9 +149,6 @@
       <object>objects\obj_fheart</object>
       <object>objects\obj_hheart</object>
       <object>objects\obj_vase</object>
-      <object>objects\obj_dungeon_wall</object>
-      <object>objects\obj_crate</object>
-      <object>objects\obj_torch</object>
     </objects>
     <objects name="gen">
       <object>objects\obj_ppon</object>
@@ -192,7 +161,6 @@
       <object>objects\obj_bdoor</object>
       <object>objects\obj_gui</object>
       <object>objects\obj_gen_v2</object>
-      <object>objects\obj_ps_controller</object>
     </objects>
     <objects name="boss">
       <object>objects\obj_green_puff</object>
@@ -209,20 +177,15 @@
       <object>objects\obj_sword</object>
       <object>objects\obj_sword_t</object>
       <object>objects\obj_pglobs</object>
-      <object>objects\obj_kb</object>
     </objects>
     <objects name="enemy">
       <object>objects\obj_explosion</object>
       <object>objects\obj_enemy</object>
       <object>objects\obj_slm_a</object>
-      <object>objects\obj_bat</object>
-      <object>objects\obj_slm_cr</object>
-      <object>objects\obj_mimic</object>
       <object>objects\obj_slm_b</object>
       <object>objects\obj_slm_bullet</object>
       <object>objects\obj_red_puff</object>
       <object>objects\obj_blue_puff</object>
-      <object>objects\obj_creep</object>
     </objects>
     <objects name="test">
       <object>objects\object26</object>
@@ -279,19 +242,13 @@
       <object>objects\obj_fl_dn</object>
     </objects>
     <object>objects\obj_cursor</object>
-    <objects name="chsl">
-      <object>objects\obj_back</object>
-      <object>objects\obj_chsl</object>
-      <object>objects\obj_select</object>
-    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_menu_1</room>
-    <room>rooms\rm_menu_2</room>
-    <room>rooms\rm_chsl</room>
+    <room>rooms\room0</room>
+    <room>rooms\room1</room>
     <room>rooms\rm_level</room>
-    <room>rooms\rm_boss</room>
-    <room>rooms\rm_dead</room>
+    <room>rooms\room4</room>
+    <room>rooms\room5</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
