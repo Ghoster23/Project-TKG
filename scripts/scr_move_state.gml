@@ -33,7 +33,7 @@ phy_position_y += vspd;
 //control sprite
 image_speed =.5;
 if (len == 0) {
-    sprite_index = spr_body_still;
+    sprite_index = global.char_bsprs[global.char,3];
     image_speed = 0;
     image_index = spr_side;
 }
