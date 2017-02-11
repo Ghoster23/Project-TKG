@@ -135,12 +135,16 @@
       <sprite>sprites\spr_mimic_a</sprite>
       <sprite>sprites\spr_mimic_i</sprite>
     </sprites>
-    <sprite>sprites\spr_explsion</sprite>
     <sprite>sprites\spr_test</sprite>
     <sprite>sprites\spr_cursor</sprite>
     <sprites name="mermaid">
       <sprite>sprites\spr_mer_body_down</sprite>
       <sprite>sprites\spr_mer_head</sprite>
+    </sprites>
+    <sprites name="particles">
+      <sprite>sprites\spr_cbits</sprite>
+      <sprite>sprites\spr_smoke</sprite>
+      <sprite>sprites\spr_explsion</sprite>
     </sprites>
     <sprite>sprites\sprite79</sprite>
   </sprites>
@@ -155,6 +159,8 @@
     <script>scripts\scr_get_input.gml</script>
     <script>scripts\scr_move_state.gml</script>
     <script>scripts\scr_part_fire_init.gml</script>
+    <script>scripts\scr_part_smoke_init.gml</script>
+    <script>scripts\scr_part_cbits_init.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
@@ -212,16 +218,19 @@
       <object>objects\obj_kb</object>
     </objects>
     <objects name="enemy">
-      <object>objects\obj_explosion</object>
-      <object>objects\obj_enemy</object>
-      <object>objects\obj_slm_a</object>
+      <objects name="old">
+        <object>objects\obj_enemy</object>
+        <object>objects\obj_explosion</object>
+        <object>objects\obj_slm_b</object>
+        <object>objects\obj_slm_a</object>
+        <object>objects\obj_slm_bullet</object>
+        <object>objects\obj_red_puff</object>
+        <object>objects\obj_blue_puff</object>
+      </objects>
       <object>objects\obj_bat</object>
+      <object>objects\obj_skull</object>
       <object>objects\obj_slm_cr</object>
       <object>objects\obj_mimic</object>
-      <object>objects\obj_slm_b</object>
-      <object>objects\obj_slm_bullet</object>
-      <object>objects\obj_red_puff</object>
-      <object>objects\obj_blue_puff</object>
       <object>objects\obj_creep</object>
     </objects>
     <objects name="test">

@@ -110,7 +110,7 @@ if(place_meeting(x,y,obj_body) &amp;&amp; !place_meeting(x,y,obj_ppon) &amp;&amp
     
    instance_create(tpx,tpy,obj_body);
    
-   alarm[1]=40;
+   alarm[1] = 40;
 }
 </string>
           </argument>
@@ -129,8 +129,5 @@ if(place_meeting(x,y,obj_body) &amp;&amp; !place_meeting(x,y,obj_ppon) &amp;&amp
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints>
-    <point>36,11</point>
-    <point>36,36</point>
-  </PhysicsShapePoints>
+  <PhysicsShapePoints/>
 </object>

@@ -64,7 +64,7 @@ if phy_rotation &lt; 0{
     speed = 0;
 }
 
-if impact = true and global.thrown = true and keyboard_check(interact_key) and  place_meeting(x, y, obj_body){
+if impact = true and global.thrown = true  and  place_meeting(x, y, obj_body){
     instance_destroy();
     instance_create(x,y,obj_sword);
 }
@@ -108,29 +108,6 @@ impact=true;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_lifeform_parent">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///colide
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="7" enumb="0">
       <action>
         <libid>1</libid>
@@ -162,7 +139,7 @@ impact=true;
   <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
   <PhysicsObjectLinearDamping>0.100000001490116</PhysicsObjectLinearDamping>
-  <PhysicsObjectAngularDamping>1</PhysicsObjectAngularDamping>
+  <PhysicsObjectAngularDamping>2</PhysicsObjectAngularDamping>
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>

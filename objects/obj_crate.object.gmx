@@ -29,6 +29,34 @@
 image_speed = 0;
 impact = true;
 image_index = irandom(8);
+em = part_emitter_create(global.ps);
+part_emitter_region(global.ps,em,x,x+32,y,y+32,ps_shape_rectangle,ps_distr_linear);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>part_type_direction(global.pt_cbits,point_direction(obj_body.x,obj_body.y,x,y),point_direction(obj_body.x,obj_body.y,x,y),0,0);
+part_emitter_burst(global.ps,em,global.pt_smoke,10)
+part_emitter_burst(global.ps,em,global.pt_cbits,5)
+instance_destroy()
 </string>
           </argument>
         </arguments>
@@ -52,6 +80,11 @@ image_index = irandom(8);
           <argument>
             <kind>1</kind>
             <string>depth = -y;
+
+if place_meeting(x,y,obj_swing){
+    image_blend = c_red;
+    alarm[0]=0.02*room_speed;
+}
 </string>
           </argument>
         </arguments>

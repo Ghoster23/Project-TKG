@@ -31,6 +31,7 @@ image_speed=0;
 solid = false;
 visible = false;
 flash = false;
+a = 0;
 
 interval = false;
 blink = false;
@@ -223,10 +224,10 @@ depth = -y;
 if dis &lt; 64 and interact_key{
     state = 1;
     
-    image_speed = 45;
+    image_speed = .9;
     sprite_index = spr_mimic_a;
         
-    e_spd = 6;
+    e_spd = 4;
 }
     
 ///Enemy Behaevior
@@ -235,6 +236,8 @@ switch(state){
     //concealed animation
     break;
     case 1:
+        a += 1;
+        phy_rotation = 25 * sin(a); 
         phy_position_x += sign(obj_body.x - x)*e_spd;
         phy_position_y += sign(obj_body.y - y)*e_spd;
             

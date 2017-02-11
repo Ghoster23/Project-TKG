@@ -111,7 +111,7 @@ if(place_meeting(x,y,obj_body) &amp;&amp; !place_meeting(x,y,obj_ppon) &amp;&amp
    instance_create(tpx,tpy,obj_body);
    
    global.d_cd = true;
-   alarm[1]=40
+   alarm[1] = 40;
 }
 </string>
           </argument>
