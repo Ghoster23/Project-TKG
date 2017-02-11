@@ -57,6 +57,7 @@ image_speed = 0;
           <argument>
             <kind>1</kind>
             <string>scr_get_input();
+depth = obj_body.depth +450;
 
 while(confirm == false){
 
@@ -82,7 +83,7 @@ if(confirm == true &amp;&amp; distance_to_object(obj_body) &lt; 12 &amp;&amp; in
 }
 
 if(image_index &gt;= 6){ 
-    room_goto(global.broomt);
+    room_goto(rm_boss);
     with(obj_body){
         instance_destroy();
     }

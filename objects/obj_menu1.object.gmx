@@ -52,7 +52,7 @@ image_speed=0.8;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto(1);
+            <string>room_goto(rm_menu_2);
 </string>
           </argument>
         </arguments>
@@ -75,7 +75,7 @@ image_speed=0.8;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto(2);
+            <string>room_goto(rm_chsl);
 </string>
           </argument>
         </arguments>

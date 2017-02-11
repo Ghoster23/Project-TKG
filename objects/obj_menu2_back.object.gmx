@@ -49,7 +49,7 @@ ultimate_back=false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto(0);
+            <string>room_goto(rm_menu_1);
 </string>
           </argument>
         </arguments>

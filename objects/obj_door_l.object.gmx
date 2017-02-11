@@ -75,8 +75,8 @@
             <string>depth = -y;
 tpx = 0;
 tpy = 0;
-roomwd = 480;
-roomhg = 352;
+roomwd = 544;
+roomhg = 416;
 
 
 if(place_meeting(x,y,obj_body) &amp;&amp; !place_meeting(x,y,obj_ppon) &amp;&amp; global.lock == false &amp;&amp; global.d_cd == false){

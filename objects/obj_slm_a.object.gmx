@@ -98,7 +98,6 @@ if(place_meeting(x,y,obj_ppon)){
     }
     
     /// Move towards the player
-    
     if(distance_to_object(obj_body) &lt; 192){
         phy_position_x += sign(obj_body.x - x)*e_spd;
         phy_position_y += sign(obj_body.y - y)*e_spd;
@@ -168,8 +167,8 @@ if(place_meeting(x,y,obj_ppon)){
   <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
   <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
-  <PhysicsObjectLinearDamping>0.100000001490116</PhysicsObjectLinearDamping>
-  <PhysicsObjectAngularDamping>0.100000001490116</PhysicsObjectAngularDamping>
+  <PhysicsObjectLinearDamping>1</PhysicsObjectLinearDamping>
+  <PhysicsObjectAngularDamping>1</PhysicsObjectAngularDamping>
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>

@@ -75,8 +75,8 @@
             <string>depth = -y;
 tpx = 0;
 tpy = 0;
-roomwd = 480;
-roomhg = 352;
+roomwd = 544;
+roomhg = 416;
 
 if(place_meeting(x,y,obj_body) &amp;&amp; !place_meeting(x,y,obj_ppon) &amp;&amp; global.lock == false &amp;&amp; global.d_cd == false){
     tpx = obj_body.x;
@@ -86,12 +86,11 @@ if(place_meeting(x,y,obj_body) &amp;&amp; !place_meeting(x,y,obj_ppon) &amp;&amp
     global.vfx = obj_view.x;
     global.vfy = obj_view.y+roomhg;
     
-        with(obj_view){
+    with(obj_view){
         
         move_towards_point(global.vfx,global.vfy,16);
         
     }
-    
     
     with(obj_roll){
         instance_destroy();
@@ -104,9 +103,11 @@ if(place_meeting(x,y,obj_body) &amp;&amp; !place_meeting(x,y,obj_ppon) &amp;&amp
     with(obj_body){
         instance_destroy();
     }
+    
     with(obj_sword_t){
         instance_destroy();
     }
+    
    instance_create(tpx,tpy,obj_body);
    
    alarm_set(1,40);

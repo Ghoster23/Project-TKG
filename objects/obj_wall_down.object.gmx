@@ -3,7 +3,7 @@
   <spriteName>spr_wall_down</spriteName>
   <solid>-1</solid>
   <visible>-1</visible>
-  <depth>-1</depth>
+  <depth>-1000000</depth>
   <persistent>0</persistent>
   <parentName>obj_solid_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>depth = -1;
+            <string>depth = -y;
 </string>
           </argument>
         </arguments>
@@ -44,9 +44,9 @@
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>0,0</point>
-    <point>480,0</point>
-    <point>480,32</point>
-    <point>0,32</point>
+    <point>1,14</point>
+    <point>544,14</point>
+    <point>544,32</point>
+    <point>1,32</point>
   </PhysicsShapePoints>
 </object>

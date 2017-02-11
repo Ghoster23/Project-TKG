@@ -26,8 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>//Measurements
-roomwd = 480;
-roomhg = 352;
+global.roomwd = 544;
+global.roomhg = 416;
 
 //Gen Cursor
 gx = room_width/2;
@@ -46,19 +46,19 @@ right = false;
 left = false;
 
 ///Base Room
-instance_create(gx,gy,obj_wall_left);     
-instance_create(gx+480-32,gy,obj_wall_right); 
-instance_create(gx,gy+352-32,obj_wall_down); 
-instance_create(gx,gy,obj_wall_up); 
-instance_create(gx+208+32,gy+176+32,obj_floor);
+instance_create(gx,gy,obj_wall_left);
+instance_create(gx,gy,obj_wall_up);
+instance_create(gx,gy+global.roomhg-32,obj_wall_down);
+instance_create(gx+global.roomwd-32,gy,obj_wall_right);
+instance_create(gx+global.roomwd/2,gy+global.roomhg/2+31,obj_floor);
 
 l[4,4] = true
 
 //Player
-instance_create(gx+roomwd/2,gy+roomhg/2,obj_body);
+instance_create(gx+global.roomwd/2,gy+global.roomhg/2,obj_body);
 
 //View
-instance_create(gx+roomwd/2,gy+roomhg/2,obj_view);
+instance_create(room_width/2+global.roomwd/2,room_height/2+global.roomhg/2,obj_view);
 
 //Room counts
 broom = 1;
@@ -195,42 +195,42 @@ while roomgenerated != roomstogenerate{
             roomgenerated += 1;
             
             ///Place the gen cursor
-            gx = roomwd * c;
-            gy = roomhg * r;
+            gx = global.roomwd * c;
+            gy = global.roomhg * r;
             
             ///Base Room
-            instance_create(gx,gy,obj_wall_left);     
-            instance_create(gx+roomwd-32,gy,obj_wall_right); 
-            instance_create(gx,gy+roomhg-32,obj_wall_down); 
-            instance_create(gx,gy,obj_wall_up); 
-            instance_create(gx+(roomwd/2),gy+(roomhg/2)+32,obj_floor);
+            instance_create(gx,gy,obj_wall_left);
+            instance_create(gx,gy,obj_wall_up);
+            instance_create(gx,gy+global.roomhg-32,obj_wall_down);
+            instance_create(gx+global.roomwd-32,gy,obj_wall_right);
+            instance_create(gx+(global.roomwd/2),gy+(global.roomhg/2)+31,obj_floor);
             
             ///Fill the room
             scr_roomgn(typeroom);
             
             ///Doors
             if up{
-                if(!instance_position((gx+(roomwd/2)),(gy-32),obj_door_d)){
-                    instance_create(gx+(roomwd/2),(gy-32),obj_door_d);
-                    instance_create(gx+(roomwd/2),gy+((32*1.5)+11),obj_door_u); 
+                if(!instance_position((gx+(global.roomwd/2)),(gy-32),obj_door_d)){
+                    instance_create(gx+(global.roomwd/2),(gy-32),obj_door_d);
+                    instance_create(gx+(global.roomwd/2),gy+((32*1.5)+11),obj_door_u); 
                 }
             } 
             if left{
-                if(!instance_position((gx-33),(gy+(roomwd/2)),obj_door_l)){
-                    instance_create(gx-34,gy+(roomhg/2),obj_door_l);
-                    instance_create(gx+33,gy+(roomhg/2),obj_door_r);
+                if(!instance_position((gx-33),(gy+(global.roomwd/2)),obj_door_l)){
+                    instance_create(gx-34,gy+(global.roomhg/2),obj_door_l);
+                    instance_create(gx+33,gy+(global.roomhg/2),obj_door_r);
                 }
             } 
             if down{
-                if(!instance_position(gx+(roomwd/2),(gy+roomhg-32),obj_door_d)){
-                    instance_create(gx+(roomwd/2),(gy+roomhg-32),obj_door_d);
-                    instance_create(gx+(roomwd/2),gy+roomhg+((32*1.5)+11),obj_door_u); 
+                if(!instance_position(gx+(global.roomwd/2),(gy+global.roomhg-32),obj_door_d)){
+                    instance_create(gx+(global.roomwd/2),(gy+global.roomhg-32),obj_door_d);
+                    instance_create(gx+(global.roomwd/2),gy+global.roomhg+((32*1.5)+11),obj_door_u); 
                 }
             } 
             if right{
-                if(!instance_position((gx+roomwd+16),(gy+(roomhg/2)),obj_door_r)){
-                    instance_create((gx+roomwd-34),(gy+(roomhg/2)),obj_door_l);
-                    instance_create((gx+roomwd+33),(gy+(roomhg/2)),obj_door_r); 
+                if(!instance_position((gx+global.roomwd+16),(gy+(global.roomhg/2)),obj_door_r)){
+                    instance_create((gx+global.roomwd-34),(gy+(global.roomhg/2)),obj_door_l);
+                    instance_create((gx+global.roomwd+33),(gy+(global.roomhg/2)),obj_door_r); 
                 }
             } 
             
@@ -240,9 +240,6 @@ while roomgenerated != roomstogenerate{
         }
     }
 }
-
-global.array = l;
-global.check = roomgenerated;
 </string>
           </argument>
         </arguments>

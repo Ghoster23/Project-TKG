@@ -50,7 +50,7 @@ body_dep=object_get_depth(obj_body);
           <argument>
             <kind>1</kind>
             <string>x=obj_body.x;
-y=obj_body.y-14;
+y=obj_body.y-17;
 image_speed = 0;
 
 </string>
@@ -79,31 +79,7 @@ image_speed = 0;
 depth = (obj_body.depth)-1;
 //show_debug_message(string(body_depth));
 
-var rotacao = 0;
-rotacao = point_direction(x,y,mouse_x,mouse_y);
-
-if (rotacao &gt; 315 or rotacao &lt; 45){
-    sprite_index = spr_head;
-    image_index = 1;
-    image_speed = 0;                    
-} 
-else if rotacao &lt; 135{
-    sprite_index = spr_head;
-    image_index = 2;
-    image_speed = 0;                    
-} 
-else if rotacao &lt; 225{
-    sprite_index = spr_head;
-    image_index = 3;
-    image_speed = 0;                    
-} 
-else if rotacao &lt; 315{
-    sprite_index = spr_head;
-    image_index = 0;
-    image_speed = 0;                    
-} 
-
-
+sprite_index = global.char_hsprs[global.char]
 
 </string>
           </argument>

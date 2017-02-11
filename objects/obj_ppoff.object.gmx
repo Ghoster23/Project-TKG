@@ -74,7 +74,8 @@ global.lock = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(place_meeting(x,y,obj_body)){
+            <string>depth = -y;
+if(place_meeting(x,y,obj_body)){
     ///Suicide and Replacement
     instance_create(x,y,obj_ppon);
     

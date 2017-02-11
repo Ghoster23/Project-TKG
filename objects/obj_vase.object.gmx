@@ -25,8 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0;
+            <string>randomize();
+image_speed = 0;
 impact = true;
+image_index = irandom(8);
 </string>
           </argument>
         </arguments>
@@ -51,14 +53,7 @@ impact = true;
             <kind>1</kind>
             <string>depth = -y;
 
-if(place_meeting(x,y,obj_swing)){
-    image_speed = 0.3;
-    }
-    
-if(place_meeting(x,y,obj_sword_t)){
-    image_speed = 0.3;
-}
-if(image_index = 5 or image_index = 6){
+if(place_meeting(x,y,obj_swing) or place_meeting(x,y,obj_sword_t)){
         instance_destroy();
         if((irandom(99) + 1) == 1){
                 instance_create(x,y,obj_hheart);
