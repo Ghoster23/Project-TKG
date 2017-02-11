@@ -112,7 +112,7 @@ if(place_meeting(x,y,obj_body) &amp;&amp; !place_meeting(x,y,obj_ppon) &amp;&amp
    instance_create(tpx,tpy,obj_body);
    
    global.d_cd = true;
-   alarm_set(1,40);
+   alarm[1]=40
 }
 
 if(global.lock == true &amp;&amp; image_index != 11){
