@@ -51,7 +51,8 @@ image_angle = point_direction(x,y,mouse_x,mouse_y);
             <kind>1</kind>
             <string>if instance_exists(obj_sword){
     depth = obj_sword.depth
-    }
+}
+
 if image_index = 1{
     instance_create(x,y,obj_kb);
 }

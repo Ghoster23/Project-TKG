@@ -32,6 +32,7 @@ solid = false;
 visible = false;
 flash = false;
 a = 0;
+damaged = false;
 
 interval = false;
 blink = false;
@@ -74,6 +75,7 @@ dis = 0
           <argument>
             <kind>1</kind>
             <string>flash = false;
+damaged = false;
 image_blend = c_white;
 </string>
           </argument>
@@ -246,12 +248,21 @@ switch(state){
         ///Get Damaged
         if(place_meeting(x,y,obj_swing)){
             e_hp -= global.p_atk div e_def;
+            damaged = true;
+        }    
+        
+        if(place_meeting(x,y,obj_sword_t) and obj_sword_t.image_speed&gt;0){
+            e_hp -= global.p_satk div e_sdef;
+            damaged = true;
+        }
+        
+        if damaged = true{
             alarm[4] = 20;
             if flash == false{
                 flash = true;
                 image_blend = c_red;
             }
-        }    
+        }
         
         ///Die
         if(e_hp &lt;= 0){
@@ -264,11 +275,6 @@ switch(state){
                 
             }
     }
-
-    if(place_meeting(x,y,obj_sword_t) and obj_sword_t.image_speed&gt;0){
-        e_hp -= global.p_satk div e_sdef;
-    }
-
     break;    
 }
 </string>

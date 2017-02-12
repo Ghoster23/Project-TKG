@@ -33,6 +33,7 @@ visible = false;
 trigger = false;
 flash = false;
 cr_cd = false;
+damaged = false;
 
 //Stats
 e_mhp = 10;
@@ -84,6 +85,7 @@ amp = 5;
           <argument>
             <kind>1</kind>
             <string>flash = false;
+damaged = false;
 image_blend = c_white;
 </string>
           </argument>
@@ -405,13 +407,22 @@ if(place_meeting(x,y,obj_ppon)){
     ///Get Damaged
     if(place_meeting(x,y,obj_swing)){
         e_hp -= global.p_atk div e_def;
+        damaged = true;
+    }
+    
+    if(place_meeting(x,y,obj_sword_t) and obj_sword_t.image_speed&gt;0){
+        e_hp -= global.p_satk div e_sdef;
+        damaged = true;
+    }
+    
+    if damaged == true{
         alarm[4] = 20;
         if flash == false{
             flash = true;
             image_blend = c_red;
         }
     }
-        
+    
     ///Die
     if(e_hp &lt;= 0){
         global.combat -= 1;
@@ -423,10 +434,6 @@ if(place_meeting(x,y,obj_ppon)){
                 instance_create(x,y,obj_fheart);
                 
             }
-    }
-
-    if(place_meeting(x,y,obj_sword_t) and obj_sword_t.image_speed&gt;0){
-        e_hp -= global.p_satk div e_sdef;
     }
     
 }

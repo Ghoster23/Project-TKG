@@ -147,6 +147,7 @@
       <sprite>sprites\spr_explsion</sprite>
     </sprites>
     <sprite>sprites\sprite79</sprite>
+    <sprite>sprites\spr_point</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -293,6 +294,7 @@
       <object>objects\obj_chsl</object>
       <object>objects\obj_select</object>
     </objects>
+    <object>objects\obj_p</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu_1</room>
