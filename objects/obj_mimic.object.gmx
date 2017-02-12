@@ -177,6 +177,9 @@ if a &lt;= 33{
           <argument>
             <kind>1</kind>
             <string>dis = distance_to_object(obj_body);
+
+x = phy_position_x;
+y = phy_position_y;
 </string>
           </argument>
         </arguments>
@@ -239,10 +242,11 @@ switch(state){
     break;
     case 1:
         a += 1;
-        phy_rotation = 25 * sin(a); 
-        phy_position_x += sign(obj_body.x - x)*e_spd;
-        phy_position_y += sign(obj_body.y - y)*e_spd;
-            
+        phy_rotation = 25 * sin(a);
+        
+        phy_position_x += floor(sign(obj_body.x - x)*e_spd);
+        phy_position_y += floor(sign(obj_body.y - y)*e_spd);
+        
         image_blend = c_white;
         
         ///Get Damaged

@@ -43,7 +43,7 @@ e_atk = 10;
 e_satk = 0;
 e_def = 5;
 e_sdef = 2;
-e_spd = 5;
+e_spd =1;
 
 //States
 state = 0;
@@ -253,7 +253,148 @@ switch d {
           <argument>
             <kind>1</kind>
             <string>dis = distance_to_object(obj_body);
-dir = point_direction(obj_body.x,obj_body.y,x,y);
+
+instance_create(x,y,obj_p);
+
+with(obj_p){
+    x_calc = x;
+    y_calc = y;
+                            
+    while not place_meeting(x,y,obj_wall_down){
+        y += 10;
+    }
+    speed = 0; 
+    x_calc = x;
+    y_calc = y;
+}
+
+wd_x = obj_p.x;
+wd_y = obj_p.y;
+
+with(obj_p){
+    instance_destroy();
+}
+
+instance_create(x,y,obj_p);
+
+with(obj_p){
+    x_calc = x;
+    y_calc = y;
+                            
+    while not place_meeting(x,y,obj_wall_right){
+        x += 10;
+    }
+    speed = 0; 
+    x_calc = x;
+    y_calc = y;
+}
+
+wr_x = obj_p.x;
+wr_y = obj_p.y;
+
+with(obj_p){
+    instance_destroy();
+}
+
+instance_create(x,y,obj_p);
+
+with(obj_p){
+    x_calc = x;
+    y_calc = y;
+                            
+    while not place_meeting(x,y,obj_wall_left){
+        x -= 10;
+    }
+    speed = 0; 
+    x_calc = x;
+    y_calc = y;
+}
+
+wl_x = obj_p.x;
+wl_y = obj_p.y;
+
+with(obj_p){
+    instance_destroy();
+}
+
+instance_create(x,y,obj_p);
+
+with(obj_p){
+    x_calc = x;
+    y_calc = y;
+                            
+    while not place_meeting(x,y,obj_wall_up){
+        y -= 10;
+    }
+    speed = 0; 
+    x_calc = x;
+    y_calc = y;
+}
+
+wu_x = obj_p.x;
+wu_y = obj_p.y;
+
+with(obj_p){
+    instance_destroy();
+}
+
+d_d = distance_to_point(wd_x,wd_y);
+d_r = distance_to_point(wr_x,wr_y);
+d_l = distance_to_point(wl_x,wl_y);
+d_u = distance_to_point(wu_x,wu_y);
+
+if d_d &lt;= 10 or d_r &lt;= 10 or d_l &lt;= 10 or d_u &lt;= 10{
+
+walls[0] = d_d;
+walls[1] = d_r;
+walls[2] = d_l;
+walls[3] = d_u;
+
+var i;
+
+while trocas == true{
+    trocas = false;
+    for(i = 0; i &lt; 3; i += 1){
+        if walls[i] &gt;= walls[i + 1]{
+            a = walls[i];
+            b = walls[i+1];
+            walls[i] = b;
+            walls[i+1] = a;
+            trocas = true;
+            closest = walls[3];
+        }
+    }
+}
+
+switch(closest){
+    case(d_d):
+        x_C = wd_x;
+        y_C = wd_y;
+    break;
+    case(d_r):
+        x_C = wr_x;
+        y_C = wr_y;
+    break;
+    case(d_l):
+        x_C = wl_x;
+        y_C = wl_y;
+    break;
+    case(d_u):
+        x_C = wu_x;
+        y_C = wu_y;
+    break;
+}       
+
+per_dr = point_direction(obj_body.x,obj_body.y,x_C,y_C);
+per_ds = point_distance(obj_body.x,obj_body.y,x_C,y_C);
+                   
+mid_x = per_ds * cos(per_dr);
+mid_y = per_ds * sin(per_ds);   
+                
+dir = point_direction(x,y,mid_x,mid_y);
+} else{
+    dir = point_direction(obj_body.x,obj_body.y,x,y);
+}
 </string>
           </argument>
         </arguments>
@@ -287,10 +428,10 @@ if place_meeting(x,y,obj_ppon){
     }
 
     /// Enemy States
-    if dis &gt; 200 {
+    if dis &gt; 100 {
         state = 0;
         
-    }else if dis &lt;= 200{
+    }else if dis &lt;= 100{
         state = 1;
 
     }
@@ -504,7 +645,7 @@ draw_sprite(spr_player_shadow,1,x,y+40+shift);
   </events>
   <PhysicsObject>-1</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
-  <PhysicsObjectShape>0</PhysicsObjectShape>
+  <PhysicsObjectShape>1</PhysicsObjectShape>
   <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
   <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
@@ -514,7 +655,9 @@ draw_sprite(spr_player_shadow,1,x,y+40+shift);
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>6,6</point>
-    <point>6,6</point>
+    <point>0,16</point>
+    <point>32,16</point>
+    <point>32,32</point>
+    <point>0,32</point>
   </PhysicsShapePoints>
 </object>

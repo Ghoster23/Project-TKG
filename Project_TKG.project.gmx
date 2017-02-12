@@ -229,6 +229,7 @@
         <object>objects\obj_blue_puff</object>
       </objects>
       <object>objects\obj_bat</object>
+      <object>objects\obj_skull_nw</object>
       <object>objects\obj_skull</object>
       <object>objects\obj_slm_cr</object>
       <object>objects\obj_mimic</object>
