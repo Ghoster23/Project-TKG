@@ -25,9 +25,36 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>dir = point_direction(obj_skull.x,obj_skull.y,x,y);
+            <string>dir = point_direction(instance_nearest(x,y,obj_skull).x,instance_nearest(x,y,obj_skull).y,x,y);
+go = false;
+alarm[0] = 0.5 * room_speed;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>go = true;
 
-show_debug_message('I exist!');
+with(instance_nearest(x,y,obj_skull)){
+    state = 3;
+}
 </string>
           </argument>
         </arguments>
@@ -52,6 +79,7 @@ show_debug_message('I exist!');
             <kind>1</kind>
             <string>depth = -y -418;
 
+if go == true{
 //Get hspd and vspd
 hspd = lengthdir_x(5,dir);
 vspd = lengthdir_y(5,dir);
@@ -61,7 +89,9 @@ phy_position_x += hspd;
 phy_position_y += vspd;
 
 
-part_particles_create(global.ps,x + hspd,y + vspd,global.pt_sflame,5);
+part_particles_create(global.ps,x+hspd,y+vspd,global.pt_trail,1);
+part_particles_create(global.ps,x+hspd,y+vspd,global.pt_sflame,50);
+}
 </string>
           </argument>
         </arguments>

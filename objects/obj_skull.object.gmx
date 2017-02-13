@@ -59,7 +59,7 @@ t = 0;
 inc = 5;
 amp = 5;
 
-alarm[1] = 5; 
+alarm[1] = 30; 
 //Animation of skull rising
 </string>
           </argument>
@@ -134,7 +134,8 @@ dir_change = true;
           <argument>
             <kind>1</kind>
             <string>casting = false;
-state = 0;
+
+state = 3;
 </string>
           </argument>
         </arguments>
@@ -160,6 +161,7 @@ state = 0;
             <string>start = true;
 sprite_index = spr_skull_o;
 image_speed = 0;
+state = 3;
 </string>
           </argument>
         </arguments>
@@ -225,7 +227,7 @@ if (d_ &gt;= 0 and d_ &lt;= 45) or (d_ &gt;= 315 and d_ &lt;= 360){
     d = 0;
 }
 
-if flash == false{
+if flash == false and casting == false{
 switch d {
     case 0:
         break;
@@ -313,13 +315,15 @@ if place_meeting(x,y,obj_ppon) and start == true{
     }
     
     /// Enemy States
-    if state == 3 or state == 1 or state == 2{
+    if (state == 3 or state == 1 or state == 2){
         sprite_index = spr_skull_o;
         if dis &lt; 185{
             state = 1;
 
         }else if dis &gt; 215{
             state = 2;
+        }else {
+            state = 3;
         }
     }
     
@@ -327,6 +331,10 @@ if place_meeting(x,y,obj_ppon) and start == true{
     switch(state){
         case 0:  //Flames
             sprite_index = spr_skull_f;
+            
+            off_x = 0;
+            off_y = 0;
+            
             if fl_dir == 'card' and casting == false{
                 instance_create(x+10,y,obj_skull_fl);
                 instance_create(x,y+10,obj_skull_fl);
@@ -335,8 +343,7 @@ if place_meeting(x,y,obj_ppon) and start == true{
                 
                 fl_dir = 'diag';
                 casting = true;
-                alarm[2] = 2 * room_speed;
-                state = 3;
+                alarm[2] = 1 * room_speed;
                 
             }else if fl_dir == 'diag' and casting == false{
                 instance_create(x+5,y+5,obj_skull_fl);
@@ -346,8 +353,7 @@ if place_meeting(x,y,obj_ppon) and start == true{
                 
                 fl_dir = 'card';
                 casting = true;
-                alarm[2] = 2 * room_speed;
-                state = 3;
+                alarm[2] = 1 * room_speed;
             }
             
             hspd = 0;
@@ -360,23 +366,36 @@ if place_meeting(x,y,obj_ppon) and start == true{
             hspd = lengthdir_x(e_spd,dir);
             vspd = lengthdir_y(e_spd,dir);
             
+            off_x = obj_body.hspd;
+            off_y = obj_body.vspd;
+            
         break;
         case 1:  //Get closer   
             //Get hspd and vspd
             dir = point_direction(obj_body.x,obj_body.y,x,y);
             hspd = lengthdir_x(e_spd,dir);
             vspd = lengthdir_y(e_spd,dir);
+            
+            off_x = obj_body.hspd;
+            off_y = obj_body.vspd;
 
         break;
         case 3:
             //do nothing
             hspd = 0;
             vspd = 0;
+            
+            off_x = 0;
+            off_y = 0;
+            
+            if casting == false{
+                state = 0;
+            }
         break;
     }
     
-    phy_position_x += hspd - obj_body.hspd/2;
-    phy_position_y += vspd - obj_body.vspd/2;
+    phy_position_x += hspd - off_x*(2/3);
+    phy_position_y += vspd - off_y*(2/3);
     
     ///Get Damaged
     image_blend = c_white;
@@ -578,7 +597,7 @@ draw_sprite(spr_player_shadow,1,x,y+40+shift);
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>6,6</point>
+    <point>16,16</point>
     <point>14,6</point>
   </PhysicsShapePoints>
 </object>
