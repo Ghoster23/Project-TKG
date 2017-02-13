@@ -401,6 +401,12 @@ if(place_meeting(x,y,obj_ppon)){
             }
             
         break;
+        case 3:
+            sprite_index = spr_bat_d;
+            
+            if image_index == 3{
+                instance_destroy();
+            }
    }
     
     image_blend = c_white;
@@ -426,14 +432,14 @@ if(place_meeting(x,y,obj_ppon)){
     ///Die
     if(e_hp &lt;= 0){
         global.combat -= 1;
-        instance_destroy();
+        state = 3;
         if((irandom(99) + 1) &lt;= 10){
-                instance_create(x,y,obj_hheart);
+            instance_create(x,y,obj_hheart);
                 
-            }else if((irandom(99) + 1) == 1){
-                instance_create(x,y,obj_fheart);
+        }else if((irandom(99) + 1) == 1){
+            instance_create(x,y,obj_fheart);
                 
-            }
+        }
     }
     
 }

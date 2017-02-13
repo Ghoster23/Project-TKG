@@ -33,6 +33,7 @@ visible = false;
 flash = false;
 a = 0;
 damaged = false;
+dead = false;
 
 interval = false;
 blink = false;
@@ -226,7 +227,7 @@ solid = true;
 depth = -y;
 
 /// Enemy States
-if dis &lt; 64 and interact_key{
+if dis &lt; 32 and interact_key and dead == false{
     state = 1;
     
     image_speed = .9;
@@ -239,8 +240,11 @@ if dis &lt; 64 and interact_key{
 switch(state){
     case 0:
     //concealed animation
+        density = 0;
     break;
     case 1:
+        density = 0.5;
+        
         a += 1;
         phy_rotation = 25 * sin(a);
         
@@ -270,7 +274,8 @@ switch(state){
         
         ///Die
         if(e_hp &lt;= 0){
-            instance_destroy();
+            sprite_index = spr_mimic_d;
+            dead = true;
             if((irandom(99) + 1) &lt;= 10){
                 instance_create(x,y,obj_hheart);
                 
@@ -278,6 +283,7 @@ switch(state){
                 instance_create(x,y,obj_fheart);
                 
             }
+            state = 0;
     }
     break;    
 }

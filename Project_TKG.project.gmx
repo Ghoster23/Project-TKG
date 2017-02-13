@@ -111,6 +111,7 @@
         <sprite>sprites\spr_bat_back</sprite>
         <sprite>sprites\spr_bat_side</sprite>
         <sprite>sprites\spr_bat_front</sprite>
+        <sprite>sprites\spr_bat_d</sprite>
       </sprites>
       <sprites name="slimes">
         <sprites name="slime">
@@ -118,6 +119,7 @@
           <sprite>sprites\spr_slime_side</sprite>
           <sprite>sprites\spr_slime_up</sprite>
           <sprite>sprites\spr_slime_down</sprite>
+          <sprite>sprites\spr_slime_d</sprite>
         </sprites>
         <sprite>sprites\spr_enemy</sprite>
         <sprite>sprites\spr_slm_b_f</sprite>
@@ -132,8 +134,16 @@
         <sprite>sprites\spr_red_puff</sprite>
         <sprite>sprites\spr_blue_puff</sprite>
       </sprites>
-      <sprite>sprites\spr_mimic_a</sprite>
-      <sprite>sprites\spr_mimic_i</sprite>
+      <sprites name="skull">
+        <sprite>sprites\spr_skull_s</sprite>
+        <sprite>sprites\spr_skull_o</sprite>
+        <sprite>sprites\spr_skull_f</sprite>
+      </sprites>
+      <sprites name="mimic">
+        <sprite>sprites\spr_mimic_d</sprite>
+        <sprite>sprites\spr_mimic_a</sprite>
+        <sprite>sprites\spr_mimic_i</sprite>
+      </sprites>
     </sprites>
     <sprite>sprites\spr_test</sprite>
     <sprite>sprites\spr_cursor</sprite>
@@ -162,6 +172,7 @@
     <script>scripts\scr_part_fire_init.gml</script>
     <script>scripts\scr_part_smoke_init.gml</script>
     <script>scripts\scr_part_cbits_init.gml</script>
+    <script>scripts\scr_part_sflame_init.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
@@ -229,11 +240,11 @@
         <object>objects\obj_blue_puff</object>
       </objects>
       <object>objects\obj_bat</object>
-      <object>objects\obj_skull_nw</object>
       <object>objects\obj_skull</object>
       <object>objects\obj_slm_cr</object>
       <object>objects\obj_mimic</object>
       <object>objects\obj_creep</object>
+      <object>objects\obj_skull_fl</object>
     </objects>
     <objects name="test">
       <object>objects\object26</object>
