@@ -247,6 +247,7 @@
       <object>objects\obj_mimic</object>
       <object>objects\obj_creep</object>
       <object>objects\obj_skull_fl</object>
+      <object>objects\obj_cadaver</object>
     </objects>
     <objects name="test">
       <object>objects\object26</object>
@@ -302,13 +303,13 @@
       <object>objects\obj_fl_rg</object>
       <object>objects\obj_fl_dn</object>
     </objects>
-    <object>objects\obj_cursor</object>
     <objects name="chsl">
       <object>objects\obj_back</object>
       <object>objects\obj_chsl</object>
       <object>objects\obj_select</object>
     </objects>
     <object>objects\obj_p</object>
+    <object>objects\obj_cursor</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu_1</room>
