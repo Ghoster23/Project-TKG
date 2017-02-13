@@ -91,9 +91,9 @@ image_speed = 0;
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>0,12</point>
-    <point>32,12</point>
-    <point>32,32</point>
-    <point>0,32</point>
+    <point>0,5</point>
+    <point>32,5</point>
+    <point>32,37</point>
+    <point>0,37</point>
   </PhysicsShapePoints>
 </object>

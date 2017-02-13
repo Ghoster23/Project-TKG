@@ -103,9 +103,9 @@ if(place_meeting(x,y,obj_swing) or place_meeting(x,y,obj_sword_t)){
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>8,24</point>
-    <point>40,24</point>
-    <point>40,56</point>
-    <point>8,56</point>
+    <point>0,8</point>
+    <point>32,8</point>
+    <point>32,40</point>
+    <point>0,40</point>
   </PhysicsShapePoints>
 </object>

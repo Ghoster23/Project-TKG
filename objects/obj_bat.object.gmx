@@ -344,6 +344,7 @@ if(place_meeting(x,y,obj_ppon)){
     }
 
     /// Enemy States
+    if state != 3{
     if dis &gt; 100 and dis &lt; 200 and dash == false{
         state = 1;
         
@@ -357,6 +358,7 @@ if(place_meeting(x,y,obj_ppon)){
 
     }else if dis &gt;= 200 and dash == false{
         state = 0;
+    }
     }
     
     if p_state != state{

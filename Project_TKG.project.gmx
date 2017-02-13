@@ -138,6 +138,7 @@
         <sprite>sprites\spr_skull_s</sprite>
         <sprite>sprites\spr_skull_o</sprite>
         <sprite>sprites\spr_skull_f</sprite>
+        <sprite>sprites\spr_skull_blt</sprite>
       </sprites>
       <sprites name="mimic">
         <sprite>sprites\spr_mimic_d</sprite>
