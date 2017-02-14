@@ -245,7 +245,7 @@ if not place_meeting(x,y,obj_sword){
   <PhysicsObject>-1</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>1</PhysicsObjectShape>
-  <PhysicsObjectDensity>500</PhysicsObjectDensity>
+  <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
   <PhysicsObjectRestitution>0</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
   <PhysicsObjectLinearDamping>5</PhysicsObjectLinearDamping>
@@ -254,9 +254,9 @@ if not place_meeting(x,y,obj_sword){
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>6,16.75</point>
-    <point>25.5,16.75</point>
-    <point>25.5,26</point>
-    <point>6,26</point>
+    <point>0,0</point>
+    <point>24,0</point>
+    <point>24,24</point>
+    <point>0,24</point>
   </PhysicsShapePoints>
 </object>

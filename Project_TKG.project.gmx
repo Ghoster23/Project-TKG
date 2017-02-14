@@ -145,6 +145,18 @@
         <sprite>sprites\spr_mimic_a</sprite>
         <sprite>sprites\spr_mimic_i</sprite>
       </sprites>
+      <sprites name="peasent">
+        <sprites name="movement">
+          <sprite>sprites\spr_peasent_m_f</sprite>
+          <sprite>sprites\spr_peasent_m_b</sprite>
+          <sprite>sprites\spr_peasent_m_s</sprite>
+        </sprites>
+        <sprites name="head">
+          <sprite>sprites\spr_peasent_h_f</sprite>
+          <sprite>sprites\spr_peasent_h_s</sprite>
+          <sprite>sprites\spr_peasent_h_b</sprite>
+        </sprites>
+      </sprites>
     </sprites>
     <sprite>sprites\spr_test</sprite>
     <sprite>sprites\spr_cursor</sprite>
@@ -181,38 +193,57 @@
   </fonts>
   <objects name="objects">
     <objects name="room">
-      <object>objects\obj_wall_down</object>
-      <object>objects\obj_wall_right</object>
-      <object>objects\obj_wall_up</object>
-      <object>objects\obj_wall_left</object>
-      <object>objects\obj_floor</object>
-      <object>objects\obj_door_d</object>
-      <object>objects\obj_door_r</object>
-      <object>objects\obj_door_u</object>
-      <object>objects\obj_door_l</object>
-      <object>objects\obj_rock</object>
-      <object>objects\obj_equipable</object>
-      <object>objects\obj_pedestal</object>
-      <object>objects\obj_barrel</object>
-      <object>objects\obj_fheart</object>
-      <object>objects\obj_hheart</object>
-      <object>objects\obj_vase</object>
-      <object>objects\obj_dungeon_wall</object>
-      <object>objects\obj_crate</object>
-      <object>objects\obj_torch</object>
+      <objects name="walls and floor">
+        <object>objects\obj_wall_right</object>
+        <object>objects\obj_wall_up</object>
+        <object>objects\obj_dungeon_wall</object>
+        <object>objects\obj_wall_down</object>
+        <object>objects\obj_wall_left</object>
+        <object>objects\obj_floor</object>
+      </objects>
+      <objects name="door">
+        <object>objects\obj_door_r</object>
+        <object>objects\obj_door_d</object>
+        <object>objects\obj_door_l</object>
+        <object>objects\obj_door_u</object>
+        <object>objects\obj_bdoor</object>
+      </objects>
+      <objects name="interactables">
+        <object>objects\obj_pedestal</object>
+        <object>objects\obj_chest</object>
+      </objects>
+      <objects name="objects">
+        <object>objects\obj_rock</object>
+        <object>objects\obj_barrel</object>
+        <object>objects\obj_crate</object>
+        <object>objects\obj_vase</object>
+      </objects>
+      <objects name="pickups">
+        <object>objects\obj_fheart</object>
+        <object>objects\obj_equipable</object>
+        <object>objects\obj_hheart</object>
+      </objects>
+      <objects name="decor">
+        <object>objects\obj_torch</object>
+      </objects>
     </objects>
     <objects name="gen">
-      <object>objects\obj_ppon</object>
       <object>objects\obj_mapgen</object>
       <object>objects\obj_view</object>
-      <object>objects\obj_door_parent</object>
-      <object>objects\obj_lifeform_parent</object>
-      <object>objects\obj_solid_parent</object>
-      <object>objects\obj_ppoff</object>
-      <object>objects\obj_bdoor</object>
+      <objects name="controllers">
+        <object>objects\obj_ps_controller</object>
+        <object>objects\obj_gen_controller</object>
+      </objects>
+      <objects name="parents">
+        <object>objects\obj_lifeform_parent</object>
+        <object>objects\obj_door_parent</object>
+        <object>objects\obj_solid_parent</object>
+      </objects>
+      <objects name="enemy stuff">
+        <object>objects\obj_ppoff</object>
+        <object>objects\obj_ppon</object>
+      </objects>
       <object>objects\obj_gui</object>
-      <object>objects\obj_gen_v2</object>
-      <object>objects\obj_ps_controller</object>
     </objects>
     <objects name="boss">
       <object>objects\obj_green_puff</object>
@@ -222,14 +253,20 @@
       <object>objects\obj_bt_bullet</object>
     </objects>
     <objects name="player">
-      <object>objects\obj_body</object>
-      <object>objects\obj_head</object>
-      <object>objects\obj_roll</object>
-      <object>objects\obj_swing</object>
-      <object>objects\obj_sword</object>
-      <object>objects\obj_sword_t</object>
       <object>objects\obj_pglobs</object>
-      <object>objects\obj_kb</object>
+      <objects name="weapons">
+        <objects name="sword">
+          <object>objects\obj_swing</object>
+          <object>objects\obj_sword_t</object>
+          <object>objects\obj_sword</object>
+          <object>objects\obj_kb</object>
+        </objects>
+      </objects>
+      <objects name="body">
+        <object>objects\obj_body</object>
+        <object>objects\obj_head</object>
+        <object>objects\obj_roll</object>
+      </objects>
     </objects>
     <objects name="enemy">
       <objects name="old">
@@ -241,12 +278,20 @@
         <object>objects\obj_red_puff</object>
         <object>objects\obj_blue_puff</object>
       </objects>
+      <objects name="skull">
+        <object>objects\obj_skull</object>
+        <object>objects\obj_skull_fl</object>
+      </objects>
+      <objects name="slime_cr">
+        <object>objects\obj_slm_cr</object>
+        <object>objects\obj_creep</object>
+      </objects>
+      <objects name="peasent">
+        <object>objects\obj_psnt_head</object>
+        <object>objects\obj_psnt_body</object>
+      </objects>
       <object>objects\obj_bat</object>
-      <object>objects\obj_skull</object>
-      <object>objects\obj_slm_cr</object>
       <object>objects\obj_mimic</object>
-      <object>objects\obj_creep</object>
-      <object>objects\obj_skull_fl</object>
       <object>objects\obj_cadaver</object>
     </objects>
     <objects name="test">
