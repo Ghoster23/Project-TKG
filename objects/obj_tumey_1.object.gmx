@@ -276,35 +276,6 @@ if(global.b_hp &lt;= 35){
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_sword_t">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(instance_exists(obj_sword_t)){
-    if(obj_sword_t.image_speed != 0 &amp;&amp; d_cd == false){
-        global.b_hp -= (global.p_satk - global.b_s_def)*2;
-        d_cd = true;
-        alarm[4] = 1 * room_speed;
-    }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="4" ename="obj_body">
       <action>
         <libid>1</libid>
@@ -330,6 +301,35 @@ if(global.b_hp &lt;= 35){
     global.p_hp -= (global.b_atk * 2) div global.p_def;
     inv = true;
     alarm[3] = 1 * room_speed;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_sword_t">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(instance_exists(obj_sword_t)){
+    if(obj_sword_t.image_speed != 0 &amp;&amp; d_cd == false){
+        global.b_hp -= (global.p_satk - global.b_s_def)*2;
+        d_cd = true;
+        alarm[4] = 1 * room_speed;
+    }
 }
 </string>
           </argument>

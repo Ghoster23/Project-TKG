@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1569325055</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,14 +25,92 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>{
-    global.ps=part_system_create();
-    scr_part_fire_init();
-    scr_part_smoke_init();
-    scr_part_cbits_init();
-    scr_part_sflame_init();
-    scr_part_trail_init();
-    part_system_depth(global.ps,-room_height);
+            <string>//Particle System
+global.ps=part_system_create();
+scr_part_fire_init();
+scr_part_smoke_init();
+scr_part_cbits_init();    
+scr_part_sflame_init();
+scr_part_trail_init();
+part_system_depth(global.ps,-room_height);
+
+
+//Surface
+global.lighting = surface_create(room_width,room_height);
+
+surface_set_target(global.lighting);
+draw_clear_alpha(c_black,0);
+
+surface_reset_target();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Draw the surface
+if surface_exists(global.lighting){
+    surface_set_target(global.lighting);
+    
+    //Make it dark
+    draw_set_colour(c_black);
+    draw_set_alpha(0.5);
+    draw_rectangle(0,0,room_width,room_height,0);
+    
+    //Light sources
+    
+    ///Torch
+    draw_set_blend_mode(bm_subtract);
+    draw_set_colour(c_white);
+    
+    if instance_exists(obj_torch){
+        with (obj_torch) {
+        
+            draw_circle(x+16,y+16+64,128+r,false);
+            draw_circle(x+16,y+16+64,140+r,false);
+        }
+    }
+    
+    ///Skull Bullet
+    draw_set_blend_mode(bm_subtract);
+    draw_set_colour(c_red);
+    
+    if instance_exists(obj_skull_fl){
+        with (obj_skull_fl) {
+        
+            draw_circle(x+hspd,y+vspd,16+r,false);
+            draw_circle(x+hspd,y+vspd,26+r,false);
+        }
+    }
+    
+    //Resets
+    draw_set_blend_mode(bm_normal);
+    draw_set_alpha(1);
+    surface_reset_target();
+    
+}else {
+    global.lighting = surface_create(room_width,room_height);
+    
+    surface_set_target(global.lighting);
+    
+    draw_clear_alpha(c_black, 0);
+    surface_reset_target();
 }
 </string>
           </argument>
@@ -56,12 +134,47 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>{
-    part_type_destroy(global.pt_cbits)
-    part_type_destroy(global.pt_smoke)
-    part_type_destroy(global.pt_fire)
-    part_system_destroy(global.ps);
+            <string>//Particles
+part_type_destroy(global.pt_cbits)
+part_type_destroy(global.pt_smoke)
+part_type_destroy(global.pt_fire)
+part_system_destroy(global.ps);
 
+//Surface
+if surface_exists(global.lighting){
+    surface_free(global.lighting);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Draw the surface
+if surface_exists(global.lighting){
+    if view_current == 0{
+        draw_surface(global.lighting,0,0);
+    }
+    
+}else {
+    global.lighting = surface_create(room_width, room_height);
+    
 }
 </string>
           </argument>

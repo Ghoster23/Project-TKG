@@ -25,13 +25,36 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>{
-    depth = -y;
-    image_speed = 0;
-    em = part_emitter_create(global.ps); 
-    part_emitter_region(global.ps,em,x+15,x+17,y+10,y+10,ps_shape_rectangle,ps_distr_linear)
-}
+            <string>depth = -y;
+image_speed = 0;
+em = part_emitter_create(global.ps); 
+part_emitter_region(global.ps,em,x+15,x+17,y+10,y+10,ps_shape_rectangle,ps_distr_linear)
 
+r = 0;
+flicker = true;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>flicker = true;
 </string>
           </argument>
         </arguments>
@@ -54,8 +77,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>{
-part_emitter_stream(global.ps,em,global.pt_fire,1)
+            <string>part_emitter_stream(global.ps,em,global.pt_fire,1);
+
+if flicker == true{
+    randomize();
+    r = random_range(-1,1);
+    flicker = false;
+    alarm[0] = 3;
 }
 </string>
           </argument>

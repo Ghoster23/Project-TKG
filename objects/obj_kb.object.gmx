@@ -31,37 +31,6 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_lifeform_parent">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(other != obj_body){
-    var dir = point_direction(x,y,other.x,other.y);
-    var x_f = lengthdir_x(30,dir);
-    var y_f = lengthdir_y(30,dir);
-    
-    with(other){
-        physics_apply_impulse(x,y,x_f,y_f);
-    }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
   </events>
   <PhysicsObject>-1</PhysicsObject>
   <PhysicsObjectSensor>-1</PhysicsObjectSensor>
