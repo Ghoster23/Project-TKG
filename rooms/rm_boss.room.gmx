@@ -54,7 +54,6 @@
     <instance objName="obj_wall_down" x="224" y="1408" name="inst_92E8645E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_right" x="672" y="1088" name="inst_141DF7F1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_up" x="224" y="1088" name="inst_06DE0EB1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ps_controller" x="112" y="48" name="inst_5ECDDDE9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_left" x="224" y="1088" name="inst_1B123FBF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="464" y="1296" name="inst_BA7386B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door_u" x="464" y="1152" name="inst_6FB5B8EC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

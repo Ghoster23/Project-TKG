@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>-1569325055</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -69,23 +69,18 @@ if surface_exists(global.lighting){
     surface_set_target(global.lighting);
     
     //Make it dark
-    draw_set_colour(c_black);
-    draw_set_alpha(0.5);
-    draw_rectangle(0,0,room_width,room_height,0);
+    if room == rm_level or room == rm_boss{
+        draw_set_colour(c_black);
+        draw_set_alpha(0.3);
+        draw_rectangle(0,0,room_width,room_height,0);
+    }else {
+        draw_set_colour(c_white);
+        draw_set_alpha(1);
+    }
     
     //Light sources
     
     ///Torch
-    draw_set_blend_mode(bm_subtract);
-    draw_set_colour(c_white);
-    
-    if instance_exists(obj_torch){
-        with (obj_torch) {
-        
-            draw_circle(x+16,y+16,128+r,false);
-            draw_circle(x+16,y+16,140+r,false);
-        }
-    }
     
     ///Skull Bullet
     draw_set_blend_mode(bm_subtract);

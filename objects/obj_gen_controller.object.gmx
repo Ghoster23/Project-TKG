@@ -46,6 +46,8 @@ right = false;
 left = false;
 
 ///Base Room
+instance_create(gx+global.roomwd/2+64,gy+32,obj_torch);
+instance_create(gx+global.roomwd/2-64,gy+32,obj_torch);
 instance_create(gx,gy,obj_wall_left);
 instance_create(gx,gy,obj_wall_up);
 instance_create(gx,gy+global.roomhg-32,obj_wall_down);

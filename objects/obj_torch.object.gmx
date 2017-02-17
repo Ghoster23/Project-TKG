@@ -85,6 +85,22 @@ if flicker == true{
     flicker = false;
     alarm[0] = 3;
 }
+
+if room == rm_level{
+    if (rectangle_in_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, view_xview[0], view_yview[0], view_xview[0] + view_wview[0], view_yview[0] + view_hview[0])) {
+        surface_set_target(global.lighting);
+    
+        draw_set_blend_mode(bm_subtract);
+        draw_set_colour(c_white);
+        
+        draw_circle(x+16,y+16,140+r,false);
+        draw_circle(x+16,y+16,128+r,false);
+        
+        draw_set_blend_mode(bm_normal);
+        draw_set_alpha(1);
+        surface_reset_target();
+    }
+}
 </string>
           </argument>
         </arguments>

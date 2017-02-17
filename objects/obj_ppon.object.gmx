@@ -32,8 +32,6 @@ if(global.combat == 0){
     
     instance_destroy();
 }
-
-show_debug_message(global.combat);
 </string>
           </argument>
         </arguments>

@@ -345,7 +345,6 @@ if place_meeting(x,y,obj_ppon) and k == false{
 }
 
 if place_meeting(x,y,obj_ppon) and go == true{
-    show_debug_message(state);
     visible = true;
     depth = -y;
     
