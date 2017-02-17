@@ -27,11 +27,15 @@
             <kind>1</kind>
             <string>///Inicialise the enemy
 event_inherited();
+visible = true;
 solid = false;
+depth = -y;
+
 trigger = false;
 flash = false;
 damaged = false;
-start = false;
+go = false;
+k = false;
 
 //Stats
 e_mhp = 10;
@@ -40,10 +44,10 @@ e_atk = 10;
 e_satk = 0;
 e_def = 5;
 e_sdef = 2;
-e_spd = 5;
+e_spd = 7;
 
 //States
-state = 0;
+state = 3;
 atk_cd = false;
 fl_dir = 'card';
 casting = false;
@@ -57,7 +61,6 @@ t = 0;
 inc = 5;
 amp = 5;
 
-alarm[1] = 10; 
 //Animation of skull rising
 </string>
           </argument>
@@ -81,10 +84,10 @@ alarm[1] = 10;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>start = true;
+            <string>go = true;
 sprite_index = spr_skull_o;
 image_speed = 0;
-state = 3;
+state = 1;
 </string>
           </argument>
         </arguments>
@@ -182,8 +185,7 @@ state = 3;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0.2;
-alarm[5] = 30;
+            <string>alarm[5] = 30;
 </string>
           </argument>
         </arguments>
@@ -279,7 +281,7 @@ switch d {
     case 4: //Down and Right
         image_index = 1;
         break;
-}
+    }
 }
 </string>
           </argument>
@@ -304,6 +306,10 @@ switch d {
           <argument>
             <kind>1</kind>
             <string>dis = distance_to_object(obj_body);
+
+///Wooble
+t = (t + inc) mod 360;
+shift = amp * sin(degtorad(t));
 </string>
           </argument>
         </arguments>
@@ -327,14 +333,21 @@ switch d {
           <argument>
             <kind>1</kind>
             <string>///Exist
-if place_meeting(x,y,obj_ppon) and start == true{
-    visible = true;
-    depth = -y;
+if place_meeting(x,y,obj_ppon) and k == false{
+    image_speed = 5;
+    alarm[1] = 10;
+    k = true;
     
     if(trigger == false){
         global.combat += 1;
         trigger = true;
     }
+}
+
+if place_meeting(x,y,obj_ppon) and go == true{
+    show_debug_message(state);
+    visible = true;
+    depth = -y;
     
     /// Enemy States
     if (state == 3 or state == 1 or state == 2){
@@ -358,20 +371,20 @@ if place_meeting(x,y,obj_ppon) and start == true{
             off_y = 0;
             
             if fl_dir == 'card' and casting == false{
-                instance_create(x+10,y,obj_skull_fl);
-                instance_create(x,y+10,obj_skull_fl);
-                instance_create(x-10,y,obj_skull_fl);
-                instance_create(x,y-10,obj_skull_fl);
+                instance_create(x+16,y,obj_skull_fl);
+                instance_create(x,y+16,obj_skull_fl);
+                instance_create(x-16,y,obj_skull_fl);
+                instance_create(x,y-16,obj_skull_fl);
                 
                 fl_dir = 'diag';
                 casting = true;
                 alarm[2] = 1 * room_speed;
                 
             }else if fl_dir == 'diag' and casting == false{
-                instance_create(x+5,y+5,obj_skull_fl);
-                instance_create(x+5,y-5,obj_skull_fl);
-                instance_create(x-5,y+5,obj_skull_fl);
-                instance_create(x-5,y-5,obj_skull_fl);
+                instance_create(x+12,y+12,obj_skull_fl);
+                instance_create(x+12,y-12,obj_skull_fl);
+                instance_create(x-12,y+12,obj_skull_fl);
+                instance_create(x-12,y-12,obj_skull_fl);
                 
                 fl_dir = 'card';
                 casting = true;
@@ -416,8 +429,8 @@ if place_meeting(x,y,obj_ppon) and start == true{
         break;
     }
     
-    phy_position_x += hspd - off_x*(2/3);
-    phy_position_y += vspd - off_y*(2/3);
+    phy_position_x += hspd - off_x;
+    phy_position_y += vspd - off_y;
     
     ///Get Damaged
     image_blend = c_white;
@@ -451,6 +464,8 @@ if place_meeting(x,y,obj_ppon) and start == true{
                 
         }
     }
+    
+    go = true;
 }
 </string>
           </argument>
@@ -624,11 +639,9 @@ physics_apply_impulse(x,y,x_f,y_f);
             <kind>1</kind>
             <string>draw_self();
 
-///Wooble
-t = (t + inc) mod 360;
-shift = amp * sin(degtorad(t));
-    
-draw_sprite(spr_player_shadow,1,x,y+40+shift);
+if go == true{
+    draw_sprite(spr_player_shadow,1,x,y+40);
+}
 </string>
           </argument>
         </arguments>

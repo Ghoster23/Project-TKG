@@ -82,8 +82,8 @@ if surface_exists(global.lighting){
     if instance_exists(obj_torch){
         with (obj_torch) {
         
-            draw_circle(x+16,y+16+64,128+r,false);
-            draw_circle(x+16,y+16+64,140+r,false);
+            draw_circle(x+16,y+16,128+r,false);
+            draw_circle(x+16,y+16,140+r,false);
         }
     }
     
