@@ -25,7 +25,25 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Particle System
+            <string>//Start
+window_set_fullscreen(true);
+global.MonitorW = display_get_width();
+global.MonitorH = display_get_height();
+
+global.Xoffset = (global.MonitorW - 544)/2;
+global.Yoffset = (global.MonitorH - 416)/2;
+
+if global.MonitorW &gt;= 1088 and global.MonitorH &gt;= 832{
+    surface_resize(application_surface,1088,832);
+    global.Xoffset = (global.MonitorW - 1088)/2;
+    global.Xoffset = (global.MonitorW - 832)/2;
+}else if global.MonitorW &gt;= 1632 and global.MonitorH &gt;= 1248{
+    surface_resize(application_surface,1632,1248);
+    global.Xoffset = (global.MonitorW - 1632)/2;
+    global.Xoffset = (global.MonitorW - 1248)/2;
+}
+
+//Particle System
 global.ps=part_system_create();
 scr_part_fire_init();
 scr_part_smoke_init();
@@ -64,7 +82,12 @@ surface_reset_target();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Draw the surface
+            <string>if surface_exists(application_surface) and room != rm_menu_1{
+    //Draw the game
+    draw_surface_ext(application_surface,global.Xoffset,global.Yoffset,1,1,0,c_white,1);
+}
+
+//Draw the surface
 if surface_exists(global.lighting){
     surface_set_target(global.lighting);
     

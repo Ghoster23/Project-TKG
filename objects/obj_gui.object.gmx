@@ -75,8 +75,9 @@ if(global.p_hp &lt;= 0){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite(spr_gui,image_index,view_xview[view_current],view_yview[view_current]);
-display_set_gui_size(480,320)
+            <string>display_set_gui_size(view_wview[0],view_hview[0]);
+draw_sprite(spr_gui,image_index,view_xview[view_current],view_yview[view_current]);
+draw_sprite(spr_cursor,1,obj_cursor.x,obj_cursor.y);
 
 draw_set_colour(c_white);
 draw_set_font(font0);
