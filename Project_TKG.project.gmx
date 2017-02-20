@@ -331,7 +331,6 @@
       <object>objects\obj_blackout</object>
       <object>objects\obj_title</object>
       <object>objects\obj_cutscene</object>
-      <object>objects\obj_pressenter</object>
       <object>objects\obj_menu</object>
       <object>objects\obj_background1</object>
       <object>objects\obj_quit</object>
