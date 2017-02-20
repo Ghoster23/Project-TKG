@@ -62,6 +62,10 @@ i_dir = 0;
 t = 0;
 inc = 5;
 amp = 5;
+
+///Knockback
+kb_x = 0;
+kb_y = 0;
 </string>
           </argument>
         </arguments>
@@ -311,6 +315,11 @@ switch d {
 if dash == false{
     dir = point_direction(x,y,obj_body.x,obj_body.y);
 }
+
+if instance_exists(obj_kb){
+    kb_x = obj_kb.x;
+    kb_y = obj_kb.y;
+}
 </string>
           </argument>
         </arguments>
@@ -515,7 +524,12 @@ if(place_meeting(x,y,obj_ppon)){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var dir = point_direction(obj_kb.x,obj_kb.y,x,y);
+            <string>if instance_exists(obj_kb){
+    var dir = point_direction(obj_kb.x,obj_kb.y,x,y);
+}else {
+    var dir = point_direction(kb_x,kb_y,x,y);
+}
+
 var x_f = lengthdir_x(30,dir);
 var y_f = lengthdir_y(30,dir);
     

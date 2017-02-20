@@ -100,7 +100,7 @@ image_index = irandom(4);
           <argument>
             <kind>1</kind>
             <string>image_alpha = alarm[0] / 100;
-depth = obj_body.depth + 100;
+depth = -y + 100;
 
 //Poison status
 if place_meeting(x,y,obj_body) and global.st_poison == false and cr_cd == false{

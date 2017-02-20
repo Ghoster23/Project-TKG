@@ -53,6 +53,10 @@ atk_cd = false;
 
 ///Distance
 dis = 0
+
+///Knockback
+kb_x = 0;
+kb_y = 0;
 </string>
           </argument>
         </arguments>
@@ -219,6 +223,32 @@ y = phy_position_y;
         </arguments>
       </action>
     </event>
+    <event eventtype="3" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if instance_exists(obj_kb){
+    kb_x = obj_kb.x;
+    kb_y = obj_kb.y;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -279,8 +309,10 @@ switch(state){
     case 1:
         density = 0.5;
         
-        a += 1;
-        phy_rotation = 25 * sin(a);
+        if dead == false{
+            a += 1;
+            phy_rotation = 25 * sin(a);
+        }
         
         phy_position_x += floor(sign(obj_body.x - x)*e_spd);
         phy_position_y += floor(sign(obj_body.y - y)*e_spd);
@@ -322,7 +354,6 @@ switch(state){
     break;   
     case 3:
         sprite_index = spr_mimic_d;
-        density = 0;
         solid = false;
         instance_create(x,y,obj_cadaver);
             
@@ -384,7 +415,12 @@ switch(state){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var dir = point_direction(obj_kb.x,obj_kb.y,x,y);
+            <string>if instance_exists(obj_kb){
+    var dir = point_direction(obj_kb.x,obj_kb.y,x,y);
+}else {
+    var dir = point_direction(kb_x,kb_y,x,y);
+}
+
 var x_f = lengthdir_x(30,dir);
 var y_f = lengthdir_y(30,dir);
     
