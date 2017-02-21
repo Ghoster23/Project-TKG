@@ -32,25 +32,18 @@ global.MonitorH = display_get_height();
 show_debug_message(global.MonitorW);
 show_debug_message(global.MonitorH);
 
-global.Xoffset = (global.MonitorW - 544)/2;
-global.Yoffset = (global.MonitorH - 416)/2;
-
 if global.MonitorW &gt;= 1088 and global.MonitorH &gt;= 832{
     surface_resize(application_surface,1088,832);
     global.Xoffset = (global.MonitorW - 1088)/2;
-    global.Xoffset = (global.MonitorW - 832)/2;
+    global.Yoffset = (global.MonitorH - 832)/2;
 }else if global.MonitorW &gt;= 1632 and global.MonitorH &gt;= 1248{
     surface_resize(application_surface,1632,1248);
     global.Xoffset = (global.MonitorW - 1632)/2;
-    global.Xoffset = (global.MonitorW - 1248)/2;
+    global.Yoffset = (global.MonitorH - 1248)/2;
 }else if global.MonitorW &gt;= 2176 and global.MonitorH &gt;= 1672{
     surface_resize(application_surface,2176,1672);
     global.Xoffset = (global.MonitorW - 2176)/2;
-    global.Xoffset = (global.MonitorW - 1672)/2;
-}else if global.MonitorW &gt;= 2720 and global.MonitorH &gt;= 2080{
-    surface_resize(application_surface,2720,2080);
-    global.Xoffset = (global.MonitorW - 2720)/2;
-    global.Xoffset = (global.MonitorW - 2080)/2;
+    global.Yoffset = (global.MonitorH - 1672)/2;
 }
 
 //Particle System
