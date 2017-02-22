@@ -30,6 +30,7 @@ event_inherited();
 visible = true;
 solid = false;
 depth = -y;
+image_speed = 0;
 
 trigger = false;
 flash = false;
@@ -62,6 +63,62 @@ inc = 5;
 amp = 5;
 
 //Animation of skull rising
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="6">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>switch cont {
+    case 3:
+        if fl_dir == 'card'{
+            instance_create(x,y-24,obj_skull_fl);
+        }else if fl_dir == 'diag'{
+            instance_create(x+20,y-20,obj_skull_fl);
+        }
+                    
+    break;
+    case 2:
+        if fl_dir == 'card'{
+            instance_create(x-24,y,obj_skull_fl);
+        }else if fl_dir == 'diag'{
+            instance_create(x-20,y+20,obj_skull_fl);
+        }
+                
+    break;
+    case 1:
+        if fl_dir == 'card'{
+            instance_create(x,y+24,obj_skull_fl);
+            fl_dir = 'diag';
+        }else if fl_dir == 'diag'{
+            instance_create(x-20,y-20,obj_skull_fl);
+            fl_dir = 'card';
+        }
+        
+    break;
+}
+
+cont -= 1;
+
+if cont &gt;= 0{
+    alarm[6] = 0.20 * room_speed;
+}
 </string>
           </argument>
         </arguments>
@@ -370,24 +427,23 @@ if place_meeting(x,y,obj_ppon) and go == true{
             off_y = 0;
             
             if fl_dir == 'card' and casting == false{
-                instance_create(x+16,y,obj_skull_fl);
-                instance_create(x,y+16,obj_skull_fl);
-                instance_create(x-16,y,obj_skull_fl);
-                instance_create(x,y-16,obj_skull_fl);
+                cont = 4;
+                instance_create(x+24,y,obj_skull_fl);
                 
-                fl_dir = 'diag';
+                cont = 3;
                 casting = true;
                 alarm[2] = 1 * room_speed;
+                alarm[6] = 0.20 * room_speed;
                 
             }else if fl_dir == 'diag' and casting == false{
-                instance_create(x+12,y+12,obj_skull_fl);
-                instance_create(x+12,y-12,obj_skull_fl);
-                instance_create(x-12,y+12,obj_skull_fl);
-                instance_create(x-12,y-12,obj_skull_fl);
+                cont = 4;
+                instance_create(x+20,y+20,obj_skull_fl);
                 
-                fl_dir = 'card';
+                cont = 3;
                 casting = true;
                 alarm[2] = 1 * room_speed;
+                alarm[6] = 0.20 * room_speed;
+                
             }
             
             hspd = 0;
@@ -433,12 +489,12 @@ if place_meeting(x,y,obj_ppon) and go == true{
     
     ///Get Damaged
     image_blend = c_white;
-    if(place_meeting(x,y,obj_swing)){
+    if(place_meeting(x,y,obj_swing) and damaged == false){
         e_hp -= global.p_atk div e_def;
         damaged = true;
     }
     
-    if(place_meeting(x,y,obj_sword_t) and obj_sword_t.image_speed&gt;0){
+    if(place_meeting(x,y,obj_sword_t) and obj_sword_t.image_speed&gt;0 and damaged == false){
         e_hp -= global.p_satk div e_sdef;
         damaged = true;
     }
@@ -522,6 +578,29 @@ var y_f = lengthdir_y(30,dir);
     
 
 physics_apply_impulse(x,y,x_f,y_f);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_sword_t">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//colide
 </string>
           </argument>
         </arguments>
