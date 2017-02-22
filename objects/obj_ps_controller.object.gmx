@@ -114,6 +114,14 @@ if surface_exists(global.lighting){
     //Light sources
     
     ///Torch
+    draw_set_blend_mode(bm_subtract);
+    draw_set_colour(c_white);
+    draw_set_alpha(0.3);
+    
+    with obj_torch{
+        draw_circle(x+16,y+16,70+r,false);
+        draw_circle(x+16,y+16,64+r,false);
+    }
     
     ///Skull Bullet
     draw_set_blend_mode(bm_subtract);

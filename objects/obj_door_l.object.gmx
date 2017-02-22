@@ -84,13 +84,15 @@ if(place_meeting(x,y,obj_body) &amp;&amp; !place_meeting(x,y,obj_ppon) &amp;&amp
     tpy = obj_body.y;
     global.d_cd = true;
     
-    global.vfx = obj_view.x+roomwd;
-    global.vfy = obj_view.y;
+    if instance_exists(obj_view){
+        global.vfx = obj_view.x+roomwd;
+        global.vfy = obj_view.y;
     
-    with(obj_view){
+        with(obj_view){
         
-        move_towards_point(global.vfx,global.vfy,16);
+            move_towards_point(global.vfx,global.vfy,16);
         
+        }
     }
     
     with(obj_roll){

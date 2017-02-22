@@ -28,6 +28,7 @@
             <string>global.d_cd = false;
 global.brooma = false;
 global.bk = false;
+global.level_room_types[4,4] = 'start';
 dead = false;
 
 //Stats
@@ -266,7 +267,7 @@ if(global.bk == true &amp;&amp; room == rm_boss){
 }
 
 ///Debug
-if keyboard_check_pressed(vk_enter){
+if keyboard_check_pressed(vk_f11){
     room_goto(rm_boss);
 }
 </string>

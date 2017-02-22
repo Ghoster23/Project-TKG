@@ -28,7 +28,7 @@
             <string>depth = -y;
 image_speed = 0;
 em = part_emitter_create(global.ps); 
-part_emitter_region(global.ps,em,x+15,x+17,y+10,y+10,ps_shape_rectangle,ps_distr_linear)
+part_emitter_region(global.ps,em,x+15,x+17,y+10,y+10,ps_shape_rectangle,ps_distr_linear);
 
 r = 0;
 flicker = true;
@@ -80,27 +80,11 @@ flicker = true;
             <string>part_emitter_stream(global.ps,em,global.pt_fire,1);
 
 if flicker == true{
-    randomize();
-    r = random_range(-1,1);
-    flicker = false;
-    alarm[0] = 3;
-}
-
-if room == rm_level{
-    if (rectangle_in_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, view_xview[0], view_yview[0], view_xview[0] + view_wview[0], view_yview[0] + view_hview[0])) {
-        surface_set_target(global.lighting);
-    
-        draw_set_blend_mode(bm_subtract);
-        draw_set_colour(c_white);
-        
-        draw_circle(x+16,y+16,140+r,false);
-        draw_circle(x+16,y+16,128+r,false);
-        
-        draw_set_blend_mode(bm_normal);
-        draw_set_alpha(1);
-        surface_reset_target();
+        randomize();
+        r = random_range(-1,1);
+        flicker = false;
+        alarm[0] = 3;
     }
-}
 </string>
           </argument>
         </arguments>
