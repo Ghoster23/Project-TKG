@@ -28,6 +28,14 @@
             <string>global.d_cd = false;
 global.brooma = false;
 global.bk = false;
+once = false;
+
+for(i = 0; i &lt; 8; i += 1){
+    for(j = 0; j &lt; 8; j += 1){
+        global.level_room_types[i,j] = 'none';
+    }
+}
+
 global.level_room_types[4,4] = 'start';
 dead = false;
 
@@ -67,6 +75,10 @@ global.st_poison = false;
 
 ///Status duration
 global.st_poison_d = 0;
+
+//Current Room
+global.current_column = 4;
+global.current_row = 4;
 
 //Manel is doing a thing... Dont be mad...
 global.char = 0;
@@ -234,6 +246,15 @@ if status_check == true{
     
     status_check = false;
     alarm[1] = 1 * room_speed;
+}
+
+///Where am I?
+if room == rm_level{
+    if instance_exists(obj_body){
+        global.current_column = obj_body.x div global.roomwd;
+        global.current_row = obj_body.y div global.roomhg;
+        
+    }
 }
 
 ///Death

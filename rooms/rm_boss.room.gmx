@@ -87,8 +87,6 @@
     <instance objName="obj_ppoff" x="464" y="832" name="inst_CCAA592F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="464" y="416" name="inst_E594277A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="464" y="832" name="inst_D708B282" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mimic" x="368" y="416" name="inst_EEE88F5F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mimic" x="640" y="336" name="inst_C8416B72" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_torch" x="272" y="144" name="inst_10FEEA09" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_torch" x="624" y="144" name="inst_C0CF0BF6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_crate" x="144" y="416" name="inst_78A612ED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -109,7 +107,10 @@
     <instance objName="obj_torch" x="672" y="864" name="inst_AAB4CB01" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_torch" x="560" y="960" name="inst_7E64999D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_torch" x="336" y="960" name="inst_DE09047A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_skull" x="416" y="800" name="inst_9C87A9F1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat" x="352" y="784" name="inst_1158D41D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat" x="640" y="816" name="inst_B46B20BF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_slm_cr" x="336" y="496" name="inst_16829D7B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_slm_cr" x="624" y="464" name="inst_F70965ED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>

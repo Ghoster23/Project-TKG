@@ -68,6 +68,8 @@
       <sprite>sprites\spr_wall_right</sprite>
       <sprite>sprites\spr_wall_down</sprite>
       <sprite>sprites\spr_dungeon_wall</sprite>
+      <sprite>sprites\spr_torch_light</sprite>
+      <sprite>sprites\spr_torch_light_s</sprite>
       <sprite>sprites\spr_torch</sprite>
     </sprites>
     <sprites name="floor+">
@@ -228,7 +230,6 @@
       </objects>
     </objects>
     <objects name="gen">
-      <object>objects\obj_mapgen</object>
       <object>objects\obj_view</object>
       <objects name="controllers">
         <object>objects\obj_ps_controller</object>

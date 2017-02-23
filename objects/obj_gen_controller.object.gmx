@@ -28,6 +28,7 @@
             <string>//Measurements
 global.roomwd = 544;
 global.roomhg = 416;
+once = false;
 
 //Gen Cursor
 gx = room_width/2;
@@ -54,7 +55,7 @@ instance_create(gx,gy+global.roomhg-32,obj_wall_down);
 instance_create(gx+global.roomwd-32,gy,obj_wall_right);
 instance_create(gx+global.roomwd/2,gy+global.roomhg/2+31,obj_floor);
 
-l[4,4] = true
+global.l[4,4] = true
 
 //Player
 instance_create(gx+global.roomwd/2,gy+global.roomhg/2,obj_body);
@@ -63,6 +64,12 @@ instance_create(gx+global.roomwd/2,gy+global.roomhg/2,obj_body);
 instance_create(room_width/2+global.roomwd/2,room_height/2+global.roomhg/2,obj_view);
 
 //Room counts
+for(var i = 0; i &lt; 8; i += 1;){
+    for(var j = 0; j &lt; 8; j += 1;){
+        global.l[i,j] = false;
+    }
+}
+
 broom = 1;
 broomc = 0;
 
@@ -107,15 +114,7 @@ roomstc = 0;
             <string>randomize();
 
 //2D Array for room existence
-l[4,4] = true;
-
-for(var i = 0; i &lt; 8; i += 1;){
-    for(var j = 0; j &lt; 8; j += 1;){
-        l[i,j] = false;
-    }
-}
-
-l[4,4] = true;
+global.l[4,4] = true;
 
 //Gen the map
 while roomgenerated != roomstogenerate{
@@ -129,32 +128,32 @@ while roomgenerated != roomstogenerate{
     c = irandom(7);
     r = irandom(7);
     
-    L = l[r,c];
+    L = global.l[r,c];
     
     //Can we build there?
     if L == false{
     
         //Is there an adjoining room?
         if r != 0{
-            L = l[r-1,c];
+            L = global.l[r-1,c];
             if L == true{
                 up = true;
             }
         }
         if r != 7{
-            L = l[r+1,c];
+            L = global.l[r+1,c];
             if L == true{
                 down = true;
             }
         }
         if c != 0{
-            L = l[r,c-1];
+            L = global.l[r,c-1];
             if L == true{
                 left = true;
             }
         }
         if c != 7{
-            L = l[r,c+1];
+            L = global.l[r,c+1];
             if L == true{
                 right = true;
             }
@@ -209,6 +208,7 @@ while roomgenerated != roomstogenerate{
             
             ///Fill the room
             scr_roomgn(typeroom);
+            global.level_room_types[c,r] = typeroom;
             
             ///Doors
             if up{
@@ -237,10 +237,23 @@ while roomgenerated != roomstogenerate{
             } 
             
             ///Can't build there no more
-            l[r,c] = true;
+            global.l[r,c] = true;
             
         }
     }
+}
+
+if once == false{
+for(i = 0; i &lt; 8; i += 1){
+    for(j = 0; j &lt; 8; j += 1){
+        if global.level_room_types[i,j] != 'none'{
+            show_debug_message('r: ' + string(i));
+            show_debug_message('c: ' + string(j));
+            show_debug_message('type: ' + string(global.level_room_types[i,j]));
+        }   
+    }
+}
+once = true; 
 }
 </string>
           </argument>
