@@ -441,12 +441,12 @@ if(place_meeting(x,y,obj_ppon)){
     
     image_blend = c_white;
     ///Get Damaged
-    if(place_meeting(x,y,obj_swing) and damaged == false){
+    if(place_meeting(x,y,obj_swing)){
         e_hp -= global.p_atk div e_def;
         damaged = true;
     }
     
-    if(place_meeting(x,y,obj_sword_t) and obj_sword_t.image_speed&gt;0 and damaged == false){
+    if(place_meeting(x,y,obj_sword_t) and obj_sword_t.image_speed&gt;0){
         e_hp -= global.p_satk div e_sdef;
         damaged = true;
     }
