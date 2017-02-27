@@ -85,7 +85,10 @@ amp = 5;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>switch cont {
+            <string>show_debug_message(cont);
+
+if casting == true and cont &gt; 0{
+switch cont {
     case 3:
         if fl_dir == 'card'{
             instance_create(x,y-24,obj_skull_fl);
@@ -111,13 +114,18 @@ amp = 5;
             fl_dir = 'card';
         }
         
+        alarm[2] = 0.20 * room_speed;
     break;
 }
 
-cont -= 1;
+    cont -= 1;
 
-if cont &gt;= 0{
-    alarm[6] = 0.20 * room_speed;
+    if cont &gt; 0{
+        alarm[6] = 0.20 * room_speed;
+    }
+    
+}else if casting == true{
+    casting = false;
 }
 </string>
           </argument>
@@ -217,9 +225,8 @@ dir_change = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>casting = false;
-
-state = 3;
+            <string>state = 1;
+alarm[6] = 0.30 * room_speed;
 </string>
           </argument>
         </arguments>
@@ -406,7 +413,7 @@ if place_meeting(x,y,obj_ppon) and go == true{
     depth = -y;
     
     /// Enemy States
-    if (state == 3 or state == 1 or state == 2){
+    if (state == 1 or state == 2){
         sprite_index = spr_skull_o;
         if dis &lt; 185{
             state = 1;
@@ -432,7 +439,7 @@ if place_meeting(x,y,obj_ppon) and go == true{
                 
                 cont = 3;
                 casting = true;
-                alarm[2] = 1 * room_speed;
+                
                 alarm[6] = 0.20 * room_speed;
                 
             }else if fl_dir == 'diag' and casting == false{
@@ -441,7 +448,7 @@ if place_meeting(x,y,obj_ppon) and go == true{
                 
                 cont = 3;
                 casting = true;
-                alarm[2] = 1 * room_speed;
+                
                 alarm[6] = 0.20 * room_speed;
                 
             }

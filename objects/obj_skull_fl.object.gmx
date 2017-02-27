@@ -31,7 +31,8 @@ skull = instance_nearest(x,y,obj_skull);
 
 dir = point_direction(skull.x,skull.y,x,y);
 go = false;
-alarm[0] = 0.5 * room_speed * skull.cont;
+once = false;
+
 r = 0;
 hspd = 0;
 vspd = 0;
@@ -58,10 +59,6 @@ vspd = 0;
           <argument>
             <kind>1</kind>
             <string>go = true;
-
-with(skull){
-    state = 3;
-}
 </string>
           </argument>
         </arguments>
@@ -84,19 +81,32 @@ with(skull){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>depth = -y -418;
-part_particles_create(global.ps,x+hspd,y+vspd,global.pt_trail,1);
-part_particles_create(global.ps,x+hspd,y+vspd,global.pt_sflame,50);
+            <string>if skull.cont == 0{
+    alarm[0] = 0.5 * room_speed;
+}
+
+depth = -y -418;
 
 if go == true{
-//Get hspd and vspd
-hspd = lengthdir_x(5,dir);
-vspd = lengthdir_y(5,dir);
+    
+    if once == false{
+        with skull{
+            state = 1;
+        }
+        once = true;
+    }
+
+    //Get hspd and vspd
+    hspd = lengthdir_x(5,dir);
+    vspd = lengthdir_y(5,dir);
    
-//Move
-phy_position_x += hspd;
-phy_position_y += vspd;
+    //Move
+    phy_position_x += hspd;
+    phy_position_y += vspd;
 }
+
+part_particles_create(global.ps,x+hspd,y+vspd,global.pt_trail,1);
+part_particles_create(global.ps,x+hspd,y+vspd,global.pt_sflame,50);
 </string>
           </argument>
         </arguments>
