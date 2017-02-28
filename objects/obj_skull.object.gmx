@@ -85,9 +85,8 @@ amp = 5;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_debug_message(cont);
+            <string>if casting == true and cont &gt; 0{
 
-if casting == true and cont &gt; 0{
 switch cont {
     case 3:
         if fl_dir == 'card'{
@@ -114,7 +113,7 @@ switch cont {
             fl_dir = 'card';
         }
         
-        alarm[2] = 0.20 * room_speed;
+        alarm[2] = 0.50 * room_speed;
     break;
 }
 
@@ -124,8 +123,6 @@ switch cont {
         alarm[6] = 0.20 * room_speed;
     }
     
-}else if casting == true{
-    casting = false;
 }
 </string>
           </argument>
@@ -225,31 +222,7 @@ dir_change = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>state = 1;
-alarm[6] = 0.30 * room_speed;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="1">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>alarm[5] = 30;
+            <string>casting = false;
 </string>
           </argument>
         </arguments>
@@ -398,8 +371,8 @@ shift = amp * sin(degtorad(t));
             <kind>1</kind>
             <string>///Exist
 if place_meeting(x,y,obj_ppon) and k == false{
-    image_speed = 5;
-    alarm[1] = 10;
+    image_speed = 0.3;
+    alarm[5] = 10;
     k = true;
     
     if(trigger == false){
@@ -421,7 +394,7 @@ if place_meeting(x,y,obj_ppon) and go == true{
         }else if dis &gt; 215{
             state = 2;
         }else {
-            state = 3;
+            state = 0;
         }
     }
     
@@ -477,18 +450,6 @@ if place_meeting(x,y,obj_ppon) and go == true{
             off_y = obj_body.vspd;
 
         break;
-        case 3:
-            //do nothing
-            hspd = 0;
-            vspd = 0;
-            
-            off_x = 0;
-            off_y = 0;
-            
-            if casting == false{
-                state = 0;
-            }
-        break;
     }
     
     phy_position_x += hspd - off_x;
@@ -496,19 +457,19 @@ if place_meeting(x,y,obj_ppon) and go == true{
     
     ///Get Damaged
     image_blend = c_white;
-    if(place_meeting(x,y,obj_swing) and damaged == false){
+    if(place_meeting(x,y,obj_swing)){
         e_hp -= global.p_atk div e_def;
         damaged = true;
     }
     
-    if(place_meeting(x,y,obj_sword_t) and obj_sword_t.image_speed&gt;0 and damaged == false){
+    if(place_meeting(x,y,obj_sword_t) and obj_sword_t.image_speed&gt;0){
         e_hp -= global.p_satk div e_sdef;
         damaged = true;
     }
     
     if damaged == true{
-        alarm[4] = 20;
         if flash == false{
+            alarm[4] = 20;
             flash = true;
             image_blend = c_red;
         }

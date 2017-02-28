@@ -41,8 +41,8 @@ signal[0] = -1;
 signal[1] = 1;
 
 //Stats
-e_mhp = 20;
-e_hp = 20;
+e_mhp = 6;
+e_hp = 6;
 e_atk = 10;
 e_satk = 0;
 e_def = 5;
@@ -370,6 +370,10 @@ if(place_meeting(x,y,obj_ppon)){
         case 2:  //Dead state
             sprite_index = spr_slime_d;
             image_speed = 0.2;
+            
+            if image_index == 4{
+                instance_destroy();
+            }
 
     }
     
@@ -402,10 +406,11 @@ if(place_meeting(x,y,obj_ppon)){
     ///Die
     if(e_hp &lt;= 0) and state != 2{
         global.combat -= 1;
-        alarm[1] = 30;
-        
+        alarm[1] = 10;
+                
         sprite_index = spr_slime_d;
-        image_speed = 0.1;
+        image_index = 0;
+        image_speed = 0.2;
         state = 2;
         
     }

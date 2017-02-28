@@ -36,8 +36,8 @@ cr_cd = false;
 damaged = false;
 
 //Stats
-e_mhp = 10;
-e_hp = 10;
+e_mhp = 15;
+e_hp = 15;
 e_atk = 10;
 e_satk = 0;
 e_def = 5;
@@ -420,8 +420,8 @@ if(place_meeting(x,y,obj_ppon)){
             dash = true;
             
             //Get hspd and vspd
-            hspd = lengthdir_x(e_spd*7,dir);
-            vspd = lengthdir_y(e_spd*7,dir);
+            hspd = lengthdir_x(e_spd*10,dir);
+            vspd = lengthdir_y(e_spd*10,dir);
    
             //Move
             phy_position_x += hspd;
@@ -502,6 +502,15 @@ if(place_meeting(x,y,obj_ppon)){
     alarm[0] = 1.5*room_speed;
 }
 
+if state == 2{
+    //Get hspd and vspd
+    hspd = lengthdir_x(6,dir);
+    vspd = lengthdir_y(6,dir);
+   
+   //Move
+   obj_body.phy_position_x += hspd;
+   obj_body.phy_position_y += vspd;
+}
 </string>
           </argument>
         </arguments>
@@ -674,9 +683,9 @@ draw_sprite(spr_player_shadow,1,x,y+40+shift);
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>0,16</point>
-    <point>32,16</point>
-    <point>32,32</point>
-    <point>0,32</point>
+    <point>12,8</point>
+    <point>36,8</point>
+    <point>36,32</point>
+    <point>12,32</point>
   </PhysicsShapePoints>
 </object>

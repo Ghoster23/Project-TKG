@@ -41,6 +41,29 @@ vspd = 0;
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>skull.state = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
@@ -81,21 +104,14 @@ vspd = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if skull.cont == 0{
-    alarm[0] = 0.5 * room_speed;
+            <string>if instance_exists(skull){
+if skull.cont == 0{
+    alarm[0] = 0.2 * room_speed;
 }
 
 depth = -y -418;
 
 if go == true{
-    
-    if once == false{
-        with skull{
-            state = 1;
-        }
-        once = true;
-    }
-
     //Get hspd and vspd
     hspd = lengthdir_x(5,dir);
     vspd = lengthdir_y(5,dir);
@@ -103,10 +119,18 @@ if go == true{
     //Move
     phy_position_x += hspd;
     phy_position_y += vspd;
+    
+    if once == false{
+        alarm[1] = 0.6 * room_speed;
+        once = true;
+    }
 }
 
 part_particles_create(global.ps,x+hspd,y+vspd,global.pt_trail,1);
 part_particles_create(global.ps,x+hspd,y+vspd,global.pt_sflame,50);
+}else {
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>
