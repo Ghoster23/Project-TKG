@@ -290,6 +290,7 @@
       <objects name="peasent">
         <object>objects\obj_psnt_head</object>
         <object>objects\obj_psnt_body</object>
+        <object>objects\obj_e_swing</object>
       </objects>
       <object>objects\obj_bat</object>
       <object>objects\obj_mimic</object>

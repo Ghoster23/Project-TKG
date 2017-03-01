@@ -34,16 +34,20 @@ visible = false;
 trigger = false;
 flash = false;
 cr_cd = false;
+cd_swing = false;
 damaged = false;
+alt = 1;
+
+opt = instance_nearest(x,y,obj_psnt_head).opt;
 
 //Stats
-e_mhp = 10;
+e_mhp = 20;
 e_hp = 20;
-e_atk = 10;
+e_atk = 5;
 e_satk = 0;
 e_def = 5;
 e_sdef = 5;
-e_spd =4;
+e_spd = 3;
 
 //States
 state = 0;
@@ -57,6 +61,8 @@ i_dir = 0;
 p_state = 0;
 d = 0;
 d_ = 0;
+offset_x = 0;
+offset_y = 0;
 </string>
           </argument>
         </arguments>
@@ -130,6 +136,52 @@ image_blend = c_white;
             <string>{
 dir_change = true;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>instance_create(x,y,obj_e_swing);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>cd_swing = false;
 </string>
           </argument>
         </arguments>
@@ -283,16 +335,17 @@ if(place_meeting(x,y,obj_ppon)){
     }
 
     /// Enemy States
-    if state != 3{
-    if 64 &lt; dis &lt; 200{
+    
+    if 80 &lt; dis &lt; 200{
         state = 1;
         
-    }else if dis &lt;= 64{
+    }
+    if dis &lt;= 24{
         state = 2;
 
-    }else if dis &gt;= 200{
-        state = 0;
     }
+    if dis &gt;= 200{
+        state = 0;
     }
     
     if p_state != state{
@@ -343,7 +396,14 @@ if(place_meeting(x,y,obj_ppon)){
             
         break;
         case 2:  //Attack the player
-                
+            hspd = 0;
+            vspd = 0;
+            
+            if cd_swing == false{
+                cd_swing = true;
+                alarm[2] = 10;
+                alarm[1] = 30;
+            }
         
         break;
         case 3:  //Dead State
@@ -364,8 +424,8 @@ if(place_meeting(x,y,obj_ppon)){
     }
     
     if damaged == true{
-        alarm[4] = 20;
         if flash == false{
+            alarm[4] = 20;
             flash = true;
             image_blend = c_red;
         }
@@ -577,9 +637,9 @@ draw_sprite(spr_player_shadow,1,x,y);
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>0,16</point>
-    <point>32,16</point>
-    <point>32,32</point>
-    <point>0,32</point>
+    <point>4,0</point>
+    <point>20,0</point>
+    <point>20,24</point>
+    <point>4,24</point>
   </PhysicsShapePoints>
 </object>

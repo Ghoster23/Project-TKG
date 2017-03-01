@@ -32,6 +32,8 @@ global.MonitorH = display_get_height();
 show_debug_message(global.MonitorW);
 show_debug_message(global.MonitorH);
 
+once = false;
+
 global.Xoffset = (global.MonitorW - 544)/2;
 global.Yoffset = (global.MonitorH - 416)/2;
 
@@ -92,13 +94,13 @@ surface_reset_target();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if surface_exists(application_surface) and room != rm_menu_1{
+            <string>if surface_exists(application_surface) and room != rm_menu_1 and room != rm_dead{
     //Draw the game
     draw_surface_ext(application_surface,global.Xoffset,global.Yoffset,1,1,0,c_white,1);
 }
 
 //Draw the surface
-if surface_exists(global.lighting){
+if surface_exists(global.lighting) and room != rm_dead{
     surface_set_target(global.lighting);
     
     //Make it dark
@@ -142,13 +144,27 @@ if surface_exists(global.lighting){
     draw_set_alpha(1);
     surface_reset_target();
     
-}else {
+}else if room != rm_dead{
     global.lighting = surface_create(room_width,room_height);
     
     surface_set_target(global.lighting);
     
     draw_clear_alpha(c_black, 0);
     surface_reset_target();
+}
+
+if room = rm_dead and once == false{
+once = true;
+//Particles
+part_type_destroy(global.pt_cbits)
+part_type_destroy(global.pt_smoke)
+part_type_destroy(global.pt_fire)
+part_system_destroy(global.ps);
+
+//Surface
+if surface_exists(global.lighting){
+    surface_free(global.lighting);
+}
 }
 </string>
           </argument>
