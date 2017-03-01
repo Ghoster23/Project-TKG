@@ -37,8 +37,10 @@ cr_cd = false;
 cd_swing = false;
 damaged = false;
 alt = 1;
+swing = false;
 
 opt = instance_nearest(x,y,obj_psnt_head).opt;
+instance_create(x,y,obj_stick);
 
 //Stats
 e_mhp = 20;
@@ -158,7 +160,7 @@ dir_change = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x,y,obj_e_swing);
+            <string>swing = true;
 </string>
           </argument>
         </arguments>
@@ -335,17 +337,18 @@ if(place_meeting(x,y,obj_ppon)){
     }
 
     /// Enemy States
-    
-    if 80 &lt; dis &lt; 200{
-        state = 1;
+    if state != 3{
+        if 80 &lt; dis &lt; 200{
+            state = 1;
         
-    }
-    if dis &lt;= 24{
-        state = 2;
+        }
+        if dis &lt;= 24{
+            state = 2;
 
-    }
-    if dis &gt;= 200{
-        state = 0;
+        }
+        if dis &gt;= 200{
+            state = 0;
+        }
     }
     
     if p_state != state{
@@ -496,12 +499,13 @@ if(place_meeting(x,y,obj_ppon)){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var dir = point_direction(obj_kb.x,obj_kb.y,x,y);
-var x_f = lengthdir_x(30,dir);
-var y_f = lengthdir_y(30,dir);
-    
+            <string>if instance_exists(obj_kb){
+    var dir = point_direction(obj_kb.x,obj_kb.y,x,y);
+    var x_f = lengthdir_x(30,dir);
+    var y_f = lengthdir_y(30,dir);
 
-physics_apply_impulse(x,y,x_f,y_f);
+    physics_apply_impulse(x,y,x_f,y_f);
+}
 </string>
           </argument>
         </arguments>

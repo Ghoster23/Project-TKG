@@ -88,25 +88,37 @@
       <sprite>sprites\spr_door_l</sprite>
     </sprites>
     <sprites name="player">
-      <sprite>sprites\spr_body_down</sprite>
-      <sprite>sprites\spr_body_side</sprite>
-      <sprite>sprites\spr_body_still</sprite>
-      <sprite>sprites\spr_roll_down</sprite>
-      <sprite>sprites\spr_roll_side</sprite>
-      <sprite>sprites\spr_body_up</sprite>
       <sprite>sprites\spr_player_shadow</sprite>
-      <sprite>sprites\spr_sword_t</sprite>
-      <sprite>sprites\spr_roll_up</sprite>
-      <sprite>sprites\spr_head</sprite>
-      <sprite>sprites\sword_spr</sprite>
-      <sprite>sprites\spr_sword</sprite>
-      <sprite>sprites\spr_swing</sprite>
-      <sprite>sprites\spr_equip</sprite>
-      <sprite>sprites\spr_fheart</sprite>
-      <sprite>sprites\spr_hheart</sprite>
       <sprite>sprites\spr_gui</sprite>
-      <sprite>sprites\spr_hands</sprite>
-      <sprite>sprites\spr_full_body</sprite>
+      <sprites name="pick ups">
+        <sprite>sprites\spr_fheart</sprite>
+        <sprite>sprites\spr_hheart</sprite>
+        <sprite>sprites\spr_equip</sprite>
+      </sprites>
+      <sprites name="weapons">
+        <sprites name="sword">
+          <sprite>sprites\sword_spr</sprite>
+          <sprite>sprites\spr_swing</sprite>
+          <sprite>sprites\spr_sword</sprite>
+          <sprite>sprites\spr_sword_t</sprite>
+        </sprites>
+      </sprites>
+      <sprites name="hands">
+        <sprite>sprites\spr_hands</sprite>
+      </sprites>
+      <sprites name="special skill">
+        <sprite>sprites\spr_roll_side</sprite>
+        <sprite>sprites\spr_roll_up</sprite>
+        <sprite>sprites\spr_roll_down</sprite>
+      </sprites>
+      <sprites name="body">
+        <sprite>sprites\spr_body_down</sprite>
+        <sprite>sprites\spr_full_body</sprite>
+        <sprite>sprites\spr_body_up</sprite>
+        <sprite>sprites\spr_body_still</sprite>
+        <sprite>sprites\spr_body_side</sprite>
+        <sprite>sprites\spr_head</sprite>
+      </sprites>
     </sprites>
     <sprites name="enemy">
       <sprites name="bat">
@@ -159,9 +171,10 @@
           <sprite>sprites\spr_peasent_h_b</sprite>
         </sprites>
       </sprites>
+      <sprites name="weapons">
+        <sprite>sprites\spr_stick</sprite>
+      </sprites>
     </sprites>
-    <sprite>sprites\spr_test</sprite>
-    <sprite>sprites\spr_cursor</sprite>
     <sprites name="mermaid">
       <sprite>sprites\spr_mer_body_down</sprite>
       <sprite>sprites\spr_mer_head</sprite>
@@ -172,6 +185,8 @@
       <sprite>sprites\spr_explsion</sprite>
     </sprites>
     <sprite>sprites\sprite79</sprite>
+    <sprite>sprites\spr_cursor</sprite>
+    <sprite>sprites\spr_test</sprite>
     <sprite>sprites\spr_point</sprite>
   </sprites>
   <backgrounds name="background">
@@ -291,6 +306,7 @@
         <object>objects\obj_psnt_head</object>
         <object>objects\obj_psnt_body</object>
         <object>objects\obj_e_swing</object>
+        <object>objects\obj_stick</object>
       </objects>
       <object>objects\obj_bat</object>
       <object>objects\obj_mimic</object>
