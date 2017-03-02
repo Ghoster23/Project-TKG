@@ -106,7 +106,7 @@ if surface_exists(global.lighting) and room != rm_dead{
     //Make it dark
     if room == rm_level or room == rm_boss{
         draw_set_colour(c_black);
-        draw_set_alpha(0.3);
+        draw_set_alpha(0.2);
         draw_rectangle(0,0,room_width,room_height,0);
     }else {
         draw_set_colour(c_white);
@@ -122,8 +122,10 @@ if surface_exists(global.lighting) and room != rm_dead{
     
     with obj_torch{
         if lit == true{
-            draw_sprite(spr_torch_light,dir,x+16,y+16);
-            draw_sprite(spr_torch_light_s,dir,x+16,y+16);
+            var a = round(sin(o));
+            
+            draw_sprite(spr_torch_light,dir,x+16,y+16+r);
+            draw_sprite(spr_torch_light_s,dir,x+16,y+16+r);
         }
     }
     

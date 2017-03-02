@@ -31,6 +31,7 @@ image_speed = 0;
 r = 0;
 flicker = true;
 lit = true;
+o = 0;
 
 rm_cl = x div global.roomwd;
 rm_rw = y div global.roomhg
@@ -121,7 +122,7 @@ if flicker == true{
         randomize();
         r = random_range(-1,1);
         flicker = false;
-        alarm[0] = 3;
+        alarm[0] = 1;
     }
 </string>
           </argument>
