@@ -262,8 +262,10 @@
       <object>objects\obj_gui</object>
     </objects>
     <objects name="boss">
+      <object>objects\obj_CH_root</object>
       <object>objects\obj_green_puff</object>
       <object>objects\obj_tumey_1</object>
+      <object>objects\obj_CH_tree_state</object>
       <object>objects\obj_tumey_2</object>
       <object>objects\obj_tumey_3</object>
       <object>objects\obj_bt_bullet</object>

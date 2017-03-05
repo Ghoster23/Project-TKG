@@ -5,72 +5,27 @@ roomwd = global.roomwd
  switch(typeroom){
  ///Type A
     case 0:
-        instance_create(gx+(roomwd/2),gy+144+3*32,obj_ppoff);
-       
-        instance_create(gx+1*32,gy+3*32,obj_rock);
-        instance_create(gx+2*32,gy+3*32,obj_rock);
-        instance_create(gx+14*32,gy+3*32,obj_rock);
-        instance_create(gx+15*32,gy+3*32,obj_rock);
-
-        instance_create(gx+1*32,gy+4*32,obj_rock);
-        instance_create(gx+2*32,gy+4*32,obj_rock);
-        instance_create(gx+14*32,gy+4*32,obj_rock);
-        instance_create(gx+15*32,gy+4*32,obj_rock);
-
-        instance_create(gx+1*32,gy+10*32,obj_rock);
-        instance_create(gx+2*32,gy+10*32,obj_rock);
-        instance_create(gx+14*32,gy+10*32,obj_rock);
-        instance_create(gx+15*32,gy+10*32,obj_rock);
-
-        instance_create(gx+1*32,gy+11*32,obj_rock);
-        instance_create(gx+2*32,gy+11*32,obj_rock);
-        instance_create(gx+14*32,gy+11*32,obj_rock);
-        instance_create(gx+15*32,gy+11*32,obj_rock);
-       
-        instance_create(gx+4*32,gy+3*32,obj_slm_a);
-        instance_create(gx+13*32,gy+3*32,obj_slm_a);
-
-        instance_create(gx+10*32,gy+4*32,obj_slm_a);
-
-        instance_create(gx+5*32,gy+5*32,obj_slm_a);
-
-        instance_create(gx+2*32,gy+6*32,obj_slm_a);
-
-        instance_create(gx+9*32,gy+8*32,obj_slm_a);
-        instance_create(gx+5*32,gy+8*32,obj_slm_a);
+       instance_create(gx+32,gy+96,obj_rock);
+       instance_create(gx+64,gy+96,obj_rock);
+       instance_create(gx+32,gy+128,obj_rock);
+       instance_create(gx+96,gy+160,obj_rock);
+       instance_create(gx+128,gy+160,obj_rock);
+       instance_create(gx+352,gy+160,obj_bat);
+       instance_create(gx+96,gy+192,obj_rock);
+       instance_create(gx+192,gy+224,obj_bat);
+       instance_create(gx+320,gy+256,obj_psnt_body);
+       instance_create(gx+(roomwd/2),gy+240,obj_ppoff);
         
     break;
     case 1:
-        instance_create(gx+(roomwd/2),gy+144+3*32,obj_ppoff);
-       
-        instance_create(gx+2*32,gy+4*32,obj_rock);
-        instance_create(gx+4*32,gy+4*32,obj_rock);
-        instance_create(gx+12*32,gy+4*32,obj_rock);
-        instance_create(gx+10*32,gy+4*32,obj_rock);
-
-        instance_create(gx+3*32,gy+6*32,obj_rock);
-        instance_create(gx+5*32,gy+6*32,obj_rock);
-        instance_create(gx+7*32,gy+6*32,obj_rock);
-        instance_create(gx+9*32,gy+6*32,obj_rock);
-        instance_create(gx+11*32,gy+6*32,obj_rock);
-
-        instance_create(gx+2*32,gy+8*32,obj_rock);
-        instance_create(gx+4*32,gy+8*32,obj_rock);
-        instance_create(gx+12*32,gy+8*32,obj_rock);
-        instance_create(gx+10*32,gy+8*32,obj_rock);
-       
-        instance_create(gx+3*32,gy+3*32,obj_slm_a);
-        instance_create(gx+11*32,gy+3*32,obj_slm_a);
-
-        instance_create(gx+7*32,gy+5*32,obj_slm_a);
-
-        instance_create(gx+4*32,gy+6*32,obj_slm_a);
-        instance_create(gx+10*32,gy+6*32,obj_slm_a);
-
-        instance_create(gx+7*32,gy+7*32,obj_slm_a);
-
-        instance_create(gx+3*32,gy+9*32,obj_slm_a);
-        instance_create(gx+11*32,gy+9*32,obj_slm_a);
+        instance_create(gx+192,gy+128,obj_vase);
+       instance_create(gx+192,gy+160,obj_vase);
+       instance_create(gx+416,gy+160,obj_chest);
+       instance_create(gx+192,gy+192,obj_vase);
+       instance_create(gx+192,gy+224,obj_vase);
+       instance_create(gx+288,gy+224,obj_chest);
+       instance_create(gx+384,gy+288,obj_crate);
+       instance_create(gx+384,gy+320,obj_crate);
         
     break;
     case 2:
