@@ -186,6 +186,12 @@
     </sprites>
     <sprite>sprites\sprite79</sprite>
     <sprite>sprites\spr_cursor</sprite>
+    <sprite>sprites\spr_bdesign</sprite>
+    <sprite>sprites\spr_infosheet</sprite>
+    <sprite>sprites\spr_mainchar</sprite>
+    <sprite>sprites\spr_nextbtn</sprite>
+    <sprite>sprites\spr_select</sprite>
+    <sprite>sprites\spr_banner</sprite>
     <sprite>sprites\spr_test</sprite>
     <sprite>sprites\spr_point</sprite>
   </sprites>
@@ -204,9 +210,12 @@
     <script>scripts\scr_part_cbits_init.gml</script>
     <script>scripts\scr_part_sflame_init.gml</script>
     <script>scripts\scr_part_trail_init.gml</script>
+    <script>scripts\scr_banner.gml</script>
+    <script>scripts\scr_infosheet.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
+    <font>fonts\font_infosheet</font>
   </fonts>
   <objects name="objects">
     <objects name="room">
@@ -372,8 +381,13 @@
     </objects>
     <objects name="chsl">
       <object>objects\obj_back</object>
-      <object>objects\obj_chsl</object>
-      <object>objects\obj_select</object>
+      <object>objects\obj_infosheet</object>
+      <object>objects\obj_enterbtn</object>
+      <object>objects\obj_nextbtn</object>
+      <object>objects\obj_banner</object>
+      <object>objects\obj_charpresent</object>
+      <object>objects\obj_charselect_ctrl</object>
+      <object>objects\obj_bdesign</object>
     </objects>
     <object>objects\obj_p</object>
     <object>objects\obj_cursor</object>

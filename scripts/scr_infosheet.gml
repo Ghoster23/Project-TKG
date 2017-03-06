@@ -1,0 +1,145 @@
+switch (global.char_selection){
+    case 0:
+        name='Jacob NSOD'
+        height='1,78 m'
+        weight='76 kg'
+        weapon='Great Sword'
+        abilities='Dodge Roll'
+        strength='Medium'
+        vitality='Medium'
+        resistance='Medium'
+        agility='Medium'
+        break;
+    case 1:
+        name='Harlow Barone'
+        height='1.78 m'
+        weight='76 kg'
+        weapon='Great Sword'
+        abilities='Dodge Roll'
+        strength='Medium'
+        vitality='Medium'
+        resistance='Medium'
+        agility='Medium'
+        break;
+    case 2:
+        name='Brenton Guillory'
+        height='1.78 m'
+        weight='76 kg'
+        weapon='Great Sword'
+        abilities='Dodge Roll'
+        strength='Medium'
+        vitality='Medium'
+        resistance='Medium'
+        agility='Medium'
+        break;
+    case 3:
+        name='Penelope Darrow'
+        height='1.78 m'
+        weight='76 kg'
+        weapon='Great Sword'
+        abilities='Dodge Roll'
+        strength='Medium'
+        vitality='Medium'
+        resistance='Medium'
+        agility='Medium'
+        break;     
+    case 4:
+        name='Luna Von Brandt'
+        height='1.78 m'
+        weight='76 kg'
+        weapon='Great Sword'
+        abilities='Dodge Roll'
+        strength='Medium'
+        vitality='Medium'
+        resistance='Medium'
+        agility='Medium'
+        break;    
+    case 5:
+        name='Mahli Ueno'
+        height='1.78 m'
+        weight='76 kg'
+        weapon='Great Sword'
+        abilities='Dodge Roll'
+        strength='Medium'
+        vitality='Medium'
+        resistance='Medium'
+        agility='Medium'
+        break;    
+    case 6:
+        name='Thalia Fowler'
+        height='1.78 m'
+        weight='76 kg'
+        weapon='Great Sword'
+        abilities='Dodge Roll'
+        strength='Medium'
+        vitality='Medium'
+        resistance='Medium'
+        agility='Medium'
+        break;
+    case 7:
+        name='Alexis Stenberg'
+        height='1.78 m'
+        weight='76 kg'
+        weapon='Great Sword'
+        abilities='Dodge Roll'
+        strength='Medium'
+        vitality='Medium'
+        resistance='Medium'
+        agility='Medium'
+        break;    
+    case 8: 
+        name='Zimri Pointdestre'
+        height='1.78 m'
+        weight='76 kg'
+        weapon='Great Sword'
+        abilities='Dodge Roll'
+        strength='Medium'
+        vitality='Medium'
+        resistance='Medium'
+        agility='Medium'
+        break; 
+    case 9:
+        name='Euphemia Vela'
+        height='1.78 m'
+        weight='76 kg'
+        weapon='Great Sword'
+        abilities='Dodge Roll'
+        strength='Medium'
+        vitality='Medium'
+        resistance='Medium'
+        agility='Medium'
+        break;    
+    case 10:
+        name='Straton Riese'
+        height='1.20 m'
+        weight='76 kg'
+        weapon='Great Sword'
+        abilities='Dodge Roll'
+        strength='Medium'
+        vitality='Medium'
+        resistance='Medium'
+        agility='Medium'
+        break;     
+    case 11:
+        name='Dorothea Alma'
+        height='1.78 m'
+        weight='76 kg'
+        weapon='Great Sword'
+        abilities='Dodge Roll'
+        strength='Medium'
+        vitality='Medium'
+        resistance='Medium'
+        agility='Medium'
+        break;   
+    case 12:
+        name='Orpheus Teufel'
+        height='1.78 m'
+        weight='76 kg'
+        weapon='Great Sword'
+        abilities='Dodge Roll'
+        strength='Medium'
+        vitality='Medium'
+        resistance='Medium'
+        agility='Medium'
+        break;  
+}
