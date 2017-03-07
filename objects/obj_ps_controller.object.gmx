@@ -94,7 +94,7 @@ surface_reset_target();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if surface_exists(application_surface) and room != rm_menu_1 and room != rm_dead{
+            <string>if surface_exists(application_surface) and room != rm_dead{
     //Draw the game
     draw_surface_ext(application_surface,global.Xoffset,global.Yoffset,1,1,0,c_white,1);
 }
@@ -155,7 +155,7 @@ if surface_exists(global.lighting) and room != rm_dead{
     surface_reset_target();
 }
 
-if room = rm_dead and once == false{
+if room == rm_dead and once == false{
 once = true;
 //Particles
 part_type_destroy(global.pt_cbits)
@@ -223,7 +223,7 @@ if surface_exists(global.lighting){
           <argument>
             <kind>1</kind>
             <string>//Draw the surface
-if surface_exists(global.lighting){
+if surface_exists(global.lighting) and (room == rm_level or room == rm_boss) {
     if view_current == 0{
         draw_surface(global.lighting,0,0);
     }

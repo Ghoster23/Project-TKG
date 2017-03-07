@@ -11,21 +11,18 @@ roomwd = global.roomwd
        instance_create(gx+288,gy+128,obj_rock);
        instance_create(gx+320,gy+128,obj_rock);
        instance_create(gx+128,gy+160,obj_skull);
-       instance_create(gx+384,gy+160,obj_skull);
        instance_create(gx+64,gy+192,obj_rock);
        instance_create(gx+192,gy+192,obj_rock);
        instance_create(gx+320,gy+192,obj_rock);
        instance_create(gx+448,gy+192,obj_rock);
        instance_create(gx+64,gy+224,obj_rock);
        instance_create(gx+160,gy+224,obj_rock);
-       instance_create(gx+256,gy+224,obj_skull);
        instance_create(gx+352,gy+224,obj_rock);
        instance_create(gx+448,gy+224,obj_rock);
        instance_create(gx+64,gy+256,obj_rock);
        instance_create(gx+192,gy+256,obj_rock);
        instance_create(gx+320,gy+256,obj_rock);
        instance_create(gx+448,gy+256,obj_rock);
-       instance_create(gx+128,gy+288,obj_skull);
        instance_create(gx+384,gy+288,obj_skull);
        instance_create(gx+192,gy+320,obj_rock);
        instance_create(gx+224,gy+320,obj_rock);
@@ -403,7 +400,6 @@ roomwd = global.roomwd
        instance_create(gx+416,gy+192,obj_rock);
        instance_create(gx+96,gy+224,obj_rock);
        instance_create(gx+160,gy+224,obj_rock);
-       instance_create(gx+256,gy+224,obj_skull);
        instance_create(gx+352,gy+224,obj_rock);
        instance_create(gx+416,gy+224,obj_rock);
        instance_create(gx+96,gy+256,obj_rock);
@@ -430,7 +426,6 @@ roomwd = global.roomwd
        instance_create(gx+96,gy+128,obj_psnt_arch_body);
        instance_create(gx+192,gy+128,obj_rock);
        instance_create(gx+320,gy+128,obj_rock);
-       instance_create(gx+384,gy+128,obj_skull);
        instance_create(gx+480,gy+128,obj_rock);
        instance_create(gx+32,gy+160,obj_rock);
        instance_create(gx+64,gy+160,obj_rock);
@@ -445,7 +440,6 @@ roomwd = global.roomwd
        instance_create(gx+448,gy+288,obj_rock);
        instance_create(gx+480,gy+288,obj_rock);
        instance_create(gx+32,gy+320,obj_rock);
-       instance_create(gx+96,gy+320,obj_skull);
        instance_create(gx+192,gy+320,obj_rock);
        instance_create(gx+320,gy+320,obj_rock);
        instance_create(gx+416,gy+320,obj_psnt_arch_body);
