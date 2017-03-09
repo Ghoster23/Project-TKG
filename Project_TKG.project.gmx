@@ -194,6 +194,8 @@
     <sprite>sprites\spr_banner</sprite>
     <sprite>sprites\spr_test</sprite>
     <sprite>sprites\spr_point</sprite>
+    <sprite>sprites\spr_CH_tree_state</sprite>
+    <sprite>sprites\spr_CH_root</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
