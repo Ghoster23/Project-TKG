@@ -78,21 +78,34 @@ once = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if x + 10 &lt; obj_CH_tree_state.x{
-    balance = 1;
+            <string>show_debug_message(phy_rotation);
+
+if phy_rotation == 360{
+    phy_rotation = -10;
+}
+
+if phy_rotation == -360{
+    phy_rotation = 10;
+}
+
+if x + 10 &lt; obj_CH_tree_state.x{
+    down = 180;
+    mult = -1;
 }else if x - 10 &gt; obj_CH_tree_state.x{
-    balance = -1;
+    down = 0;
+    mult = 1;
 }else {
-    balance = 2;
+    down = 270;
+    mult = 1;
 }
 
 switch obj_CH_tree_state.state {
     case 1:
-        if phy_rotation &lt; ini_rotation + 90 * balance {
+        if phy_rotation != down{
         //Swing down animation
-            phy_rotation += 10;
+            phy_rotation += 10 * mult;
 
-        }else if phy_rotation == ini_rotation + 90 * balance or swing_d_cd == true{
+        }else if phy_rotation == down or swing_d_cd == true{
              if swing_d_cd == false{
                     swing_down = true;
                     swing_d_cd = true;

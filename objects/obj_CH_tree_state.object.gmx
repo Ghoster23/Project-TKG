@@ -241,7 +241,7 @@ y = phy_position_y;
 
 image_index = state;
 
-if keyboard_check(vk_numpad5){
+if keyboard_check(vk_alt){
     start = true;
 }
 
