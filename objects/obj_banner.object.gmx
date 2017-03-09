@@ -78,7 +78,7 @@ image_speed=0.8
             <string>if image_index&gt;=35{
     image_speed=0
 }
-show_debug_message(string(mouse_x)+' '+string(mouse_y))
+
 
 </string>
           </argument>

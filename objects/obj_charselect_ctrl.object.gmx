@@ -104,7 +104,7 @@ alarm[0]=10
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.char_selection==11){
+            <string>if (global.char_selection==12){
     global.char_selection=0
 }
 else {
@@ -145,7 +145,7 @@ show_debug_message(global.char_selection)
           <argument>
             <kind>1</kind>
             <string>if (global.char_selection==0){
-    global.char_selection=11
+    global.char_selection=12
 }
 else {
     global.char_selection-=1
