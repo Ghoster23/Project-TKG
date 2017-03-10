@@ -31,6 +31,8 @@ instance_create(0,0,obj_background1);
 instance_create(0,0,obj_title);
 instance_create(320,365,obj_menu1);
 instance_create(3,340,obj_quit);
+posx1=mouse_x
+posy1=mouse_y
 
 if audio_is_playing(snd_music)=false{
 audio_play_sound(snd_music,1,true);
@@ -46,6 +48,36 @@ global.sfxvolume = file_text_read_real(file_l);
 file_text_close(file_l);
 
 audio_sound_gain(snd_music,global.mvolume/100,100);
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if mouse_x!=posx1 or mouse_y!=posy1{
+    obj_menu1.selected=0
+}
+posx1=mouse_x
+posy1=mouse_y
+show_debug_message(string(obj_menu1.selected))
 
 
 </string>
