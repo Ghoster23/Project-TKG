@@ -28,9 +28,11 @@
             <string>depth = -y;
 image_speed = 0;
 ini_rotation = phy_rotation;
+steps = 0;
 
 swing_down = false;
 swing_d_cd = false;
+swing = false;
 swing_cd = false;
 once = false;
 </string>
@@ -56,6 +58,7 @@ once = false;
           <argument>
             <kind>1</kind>
             <string>swing_down = false;
+swing = true;
 </string>
           </argument>
         </arguments>
@@ -89,64 +92,75 @@ if phy_rotation == -360{
 }
 
 if x + 10 &lt; obj_CH_tree_state.x{
-    down = 180;
     mult = -1;
 }else if x - 10 &gt; obj_CH_tree_state.x{
-    down = 0;
     mult = 1;
 }else {
-    down = 270;
-    mult = 1;
+    mult = 2;
 }
 
 switch obj_CH_tree_state.state {
     case 1:
-        if phy_rotation != down{
+        if steps &lt; 9 * abs(mult) and swing_d_cd == false{
         //Swing down animation
             phy_rotation += 10 * mult;
+            
+            steps += 1 * abs(mult);
 
-        }else if phy_rotation == down or swing_d_cd == true{
-             if swing_d_cd == false{
+        }else if swing_cd == false{
+            
+            if swing_d_cd == false{
                     swing_down = true;
                     swing_d_cd = true;
                     alarm[0] = 2.5 * room_speed;
              
-            }else if swing_cd == false{
-                if once == false{
-                    if x + 10 &lt; obj_CH_tree_state.x{
-                        phy_rotation += 45;
-                    }else if x - 10 &gt; obj_CH_tree_state.x{
-                        phy_rotation -= 45;
-                    }else {
-                        phy_rotation += 180;
-                    }
-                        
-                }
+            }
                 
-                phy_rotation += 5;
+            if once == false and swing_down == false{
+                phy_rotation += 45 * sign(mult) * -1;
                 
-                if phy_rotation == ini_rotation + 50{
-                    phy_rotation -= 5;
+                steps = 0;
+                    
+                once = true;
+            }
+            
+            if swing == true{
+                phy_rotation += 5 * sign(mult);
+                
+                steps += 1;
+                
+                if steps == 18 {
+                    phy_rotation -= 5 * sign(mult);
                     swing_cd = true;
+                    swing = false;
+                    steps = 0;
                 }
             }
         }
         
-        if swing_cd == true and swing_d_cd == true{
-            obj_CH_tree_state.state = 2;
-        }
+        
+        //if swing_cd == true and swing_d_cd == true{
+        //    obj_CH_tree_state.state = 2;
+        //}
         
     break;
     
     case 2:
-        if phy_rotation != ini_rotation{
-            phy_rotation -= 10;
+        if steps &lt; 9{
+            phy_rotation += 15 * mult;
+            
+            steps += 1;
         }else {
             //Burrow down
-            
+            obj_CH_tree_state.state = 3;
             burrowed = true;
         }
     break;
+        
+    case 3:
+        phy_rotation = ini_rotation;
+    break;
+
 }
 </string>
           </argument>

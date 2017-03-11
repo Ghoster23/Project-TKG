@@ -257,9 +257,6 @@ if start == true{
         if state == 0{
             //Swing down
             state = 1;
-        }else if state == 2{
-            //Leaves
-            state = 3;
         }
         
         if state == 4{

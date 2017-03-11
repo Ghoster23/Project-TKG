@@ -29,6 +29,7 @@
 global.brooma = false;
 global.bk = false;
 once = false;
+hp_check = true;
 
 for(i = 0; i &lt; 8; i += 1){
     for(j = 0; j &lt; 8; j += 1){
@@ -108,6 +109,36 @@ global.char_hsprs[1] = spr_mer_head;
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>hp_check = true;
+
+with obj_body{
+    image_blend = c_black;
+}
+with obj_head{
+    image_blend = c_black;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="1">
       <action>
         <libid>1</libid>
@@ -154,6 +185,71 @@ global.char_hsprs[1] = spr_mer_head;
         </arguments>
       </action>
     </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if hp_check == true{
+    if current_hp != global.p_hp{
+        with obj_body{
+            image_blend = c_red;
+        }
+        with obj_head{
+            image_blend = c_red;
+        }
+    }else {
+        with obj_body{
+            image_blend = c_white;
+        }
+        with obj_head{
+            image_blend = c_white;
+        }
+    }
+    
+    hp_check = false;
+    alarm[2] = 2;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>current_hp = global.p_hp;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -173,12 +269,6 @@ global.char_hsprs[1] = spr_mer_head;
             <kind>1</kind>
             <string>scr_get_input();
 depth = obj_body - 1;
-
-///Spawn In Boss Room
-if(global.brooma == true &amp;&amp; !instance_exists(obj_body)){
-      instance_create(464,1280,obj_body);
-      global.brooma = false;
-}
 
 ///WIP
 if(instance_exists(obj_body) &amp;&amp; !instance_exists(obj_gui)){

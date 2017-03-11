@@ -167,6 +167,8 @@ part_system_destroy(global.ps);
 if surface_exists(global.lighting){
     surface_free(global.lighting);
 }
+
+instance_destroy();
 }
 </string>
           </argument>

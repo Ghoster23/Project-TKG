@@ -164,11 +164,15 @@
           <sprite>sprites\spr_peasent_m_f</sprite>
           <sprite>sprites\spr_peasent_m_b</sprite>
           <sprite>sprites\spr_peasent_m_s</sprite>
+          <sprite>sprites\spr_peasent_f_f</sprite>
+          <sprite>sprites\spr_peasent_f_s</sprite>
+          <sprite>sprites\spr_peasent_f_b</sprite>
         </sprites>
         <sprites name="head">
           <sprite>sprites\spr_peasent_h_f</sprite>
           <sprite>sprites\spr_peasent_h_s</sprite>
           <sprite>sprites\spr_peasent_h_b</sprite>
+          <sprite>sprites\spr_peasent_hf_f</sprite>
         </sprites>
       </sprites>
       <sprites name="weapons">
@@ -184,14 +188,16 @@
       <sprite>sprites\spr_smoke</sprite>
       <sprite>sprites\spr_explsion</sprite>
     </sprites>
-    <sprite>sprites\sprite79</sprite>
+    <sprites name="chsl">
+      <sprite>sprites\spr_infosheet</sprite>
+      <sprite>sprites\spr_mainchar</sprite>
+      <sprite>sprites\spr_nextbtn</sprite>
+      <sprite>sprites\spr_bdesign</sprite>
+      <sprite>sprites\spr_select</sprite>
+      <sprite>sprites\spr_banner</sprite>
+    </sprites>
     <sprite>sprites\spr_cursor</sprite>
-    <sprite>sprites\spr_bdesign</sprite>
-    <sprite>sprites\spr_infosheet</sprite>
-    <sprite>sprites\spr_mainchar</sprite>
-    <sprite>sprites\spr_nextbtn</sprite>
-    <sprite>sprites\spr_select</sprite>
-    <sprite>sprites\spr_banner</sprite>
+    <sprite>sprites\sprite79</sprite>
     <sprite>sprites\spr_test</sprite>
     <sprite>sprites\spr_point</sprite>
     <sprite>sprites\spr_CH_tree_state</sprite>

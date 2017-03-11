@@ -372,7 +372,7 @@ shift = amp * sin(degtorad(t));
             <string>///Exist
 if place_meeting(x,y,obj_ppon) and k == false{
     image_speed = 0.3;
-    alarm[5] = 10;
+    alarm[5] = 1 * room_speed;
     k = true;
     
     if(trigger == false){

@@ -30,9 +30,11 @@ event_inherited();
 image_speed=.2;
 solid = false;
 visible = false;
+image_alpha = 0.7;
 trigger = false;
 flash = false;
 damaged = false;
+go = false;
 
 signal_x = 0;
 signal_y = 0;
@@ -67,6 +69,29 @@ dis = 0
 ///Knockback
 kb_x = 0;
 kb_y = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="6">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>go = true;
 </string>
           </argument>
         </arguments>
@@ -305,17 +330,19 @@ if instance_exists(obj_kb){
           <argument>
             <kind>1</kind>
             <string>randomize();
+depth = -y;
+
+if(place_meeting(x,y,obj_ppon)) and visible == false{
+    visible = true;
+    global.combat += 1;
+    
+    alarm[6] = 1 * room_speed;
+}
 
 ///Exist
-if(place_meeting(x,y,obj_ppon)){
+if go{
     visible = true;
     solid = true;
-    depth = -y;
-    
-    if(trigger == false){
-        global.combat += 1;
-        trigger = true;
-    }
 
     /// Enemy States
     if dis &lt; 200 and state != 2{
@@ -545,7 +572,7 @@ physics_apply_impulse(x,y,x_f,y_f);
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>22,25</point>
-    <point>17,25</point>
+    <point>22,28</point>
+    <point>14,25</point>
   </PhysicsShapePoints>
 </object>

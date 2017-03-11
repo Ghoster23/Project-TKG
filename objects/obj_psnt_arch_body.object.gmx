@@ -38,7 +38,7 @@ cd_arrow = false;
 damaged = false;
 alt = 1;
 shoot = false;
-
+go = false;
 opt = instance_nearest(x,y,obj_psnt_arch_head).opt;
 
 //Stats
@@ -64,6 +64,29 @@ d = 0;
 d_ = 0;
 offset_x = 0;
 offset_y = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="6">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>go = true;
 </string>
           </argument>
         </arguments>
@@ -254,29 +277,61 @@ switch d {
         break;
     case -1: //Left
         image_xscale = -1;
-        sprite_index = spr_peasent_m_s;
+        if gender == 0{
+            sprite_index = spr_peasent_f_s;
+        }else {
+            sprite_index = spr_peasent_m_s;
+        }
         break;
     case -2: //Up and Right
-        sprite_index = spr_peasent_m_b;
+        if gender == 0{
+            sprite_index = spr_peasent_f_b;
+        }else {
+            sprite_index = spr_peasent_m_b;
+        }
         break;
     case -3: //Up
-        sprite_index = spr_peasent_m_b;
+        if gender == 0{
+            sprite_index = spr_peasent_f_b;
+        }else {
+            sprite_index = spr_peasent_m_b;
+        }
         break;
     case -4: //Up and Left
-        sprite_index = spr_peasent_m_b;
+        if gender == 0{
+            sprite_index = spr_peasent_f_b;
+        }else {
+            sprite_index = spr_peasent_m_b;
+        }
         break;
     case 1: //Rigt
         image_xscale = 1;
-        sprite_index = spr_peasent_m_s;
+        if gender == 0{
+            sprite_index = spr_peasent_f_s;
+        }else {
+            sprite_index = spr_peasent_m_s;
+        }
         break;
     case 2: //Left and Down
-        sprite_index = spr_peasent_m_f;
+        if gender == 0{
+            sprite_index = spr_peasent_f_f;
+        }else {
+            sprite_index = spr_peasent_m_f;
+        }
         break;
     case 3: //Down
-        sprite_index = spr_peasent_m_f;
+        if gender == 0{
+            sprite_index = spr_peasent_f_f;
+        }else {
+            sprite_index = spr_peasent_m_f;
+        }
         break;
     case 4: //Down and Right
-        sprite_index = spr_peasent_m_f;
+        if gender == 0{
+            sprite_index = spr_peasent_f_f;
+        }else {
+            sprite_index = spr_peasent_m_f;
+        }
         break;
 }
 }
@@ -325,8 +380,15 @@ switch d {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Exist
-if(place_meeting(x,y,obj_ppon)){
+            <string>if(place_meeting(x,y,obj_ppon)) and visible == false{
+    visible = true;
+    global.combat += 1;
+    
+    alarm[6] = 1 * room_speed;
+}
+
+///Exist
+if go{
     visible = true;
     depth = -y;
     

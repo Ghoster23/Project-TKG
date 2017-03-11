@@ -72,7 +72,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>depth = -y;
+            <string>depth = -y-240;
 tpx = 0;
 tpy = 0;
 roomwd = 544;
