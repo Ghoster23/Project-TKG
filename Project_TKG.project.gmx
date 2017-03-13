@@ -173,10 +173,14 @@
           <sprite>sprites\spr_peasent_h_s</sprite>
           <sprite>sprites\spr_peasent_h_b</sprite>
           <sprite>sprites\spr_peasent_hf_f</sprite>
+          <sprite>sprites\spr_peasent_hf_s</sprite>
+          <sprite>sprites\spr_peasent_hf_b</sprite>
         </sprites>
       </sprites>
       <sprites name="weapons">
         <sprite>sprites\spr_stick</sprite>
+        <sprite>sprites\spr_e_bow</sprite>
+        <sprite>sprites\spr_e_arrow</sprite>
       </sprites>
     </sprites>
     <sprites name="mermaid">
@@ -326,9 +330,10 @@
         <object>objects\obj_psnt_arch_head</object>
         <object>objects\obj_psnt_body</object>
         <object>objects\obj_psnt_arch_body</object>
+        <object>objects\obj_e_arrow</object>
         <object>objects\obj_e_swing</object>
         <object>objects\obj_stick</object>
-        <object>objects\obj_e_arrow</object>
+        <object>objects\obj_e_bow</object>
       </objects>
       <object>objects\obj_bat</object>
       <object>objects\obj_mimic</object>

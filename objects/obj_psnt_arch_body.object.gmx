@@ -39,7 +39,15 @@ damaged = false;
 alt = 1;
 shoot = false;
 go = false;
+gender = instance_nearest(x,y,obj_psnt_arch_head).gender;
 opt = instance_nearest(x,y,obj_psnt_arch_head).opt;
+instance_create(x,y,obj_e_bow);
+
+if gender == 0{
+    sprite_index = spr_peasent_f_f;
+}else {
+    sprite_index = spr_peasent_m_f;
+}
 
 //Stats
 e_mhp = 20;
@@ -59,6 +67,7 @@ ini_point_x = x;
 ini_point_y = y;
 dir_change = false;
 i_dir = 0;
+dir = point_direction(x,y,obj_body.x,obj_body.y);
 p_state = 0;
 d = 0;
 d_ = 0;
@@ -182,7 +191,9 @@ dir_change = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x,y,obj_e_arrow);
+            <string>with instance_nearest(x,y,obj_e_bow){
+    image_speed = 0.2;
+}
 </string>
           </argument>
         </arguments>
@@ -251,7 +262,7 @@ dir_change = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if state == 1 {
+            <string>if state != 0 {
     var d_ = point_direction(x,y,obj_body.x,obj_body.y);
 }else if state == 0{
     var d_ = i_dir;
