@@ -199,6 +199,7 @@
       <sprite>sprites\spr_bdesign</sprite>
       <sprite>sprites\spr_select</sprite>
       <sprite>sprites\spr_banner</sprite>
+      <sprite>sprites\spr_backchsl</sprite>
     </sprites>
     <sprite>sprites\spr_cursor</sprite>
     <sprite>sprites\sprite79</sprite>
