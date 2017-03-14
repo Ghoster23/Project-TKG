@@ -45,7 +45,7 @@ b_s_def = 3;
 b_spd = 0;
 
 //Leaves
-leaves = 0;
+leaves = 1;
 
 l1 = false;
 l2 = false;
@@ -54,6 +54,8 @@ l3 = false;
 a = 0;
 b = 0;
 c = 0;
+
+pat = 'f';
 </string>
           </argument>
         </arguments>
@@ -83,13 +85,27 @@ switch c{
     case 0:
     case 2:
     case 4:
-    
+        pat = 'w';
+        instance_create(x + 64, y + 32, obj_CH_leaf);
+        instance_create(x - 64, y + 32, obj_CH_leaf);
+        instance_create(x + 32, y + 32, obj_CH_leaf);
+        instance_create(x, y + 32, obj_CH_leaf);
+        instance_create(x - 32, y + 32, obj_CH_leaf);
+        instance_create(x + 96, y + 32, obj_CH_leaf);
+        instance_create(x - 96, y + 32, obj_CH_leaf);       
     break;
     
     case 1:
     case 3:
     case 5:
-    
+        pat = 'c';
+        instance_create(x + 64, y + 32, obj_CH_leaf);
+        instance_create(x - 64, y + 32, obj_CH_leaf);
+        instance_create(x + 32, y + 32, obj_CH_leaf);
+        instance_create(x, y + 32, obj_CH_leaf);
+        instance_create(x - 32, y + 32, obj_CH_leaf);
+        instance_create(x + 96, y + 32, obj_CH_leaf);
+        instance_create(x - 96, y + 32, obj_CH_leaf);       
     break;
     
     case 6:
@@ -129,13 +145,29 @@ switch b{
     case 0:
     case 2:
     case 4:
-    
+        pat = 'f';
+        instance_create(x + 64, y + 16, obj_CH_leaf);
+        instance_create(x - 64, y + 16, obj_CH_leaf);
+        instance_create(x + 32, y + 32, obj_CH_leaf);
+        instance_create(x - 32, y + 32, obj_CH_leaf);
+        instance_create(x + 96, y, obj_CH_leaf);
+        instance_create(x - 96, y, obj_CH_leaf);
+        instance_create(x+5, y + 32, obj_CH_leaf);
+        instance_create(x-5, y + 32, obj_CH_leaf);
     break;
     
     case 1:
     case 3:
     case 5:
-    
+        pat = 'c';
+        instance_create(x + 64, y + 16, obj_CH_leaf);
+        instance_create(x - 64, y + 16, obj_CH_leaf);
+        instance_create(x + 32, y + 32, obj_CH_leaf);
+        instance_create(x - 32, y + 32, obj_CH_leaf);
+        instance_create(x + 96, y, obj_CH_leaf);
+        instance_create(x - 96, y, obj_CH_leaf);
+        instance_create(x+5, y + 32, obj_CH_leaf);
+        instance_create(x-5, y + 32, obj_CH_leaf);
     break;
     
     case 6:
@@ -174,13 +206,25 @@ switch a{
     case 0:
     case 2:
     case 4:
-    
+        pat = 'w';
+        instance_create(x + 32, y + 32, obj_CH_leaf);
+        instance_create(x - 32, y - 32, obj_CH_leaf);
+        instance_create(x - 32, y, obj_CH_leaf);
+        instance_create(x + 32, y, obj_CH_leaf);
+        instance_create(x+64, y + 16, obj_CH_leaf);
+        instance_create(x-64, y - 16, obj_CH_leaf);
     break;
     
     case 1:
     case 3:
     case 5:
-    
+        pat = 'a';
+        instance_create(x + 32, y + 32, obj_CH_leaf);
+        instance_create(x - 32, y - 32, obj_CH_leaf);
+        instance_create(x - 32, y, obj_CH_leaf);
+        instance_create(x + 32, y, obj_CH_leaf);
+        instance_create(x+64, y + 16, obj_CH_leaf);
+        instance_create(x-64, y - 16, obj_CH_leaf);
     break;
     
     case 6:
@@ -299,11 +343,13 @@ switch(state){
     
     //Leaves
     case 3:
+        show_debug_message('leaves' + string(leaves));
         ///1st set
         if leaves == 1{
             if l1 == false{
                 alarm[1] = 1 * room_speed;
                 l1 = true;
+                
             }
         
         ///2nd set
@@ -311,6 +357,7 @@ switch(state){
             if l2 == false{
                 alarm[2] = 1 * room_speed;
                 l2 = true;
+                
             }
             
         ///3rd set and next phase
@@ -318,6 +365,7 @@ switch(state){
             if l3 == false{
                 alarm[3] = 1 * room_speed;
                 l3 = true;
+                
             }
         }
         
