@@ -183,10 +183,6 @@
         <sprite>sprites\spr_e_arrow</sprite>
       </sprites>
     </sprites>
-    <sprites name="mermaid">
-      <sprite>sprites\spr_mer_body_down</sprite>
-      <sprite>sprites\spr_mer_head</sprite>
-    </sprites>
     <sprites name="particles">
       <sprite>sprites\spr_cbits</sprite>
       <sprite>sprites\spr_smoke</sprite>

@@ -95,17 +95,8 @@ global.char_bsprs[0,4] = spr_roll_up;
 global.char_bsprs[0,5] = spr_roll_down;
 global.char_bsprs[0,6] = spr_roll_side;
 
-global.char_bsprs[1,0] = spr_mer_body_down;
-global.char_bsprs[1,1] = spr_mer_body_down;
-global.char_bsprs[1,2] = spr_mer_body_down;
-global.char_bsprs[1,3] = spr_mer_body_down;
-global.char_bsprs[1,4] = spr_mer_body_down;
-global.char_bsprs[1,5] = spr_mer_body_down;
-global.char_bsprs[1,6] = spr_mer_body_down;
-
 ///Player Character head sprites
 global.char_hsprs[0] = spr_head;
-global.char_hsprs[1] = spr_mer_head;
 </string>
           </argument>
         </arguments>

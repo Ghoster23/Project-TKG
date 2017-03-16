@@ -98,12 +98,12 @@ alarm[1]=4
           <argument>
             <kind>1</kind>
             <string>///click on - flicker
-if point_in_rectangle(mouse_x,mouse_y,444,316,495,338) and mouse_check_button_released(mb_left)=true{
+if point_in_rectangle(mouse_x,mouse_y,x,y,x+56,y+28) and mouse_check_button_released(mb_left)=true{
     image_index=0
     room_goto_next();
 }
 ///mouse over
-else if point_in_rectangle(mouse_x,mouse_y,444,316,495,338){
+else if point_in_rectangle(mouse_x,mouse_y,x,y,x+56,y+28){
     image_index=1
 }
 /// else
