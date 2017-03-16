@@ -73,9 +73,11 @@ global.p_spd = 4;
 //Statuses
 status_check = true;
 global.st_poison = false;
+global.st_stuck = false;
 
 ///Status duration
 global.st_poison_d = 0;
+global.st_stuck_d = 0;
 
 //Current Room
 global.current_column = 4;
@@ -334,6 +336,13 @@ if status_check == true{
         }
     }
     
+    if global.st_stuck == true{
+    
+        if global.st_stuck_d &lt;= 0{
+            global.st_stuck = false;
+        }
+    }
+        
     status_check = false;
     alarm[1] = 1 * room_speed;
 }

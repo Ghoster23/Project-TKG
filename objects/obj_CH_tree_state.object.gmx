@@ -292,7 +292,7 @@ if keyboard_check(vk_alt){
 ///Determine action state
 if start == true{
     if once == false{
-        //Raise roots
+        
         
         once = true;
     }
@@ -331,6 +331,7 @@ switch(state){
     case 0:
         global.b_spd = 0;
         image_speed = 0;
+        
     break;
     
     //Root attack
@@ -343,7 +344,7 @@ switch(state){
     
     //Leaves
     case 3:
-        show_debug_message('leaves' + string(leaves));
+        
         ///1st set
         if leaves == 1{
             if l1 == false{
@@ -373,6 +374,10 @@ switch(state){
     
     //Grab the player
     case 4:
+        if not instance_exists(obj_CH_groots){
+            instance_create(obj_body.x,obj_body.y,obj_CH_groots);
+        }
+        
     break;
 }
 </string>

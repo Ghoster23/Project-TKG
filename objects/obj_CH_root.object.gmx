@@ -34,6 +34,7 @@ swing_down = false;
 swing_d_cd = false;
 swing = false;
 swing_cd = false;
+burrowed = true;
 once = false;
 </string>
           </argument>
@@ -81,9 +82,7 @@ swing = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_debug_message(phy_rotation);
-
-if phy_rotation == 360{
+            <string>if phy_rotation == 360{
     phy_rotation = -10;
 }
 
@@ -99,68 +98,88 @@ if x + 10 &lt; obj_CH_tree_state.x{
     mult = 2;
 }
 
-switch obj_CH_tree_state.state {
-    case 1:
-        if steps &lt; 9 * abs(mult) and swing_d_cd == false{
-        //Swing down animation
-            phy_rotation += 10 * mult;
-            
-            steps += 1 * abs(mult);
+if burrowed == true and obj_CH_tree_state.state == 1 and image_index != 4{
+    image_speed = 0.2;
+}
 
-        }else if swing_cd == false{
+if burrowed == false and obj_CH_tree_state.state == 3 and image_index != 0{
+    image_speed = -0.2;
+}
+
+if image_index == 4 and obj_CH_tree_state.state != 3{
+    image_speed = 0;
+    burrowed = false;
+}
+if image_index == 0 and obj_CH_tree_state.state != 0 and obj_CH_tree_state.state != 1{
+    image_speed = 0;
+    burrowed = true;
+    instance_destroy();
+}
+
+if burrowed == false{
+    switch obj_CH_tree_state.state {
+        case 1:
+            if steps &lt; 9 * abs(mult) and swing_d_cd == false{
+            //Swing down animation
+                phy_rotation += 10 * mult;
             
-            if swing_d_cd == false{
-                    swing_down = true;
-                    swing_d_cd = true;
-                    alarm[0] = 2.5 * room_speed;
+                steps += 1 * abs(mult);
+
+            }else if swing_cd == false{
+            
+                if swing_d_cd == false{
+                        swing_down = true;
+                        swing_d_cd = true;
+                        alarm[0] = 2.5 * room_speed;
              
-            }
+                }
                 
-            if once == false and swing_down == false{
-                phy_rotation += 45 * sign(mult) * -1;
+                if once == false and swing_down == false{
+                    phy_rotation += 45 * sign(mult) * -1;
                 
-                steps = 0;
-                    
-                once = true;
-            }
-            
-            if swing == true{
-                phy_rotation += 5 * sign(mult);
-                
-                steps += 1;
-                
-                if steps == 18 {
-                    phy_rotation -= 5 * sign(mult);
-                    swing_cd = true;
-                    swing = false;
                     steps = 0;
+                    
+                    once = true;
+                }
+            
+                if swing == true{
+                    phy_rotation += 5 * sign(mult);
+                
+                    steps += 1;
+                
+                    if steps == 18 {
+                        phy_rotation -= 5 * sign(mult);
+                        swing_cd = true;
+                        swing = false;
+                        steps = 0;
+                    }
                 }
             }
-        }
         
         
-        if swing_cd == true and swing_d_cd == true{
-            obj_CH_tree_state.state = 2;
-        }
+            if swing_cd == true and swing_d_cd == true{
+                obj_CH_tree_state.state = 2;
+            }
         
-    break;
+        break;
     
-    case 2:
-        if steps &lt; 9{
-            phy_rotation += 15 * mult;
+        case 2:
+            if steps &lt; 9{
+                phy_rotation += 15 * mult;
             
-            steps += 1;
-        }else {
-            //Burrow down
-            obj_CH_tree_state.state = 3;
-            burrowed = true;
-        }
-    break;
+                steps += 1;
+            }else {
+                //Burrow down
+                obj_CH_tree_state.state = 3;
+                
+            }
+        break;
         
-    case 3:
-        phy_rotation = ini_rotation;
-    break;
+        case 3:
+            phy_rotation = ini_rotation;
+        break;
 
+    }
 }
 </string>
           </argument>

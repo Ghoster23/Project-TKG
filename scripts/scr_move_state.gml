@@ -27,8 +27,10 @@ hspd = lengthdir_x(len,dir);
 vspd = lengthdir_y(len,dir);
 
 // move
-phy_position_x += hspd;
-phy_position_y += vspd;
+if global.st_stuck == false{
+    phy_position_x += hspd;
+    phy_position_y += vspd;
+}
 
 //control sprite
 image_speed =.5;
