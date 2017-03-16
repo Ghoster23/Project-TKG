@@ -51,18 +51,30 @@
             <string>switch(step_number) //each case is a different step.
 {
     case 0:
+        show_debug_message(global.MonitorW);
+        show_debug_message(global.MonitorH);
+
         display_reset(1, false); //not too surprising that resetting the display comes first. Only necessary if you give players the option to change aa and vsync in game
         break;
 
     case 1:
+        show_debug_message(global.MonitorW);
+        show_debug_message(global.MonitorH);
+
         window_set_size(1088, 832); //this is the only function that needs to run on a separate step. I've found it will not work correctly if used in the same step as the other functions
         break;
 
     case 2:
+        show_debug_message(global.MonitorW);
+        show_debug_message(global.MonitorH);
+
         window_set_fullscreen(true); //if setting it to fullscreen (true), window_set_size() won't have any effect.
         break;
 
     case 3:
+        show_debug_message(global.MonitorW);
+        show_debug_message(global.MonitorH);
+
         surface_resize(application_surface, 2176, 832); //This will resize the application surface so that it fills the screen/window correctly. Only use this along with views.
         view_hview[0] = 1088; 
         view_wview[0] = 832;
@@ -70,6 +82,9 @@
         break;
 
     default:
+        show_debug_message(global.MonitorW);
+        show_debug_message(global.MonitorH);
+
         instance_destroy(); //destroy the instance for all other values of step_number
         break;
 }

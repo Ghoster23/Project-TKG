@@ -31,8 +31,8 @@
 window_set_fullscreen(true);
 global.MonitorW = display_get_width();
 global.MonitorH = display_get_height();
-show_debug_message(global.MonitorW);
-show_debug_message(global.MonitorH);
+show_debug_message('MW' + string(global.MonitorW));
+show_debug_message('MH' + string(global.MonitorH));
 
 rm_wd = 544;
 rm_hg = 416;
@@ -40,22 +40,22 @@ rm_hg = 416;
 global.Xoffset=(global.MonitorW-rm_wd)/2;
 global.Yoffset=(global.MonitorH-rm_hg)/2;
 
-if(global.MonitorW&gt;=rm_wd*2 &amp;&amp; global.MonitorH&gt;=rm_hg*2){
+if(global.MonitorW&gt;=rm_wd*2 ){
     surface_resize(application_surface,rm_wd*2,rm_hg*2);
     global.Xoffset=(global.MonitorW-rm_wd*2)/2;
     global.Yoffset=(global.MonitorH-rm_hg*2)/2;
 }
-if(global.MonitorW&gt;=rm_wd*3 &amp;&amp; global.MonitorH&gt;=rm_hg*3){
+if(global.MonitorW&gt;=rm_wd*3 ){
     surface_resize(application_surface,rm_wd*3,rm_hg*3);
     global.Xoffset=(global.MonitorW-rm_wd*3)/2;
     global.Yoffset=(global.MonitorH-rm_hg*3)/2;
 }
-if(global.MonitorW&gt;=rm_wd*4 &amp;&amp; global.MonitorH&gt;=rm_hg*4){
+if(global.MonitorW&gt;=rm_wd*4 ){
     surface_resize(application_surface,rm_wd*4,rm_hg*4);
     global.Xoffset=(global.MonitorW-rm_wd*4)/2;
     global.Yoffset=(global.MonitorH-rm_hg*4)/2;
 }
-if(global.MonitorW&gt;=rm_wd*5 &amp;&amp; global.MonitorH&gt;=rm_hg*5){
+if(global.MonitorW&gt;=rm_wd*5 ){
     surface_resize(application_surface,rm_wd*5,rm_hg*5);
     global.Xoffset=(global.MonitorW-rm_wd*5)/2;
     global.Yoffset=(global.MonitorH-rm_hg*5)/2;

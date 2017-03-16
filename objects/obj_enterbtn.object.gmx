@@ -114,8 +114,6 @@ if keyboard_check_released(vk_enter){
     image_index=1
     room_goto_next();
 }
-show_debug_message(string(mouse_x)+' '+string(mouse_y))
-
 </string>
           </argument>
         </arguments>
