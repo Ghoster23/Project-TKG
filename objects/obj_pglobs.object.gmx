@@ -356,7 +356,7 @@ if(global.p_hp &lt;= 0 &amp;&amp; dead == false){
 ///Game restart
 if(room == rm_dead){
     if(interact_key == true){
-        game_restart();
+        room_goto(0);
     }
     with(obj_body){
         visible = false;

@@ -25,35 +25,45 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Start
+            <string>application_surface_draw_enable(false);
+
+//Start
 window_set_fullscreen(true);
 global.MonitorW = display_get_width();
 global.MonitorH = display_get_height();
 show_debug_message(global.MonitorW);
 show_debug_message(global.MonitorH);
 
-once = false;
+rm_wd = 544;
+rm_hg = 416;
 
-global.Xoffset = (global.MonitorW - 544)/2;
-global.Yoffset = (global.MonitorH - 416)/2;
+global.Xoffset=(global.MonitorW-rm_wd)/2;
+global.Yoffset=(global.MonitorH-rm_hg)/2;
 
-if global.MonitorW &gt;= 1088 and global.MonitorH &gt;= 832{
-    surface_resize(application_surface,1088,832);
-    global.Xoffset = (global.MonitorW - 1088)/2;
-    global.Yoffset = (global.MonitorH - 832)/2;
-}else if global.MonitorW &gt;= 1632 and global.MonitorH &gt;= 1248{
-    surface_resize(application_surface,1632,1248);
-    global.Xoffset = (global.MonitorW - 1632)/2;
-    global.Yoffset = (global.MonitorH - 1248)/2;
-}else if global.MonitorW &gt;= 2176 and global.MonitorH &gt;= 1672{
-    surface_resize(application_surface,2176,1672);
-    global.Xoffset = (global.MonitorW - 2176)/2;
-    global.Yoffset = (global.MonitorH - 1672)/2;
-}else if global.MonitorW &gt;= 2720 and global.MonitorH &gt;= 2080{
-    surface_resize(application_surface,2720,2080);
-    global.Xoffset = (global.MonitorW - 2720)/2;
-    global.Yoffset = (global.MonitorH - 2080)/2;
+if(global.MonitorW&gt;=rm_wd*2 &amp;&amp; global.MonitorH&gt;=rm_hg*2){
+    surface_resize(application_surface,rm_wd*2,rm_hg*2);
+    global.Xoffset=(global.MonitorW-rm_wd*2)/2;
+    global.Yoffset=(global.MonitorH-rm_hg*2)/2;
 }
+if(global.MonitorW&gt;=rm_wd*3 &amp;&amp; global.MonitorH&gt;=rm_hg*3){
+    surface_resize(application_surface,rm_wd*3,rm_hg*3);
+    global.Xoffset=(global.MonitorW-rm_wd*3)/2;
+    global.Yoffset=(global.MonitorH-rm_hg*3)/2;
+}
+if(global.MonitorW&gt;=rm_wd*4 &amp;&amp; global.MonitorH&gt;=rm_hg*4){
+    surface_resize(application_surface,rm_wd*4,rm_hg*4);
+    global.Xoffset=(global.MonitorW-rm_wd*4)/2;
+    global.Yoffset=(global.MonitorH-rm_hg*4)/2;
+}
+if(global.MonitorW&gt;=rm_wd*5 &amp;&amp; global.MonitorH&gt;=rm_hg*5){
+    surface_resize(application_surface,rm_wd*5,rm_hg*5);
+    global.Xoffset=(global.MonitorW-rm_wd*5)/2;
+    global.Yoffset=(global.MonitorH-rm_hg*5)/2;
+}
+
+once = false;
+//Create Event
+step_number = 0;
 
 //Particle System
 global.ps=part_system_create();
@@ -94,12 +104,7 @@ surface_reset_target();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if surface_exists(application_surface) and room != rm_dead{
-    //Draw the game
-    draw_surface_ext(application_surface,global.Xoffset,global.Yoffset,1,1,0,c_white,1);
-}
-
-//Draw the surface
+            <string>//Draw the surface
 if surface_exists(global.lighting) and room != rm_dead{
     surface_set_target(global.lighting);
     
@@ -167,8 +172,6 @@ part_system_destroy(global.ps);
 if surface_exists(global.lighting){
     surface_free(global.lighting);
 }
-
-instance_destroy();
 }
 </string>
           </argument>
@@ -202,6 +205,29 @@ part_system_destroy(global.ps);
 if surface_exists(global.lighting){
     surface_free(global.lighting);
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="77">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_surface_ext(application_surface,global.Xoffset,global.Yoffset,1,1,0,c_white,1);
 </string>
           </argument>
         </arguments>

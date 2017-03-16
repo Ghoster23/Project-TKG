@@ -410,6 +410,7 @@
     </objects>
     <object>objects\obj_p</object>
     <object>objects\obj_cursor</object>
+    <object>objects\obj_screen_res</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu_1</room>
