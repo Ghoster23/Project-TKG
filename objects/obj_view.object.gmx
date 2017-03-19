@@ -85,6 +85,10 @@ view_wport[0] = global.MonitorW;
 
 view_wview[0] = global.roomwd;
 view_hview[0] = global.roomhg;
+
+if room == rm_dead{
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>

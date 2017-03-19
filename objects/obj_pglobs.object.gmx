@@ -356,20 +356,10 @@ if(global.p_hp &lt;= 0 &amp;&amp; dead == false){
 ///Game restart
 if(room == rm_dead){
     if(interact_key == true){
-        room_goto(0);
+        game_restart();
+        
     }
-    with(obj_body){
-        visible = false;
-    }
-     with(obj_head){
-        visible = false;
-    }
-     with(obj_sword){
-        visible = false;
-    }
-     with(obj_sword_t){
-        visible = false;
-    }
+   
 }
 
 ///Game Won

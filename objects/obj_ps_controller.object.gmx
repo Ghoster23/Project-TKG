@@ -31,35 +31,6 @@
 window_set_fullscreen(true);
 global.MonitorW = display_get_width();
 global.MonitorH = display_get_height();
-show_debug_message('MW' + string(global.MonitorW));
-show_debug_message('MH' + string(global.MonitorH));
-
-rm_wd = 544;
-rm_hg = 416;
-
-global.Xoffset=(global.MonitorW-rm_wd)/2;
-global.Yoffset=(global.MonitorH-rm_hg)/2;
-
-if(global.MonitorW&gt;=rm_wd*2 ){
-    surface_resize(application_surface,rm_wd*2,rm_hg*2);
-    global.Xoffset=(global.MonitorW-rm_wd*2)/2;
-    global.Yoffset=(global.MonitorH-rm_hg*2)/2;
-}
-if(global.MonitorW&gt;=rm_wd*3 ){
-    surface_resize(application_surface,rm_wd*3,rm_hg*3);
-    global.Xoffset=(global.MonitorW-rm_wd*3)/2;
-    global.Yoffset=(global.MonitorH-rm_hg*3)/2;
-}
-if(global.MonitorW&gt;=rm_wd*4 ){
-    surface_resize(application_surface,rm_wd*4,rm_hg*4);
-    global.Xoffset=(global.MonitorW-rm_wd*4)/2;
-    global.Yoffset=(global.MonitorH-rm_hg*4)/2;
-}
-if(global.MonitorW&gt;=rm_wd*5 ){
-    surface_resize(application_surface,rm_wd*5,rm_hg*5);
-    global.Xoffset=(global.MonitorW-rm_wd*5)/2;
-    global.Yoffset=(global.MonitorH-rm_hg*5)/2;
-}
 
 once = false;
 //Create Event
@@ -69,7 +40,8 @@ step_number = 0;
 global.ps=part_system_create();
 scr_part_fire_init();
 scr_part_smoke_init();
-scr_part_cbits_init();    
+scr_part_cbits_init();
+scr_part_vbits_init();    
 scr_part_sflame_init();
 scr_part_trail_init();
 part_system_depth(global.ps,-room_height);
@@ -104,8 +76,11 @@ surface_reset_target();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Draw the surface
-if surface_exists(global.lighting) and room != rm_dead{
+            <string>rm_wd = 544;
+rm_hg = 418;
+
+//Draw the surface
+if surface_exists(global.lighting) and (room == rm_level or room == rm_boss){
     surface_set_target(global.lighting);
     
     //Make it dark
@@ -151,7 +126,7 @@ if surface_exists(global.lighting) and room != rm_dead{
     draw_set_alpha(1);
     surface_reset_target();
     
-}else if room != rm_dead{
+}else if room == rm_level or room == rm_boss{
     global.lighting = surface_create(room_width,room_height);
     
     surface_set_target(global.lighting);
@@ -160,9 +135,41 @@ if surface_exists(global.lighting) and room != rm_dead{
     surface_reset_target();
 }
 
+if room == rm_menu_1 or room == rm_menu_2 or room == rm_chsl or room == rm_dead{
+    surface_resize(application_surface, global.MonitorW,global.MonitorH);
+    global.Xoffset=0;
+    global.Yoffset=0;
+    
+}else {
+    global.Xoffset=(global.MonitorW-rm_wd)/2;
+    global.Yoffset=(global.MonitorH-rm_hg)/2;
+
+if(global.MonitorW&gt;=rm_wd*2 ){
+    surface_resize(application_surface,rm_wd*2,rm_hg*2);
+    global.Xoffset=(global.MonitorW-rm_wd*2)/2;
+    global.Yoffset=(global.MonitorH-rm_hg*2)/2;
+}
+if(global.MonitorW&gt;=rm_wd*3 ){
+    surface_resize(application_surface,rm_wd*3,rm_hg*3);
+    global.Xoffset=(global.MonitorW-rm_wd*3)/2;
+    global.Yoffset=(global.MonitorH-rm_hg*3)/2;
+}
+if(global.MonitorW&gt;=rm_wd*4 ){
+    surface_resize(application_surface,rm_wd*4,rm_hg*4);
+    global.Xoffset=(global.MonitorW-rm_wd*4)/2;
+    global.Yoffset=(global.MonitorH-rm_hg*4)/2;
+}
+if(global.MonitorW&gt;=rm_wd*5 ){
+    surface_resize(application_surface,rm_wd*5,rm_hg*5);
+    global.Xoffset=(global.MonitorW-rm_wd*5)/2;
+    global.Yoffset=(global.MonitorH-rm_hg*5)/2;
+}
+}  
+
 if room == rm_dead and once == false{
 once = true;
 //Particles
+part_type_destroy(global.pt_vbits)
 part_type_destroy(global.pt_cbits)
 part_type_destroy(global.pt_smoke)
 part_type_destroy(global.pt_fire)
@@ -172,6 +179,8 @@ part_system_destroy(global.ps);
 if surface_exists(global.lighting){
     surface_free(global.lighting);
 }
+
+view_enabled = false;
 }
 </string>
           </argument>
@@ -196,6 +205,7 @@ if surface_exists(global.lighting){
           <argument>
             <kind>1</kind>
             <string>//Particles
+part_type_destroy(global.pt_vbits)
 part_type_destroy(global.pt_cbits)
 part_type_destroy(global.pt_smoke)
 part_type_destroy(global.pt_fire)
@@ -204,6 +214,39 @@ part_system_destroy(global.ps);
 //Surface
 if surface_exists(global.lighting){
     surface_free(global.lighting);
+}
+
+window_set_fullscreen(true);
+global.MonitorW = display_get_width();
+global.MonitorH = display_get_height();
+show_debug_message('MW' + string(global.MonitorW));
+show_debug_message('MH' + string(global.MonitorH));
+
+rm_wd = 544;
+rm_hg = 416;
+
+global.Xoffset=(global.MonitorW-rm_wd)/2;
+global.Yoffset=(global.MonitorH-rm_hg)/2;
+
+if(global.MonitorW&gt;=rm_wd*2 ){
+    surface_resize(application_surface,rm_wd*2,rm_hg*2);
+    global.Xoffset=(global.MonitorW-rm_wd*2)/2;
+    global.Yoffset=(global.MonitorH-rm_hg*2)/2;
+}
+if(global.MonitorW&gt;=rm_wd*3 ){
+    surface_resize(application_surface,rm_wd*3,rm_hg*3);
+    global.Xoffset=(global.MonitorW-rm_wd*3)/2;
+    global.Yoffset=(global.MonitorH-rm_hg*3)/2;
+}
+if(global.MonitorW&gt;=rm_wd*4 ){
+    surface_resize(application_surface,rm_wd*4,rm_hg*4);
+    global.Xoffset=(global.MonitorW-rm_wd*4)/2;
+    global.Yoffset=(global.MonitorH-rm_hg*4)/2;
+}
+if(global.MonitorW&gt;=rm_wd*5 ){
+    surface_resize(application_surface,rm_wd*5,rm_hg*5);
+    global.Xoffset=(global.MonitorW-rm_wd*5)/2;
+    global.Yoffset=(global.MonitorH-rm_hg*5)/2;
 }
 </string>
           </argument>
@@ -227,7 +270,9 @@ if surface_exists(global.lighting){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_surface_ext(application_surface,global.Xoffset,global.Yoffset,1,1,0,c_white,1);
+            <string>if surface_exists(application_surface){
+    draw_surface_ext(application_surface,global.Xoffset,global.Yoffset,1,1,0,c_white,1);
+}
 </string>
           </argument>
         </arguments>
@@ -256,7 +301,7 @@ if surface_exists(global.lighting) and (room == rm_level or room == rm_boss) {
         draw_surface(global.lighting,0,0);
     }
     
-}else {
+}else if room == rm_level or room == rm_boss{
     global.lighting = surface_create(room_width, room_height);
     
 }

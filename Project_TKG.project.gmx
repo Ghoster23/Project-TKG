@@ -187,6 +187,7 @@
       <sprite>sprites\spr_cbits</sprite>
       <sprite>sprites\spr_smoke</sprite>
       <sprite>sprites\spr_explsion</sprite>
+      <sprite>sprites\spr_vbits</sprite>
     </sprites>
     <sprites name="chsl">
       <sprite>sprites\spr_infosheet</sprite>
@@ -217,6 +218,7 @@
     <script>scripts\scr_part_fire_init.gml</script>
     <script>scripts\scr_part_smoke_init.gml</script>
     <script>scripts\scr_part_cbits_init.gml</script>
+    <script>scripts\scr_part_vbits_init.gml</script>
     <script>scripts\scr_part_sflame_init.gml</script>
     <script>scripts\scr_part_trail_init.gml</script>
     <script>scripts\scr_banner.gml</script>
@@ -407,7 +409,6 @@
     </objects>
     <object>objects\obj_p</object>
     <object>objects\obj_cursor</object>
-    <object>objects\obj_screen_res</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu_1</room>
