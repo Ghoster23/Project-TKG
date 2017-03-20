@@ -12,8 +12,8 @@ switch (global.char_selection){
         break;
     case 1:
         name='Harlow Barone'
-        height='1.78 m'
-        weight='76 kg'
+        height='1.84 m'
+        weight='78 kg'
         weapon='Great Hammer'
         abilities='Dodge Roll'
         strength='Highest'
@@ -23,8 +23,8 @@ switch (global.char_selection){
         break;
     case 2:
         name='Brenton Guillory'
-        height='1.78 m'
-        weight='76 kg'
+        height='1.88 m'
+        weight='74 kg'
         weapon='Pistol'
         abilities='Dodge Roll'
         strength='High'

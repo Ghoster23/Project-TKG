@@ -33,6 +33,8 @@ global.MonitorW = display_get_width();
 global.MonitorH = display_get_height();
 
 once = false;
+adjust = true;
+
 //Create Event
 step_number = 0;
 
@@ -84,14 +86,9 @@ if surface_exists(global.lighting) and (room == rm_level or room == rm_boss){
     surface_set_target(global.lighting);
     
     //Make it dark
-    if room == rm_level or room == rm_boss{
-        draw_set_colour(c_black);
-        draw_set_alpha(0.2);
-        draw_rectangle(0,0,room_width,room_height,0);
-    }else {
-        draw_set_colour(c_white);
-        draw_set_alpha(1);
-    }
+    draw_set_colour(c_black);
+    draw_set_alpha(0.2);
+    draw_rectangle(0,0,room_width,room_height,0);
     
     //Light sources
     
@@ -135,6 +132,7 @@ if surface_exists(global.lighting) and (room == rm_level or room == rm_boss){
     surface_reset_target();
 }
 
+if adjust == true{
 if room == rm_menu_1 or room == rm_menu_2 or room == rm_chsl or room == rm_dead{
     surface_resize(application_surface, global.MonitorW,global.MonitorH);
     global.Xoffset=0;
@@ -164,7 +162,9 @@ if(global.MonitorW&gt;=rm_wd*5 ){
     global.Xoffset=(global.MonitorW-rm_wd*5)/2;
     global.Yoffset=(global.MonitorH-rm_hg*5)/2;
 }
-}  
+}
+adjust = false;
+}
 
 if room == rm_dead and once == false{
 once = true;
@@ -182,6 +182,29 @@ if surface_exists(global.lighting){
 
 view_enabled = false;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>adjust = true;
 </string>
           </argument>
         </arguments>
