@@ -28,8 +28,9 @@
             <string>global.d_cd = false;
 global.brooma = false;
 global.bk = false;
+global.combat = 0;
 once = false;
-hp_check = true;
+alarm_2 = false;
 
 for(i = 0; i &lt; 8; i += 1){
     for(j = 0; j &lt; 8; j += 1){
@@ -48,6 +49,7 @@ global.p_def = 5;
 global.p_satk = 5;
 global.p_sdef = 5;
 global.p_spd = 4;
+
 
 //Equipables
     ///Spawned
@@ -74,6 +76,8 @@ global.p_spd = 4;
 status_check = true;
 global.st_poison = false;
 global.st_stuck = false;
+
+global.p_inv = false;
 
 ///Status duration
 global.st_poison_d = 0;
@@ -119,14 +123,8 @@ global.char_hsprs[0] = spr_head;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hp_check = true;
-
-with obj_body{
-    image_blend = c_black;
-}
-with obj_head{
-    image_blend = c_black;
-}
+            <string>alarm_2 = false;
+global.p_inv = false;
 </string>
           </argument>
         </arguments>
@@ -195,8 +193,8 @@ with obj_head{
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if hp_check == true{
-    if past_hp &gt; current_hp{
+            <string>if global.p_inv == true{
+    if obj_body.image_blend == c_white{
         with obj_body{
             image_blend = c_red;
         }
@@ -204,7 +202,7 @@ with obj_head{
             image_blend = c_red;
         }
         
-    }else {
+    }else if obj_body.image_blend == c_red{
         with obj_body{
             image_blend = c_white;
         }
@@ -214,33 +212,11 @@ with obj_head{
         
     }
     
-    hp_check = false;
-    alarm[2] = 4;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="1">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if hp_check == true{
-    past_hp = global.p_hp;
+    if alarm_2 == false{
+        alarm_2 = true;
+        alarm[2] = 0.5 * room_speed;
+    }
+    
 }
 </string>
           </argument>
@@ -266,6 +242,11 @@ with obj_head{
             <kind>1</kind>
             <string>scr_get_input();
 depth = obj_body - 1;
+
+if once == false{
+    past_hp = global.p_hp;
+    once = true;
+}
 
 ///WIP
 if(instance_exists(obj_body) &amp;&amp; !instance_exists(obj_gui)){
@@ -325,6 +306,7 @@ if status_check == true{
     if global.st_poison == true and global.st_poison_d &gt; 0{
         global.p_hp -= 1;
         global.st_poison_d -= 5;
+        past_hp = global.p_hp;
         
         if global.st_poison_d &lt;= 0{
             global.st_poison = false;
@@ -375,8 +357,6 @@ if(global.bk == true &amp;&amp; room == rm_boss){
 if keyboard_check_pressed(vk_f11){
     room_goto(rm_boss);
 }
-
-current_hp = global.p_hp;
 </string>
           </argument>
         </arguments>

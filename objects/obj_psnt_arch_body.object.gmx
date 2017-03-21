@@ -402,11 +402,6 @@ switch d {
 if go{
     visible = true;
     depth = -y;
-    
-    if(trigger == false){
-        global.combat += 1;
-        trigger = true;
-    }
 
     /// Enemy States
     if state != 3{
@@ -543,10 +538,11 @@ if go{
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(atk_cd == false){
+            <string>if(atk_cd == false and global.p_inv == false){
     global.p_hp -= e_atk div global.p_def;
     atk_cd = true;
     alarm[0] = 1.5*room_speed;
+    global.p_inv = true;
 }
 
 </string>

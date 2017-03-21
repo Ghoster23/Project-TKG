@@ -43,8 +43,8 @@ signal[0] = -1;
 signal[1] = 1;
 
 //Stats
-e_mhp = 6;
-e_hp = 6;
+e_mhp = 5;
+e_hp = 5;
 e_atk = 10;
 e_satk = 0;
 e_def = 5;
@@ -469,10 +469,11 @@ if go{
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(atk_cd == false){
+            <string>if(atk_cd == false and global.p_inv == false){
     global.p_hp -= e_atk div global.p_def;
     atk_cd = true;
-    alarm[0] = 1.5*room_speed;
+    alarm[0] = 1*room_speed;
+    global.p_inv = true;
 }
 
 </string>

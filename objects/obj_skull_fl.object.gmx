@@ -153,7 +153,10 @@ part_particles_create(global.ps,x+hspd,y+vspd,global.pt_sflame,50);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.p_hp -= 3;
+            <string>if global.p_inv == false{
+    global.p_hp -= 10 div global.p_sdef;
+    global.p_inv = true;
+}
 
 instance_destroy();
 </string>
