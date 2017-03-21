@@ -64,29 +64,6 @@ vspd = 0;
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>go = true;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -105,8 +82,8 @@ vspd = 0;
           <argument>
             <kind>1</kind>
             <string>if instance_exists(skull){
-if skull.cont == 0{
-    alarm[0] = 0.2 * room_speed;
+    if skull.fl_go == true {
+        go = true;
 }
 
 depth = -y -418;

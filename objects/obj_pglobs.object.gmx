@@ -125,6 +125,13 @@ global.char_hsprs[0] = spr_head;
             <kind>1</kind>
             <string>alarm_2 = false;
 global.p_inv = false;
+
+with(obj_body){
+    image_blend = c_white;
+}
+with(obj_head){
+    image_blend = c_white;
+}
 </string>
           </argument>
         </arguments>
@@ -193,30 +200,31 @@ global.p_inv = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.p_inv == true{
-    if obj_body.image_blend == c_white{
-        with obj_body{
-            image_blend = c_red;
-        }
-        with obj_head{
-            image_blend = c_red;
-        }
+            <string>if instance_exists(obj_body){
+    if global.p_inv == true{
+        if obj_body.image_blend == c_white{
+            with obj_body{
+                image_blend = c_red;
+            }
+            with obj_head{
+                image_blend = c_red;
+            }
         
-    }else if obj_body.image_blend == c_red{
-        with obj_body{
-            image_blend = c_white;
-        }
-        with obj_head{
-            image_blend = c_white;
-        }
+        }else if obj_body.image_blend == c_red{
+            with obj_body{
+                image_blend = c_white;
+            }
+            with obj_head{
+                image_blend = c_white;
+            }
         
-    }
+      }
     
-    if alarm_2 == false{
-        alarm_2 = true;
-        alarm[2] = 0.5 * room_speed;
-    }
-    
+        if alarm_2 == false{
+            alarm_2 = true;
+            alarm[2] = 0.5 * room_speed;
+       }
+    }   
 }
 </string>
           </argument>

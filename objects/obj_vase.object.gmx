@@ -53,7 +53,7 @@ part_emitter_region(global.ps,em,x,x+32,y,y+32,ps_shape_rectangle,ps_distr_linea
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>part_type_direction(global.pt_cbits,point_direction(obj_body.x,obj_body.y,x,y),point_direction(obj_body.x,obj_body.y,x,y),0,0);
+            <string>part_type_direction(global.pt_vbits,point_direction(obj_body.x,obj_body.y,x,y),point_direction(obj_body.x,obj_body.y,x,y),0,0);
 part_emitter_burst(global.ps,em,global.pt_smoke,10)
 part_emitter_burst(global.ps,em,global.pt_vbits,5)
 instance_destroy()
