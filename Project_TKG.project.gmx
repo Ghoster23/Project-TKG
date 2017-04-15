@@ -324,7 +324,9 @@
       </objects>
       <objects name="skull">
         <object>objects\obj_skull</object>
+        <object>objects\obj_skull_n</object>
         <object>objects\obj_skull_fl</object>
+        <object>objects\obj_skull_fl_n</object>
       </objects>
       <objects name="slime_cr">
         <object>objects\obj_slm_cr</object>
