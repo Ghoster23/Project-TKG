@@ -6,11 +6,11 @@ if x + 10 < obj_CH_tree_state.x{
     mult = 2;
 }
 
-if obj_CH_tree_state.burrowed == true and obj_CH_tree_state.state == 1 and image_index <= 8{
+if obj_CH_tree_state.burrowed == true and obj_CH_tree_state.state == 1 and image_index < 8{
     visible = true;
     image_speed = 0.4;
     
-}else if obj_CH_tree_state.burrowed == true and obj_CH_tree_state == 1 and (image_index == 8 or image_index == 9){
+}else if obj_CH_tree_state.burrowed == true and obj_CH_tree_state.state == 1 and (image_index >= 8){
     sprite_index = spr_CH_root_idle;
 	image_index = 13;
     obj_CH_tree_state.burrowed = false;
@@ -21,7 +21,7 @@ if obj_CH_tree_state.burrowed == false and obj_CH_tree_state.state == 3 and spri
     sprite_index = spr_CH_root;
     image_index = 9;
     
-}else if obj_CH_tree_state.burrowed == false and obj_CH_tree_state == 3 and (image_index == 0 or image_index == 1){
+}else if obj_CH_tree_state.burrowed == false and obj_CH_tree_state.state == 3 and (image_index == 0 or image_index == 1){
     image_speed = 0;
     obj_CH_tree_state.burrowed = true;
     visible = false;

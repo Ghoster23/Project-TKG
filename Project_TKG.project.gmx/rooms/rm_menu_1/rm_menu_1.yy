@@ -34,7 +34,7 @@
             ],
             "m_parentID": "00000000-0000-0000-0000-000000000000",
             "m_serialiseFrozen": false,
-            "name": "Compatibility_Instances_Depth_-1569325055",
+            "name": "Graphical_System",
             "userdefined_depth": true,
             "visible": true,
             "instances": [
@@ -107,7 +107,7 @@
             ],
             "m_parentID": "00000000-0000-0000-0000-000000000000",
             "m_serialiseFrozen": false,
-            "name": "Compatibility_Instances_Depth_0",
+            "name": "Menu",
             "userdefined_depth": true,
             "visible": true,
             "instances": [
@@ -183,10 +183,10 @@
             "name": "Compatibility_Colour",
             "userdefined_depth": true,
             "visible": true,
-            "animationFPS": 15,
-            "animationSpeedType": 0,
+            "animationFPS": 0.4,
+            "animationSpeedType": 1,
             "colour": {
-                "Value": 4290822336
+                "Value": 4294967295
             },
             "hspeed": 0,
             "htiled": false,

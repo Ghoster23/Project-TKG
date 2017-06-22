@@ -1,6 +1,6 @@
 {
-roomhg = global.roomhg
-roomwd = global.roomwd
+roomhg = global.roomhg;
+roomwd = global.roomwd;
 
  switch(typeroom){
  ///Type A
@@ -452,39 +452,6 @@ roomwd = global.roomwd
 
     break;
     case 15:
-        ///C6
-       instance_create(gx+(roomwd/2),gy+144+3*32,obj_ppoff);
-
-       instance_create(gx+7*32,gy+5*32,obj_rock);
-
-       instance_create(gx+6*32,gy+6*32,obj_rock);
-       instance_create(gx+7*32,gy+6*32,obj_rock);
-       instance_create(gx+8*32,gy+6*32,obj_rock);
-
-       instance_create(gx+7*32,gy+7*32,obj_rock);
-
-       instance_create(gx+12*32,gy+3*32,obj_slm_b);
-       instance_create(gx+2*32,gy+9*32,obj_slm_b);
-
-       instance_create(gx+1*32,gy+3*32,obj_vase);
-       instance_create(gx+3*32,gy+3*32,obj_vase);
-       instance_create(gx+11*32,gy+3*32,obj_vase);
-       instance_create(gx+13*32,gy+3*32,obj_vase);
-
-       instance_create(gx+1*32,gy+9*32,obj_vase);
-        instance_create(gx+3*32,gy+9*32,obj_vase);
-       instance_create(gx+11*32,gy+9*32,obj_vase);
-       instance_create(gx+13*32,gy+9*32,obj_vase);
-
-       instance_create(gx+2*32,gy+3*32,obj_slm_b);
-       instance_create(gx+12*32,gy+3*32,obj_slm_b);
-       instance_create(gx+2*32,gy+9*32,obj_slm_b);
-       instance_create(gx+12*32,gy+9*32,obj_slm_b);
-
-       instance_create(gx+3*32,gy+6*32,obj_slm_a);
-       instance_create(gx+11*32,gy+6*32,obj_slm_a);
-
-    break;
 ///Type SP
     case 16:
         instance_create(gx+(roomwd/2),gy+16+(roomhg/2),obj_equipable);

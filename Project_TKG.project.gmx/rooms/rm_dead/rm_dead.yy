@@ -31,7 +31,7 @@
             ],
             "m_parentID": "00000000-0000-0000-0000-000000000000",
             "m_serialiseFrozen": false,
-            "name": "Compatibility_Background_3_bk_death",
+            "name": "Background",
             "userdefined_depth": true,
             "visible": true,
             "animationFPS": 15,
@@ -46,43 +46,6 @@
             "userdefined_animFPS": false,
             "vspeed": 0,
             "vtiled": true,
-            "x": 0,
-            "y": 0
-        },
-        {
-            "__type": "GMRBackgroundLayer_Model:#YoYoStudio.MVCFormat",
-            "id": "d3b1331e-9f0d-41cf-84f8-946dca26182c",
-            "modelName": "GMRBackgroundLayer",
-            "mvc": "1.0",
-            "depth": 2147483600,
-            "grid_x": 32,
-            "grid_y": 32,
-            "hierarchyFrozen": false,
-            "hierarchyVisible": true,
-            "inheritLayerDepth": false,
-            "inheritLayerSettings": false,
-            "inheritSubLayers": false,
-            "inheritVisibility": false,
-            "layers": [
-                
-            ],
-            "m_parentID": "00000000-0000-0000-0000-000000000000",
-            "m_serialiseFrozen": false,
-            "name": "Compatibility_Colour",
-            "userdefined_depth": true,
-            "visible": true,
-            "animationFPS": 15,
-            "animationSpeedType": 0,
-            "colour": {
-                "Value": 4290822336
-            },
-            "hspeed": 0,
-            "htiled": false,
-            "spriteId": "00000000-0000-0000-0000-000000000000",
-            "stretch": false,
-            "userdefined_animFPS": false,
-            "vspeed": 0,
-            "vtiled": false,
             "x": 0,
             "y": 0
         }
