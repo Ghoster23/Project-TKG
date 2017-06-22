@@ -1,0 +1,338 @@
+Font font0 has been converted to font family Minecraftia (Regular). Font has been regenerated, small inconsistencies may occur.
+Converting GML script : ${project_dir}\scripts\scr_dash_state\scr_dash_state.gml
+Converted description : /// @description scr_dash_state
+
+Converting GML script : ${project_dir}\scripts\scr_move_state\scr_move_state.gml
+Converted description : /// @description scr_move_state
+
+Converting GML script : ${project_dir}\scripts\scr_get_input\scr_get_input.gml
+Converted description : /// @description scr_get_input
+Converted string : line 2 : 'D' -> "D"
+Converted string : line 3 : 'A' -> "A"
+Converted string : line 4 : 'S' -> "S"
+Converted string : line 5 : 'W' -> "W"
+Converted string : line 9 : 'F' -> "F"
+Converted string : line 10 : 'Ç' -> "Ç"
+
+Converting GML script : ${project_dir}\scripts\scr_infosheet\scr_infosheet.gml
+Converted string : line 3 : 'Jacob NSOD' -> "Jacob NSOD"
+Converted string : line 4 : '1,78 m' -> "1,78 m"
+Converted string : line 5 : '76 kg' -> "76 kg"
+Converted string : line 6 : 'Great Sword' -> "Great Sword"
+Converted string : line 7 : 'Dodge Roll' -> "Dodge Roll"
+Converted string : line 8 : 'Medium' -> "Medium"
+Converted string : line 9 : 'Medium' -> "Medium"
+Converted string : line 10 : 'Medium' -> "Medium"
+Converted string : line 11 : 'Medium' -> "Medium"
+Converted string : line 14 : 'Harlow Barone' -> "Harlow Barone"
+Converted string : line 15 : '1.84 m' -> "1.84 m"
+Converted string : line 16 : '78 kg' -> "78 kg"
+Converted string : line 17 : 'Great Hammer' -> "Great Hammer"
+Converted string : line 18 : 'Dodge Roll' -> "Dodge Roll"
+Converted string : line 19 : 'Highest' -> "Highest"
+Converted string : line 20 : 'Medium High' -> "Medium High"
+Converted string : line 21 : 'Medium Low' -> "Medium Low"
+Converted string : line 22 : 'Medium Low' -> "Medium Low"
+Converted string : line 25 : 'Brenton Guillory' -> "Brenton Guillory"
+Converted string : line 26 : '1.88 m' -> "1.88 m"
+Converted string : line 27 : '74 kg' -> "74 kg"
+Converted string : line 28 : 'Pistol' -> "Pistol"
+Converted string : line 29 : 'Dodge Roll' -> "Dodge Roll"
+Converted string : line 30 : 'High' -> "High"
+Converted string : line 31 : 'Medium' -> "Medium"
+Converted string : line 32 : 'Medium High' -> "Medium High"
+Converted string : line 33 : 'High' -> "High"
+Converted string : line 36 : 'Penelope Darrow' -> "Penelope Darrow"
+Converted string : line 37 : '1.60 m' -> "1.60 m"
+Converted string : line 38 : '54 kg' -> "54 kg"
+Converted string : line 39 : 'Bow' -> "Bow"
+Converted string : line 40 : 'Dodge Roll' -> "Dodge Roll"
+Converted string : line 41 : 'Medium High' -> "Medium High"
+Converted string : line 42 : 'Medium' -> "Medium"
+Converted string : line 43 : 'Medium' -> "Medium"
+Converted string : line 44 : 'Medium High' -> "Medium High"
+Converted string : line 47 : 'Luna Von Brandt' -> "Luna Von Brandt"
+Converted string : line 48 : '1.70 m' -> "1.70 m"
+Converted string : line 49 : '65 kg' -> "65 kg"
+Converted string : line 50 : 'Magic' -> "Magic"
+Converted string : line 51 : 'Dodge Roll' -> "Dodge Roll"
+Converted string : line 52 : 'High' -> "High"
+Converted string : line 53 : 'Medium Low' -> "Medium Low"
+Converted string : line 54 : 'Medium High' -> "Medium High"
+Converted string : line 55 : 'Medium' -> "Medium"
+Converted string : line 58 : 'Mahli Ueno' -> "Mahli Ueno"
+Converted string : line 59 : '1.75 m' -> "1.75 m"
+Converted string : line 60 : '75 kg' -> "75 kg"
+Converted string : line 61 : 'None' -> "None"
+Converted string : line 62 : 'Dodge Roll' -> "Dodge Roll"
+Converted string : line 63 : 'Medium' -> "Medium"
+Converted string : line 64 : 'Medium' -> "Medium"
+Converted string : line 65 : 'Medium' -> "Medium"
+Converted string : line 66 : 'Medium' -> "Medium"
+Converted string : line 69 : 'Thalia Fowler' -> "Thalia Fowler"
+Converted string : line 70 : '1.73 m' -> "1.73 m"
+Converted string : line 71 : '56 kg' -> "56 kg"
+Converted string : line 72 : 'Magic Daggers' -> "Magic Daggers"
+Converted string : line 73 : 'Dodge Roll' -> "Dodge Roll"
+Converted string : line 74 : 'High' -> "High"
+Converted string : line 75 : 'Medium Low' -> "Medium Low"
+Converted string : line 76 : 'Medium' -> "Medium"
+Converted string : line 77 : 'High' -> "High"
+Converted string : line 80 : 'Alexis Stenberg' -> "Alexis Stenberg"
+Converted string : line 81 : '1.68 m' -> "1.68 m"
+Converted string : line 82 : '60 kg' -> "60 kg"
+Converted string : line 83 : 'Shield' -> "Shield"
+Converted string : line 84 : 'Dodge Roll' -> "Dodge Roll"
+Converted string : line 85 : 'Medium' -> "Medium"
+Converted string : line 86 : 'High' -> "High"
+Converted string : line 87 : 'High' -> "High"
+Converted string : line 88 : 'Low' -> "Low"
+Converted string : line 91 : 'Zimri Pointdestre' -> "Zimri Pointdestre"
+Converted string : line 92 : '1.75 m' -> "1.75 m"
+Converted string : line 93 : '70 kg' -> "70 kg"
+Converted string : line 94 : 'Guitar' -> "Guitar"
+Converted string : line 95 : 'Dodge Roll' -> "Dodge Roll"
+Converted string : line 96 : 'High' -> "High"
+Converted string : line 97 : 'Medium' -> "Medium"
+Converted string : line 98 : 'Medium Low' -> "Medium Low"
+Converted string : line 99 : 'Medium' -> "Medium"
+Converted string : line 102 : 'Euphemia Vela' -> "Euphemia Vela"
+Converted string : line 103 : '1.72 m' -> "1.72 m"
+Converted string : line 104 : '59 kg' -> "59 kg"
+Converted string : line 105 : 'Spear' -> "Spear"
+Converted string : line 106 : 'Dodge Roll' -> "Dodge Roll"
+Converted string : line 107 : 'High' -> "High"
+Converted string : line 108 : 'Medium' -> "Medium"
+Converted string : line 109 : 'Medium Low' -> "Medium Low"
+Converted string : line 110 : 'Medium High' -> "Medium High"
+Converted string : line 113 : 'Straton Riese' -> "Straton Riese"
+Converted string : line 114 : '1.68 m' -> "1.68 m"
+Converted string : line 115 : '74 kg' -> "74 kg"
+Converted string : line 116 : 'Sword and Shield' -> "Sword and Shield"
+Converted string : line 117 : 'Dodge Roll' -> "Dodge Roll"
+Converted string : line 118 : 'Medium' -> "Medium"
+Converted string : line 119 : 'Medium High' -> "Medium High"
+Converted string : line 120 : 'Medium' -> "Medium"
+Converted string : line 121 : 'Medium Low' -> "Medium Low"
+Converted string : line 124 : 'Dorothea Alma' -> "Dorothea Alma"
+Converted string : line 125 : '1.72 m' -> "1.72 m"
+Converted string : line 126 : '60 kg' -> "60 kg"
+Converted string : line 127 : 'Blessings' -> "Blessings"
+Converted string : line 128 : 'Dodge Roll' -> "Dodge Roll"
+Converted string : line 129 : 'High' -> "High"
+Converted string : line 130 : 'Medium' -> "Medium"
+Converted string : line 131 : 'High' -> "High"
+Converted string : line 132 : 'Medium' -> "Medium"
+Converted string : line 135 : 'Orpheus Teufel' -> "Orpheus Teufel"
+Converted string : line 136 : '1.70 m' -> "1.70 m"
+Converted string : line 137 : '73 kg' -> "73 kg"
+Converted string : line 138 : 'Curses' -> "Curses"
+Converted string : line 139 : 'Dodge Roll' -> "Dodge Roll"
+Converted string : line 140 : 'High' -> "High"
+Converted string : line 141 : 'Medium' -> "Medium"
+Converted string : line 142 : 'Medium' -> "Medium"
+Converted string : line 143 : 'Medium High' -> "Medium High"
+
+Font font_infosheet has been converted to font family MV Boli (Regular). Font has been regenerated, small inconsistencies may occur.
+Converting GML script : ${project_dir}\objects\obj_rock\Collision_640e9747-a6c5-4c9b-bef7-589324c04946.gml
+Converted description : /// @description colide
+
+Converting GML script : ${project_dir}\objects\obj_solid_parent\Collision_e31bd147-ee6f-4ebe-af2b-fa829cf6bfa6.gml
+Converted description : /// @description collide
+
+Converting GML script : ${project_dir}\objects\obj_solid_parent\Collision_f1fb1a25-ed37-4df1-8ca4-bfb6e411bb38.gml
+Converted description : /// @description collide
+
+Converting GML script : ${project_dir}\objects\obj_lifeform_parent\Create_0.gml
+Converted description : /// @description inicialise the LIFE FORM
+
+Converting GML script : ${project_dir}\objects\obj_lifeform_parent\Step_0.gml
+Converted description : /// @description  control depth 
+
+Converting GML script : ${project_dir}\objects\obj_lifeform_parent\Collision_aca0b3c4-f0ba-4e5a-a76e-9413acfe2975.gml
+Converted description : /// @description colide
+
+Converting GML script : ${project_dir}\objects\obj_door_parent\Collision_70aee603-6fc4-4da5-8627-170073e09672.gml
+Converted description : /// @description collide
+
+Converting GML script : ${project_dir}\objects\obj_gen_controller\Step_0.gml
+Converted string : line 138 : 'none' -> "none"
+Converted string : line 139 : 'r: ' -> "r: "
+Converted string : line 140 : 'c: ' -> "c: "
+Converted string : line 141 : 'type: ' -> "type: "
+
+Converting GML script : ${project_dir}\objects\obj_ps_controller\Other_3.gml
+Converted string : line 16 : 'MW' -> "MW"
+Converted string : line 17 : 'MH' -> "MH"
+
+Converting GML script : ${project_dir}\objects\obj_view\Other_4.gml
+Converted builtin : line 5 : view_wview[0] = global.roomwd -> __view_set( e__VW.WView, 0, global.roomwd )
+Converted builtin : line 6 : view_hview[0] = global.roomhg -> __view_set( e__VW.HView, 0, global.roomhg )
+Converted builtin : line 3 : view_wport[0] = global.MonitorW -> __view_set( e__VW.WPort, 0, global.MonitorW )
+Converted builtin : line 2 : view_hport[0] = global.MonitorH -> __view_set( e__VW.HPort, 0, global.MonitorH )
+
+Converting GML script : ${project_dir}\objects\obj_gui\Draw_64.gml
+Converted builtin : line 2 : view_xview[view_current] -> __view_get( e__VW.XView, view_current )
+Converted builtin : line 7 : view_xview[view_current] -> __view_get( e__VW.XView, view_current )
+Converted builtin : line 8 : view_xview[view_current] -> __view_get( e__VW.XView, view_current )
+Converted builtin : line 2 : view_yview[view_current] -> __view_get( e__VW.YView, view_current )
+Converted builtin : line 7 : view_yview[view_current] -> __view_get( e__VW.YView, view_current )
+Converted builtin : line 8 : view_yview[view_current] -> __view_get( e__VW.YView, view_current )
+Converted builtin : line 1 : view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin : line 1 : view_hview[0] -> __view_get( e__VW.HView, 0 )
+
+Converting GML script : ${project_dir}\objects\obj_CH_tree_state\Create_0.gml
+Converted string : line 40 : 'f' -> "f"
+
+Converting GML script : ${project_dir}\objects\obj_CH_tree_state\Alarm_3.gml
+Converted string : line 8 : 'w' -> "w"
+Converted string : line 23 : 'c' -> "c"
+Converted string : line 38 : 'c' -> "c"
+Converted string : line 49 : 'w' -> "w"
+
+Converting GML script : ${project_dir}\objects\obj_CH_tree_state\Alarm_1.gml
+Converted string : line 11 : 'w' -> "w"
+Converted string : line 29 : 'a' -> "a"
+
+Converting GML script : ${project_dir}\objects\obj_CH_tree_state\Step_0.gml
+Converted string : line 91 : 'f' -> "f"
+
+Converting GML script : ${project_dir}\objects\obj_CH_deer_state\Step_0.gml
+Converted string : line 60 : 'f' -> "f"
+
+Converting GML script : ${project_dir}\objects\obj_CH_leaf\Step_0.gml
+Converted string : line 5 : 'f' -> "f"
+Converted string : line 9 : 'a' -> "a"
+Converted string : line 24 : 'c' -> "c"
+Converted string : line 30 : 'w' -> "w"
+
+Converting GML script : ${project_dir}\objects\obj_enemy\Create_0.gml
+Converted description : /// @description Inicialise the enemy
+
+Converting GML script : ${project_dir}\objects\obj_enemy\Step_0.gml
+Converted description : /// @description Exist
+
+Converting GML script : ${project_dir}\objects\obj_body\Alarm_0.gml
+Converted description : /// @description dash alarm
+
+Converting GML script : ${project_dir}\objects\obj_body\Step_0.gml
+Converted description : /// @description Move the player
+
+Converting GML script : ${project_dir}\objects\obj_sword\Alarm_1.gml
+Converted description : /// @description alarm for mele
+
+Converting GML script : ${project_dir}\objects\obj_pglobs\Create_0.gml
+Converted string : line 10 : 'none' -> "none"
+Converted string : line 14 : 'start' -> "start"
+
+Converting GML script : ${project_dir}\objects\obj_slm_a\Create_0.gml
+Converted description : /// @description Inicialise the enemy
+
+Converting GML script : ${project_dir}\objects\obj_slm_a\Step_0.gml
+Converted description : /// @description Exist
+
+Converting GML script : ${project_dir}\objects\obj_sword_t\Collision_8484e07a-fd71-492e-984c-362d3c2e384f.gml
+Converted description : /// @description colide
+
+Converting GML script : ${project_dir}\objects\obj_slm_b\Create_0.gml
+Converted description : /// @description Inicialise the enemy
+
+Converting GML script : ${project_dir}\objects\obj_slm_b\Step_0.gml
+Converted description : /// @description Exist
+
+Converting GML script : ${project_dir}\objects\obj_skull\Create_0.gml
+Converted description : /// @description Inicialise the enemy
+Converted string : line 27 : 'card' -> "card"
+
+Converting GML script : ${project_dir}\objects\obj_skull\Alarm_6.gml
+Converted string : line 5 : 'card' -> "card"
+Converted string : line 7 : 'diag' -> "diag"
+Converted string : line 13 : 'card' -> "card"
+Converted string : line 15 : 'diag' -> "diag"
+Converted string : line 21 : 'card' -> "card"
+Converted string : line 23 : 'diag' -> "diag"
+Converted string : line 24 : 'diag' -> "diag"
+Converted string : line 26 : 'card' -> "card"
+
+Converting GML script : ${project_dir}\objects\obj_skull\Step_0.gml
+Converted description : /// @description Exist
+Converted string : line 43 : 'card' -> "card"
+Converted string : line 52 : 'diag' -> "diag"
+
+Converting GML script : ${project_dir}\objects\obj_skull_n\Create_0.gml
+Converted description : /// @description Inicialise the enemy
+Converted string : line 29 : 'card' -> "card"
+
+Converting GML script : ${project_dir}\objects\obj_skull_n\Alarm_1.gml
+Converted string : line 3 : 'card' -> "card"
+Converted string : line 5 : 'diag' -> "diag"
+Converted string : line 11 : 'card' -> "card"
+Converted string : line 13 : 'diag' -> "diag"
+Converted string : line 19 : 'card' -> "card"
+Converted string : line 21 : 'diag' -> "diag"
+Converted string : line 22 : 'diag' -> "diag"
+Converted string : line 24 : 'card' -> "card"
+
+Converting GML script : ${project_dir}\objects\obj_skull_n\Step_0.gml
+Converted string : line 54 : 'card' -> "card"
+Converted string : line 57 : 'diag' -> "diag"
+
+Converting GML script : ${project_dir}\objects\obj_psnt_arch_body\Create_0.gml
+Converted description : /// @description Inicialise the enemy
+
+Converting GML script : ${project_dir}\objects\obj_psnt_body\Create_0.gml
+Converted description : /// @description Inicialise the enemy
+
+Converting GML script : ${project_dir}\objects\obj_mimic\Create_0.gml
+Converted description : /// @description Inicialise the enemy
+
+Converting GML script : ${project_dir}\objects\obj_bat\Create_0.gml
+Converted description : /// @description Inicialise the enemy
+
+Converting GML script : ${project_dir}\objects\obj_slm_cr\Create_0.gml
+Converted description : /// @description Inicialise the enemy
+
+Converting GML script : ${project_dir}\objects\obj_menu2_lg\Mouse_4.gml
+Converted string : line 6 : "\file_l.txt" -> "\\file_l.txt"
+Converted string : line 17 : "\file_l.txt" -> "\\file_l.txt"
+
+Converting GML script : ${project_dir}\objects\obj_menu2_back\Mouse_7.gml
+Converted string : line 16 : "\file_l.txt" -> "\\file_l.txt"
+
+Converting GML script : ${project_dir}\objects\obj_menu2_state0\Step_0.gml
+Converted string : line 3 : 'conhaque' -> "conhaque"
+
+Converting GML script : ${project_dir}\objects\obj_menu2_state2\KeyRelease_27.gml
+Converted description : /// @description open file for storing variables
+Converted string : line 3 : "\file_l.txt" -> "\\file_l.txt"
+
+Converting GML script : ${project_dir}\objects\obj_walltile_down\Create_0.gml
+Converted description : /// @description exist
+
+Converting GML script : ${project_dir}\objects\obj_walltile_left\Create_0.gml
+Converted description : /// @description exist
+
+Converting GML script : ${project_dir}\objects\obj_walltile_right\Create_0.gml
+Converted description : /// @description exist
+
+Converting GML script : ${project_dir}\objects\obj_menu\Create_0.gml
+Converted string : line 15 : "\file_l.txt" -> "\\file_l.txt"
+
+Converting GML script : ${project_dir}\objects\obj_enterbtn\Step_0.gml
+Converted description : /// @description click on - flicker
+
+Converting GML script : ${project_dir}\objects\obj_nextbtn\Step_0.gml
+Converted description : /// @description click on - flicker
+
+Windows NSIS Installer Script has been set to default due to changes in GameMaker Studio 2.
+no audiogroup for sound: snd_music - setting to default audio group.
+game speed set to 30
+added compatibility script draw/draw_set_blend_mode.gml
+added compatibility script instance/instance_create.gml
+added compatibility script object/object_get_depth.gml
+added compatibility script view/__view_get.gml
+added compatibility script view/__view_set.gml
+added compatibility script view/__view_set_internal.gml
+added compatibility script view/__init_view.gml
+added compatibility script __init_global.gml
+added compatibility script __global_object_depths.gml

@@ -1,0 +1,2 @@
+atk_cd = false;
+
