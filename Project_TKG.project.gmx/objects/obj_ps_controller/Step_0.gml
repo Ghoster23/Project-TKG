@@ -13,7 +13,7 @@ if surface_exists(global.lighting) and (room != rm_menu_1 and room != rm_menu_2 
     //Light sources
     
     ///Torch
-    draw_set_blend_mode(bm_subtract);
+    gpu_set_blendmode(bm_subtract);
     draw_set_colour(c_white);
     draw_set_alpha(0.3);
     
@@ -27,7 +27,7 @@ if surface_exists(global.lighting) and (room != rm_menu_1 and room != rm_menu_2 
     }
     
     ///Skull Bullet
-    draw_set_blend_mode(bm_subtract);
+    gpu_set_blendmode(bm_subtract);
     draw_set_colour(c_red);
     
     if instance_exists(obj_skull_fl){
@@ -39,7 +39,7 @@ if surface_exists(global.lighting) and (room != rm_menu_1 and room != rm_menu_2 
     }
     
     //Resets
-    draw_set_blend_mode(bm_normal);
+    gpu_set_blendmode(bm_normal);
     draw_set_alpha(1);
     surface_reset_target();
     

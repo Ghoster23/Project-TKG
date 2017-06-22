@@ -16,10 +16,6 @@ if(s_x < 180 and ss_x == -1){
 phy_position_x = i_x;
 phy_position_y = i_y;
 
-if keyboard_check(vk_alt){
-    start = true;
-}
-
 ///Determine action state
 if start == true{
     if once == false{
@@ -38,7 +34,7 @@ if start == true{
         }
         
     }else if bene == false{
-        image_speed = 0.3;
+        image_speed = 0.5;
         
         if(image_index >= 15){
             instance_create(x,y,obj_CH_deer_state);
@@ -54,10 +50,6 @@ if start == true{
 }else {
     state = 0;
     
-}
-
-if(b_alarm_start == true){
-    alarm[0] = 1 * room_speed;
 }
 
 ///Action state based changes

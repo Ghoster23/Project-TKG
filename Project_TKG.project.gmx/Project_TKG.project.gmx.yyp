@@ -1175,6 +1175,14 @@
             }
         },
         {
+            "Key": "5945fbc9-b5f9-4ced-8ff0-3584267f6c2d",
+            "Value": {
+                "id": "2a2c82b8-b948-4d4b-8af2-84d6d69d8255",
+                "resourcePath": "sprites\\spr_CH_deer_brock\\spr_CH_deer_brock.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "59cbdb89-f334-454a-ab02-ea275f8447c6",
             "Value": {
                 "id": "a3770e69-daf6-4d87-9cf9-b22baa322d41",
@@ -1783,14 +1791,6 @@
             }
         },
         {
-            "Key": "86c293f9-30ef-49e1-8a28-902f258f3623",
-            "Value": {
-                "id": "82f5b4a5-2094-4558-86e9-d77359a2e3f2",
-                "resourcePath": "views\\86c293f9-30ef-49e1-8a28-902f258f3623.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "8846ff7d-e8e1-49c2-b737-7ecd83d332b5",
             "Value": {
                 "id": "6e914cde-a248-4cae-9287-c53e9268d481",
@@ -2188,14 +2188,6 @@
                 "id": "3f37f133-2df4-48b3-b97c-5d1dcf215675",
                 "resourcePath": "sprites\\spr_sword_t\\spr_sword_t.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "ab71b16f-ca7f-4883-96af-177b43c75a46",
-            "Value": {
-                "id": "f29882e8-37ae-4607-8357-f902dbcc6d36",
-                "resourcePath": "scripts\\@draw_set_blend_mode\\draw_set_blend_mode.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -3168,7 +3160,6 @@
         }
     ],
     "script_order": [
-        "ab71b16f-ca7f-4883-96af-177b43c75a46",
         "4c5afa93-1c6d-4582-8898-45e5346681ec",
         "06272d61-9870-4264-968d-512217480810",
         "22c18bc6-c5b2-483f-85e9-f870380f1a75",

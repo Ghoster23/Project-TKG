@@ -11,7 +11,7 @@
     "option_windows_display_cursor": false,
     "option_windows_display_name": "King's Gauntlet",
     "option_windows_enable_steam": false,
-    "option_windows_executable_name": "${project_name}",
+    "option_windows_executable_name": "${TKG}",
     "option_windows_icon": "${options_dir}\\windows\\runner_icon.ico",
     "option_windows_installer_finished": "${options_dir}\\windows\\Runner_finish.bmp",
     "option_windows_installer_header": "${options_dir}\\windows\\Runner_header.bmp",
@@ -24,7 +24,7 @@
     "option_windows_scale": 0,
     "option_windows_sleep_margin": 1,
     "option_windows_splash_screen": "${options_dir}\\windows\\splash.png",
-    "option_windows_start_fullscreen": true,
+    "option_windows_start_fullscreen": false,
     "option_windows_texture_page": "2048x2048",
     "option_windows_use_splash": false,
     "option_windows_version": {

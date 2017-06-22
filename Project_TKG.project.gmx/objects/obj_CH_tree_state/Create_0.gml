@@ -4,10 +4,10 @@ image_speed = 0;
 i_x = x;
 i_y = y;
 
-start = false;
+start = true;
 once = false;
 bene = true;
-b_alarm_start = false;
+alarm[0] = 3 * room_speed;
 
 phy_fixed_rotation = true;
 inv = false;
@@ -23,7 +23,7 @@ global.b_spd = 0;
 //Roots
 r_vis = true;
 r_solid = true;
-burrowed = false;
+burrowed = true;
 restart = false;
 
 //Leaves

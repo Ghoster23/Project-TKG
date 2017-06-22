@@ -4,6 +4,9 @@ once = false;
 go = false;
 des = false;
 
+image_speed = 0;
+image_index = irandom_range(0,35);
+
 
 if(instance_exists(obj_CH_tree_state)){
     pattern = obj_CH_tree_state.pat;
