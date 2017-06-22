@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>x = mouse_x;
 y = mouse_y;
-depth = -y;
+
 </string>
           </argument>
         </arguments>

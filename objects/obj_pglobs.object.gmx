@@ -365,6 +365,10 @@ if(global.bk == true &amp;&amp; room == rm_boss){
 if keyboard_check_pressed(vk_f11){
     room_goto(rm_boss);
 }
+
+if keyboard_check_pressed(vk_f4){
+    room_goto(rm_CH_boss);
+}
 </string>
           </argument>
         </arguments>

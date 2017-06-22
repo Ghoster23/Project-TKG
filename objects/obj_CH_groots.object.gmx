@@ -2,7 +2,7 @@
 <object>
   <spriteName>spr_door_d</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -29,6 +29,31 @@
 global.st_stuck = true;
 global.st_stuck_d = 3;
 pain = false;
+once = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>obj_CH_tree_state.state = 1;
+instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -128,44 +153,25 @@ global.st_stuck_d -= 1;
         image_speed = -0.2;
     }
      
-    if image_index == 0{
-        instance_destroy();
+    if image_index == 0 and once == false{
+        alarm[2] = 1.5 * room_speed;
+        once = true;
+        
+        visible = false;
+        
     }   
-
-    global.st_stuck = false;
-    global.st_stuck_d = 0;
     
-    with obj_CH_tree_state {
-        state = 0;
-        once = false;
-    }
+    global.stuck = false;
+    global.stuck_d = 0;
+
     
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="6" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>alarm[1] = 1 * room_speed;
 
-image_speed = -0.2;
+if(mouse_check_button_released(mb_left)){
+    alarm[1] = 1 * room_speed;
+
+    image_speed = -0.2;
+}
 </string>
           </argument>
         </arguments>

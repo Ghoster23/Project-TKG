@@ -28,6 +28,9 @@
             <string>state = 0;
 image_speed = 0;
 
+i_x = x;
+i_y = y;
+
 start = false;
 once = false;
 bene = true;
@@ -36,13 +39,19 @@ b_alarm_start = false;
 phy_fixed_rotation = true;
 inv = false;
 
-b_mhp = 60;
-b_hp = 60;
-b_atk = 8;
-b_s_atk = 6;
-b_def = 3;
-b_s_def = 3;
-b_spd = 0;
+global.b_mhp = 60;
+global.b_hp = 60;
+global.b_atk = 8;
+global.b_s_atk = 6;
+global.b_def = 3;
+global.b_s_def = 3;
+global.b_spd = 0;
+
+//Roots
+r_vis = true;
+r_solid = true;
+burrowed = false;
+restart = false;
 
 //Leaves
 leaves = 1;
@@ -56,6 +65,32 @@ b = 0;
 c = 0;
 
 pat = 'f';
+s_x = 180;
+ss_x = 1;
+mult = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>state = 4;
 </string>
           </argument>
         </arguments>
@@ -86,32 +121,60 @@ switch c{
     case 2:
     case 4:
         pat = 'w';
-        instance_create(x + 64, y + 32, obj_CH_leaf);
-        instance_create(x - 64, y + 32, obj_CH_leaf);
         instance_create(x + 32, y + 32, obj_CH_leaf);
-        instance_create(x, y + 32, obj_CH_leaf);
         instance_create(x - 32, y + 32, obj_CH_leaf);
-        instance_create(x + 96, y + 32, obj_CH_leaf);
-        instance_create(x - 96, y + 32, obj_CH_leaf);       
+        instance_create(x - 48, y, obj_CH_leaf);
+        instance_create(x + 48, y, obj_CH_leaf);
+        instance_create(x + 40, y + 16, obj_CH_leaf);
+        instance_create(x - 40, y + 16, obj_CH_leaf);
+        instance_create(x + 16, y + 40, obj_CH_leaf);
+        instance_create(x - 16, y + 40, obj_CH_leaf);
+        instance_create(x, y + 48, obj_CH_leaf);     
     break;
     
     case 1:
     case 3:
     case 5:
         pat = 'c';
-        instance_create(x + 64, y + 32, obj_CH_leaf);
-        instance_create(x - 64, y + 32, obj_CH_leaf);
-        instance_create(x + 32, y + 32, obj_CH_leaf);
-        instance_create(x, y + 32, obj_CH_leaf);
-        instance_create(x - 32, y + 32, obj_CH_leaf);
-        instance_create(x + 96, y + 32, obj_CH_leaf);
-        instance_create(x - 96, y + 32, obj_CH_leaf);       
+        instance_create(x, y, obj_CH_leaf);
+        instance_create(x, y, obj_CH_leaf);
+        instance_create(x, y, obj_CH_leaf);
+        instance_create(x, y, obj_CH_leaf);
+        instance_create(x, y, obj_CH_leaf);
+        instance_create(x, y, obj_CH_leaf);
+        instance_create(x, y, obj_CH_leaf);
+        instance_create(x, y, obj_CH_leaf);
+        instance_create(x, y, obj_CH_leaf);
+        instance_create(x, y, obj_CH_leaf);      
     break;
-    
     case 6:
+    case 7:
+    case 8:
+        pat = 'c';
+        instance_create(x, y, obj_CH_leaf);
+        instance_create(x, y, obj_CH_leaf);
+        instance_create(x, y, obj_CH_leaf);
+        instance_create(x, y, obj_CH_leaf);
+        instance_create(x, y, obj_CH_leaf);
+        instance_create(x, y, obj_CH_leaf);
+        instance_create(x, y, obj_CH_leaf);
+        instance_create(x, y, obj_CH_leaf);
+        instance_create(x, y, obj_CH_leaf);
+        instance_create(x, y, obj_CH_leaf);
+        pat = 'w';
+        instance_create(x + 32, y + 32, obj_CH_leaf);
+        instance_create(x - 32, y + 32, obj_CH_leaf);
+        instance_create(x - 48, y, obj_CH_leaf);
+        instance_create(x + 48, y, obj_CH_leaf);
+        instance_create(x + 40, y + 16, obj_CH_leaf);
+        instance_create(x - 40, y + 16, obj_CH_leaf);
+        instance_create(x + 16, y + 40, obj_CH_leaf);
+        instance_create(x - 16, y + 40, obj_CH_leaf);
+        instance_create(x, y + 48, obj_CH_leaf); 
+    case 9:
         leaves = 1;
         c = 0;
-        state = 4;
+        alarm[4] = 2 * room_speed;
     break;
 }
 
@@ -138,45 +201,10 @@ c += 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>l2 = false;
+            <string>//Spawn the leaves
+l2 = false;
 
-//Spawn the leaves
-switch b{
-    case 0:
-    case 2:
-    case 4:
-        pat = 'f';
-        instance_create(x + 64, y + 16, obj_CH_leaf);
-        instance_create(x - 64, y + 16, obj_CH_leaf);
-        instance_create(x + 32, y + 32, obj_CH_leaf);
-        instance_create(x - 32, y + 32, obj_CH_leaf);
-        instance_create(x + 96, y, obj_CH_leaf);
-        instance_create(x - 96, y, obj_CH_leaf);
-        instance_create(x+5, y + 32, obj_CH_leaf);
-        instance_create(x-5, y + 32, obj_CH_leaf);
-    break;
-    
-    case 1:
-    case 3:
-    case 5:
-        pat = 'c';
-        instance_create(x + 64, y + 16, obj_CH_leaf);
-        instance_create(x - 64, y + 16, obj_CH_leaf);
-        instance_create(x + 32, y + 32, obj_CH_leaf);
-        instance_create(x - 32, y + 32, obj_CH_leaf);
-        instance_create(x + 96, y, obj_CH_leaf);
-        instance_create(x - 96, y, obj_CH_leaf);
-        instance_create(x+5, y + 32, obj_CH_leaf);
-        instance_create(x-5, y + 32, obj_CH_leaf);
-    break;
-    
-    case 6:
-        leaves = 3;
-        b = 0;
-    break;
-}
-
-b += 1;
+leaves = 3;
 </string>
           </argument>
         </arguments>
@@ -206,28 +234,38 @@ switch a{
     case 0:
     case 2:
     case 4:
+    case 6:
+    case 8:
+    case 10:
         pat = 'w';
         instance_create(x + 32, y + 32, obj_CH_leaf);
-        instance_create(x - 32, y - 32, obj_CH_leaf);
-        instance_create(x - 32, y, obj_CH_leaf);
-        instance_create(x + 32, y, obj_CH_leaf);
-        instance_create(x+64, y + 16, obj_CH_leaf);
-        instance_create(x-64, y - 16, obj_CH_leaf);
+        instance_create(x - 32, y + 32, obj_CH_leaf);
+        instance_create(x - 48, y, obj_CH_leaf);
+        instance_create(x + 48, y, obj_CH_leaf);
+        instance_create(x + 40, y + 16, obj_CH_leaf);
+        instance_create(x - 40, y + 16, obj_CH_leaf);
+        instance_create(x + 16, y + 40, obj_CH_leaf);
+        instance_create(x - 16, y + 40, obj_CH_leaf);
+        instance_create(x, y + 48, obj_CH_leaf);
     break;
     
     case 1:
     case 3:
     case 5:
+    case 7:
+    case 9:
+    case 11:
         pat = 'a';
         instance_create(x + 32, y + 32, obj_CH_leaf);
-        instance_create(x - 32, y - 32, obj_CH_leaf);
-        instance_create(x - 32, y, obj_CH_leaf);
-        instance_create(x + 32, y, obj_CH_leaf);
-        instance_create(x+64, y + 16, obj_CH_leaf);
-        instance_create(x-64, y - 16, obj_CH_leaf);
+        instance_create(x - 32, y + 32, obj_CH_leaf);
+        
+        instance_create(x + 40, y + 16, obj_CH_leaf);
+        instance_create(x - 40, y + 16, obj_CH_leaf);
+        
+        instance_create(x, y + 48, obj_CH_leaf);
     break;
     
-    case 6:
+    case 12:
         leaves = 2;
         a = 0;
     break;
@@ -279,11 +317,23 @@ a += 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>depth = -y;
+            <string>depth = -y-10;
 x = phy_position_x;
 y = phy_position_y;
 
-image_index = state;
+s_x = s_x + ss_x*5;
+
+if(s_x &gt; 360 and ss_x == 1){
+    ss_x = -1;
+    mult = irandom_range(2,3);
+}
+if(s_x &lt; 180 and ss_x == -1){
+    ss_x = 1;
+    mult = irandom_range(2,3);
+}
+
+phy_position_x = i_x;
+phy_position_y = i_y;
 
 if keyboard_check(vk_alt){
     start = true;
@@ -292,7 +342,6 @@ if keyboard_check(vk_alt){
 ///Determine action state
 if start == true{
     if once == false{
-        
         
         once = true;
     }
@@ -308,11 +357,16 @@ if start == true{
         }
         
     }else if bene == false{
-        instance_create(x,y,obj_CH_deer_state);
-        while instance_exists(obj_CH_root){
-            with obj_CH_root{
-                instance_destroy();
+        image_speed = 0.3;
+        
+        if(image_index &gt;= 15){
+            instance_create(x,y,obj_CH_deer_state);
+            while instance_exists(obj_CH_root){
+                with obj_CH_root{
+                    instance_destroy();
+                }
             }
+            instance_destroy();
         }
     }
     
@@ -335,20 +389,17 @@ switch(state){
     break;
     
     //Root attack
-    case 1:
-        
-    break;
-    case 2:
-        
-    break;
+    ///See root object
     
     //Leaves
     case 3:
+        r_vis = false;
+        r_solid = false;
         
         ///1st set
         if leaves == 1{
             if l1 == false{
-                alarm[1] = 1 * room_speed;
+                alarm[1] = 0.6 * room_speed;
                 l1 = true;
                 
             }
@@ -356,15 +407,21 @@ switch(state){
         ///2nd set
         }else if leaves == 2{
             if l2 == false{
-                alarm[2] = 1 * room_speed;
+                pat = 'f';
+                alarm[2] = 5 * room_speed;              
                 l2 = true;
                 
             }
             
+            
+            if(s_x mod 5*mult == 0){
+                instance_create(x,y,obj_CH_leaf);
+            }
+                        
         ///3rd set and next phase
         }else if leaves == 3{
             if l3 == false{
-                alarm[3] = 1 * room_speed;
+                alarm[3] = 0.6 * room_speed;
                 l3 = true;
                 
             }
@@ -374,7 +431,11 @@ switch(state){
     
     //Grab the player
     case 4:
-        if not instance_exists(obj_CH_groots){
+        r_vis = false;
+        r_solid = false;
+        restart = true;
+        
+        if not instance_exists(obj_CH_groots) and bene == true{
             instance_create(obj_body.x,obj_body.y,obj_CH_groots);
         }
         
@@ -385,7 +446,7 @@ switch(state){
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_body">
+    <event eventtype="4" ename="obj_kb">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -402,15 +463,7 @@ switch(state){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(state == 1 &amp;&amp; inv == false){
-    global.p_hp -= global.b_atk div global.p_def;
-    inv = true;
-    alarm[3] = 1 * room_speed;
-}else if(state == 2 &amp;&amp; inv == false){
-    global.p_hp -= (global.b_atk * 2) div global.p_def;
-    inv = true;
-    alarm[3] = 1 * room_speed;
-}
+            <string>bene = false;
 </string>
           </argument>
         </arguments>
@@ -433,13 +486,7 @@ switch(state){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(instance_exists(obj_sword_t)){
-    if(obj_sword_t.image_speed != 0 &amp;&amp; d_cd == false){
-        global.b_hp -= (global.p_satk - global.b_s_def)*2;
-        d_cd = true;
-        alarm[4] = 1 * room_speed;
-    }
-}
+            <string>bene = false;
 </string>
           </argument>
         </arguments>
@@ -448,8 +495,8 @@ switch(state){
   </events>
   <PhysicsObject>-1</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
-  <PhysicsObjectShape>1</PhysicsObjectShape>
-  <PhysicsObjectDensity>500</PhysicsObjectDensity>
+  <PhysicsObjectShape>2</PhysicsObjectShape>
+  <PhysicsObjectDensity>0</PhysicsObjectDensity>
   <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
   <PhysicsObjectLinearDamping>0.100000001490116</PhysicsObjectLinearDamping>
@@ -458,9 +505,11 @@ switch(state){
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>0,0</point>
-    <point>96,0</point>
-    <point>96,96</point>
-    <point>0,96</point>
+    <point>128,160</point>
+    <point>184,192</point>
+    <point>128,208</point>
+    <point>56,208</point>
+    <point>8,176</point>
+    <point>64,160</point>
   </PhysicsShapePoints>
 </object>

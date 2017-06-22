@@ -61,6 +61,8 @@
       <sprite>sprites\spr_vase</sprite>
       <sprite>sprites\spr_crate</sprite>
       <sprite>sprites\spr_chest</sprite>
+      <sprite>sprites\sprite132</sprite>
+      <sprite>sprites\sprite131</sprite>
     </sprites>
     <sprites name="walls">
       <sprite>sprites\spr_wall_up</sprite>
@@ -182,6 +184,20 @@
         <sprite>sprites\spr_e_bow</sprite>
         <sprite>sprites\spr_e_arrow</sprite>
       </sprites>
+      <sprites name="bosses">
+        <sprites name="12">
+          <sprites name="CH">
+            <sprite>sprites\spr_CH_rm_bl</sprite>
+            <sprite>sprites\spr_CH_deer_state</sprite>
+            <sprite>sprites\spr_CH_root</sprite>
+            <sprite>sprites\spr_CH_leaf</sprite>
+            <sprite>sprites\spr_CH_tree_state</sprite>
+            <sprite>sprites\spr_CH_rcone</sprite>
+            <sprite>sprites\spr_CH_rcones</sprite>
+            <sprite>sprites\spr_fln_rocks</sprite>
+          </sprites>
+        </sprites>
+      </sprites>
     </sprites>
     <sprites name="particles">
       <sprite>sprites\spr_cbits</sprite>
@@ -202,8 +218,8 @@
     <sprite>sprites\sprite79</sprite>
     <sprite>sprites\spr_test</sprite>
     <sprite>sprites\spr_point</sprite>
-    <sprite>sprites\spr_CH_tree_state</sprite>
-    <sprite>sprites\spr_CH_root</sprite>
+    <sprite>sprites\spr_CH_root_swing</sprite>
+    <sprite>sprites\spr_CH_root_idle</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -284,10 +300,18 @@
     <objects name="boss">
       <objects name="12">
         <objects name="CH">
+          <object>objects\obj_CH_deer_brock</object>
           <object>objects\obj_CH_root</object>
           <object>objects\obj_CH_tree_state</object>
+          <object>objects\obj_CH_deer_state</object>
           <object>objects\obj_CH_leaf</object>
           <object>objects\obj_CH_groots</object>
+          <object>objects\obj_fln_rock_shadow</object>
+          <object>objects\obj_CH_deer_brocks</object>
+          <object>objects\obj_fln_rock</object>
+          <object>objects\obj_CH_rcone</object>
+          <object>objects\obj_CH_rcones</object>
+          <object>objects\obj_CH_rm_bk</object>
         </objects>
       </objects>
       <object>objects\obj_green_puff</object>
@@ -397,7 +421,10 @@
       <object>objects\obj_fl_lf</object>
       <object>objects\obj_fl_cn</object>
       <object>objects\obj_fl_rg</object>
+      <object>objects\object122</object>
       <object>objects\obj_fl_dn</object>
+      <object>objects\object121</object>
+      <object>objects\object123</object>
     </objects>
     <objects name="chsl">
       <object>objects\obj_back</object>
@@ -419,6 +446,7 @@
     <room>rooms\rm_level</room>
     <room>rooms\rm_boss</room>
     <room>rooms\rm_dead</room>
+    <room>rooms\rm_CH_boss</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>-1569325055</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -82,7 +82,7 @@ surface_reset_target();
 rm_hg = 418;
 
 //Draw the surface
-if surface_exists(global.lighting) and (room == rm_level or room == rm_boss){
+if surface_exists(global.lighting) and (room != rm_menu_1 and room != rm_menu_2 and room != rm_chsl and room != rm_dead){
     surface_set_target(global.lighting);
     
     //Make it dark
@@ -123,7 +123,7 @@ if surface_exists(global.lighting) and (room == rm_level or room == rm_boss){
     draw_set_alpha(1);
     surface_reset_target();
     
-}else if room == rm_level or room == rm_boss{
+}else if room != rm_menu_1 and room != rm_menu_2 and room != rm_chsl and room != rm_dead{
     global.lighting = surface_create(room_width,room_height);
     
     surface_set_target(global.lighting);
@@ -169,10 +169,10 @@ adjust = false;
 if room == rm_dead and once == false{
 once = true;
 //Particles
-part_type_destroy(global.pt_vbits)
-part_type_destroy(global.pt_cbits)
-part_type_destroy(global.pt_smoke)
-part_type_destroy(global.pt_fire)
+part_type_destroy(global.pt_vbits);
+part_type_destroy(global.pt_cbits);
+part_type_destroy(global.pt_smoke);
+part_type_destroy(global.pt_fire);
 part_system_destroy(global.ps);
 
 //Surface
@@ -182,6 +182,31 @@ if surface_exists(global.lighting){
 
 view_enabled = false;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>part_emitter_destroy_all(global.ps);
+part_particles_clear(global.ps);
+application_surface_draw_enable(true);
 </string>
           </argument>
         </arguments>
@@ -319,12 +344,12 @@ if(global.MonitorW&gt;=rm_wd*5 ){
           <argument>
             <kind>1</kind>
             <string>//Draw the surface
-if surface_exists(global.lighting) and (room == rm_level or room == rm_boss) {
+if surface_exists(global.lighting) and (room != rm_menu_1 and room != rm_menu_2 and room != rm_chsl) {
     if view_current == 0{
         draw_surface(global.lighting,0,0);
     }
     
-}else if room == rm_level or room == rm_boss{
+}else if room != rm_menu_1 and room != rm_menu_2 and room != rm_chsl{
     global.lighting = surface_create(room_width, room_height);
     
 }

@@ -53,6 +53,7 @@
   <instances>
     <instance objName="obj_charselect_ctrl" x="32" y="0" name="inst_362232EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_back" x="472" y="344" name="inst_59D3799C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ps_controller" x="8" y="0" name="inst_0D298225" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
