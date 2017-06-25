@@ -21,10 +21,7 @@ global.b_s_def = 3;
 global.b_spd = 0;
 
 //Roots
-r_vis = true;
-r_solid = true;
-burrowed = true;
-restart = false;
+ph = 0;
 
 //Leaves
 leaves = 1;

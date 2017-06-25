@@ -15,7 +15,8 @@
         "07725adb-1322-435b-9e37-3c957d069ba6",
         "b42bae9b-60d2-452e-9b7b-e443917913c6",
         "287960f2-8e1e-47bc-8671-69e9579da48f",
-        "11fd2394-81ef-43ee-9d0e-9b8d7e26b046"
+        "11fd2394-81ef-43ee-9d0e-9b8d7e26b046",
+        "aac740bf-1248-4332-b635-b2113af3e6d6"
     ],
     "filterType": "GMObject",
     "folderName": "CH",

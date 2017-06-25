@@ -18,11 +18,6 @@ phy_position_y = i_y;
 
 ///Determine action state
 if start == true{
-    if once == false{
-        
-        once = true;
-    }
-    
     if bene == true{    
         if state == 0{
             //Swing down
@@ -47,9 +42,6 @@ if start == true{
         }
     }
     
-}else {
-    state = 0;
-    
 }
 
 ///Action state based changes
@@ -60,15 +52,21 @@ switch(state){
         image_speed = 0;
         
     break;
-    
     //Root attack
     ///See root object
-    
+	case 1:
+		///Attack
+		if ph == 3{
+			ph = 0;
+		}
+		
+	break;
+	case 2:
+		///Burrow
+		
+    break;
     //Leaves
     case 3:
-        r_vis = false;
-        r_solid = false;
-        
         ///1st set
         if leaves == 1{
             if l1 == false{
@@ -98,20 +96,19 @@ switch(state){
                 l3 = true;
                 
             }
-        }
+			
+        }else if leaves == 4{
+			state = 4;
+			
+		}
         
     break;
     
     //Grab the player
-    case 4:
-        r_vis = false;
-        r_solid = false;
-        restart = true;
-        
-        if not instance_exists(obj_CH_groots) and bene == true{
+    case 4:        
+        if not instance_exists(obj_CH_groots){
             instance_create(obj_body.x,obj_body.y,obj_CH_groots);
         }
-        
+        leaves = 1;
     break;
 }
-

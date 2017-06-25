@@ -2154,7 +2154,7 @@
             "Key": "a79f5d62-de7f-40e5-9783-1ac08cda0a19",
             "Value": {
                 "id": "303ed970-0be4-4f05-b245-bbd816d98667",
-                "resourcePath": "sprites\\spr_CH_root_swing_d\\spr_CH_root_swing_d.yy",
+                "resourcePath": "sprites\\spr_CH_root_swing\\spr_CH_root_swing.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2180,6 +2180,14 @@
                 "id": "2a1d628d-13f9-4f95-8a95-97fe288acb03",
                 "resourcePath": "sprites\\spr_menu2_lg\\spr_menu2_lg.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "aac740bf-1248-4332-b635-b2113af3e6d6",
+            "Value": {
+                "id": "219ec9a1-7942-4d70-bc3b-ca7a485d7d0e",
+                "resourcePath": "objects\\obj_CH_root_d\\obj_CH_root_d.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2458,7 +2466,7 @@
             "Key": "c02cb7cd-7642-4675-88fd-60da2a209b25",
             "Value": {
                 "id": "9906a19f-c217-4269-8172-b62f8f6d19be",
-                "resourcePath": "sprites\\spr_CH_root_swing\\spr_CH_root_swing.yy",
+                "resourcePath": "sprites\\spr_CH_root_swing_d\\spr_CH_root_swing_d.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2588,6 +2596,14 @@
                 "id": "bca8e96c-4a88-4a48-84c6-ea6b2bbddde0",
                 "resourcePath": "objects\\obj_e_bow\\obj_e_bow.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c780aab0-ac3b-4fdb-8a65-8a828414184b",
+            "Value": {
+                "id": "99cd68c7-8d43-46a8-b6be-54229459a4b6",
+                "resourcePath": "sprites\\sprite145\\sprite145.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

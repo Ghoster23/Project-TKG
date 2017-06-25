@@ -30,7 +30,7 @@ switch c{
         instance_create(x, y, obj_CH_leaf);
         instance_create(x, y, obj_CH_leaf);
         instance_create(x, y, obj_CH_leaf);
-        instance_create(x, y, obj_CH_leaf);      
+        instance_create(x, y, obj_CH_leaf);  
     break;
     case 6:
     case 7:
@@ -55,13 +55,12 @@ switch c{
         instance_create(x - 40, y + 16, obj_CH_leaf);
         instance_create(x + 16, y + 40, obj_CH_leaf);
         instance_create(x - 16, y + 40, obj_CH_leaf);
-        instance_create(x, y + 48, obj_CH_leaf); 
+        instance_create(x, y + 48, obj_CH_leaf);
     case 9:
-        leaves = 1;
+        leaves = 4;
         c = 0;
-        alarm[4] = 2 * room_speed;
+        
     break;
 }
 
 c += 1;
-

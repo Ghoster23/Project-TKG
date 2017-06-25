@@ -1,3 +1,5 @@
+depth = -y;
+
 if global.st_stuck == true{
     if image_index >= 4 and image_speed > 0{
         image_speed = 0;
@@ -33,7 +35,7 @@ if global.st_stuck == true{
     
     global.stuck = false;
     global.stuck_d = 0;
-
+	
     
 }
 
