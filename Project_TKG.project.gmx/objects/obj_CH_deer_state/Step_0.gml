@@ -81,7 +81,7 @@ switch(state){
             
         }
         
-        pat = "aa";
+        pat = "a";
         
         instance_create(x,y,obj_CH_leaf);
         

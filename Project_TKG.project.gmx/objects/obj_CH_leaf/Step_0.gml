@@ -1,6 +1,4 @@
 depth = -y;
-p_x = obj_body.x;
-p_y = obj_body.y;
 
 if(go == true){
 switch(pattern){
@@ -31,7 +29,7 @@ switch(pattern){
             once = true;
         }
         
-        i_dir = point_direction(x,y,p_x*10,p_y*10);
+        i_dir = point_direction(x,y,obj_body.x,obj_body.y);
         
         hspd = lengthdir_x(6,i_dir);
         vspd = lengthdir_y(6,i_dir);
