@@ -62,7 +62,7 @@ phy_position_y += vspd;
 
 //Damage the player
 if(place_meeting(x,y,obj_body) and global.invuln == false and global.p_inv == false){
-    global.p_hp -= 1;
+    global.p_hp -= global.b_satk div global.p_sdef;
 	global.p_inv = true;
     instance_destroy();
 }

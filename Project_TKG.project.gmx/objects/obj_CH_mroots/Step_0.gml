@@ -26,7 +26,7 @@ switch state{
 		}
 		
 		if place_meeting(x,y,obj_body) and global.p_inv == false and global.invuln == false{
-			global.p_hp -= 3 div global.p_def;
+			global.p_hp -= global.b_atk div global.p_def;
 			global.p_inv = true;
 		}
 	break;

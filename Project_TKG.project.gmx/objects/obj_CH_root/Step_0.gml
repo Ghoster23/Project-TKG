@@ -70,7 +70,7 @@ switch	state{
 		}
 		
 		if jab == true and place_meeting(x,y,obj_body){
-			global.p_hp -= 3;
+			global.p_hp -= global.b_atk div global.p_def;
 			visible = true;
 			global.p_inv = true;
 			

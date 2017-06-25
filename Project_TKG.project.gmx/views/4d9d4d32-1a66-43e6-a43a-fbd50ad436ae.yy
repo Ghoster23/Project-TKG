@@ -19,7 +19,8 @@
         "95dc6e17-620a-476c-a79a-16e047a4648b",
         "5945fbc9-b5f9-4ced-8ff0-3584267f6c2d",
         "26e26276-53d1-44cd-8e88-5ff85e7b2a7d",
-        "a14b5605-7158-4f8a-84ed-1d64d2316e1d"
+        "a14b5605-7158-4f8a-84ed-1d64d2316e1d",
+        "02f7f82d-b64c-44f3-b060-5ebdcdb38cc6"
     ],
     "filterType": "GMSprite",
     "folderName": "CH",

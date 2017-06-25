@@ -9,5 +9,5 @@ f_y = creator.f_y;
 
 instance_create(f_x,f_y,obj_CH_deer_brocks);
 
-hp = irandom_range(50,100);
+hp = 400;
 

@@ -1,0 +1,36 @@
+{
+    "id": "98c895e1-df99-4228-9e8d-166ea6d30275",
+    "modelName": "GMObject",
+    "mvc": "1.0",
+    "name": "obj_CH_deer_brock_crater",
+    "eventList": [
+        {
+            "id": "d6a2b901-f60b-4e05-b60a-be5f9c02493c",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "98c895e1-df99-4228-9e8d-166ea6d30275"
+        }
+    ],
+    "maskSpriteId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "persistent": false,
+    "physicsAngularDamping": 0.1,
+    "physicsDensity": 0.5,
+    "physicsFriction": 0.2,
+    "physicsGroup": 0,
+    "physicsKinematic": false,
+    "physicsLinearDamping": 0.1,
+    "physicsObject": false,
+    "physicsRestitution": 0.1,
+    "physicsSensor": false,
+    "physicsShape": 1,
+    "physicsShapePoints": null,
+    "physicsStartAwake": true,
+    "solid": false,
+    "spriteId": "5945fbc9-b5f9-4ced-8ff0-3584267f6c2d",
+    "visible": true
+}

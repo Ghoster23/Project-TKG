@@ -36,7 +36,7 @@ switch(state){
             y_e = obj_body.y + 60;
             
             instance_create(x,y-500,obj_fln_rock);
-            
+            sprite_index = spr_CH_deer_state_hurt;
         }
         
         ///Blocking Rocks
@@ -51,6 +51,7 @@ switch(state){
             f_y = 330;
             instance_create(144,30,obj_CH_deer_brock);
             once = true;
+			sprite_index = spr_CH_deer_state;
         }
         
     break;

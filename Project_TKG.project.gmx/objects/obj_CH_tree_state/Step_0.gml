@@ -33,6 +33,16 @@ if start == true{
         
         if(image_index >= 15){
             instance_create(x,y,obj_CH_deer_state);
+			while instance_exists(obj_CH_rcone){
+                with obj_CH_rcone{
+                    instance_destroy();
+                }
+            }
+			while instance_exists(obj_CH_rcones){
+                with obj_CH_rcones{
+                    instance_destroy();
+                }
+            }
             while instance_exists(obj_CH_root){
                 with obj_CH_root{
                     instance_destroy();

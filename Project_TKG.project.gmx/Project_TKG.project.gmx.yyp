@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "02f7f82d-b64c-44f3-b060-5ebdcdb38cc6",
+            "Value": {
+                "id": "314cf0ad-bdd4-40c6-a2b4-b2c0fb412fa5",
+                "resourcePath": "sprites\\spr_CH_deer_state_hurt\\spr_CH_deer_state_hurt.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "036f29d3-ebfc-415d-b908-b491762debed",
             "Value": {
                 "id": "ba6df397-22bc-444b-abff-e6abd8403216",
@@ -1988,6 +1996,14 @@
                 "id": "5f3d177c-54ea-4f84-a668-b365d42ec453",
                 "resourcePath": "sprites\\spr_CH_root_jab\\spr_CH_root_jab.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "98c895e1-df99-4228-9e8d-166ea6d30275",
+            "Value": {
+                "id": "c57509f9-68d9-45f5-8c4f-3c2136d43219",
+                "resourcePath": "objects\\obj_CH_deer_brock_crater\\obj_CH_deer_brock_crater.yy",
+                "resourceType": "GMObject"
             }
         },
         {
