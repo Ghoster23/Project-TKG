@@ -1,0 +1,1 @@
+part_particles_create(global.ps, x, y, global.pt_CHdirt, 3);

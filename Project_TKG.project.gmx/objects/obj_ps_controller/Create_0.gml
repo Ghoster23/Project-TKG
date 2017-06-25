@@ -15,6 +15,7 @@ step_number = 0;
 global.ps=part_system_create();
 scr_part_fire_init();
 scr_part_smoke_init();
+scr_part_CHdirt_init();
 scr_part_cbits_init();
 scr_part_vbits_init();    
 scr_part_sflame_init();
