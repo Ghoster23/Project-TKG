@@ -2103,6 +2103,14 @@
             }
         },
         {
+            "Key": "a14b5605-7158-4f8a-84ed-1d64d2316e1d",
+            "Value": {
+                "id": "57e78aba-5cda-4219-b605-705f6fc9850e",
+                "resourcePath": "sprites\\spr_CH_groots_front\\spr_CH_groots_front.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a3ad5926-46f7-4dc4-8b7f-3b1101528e26",
             "Value": {
                 "id": "3be79c37-a29c-4e8a-8ab0-b0ec743400ce",
