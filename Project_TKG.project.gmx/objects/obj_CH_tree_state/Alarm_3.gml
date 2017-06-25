@@ -59,7 +59,7 @@ switch c{
     case 9:
         leaves = 4;
         c = 0;
-        
+        alarm[4] = 2 * room_speed;
     break;
 }
 

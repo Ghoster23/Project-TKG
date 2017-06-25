@@ -535,6 +535,14 @@
             }
         },
         {
+            "Key": "26e26276-53d1-44cd-8e88-5ff85e7b2a7d",
+            "Value": {
+                "id": "a44f40dd-8c45-4ebd-9fb1-dca1b1af67f8",
+                "resourcePath": "sprites\\spr_CH_groots\\spr_CH_groots.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "276f39ac-9aa2-42e0-b32e-41eb25a9e708",
             "Value": {
                 "id": "07916b3d-23d1-4763-8b7b-74e1da692ca9",

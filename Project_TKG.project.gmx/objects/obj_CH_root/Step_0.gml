@@ -69,6 +69,13 @@ switch	state{
 			jab = true;
 		}
 		
+		if jab == true and place_meeting(x,y,obj_body){
+			global.p_hp -= 3;
+			visible = true;
+			global.p_inv = true;
+			
+		}
+		
 		if image_index >= 17 and sprite_index != spr_CH_root_idle{
 			sprite_index = spr_CH_root_idle;
 			image_speed = 1;

@@ -98,7 +98,7 @@ switch(state){
             }
 			
         }else if leaves == 4{
-			state = 4;
+			//Wait
 			
 		}
         

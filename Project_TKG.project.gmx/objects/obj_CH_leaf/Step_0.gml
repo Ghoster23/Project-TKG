@@ -49,8 +49,9 @@ phy_position_x += hspd;
 phy_position_y += vspd;
 
 //Damage the player
-if(place_meeting(x,y,obj_body) and global.invuln == false){
+if(place_meeting(x,y,obj_body) and global.invuln == false and global.p_inv == false){
     global.p_hp -= 1;
+	global.p_inv = true;
     instance_destroy();
 }
 
