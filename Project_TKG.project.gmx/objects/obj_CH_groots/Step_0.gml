@@ -1,12 +1,17 @@
 depth = -y;
 
+if image_index >= 2 and image_speed > 0 and global.st_stuck == false{
+    image_speed = 0;
+	image_index = 3;
+	
+	global.st_stuck = true;
+	global.st_stuck_d = 1.5 * room_speed;
+	draw_sprite(spr_CH_groots_front,0,x,y);
+}
+
 if global.st_stuck == true{
-    if image_index >= 3 and image_speed > 0{
-        image_speed = 0;
-		image_index = 4;
-        
-    }
-    
+    draw_sprite(spr_CH_groots_front,0,x,y);
+	
     if pain == false{
         pain = true;
         alarm[0] = 0.4 * room_speed;
@@ -34,10 +39,7 @@ if global.st_stuck == true{
         
     }   
     
-    global.stuck = false;
     global.stuck_d = 0;
-	
-    
 }
 
 if(mouse_check_button_released(mb_left)){
