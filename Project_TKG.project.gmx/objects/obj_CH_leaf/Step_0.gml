@@ -5,6 +5,7 @@ switch(pattern){
     case "f":
         hspd = lengthdir_x(4,s_x);
         vspd = lengthdir_y(4,s_x);
+		phy_rotation = -(s_x+90);
     break;
     case "a":
         if(once == false){
@@ -20,17 +21,20 @@ switch(pattern){
         
         hspd = lengthdir_x(6,i_dir);
         vspd = lengthdir_y(6,i_dir);
+		phy_rotation = -(i_dir+90);
     break;
     case "c":
         i_dir = irandom_range(180,360);
         
         hspd = lengthdir_x(6,i_dir);
         vspd = lengthdir_y(6,i_dir);
+		phy_rotation = -(i_dir+90);
     break;
     case "w":
         
         hspd = lengthdir_x(6,tree_dir);
         vspd = lengthdir_y(6,tree_dir);
+		phy_rotation = -(tree_dir+90);
     break;
 }
 
