@@ -17,12 +17,14 @@ y = phy_position_y;
 phy_position_x = i_x;
 phy_position_y = i_y;
 
+if global.b_hp <= 0{
+	state = 5;
+}
+
 ///Action state based changes
 switch(state){
     //Rock state
     case 0:
-        ///Stomp animation
-        
         ///Screen shake
         
         ///Falling Rocks
@@ -79,7 +81,7 @@ switch(state){
             
         }
         
-        pat = "a";
+        pat = "aa";
         
         instance_create(x,y,obj_CH_leaf);
         
@@ -88,17 +90,14 @@ switch(state){
     //Root State
     case 3:
         ///Follower roots
-        if(alarm[3] == 0){
-            alarm[3] = 10 * room_speed;
-            
-        }
-        
+        alarm[3] = 10 * room_speed;
         instance_create(x,y+32,obj_CH_mroots);
-        
+        state = 4;
     break;
-    
-    //Defeat State
     case 4:
+	break;
+    //Defeat State
+    case 5:
         ///Death animation
         sprite_index = spr_CH_deer_death;
         image_speed = 2;

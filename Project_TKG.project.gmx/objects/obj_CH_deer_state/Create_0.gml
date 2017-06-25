@@ -1,4 +1,5 @@
 state = 0;
+alarm[0] = 15 * room_speed;
 image_speed = 0;
 once = false;
 depth = -y;
@@ -7,8 +8,6 @@ i_y = y;
 
 phy_fixed_rotation = true;
 inv = false;
-
-alarm[0] = 15 * room_speed;
 
 global.b_mhp = 60;
 global.b_hp = 60;

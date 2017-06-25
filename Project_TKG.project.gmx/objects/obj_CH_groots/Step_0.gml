@@ -11,12 +11,6 @@ if image_index >= 2 and image_speed > 0 and global.st_stuck == false{
 
 if global.st_stuck == true{
     draw_sprite(spr_CH_groots_front,0,x,y);
-	
-    if pain == false{
-        pain = true;
-        alarm[0] = 0.4 * room_speed;
-        
-    }
     
     if image_index == 0 and image_speed < 0{
         obj_CH_tree_state.bene = false;
@@ -45,6 +39,6 @@ if global.st_stuck == true{
 if(mouse_check_button_released(mb_left)){
     alarm[1] = 1 * room_speed;
 
-    image_speed = -0.2;
+    image_speed = -0.3;
 }
 

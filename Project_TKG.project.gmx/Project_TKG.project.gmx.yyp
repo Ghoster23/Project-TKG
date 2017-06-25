@@ -2951,6 +2951,14 @@
             }
         },
         {
+            "Key": "e6345a0d-563e-4a6e-bb9e-7d2874344392",
+            "Value": {
+                "id": "875a7274-ef6b-44b8-97bd-b85cfa9e6bcf",
+                "resourcePath": "objects\\obj_CH_mroots\\obj_CH_mroots.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e6ab33f9-44e6-4118-89f9-0a1b06ba0d05",
             "Value": {
                 "id": "7914812f-c70a-41cf-b321-a99d585a4278",

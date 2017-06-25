@@ -1,4 +1,6 @@
 depth = -y;
+p_x = obj_body.x;
+p_y = obj_body.y;
 
 if(go == true){
 switch(pattern){
@@ -18,6 +20,18 @@ switch(pattern){
         }else {
             i_dir = irandom(360);
         }
+        
+        hspd = lengthdir_x(6,i_dir);
+        vspd = lengthdir_y(6,i_dir);
+		phy_rotation = -(i_dir+90);
+    break;
+	case "aa":
+        if(once == false){
+            alarm[0] = 5 * room_speed;
+            once = true;
+        }
+        
+        i_dir = point_direction(x,y,p_x*10,p_y*10);
         
         hspd = lengthdir_x(6,i_dir);
         vspd = lengthdir_y(6,i_dir);
