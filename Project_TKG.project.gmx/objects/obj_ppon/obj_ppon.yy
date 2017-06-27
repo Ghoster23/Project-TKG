@@ -5,7 +5,7 @@
     "name": "obj_ppon",
     "eventList": [
         {
-            "id": "b40114e6-f2f8-4141-8083-add59109deb9",
+            "id": "a914619c-4af2-48fe-ba28-f8513da21ca0",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

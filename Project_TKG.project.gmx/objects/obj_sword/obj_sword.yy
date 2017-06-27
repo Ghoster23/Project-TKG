@@ -5,7 +5,7 @@
     "name": "obj_sword",
     "eventList": [
         {
-            "id": "7bce3fb8-07e1-4123-b1a0-16b3b0ad31d7",
+            "id": "f628e2cf-3eb5-4c1d-a127-29690ad767df",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "6e7c7d71-cb88-4ee4-bb8b-e2d1d785ee52"
         },
         {
-            "id": "0976e41a-f961-4d7e-bbce-a04cefdbd170",
+            "id": "bc68d5eb-dc17-46f9-961f-7e444d60956c",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -25,7 +25,7 @@
             "m_owner": "6e7c7d71-cb88-4ee4-bb8b-e2d1d785ee52"
         },
         {
-            "id": "ebf183ce-eec6-4358-b4c7-71afff1bc3ef",
+            "id": "777d4801-f028-4584-9afb-722efaaace21",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -35,7 +35,7 @@
             "m_owner": "6e7c7d71-cb88-4ee4-bb8b-e2d1d785ee52"
         },
         {
-            "id": "9c1dfbce-70e7-47b0-ad70-75f0766f7d3b",
+            "id": "73a4f53d-f1c3-4892-984a-b9a2a5cb7f1a",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -46,7 +46,7 @@
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "71021b35-953e-4f32-9148-badf83fc1fcf",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -60,14 +60,14 @@
     "physicsShape": 0,
     "physicsShapePoints": [
         {
-            "id": "00589f5e-fe95-490c-8287-93c53cc2829a",
+            "id": "b0ad675d-873c-4152-b772-aa00ef864a62",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 32,
             "y": 32
         },
         {
-            "id": "a2a4418a-dec5-4520-94d0-007125caae31",
+            "id": "1808c1c0-1346-46c4-a15c-b65713d1574b",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 32,

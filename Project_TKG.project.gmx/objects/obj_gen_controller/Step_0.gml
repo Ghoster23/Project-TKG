@@ -87,13 +87,13 @@ while roomgenerated != roomstogenerate{
             gy = global.roomhg * r;
             
             ///Base Room
-            instance_create(gx+global.roomwd/2+64,gy+32,obj_torch);
-            instance_create(gx+global.roomwd/2-96,gy+32,obj_torch);
-            instance_create(gx,gy,obj_wall_left);
-            instance_create(gx,gy,obj_wall_up);
-            instance_create(gx,gy+global.roomhg-32,obj_wall_down);
-            instance_create(gx+global.roomwd-32,gy,obj_wall_right);
-            instance_create(gx+(global.roomwd/2),gy+(global.roomhg/2)+31,obj_floor);
+            instance_create_layer(gx+global.roomwd/2+64,gy+32,"Instances",obj_torch);
+            instance_create_layer(gx+global.roomwd/2-96,gy+32,"Instances",obj_torch);
+            instance_create_layer(gx,gy,"Instances",obj_wall_left);
+            instance_create_layer(gx,gy,"Instances",obj_wall_up);
+            instance_create_layer(gx,gy+global.roomhg-32,"Instances",obj_wall_down);
+            instance_create_layer(gx+global.roomwd-32,gy,"Instances",obj_wall_right);
+            instance_create_layer(gx+(global.roomwd/2),gy+(global.roomhg/2)+31,"Instances",obj_floor);
             
             ///Fill the room
             scr_roomgn(typeroom);
@@ -102,26 +102,26 @@ while roomgenerated != roomstogenerate{
             ///Doors
             if up{
                 if(!instance_position((gx+(global.roomwd/2)),(gy-32),obj_door_d)){
-                    instance_create(gx+(global.roomwd/2),(gy-32),obj_door_d);
-                    instance_create(gx+(global.roomwd/2),gy+((32*1.5)+11),obj_door_u); 
+                    instance_create_layer(gx+(global.roomwd/2),(gy-32),"Instances",obj_door_d);
+                    instance_create_layer(gx+(global.roomwd/2),gy+((32*1.5)+11),"Instances",obj_door_u); 
                 }
             } 
             if left{
                 if(!instance_position((gx-33),(gy+(global.roomwd/2)),obj_door_l)){
-                    instance_create(gx-34,gy+(global.roomhg/2),obj_door_l);
-                    instance_create(gx+33,gy+(global.roomhg/2),obj_door_r);
+                    instance_create_layer(gx-34,gy+(global.roomhg/2),"Instances",obj_door_l);
+                    instance_create_layer(gx+33,gy+(global.roomhg/2),"Instances",obj_door_r);
                 }
             } 
             if down{
                 if(!instance_position(gx+(global.roomwd/2),(gy+global.roomhg-32),obj_door_d)){
-                    instance_create(gx+(global.roomwd/2),(gy+global.roomhg-32),obj_door_d);
-                    instance_create(gx+(global.roomwd/2),gy+global.roomhg+((32*1.5)+11),obj_door_u); 
+                    instance_create_layer(gx+(global.roomwd/2),(gy+global.roomhg-32),"Instances",obj_door_d);
+                    instance_create_layer(gx+(global.roomwd/2),gy+global.roomhg+((32*1.5)+11),"Instances",obj_door_u); 
                 }
             } 
             if right{
                 if(!instance_position((gx+global.roomwd+16),(gy+(global.roomhg/2)),obj_door_r)){
-                    instance_create((gx+global.roomwd-34),(gy+(global.roomhg/2)),obj_door_l);
-                    instance_create((gx+global.roomwd+33),(gy+(global.roomhg/2)),obj_door_r); 
+                    instance_create_layer((gx+global.roomwd-34),(gy+(global.roomhg/2)),"Instances",obj_door_l);
+                    instance_create_layer((gx+global.roomwd+33),(gy+(global.roomhg/2)),"Instances",obj_door_r); 
                 }
             } 
             

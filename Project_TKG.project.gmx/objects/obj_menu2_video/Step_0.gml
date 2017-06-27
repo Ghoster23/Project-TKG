@@ -17,7 +17,7 @@ if global.menu2_state =0 {
 }
 else if global.menu2_state==1 {
    instance_destroy();
-   instance_create(0,0,obj_menu2_state1);
+   instance_create_layer(0,0,layer,obj_menu2_state1);
 }
 else if global.menu2_state ==2||3 {
    instance_destroy();

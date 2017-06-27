@@ -5,7 +5,7 @@
     "name": "obj_menu2_swords",
     "eventList": [
         {
-            "id": "ec1d7ec2-67fa-45f0-99bf-733f2e5d5c6c",
+            "id": "55b268de-c2ad-4041-88e1-f815eb5073ec",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "e6ede86f-8311-46a9-a3a1-c2954eb8a6c7"
         },
         {
-            "id": "472ce05b-7900-468e-b79d-cb7096dc0a77",
+            "id": "f2fa1d45-6bd1-4913-9608-8bb065c27404",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

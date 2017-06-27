@@ -5,7 +5,7 @@
     "name": "obj_creep",
     "eventList": [
         {
-            "id": "9ee0ec31-fa20-48b3-b5a6-6418be8f3b1a",
+            "id": "c843e258-b11f-4670-bfbb-ba0a73215231",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "eba7ee80-f67d-4652-9cc2-f9a129f49a1c"
         },
         {
-            "id": "765a6032-524b-4081-b4d7-bf6e89e667d6",
+            "id": "6d189b78-9096-4941-83da-0bbf8c2c1c86",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -25,7 +25,7 @@
             "m_owner": "eba7ee80-f67d-4652-9cc2-f9a129f49a1c"
         },
         {
-            "id": "c55e0c25-50c9-4587-8a18-42f2c244509e",
+            "id": "8611304f-290f-4482-9eea-089992171a2c",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -35,7 +35,7 @@
             "m_owner": "eba7ee80-f67d-4652-9cc2-f9a129f49a1c"
         },
         {
-            "id": "ebb1b308-277e-4c38-9c06-cc7f81ed043a",
+            "id": "2e8162b0-fc91-4d55-92ee-6a8ae95d7f46",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

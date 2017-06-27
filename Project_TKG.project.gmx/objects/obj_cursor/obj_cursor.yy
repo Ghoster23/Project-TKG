@@ -5,7 +5,7 @@
     "name": "obj_cursor",
     "eventList": [
         {
-            "id": "034b9164-d667-4f2e-b5d5-786eabeb20bb",
+            "id": "17f36181-dedc-4471-8ca0-5aec1dde5a5b",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

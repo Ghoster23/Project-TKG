@@ -1,5 +1,5 @@
 randomize();
-depth = -y;
+
 
 if(place_meeting(x,y,obj_ppon)) and visible == false{
     visible = true;
@@ -114,6 +114,6 @@ if go{
     ///Creep
     signal_x = signal[irandom(1)];
     signal_y = signal[irandom(1)];
-    instance_create(x+random(5)*signal_x,y+random(5)*signal_y,obj_creep);
+    instance_create_layer(x+random(5)*signal_x,y+random(5)*signal_y,layer,obj_creep);
 }
 

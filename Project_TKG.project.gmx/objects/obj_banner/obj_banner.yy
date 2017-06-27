@@ -5,7 +5,7 @@
     "name": "obj_banner",
     "eventList": [
         {
-            "id": "aeb84fbd-a92d-4d31-a216-156f98a1fad8",
+            "id": "f4f8bdd9-c217-4c0d-8c96-01d5231b5109",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "282fe1ce-6335-47fe-827e-8ac151b161fb"
         },
         {
-            "id": "96ddfe92-1a25-4d27-914a-df6eb0867452",
+            "id": "13081f5c-6fc8-4567-b982-f48701636ea5",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -25,7 +25,7 @@
             "m_owner": "282fe1ce-6335-47fe-827e-8ac151b161fb"
         },
         {
-            "id": "4049920b-7a75-4211-be8a-6f023233e73e",
+            "id": "2df167d7-076d-4ab3-96ee-8ea9c2fa72ec",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

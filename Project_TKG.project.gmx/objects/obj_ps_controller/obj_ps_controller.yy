@@ -5,7 +5,7 @@
     "name": "obj_ps_controller",
     "eventList": [
         {
-            "id": "6029895d-18d1-42aa-8532-083b031267c5",
+            "id": "3a2b89c5-672b-45ee-a7a4-b9979b26d46a",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "e2927d17-3d47-4b71-b038-cf79208e7186"
         },
         {
-            "id": "91403618-6bc1-4c37-a89a-d492b3e0e0b6",
+            "id": "ab18488e-d42d-4ec3-8fdb-44732fd814b9",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -25,7 +25,7 @@
             "m_owner": "e2927d17-3d47-4b71-b038-cf79208e7186"
         },
         {
-            "id": "ff28bcf7-678a-4622-968b-6e6b2345c7cd",
+            "id": "7e36953c-f989-4feb-8497-fe06dff203eb",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -35,7 +35,7 @@
             "m_owner": "e2927d17-3d47-4b71-b038-cf79208e7186"
         },
         {
-            "id": "dfd7f7cb-587a-41fb-a825-b5425f56683a",
+            "id": "3f8cf321-5ec8-4b35-bfff-afe2a499f948",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -45,7 +45,7 @@
             "m_owner": "e2927d17-3d47-4b71-b038-cf79208e7186"
         },
         {
-            "id": "8539f329-5c7c-46a7-b42a-8791c2570744",
+            "id": "119cc1b0-0e1a-435d-a7ff-b73f0526c286",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -55,7 +55,7 @@
             "m_owner": "e2927d17-3d47-4b71-b038-cf79208e7186"
         },
         {
-            "id": "3860bb78-cc6c-4384-ba42-411898aa629f",
+            "id": "a2493753-2d5f-471a-9d00-811b0464423b",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -65,7 +65,7 @@
             "m_owner": "e2927d17-3d47-4b71-b038-cf79208e7186"
         },
         {
-            "id": "d6002a30-3958-43d8-ae87-f378310dbb08",
+            "id": "2f2fee66-138f-43f3-b05a-12b154f7ba24",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

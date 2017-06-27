@@ -1,6 +1,3 @@
-depth=obj_body.depth-12;
-
-
 if obj_body.hspd > 0 {
     sprite_index = global.char_bsprs[global.char,6];
     image_xscale = 1;

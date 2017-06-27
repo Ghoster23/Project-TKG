@@ -2,8 +2,6 @@ if body.state == 3{
     instance_destroy();
 }
 
-depth = body.depth - 2;
-
 image_index = opt;
 
 image_blend = body.image_blend;

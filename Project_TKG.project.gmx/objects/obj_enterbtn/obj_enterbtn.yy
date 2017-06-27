@@ -5,7 +5,7 @@
     "name": "obj_enterbtn",
     "eventList": [
         {
-            "id": "c20591c2-7cb3-45da-a5ee-369627564bd6",
+            "id": "b1f8cbf5-0cca-49d3-851c-5ad91de8ba07",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "71672b76-3874-477a-98ec-a118cecbed38"
         },
         {
-            "id": "0e053e02-4e59-46e7-85e4-c71be3766ae3",
+            "id": "32e1db2b-696a-414d-8680-f0df28d5fe68",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -25,7 +25,7 @@
             "m_owner": "71672b76-3874-477a-98ec-a118cecbed38"
         },
         {
-            "id": "2a186655-c19d-404c-a80e-a96d6691789e",
+            "id": "2166621c-c9f7-4ca8-a9e7-12679c5a5ad3",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -35,7 +35,7 @@
             "m_owner": "71672b76-3874-477a-98ec-a118cecbed38"
         },
         {
-            "id": "547899f5-ee7c-4814-ae57-454bcd5db515",
+            "id": "814e895a-bef4-4164-959e-57bb60cf8fbc",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

@@ -5,7 +5,7 @@
     "name": "obj_slm_cr",
     "eventList": [
         {
-            "id": "d0e0eeef-8694-4316-bbd0-6783e46adc25",
+            "id": "a83992d9-d5b2-465c-88d6-8b81aea51814",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "bf763afa-03fa-4d94-aaca-e35b721671ab"
         },
         {
-            "id": "784fb6fe-a874-4ac1-a119-6f1a0462ae9c",
+            "id": "b550d1ac-3e25-403d-b2a1-c8070e02743c",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -25,7 +25,7 @@
             "m_owner": "bf763afa-03fa-4d94-aaca-e35b721671ab"
         },
         {
-            "id": "2370fa8b-8dec-45b2-9d18-4ed39efd426c",
+            "id": "b49630c9-40a9-483b-aa83-ed84c65c0aed",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -35,7 +35,7 @@
             "m_owner": "bf763afa-03fa-4d94-aaca-e35b721671ab"
         },
         {
-            "id": "10a1409a-4162-404a-856c-d38d75d7023b",
+            "id": "e0af497f-1942-40f9-a6f2-e0d3f09a7be5",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -45,7 +45,7 @@
             "m_owner": "bf763afa-03fa-4d94-aaca-e35b721671ab"
         },
         {
-            "id": "23d2b810-99eb-4877-86fe-e95fb144314f",
+            "id": "f98d5d1a-e691-41b3-a8ba-83345ed67c57",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -55,7 +55,7 @@
             "m_owner": "bf763afa-03fa-4d94-aaca-e35b721671ab"
         },
         {
-            "id": "a1fa4afb-067d-441f-96d6-4f0486a5474a",
+            "id": "1ece4b7f-2fca-409b-b151-27c8c4a88c9b",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -65,7 +65,7 @@
             "m_owner": "bf763afa-03fa-4d94-aaca-e35b721671ab"
         },
         {
-            "id": "7fcf8dcc-f5b2-4b66-ade6-1d1d80054875",
+            "id": "20c4a5d1-a2e0-4d25-bd71-0b78eccd0491",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -75,7 +75,7 @@
             "m_owner": "bf763afa-03fa-4d94-aaca-e35b721671ab"
         },
         {
-            "id": "202739cf-399a-4021-8c13-a1b918eceb02",
+            "id": "4707d0ad-35a1-4d67-877d-fb615c4c7e23",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -85,7 +85,7 @@
             "m_owner": "bf763afa-03fa-4d94-aaca-e35b721671ab"
         },
         {
-            "id": "7075b738-0537-4509-ac70-d0481de9cfa7",
+            "id": "5a0a8a78-0fa7-495e-9914-8ba06f2feb0f",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -95,7 +95,7 @@
             "m_owner": "bf763afa-03fa-4d94-aaca-e35b721671ab"
         },
         {
-            "id": "27fdc209-61b2-497e-8b8d-edec298bd464",
+            "id": "59354917-e88d-4bb8-8fde-6450b96fb73d",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -105,7 +105,7 @@
             "m_owner": "bf763afa-03fa-4d94-aaca-e35b721671ab"
         },
         {
-            "id": "e53e2b92-7b7d-42ee-ab3b-7bc8d9846c4c",
+            "id": "078d6282-f689-4709-857f-9a9c0796e1bb",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -115,7 +115,7 @@
             "m_owner": "bf763afa-03fa-4d94-aaca-e35b721671ab"
         },
         {
-            "id": "93b2eba4-5556-45cf-9435-0191dee63613",
+            "id": "0d196b6e-d46d-465e-bcef-c15fa0152e17",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -125,7 +125,7 @@
             "m_owner": "bf763afa-03fa-4d94-aaca-e35b721671ab"
         },
         {
-            "id": "06d4b75b-58b7-4801-b1d6-dd73d7c8ae78",
+            "id": "83d9dff6-94e9-4787-8895-873bf26c32c9",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -150,14 +150,14 @@
     "physicsShape": 0,
     "physicsShapePoints": [
         {
-            "id": "96421450-175a-4320-896e-fe3cff733a7f",
+            "id": "7250c065-e9d2-410a-9c9c-7d81b5d4d72c",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 22,
             "y": 28
         },
         {
-            "id": "d12bd961-b401-42a5-a019-9dcaf1546d0e",
+            "id": "e2a2db3c-0951-4a41-9f7d-a836831f8f04",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 14,

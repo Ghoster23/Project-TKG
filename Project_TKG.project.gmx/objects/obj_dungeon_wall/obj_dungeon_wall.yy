@@ -5,7 +5,7 @@
     "name": "obj_dungeon_wall",
     "eventList": [
         {
-            "id": "1922cba1-97f7-41c7-951f-2422e7811cc1",
+            "id": "e571857d-d883-4b9b-8e6d-445b4b1d9b2a",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

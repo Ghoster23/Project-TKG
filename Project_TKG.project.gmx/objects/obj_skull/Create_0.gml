@@ -2,7 +2,7 @@
 event_inherited();
 visible = true;
 solid = false;
-depth = -y;
+
 image_speed = 0;
 
 trigger = false;

@@ -1,8 +1,8 @@
 if(room == rm_level){    
-    __view_set( e__VW.HPort, 0, global.MonitorH );
-    __view_set( e__VW.WPort, 0, global.MonitorW );
+    view_set_hport( 0, global.MonitorH );
+    view_set_wport( 0, global.MonitorW );
 
-    __view_set( e__VW.WView, 0, global.roomwd );
-    __view_set( e__VW.HView, 0, global.roomhg );
+    view_set_xport( 0, global.roomwd );
+    view_set_yport( 0, global.roomhg );
 }
 

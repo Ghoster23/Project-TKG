@@ -5,7 +5,7 @@
     "name": "obj_blackout",
     "eventList": [
         {
-            "id": "73f12512-53ff-4ffa-9bf8-bdb02eb67ab9",
+            "id": "b958827e-d6ed-4457-89bd-31f375915b97",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "269f97e7-8bac-48a3-b166-afc6f1aa36d0"
         },
         {
-            "id": "49790c1a-f6ec-4508-b8af-5ef028f81c00",
+            "id": "84cfe0c2-3703-47ae-a243-a5b516b23921",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

@@ -5,7 +5,7 @@
     "name": "obj_menu2_slider1",
     "eventList": [
         {
-            "id": "cd128a0f-b8b8-4e98-9463-12e7d9373e15",
+            "id": "442c2c31-14c2-4fa3-8585-7a0df936ab78",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "b71d6b6a-ac9a-4ae6-aa5a-506f1f33e715"
         },
         {
-            "id": "9aed9c9c-7ba8-466c-8ebc-d61f9326cdc9",
+            "id": "a870b1d9-ff67-43e3-b995-615ddd2cc391",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -25,7 +25,7 @@
             "m_owner": "b71d6b6a-ac9a-4ae6-aa5a-506f1f33e715"
         },
         {
-            "id": "4a570d30-9ea8-43ca-b494-faec5a03a286",
+            "id": "d0d77f6a-fcf2-4146-ab87-19cf2ba8a39e",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

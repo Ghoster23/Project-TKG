@@ -1,9 +1,5 @@
-if instance_exists(obj_sword){
-    depth = obj_sword.depth
-}
-
 if image_index = 1{
-    instance_create(x,y,obj_kb);
+    instance_create_layer(x,y,layer,obj_kb);
 }
 
 if image_index = 3 {

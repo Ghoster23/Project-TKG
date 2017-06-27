@@ -15,7 +15,7 @@ if global.menu2_state = 0 {
     }
 }
 else if global.menu2_state =2 {
-    instance_create(0,0,obj_menu2_state2);
+    instance_create_layer(0,0,obj_menu2_audio.layer,obj_menu2_state2);
     instance_destroy();
 }
 else if global.menu2_state =1||3 {

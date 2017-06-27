@@ -1,5 +1,3 @@
-depth = -y - 64;
-
 if(place_meeting(x,y,obj_ppon)) and visible == false{
     visible = true;
     global.combat += 1;
@@ -125,10 +123,10 @@ if go{
         state = 3;
         alarm[5] = 5;
         if((irandom(99) + 1) <= 10){
-            instance_create(x,y,obj_hheart);
+            instance_create_layer(x,y,obj_bat.layer,obj_hheart);
                 
         }else if((irandom(99) + 1) == 1){
-            instance_create(x,y,obj_fheart);
+            instance_create_layer(x,y,obj_bat.layer,obj_fheart);
                 
         }
     }

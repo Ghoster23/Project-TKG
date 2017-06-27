@@ -1,5 +1,3 @@
-depth = -y-64;
-
 ///Exist
 if place_meeting(x,y,obj_ppon) and k == false{
     k = true;
@@ -52,10 +50,10 @@ if go == true{
             off_y = 0;
             
             if fl_dir == "card" and casting == false{
-                instance_create(x+24,y,obj_skull_fl);
+                instance_create_layer(x+24,y,obj_skull_n.layer,obj_skull_fl);
                 
             }else if fl_dir == "diag" and casting == false{
-                instance_create(x+20,y+20,obj_skull_fl);
+                instance_create_layer(x+20,y+20,obj_skull_n.layer,obj_skull_fl);
                 
             }
             
@@ -117,10 +115,10 @@ if go == true{
         global.combat -= 1;
         instance_destroy();
         if((irandom(99) + 1) <= 10){
-            instance_create(x,y,obj_hheart);
+            instance_create_layer(x,y,obj_skull_n.layer,obj_hheart);
                 
         }else if((irandom(99) + 1) == 1){
-            instance_create(x,y,obj_fheart);
+            instance_create_layer(x,y,obj_skull_n.layer,obj_fheart);
                 
         }
     }

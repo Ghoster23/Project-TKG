@@ -7,7 +7,6 @@ if place_meeting(x,y,obj_body) and global.st_poison == false and cr_cd == false{
 }
 
 a = alarm[0] / 100;
-depth = -y + 100;
 
 image_xscale = a;
 image_yscale = a;

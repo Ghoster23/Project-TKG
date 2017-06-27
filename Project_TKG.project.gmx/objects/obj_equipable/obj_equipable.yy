@@ -5,7 +5,7 @@
     "name": "obj_equipable",
     "eventList": [
         {
-            "id": "20a318b1-799b-49b7-b22f-db34341abaff",
+            "id": "cdfb6923-e350-4319-8f8a-84147b019666",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "0246befb-6681-4b13-887a-bb1dfb7a06d7"
         },
         {
-            "id": "50aa7764-16d2-463a-905d-9981e2c40b0f",
+            "id": "94e6d5d4-8fdf-4eaf-8a56-055ebb80cc9e",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -26,7 +26,7 @@
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "c22b2ab4-c395-47e5-8761-fe19903e269e",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

@@ -1,4 +1,3 @@
-depth = -y -418;
 go = true;
 
 if go == true{

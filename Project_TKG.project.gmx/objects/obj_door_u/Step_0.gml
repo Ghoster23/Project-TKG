@@ -3,7 +3,6 @@ tpx = 0;
 tpy = 0;
 roomwd = 544;
 roomhg = 416;
-depth = -y;
 
 if(place_meeting(x,y,obj_body) && !place_meeting(x,y,obj_ppon) && global.lock == false && global.d_cd == false){
     tpx = obj_body.x;
@@ -37,7 +36,7 @@ if(place_meeting(x,y,obj_body) && !place_meeting(x,y,obj_ppon) && global.lock ==
         instance_destroy();
     }
     
-   instance_create(tpx,tpy,obj_body);
+   instance_create_layer(tpx,tpy,layer,obj_body);
    
    global.d_cd = true;
    alarm[1] = 40;

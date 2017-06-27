@@ -5,7 +5,7 @@
     "name": "obj_roll",
     "eventList": [
         {
-            "id": "49aedae1-9351-4ec0-8098-0ce2644df59c",
+            "id": "e1734f77-82e7-4d1c-8196-cb6e547135dc",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "31b001b5-b659-44dc-8c29-b3e713610a4c"
         },
         {
-            "id": "b3f893c5-2987-4655-9989-20006b1de33d",
+            "id": "21ee43d1-cfad-42f1-81ce-f64242dc420b",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -25,7 +25,7 @@
             "m_owner": "31b001b5-b659-44dc-8c29-b3e713610a4c"
         },
         {
-            "id": "fb001ca5-1c60-4226-8241-0dc6a10ba22a",
+            "id": "8f76f175-7b29-4e38-9de5-d81ab2f8cf48",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -35,7 +35,7 @@
             "m_owner": "31b001b5-b659-44dc-8c29-b3e713610a4c"
         },
         {
-            "id": "30129770-f395-4ed1-8aaf-36fa7acc8c39",
+            "id": "dc6a7408-1da0-478a-9e97-bfd1db299cbd",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

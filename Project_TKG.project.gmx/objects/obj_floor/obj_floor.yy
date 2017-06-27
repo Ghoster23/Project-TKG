@@ -5,7 +5,7 @@
     "name": "obj_floor",
     "eventList": [
         {
-            "id": "967e30be-d8e9-4fbc-9af4-c8c6339274df",
+            "id": "59f72b1e-4a60-407a-bfc3-fb462bf6d107",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "995811fe-1388-4912-a04c-566a847bb0e7"
         },
         {
-            "id": "2393046f-ebef-4a1f-a27f-0d2918a89bd9",
+            "id": "7d72613b-7341-4eee-9e58-77d7090e91ba",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

@@ -1,6 +1,6 @@
 /// @description Inicialise the enemy
 event_inherited();
-instance_create(x,y,obj_psnt_arch_head);
+instance_create_layer(x,y,obj_psnt_arch_body.layer,obj_psnt_arch_head);
 image_speed=.4;
 solid = false;
 visible = false;
@@ -14,7 +14,7 @@ shoot = false;
 go = false;
 gender = instance_nearest(x,y,obj_psnt_arch_head).gender;
 opt = instance_nearest(x,y,obj_psnt_arch_head).opt;
-instance_create(x,y,obj_e_bow);
+instance_create_layer(x,y,obj_psnt_arch_body.layer,obj_e_bow);
 
 if gender == 0{
     sprite_index = spr_peasent_f_f;

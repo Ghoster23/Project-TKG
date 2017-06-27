@@ -5,7 +5,7 @@
     "name": "obj_sword_t",
     "eventList": [
         {
-            "id": "4274478e-96a7-4d3e-b680-254b770c3e1f",
+            "id": "07b8a2a3-491e-4b6b-9989-fe683fb33b7a",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "377cc7fd-3812-440d-ab59-5637c46a746d"
         },
         {
-            "id": "a2e1371b-2958-4c42-9c95-9be1f63cffb3",
+            "id": "3c210d6e-b557-44e3-aa9f-2553ec8a1599",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -25,7 +25,7 @@
             "m_owner": "377cc7fd-3812-440d-ab59-5637c46a746d"
         },
         {
-            "id": "8484e07a-fd71-492e-984c-362d3c2e384f",
+            "id": "2f76452c-dc73-4465-9ab8-4e1c47051221",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -35,7 +35,7 @@
             "m_owner": "377cc7fd-3812-440d-ab59-5637c46a746d"
         },
         {
-            "id": "8dfd6ce1-61f1-4803-a8f6-ab7007d3a0a0",
+            "id": "af68df79-5ba4-47e0-9404-f0e048bed9f6",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -60,14 +60,14 @@
     "physicsShape": 0,
     "physicsShapePoints": [
         {
-            "id": "c41621b9-c6e5-4fca-8350-dc94f7e147b2",
+            "id": "81e94c76-368c-48fe-b105-9604d9eb3f30",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 24,
             "y": 8
         },
         {
-            "id": "02f31e4c-d68c-441c-ac8d-09cbb9a2af2d",
+            "id": "4bea11b8-fec5-4089-ab22-ba80fb2c3e7a",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 18,

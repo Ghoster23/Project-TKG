@@ -3,8 +3,6 @@ if instance_exists(skull){
         go = true;
 }
 
-depth = -y -418;
-
 if go == true{
     //Get hspd and vspd
     hspd = lengthdir_x(5,dir);

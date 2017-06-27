@@ -5,7 +5,7 @@
     "name": "obj_menu2_state3",
     "eventList": [
         {
-            "id": "8fabd4ee-e98f-4660-ad17-8b67e140f3d3",
+            "id": "cda61ef4-0da6-4d9f-949f-73bfd6dc8339",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "612e2639-3517-4e5c-b1b7-2cf8515f76a6"
         },
         {
-            "id": "2ef012be-bdee-46f0-891f-ca287cd3243b",
+            "id": "dc00d69b-7867-4f10-b31f-70d3f90ccaf2",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -25,7 +25,7 @@
             "m_owner": "612e2639-3517-4e5c-b1b7-2cf8515f76a6"
         },
         {
-            "id": "b45a8f64-3604-4eb7-b25f-208d2c88aa54",
+            "id": "5248feb4-cbf7-44ec-8b30-6aeefd70b13a",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

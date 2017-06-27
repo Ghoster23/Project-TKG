@@ -5,7 +5,7 @@
     "name": "obj_menu2_video2",
     "eventList": [
         {
-            "id": "f1feac09-edde-4077-a4bb-d306d1c81558",
+            "id": "22a00b2b-5e17-43ab-9762-196dee04c0e3",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "9b39453a-2542-4f28-9d15-48b980a41262"
         },
         {
-            "id": "2e214054-cf5b-4cea-b1db-00c0ab503089",
+            "id": "6140b530-d6eb-4d78-9fce-86f3912e3c89",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

@@ -5,7 +5,7 @@
     "name": "obj_view",
     "eventList": [
         {
-            "id": "a573e6fe-e2a5-46d4-b8d6-d73f1dd87a57",
+            "id": "da64c259-15a7-4a5f-9c05-c8b72cadc4c0",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "c2b92cf6-721d-4c76-8ed3-3de10d92b01a"
         },
         {
-            "id": "b6596dff-d7c2-4a24-b2e0-138a446316cd",
+            "id": "5269a6f2-797d-46e1-bc22-ef6ec1638e6b",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -25,7 +25,7 @@
             "m_owner": "c2b92cf6-721d-4c76-8ed3-3de10d92b01a"
         },
         {
-            "id": "eb875074-900c-476b-b9c6-9f55b8e62a8e",
+            "id": "ffe6b80b-4230-4aa1-bef0-df073755bd81",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -35,7 +35,7 @@
             "m_owner": "c2b92cf6-721d-4c76-8ed3-3de10d92b01a"
         },
         {
-            "id": "29f4697a-87a9-4592-9f1e-fdc6cbadeaeb",
+            "id": "b5865ded-f1db-44ec-a1c3-40332c36ecf5",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

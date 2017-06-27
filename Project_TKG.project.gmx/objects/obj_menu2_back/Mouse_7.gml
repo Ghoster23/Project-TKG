@@ -7,7 +7,7 @@ if global.menu2_state = 0 && ultimate_back=false{
 } else if (global.menu2_state = 1 || global.menu2_state = 3) {
     if point_in_rectangle(mouse_x,mouse_y,279,271,370,293) {
         global.menu2_state = 0;
-        instance_create(0,0,obj_menu2_state0);
+        instance_create_layer(0,0,layer,obj_menu2_state0);
     }
 } else if global.menu2_state = 2 {
     if point_in_rectangle(mouse_x,mouse_y,279,271,370,293){   
@@ -22,7 +22,7 @@ if global.menu2_state = 0 && ultimate_back=false{
         file_text_close(file_l);
         
         global.menu2_state = 0;
-        instance_create(0,0,obj_menu2_state0);
+        instance_create_layer(0,0,layer,obj_menu2_state0);
     }
 }
 

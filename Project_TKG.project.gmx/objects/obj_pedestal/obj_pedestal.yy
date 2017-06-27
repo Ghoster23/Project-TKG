@@ -4,16 +4,7 @@
     "mvc": "1.0",
     "name": "obj_pedestal",
     "eventList": [
-        {
-            "id": "8e82d0c8-04fc-4c9c-999f-5dd6588ca3bb",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "6aaee583-7eaf-40cd-aaa6-417a0319d462"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "parentObjectId": "b8453c71-24f2-4852-a377-e9d9f6c7873d",
@@ -30,28 +21,28 @@
     "physicsShape": 1,
     "physicsShapePoints": [
         {
-            "id": "ba310f47-6122-445a-894b-a6bfc2782b10",
+            "id": "d4b3f6ed-4dab-4cf8-8214-41a3b80af80c",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 0,
             "y": 8
         },
         {
-            "id": "3b6a8f50-78e0-4bd6-b80b-2bf1031528b0",
+            "id": "3f0c7474-46c7-4015-a8a4-4fe3738e9afd",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 32,
             "y": 8
         },
         {
-            "id": "70d320c2-672a-4be3-b714-f089f02ca916",
+            "id": "050bb624-2cf8-49bd-9141-3216da9d9b57",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 32,
             "y": 32
         },
         {
-            "id": "1335f2db-e833-4bf2-8ae4-1b0f5f51c947",
+            "id": "8b9832a0-0b6a-4d5a-9648-081b4fd040e0",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 0,

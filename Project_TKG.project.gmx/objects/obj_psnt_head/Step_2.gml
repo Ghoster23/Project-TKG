@@ -49,7 +49,7 @@ switch body.d {
         }else {
             sprite_index = spr_peasent_h_f;
         }
-        depth = body.depth - 1;
+        
         break;
     case 3: //Down
         if gender == 0{
@@ -57,7 +57,7 @@ switch body.d {
         }else {
             sprite_index = spr_peasent_h_f;
         }
-        depth = body.depth - 1;
+        
         break;
     case 4: //Down and Right
         if gender == 0{
@@ -65,7 +65,7 @@ switch body.d {
         }else {
             sprite_index = spr_peasent_h_f;
         }
-        depth = body.depth - 1;
+        
         break;
 }
 }

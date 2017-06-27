@@ -5,7 +5,7 @@
     "name": "obj_menu2_state0",
     "eventList": [
         {
-            "id": "fb2b6770-07a1-45b9-95dd-8537970784d9",
+            "id": "02335e4d-1410-47d9-a3cb-0cd02fa48474",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "1376909f-3a90-44ab-a804-bdf0c6d172a0"
         },
         {
-            "id": "3a8e9b67-f444-43ad-898e-500a41d48f44",
+            "id": "5e9b0622-0bdc-48b4-b59a-4aaa51e4d5d6",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -25,7 +25,7 @@
             "m_owner": "1376909f-3a90-44ab-a804-bdf0c6d172a0"
         },
         {
-            "id": "f9c2564e-7fa4-46d7-a163-854b9aed78be",
+            "id": "5951ad0c-0d28-475d-b5cf-b6eb12c28e33",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -35,7 +35,7 @@
             "m_owner": "1376909f-3a90-44ab-a804-bdf0c6d172a0"
         },
         {
-            "id": "5d4a8e78-a89a-4791-9413-b98bf68822ca",
+            "id": "84618ee0-d306-4421-912e-9f53082f859a",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -45,7 +45,7 @@
             "m_owner": "1376909f-3a90-44ab-a804-bdf0c6d172a0"
         },
         {
-            "id": "8a4e6c62-6de2-4dc1-a571-bc34145acec4",
+            "id": "025fb105-a46e-41aa-a9db-931cdeadf98d",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -55,7 +55,7 @@
             "m_owner": "1376909f-3a90-44ab-a804-bdf0c6d172a0"
         },
         {
-            "id": "8b7e6a34-fc12-4741-8ebd-0831f303b778",
+            "id": "a94064a4-64b3-4005-91a7-e986ca9c6262",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -65,7 +65,7 @@
             "m_owner": "1376909f-3a90-44ab-a804-bdf0c6d172a0"
         },
         {
-            "id": "cfce1ac9-1033-49e6-b661-50c8796035a8",
+            "id": "9926af04-a9a9-46af-9d1a-f450fd2413f4",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -75,7 +75,7 @@
             "m_owner": "1376909f-3a90-44ab-a804-bdf0c6d172a0"
         },
         {
-            "id": "b8050cbf-2956-45d8-a963-3e03a04868c1",
+            "id": "a56b920b-a71d-40e3-b800-701483cb17b6",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

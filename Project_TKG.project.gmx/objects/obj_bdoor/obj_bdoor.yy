@@ -5,7 +5,7 @@
     "name": "obj_bdoor",
     "eventList": [
         {
-            "id": "18096c4e-09fc-48c7-9b72-f3a2ed92112c",
+            "id": "abccf6ab-69f4-4692-ba83-e864d08ce6a2",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "5112009d-3d33-41c8-95bb-4d404f935020"
         },
         {
-            "id": "b4c68ee5-b8bf-4ca2-94a8-421264b01e99",
+            "id": "d9b4acc0-9639-4d57-9371-60d46298deac",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

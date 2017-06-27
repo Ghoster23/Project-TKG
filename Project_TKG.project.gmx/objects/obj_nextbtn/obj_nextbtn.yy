@@ -5,7 +5,7 @@
     "name": "obj_nextbtn",
     "eventList": [
         {
-            "id": "2f0c867c-abef-473a-84bb-b3611e3cd8e8",
+            "id": "d48c0909-b4a3-4e31-9736-0423372b8403",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "14ac5be8-e8b3-441e-a542-ced267baac4a"
         },
         {
-            "id": "28eec9ff-8a13-44df-9c15-57d186327656",
+            "id": "7800fc6d-699d-4a7f-b6c4-105333bf0029",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -25,7 +25,7 @@
             "m_owner": "14ac5be8-e8b3-441e-a542-ced267baac4a"
         },
         {
-            "id": "3a5ddc93-898c-4c42-b770-b33cc22623fb",
+            "id": "de75b69c-a79e-40f9-a69c-d6d0d092535f",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -35,7 +35,7 @@
             "m_owner": "14ac5be8-e8b3-441e-a542-ced267baac4a"
         },
         {
-            "id": "415eb84b-e286-4318-8acc-d06f92be770a",
+            "id": "8bfad388-757e-49d6-a7a6-6bc9a67d35ce",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

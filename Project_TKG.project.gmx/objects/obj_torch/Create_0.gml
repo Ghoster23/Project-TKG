@@ -1,4 +1,3 @@
-depth = -y;
 image_speed = 0;
 
 r = 0;
@@ -14,3 +13,4 @@ once = false;
 
 em = part_emitter_create(global.ps); 
 
+event_inherited();

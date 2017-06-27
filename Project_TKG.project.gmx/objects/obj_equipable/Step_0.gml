@@ -1,5 +1,4 @@
 scr_get_input();
-depth = -y -19;
 
 if(distance_to_object(obj_body) <= 5 && interact_key == true){
     instance_destroy();

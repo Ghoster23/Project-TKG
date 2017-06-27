@@ -5,7 +5,7 @@
     "name": "obj_psnt_head",
     "eventList": [
         {
-            "id": "89e868da-2b91-4491-bf42-3654797fe12b",
+            "id": "0c0897a1-4f78-4505-9657-f1698ffe74b9",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "210fe048-f811-481c-aa0d-ac7571dde87f"
         },
         {
-            "id": "5f909863-39e5-413d-b940-b994dcdd801f",
+            "id": "187e0113-ec7b-4dc7-92a3-9872d632c2ac",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -25,7 +25,7 @@
             "m_owner": "210fe048-f811-481c-aa0d-ac7571dde87f"
         },
         {
-            "id": "579d1b1e-1c9a-41a1-891d-c1de56c3396d",
+            "id": "349b5b0b-d61d-4e23-a54b-f2956e9fdabc",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -35,7 +35,7 @@
             "m_owner": "210fe048-f811-481c-aa0d-ac7571dde87f"
         },
         {
-            "id": "93ca75b4-7f01-4926-8f52-7334b0a81344",
+            "id": "e249c5d3-6eb1-4e95-966d-ab8be3e1b496",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -60,14 +60,14 @@
     "physicsShape": 0,
     "physicsShapePoints": [
         {
-            "id": "b6a3d52b-74e3-43de-ae4f-e6451f40dd10",
+            "id": "213f55c5-ebb3-4264-b13d-0c9b2adb5a3b",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 16,
             "y": 16
         },
         {
-            "id": "803dc319-91f0-4fac-89c5-010a52270463",
+            "id": "1866e413-3bb9-4b94-b0b0-4e369976bada",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 16,

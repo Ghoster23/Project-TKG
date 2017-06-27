@@ -5,7 +5,7 @@
     "name": "obj_bdesign",
     "eventList": [
         {
-            "id": "d164552d-1d1e-4441-93ea-434ad9ce7a36",
+            "id": "cd831d62-068c-44e6-9bc6-cde9e33b634b",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "50c9af3d-508f-4e66-a506-baa06ddd3222"
         },
         {
-            "id": "e2887720-bebb-4a48-8bc5-8b50ad6a857c",
+            "id": "f1c710d1-14f2-4afc-ad1e-968277d5922d",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

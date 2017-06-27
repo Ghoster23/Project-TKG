@@ -5,7 +5,7 @@
     "name": "obj_menu2_video",
     "eventList": [
         {
-            "id": "a9ed40c3-bdc8-41a8-bbb3-e135816e04ac",
+            "id": "e529996e-ad49-498d-a76e-702ee69644e7",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "9182bf83-542c-4572-8666-0e74e1a82c1b"
         },
         {
-            "id": "6eb40f49-d11c-45b0-b2ff-52d6c0441217",
+            "id": "4006d0f2-acb9-4a9e-afac-0eed3d944ee9",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -25,7 +25,7 @@
             "m_owner": "9182bf83-542c-4572-8666-0e74e1a82c1b"
         },
         {
-            "id": "f6f679e0-1511-4f71-901f-72839837d4c9",
+            "id": "d3f52e5b-d70b-4454-9909-9199d23f7098",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

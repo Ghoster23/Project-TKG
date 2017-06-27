@@ -20,21 +20,21 @@ right = false;
 left = false;
 
 ///Base Room
-instance_create(gx+global.roomwd/2+64,gy+32,obj_torch);
-instance_create(gx+global.roomwd/2-96,gy+32,obj_torch);
-instance_create(gx,gy,obj_wall_left);
-instance_create(gx,gy,obj_wall_up);
-instance_create(gx,gy+global.roomhg-32,obj_wall_down);
-instance_create(gx+global.roomwd-32,gy,obj_wall_right);
-instance_create(gx+global.roomwd/2,gy+global.roomhg/2+31,obj_floor);
+instance_create_layer(gx+global.roomwd/2+64,gy+32,"Instances",obj_torch);
+instance_create_layer(gx+global.roomwd/2-96,gy+32,"Instances",obj_torch);
+instance_create_layer(gx,gy,"Instances",obj_wall_left);
+instance_create_layer(gx,gy,"Instances",obj_wall_up);
+instance_create_layer(gx,gy+global.roomhg-32,"Instances",obj_wall_down);
+instance_create_layer(gx+global.roomwd-32,gy,"Instances",obj_wall_right);
+instance_create_layer(gx+global.roomwd/2,gy+global.roomhg/2+31,"Instances",obj_floor);
 
 global.l[4,4] = true
 
 //Player
-instance_create(gx+global.roomwd/2,gy+global.roomhg/2,obj_body);
+instance_create_layer(gx+global.roomwd/2,gy+global.roomhg/2,"Instances",obj_body);
 
 //View
-instance_create(room_width/2+global.roomwd/2,room_height/2+global.roomhg/2,obj_view);
+//instance_create_layer(room_width/2+global.roomwd/2,room_height/2+global.roomhg/2,layer,obj_view);
 
 //Room counts
 for(var i = 0; i < 8; i += 1;){

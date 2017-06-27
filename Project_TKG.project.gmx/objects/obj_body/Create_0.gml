@@ -1,6 +1,6 @@
-instance_create(x,y-3,obj_head);
+instance_create_layer(x,y-3,obj_body.layer,obj_head);
 
-instance_create(x,y,obj_sword);
+instance_create_layer(x,y,obj_body.layer,obj_sword);
 
 ///set a bunch of stuff
 event_inherited();

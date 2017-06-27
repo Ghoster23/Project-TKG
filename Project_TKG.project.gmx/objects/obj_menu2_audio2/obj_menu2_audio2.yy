@@ -5,7 +5,7 @@
     "name": "obj_menu2_audio2",
     "eventList": [
         {
-            "id": "b8c515d2-398e-466f-b2d8-ff95c4c7b696",
+            "id": "5981ac00-a93e-4817-90d0-4fafe95cc6d7",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "315ac541-cb94-4911-8387-505074c136e9"
         },
         {
-            "id": "542dfea3-fd8e-402b-a76c-57e0d10868c9",
+            "id": "ec78b3b7-d335-4d5f-aaa0-ea0eab870bcc",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

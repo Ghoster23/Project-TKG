@@ -5,7 +5,7 @@
     "name": "obj_stick",
     "eventList": [
         {
-            "id": "d334638a-ed19-4656-a0dc-f9fcf3c32e17",
+            "id": "fc3fffd8-12a2-4b42-9ec4-cc9f7bd6a3bf",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "f5b709bb-3964-41b0-bdb5-23e3f3404ac8"
         },
         {
-            "id": "2d54400b-4a6e-49d2-9478-a6ccab995c5b",
+            "id": "26ec8794-7e66-4a9b-a8ac-75dc93cc39c5",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -25,7 +25,7 @@
             "m_owner": "f5b709bb-3964-41b0-bdb5-23e3f3404ac8"
         },
         {
-            "id": "6afb7f87-c4f4-4735-a4b5-6e5b11c72eb2",
+            "id": "b4bc29f9-4a10-40fd-a65a-b20001c1d473",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -35,7 +35,7 @@
             "m_owner": "f5b709bb-3964-41b0-bdb5-23e3f3404ac8"
         },
         {
-            "id": "ea7574ab-f110-4ffa-b485-c01a909216e6",
+            "id": "bb05c0c8-e96a-489f-81e3-c1280c868773",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -60,14 +60,14 @@
     "physicsShape": 0,
     "physicsShapePoints": [
         {
-            "id": "211a7804-8200-4927-89ae-2f458037a63d",
+            "id": "0fff54fa-610b-4fa0-87ea-a1ac48837b5c",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 32,
             "y": 32
         },
         {
-            "id": "cacacaaf-3b33-4207-82dd-aeaebbb26d7e",
+            "id": "610c4e7b-55f5-48a3-a058-cc269a17145a",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 32,

@@ -8,7 +8,6 @@ if(place_meeting(x,y,obj_ppon)) and visible == false{
 ///Exist
 if go{
     visible = true;
-    depth = -y;
 
     /// Enemy States
     if state != 3{
@@ -115,10 +114,10 @@ if go{
         state = 3;
         alarm[5] = 5;
         if((irandom(99) + 1) <= 10){
-            instance_create(x,y,obj_hheart);
+            instance_create_layer(x,y,obj_psnt_arch_body.layer,obj_hheart);
                 
         }else if((irandom(99) + 1) == 1){
-            instance_create(x,y,obj_fheart);
+            instance_create_layer(x,y,obj_psnt_arch_body.layer,obj_fheart);
                 
         }
     }

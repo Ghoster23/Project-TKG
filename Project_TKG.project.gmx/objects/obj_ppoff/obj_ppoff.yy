@@ -5,7 +5,7 @@
     "name": "obj_ppoff",
     "eventList": [
         {
-            "id": "8b0324a3-35b0-4282-b53d-def414bef552",
+            "id": "a3b753f1-16cb-4dd3-ade5-a430ed716134",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "2f557173-dc0e-48d6-9f02-39c3c3d943ab"
         },
         {
-            "id": "86da56b2-6286-46b1-8313-f01c5245e5fe",
+            "id": "f973b1f3-84fd-4085-a5a6-f7aec1af676c",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

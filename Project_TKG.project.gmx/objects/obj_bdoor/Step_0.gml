@@ -1,5 +1,4 @@
 scr_get_input();
-depth = obj_body.depth +450;
 
 while(confirm == false){
 

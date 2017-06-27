@@ -1,3 +1,3 @@
-instance_create(640,175,obj_charpresent)
+instance_create_layer(640,175,layer,obj_charpresent)
 
 

@@ -8,8 +8,7 @@ if(place_meeting(x,y,obj_ppon)) and visible == false{
 ///Exist
 if go{
     visible = true;
-    depth = -y;
-
+    
     /// Enemy States
     if state != 3{
         if 80 < dis < 200{
@@ -85,7 +84,7 @@ if go{
         break;
         case 3:  //Dead State
             solid = false;
-            instance_create(x,y,obj_cadaver);
+            instance_create_layer(x,y,layer,obj_cadaver);
             
             with instance_nearest(x,y,obj_cadaver){
                 sprite_index = spr_peasent_m_s;
@@ -97,10 +96,10 @@ if go{
             }
             
             if((irandom(99) + 1) <= 10){
-                instance_create(x,y,obj_hheart);
+                instance_create_layer(x,y,layer,obj_hheart);
                 
             }else if((irandom(99) + 1) == 1){
-                instance_create(x,y,obj_fheart);
+                instance_create_layer(x,y,layer,obj_fheart);
                 
             }
             

@@ -5,7 +5,7 @@
     "name": "obj_rock",
     "eventList": [
         {
-            "id": "bf999dc5-180c-4b3f-8fa9-31a01621d3c6",
+            "id": "422dd28e-2ffb-4a49-8b45-671ad3e90f13",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "ebd1b112-8d75-4b0e-b7f4-ef8a31033436"
         },
         {
-            "id": "358b5e36-6230-47cb-a56f-e3021623bfeb",
+            "id": "da6a7c15-a6b6-4694-9d3e-c976f2c897a0",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -25,7 +25,7 @@
             "m_owner": "ebd1b112-8d75-4b0e-b7f4-ef8a31033436"
         },
         {
-            "id": "640e9747-a6c5-4c9b-bef7-589324c04946",
+            "id": "6e170ec6-f0ca-4ae0-b8f5-5a7de1eb5f1a",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -50,28 +50,28 @@
     "physicsShape": 1,
     "physicsShapePoints": [
         {
-            "id": "a6e0aa10-4b67-4cd9-a6ea-5ea6404b6d63",
+            "id": "5ad9e63e-f954-4141-a36e-5c25b158ae62",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 0,
             "y": 5
         },
         {
-            "id": "3a3e9bec-070e-4768-b7ce-a777fcb08e61",
+            "id": "2dbd36a5-092e-452b-803d-cec1bb87579e",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 32,
             "y": 5
         },
         {
-            "id": "76edb5bd-996b-4f86-b449-d4acd5fea526",
+            "id": "b4b62f38-bfd7-4eab-bdf3-121165d250d2",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 32,
             "y": 37
         },
         {
-            "id": "45e76997-7bf3-4e8f-b855-d1519be98b11",
+            "id": "e4e6c7dc-c7f9-48fa-9b35-953e95d93013",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 0,

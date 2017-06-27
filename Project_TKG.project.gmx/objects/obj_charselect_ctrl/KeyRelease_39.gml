@@ -11,7 +11,7 @@ with (obj_banner){
 with (obj_charpresent){
     instance_destroy();
 }
-instance_create(640,179,obj_charpresent)
+instance_create_layer(640,179,layer,obj_charpresent)
 
 
 show_debug_message(global.char_selection)

@@ -17,7 +17,6 @@ if image_index >= 4 and go == false{
 
 if go == true{
     visible = true;
-    depth = -y-64;
     
     /// Enemy States
     if (state == 1 or state == 2){
@@ -42,7 +41,7 @@ if go == true{
             
             if fl_dir == "card" and casting == false{
                 cont = 4;
-                instance_create(x+24,y,obj_skull_fl);
+                instance_create_layer(x+24,y,layer,obj_skull_fl);
                 
                 cont = 3;
                 casting = true;
@@ -51,7 +50,7 @@ if go == true{
                 
             }else if fl_dir == "diag" and casting == false{
                 cont = 4;
-                instance_create(x+20,y+20,obj_skull_fl);
+                instance_create_layer(x+20,y+20,layer,obj_skull_fl);
                 
                 cont = 3;
                 casting = true;
@@ -114,10 +113,10 @@ if go == true{
         global.combat -= 1;
         instance_destroy();
         if((irandom(99) + 1) <= 10){
-            instance_create(x,y,obj_hheart);
+            instance_create_layer(x,y,layer,obj_hheart);
                 
         }else if((irandom(99) + 1) == 1){
-            instance_create(x,y,obj_fheart);
+            instance_create_layer(x,y,layer,obj_fheart);
                 
         }
     }

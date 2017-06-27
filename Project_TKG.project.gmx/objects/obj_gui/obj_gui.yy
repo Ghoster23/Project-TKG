@@ -5,7 +5,7 @@
     "name": "obj_gui",
     "eventList": [
         {
-            "id": "c64aa0a5-c1d6-4ed1-96c3-dc9eb2237ced",
+            "id": "14a6edc1-1de1-4474-869a-bc87d2d2ea1b",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "296cdb55-286e-4d4f-a923-b5c6a01276e2"
         },
         {
-            "id": "7738e4c1-61b9-4dae-939a-2f982412c9d2",
+            "id": "447b722d-b7d8-40bd-a19e-16b06fb71966",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -25,7 +25,7 @@
             "m_owner": "296cdb55-286e-4d4f-a923-b5c6a01276e2"
         },
         {
-            "id": "24bb5f21-1cb5-4e26-a1bf-18d49a81800c",
+            "id": "ad93802e-76d0-4a43-b67b-d88eb8f29e28",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

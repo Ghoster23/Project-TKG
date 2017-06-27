@@ -5,7 +5,7 @@
     "name": "obj_wall_left",
     "eventList": [
         {
-            "id": "67b1de1d-a2c1-4b8e-a8dc-29b662bab4d7",
+            "id": "37c9b4a1-404d-42ac-9bd3-79cb351e083a",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -30,28 +30,28 @@
     "physicsShape": 1,
     "physicsShapePoints": [
         {
-            "id": "7f633bbb-1af4-47d4-bf9f-fd79b8f88469",
+            "id": "1c2228ad-f631-4f0f-93f6-ea90db3312d0",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 0,
             "y": 0
         },
         {
-            "id": "0d87dfaf-fb48-4ce4-9412-98d8faa7c7b3",
+            "id": "af24e0a7-aaee-486a-b72c-8199fa9426f6",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 32,
             "y": 0
         },
         {
-            "id": "ee34adfa-ee62-4dbc-b275-9e470fb03f20",
+            "id": "e2c68610-c720-4709-8b4a-93dfa4fffa44",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 32,
             "y": 416
         },
         {
-            "id": "280c09c8-ae7f-4637-b2e5-cb827ea4d59c",
+            "id": "912ad694-9fc1-4288-908a-f145c9b45352",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 0,

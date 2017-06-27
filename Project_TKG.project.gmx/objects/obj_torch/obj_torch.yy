@@ -5,7 +5,7 @@
     "name": "obj_torch",
     "eventList": [
         {
-            "id": "d96299a5-4c96-4510-919b-359b472ceff2",
+            "id": "a3e006c4-4378-4b7d-9535-6477d2970165",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "98e64bc7-8842-44ee-9c69-556f4177ff3e"
         },
         {
-            "id": "29837b5a-0650-4058-add6-1b074301add3",
+            "id": "6ee44685-34c6-4da3-9460-d10b78a27112",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -25,7 +25,7 @@
             "m_owner": "98e64bc7-8842-44ee-9c69-556f4177ff3e"
         },
         {
-            "id": "706110f0-b64c-4e94-a690-7dca6da24393",
+            "id": "9f9448b5-8ff3-4781-bdd7-1a8f4bf625dc",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -35,7 +35,7 @@
             "m_owner": "98e64bc7-8842-44ee-9c69-556f4177ff3e"
         },
         {
-            "id": "5584d83a-7fb0-4319-bf81-2820b9566402",
+            "id": "3f4c080e-95e1-48b9-bc59-c22eb9c88ad2",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -46,7 +46,7 @@
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "b8453c71-24f2-4852-a377-e9d9f6c7873d",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0,
@@ -60,14 +60,14 @@
     "physicsShape": 0,
     "physicsShapePoints": [
         {
-            "id": "f9c7dcf7-ce64-47a4-a6aa-5a68c90592d9",
+            "id": "fa2100ed-3903-4c6d-8a21-1da5be3f249c",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 16,
             "y": 16
         },
         {
-            "id": "579d6098-a853-45d3-890e-b3f8a70e974f",
+            "id": "dc51796d-a422-4437-8ef1-0bfcfe97a442",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 16,

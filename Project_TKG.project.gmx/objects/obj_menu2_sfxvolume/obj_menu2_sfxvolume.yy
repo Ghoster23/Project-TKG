@@ -5,7 +5,7 @@
     "name": "obj_menu2_sfxvolume",
     "eventList": [
         {
-            "id": "281ad62e-0aef-415d-a958-bde62f0592d5",
+            "id": "2064961d-454f-42d7-9c93-550c6b535427",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "57d2540e-de75-4949-b864-d801757ee9a4"
         },
         {
-            "id": "c1e8755c-627a-42ca-9ce6-eb4fb13d9fad",
+            "id": "3bc631f3-2186-4c9f-b3da-07f7ed90764f",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

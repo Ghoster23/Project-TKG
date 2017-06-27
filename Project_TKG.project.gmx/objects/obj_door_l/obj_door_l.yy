@@ -5,7 +5,7 @@
     "name": "obj_door_l",
     "eventList": [
         {
-            "id": "f96e52c8-74c1-42dc-ab7c-0ed03ac66baf",
+            "id": "553770e7-b445-406e-aa89-7fc550576763",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "71e8e7ee-4cc0-4012-baf6-b841db160309"
         },
         {
-            "id": "a42d4a0a-a82f-4c1f-ac45-a22525cdd925",
+            "id": "1b95e2ba-e61e-45bc-bd0e-1f97c5b931d4",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -25,7 +25,7 @@
             "m_owner": "71e8e7ee-4cc0-4012-baf6-b841db160309"
         },
         {
-            "id": "fca71b9e-c738-4291-82ce-f6cc67479e41",
+            "id": "614d0735-c920-4979-94d0-e481f230fb78",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -36,7 +36,7 @@
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "c22b2ab4-c395-47e5-8761-fe19903e269e",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

@@ -1,7 +1,7 @@
 randomize();
 image_speed = 0;
 body = instance_nearest(x,y,obj_psnt_body)
-body_dep=object_get_depth(body)-2;
+
 flash = false;
 gender = irandom(1);
 opt = irandom(5);

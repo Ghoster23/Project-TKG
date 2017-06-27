@@ -5,7 +5,7 @@
     "name": "obj_e_swing",
     "eventList": [
         {
-            "id": "8a705468-8b7d-4ba4-bd51-2f0f03016681",
+            "id": "7cd1be21-6cad-4243-98b1-6127bce48bf4",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "74790cc7-f16c-45bb-9cae-2536d52ed496"
         },
         {
-            "id": "1d96e5c8-bee5-435f-9aeb-9095995f6942",
+            "id": "5c384e18-ac01-4e03-a15a-889a43d4b061",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -25,7 +25,7 @@
             "m_owner": "74790cc7-f16c-45bb-9cae-2536d52ed496"
         },
         {
-            "id": "3d4cd868-715c-4cac-aea8-29872aff17d3",
+            "id": "d5f9103c-b845-435e-9307-e2b1cb02877c",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

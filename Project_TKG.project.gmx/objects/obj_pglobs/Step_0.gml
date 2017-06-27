@@ -1,5 +1,4 @@
 scr_get_input();
-depth = obj_body - 1;
 
 if once == false{
     past_hp = global.p_hp;
@@ -8,7 +7,7 @@ if once == false{
 
 ///WIP
 if(instance_exists(obj_body) && !instance_exists(obj_gui)){
-    instance_create(obj_body.x-240,obj_body.y-176,obj_gui);
+    instance_create_layer(obj_body.x-240,obj_body.y-176,layer,obj_gui);
 }
 
 ///Item effects
@@ -23,7 +22,7 @@ if(global.eq_1 == true && eq_1c == false){
 
 
 ///GUI
-if(instance_exists(obj_body)){
+if(instance_exists(obj_body) and instance_exists(obj_gui)){
 if(global.p_hp > global.p_maxhp*0.10*9 && global.p_hp <= global.p_maxhp){
     obj_gui.image_index = 0;
 }
