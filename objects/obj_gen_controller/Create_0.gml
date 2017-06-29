@@ -11,6 +11,8 @@ gy = room_height/2;
 roomgenerated = 0;
 roomstogenerate = 16;
 
+global.ds_roomgrid = ds_grid_create(3,16);
+
 //Control Vars
 confirm = false;
 
@@ -20,6 +22,7 @@ right = false;
 left = false;
 
 ///Base Room
+instance_create_layer(gx+(global.roomwd div 2),gy+(global.roomhg div 2),"IF",obj_view);
 instance_create_layer(gx+global.roomwd/2+64,gy+32,"Instances",obj_torch);
 instance_create_layer(gx+global.roomwd/2-96,gy+32,"Instances",obj_torch);
 instance_create_layer(gx,gy,"Instances",obj_wall_left);
@@ -32,9 +35,6 @@ global.l[4,4] = true
 
 //Player
 instance_create_layer(gx+global.roomwd/2,gy+global.roomhg/2,"Instances",obj_body);
-
-//View
-//instance_create_layer(room_width/2+global.roomwd/2,room_height/2+global.roomhg/2,layer,obj_view);
 
 //Room counts
 for(var i = 0; i < 8; i += 1;){

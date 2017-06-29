@@ -72,10 +72,10 @@ switch(state){
         if(e_hp <= 0) and dead == false{
             dead = true;
             if((irandom(99) + 1) <= 10){
-                instance_create_layer(x,y,obj_mimic.layer,obj_hheart);
+                instance_create_layer(x,y,"Instances",obj_hheart);
                 
             }else if((irandom(99) + 1) == 1){
-                instance_create_layer(x,y,obj_mimic.layer,obj_fheart);
+                instance_create_layer(x,y,"Instances",obj_fheart);
                 
             }
             alarm[2] = 20;
@@ -85,7 +85,7 @@ switch(state){
     case 3:
         sprite_index = spr_mimic_d;
         solid = false;
-        instance_create_layer(x,y,layer,obj_cadaver);
+        instance_create_layer(x,y,"Instances",obj_cadaver);
             
             with instance_nearest(x,y,obj_cadaver){
                 sprite_index = spr_mimic_d;

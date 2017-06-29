@@ -112,7 +112,7 @@ if(global.bk == true && room == rm_boss){
 
 ///Debug
 if keyboard_check_pressed(vk_f11){
-    room_goto(rm_boss);
+    room_goto(rm_test);
 }
 
 if keyboard_check_pressed(vk_f4){

@@ -8,7 +8,7 @@ image_speed = 0;
 f_x = creator.f_x;
 f_y = creator.f_y;
 
-instance_create_layer(f_x,f_y,layer,obj_CH_deer_brocks);
+instance_create_layer(f_x,f_y,"Instances",obj_CH_deer_brocks);
 
-hp = 400;
+hp = 300;
 

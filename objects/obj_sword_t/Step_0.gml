@@ -11,7 +11,7 @@ if phy_rotation < 0{
 
 if impact = true and global.thrown = true  and  place_meeting(x, y, obj_body){
     instance_destroy();
-    instance_create_layer(x,y,layer,obj_sword);
+    instance_create_layer(x,y,"Instances",obj_sword);
 }
 
 if impact = true and global.thrown = true and abs(phy_speed_x) > 0 {

@@ -97,6 +97,10 @@ while roomgenerated != roomstogenerate{
             
             ///Fill the room
             scr_roomgn(typeroom);
+			global.ds_roomgrid[# 0, roomgenerated-1] = [c,r];
+			global.ds_roomgrid[# 1, roomgenerated-1] = typeroom;
+			global.ds_roomgrid[# 2, roomgenerated-1] = false;
+			
             global.level_room_types[c,r] = typeroom;
             
             ///Doors

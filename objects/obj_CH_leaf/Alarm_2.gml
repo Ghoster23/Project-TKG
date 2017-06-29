@@ -1,4 +1,4 @@
 des = true;
 
-alarm[3] = 2 * room_speed;
+alarm[3] = 1 * room_speed;
 

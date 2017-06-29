@@ -1,5 +1,5 @@
 creator = 0;
-
+event_inherited();
 image_alpha = 0;
 
 for(i = 0; i < instance_number(obj_fln_rock); i += 1){

@@ -12,6 +12,7 @@ switch	state{
 		sprite_index = spr_CH_root;
 		image_speed = 1;
 		visible = true;
+
 		obj_CH_tree_state.ph = 0;
 		
 		state = 1;

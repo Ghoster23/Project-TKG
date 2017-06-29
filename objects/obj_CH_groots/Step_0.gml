@@ -4,7 +4,6 @@ if image_index >= 3 and image_speed > 0{
     image_speed = 0;
 	image_index = 4;
 
-	draw_sprite(spr_CH_groots_front,0,x,y);
 }
 
 if image_index <= 1 and obj_CH_tree_state.state != 4{

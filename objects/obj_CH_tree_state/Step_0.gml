@@ -1,3 +1,4 @@
+scr_get_input();
 depth = -y-10;
 x = phy_position_x;
 y = phy_position_y;
@@ -32,7 +33,7 @@ if start == true{
         image_speed = 0.5;
         
         if(image_index >= 15){
-            instance_create_layer(x,y,layer,obj_CH_deer_state);
+            instance_create_layer(x,y,"Instances",obj_CH_deer_state);
 			while instance_exists(obj_CH_rcone){
                 with obj_CH_rcone{
                     instance_destroy();
@@ -45,6 +46,11 @@ if start == true{
             }
             while instance_exists(obj_CH_root){
                 with obj_CH_root{
+                    instance_destroy();
+                }
+            }
+			while instance_exists(obj_CH_groots){
+                with obj_CH_groots{
                     instance_destroy();
                 }
             }
@@ -96,7 +102,7 @@ switch(state){
             
             
             if(s_x mod 5*mult == 0){
-                instance_create_layer(x,y,layer,obj_CH_leaf);
+                instance_create_layer(x,y,"Instances",obj_CH_leaf);
             }
                         
         ///3rd set and next phase
@@ -117,8 +123,38 @@ switch(state){
     //Grab the player
     case 4:        
         if not instance_exists(obj_CH_groots){
-            instance_create_layer(obj_body.x,obj_body.y,layer,obj_CH_groots);
+            instance_create_layer(obj_body.x,obj_body.y,"Instances",obj_CH_groots);
         }
         leaves = 1;
+		
+		if stop == 3{
+			state = 5;
+		}
+		
     break;
+	case 5:
+	if instance_exists(obj_CH_groots){
+		instance_destroy();
+	}
+	if global.st_stuck == true{
+		global.st_stuck = false;
+		global.st_stuck_d = 0;
+	}
+	
+	while instance_exists(obj_CH_root){
+		with obj_CH_root{
+			instance_destroy();
+		}
+	}
+	if instance_exists(obj_CH_root_d){
+		with obj_CH_root_d{
+			instance_destroy();
+		}
+	}
+	
+	if interact_key and distance_to_object(obj_body) < 30{
+		game_restart();
+	}
+
+	break;
 }

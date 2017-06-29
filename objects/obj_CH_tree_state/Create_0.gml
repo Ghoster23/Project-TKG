@@ -5,7 +5,9 @@ image_speed = 0;
 i_x = x;
 i_y = y;
 
-start = true;
+stop = 0;
+
+start = false;
 once = false;
 bene = true;
 alarm[0] = 3 * room_speed;

@@ -1,3 +1,3 @@
 go = true;
-alarm[2] = 3 * room_speed;
+alarm[2] = 1.5 * room_speed;
 

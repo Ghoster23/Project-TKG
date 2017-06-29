@@ -29,27 +29,29 @@ switch(state){
         
         ///Falling Rocks
         if(alarm[0] > 5 * room_speed and alarm[0] mod 5 == 0){
-            x_s = obj_body.x - 60;
-            y_s = obj_body.y - 60;
+            x_s = obj_body.x - 30;
+            y_s = obj_body.y - 30;
             
-            x_e = obj_body.x + 60;
-            y_e = obj_body.y + 60;
+            x_e = obj_body.x + 30;
+            y_e = obj_body.y + 30;
             
-            instance_create_layer(x,y-500,layer,obj_fln_rock);
+            instance_create_layer(x,y-500,"IF",obj_fln_rock);
+			instance_create_layer(x,y-500,"IF",obj_fln_rock);
+			instance_create_layer(x,y-500,"IF",obj_fln_rock);
             sprite_index = spr_CH_deer_state_hurt;
         }
         
         ///Blocking Rocks
         if(alarm[0] > 0 and alarm[0] < 6 and once == false){
-            f_x = 275;
-            f_y = 415;
-            instance_create_layer(275,115,layer,obj_CH_deer_brock);
-            f_x = 400;
-            f_y = 330;
-            instance_create_layer(400,30,layer,obj_CH_deer_brock);
-            f_x = 144;
-            f_y = 330;
-            instance_create_layer(144,30,layer,obj_CH_deer_brock);
+            f_x = x;
+            f_y = y+250;
+            instance_create_layer(x,y-100,"Instances",obj_CH_deer_brock);
+            f_x = x-100;
+            f_y = y+150;
+            instance_create_layer(x-100,y-200,"Instances",obj_CH_deer_brock);
+            f_x = x+100;
+            f_y = y+150;
+            instance_create_layer(x+100,y-200,"Instances",obj_CH_deer_brock);
             once = true;
 			sprite_index = spr_CH_deer_state;
         }
@@ -60,16 +62,24 @@ switch(state){
     case 1:
         ///Leaf Barrage
         if(once == false){
-            pat = "f";
+            pat = "w";
             alarm[1] = 10 * room_speed;
+			
+			instance_create_layer(x,y+16,"IF",obj_CH_leaf);
+			instance_create_layer(x+4,y+16,"IF",obj_CH_leaf);
+			instance_create_layer(x-4,y+16,"IF",obj_CH_leaf);
+			instance_create_layer(x+8,y+14,"IF",obj_CH_leaf);
+			instance_create_layer(x-8,y+14,"IF",obj_CH_leaf);
+			instance_create_layer(x+12,y+10,"IF",obj_CH_leaf);
+			instance_create_layer(x-12,y+10,"IF",obj_CH_leaf);
+			instance_create_layer(x+16,y+6,"IF",obj_CH_leaf);
+			instance_create_layer(x-16,y+6,"IF",obj_CH_leaf);
+			instance_create_layer(x+16,y,"IF",obj_CH_leaf);
+			instance_create_layer(x-16,y,"IF",obj_CH_leaf);
+
+			alarm[8] = 0.15 * room_speed;
             once = true;
             
-        }
-        
-        if(alarm[1] > 0){
-            instance_create_layer(x,y,layer,obj_CH_leaf);
-            instance_create_layer(x+10,y,layer,obj_CH_leaf);
-            instance_create_layer(x-10,y,layer,obj_CH_leaf);
         }
                 
     break;
@@ -82,9 +92,11 @@ switch(state){
             
         }
         
-        pat = "a";
+        pat = "f";
         
-        instance_create_layer(x,y,layer,obj_CH_leaf);
+        instance_create_layer(x,y,"IF",obj_CH_leaf);
+        instance_create_layer(x+10,y,"IF",obj_CH_leaf);
+        instance_create_layer(x-10,y,"IF",obj_CH_leaf);
         
     break;
     
@@ -92,7 +104,7 @@ switch(state){
     case 3:
         ///Follower roots
         alarm[3] = 10 * room_speed;
-        instance_create_layer(x,y+32,layer,obj_CH_mroots);
+        instance_create_layer(x,y+32,"Instances",obj_CH_mroots);
         state = 4;
     break;
     case 4:
@@ -100,16 +112,23 @@ switch(state){
     //Defeat State
     case 5:
         ///Death animation
-        sprite_index = spr_CH_deer_death;
-        image_speed = 2;
+        
         
         ///Destroy and give rewards
-        if(image_index == 6 and sprite_index == spr_CH_deer_death){
-            instance_create_layer(x,y,layer,obj_CH_stump);
-            instance_create_layer(x,y,layer,obj_equipable);
-        
-        }
-        
+        instance_create_layer(x,y,"Instances",obj_CH_stump);
+        instance_create_layer(x,y+15,"IF",obj_equipable);
+		while instance_exists(obj_CH_deer_brock){
+			with obj_CH_deer_brock{
+				instance_destroy();
+			}
+		}
+		if instance_exists(obj_CH_mroots){
+			with obj_CH_mroots{
+				instance_destroy();
+			}
+		}
+		instance_destroy();
+               
     break;
 }
 

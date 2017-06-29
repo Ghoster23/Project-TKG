@@ -277,7 +277,7 @@
         "modelName": "GMRoomViewSettings",
         "mvc": "1.0",
         "clearDisplayBuffer": true,
-        "clearViewBackground": false,
+        "clearViewBackground": true,
         "enableViews": true,
         "inheritViewSettings": false
     },
@@ -291,7 +291,7 @@
             "hspeed": -1,
             "hview": 416,
             "inherit": false,
-            "objId": "202cd182-de09-40aa-b199-91a913531090",
+            "objId": "c2b92cf6-721d-4c76-8ed3-3de10d92b01a",
             "vborder": 208,
             "visible": true,
             "vspeed": -1,

@@ -456,7 +456,7 @@ typeroom = argument0;
     case 15:
 ///Type SP
     case 16:
-        instance_create_layer(gx+(roomwd/2),gy+16+(roomhg/2),"Instances",obj_equipable);
+        instance_create_layer(gx+(roomwd/2),gy+16+(roomhg/2),"IF",obj_equipable);
         instance_create_layer(gx+(roomwd/2),gy+32+(roomhg/2),"Instances",obj_pedestal);
     break;
     case 17:

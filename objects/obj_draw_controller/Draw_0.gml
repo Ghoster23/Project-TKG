@@ -26,8 +26,11 @@ if ds_exists(ds_depthgrid, ds_type_grid) {
 	
 	repeat(instNum){
 		var instanceID = ds_depthgrid[# 0, yy];
+		
 		with(instanceID){
-			draw_self();
+			if instanceID.visible == true{
+				draw_self();
+			}
 		}
 		
 		yy += 1;

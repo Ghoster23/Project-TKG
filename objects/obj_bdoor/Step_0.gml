@@ -24,7 +24,7 @@ if(confirm == true && distance_to_object(obj_body) < 12 && interact_key == true)
 }
 
 if(image_index >= 6){ 
-    room_goto(rm_boss);
+    room_goto(rm_CH_boss);
     with(obj_body){
         instance_destroy();
     }

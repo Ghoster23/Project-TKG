@@ -21,7 +21,7 @@ if(instance_exists(obj_CH_tree_state)){
     s_x = obj_CH_deer_state.s_x;
 }
 
-alarm[1] = 2 * room_speed;
+alarm[1] = 0.5 * room_speed;
 
 hspd = 0;
 vspd = 0;

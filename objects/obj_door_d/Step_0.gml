@@ -35,7 +35,7 @@ if(place_meeting(x,y,obj_body) && !place_meeting(x,y,obj_ppon) && global.lock ==
         instance_destroy();
     }
     
-   instance_create_layer(tpx,tpy,layer,obj_body);
+   instance_create_layer(tpx,tpy,"Instances",obj_body);
    
    alarm[1] = 40;
 }
