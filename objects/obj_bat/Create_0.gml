@@ -4,10 +4,13 @@ image_speed=.4;
 solid = false;
 visible = false;
 phy_fixed_rotation = true;
-trigger = false;
+
+//Damaged and Flashing
 flash = false;
-cr_cd = false;
 damaged = false;
+shift = 0;
+
+//Start
 go = false;
 
 //Stats
@@ -23,9 +26,11 @@ e_spd =1;
 state = 0;
 state_change = false;
 p_state = 0;
-atk_cd = false;
+///Dash
 dash = false;
 dash_cd = false;
+
+//Idle anchor
 ini_point_x = x;
 ini_point_y = y;
 
@@ -42,3 +47,6 @@ amp = 5;
 kb_x = 0;
 kb_y = 0;
 
+for(i = 0; i < 8; i++){
+	alarms[i] = -1;
+}

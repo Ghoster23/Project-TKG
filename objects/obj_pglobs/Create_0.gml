@@ -60,7 +60,7 @@ global.st_stuck_d = 0;
 global.current_column = 4;
 global.current_row = 4;
 
-//Manel is doing a thing... Dont be mad...
+//Character Selection
 global.char = 0;
 
 ///Player Character body sprites

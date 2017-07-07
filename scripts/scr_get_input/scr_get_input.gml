@@ -8,4 +8,5 @@ attack_key = mouse_check_button(mb_left);
 throw_key = mouse_check_button(mb_right);  
 interact_key = keyboard_check(ord("F"));
 debug_key = keyboard_check(ord("Ç"));
-
+menu_key = keyboard_check(vk_escape);
+mmap_key = keyboard_check(vk_tab);

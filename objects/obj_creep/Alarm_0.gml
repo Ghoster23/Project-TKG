@@ -1,2 +1,3 @@
-instance_destroy();
-
+if global.pause == false{
+	instance_destroy();
+}

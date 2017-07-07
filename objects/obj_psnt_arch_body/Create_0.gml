@@ -1,6 +1,7 @@
 /// @description Inicialise the enemy
 event_inherited();
-instance_create_layer(x,y,obj_psnt_arch_body.layer,obj_psnt_arch_head);
+head = instance_create_layer(x,y,layer,obj_psnt_arch_head);
+bow = instance_create_layer(x,y,layer,obj_e_bow);
 image_speed=.4;
 solid = false;
 visible = false;
@@ -12,9 +13,11 @@ damaged = false;
 alt = 1;
 shoot = false;
 go = false;
-gender = instance_nearest(x,y,obj_psnt_arch_head).gender;
-opt = instance_nearest(x,y,obj_psnt_arch_head).opt;
-instance_create_layer(x,y,obj_psnt_arch_body.layer,obj_e_bow);
+
+gender = head.gender;
+opt = head.opt;
+
+path = path_add();
 
 if gender == 0{
     sprite_index = spr_peasent_f_f;
@@ -47,3 +50,6 @@ d_ = 0;
 offset_x = 0;
 offset_y = 0;
 
+for(i = 0; i < 6; i += 1){	
+	alarms[i] = -1;
+}

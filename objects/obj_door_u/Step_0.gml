@@ -7,6 +7,7 @@ roomhg = 416;
 if(place_meeting(x,y,obj_body) && !place_meeting(x,y,obj_ppon) && global.lock == false && global.d_cd == false){
     tpx = obj_body.x;
     tpy = (obj_body.y - (32 * 5.5));
+	global.current_row--;
     global.d_cd = true;
     
     if instance_exists(obj_view){

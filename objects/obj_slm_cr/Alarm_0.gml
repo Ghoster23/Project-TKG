@@ -1,2 +1,2 @@
-atk_cd = false;
-
+///@description Activate enemy
+go = true;

@@ -1,3 +1,4 @@
+///@description Damge flash (red)
 if instance_exists(obj_body){
     if global.p_inv == true{
         if obj_body.image_blend == c_white{

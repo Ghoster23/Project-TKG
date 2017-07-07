@@ -1,3 +1,4 @@
+///@description Damage flash (white)
 alarm_2 = false;
 global.p_inv = false;
 

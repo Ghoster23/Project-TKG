@@ -1,0 +1,2 @@
+/// @description Pickup
+pickup = true;

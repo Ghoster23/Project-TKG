@@ -6,21 +6,29 @@ solid = false;
 visible = false;
 trigger = false;
 flash = false;
-cr_cd = false;
 cd_swing = false;
 damaged = false;
 alt = 1;
 swing = false;
 go = false;
 
-gender = instance_nearest(x,y,obj_psnt_head).gender;
-opt = instance_nearest(x,y,obj_psnt_head).opt;
+xx = x;
+yy = y;
+pos = 1;
+path = path_add();
+
+head = instance_nearest(x,y,obj_psnt_head);
+
+gender = head.gender;
+opt = head.opt;
 instance_create_layer(x,y,layer,obj_stick);
 
 if gender == 0{
     sprite_index = spr_peasent_f_f;
+	head.sprite_index = spr_peasent_hf_f;
 }else {
     sprite_index = spr_peasent_m_f;
+	head.sprite_index = spr_peasent_h_f
 }
 
 //Stats
@@ -36,14 +44,19 @@ e_spd = 3;
 state = 0;
 state_change = false;
 p_state = 0;
-atk_cd = false;
+
+//Idle
 ini_point_x = x;
 ini_point_y = y;
 dir_change = false;
 i_dir = 0;
+
 p_state = 0;
 d = 0;
 d_ = 0;
 offset_x = 0;
 offset_y = 0;
 
+for(i = 0; i < 6; i += 1){	
+	alarms[i] = -1;
+}

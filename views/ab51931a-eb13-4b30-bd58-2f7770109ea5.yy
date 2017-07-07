@@ -18,7 +18,8 @@
         "8244d18d-f373-4d00-acf6-c1494a82e3fe",
         "7ecf87bc-5540-4dd6-ac82-38c755c4b0f4",
         "71a92a16-bcf4-4f93-a143-5c4ee5b396a5",
-        "199e42e3-bf9b-4fc3-836b-c8db8c95951f"
+        "199e42e3-bf9b-4fc3-836b-c8db8c95951f",
+        "a2c83942-bb1d-48c6-821e-31da845032d8"
     ],
     "filterType": "GMSprite",
     "folderName": "spr_peasent",

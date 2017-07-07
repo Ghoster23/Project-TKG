@@ -1,2 +1,3 @@
-cr_cd = false;
-
+if global.pause == false{	
+	cr_cd = false;
+}

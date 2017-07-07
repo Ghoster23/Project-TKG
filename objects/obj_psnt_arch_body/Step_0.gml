@@ -1,17 +1,24 @@
+if state == 1 {
+	scr_define_path(self, obj_body);
+	path = global.ai_path;
+}
+
+bl_sight = collision_line(x,y,obj_body.x,obj_body.y,obj_solid_parent,true,true);
+
 if(place_meeting(x,y,obj_ppon)) and visible == false{
     visible = true;
     global.combat += 1;
     
-    alarm[6] = 1 * room_speed;
+    alarm[0] = 1 * room_speed;
 }
 
 ///Exist
-if go{
+if go and not global.pause{
     visible = true;
 
     /// Enemy States
     if state != 3{
-        if 80 < dis < 200{
+        if 80 < dis < 200 and not bl_sight{
             state = 2;
         
         }
@@ -19,7 +26,7 @@ if go{
             state = 0;
 
         }
-        if dis >= 200{
+        if dis >= 200 or bl_sight{
             state = 1;
         }
     }
@@ -32,6 +39,7 @@ if go{
     ///Enemy Behaevior
     switch(state){
         case 0:  //Walk around a bit
+			image_speed = 0.4;
             if state_change == true{
                 ini_point_x = x;
                 ini_point_y = y;
@@ -61,29 +69,44 @@ if go{
             
         break;
         case 1:  //Go towards the player
-            dir = point_direction(x,y,obj_body.x,obj_body.y);
-            
-            //Get hspd and vspd
+			image_speed = 0.4;
+            dir = point_direction(x,y,path_get_point_x(path,2),path_get_point_y(path,2));
+		
+			//Get hspd and vspd
             hspd = lengthdir_x(e_spd,dir);
             vspd = lengthdir_y(e_spd,dir);
-            
+   
+            //Move
             phy_position_x += hspd;
             phy_position_y += vspd;
+			
             
         break;
         case 2:  //Attack the player
             hspd = 0;
             vspd = 0;
+			image_speed = 0;
             
-            if cd_arrow == false{
+            if cd_arrow == false and bow.image_index == 4{
                 cd_arrow = true;
-                alarm[2] = 10;
-                alarm[1] = 60;
+                alarm[1] = 2 * room_speed;
             }
         
         break;
         case 3:  //Dead State
-            instance_destroy();
+			global.combat -= 1;
+			sprite_index = spr_bat_d;
+	        if((irandom(99) + 1) <= 10){
+	            instance_create_layer(x,y,layer,obj_hheart);
+                
+	        }else if((irandom(99) + 1) == 1){
+	            instance_create_layer(x,y,layer,obj_fheart);
+                
+	        }
+			instance_destroy();
+		break;
+		case "pause":
+		break;
    }
     
     image_blend = c_white;
@@ -108,18 +131,30 @@ if go{
     }
     
     ///Die
-    if(e_hp <= 0) and state != 3{
-        global.combat -= 1;
-        sprite_index = spr_bat_d;
+    if e_hp <= 0 and state != 3{
         state = 3;
         alarm[5] = 5;
-        if((irandom(99) + 1) <= 10){
-            instance_create_layer(x,y,obj_psnt_arch_body.layer,obj_hheart);
-                
-        }else if((irandom(99) + 1) == 1){
-            instance_create_layer(x,y,obj_psnt_arch_body.layer,obj_fheart);
-                
-        }
     }
 }
 
+if global.pause == true {
+	for(i = 0; i < 6; i += 1){
+		if alarm[i] != -1{
+			alarms[i] = alarm[i];
+			alarm[i] = -1;
+		}
+	}
+	
+	image_speed = 0;
+}
+
+if global.pause == false {
+	for(i = 0; i < 6; i += 1){
+		if alarms[i] != -1{
+			alarm[i] = alarms[i];
+			alarms[i] = -1;
+		}
+	}
+	
+	image_speed = 0.4;
+}

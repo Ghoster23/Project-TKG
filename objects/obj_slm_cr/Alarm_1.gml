@@ -1,3 +1,4 @@
+///@description Die
 randomize();
 
 if((irandom(99) + 1) <= 10){
@@ -9,4 +10,3 @@ if((irandom(99) + 1) <= 10){
 }
 
 instance_destroy();
-

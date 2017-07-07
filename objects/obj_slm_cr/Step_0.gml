@@ -1,25 +1,27 @@
 randomize();
 
-
+///Start enemy
 if(place_meeting(x,y,obj_ppon)) and visible == false{
     visible = true;
     global.combat += 1;
     
-    alarm[6] = 1 * room_speed;
+    alarm[0] = 1 * room_speed;
 }
 
 ///Exist
-if go{
+if go and not global.pause{
     visible = true;
     solid = true;
 
     /// Enemy States
-    if dis < 200 and state != 2{
-        state = 1;
+	if global.pause == false{
+	    if dis < 200 and state != 2{
+	        state = 1;
 
-    }else if dis >= 200 and state != 2{
-        state = 0;
-    }
+	    }else if dis >= 200 and state != 2{
+	        state = 0;
+	    }
+	}
     
     if p_state != state{
         p_state = state;
@@ -67,9 +69,13 @@ if go{
             sprite_index = spr_slime_d;
             image_speed = 0.2;
             
-            if image_index == 4{
+            if image_index == 5{
                 instance_destroy();
             }
+			
+		break;
+		case "pause":
+		break;
 
     }
     
@@ -117,3 +123,8 @@ if go{
     instance_create_layer(x+random(5)*signal_x,y+random(5)*signal_y,"BH",obj_creep);
 }
 
+if global.pause == true{
+	image_speed = 0;
+}else {
+	image_speed = 0.2;
+}

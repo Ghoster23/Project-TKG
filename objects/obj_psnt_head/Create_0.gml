@@ -6,7 +6,7 @@ body = instance_nearest(x,y,obj_psnt_body)
 flash = false;
 gender = irandom(1);
 opt = irandom(5);
-
+gender = irandom(1);
 body.gender = gender;
 
 if gender == 0{

@@ -4,7 +4,7 @@ scr_get_input();
 //check for dash
 if (dash_key && (right_key == true or left_key == true or up_key == true or down_key == true) && global.dash_cd == false and global.st_stuck == false) {
     state = scr_dash_state;
-    alarm[0] = room_speed/2;
+    alarm[0] = room_speed/3;
     instance_create_layer(x,y,obj_body.layer,obj_roll);
 }
 

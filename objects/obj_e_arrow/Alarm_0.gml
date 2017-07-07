@@ -1,2 +1,3 @@
-go = true;
+/// @description Can be destroyed
 
+des = true;

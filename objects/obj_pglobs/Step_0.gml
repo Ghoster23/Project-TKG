@@ -1,16 +1,11 @@
 scr_get_input();
 
-if once == false{
-    past_hp = global.p_hp;
-    once = true;
-}
-
-///WIP
+///Create GUI
 if(instance_exists(obj_body) && !instance_exists(obj_gui)){
     instance_create_layer(obj_body.x-240,obj_body.y-176,"IF",obj_gui);
 }
 
-///Item effects
+///Equipables' effects
 if(global.eq_0 == true && eq_0c == false){
     global.p_atk = global.p_atk + 2;
     eq_0c = true; 
@@ -21,7 +16,7 @@ if(global.eq_1 == true && eq_1c == false){
 }
 
 
-///GUI
+///GUI - should probably move this
 if(instance_exists(obj_body) and instance_exists(obj_gui)){
 if(global.p_hp > global.p_maxhp*0.10*9 && global.p_hp <= global.p_maxhp){
     obj_gui.image_index = 0;
@@ -63,7 +58,6 @@ if status_check == true{
     if global.st_poison == true and global.st_poison_d > 0{
         global.p_hp -= 1;
         global.st_poison_d -= 5;
-        past_hp = global.p_hp;
         
         if global.st_poison_d <= 0{
             global.st_poison = false;
@@ -81,7 +75,7 @@ if status_check == true{
     alarm[1] = 1 * room_speed;
 }
 
-///Where am I?
+///Current Room
 if room == rm_level{
     if instance_exists(obj_body){
         global.current_column = obj_body.x div global.roomwd;
@@ -103,11 +97,6 @@ if(room == rm_dead){
         
     }
    
-}
-
-///Game Won
-if(global.bk == true && room == rm_boss){
-    alarm[0] = 15 * room_speed;
 }
 
 ///Debug

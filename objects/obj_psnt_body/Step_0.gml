@@ -1,23 +1,27 @@
+if state == 1 {
+	scr_define_path(self, obj_body);
+	path = global.ai_path;
+}
+
 if(place_meeting(x,y,obj_ppon)) and visible == false{
     visible = true;
     global.combat += 1;
     
-    alarm[6] = 1 * room_speed;
+    alarm[0] = 1 * room_speed;
 }
 
 ///Exist
-if go{
+if go and not global.pause{
     visible = true;
     
     /// Enemy States
     if state != 3{
-        if 80 < dis < 200{
+        if 40 < dis < 200{
             state = 1;
         
         }
-        if dis <= 24{
+        if dis <= 32 and not cd_swing{
             state = 2;
-
         }
         if dis >= 200{
             state = 0;
@@ -32,6 +36,7 @@ if go{
     ///Enemy Behaevior
     switch(state){
         case 0:  //Walk around a bit
+			//path_end();
             if state_change == true{
                 ini_point_x = x;
                 ini_point_y = y;
@@ -60,25 +65,27 @@ if go{
             phy_position_y += vspd;
             
         break;
-        case 1:  //Go towards the player
-            dir = point_direction(x,y,obj_body.x,obj_body.y);
-            
-            //Get hspd and vspd
+        case 1:  //Go towards the player	
+			dir = point_direction(x,y,path_get_point_x(path,2),path_get_point_y(path,2));
+		
+			//Get hspd and vspd
             hspd = lengthdir_x(e_spd,dir);
             vspd = lengthdir_y(e_spd,dir);
-            
+   
+            //Move
             phy_position_x += hspd;
             phy_position_y += vspd;
-            
+			
         break;
         case 2:  //Attack the player
+			//path_end();
             hspd = 0;
             vspd = 0;
-            
-            if cd_swing == false{
+			
+            if not cd_swing {
                 cd_swing = true;
-                alarm[2] = 10;
-                alarm[1] = 30;
+                alarm[2] = 30;
+                
             }
         
         break;
@@ -103,7 +110,10 @@ if go{
                 
             }
             
-        instance_destroy();
+		instance_destroy();
+		
+		case "pause":
+		break;
    }
     
     image_blend = c_white;
@@ -136,3 +146,25 @@ if go{
     }
 }
 
+if global.pause == true {
+	for(i = 0; i < 6; i += 1){
+		if alarm[i] != -1{
+			alarms[i] = alarm[i];
+			alarm[i] = -1;
+		}
+	}
+	
+	image_speed = 0;
+}
+
+if global.pause == false {
+	for(i = 0; i < 6; i += 1){
+		if alarms[i] != -1{
+			alarm[i] = alarms[i];
+			alarms[i] = -1;
+		}
+	}
+	
+	image_speed = 0.4;
+
+}

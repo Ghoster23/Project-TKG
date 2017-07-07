@@ -1,13 +1,12 @@
 /// @description Inicialise the enemy
 event_inherited();
 image_speed=0;
-solid = false;
-visible = false;
+
 flash = false;
 a = 0;
 damaged = false;
-dead = false;
 
+//Tell
 interval = false;
 blink = false;
 
@@ -22,7 +21,6 @@ e_spd = 0;
 
 //States
 state = 0;
-atk_cd = false;
 
 ///Distance
 dis = 0
@@ -30,4 +28,3 @@ dis = 0
 ///Knockback
 kb_x = 0;
 kb_y = 0;
-

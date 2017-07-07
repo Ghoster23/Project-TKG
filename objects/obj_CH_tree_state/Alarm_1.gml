@@ -1,3 +1,4 @@
+///@description Leafs part 1
 l1 = false;
 
 //Spawn the leaves
@@ -9,15 +10,15 @@ switch a{
     case 8:
     case 10:
         pat = "w";
-        instance_create_layer(x + 32, y + 32, "Instances",obj_CH_leaf);
-        instance_create_layer(x - 32, y + 32, "Instances",obj_CH_leaf);
-        instance_create_layer(x - 48, y, "Instances",obj_CH_leaf);
-        instance_create_layer(x + 48, y, "Instances",obj_CH_leaf);
-        instance_create_layer(x + 40, y + 16, "Instances",obj_CH_leaf);
-        instance_create_layer(x - 40, y + 16, "Instances",obj_CH_leaf);
-        instance_create_layer(x + 16, y + 40, "Instances",obj_CH_leaf);
-        instance_create_layer(x - 16, y + 40, "Instances",obj_CH_leaf);
-        instance_create_layer(x, y + 48, "Instances",obj_CH_leaf);
+        instance_create_layer(x + 32, y + 32, "IF",obj_CH_leaf);
+        instance_create_layer(x - 32, y + 32, "IF",obj_CH_leaf);
+        instance_create_layer(x - 48, y, "IF",obj_CH_leaf);
+        instance_create_layer(x + 48, y, "IF",obj_CH_leaf);
+        instance_create_layer(x + 40, y + 16, "IF",obj_CH_leaf);
+        instance_create_layer(x - 40, y + 16, "IF",obj_CH_leaf);
+        instance_create_layer(x + 16, y + 40, "IF",obj_CH_leaf);
+        instance_create_layer(x - 16, y + 40, "IF",obj_CH_leaf);
+        instance_create_layer(x, y + 48, "IF",obj_CH_leaf);
     break;
     
     case 1:
@@ -27,13 +28,13 @@ switch a{
     case 9:
     case 11:
         pat = "a";
-        instance_create_layer(x + 32, y + 32, "Instances",obj_CH_leaf);
-        instance_create_layer(x - 32, y + 32, "Instances",obj_CH_leaf);
+        instance_create_layer(x + 32, y + 32, "IF",obj_CH_leaf);
+        instance_create_layer(x - 32, y + 32, "IF",obj_CH_leaf);
         
-        instance_create_layer(x + 40, y + 16, "Instances",obj_CH_leaf);
-        instance_create_layer(x - 40, y + 16, "Instances",obj_CH_leaf);
+        instance_create_layer(x + 40, y + 16, "IF",obj_CH_leaf);
+        instance_create_layer(x - 40, y + 16, "IF",obj_CH_leaf);
         
-        instance_create_layer(x, y + 48, "Instances",obj_CH_leaf);
+        instance_create_layer(x, y + 48, "IF",obj_CH_leaf);
     break;
     
     case 12:

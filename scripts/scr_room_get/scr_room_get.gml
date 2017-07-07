@@ -1,18 +1,23 @@
-if room = rm_level{
-	var rmx = floor(obj_body.x) div global.roomwd;
-	var rmy = floor(obj_body.y) div global.roomhg;
+if room == rm_level{
 	var i = 0;
+	coords = global.ds_roomgrid[# 0, i];
 	
 	//Find the room
-	while global.ds_roomgrid[# 0, i] != [rmx,rmy]{
+	while (coords[0] != global.current_row or coords[1] != global.current_column) and i<16{
 		i += 1;
+		coords = global.ds_roomgrid[# 0, i];
+		
 	}
 	
 	//Visited	
-	if global.ds_roomgrid[# 3, i] == false{
-		global.ds_roomgrid[# 3, i] = true;
+	if global.ds_roomgrid[# 2, i] == false{
+		global.ds_roomgrid[# 2, i] = true;
+		
 	}
 	
+	return [global.ds_roomgrid[# 0, i],global.ds_roomgrid[# 1, i],global.ds_roomgrid[# 2, i]];
+	
 }else {
-	return [0,0];
+	return [[0,0],"?",404];
+	
 }

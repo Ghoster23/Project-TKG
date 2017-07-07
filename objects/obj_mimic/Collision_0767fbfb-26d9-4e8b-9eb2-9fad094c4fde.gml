@@ -1,11 +1,6 @@
-if state == 1{
-    if(atk_cd == false){
-        if global.p_inv == false{
-            global.p_hp -= e_atk div global.p_def;
-            atk_cd = true;
-            alarm[0] = 1*room_speed;
-            global.p_inv = true;
-        }
-    }
+///@description Damage the player
+if state == 1 and global.p_inv == false and e_hp > 0{
+	global.p_hp -= e_atk div global.p_def;
+	global.p_inv = true;
+	
 }
-
