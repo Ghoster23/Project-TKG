@@ -48,8 +48,10 @@ if not global.pause {
 	}
 	
 }else {
-	if image_speed == 0{
+	if image_speed != 0{
 		prev_image_speed = image_speed;
 		image_speed = 0;
+		
 	}
+	
 }
