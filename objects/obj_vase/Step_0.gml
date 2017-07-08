@@ -1,6 +1,9 @@
 if(place_meeting(x,y,obj_swing) or place_meeting(x,y,obj_sword_t)){
-        image_blend = c_red;
-        alarm[0]=0.02*room_speed;
+        alarm[0]=0.04*room_speed;
+		
+		//shader for damage
+		flash = true;
+		
         if((irandom(99) + 1) == 1){
                 instance_create_layer(x,y,"Instances",obj_hheart);
                 

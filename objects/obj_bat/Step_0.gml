@@ -141,8 +141,6 @@ if go and not global.pause{
 		break;
 	}
     
-	///Reset blend mode
-    image_blend = c_white;
 	
     ///Get Damaged
     if(place_meeting(x,y,obj_swing)){
@@ -157,11 +155,10 @@ if go and not global.pause{
     
 	///Flash
     if damaged == true{
-        alarm[4] = 20;
+        alarm[4] = 0.03*room_speed;
         damaged = false;
         if flash == false{
             flash = true;
-            image_blend = c_red;
         }
 		
     }

@@ -2095,6 +2095,14 @@
             }
         },
         {
+            "Key": "b93914b8-344a-4490-91be-6fd0d4a32db9",
+            "Value": {
+                "id": "8c8c0e3c-055a-4c78-a3d6-6e865d479c78",
+                "resourcePath": "shaders\\sh_white\\sh_white.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "bbadc0d7-a5fe-4e5e-965b-a09a76020ddc",
             "Value": {
                 "id": "c8df8312-8de7-4a44-8470-643490f4721a",

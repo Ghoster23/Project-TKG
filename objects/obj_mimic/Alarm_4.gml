@@ -1,4 +1,2 @@
-///@description End flash
-flash = false;
+///@description End damaged
 damaged = false;
-image_blend = c_white;

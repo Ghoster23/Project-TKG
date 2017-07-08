@@ -28,7 +28,12 @@ if ds_exists(ds_depthgrid, ds_type_grid) {
 		var instanceID = ds_depthgrid[# 0, yy];
 		
 		with(instanceID){
-			if instanceID.visible == true{
+			if instanceID.flash == true{
+					shader_set(sh_white);
+					draw_self();
+					shader_reset();	
+			}
+			else if instanceID.visible == true{
 				draw_self();
 			}
 		}

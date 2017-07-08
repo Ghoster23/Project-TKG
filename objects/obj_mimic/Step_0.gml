@@ -53,27 +53,31 @@ switch(state){
         if(place_meeting(x,y,obj_swing)){
             e_hp -= global.p_atk div e_def;
             damaged = true;
+			flash = true;
+			alarm[5]=room_speed*0.03;
 			
         }    
         
         if(place_meeting(x,y,obj_sword_t) and obj_sword_t.image_speed>0){
             e_hp -= global.p_satk div e_sdef;
             damaged = true;
+			flash=true;
+			alarm[5]=room_speed*0.03;
 			
         }
         
 		///Flash when damaged
         if damaged = true{
+			//stop damaged
             alarm[4] = 20;
-            if flash == false{
-                flash = true;
-                image_blend = c_red;
-            }
-			
         }
         
         ///Die
         if e_hp <= 0 and sprite_index != spr_mimic_d{
+			flash=true;
+			//stop flash
+			alarm[5]=room_speed*0.03;
+			//die
             alarm[2] = 20;
             sprite_index = spr_mimic_d;
 		}

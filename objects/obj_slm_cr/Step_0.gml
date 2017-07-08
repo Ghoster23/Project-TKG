@@ -39,7 +39,7 @@ if go and not global.pause{
                 state_change = false;
             }
             
-            //Don't go to far honey
+            //Don't go to far honey LOLS comentarios a manel
             if distance_to_point(ini_point_x,ini_point_y) <= 32{
             
                 if dir_change == true{
@@ -79,13 +79,14 @@ if go and not global.pause{
 
     }
     
-    image_blend = c_white;
       
     ///Get Damaged
     if(place_meeting(x,y,obj_swing)) and damaged == false and state != 2{
         e_hp -= global.p_atk div e_def;
         if e_hp > 0{
             damaged = true;
+			flash=true;
+			alarm[5] = room_speed*0.05;
             alarm[4] = 20;
         }
     } 
@@ -94,21 +95,19 @@ if go and not global.pause{
         e_hp -= global.p_satk div e_sdef;
         if e_hp > 0{
             damaged = true;
+			flash=true;
+			alarm[5] = room_speed*0.05;
             alarm[4] = 20;
         }
     }
     
-    if damaged == true{
-        if flash == false{
-            flash = true;
-            image_blend = c_red;
-        }
-    }
     
     ///Die
     if(e_hp <= 0) and state != 2{
+		flash=true;
+		alarm[5] = room_speed*0.02;
         global.combat -= 1;
-        alarm[1] = 10;
+        alarm[1] = 16;
                 
         sprite_index = spr_slime_d;
         image_index = 0;
