@@ -1,5 +1,5 @@
 //Measurements
-global.roomwd = 544;
+global.roomwd = 672;
 global.roomhg = 416;
 once = false;
 

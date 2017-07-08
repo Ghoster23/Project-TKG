@@ -1,6 +1,3 @@
-rm_wd = 544;
-rm_hg = 418;
-
 //Draw the surface
 if surface_exists(global.lighting) and (room != rm_menu_1 and room != rm_menu_2 and room != rm_chsl and room != rm_dead){
     surface_set_target(global.lighting);
