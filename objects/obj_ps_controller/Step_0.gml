@@ -50,37 +50,17 @@ if surface_exists(global.lighting) and (room != rm_menu_1 and room != rm_menu_2 
 }
 
 if adjust == true{
-if room == rm_menu_1 or room == rm_menu_2 or room == rm_chsl or room == rm_dead{
-    surface_resize(application_surface, global.MonitorW,global.MonitorH);
-    global.Xoffset=0;
-    global.Yoffset=0;
+	if room == rm_menu_1 or room == rm_menu_2 or room == rm_chsl or room == rm_dead{
+	    surface_resize(application_surface, global.MonitorW,global.MonitorH);
+	    global.Xoffset=0;
+	    global.Yoffset=0;
     
-}else {
-    global.Xoffset=(global.MonitorW-rm_wd)/2;
-    global.Yoffset=(global.MonitorH-rm_hg)/2;
-
-if(global.MonitorW>=rm_wd*2 ){
-    surface_resize(application_surface,rm_wd*2,rm_hg*2);
-    global.Xoffset=(global.MonitorW-rm_wd*2)/2;
-    global.Yoffset=(global.MonitorH-rm_hg*2)/2;
-}
-if(global.MonitorW>=rm_wd*3 ){
-    surface_resize(application_surface,rm_wd*3,rm_hg*3);
-    global.Xoffset=(global.MonitorW-rm_wd*3)/2;
-    global.Yoffset=(global.MonitorH-rm_hg*3)/2;
-}
-if(global.MonitorW>=rm_wd*4 ){
-    surface_resize(application_surface,rm_wd*4,rm_hg*4);
-    global.Xoffset=(global.MonitorW-rm_wd*4)/2;
-    global.Yoffset=(global.MonitorH-rm_hg*4)/2;
-}
-if(global.MonitorW>=rm_wd*5 ){
-    surface_resize(application_surface,rm_wd*5,rm_hg*5);
-    global.Xoffset=(global.MonitorW-rm_wd*5)/2;
-    global.Yoffset=(global.MonitorH-rm_hg*5)/2;
-}
-}
-adjust = false;
+	}else {
+		scr_screen_res();
+		
+	}
+	
+	adjust = false;
 }
 
 if room == rm_dead and once == false{

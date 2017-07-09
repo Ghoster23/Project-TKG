@@ -8,4 +8,3 @@ if surface_exists(global.lighting) and (room != rm_menu_1 and room != rm_menu_2 
     global.lighting = surface_create(room_width, room_height);
     
 }
-

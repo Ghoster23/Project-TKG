@@ -97,7 +97,7 @@ while roomgenerated != roomstogenerate{
 	        instance_create_layer(gx+(global.roomwd/2),gy+(global.roomhg/2)+31,"Floor",obj_floor);
             
 	        ///Fill the room
-			global.ds_roomgrid[# 0, roomgenerated] = [c,r];
+			global.ds_roomgrid[# 0, roomgenerated] = [r,c];
 			global.ds_roomgrid[# 1, roomgenerated] = scr_roomgn(typeroom);
 			global.ds_roomgrid[# 2, roomgenerated] = false;
             

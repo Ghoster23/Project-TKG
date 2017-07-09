@@ -15,7 +15,7 @@ adjust = true;
 step_number = 0;
 
 //Particle System
-global.ps=part_system_create();
+global.ps = part_system_create();
 scr_part_fire_init();
 scr_part_smoke_init();
 scr_part_CHdirt_init();
@@ -33,4 +33,3 @@ surface_set_target(global.lighting);
 draw_clear_alpha(c_black,0);
 
 surface_reset_target();
-
