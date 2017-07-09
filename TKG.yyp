@@ -2151,6 +2151,14 @@
             }
         },
         {
+            "Key": "bcca9faf-3f95-421b-982d-77b6612cc8b9",
+            "Value": {
+                "id": "66b32770-14c0-4a10-b9bb-cf1e8e09290e",
+                "resourcePath": "objects\\obj_hspider\\obj_hspider.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "bd1ba7ca-71c9-489d-a147-a911dbdded65",
             "Value": {
                 "id": "25c45ec9-977c-45a2-add7-d40bcad69130",
