@@ -17,8 +17,8 @@ global.MonitorH = display_get_height();
 show_debug_message("MW" + string(global.MonitorW));
 show_debug_message("MH" + string(global.MonitorH));
 
-rm_wd = 544;
-rm_hg = 416;
+rm_wd = global.roomwd;
+rm_hg = global.roomhg;
 
 global.Xoffset=(global.MonitorW-rm_wd)/2;
 global.Yoffset=(global.MonitorH-rm_hg)/2;

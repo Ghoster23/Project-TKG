@@ -145,6 +145,6 @@ if once == false{
 	once = true;
 
 	instance_create_layer(0,0,"IF",obj_AI_controller);
-	instance_create_layer(0,0,"Instances",obj_minimap_controller);
+	instance_create_layer(0,0,"PS",obj_minimap_controller);
 }
 

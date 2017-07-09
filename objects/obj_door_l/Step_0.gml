@@ -1,7 +1,7 @@
 tpx = 0;
 tpy = 0;
-roomwd = 544;
-roomhg = 416;
+roomwd = global.roomwd;
+roomhg = global.roomhg;
 
 
 if(place_meeting(x,y,obj_body) && !place_meeting(x,y,obj_ppon) && global.lock == false && global.d_cd == false){
