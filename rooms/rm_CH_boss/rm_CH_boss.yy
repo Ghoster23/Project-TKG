@@ -32,7 +32,8 @@
         "d078110f-b2ae-4937-b10a-4f9982dbc2d8",
         "b95f3c3f-36ee-49c1-8961-5de6dde40a72",
         "c5eac341-335a-4152-83c7-827dce73641f",
-        "81c07724-f511-439a-b7d9-4e81918997aa"
+        "81c07724-f511-439a-b7d9-4e81918997aa",
+        "5419d0c0-8eba-4595-a858-8dcb3dcd0030"
     ],
     "layers": [
         {
@@ -107,7 +108,30 @@
             "userdefined_depth": true,
             "visible": true,
             "instances": [
-                
+                {
+                    "id": "5419d0c0-8eba-4595-a858-8dcb3dcd0030",
+                    "modelName": "GMRInstance",
+                    "mvc": "1.0",
+                    "ignore": false,
+                    "inheritItemSettings": false,
+                    "m_originalParentID": "00000000-0000-0000-0000-000000000000",
+                    "m_serialiseFrozen": false,
+                    "name": "inst_3FC0E4CA",
+                    "x": 96,
+                    "y": 32,
+                    "IsDnD": false,
+                    "colour": {
+                        "Value": 4294967295
+                    },
+                    "creationCodeFile": "",
+                    "creationCodeType": "",
+                    "inheritCode": false,
+                    "name_with_no_file_rename": "inst_3FC0E4CA",
+                    "objId": "c2b92cf6-721d-4c76-8ed3-3de10d92b01a",
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1
+                }
             ]
         },
         {
@@ -786,15 +810,15 @@
             "modelName": "GMRView",
             "mvc": "1.0",
             "hborder": 288,
-            "hport": 886,
+            "hport": 732,
             "hspeed": -1,
-            "hview": 443,
+            "hview": 356,
             "inherit": false,
-            "objId": "202cd182-de09-40aa-b199-91a913531090",
-            "vborder": 222,
+            "objId": "c2b92cf6-721d-4c76-8ed3-3de10d92b01a",
+            "vborder": 278,
             "visible": true,
             "vspeed": -1,
-            "wport": 1152,
+            "wport": 11152,
             "wview": 576,
             "xport": 0,
             "xview": 0,

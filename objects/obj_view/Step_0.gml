@@ -1,4 +1,4 @@
-if(obj_view.x == global.vfx && obj_view.y == global.vfy){
+if(obj_view.x == global.vfx && obj_view.y == global.vfy) and room == rm_level{
     speed = 0;
 }
 

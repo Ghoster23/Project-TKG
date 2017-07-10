@@ -16,11 +16,11 @@ if not global.pause {
 	        image_index = 2;
 	    }
 	
-		if(image_index == 1 and hp <= 100){
+		if(image_index == 2 and hp <= 100){
 	        image_index = 3;
 	    }
 	
-		if(image_index == 1 and hp <= 50){
+		if(image_index == 3 and hp <= 50){
 	        image_index = 4;
 	    }
     

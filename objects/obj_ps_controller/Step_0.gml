@@ -49,20 +49,6 @@ if surface_exists(global.lighting) and (room != rm_menu_1 and room != rm_menu_2 
     surface_reset_target();
 }
 
-if adjust == true{
-	if room == rm_menu_1 or room == rm_menu_2 or room == rm_chsl or room == rm_dead{
-	    surface_resize(application_surface, global.MonitorW,global.MonitorH);
-	    global.Xoffset=0;
-	    global.Yoffset=0;
-    
-	}else {
-		scr_screen_res();
-		
-	}
-	
-	adjust = false;
-}
-
 if room == rm_dead and once == false{
 once = true;
 //Particles

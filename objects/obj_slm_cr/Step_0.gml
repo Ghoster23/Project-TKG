@@ -39,7 +39,6 @@ if go and not global.pause{
                 state_change = false;
             }
             
-            //Don't go to far honey LOLS comentarios a manel
             if distance_to_point(ini_point_x,ini_point_y) <= 32{
             
                 if dir_change == true{
@@ -100,7 +99,6 @@ if go and not global.pause{
             alarm[4] = 20;
         }
     }
-    
     
     ///Die
     if(e_hp <= 0) and state != 2{

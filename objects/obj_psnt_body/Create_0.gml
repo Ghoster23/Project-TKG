@@ -1,7 +1,6 @@
 /// @description Inicialise the enemy
 event_inherited();
 instance_create_layer(x,y,layer,obj_psnt_head);
-image_speed=.4;
 solid = false;
 visible = false;
 trigger = false;
@@ -11,6 +10,7 @@ damaged = false;
 alt = 1;
 swing = false;
 go = false;
+prev_image_speed = 0;
 
 xx = x;
 yy = y;

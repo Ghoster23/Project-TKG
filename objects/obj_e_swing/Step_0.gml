@@ -6,7 +6,7 @@ if not global.pause {
     
 	}
 
-	if place_meeting(x,y,obj_body) and global.p_inv == false{
+	if place_meeting(x,y,obj_body) and not global.p_inv and not global.invuln{
 	    global.p_hp -= atk div global.p_def;
 	    global.p_inv = true;
 	}
