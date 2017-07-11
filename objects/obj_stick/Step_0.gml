@@ -1,28 +1,52 @@
 if not global.pause and instance_exists(owner){
-	if owner.state == 0{
-	    image_angle = owner.i_dir;
-	}else if owner.state != 0{
-	    image_angle = owner.dir;
+	if alarm_0 != -1{
+		alarm[0] = alarm_0;
+		alarm_0 = -1;
 	}
 	
-	if owner.state == 2 and owner.cd_swing == true{
+	if owner.state == 0{
+	    image_angle = owner.i_dir;
+		
+	}else if owner.state != 0{
+	    image_angle = owner.dir;
+		
+	}
+	
+	if owner.state == 2 and owner.swing == true{
 		image_blend = c_red;
+		
 	}else {
 		image_blend = c_white;
+		
 	}
 
 	if owner.state == 3{
 	    instance_destroy();
+		
 	}
 
 	//atacking
-	if owner.swing == true {
-	    image_xscale = -1*image_xscale;
-	    image_yscale = -1*image_yscale;
-	    instance_create_layer(x,y,layer,obj_e_swing);
-	    owner.swing = false;
+	if owner.swing == true and alarm[0] == -1{
+	    alarm[0] = 6;
+		tell = instance_create_layer(owner.head.x,owner.head.y - 24,"IF",obj_melee_tell);
+		
+		with tell {
+			owner = other.owner.head;
+		}
+		
 	}
 	
-}else if not instance_exists(owner){
-	instance_destroy();
+	if instance_exists(tell) and alarm[0] >= 3{
+		tell.image_xscale = 1 / (alarm[0] - 2);
+		tell.image_yscale = 1 / (alarm[0] - 2);
+			
+	}
+	
+}else {
+	if alarm[0] != -1{
+		alarm_0 = alarm[0];
+		alarm[0] = -1;
+		
+	}
+
 }

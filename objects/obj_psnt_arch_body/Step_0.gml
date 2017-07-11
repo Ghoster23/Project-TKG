@@ -19,6 +19,7 @@ if go and not global.pause{
     /// Enemy States
     if state != 3{
         if 80 < dis < 200 and not bl_sight{
+			image_speed = 0.4;
             state = 2;
         
         }
@@ -27,6 +28,7 @@ if go and not global.pause{
 
         }
         if dis >= 200 or bl_sight{
+			image_speed = 0.4;
             state = 1;
         }
     }
@@ -135,6 +137,10 @@ if go and not global.pause{
         state = 3;
         alarm[5] = 5;
     }
+	
+	if hspd == 0 and vspd == 0{
+		image_speed = 0;
+	}
 }
 
 if global.pause == true {

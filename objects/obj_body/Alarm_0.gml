@@ -6,11 +6,10 @@ if instance_exists(obj_sword_t)=false {
 }
 with obj_roll{
     instance_destroy();
-    global.invuln = false;
+    
 }
 
 state = scr_move_state;
-
+global.invuln = false;
 global.dash_cd = true;
 alarm[1] = 1 * room_speed;
-

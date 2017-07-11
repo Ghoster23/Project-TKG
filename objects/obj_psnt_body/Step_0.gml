@@ -13,19 +13,31 @@ if(place_meeting(x,y,obj_ppon)) and visible == false{
 ///Exist
 if go and not global.pause{
     visible = true;
+	
+	if swing == true{
+		image_speed = 0;
+	}
     
     /// Enemy States
-    if state != 3{
+    if state != 3 and not swing and alarm[2] == -1{
         if 40 < dis < 200{
+			image_speed = 0.4;
             state = 1;
         
         }
-        if dis <= 32 and not cd_swing{
+		
+		if dis <= 40 {
             state = 2;
+			image_speed = 0;
+			
         }
-        if dis >= 200{
+		
+		if dis >= 200{
+			image_speed = 0.4;
             state = 0;
+			
         }
+		
     }
     
     if p_state != state{
@@ -78,19 +90,20 @@ if go and not global.pause{
 			
         break;
         case 2:  //Attack the player
-			//path_end();
             hspd = 0;
             vspd = 0;
+			image_speed = 0;
 			
             if not cd_swing {
                 cd_swing = true;
-                alarm[2] = 30;
+                alarm[2] = 5;
                 
             }
         
         break;
         case 3:  //Dead State
             solid = false;
+			image_speed = 0;
             instance_create_layer(x,y,layer,obj_cadaver);
             
             with instance_nearest(x,y,obj_cadaver){
@@ -124,7 +137,7 @@ if go and not global.pause{
         damaged = true;
     }
     
-    if(place_meeting(x,y,obj_sword_t) and obj_sword_t.image_speed>0){
+    if(place_meeting(x,y,obj_sword_t) and obj_sword_t.phy_angular_velocity>0){
         e_hp -= global.p_satk div e_sdef;
         damaged = true;
     }
@@ -144,6 +157,7 @@ if go and not global.pause{
         alarm[5] = 5;
         
     }
+	
 }
 
 if global.pause == true {
@@ -154,7 +168,10 @@ if global.pause == true {
 		}
 	}
 	
-	image_speed = 0;
+	if image_speed != 0{
+		prev_image_speed = image_speed;
+		image_speed = 0;
+	}
 }
 
 if global.pause == false {
@@ -165,6 +182,9 @@ if global.pause == false {
 		}
 	}
 	
-	image_speed = 0.4;
+	if prev_image_speed != 0{
+		image_speed = prev_image_speed;
+		prev_image_speed = 0;
+	}
 
 }
