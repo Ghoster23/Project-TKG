@@ -1,20 +1,37 @@
 /// @description decide the state
 
-if state != 2{   //if not dead decide between state 0 or 1
+if state != 3{   //if not dead decide between state 0 or 1
 	//get dir of player;
 	action_dir=point_direction(x,y,obj_body.x,obj_body.y);
 	
-	if (dis >=0 and dis <=40){
-		state = 1;
-		show_debug_message("runing the alarm and state is 1");
+	if (dis >=0 and dis <=60){        //if player is in range
+		if state!=1{		          //and isnt already hiding 
+			state = 1;				
+			substate="hiding";        //hide
+			alarm[2]=room_speed*0.4;
+		}
+		
+    alarm[1]=room_speed*state_time;	  //if it is already hidding try later                          
+							 
+
     }
-	else{
-		state=0;
-		moved=false;
-		show_debug_message("runing the alarm and state is 1");
-		alarm[2]=room_speed*move_time; //alarm to say spider has stopped moving
+	else{					          //if player is not in range
+		if state == 1{		          //and spider is hiding
+			state = 2;                //come out
+			substate="nothing";		  //reset substate
+			alarm[3]=room_speed*0.4;
+		}
+		
+		else{				          //if spider is not hidding
+			state=0;                  //chase
+			moved=false;
+			
+			alarm[2]=room_speed*move_time; //alarm to say spider has stopped moving
+			
+			alarm[1]=room_speed*state_time;	//choose the state
+		}
 	}
 	
-	alarm[1]=room_speed*state_time;	//choose the state
 }
 
+ 

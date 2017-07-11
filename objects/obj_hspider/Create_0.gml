@@ -11,6 +11,7 @@ moved=false;
 //times
 move_time=0.7;
 state_time=1.5;
+hide_time=0.5;
 
 //Stats
 e_mhp = 20;
