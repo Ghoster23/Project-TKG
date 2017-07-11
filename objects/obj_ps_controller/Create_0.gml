@@ -16,6 +16,7 @@ step_number = 0;
 
 //Particle System
 global.ps = part_system_create();
+global.ps_if = part_system_create();
 scr_part_fire_init();
 scr_part_smoke_init();
 scr_part_CHdirt_init();
@@ -24,6 +25,7 @@ scr_part_vbits_init();
 scr_part_sflame_init();
 scr_part_trail_init();
 part_system_layer(global.ps,"BH");
+part_system_layer(global.ps_if,"IF");
 
 
 //Surface

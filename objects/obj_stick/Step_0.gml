@@ -20,25 +20,26 @@ if not global.pause and instance_exists(owner){
 		
 	}
 
-	if owner.state == 3{
+	if owner.state == 3 or not instance_exists(owner){
 	    instance_destroy();
 		
 	}
 
 	//atacking
-	if owner.swing == true and alarm[0] == -1{
-	    alarm[0] = 6;
-		tell = instance_create_layer(owner.head.x,owner.head.y - 24,"IF",obj_melee_tell);
+	if owner.swing == true and alarm[0] == -1 and instance_exists(owner) and instance_exists(owner.head){
+	    alarm[0] = 9;
 		
+		tell = instance_create_layer(owner.head.x,owner.head.y - 24,"IF",obj_melee_tell);
+			
 		with tell {
 			owner = other.owner.head;
 		}
 		
 	}
 	
-	if instance_exists(tell) and alarm[0] >= 3{
-		tell.image_xscale = 1 / (alarm[0] - 2);
-		tell.image_yscale = 1 / (alarm[0] - 2);
+	if instance_exists(tell) and alarm[0] >= 5{
+		tell.image_xscale = 1 / (alarm[0] - 4);
+		tell.image_yscale = 1 / (alarm[0] - 4);
 			
 	}
 	

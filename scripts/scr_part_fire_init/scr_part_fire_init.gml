@@ -1,6 +1,6 @@
 {
     global.pt_fire=part_type_create();
-    var pt=global.pt_fire
+    var pt=global.pt_fire;
     
     
     part_type_shape(pt,pt_shape_disk);

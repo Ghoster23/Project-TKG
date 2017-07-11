@@ -4,7 +4,7 @@ if surface_exists(global.lighting) and (room != rm_menu_1 and room != rm_menu_2 
     
     //Make it dark
     draw_set_colour(c_black);
-    draw_set_alpha(0.2);
+    draw_set_alpha(1);
     draw_rectangle(0,0,room_width,room_height,0);
     
     //Light sources
@@ -12,7 +12,7 @@ if surface_exists(global.lighting) and (room != rm_menu_1 and room != rm_menu_2 
     ///Torch
     gpu_set_blendmode(bm_subtract);
     draw_set_colour(c_white);
-    draw_set_alpha(0.3);
+    draw_set_alpha(1);
     
     with obj_torch{
         if lit == true{
@@ -57,6 +57,7 @@ part_type_destroy(global.pt_cbits);
 part_type_destroy(global.pt_smoke);
 part_type_destroy(global.pt_fire);
 part_system_destroy(global.ps);
+part_system_destroy(global.ps_if);
 
 //Surface
 if surface_exists(global.lighting){

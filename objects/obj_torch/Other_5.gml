@@ -1,2 +1,1 @@
-part_emitter_destroy(global.ps,global.pt_fire);
-
+part_emitter_destroy(global.ps_if,global.pt_fire);

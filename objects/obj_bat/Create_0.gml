@@ -12,6 +12,8 @@ shift = 0;
 
 //Start
 go = false;
+offset = true;
+offs = 32;
 
 //Stats
 e_mhp = 15;

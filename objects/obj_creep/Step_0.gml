@@ -1,5 +1,5 @@
 //Poison status
-if place_meeting(x,y,obj_body) and global.st_poison == false and cr_cd == false and global.pause == false and global.invuln{
+if place_meeting(x,y,obj_body) and not global.st_poison and not cr_cd and not global.pause and not global.invuln and not place_meeting(x,y,obj_roll){
     global.st_poison = true;
     global.st_poison_d = 15;
     cr_cd = true;

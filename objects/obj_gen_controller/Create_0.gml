@@ -27,8 +27,8 @@ left = false;
 
 ///Base Room
 instance_create_layer(gx+(global.roomwd div 2),gy+(global.roomhg div 2),"IF",obj_view);
-instance_create_layer(gx+global.roomwd/2+64,gy+32,"Instances",obj_torch);
-instance_create_layer(gx+global.roomwd/2-96,gy+32,"Instances",obj_torch);
+instance_create_layer(gx+global.roomwd/2+64,gy+48,"Instances",obj_torch);
+instance_create_layer(gx+global.roomwd/2-96,gy+48,"Instances",obj_torch);
 instance_create_layer(gx,gy,"Instances",obj_wall_left);
 instance_create_layer(gx,gy,"Instances",obj_wall_up);
 instance_create_layer(gx,gy+global.roomhg-32,"Instances",obj_wall_down);

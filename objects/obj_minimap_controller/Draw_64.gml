@@ -2,13 +2,15 @@
 if room == rm_level and global.pause == true and obj_ig_menu_controller.state == "mmap"{
 	var i = 0;
 	
-	xx = global.roomwd * global.current_column + 64;
-	yy = global.roomhg * global.current_row + 64;
-
-	rw = 67;
-	rh = 35;
+	m = 4.05;
 	
-	draw_sprite( spr_minimap, 0, xx, yy);
+	xx = 64 * m;
+	yy = 64 * m;
+
+	rw = 67 * m;
+	rh = 35 * m;
+	
+	draw_sprite_ext( spr_minimap, 0, xx, yy, m, m, 0, c_white, 1);
 	
 	///Check all the rooms
 	for(i = 0; i < 17; i++){
@@ -42,7 +44,7 @@ if room == rm_level and global.pause == true and obj_ig_menu_controller.state ==
 				break;
 			}
 			
-			draw_sprite(spr_mm_rm, type, xx + 4 + coords[1] * rw, yy + 4 + coords[0] * rh);
+			draw_sprite_ext(spr_mm_rm, type, xx + 4 * m + coords[1] * rw, yy + 4 * m + coords[0] * rh, m, m, 0, c_white, 1);
 		}
 	}
 
