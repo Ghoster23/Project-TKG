@@ -144,9 +144,8 @@ if go and not global.pause{
     
     if damaged == true{
         if flash == false{
-            alarm[4] = 20;
+            alarm[4] = room_speed*0.08;
             flash = true;
-            image_blend = c_red;
         }
     }
     

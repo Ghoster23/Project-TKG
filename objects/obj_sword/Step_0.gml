@@ -7,7 +7,7 @@ global.thrown=false;
 //atacking
 if (attack_key) and allow = true {
     allow = false;
-    alarm[1] = 0.5 * room_speed; 
+    alarm[1] = 0.4 * room_speed; 
     image_xscale = -1*image_xscale;
     image_yscale = -1*image_yscale;
     instance_create_layer(x, y, "IF",obj_swing); 

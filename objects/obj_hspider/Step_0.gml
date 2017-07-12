@@ -53,31 +53,111 @@ if go and not global.pause{
 			else if substate=="shooting"{
 				image_xscale=1
 				sprite_index=spr_hspider_shoot;
-				image_speed=1;
 			}
 			else{
 				image_speed=0;
 			}
 		
-			show_debug_message("the spider is in state 1");
-			show_debug_message(substate);
 			
 		break;
 		
 		case 2:  //un-hide
 			image_xscale=1
-			sprite_index=spr_hspider_hide;
-			image_speed=-1.1;
+			sprite_index=spr_hspider_unhide;
+			image_speed=1.1;
 			
-			
-			show_debug_message("the spider is in state 2");
 		
 		break; 
 		
 		case 3: //ded
 		
-			show_debug_message("the spider is in state ded");
+		solid = false;
+			image_speed = 0;
+            instance_create_layer(x,y,layer,obj_cadaver);
+            
+            with instance_nearest(x,y,obj_cadaver){
+                sprite_index = spr_peasent_m_s;
+                image_index = 5;
+                image_speed = 0;
+                image_blend = c_gray;
+                image_angle -= 90;
+                phy_rotation = irandom(0);
+            }
+            
+            if((irandom(99) + 1) <= 10){
+                instance_create_layer(x,y,layer,obj_hheart);
+                
+            }else if((irandom(99) + 1) == 1){
+                instance_create_layer(x,y,layer,obj_fheart);
+                
+            }
+            
+		instance_destroy();
 		break;
+		
+		case "pause":
+		
+		break;
+	}
+	
+	///Die
+    if(e_hp <= 0) and state != 3{
+        global.combat -= 1;
+        state = 3;
+        alarm[5] = 5;
+        
+    }
+	
+
+	///Get Damaged
+    if(place_meeting(x,y,obj_swing) and state==0){
+        e_hp -= global.p_atk div e_def;
+        damaged = true;
+    }
+    
+    if(place_meeting(x,y,obj_sword_t) and obj_sword_t.phy_angular_velocity>0) and state == 0{
+        e_hp -= global.p_satk div e_sdef;
+        damaged = true;
+    }
+    
+	if place_meeting(x,y,obj_explosion){
+		e_hp -= global.p_satk div e_sdef;
+		damaged = true;
+	}
+	
+    if damaged == true{
+        flash=true;
+		damaged=false;
+		alarm[5]=room_speed*0.08;
+    }
+
+}
+
+if global.pause == true {
+	for(i = 0; i < 6; i += 1){
+		if alarm[i] != -1{
+			alarms[i] = alarm[i];
+			alarm[i] = -1;
+		}
+	}
+	
+	if image_speed != 0{
+		prev_image_speed = image_speed;
+		image_speed = 0;
+	}
+}
+
+if global.pause == false {
+	for(i = 0; i < 6; i += 1){
+		if alarms[i] != -1{
+			alarm[i] = alarms[i];
+			alarms[i] = -1;
+		}
+	}
+	
+	if prev_image_speed != 0{
+		image_speed = prev_image_speed;
+		prev_image_speed = 0;
 	}
 
 }
