@@ -35,6 +35,19 @@ if surface_exists(global.lighting) and (room != rm_menu_1 and room != rm_menu_2 
         }
     }
     
+	///explosion
+	gpu_set_blendmode(bm_subtract);
+    draw_set_colour(c_white);
+    draw_set_alpha(1);
+    
+    with obj_explosion{
+        if blast == true{
+		
+            draw_circle(x,y,50,false);
+            draw_circle(x,y,50,false);
+        }
+    }
+	
     //Resets
     gpu_set_blendmode(bm_normal);
     draw_set_alpha(1);

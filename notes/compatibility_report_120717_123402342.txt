@@ -1,0 +1,83 @@
+Converting GML script : ${project_dir}\scripts\trail_calculate\trail_calculate.gml
+Converted description : /// @description trail_calculate(length)/// @function trail_calculate
+/// @param length
+
+Converting GML script : ${project_dir}\scripts\draw_trail_ext\draw_trail_ext.gml
+Converted description : /// @description draw_trail_ext(Width,Color,Sprite,Slim,Alpha)/// @function draw_trail_ext
+/// @param Width
+/// @param Color
+/// @param Sprite
+/// @param Slim
+/// @param Alpha
+
+Converting GML script : ${project_dir}\objects\obj_trail1\Create_0.gml
+Converted description : /// @description Setting the movement variables and the alarm to change them
+
+Converting GML script : ${project_dir}\objects\obj_trail1\Alarm_0.gml
+Converted description : /// @description Changing the movement variables and restarting the alarm
+
+Converting GML script : ${project_dir}\objects\obj_trail1\Other_0.gml
+Converted description : /// @description Preventing the object to move outside the room
+
+Converting GML script : ${project_dir}\objects\obj_trail1\Draw_0.gml
+Converted description : /// @description Drawing the trail
+
+Converting GML script : ${project_dir}\objects\obj_trail_ext1\Create_0.gml
+Converted description : /// @description Setting the movement variables and the alarm to change them
+
+Converting GML script : ${project_dir}\objects\obj_trail_ext1\Alarm_0.gml
+Converted description : /// @description Changing the movement variables and restarting the alarm
+
+Converting GML script : ${project_dir}\objects\obj_trail_ext1\Other_0.gml
+Converted description : /// @description Preventing the object to move outside the room
+
+Converting GML script : ${project_dir}\objects\obj_trail_ext1\Draw_0.gml
+Converted description : /// @description Drawing the trail
+
+Converting GML script : ${project_dir}\objects\obj_trail2\Create_0.gml
+Converted description : /// @description Setting the movement variables and the alarm to change them
+
+Converting GML script : ${project_dir}\objects\obj_trail2\Alarm_0.gml
+Converted description : /// @description Changing the movement variables and restarting the alarm
+
+Converting GML script : ${project_dir}\objects\obj_trail2\Other_0.gml
+Converted description : /// @description Preventing the object to move outside the room
+
+Converting GML script : ${project_dir}\objects\obj_trail2\Draw_0.gml
+Converted description : /// @description Drawing the trail
+
+Converting GML script : ${project_dir}\objects\obj_trail_ext2\Create_0.gml
+Converted description : /// @description Setting the movement variables and the alarm to change them
+
+Converting GML script : ${project_dir}\objects\obj_trail_ext2\Alarm_0.gml
+Converted description : /// @description Changing the movement variables and restarting the alarm
+
+Converting GML script : ${project_dir}\objects\obj_trail_ext2\Other_0.gml
+Converted description : /// @description Preventing the object to move outside the room
+
+Converting GML script : ${project_dir}\objects\obj_trail_ext2\Draw_0.gml
+Converted description : /// @description Drawing the trail
+
+Converting GML script : ${project_dir}\objects\obj_spawner\Mouse_53.gml
+Converted description : /// @description On click a random instance of any of the four objects that draw trails on this example will be created
+
+Converting GML script : ${project_dir}\scripts\trail_init\trail_init.gml
+Converted description : /// @description trail_init()/// @function trail_init
+
+Resource name collision 'draw_trail' already exists, renamed to 'draw_trail_scripts'
+Converting GML script : ${project_dir}\scripts\draw_trail_scripts\draw_trail_scripts.gml
+Converted description : /// @description draw_trail(length,width,color,sprite,slim,alpha)/// @function draw_trail
+/// @param length
+/// @param width
+/// @param color
+/// @param sprite
+/// @param slim
+/// @param alpha
+
+Converting GML script : ${project_dir}\scripts\trail_destroy\trail_destroy.gml
+Converted description : /// @description trail_destroy()/// @function trail_destroy
+
+added compatibility script instance/instance_create.gml
+added compatibility script object/object_get_depth.gml
+added compatibility script texture/texture_set_repeat.gml
+added compatibility script __global_object_depths.gml

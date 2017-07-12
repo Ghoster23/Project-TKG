@@ -583,6 +583,14 @@
             }
         },
         {
+            "Key": "2727deb0-60c4-49a2-9b47-1408d10e217e",
+            "Value": {
+                "id": "aaa17fdd-f843-41e1-84ee-b7997d97c1bf",
+                "resourcePath": "extensions\\Draw_Trail\\Draw_Trail.yy",
+                "resourceType": "GMExtension"
+            }
+        },
+        {
             "Key": "282fe1ce-6335-47fe-827e-8ac151b161fb",
             "Value": {
                 "id": "5262beed-d511-4b76-8d9c-384be7250f41",
@@ -1196,6 +1204,14 @@
                 "id": "cf6af03a-a551-4890-9317-6b21eeac0499",
                 "resourcePath": "objects\\obj_menu2_controls2\\obj_menu2_controls2.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "5e916cc3-c062-49be-bf83-22b0d73e0722",
+            "Value": {
+                "id": "2a31e374-510c-4575-afd1-c076a5fbf617",
+                "resourcePath": "sprites\\spr_explosion_damage\\spr_explosion_damage.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1900,6 +1916,14 @@
                 "id": "d371bab2-8ba0-44e4-abc6-fa2ab76e5ae5",
                 "resourcePath": "sprites\\spr_peasent_h_s\\spr_peasent_h_s.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a290bcca-268e-457c-9737-794372e23b19",
+            "Value": {
+                "id": "9cbb53ff-2aa8-43d4-b139-b1cca09897b9",
+                "resourcePath": "notes\\compatibility_report_120717_123402342.yy",
+                "resourceType": "GMNotes"
             }
         },
         {
@@ -2659,6 +2683,14 @@
             "Value": {
                 "id": "53b4e44e-bade-4bd2-b6d8-0527cf90c896",
                 "resourcePath": "objects\\obj_ig_menu_controller\\obj_ig_menu_controller.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e0a88bd9-627a-4dd1-851b-57faf6c3ce53",
+            "Value": {
+                "id": "3b5df1ae-595f-42e4-92b3-e789a8660fbd",
+                "resourcePath": "objects\\obj_bomb_damage\\obj_bomb_damage.yy",
                 "resourceType": "GMObject"
             }
         },

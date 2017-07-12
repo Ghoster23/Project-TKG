@@ -10,7 +10,8 @@ if global.pause!=true{
 	if place_meeting(x,y,obj_swing){
 		speed=0;
 		dir=point_direction(x,y,obj_body.x,obj_body.y)+180;
-		physics_apply_impulse(x, y, lengthdir_x(3, dir ),lengthdir_y(3, dir ));
+		flash=true;
+		alarm[2]=room_speed*0.06;
 
 	}
 }
