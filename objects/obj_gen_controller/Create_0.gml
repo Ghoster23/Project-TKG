@@ -33,7 +33,7 @@ instance_create_layer(gx,gy,"Instances",obj_wall_left);
 instance_create_layer(gx,gy,"Instances",obj_wall_up);
 instance_create_layer(gx,gy+global.roomhg-32,"Instances",obj_wall_down);
 instance_create_layer(gx+global.roomwd-32,gy,"Instances",obj_wall_right);
-instance_create_layer(gx+global.roomwd/2,gy+global.roomhg/2+31,"Instances",obj_floor);
+instance_create_layer(gx+global.roomwd/2,gy+global.roomhg/2+31,"Floor",obj_floor);
 
 //Player
 instance_create_layer(gx+global.roomwd/2,gy+global.roomhg/2,"Instances",obj_body);

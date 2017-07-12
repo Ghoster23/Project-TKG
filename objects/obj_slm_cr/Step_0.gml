@@ -115,12 +115,10 @@ if go and not global.pause{
     }
 
     ///Creep
-	/*
-    signal_x = signal[irandom(1)];
-    signal_y = signal[irandom(1)];
-    instance_create_layer(x+random(5)*signal_x,y+random(5)*signal_y,"BH",obj_creep);
-	*/
-	ds_grid_set_region(global.fluid_grid,(x-16) div 8,(y+3) div 8,(x+15) div 8,(y+14) div 8,30);
+	rmx = x mod global.roomwd;
+	rmy = y mod global.roomhg;
+	ds_grid_set_region(global.fluid_grid,(rmx - 16) div 8,(rmy + 3) div 8,(rmx + 15) div 8,(rmy + 14) div 8,30);
+	
 }
 
 if global.pause == true{
