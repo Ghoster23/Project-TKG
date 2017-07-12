@@ -2,7 +2,7 @@
 if room == rm_level and global.pause == true and obj_ig_menu_controller.state == "mmap"{
 	var i = 0;
 	
-	m = 4.05;
+	m = display_get_gui_width() / global.roomwd;
 	
 	xx = 64 * m;
 	yy = 64 * m;
@@ -40,7 +40,7 @@ if room == rm_level and global.pause == true and obj_ig_menu_controller.state ==
 					type = 1;
 				break;
 				case "?":
-					type = 0;
+					type = 4;
 				break;
 			}
 			

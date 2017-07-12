@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "049d896c-b3fe-4db2-809e-bc20c1e834dc",
+            "Value": {
+                "id": "8f231aa7-c432-4038-b6cd-03b1995e0610",
+                "resourcePath": "objects\\obj_floor_fluid_controller\\obj_floor_fluid_controller.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "04ea462f-5217-46df-85ae-76fc2c0bdb5f",
             "Value": {
                 "id": "bb32c90c-7818-477d-95f6-798de645c905",
