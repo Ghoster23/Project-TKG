@@ -591,6 +591,14 @@
             }
         },
         {
+            "Key": "26e709b0-2518-40b1-a792-468707e87378",
+            "Value": {
+                "id": "99210dd4-f837-4a40-bc37-0a373d227804",
+                "resourcePath": "tilesets\\tileset1\\tileset1.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "2727deb0-60c4-49a2-9b47-1408d10e217e",
             "Value": {
                 "id": "aaa17fdd-f843-41e1-84ee-b7997d97c1bf",
@@ -884,6 +892,14 @@
                 "id": "408bfe51-cf2d-486c-91a5-5119b673a578",
                 "resourcePath": "sprites\\spr_torch\\spr_torch.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "43e92121-66ff-4ca0-a864-5ac52130fefb",
+            "Value": {
+                "id": "836ddf01-119a-4b2f-bdd2-eec341997b85",
+                "resourcePath": "scripts\\scr_fluid_tile\\scr_fluid_tile.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2215,6 +2231,14 @@
             }
         },
         {
+            "Key": "ba9b4af9-b93a-4979-ac9f-5516ca44bcc9",
+            "Value": {
+                "id": "63a38bb8-9b2a-4378-b7d4-34baf908cca8",
+                "resourcePath": "sprites\\spr_slm_creep_\\spr_slm_creep_.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bbadc0d7-a5fe-4e5e-965b-a09a76020ddc",
             "Value": {
                 "id": "c8df8312-8de7-4a44-8470-643490f4721a",
@@ -2559,6 +2583,14 @@
             }
         },
         {
+            "Key": "d29e0e67-6622-4ec6-9915-77426c89d833",
+            "Value": {
+                "id": "dc5a8bf5-5732-483f-b661-d078b48a374b",
+                "resourcePath": "tilesets\\tl_creep\\tl_creep.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "d2e35603-16c1-4b18-8bd4-d36002699a0c",
             "Value": {
                 "id": "4abac6be-d42b-4c31-b2fe-161bc6d2ed77",
@@ -2652,6 +2684,14 @@
                 "id": "f3f35a8c-ef48-4aa8-bcac-5cc6ca6f8117",
                 "resourcePath": "objects\\obj_skull_fl_n\\obj_skull_fl_n.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "dbb0b5a9-995a-4864-b902-483624d35043",
+            "Value": {
+                "id": "af762b15-2907-486d-a0d2-b7eb5e1fa6f9",
+                "resourcePath": "sprites\\spr_slm_creep\\spr_slm_creep.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3086,6 +3126,7 @@
         "bbadc0d7-a5fe-4e5e-965b-a09a76020ddc",
         "5585f984-692e-42d4-8cef-84c5dd87ca43",
         "1d79937b-1c36-469a-96d3-e40d79ca0025",
+        "43e92121-66ff-4ca0-a864-5ac52130fefb",
         "31655573-06fa-4766-988e-0de279a78b7e",
         "063a1891-e073-4594-8f5d-a53fe1f1a34b"
     ],

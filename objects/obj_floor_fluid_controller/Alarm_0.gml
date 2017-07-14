@@ -1,11 +1,14 @@
 /// @description Insert description here
 switch type {
 	case 0:
+		return;
 	break;
 	//Slime creep
 	case 1:
-		global.st_poison = true;
-		global.st_poison_d = 15;
+		if global.st_poison_d == 0{
+			global.st_poison = true;
+			global.st_poison_d = 15;
+		}
 				
 	break;
 	//Water

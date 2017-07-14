@@ -12,29 +12,26 @@ if room == rm_level {
 for(i = 0; i < ds_grid_width(global.fluid_grid); i++){
 	for(j = 0; j < ds_grid_height(global.fluid_grid); j++){
 		var val = ds_grid_get(global.fluid_grid,i,j);
-		
+				
 		//What fluid is it
-		if val != 0{
-			if val <= 30{
-				draw_set_color(c_lime);
-			}else if val <= 60{
-				draw_set_color(c_aqua);
-			}else if val >= 90{
-				draw_set_color(c_red);
-			}
+		if 0 < val < 30 {
+			draw_set_color(c_lime);
 		}
-		
+				
 		//Ticks
-		if not global.pause {
+		if not global.pause and val > 0{
 			val -= 0.1;
 		}
 		
 		//Opacity
-		op = (val mod 30 - 5) / 30;
+		op = (val mod 30) / 30;
 		
-		if val > 0{
+		if val != 0{
 			draw_set_alpha(op);
-			draw_rectangle(off_x + i*8,off_y + j*8,off_x + (i+1)*8,off_y + (j+1)*8,false);
+			draw_circle(off_x + i*8 + 4, off_y + j*8, sqrt(32), false);
+			draw_circle(off_x + i*8, off_y + j*8 + 4, sqrt(32), false);
+			draw_circle(off_x + i*8 + 8, off_y + j*8 + 4, sqrt(32), false);
+			draw_circle(off_x + i*8 + 4, off_y + j*8 + 8, sqrt(32), false);
 			
 			ds_grid_set(global.fluid_grid,i,j,val);
 		

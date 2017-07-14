@@ -117,8 +117,10 @@ if go and not global.pause{
     ///Creep
 	rmx = x mod global.roomwd;
 	rmy = y mod global.roomhg;
-	ds_grid_set_region(global.fluid_grid,(rmx - 16) div 8,(rmy + 3) div 8,(rmx + 15) div 8,(rmy + 14) div 8,30);
 	
+	if (x div global.roomwd == global.current_column and y div global.roomhg == global.current_row and room == rm_level) or room != rm_level{
+		ds_grid_set_region(global.fluid_grid,(rmx - 16) div 8,(rmy + 3) div 8,(rmx + 15) div 8,(rmy + 14) div 8,30);
+	}
 }
 
 if global.pause == true{
