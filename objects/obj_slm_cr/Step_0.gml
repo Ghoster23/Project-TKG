@@ -119,7 +119,8 @@ if go and not global.pause{
 	rmy = y mod global.roomhg;
 	
 	if (x div global.roomwd == global.current_column and y div global.roomhg == global.current_row and room == rm_level) or room != rm_level{
-		ds_grid_set_region(global.fluid_grid,(rmx - 16) div 8,(rmy + 3) div 8,(rmx + 15) div 8,(rmy + 14) div 8,30);
+		ds_grid_set_region(global.fluid_grid,(rmx - 16) div 4,(rmy + 3) div 4,(rmx + 15) div 4,(rmy + 14) div 4,30);
+		ds_grid_set_region(global.fluid_grid,((rmx - 16) + 4) div 4,((rmy + 3) - 4) div 4,(rmx + 15 - 4) div 4,(rmy + 14 + 4) div 4,30);
 	}
 }
 

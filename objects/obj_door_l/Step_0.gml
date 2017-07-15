@@ -4,7 +4,7 @@ roomwd = global.roomwd;
 roomhg = global.roomhg;
 
 
-if(place_meeting(x,y,obj_body) && !place_meeting(x,y,obj_ppon) && global.lock == false && global.d_cd == false){
+if(place_meeting(x,y,obj_body) && !place_meeting(x,y,obj_ppon) && global.lock == false && global.d_cd == false and obj_view.stopped){
     tpx = (obj_body.x + (32 * 3.5));
     tpy = obj_body.y;
 	global.current_column--;

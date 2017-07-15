@@ -2,7 +2,7 @@
 
 //Update fluid type with which player is colliding
 if instance_exists(obj_body) {
-	val = ds_grid_get(global.fluid_grid,(obj_body.x mod global.roomwd) div 8,(obj_body.y mod global.roomhg + 10) div 8);
+	val = ds_grid_get(global.fluid_grid,(obj_body.x mod global.roomwd) div 4,(obj_body.y mod global.roomhg + 10) div 4);
 	
 }
 

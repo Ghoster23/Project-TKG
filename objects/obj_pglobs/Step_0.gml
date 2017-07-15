@@ -57,7 +57,7 @@ if(global.p_hp == 0 && instance_exists(obj_gui)){
 if status_check == true{
     if global.st_poison == true and global.st_poison_d > 0{
         global.p_hp -= 1;
-        global.st_poison_d -= 5;
+        global.st_poison_d -= 3;
         
         if global.st_poison_d <= 0{
             global.st_poison = false;

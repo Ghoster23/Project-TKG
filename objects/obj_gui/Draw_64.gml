@@ -1,4 +1,8 @@
-draw_sprite_ext(spr_gui,image_index,0,0,3,3,0,c_white,1);
+if not global.st_poison{
+	draw_sprite_ext(spr_gui,image_index,0,0,3,3,0,c_white,1);
+}else {
+	draw_sprite_ext(spr_gui,image_index,0,0,3,3,0,c_green,1);
+}
 
 draw_set_colour(c_white);
 draw_set_font(font0);
