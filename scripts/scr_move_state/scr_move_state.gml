@@ -56,3 +56,13 @@ if (hspd > 0) {
     sprite_index = spr_body;
     image_xscale = -1;
 }
+
+//footstep sound
+if (hspd!=0 or vspd!=0){
+	global.walking=true;
+	
+}
+
+if (hspd==0 and vspd==0){
+	global.walking=false;
+}

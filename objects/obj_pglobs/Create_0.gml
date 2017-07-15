@@ -4,6 +4,7 @@ global.bk = false;
 global.combat = 0;
 once = false;
 alarm_2 = false;
+shout=true;
 
 for(i = 0; i < 8; i += 1){
     for(j = 0; j < 8; j += 1){

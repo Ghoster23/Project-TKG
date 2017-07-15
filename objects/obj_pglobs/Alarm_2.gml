@@ -1,7 +1,7 @@
 ///@description Damage flash (white)
 alarm_2 = false;
 global.p_inv = false;
-
+shout=true;
 with(obj_body){
     image_blend = c_white;
 }

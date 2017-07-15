@@ -48,3 +48,9 @@ else if rotacao < 315{
     }                     
 } 
 
+//sound
+if global.walking==true{
+	if !audio_is_playing(snd_footstep){
+		scr_sound(snd_footstep);
+	}
+}

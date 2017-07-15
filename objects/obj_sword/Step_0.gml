@@ -11,6 +11,7 @@ if (attack_key) and allow = true {
     image_xscale = -1*image_xscale;
     image_yscale = -1*image_yscale;
     instance_create_layer(x, y, "IF",obj_swing); 
+	scr_sound(snd_sword_slash);
 }
 
 if (throw_key) {
