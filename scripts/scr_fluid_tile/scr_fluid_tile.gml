@@ -15,67 +15,108 @@ ad = 0;
 
 //Adjacents
 ///Up
-if global.fluid_grid[# gx, gy - 1] == type {
+if global.fluid_grid[# gx, gy - 1] {
 	u = true;
 	ad ++;
 }
 
 ///Up and Right
-if global.fluid_grid[# gx + 1, gy - 1] == type {
+if global.fluid_grid[# gx + 1, gy - 1] {
 	u_r = true;
 	ad ++;
 }
 
 ///Right
-if global.fluid_grid[# gx + 1, gy] == type {
+if global.fluid_grid[# gx + 1, gy] {
 	r = true;
 	ad ++;
 }
 
 ///Down and Right
-if global.fluid_grid[# gx + 1, gy + 1] == type {
+if global.fluid_grid[# gx + 1, gy + 1] {
 	d_r = true;
 	ad ++;
 }
 
 ///Down
-if global.fluid_grid[# gx, gy + 1] == type {
+if global.fluid_grid[# gx, gy + 1] {
 	d = true;
 	ad ++;
 }
 
 ///Down and Left
-if global.fluid_grid[# gx - 1, gy + 1] == type {
+if global.fluid_grid[# gx - 1, gy + 1] {
 	d_l = true;
 	ad ++;
 }
 
 ///Left
-if global.fluid_grid[# gx - 1, gy] == type {
+if global.fluid_grid[# gx - 1, gy] {
 	l = true;
 	ad ++;
 }
 
 ///Up and Left
-if global.fluid_grid[# gx - 1, gy - 1] == type {
+if global.fluid_grid[# gx - 1, gy - 1] {
 	u_l = true;
 	ad ++;
 }
 
 ///Determine sprite
-if (8 * d) + (4 * l) + (2 * u) + r == 0 and (u_l or u_r or d_l or d_r){
+if ad > 5 {
+	if ad >= 6 and not (u and r and l and d){
+		if not u{
+			return 13;
+		}
+		if not r{
+			return 14;
+		}
+		if not l{
+			return 11;
+		}
+		if not d{
+			return 7;
+		}
+	}
 	if not u_l{
-		return 14;
+		if not u{
+			return 13;
+		}
+		if not l{
+			return 11;
+		}
+		
+		return 18;
 	}
 	if not u_r{
-		return 13;
+		if not u{
+			return 13;
+		}
+		if not r{
+			return 14;
+		}
+		return 19;
 	}
 	if not d_l{
-		return 10;
+		if not d{
+			return 7;
+		}
+		if not l{
+			return 11;
+		}
+		return 17;
 	}
 	if not d_r{
-		return 11;
+		if not d{
+			return 7;
+		}
+		if not r{
+			return 14;
+		}
+		return 16;
 	}
+
+	return 15;
 }else {
 	return (8 * d) + (4 * l) + (2 * u) + r;
 }

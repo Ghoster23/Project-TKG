@@ -60,8 +60,18 @@ if go and not global.pause{
             
         break;
         case 1:  //Go after the player
-            phy_position_x += sign(obj_body.x - x)*e_spd;
-            phy_position_y += sign(obj_body.y - y)*e_spd;
+			scr_define_path(self, obj_body);
+			path = global.ai_path;
+			
+			dir = point_direction(x,y,path_get_point_x(path,2),path_get_point_y(path,2));
+			
+            //Get hspd and vspd
+            hspd = lengthdir_x(e_spd,dir);
+            vspd = lengthdir_y(e_spd,dir);
+   
+            //Move
+            phy_position_x += hspd;
+            phy_position_y += vspd;
             
         break;
         case 2:  //Dead state

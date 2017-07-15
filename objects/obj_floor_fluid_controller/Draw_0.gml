@@ -29,7 +29,7 @@ for(i = 0; i < ds_grid_width(global.fluid_grid); i++){
 			}
 		
 			//Opacity
-			op = (val mod 30) / 30;
+			op = (val mod 30) / 60;
 		
 			draw_set_alpha(op);
 			draw_sprite_ext(sprite,scr_fluid_tile(i,j),off_x + i * 4,off_y + j * 4,1,1,0,c_white,op);
