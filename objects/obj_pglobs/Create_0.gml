@@ -1,4 +1,5 @@
 global.d_cd = false;
+global.pause = false;
 global.brooma = false;
 global.bk = false;
 global.combat = 0;

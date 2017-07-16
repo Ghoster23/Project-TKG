@@ -11,15 +11,13 @@ if surface_exists(global.lighting) and (room != rm_menu_1 and room != rm_menu_2 
     
     ///Torch
     gpu_set_blendmode(bm_subtract);
-    draw_set_colour(c_white);
-    draw_set_alpha(1);
     
     with obj_torch{
         if lit == true{
-            var a = round(sin(o));
+            var a = sin(o) * 0.01;
             
-            draw_sprite(spr_torch_light,dir,x+16,y+16+r);
-            draw_sprite(spr_torch_light_s,dir,x+16,y+16+r);
+            draw_sprite_ext(spr_torch_light,0,x+16,y+16,1+a,1+a,0,c_white,1);
+            
         }
     }
     
