@@ -44,13 +44,3 @@ if global.pause == false {
 	}
 
 }
-
-//will need to be moved eventually i think
-if global.pause==true{
-	physics_pause_enable(true);
-}
-
-if global.pause==false{
-	physics_pause_enable(false);
-}
-//-----------------------------------------

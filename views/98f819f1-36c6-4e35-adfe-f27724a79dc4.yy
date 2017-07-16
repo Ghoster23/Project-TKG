@@ -9,7 +9,8 @@
         "d681bbac-ded4-491a-a769-6cce87156b2d",
         "44a51968-9ab2-489e-a900-d7493c698868",
         "b62a59cc-4642-4ff7-84b8-00ea5bfddff3",
-        "50ae1a37-8001-447d-87fd-2086ec33c808"
+        "50ae1a37-8001-447d-87fd-2086ec33c808",
+        "8506dae9-303b-4805-911b-0a13389397fe"
     ],
     "filterType": "GMSound",
     "folderName": "char1 sounds",

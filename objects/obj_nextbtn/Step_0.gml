@@ -15,7 +15,7 @@ if point_in_rectangle(mouse_x,mouse_y,330,303,388,324) and orientation=0 and mou
         instance_destroy();
     }
     instance_create_layer(640,179,obj_nextbtn.layer,obj_charpresent)
-    show_debug_message(global.char_selection)
+    
 }
 else if point_in_rectangle(mouse_x,mouse_y,549,304,604,323) and orientation=1 and mouse_check_button_released(mb_left)=true{
     image_index=2
@@ -33,7 +33,7 @@ else if point_in_rectangle(mouse_x,mouse_y,549,304,604,323) and orientation=1 an
         instance_destroy();
     }
     instance_create_layer(640,179,obj_nextbtn.layer,obj_charpresent)
-    show_debug_message(global.char_selection)
+ 
 }
 ///mouse over
 else if point_in_rectangle(mouse_x,mouse_y,330,303,388,324) and orientation=0{

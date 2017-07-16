@@ -137,9 +137,7 @@ while roomgenerated != roomstogenerate{
 if once == false{
 	for(var i = 0; i < 17; i ++){
 		coords = global.ds_roomgrid[# 0, i];
-		show_debug_message("r: " + string(coords[0]));
-		show_debug_message("c: " + string(coords[1]));
-		show_debug_message("type: " + string(global.ds_roomgrid[# 1, i]));
+		
 	}
 	
 	once = true;

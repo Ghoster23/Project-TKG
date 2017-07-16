@@ -39,7 +39,7 @@ if go and not global.pause{
 				image_index=0;
 				image_speed=0;
 			}
-			show_debug_message("the spider is in state 0");
+
         break;
 		
 		case 1: //hide and shoot

@@ -5,6 +5,14 @@ if(instance_exists(obj_body) && !instance_exists(obj_gui)){
     instance_create_layer(obj_body.x-240,obj_body.y-176,"IF",obj_gui);
 }
 
+if room != rm_menu_1 and room != rm_menu_2 and room != rm_chsl and room != rm_dead{
+	if global.pause {
+		physics_pause_enable(true);
+	}else {
+		physics_pause_enable(false);
+	}
+}
+
 ///Equipables' effects
 if(global.eq_0 == true && eq_0c == false){
     global.p_atk = global.p_atk + 2;

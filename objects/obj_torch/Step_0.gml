@@ -1,11 +1,10 @@
-if not flicker and lit{
-	part_emitter_stream(global.ps_if,em,global.pt_fire,1);
+if lit{
+	part_particles_create(global.ps_if, x + 16, y+3, global.pt_fire, 1);
+
+	if place_meeting(x,y,obj_swing){
+		lit = false;
+		part_particles_create(global.ps_if, x + 16, y, global.pt_smoke, 5);
+	}
 }
 
-
-if flicker == true{
-	randomize();
-	r = random_range(0,2);
-	flicker = false;
-	alarm[0] = 2 * r * room_speed;
-}
+o++;

@@ -32,6 +32,5 @@ instance_create_layer(f_x,f_y,"Instances",obj_fln_rock_shadow);
 
 phy_position_x = f_x;
 
-show_debug_message(f_x);
-show_debug_message(f_y);
+
 

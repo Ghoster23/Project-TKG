@@ -14,6 +14,6 @@ with (obj_charpresent){
 instance_create_layer(640,179,layer,obj_charpresent)
 
 
-show_debug_message(global.char_selection)
+
 
 
