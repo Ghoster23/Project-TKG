@@ -63,7 +63,7 @@ if go and not global.pause{
 			scr_define_path(self, obj_body);
 			path = global.ai_path;
 			
-			dir = point_direction(x,y,path_get_point_x(path,2),path_get_point_y(path,2));
+			dir = point_direction(x,y,path_get_point_x(path,1),path_get_point_y(path,1));
 			
             //Get hspd and vspd
             hspd = lengthdir_x(e_spd,dir);

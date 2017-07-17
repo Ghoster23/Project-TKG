@@ -12,8 +12,8 @@ switch (global.char_selection){
         break;
     case 1:
         name="Harlow Barone"
-        height="1.84 m"
-        weight="78 kg"
+        height="1.89 m"
+        weight="76 kg"
         weapon="Great Hammer"
         abilities="Dodge Roll"
         strength="Highest"
@@ -23,8 +23,8 @@ switch (global.char_selection){
         break;
     case 2:
         name="Brenton Guillory"
-        height="1.88 m"
-        weight="74 kg"
+        height="1.93 m"
+        weight="72 kg"
         weapon="Pistol"
         abilities="Dodge Roll"
         strength="High"
@@ -132,9 +132,9 @@ switch (global.char_selection){
         agility="Medium"
         break;   
     case 12:
-        name="Orpheus Teufel"
-        height="1.70 m"
-        weight="73 kg"
+        name="Orpheus Thorley"
+        height="1.73 m"
+        weight="75 kg"
         weapon="Curses"
         abilities="Dodge Roll"
         strength="High"
