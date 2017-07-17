@@ -1,9 +1,9 @@
 {
-    "id": "de68c72d-c9d6-4cbf-b36d-0ffa1e72cf61",
+    "id": "d672d2a6-21ec-4a2b-b382-471cb8142502",
     "modelName": "GMSound",
     "mvc": "1.0",
-    "name": "snd_torch",
-    "audioGroupGuid": "b205296c-b5c9-420f-a061-a7dd2541a9c5",
+    "name": "snd_wood_bits1",
+    "audioGroupGuid": "8e6cf425-2caf-4954-bcb1-ecf34939a461",
     "bitDepth": 1,
     "bitRate": 128,
     "kind": 0,
