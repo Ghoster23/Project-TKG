@@ -18,10 +18,16 @@ if image_index = 3 {
 }
 //sounds for hittin stuff 
 
-//Hitting barrels
-if place_meeting(x,y,obj_barrel) and impact==false{
+//hitting bomb
+if place_meeting(x,y,obj_bomb) and impact==false{
 	impact=true;
-	scr_sound(snd_hit_crate);
+	scr_sound(snd_hit_wall);
+}
+
+//Hitting barrels
+if (place_meeting(x,y,obj_barrel) or place_meeting(x,y,obj_hspider)) and impact==false{
+	impact=true;
+	scr_sound(snd_hit_barrel);
 }
 
 //hitting rocks

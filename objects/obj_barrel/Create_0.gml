@@ -1,3 +1,2 @@
-impact = true;
 event_inherited();
-
+die=false;
