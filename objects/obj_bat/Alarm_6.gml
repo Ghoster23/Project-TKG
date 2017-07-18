@@ -1,3 +1,3 @@
 /// @description Dash
 dash = true;
-alarm[7] = 7;
+alarm[7] = 12;

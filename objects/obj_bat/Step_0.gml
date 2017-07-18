@@ -22,12 +22,12 @@ if go and not global.pause{
 	}
 	
     /// Enemy States
-    if state != 3 {
+    if state != 3  and state != 2{
         if dis > 100 and dis < 200 and dash == false{
             state = 1;
         
         }else if dis <= 100{
-            if dash_cd == false and dash == false{
+            if dash_cd == false {
                 ///Dash activation
                 state = 2;
             }else if dash == false{
@@ -100,25 +100,26 @@ if go and not global.pause{
 		///Dash towards the player
         case 2:
 			image_speed = 0;
+			
 			if alarm[6] == -1 and not dash_cd{
-				alarm[6] = 15;
+				alarm[6] = 10;
 			}
             
 			if dash {
-	            //Get hspd and vspd
-	            hspd = lengthdir_x(e_spd*10,dir);
-	            vspd = lengthdir_y(e_spd*10,dir);
-   
+				//Get hspd and vspd
+		        hspd = lengthdir_x(e_spd*10,dir);
+		        vspd = lengthdir_y(e_spd*10,dir);
 	            //Move
-	            phy_position_x += hspd;
-	            phy_position_y += vspd;
-				
+		        phy_position_x += hspd;
+		        phy_position_y += vspd;
+			
 				//Cooldown
-	            if dash_cd == false{
-	                alarm[1] = 40;
-	                dash_cd = true;
-	            }
+		        if dash_cd == false{
+					alarm[1] = 15;
+					dash_cd = true;
+		        }
 			}
+	
             
         break;
 		
