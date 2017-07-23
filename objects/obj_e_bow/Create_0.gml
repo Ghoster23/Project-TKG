@@ -3,3 +3,5 @@ allow = true;
 image_speed = 0;
 prev_image_speed = 0;
 event_inherited();
+offs = 5;
+offset = true;

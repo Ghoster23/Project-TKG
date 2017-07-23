@@ -2,8 +2,8 @@
 x=owner.x;
 y=owner.y;
 
-if owner.d <= -2 or owner.d >= -4{
-	layer = "BH";
+if owner.d == -3{
+	offs = -5;
 }else {
-	layer = "IF";
+	offs = 5;
 }

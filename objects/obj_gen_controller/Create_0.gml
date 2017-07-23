@@ -11,11 +11,17 @@ gy = room_height/2;
 roomgenerated = 0;
 roomstogenerate = 16;
 
-global.ds_roomgrid = ds_grid_create(3,17);
+global.ds_roomgrid = ds_grid_create(3,64);
 
-global.ds_roomgrid[# 0, 0] = [4,4];
-global.ds_roomgrid[# 1, 0] = "Start";
-global.ds_roomgrid[# 2, 0] = true;
+for(i = 0; i < 64; i++){
+	global.ds_roomgrid[# 0, i] = (i div 8) * 10 + i mod 8;
+	global.ds_roomgrid[# 1, i] = "NULL";
+	global.ds_roomgrid[# 2, i] = false;
+}
+
+global.ds_roomgrid[# 0, 36] = 44;
+global.ds_roomgrid[# 1, 36] = "Start";
+global.ds_roomgrid[# 2, 36] = true;
 
 //Control Vars
 confirm = false;

@@ -96,10 +96,9 @@ while roomgenerated != roomstogenerate{
 	        instance_create_layer(gx+global.roomwd-32,gy,"Instances",obj_wall_right);
 	        instance_create_layer(gx+(global.roomwd/2),gy+(global.roomhg/2)+31,"Floor",obj_floor);
             
-	        ///Fill the room
-			global.ds_roomgrid[# 0, roomgenerated] = [r,c];
-			global.ds_roomgrid[# 1, roomgenerated] = scr_roomgn(typeroom);
-			global.ds_roomgrid[# 2, roomgenerated] = false;
+	        ///Register the room
+			var room_ = r * 8 + c;
+			global.ds_roomgrid[# 1, room_] = scr_roomgn(typeroom);
             
 	        ///Doors
 	        if up{
@@ -135,15 +134,12 @@ while roomgenerated != roomstogenerate{
 }
 
 if once == false{
-	for(var i = 0; i < 17; i ++){
-		coords = global.ds_roomgrid[# 0, i];
-		
-	}
 	
 	once = true;
 
 	instance_create_layer(0,0,"IF",obj_AI_controller);
 	instance_create_layer(0,0,"PS",obj_minimap_controller);
 	instance_create_layer(0,0,"BH",obj_floor_fluid_controller);
+	instance_destroy();
 }
 

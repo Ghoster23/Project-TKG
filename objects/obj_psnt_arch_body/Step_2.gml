@@ -19,7 +19,7 @@ if (d_ >= 0 and d_ <= 45) or (d_ >= 315 and d_ <= 360){
     d = 0;
 }
 
-if flash == false and not global.pause and state != 2{
+if flash == false and not global.pause {
 switch d {
     case 0:
         break;

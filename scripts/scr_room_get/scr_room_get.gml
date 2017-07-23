@@ -1,13 +1,5 @@
 if room == rm_level{
-	var i = 0;
-	coords = global.ds_roomgrid[# 0, i];
-	
-	//Find the room
-	while (coords[0] != global.current_row or coords[1] != global.current_column) and i<16{
-		i += 1;
-		coords = global.ds_roomgrid[# 0, i];
-		
-	}
+	var i = global.current_row * 8 + global.current_column;
 	
 	//Visited	
 	if global.ds_roomgrid[# 2, i] == false{

@@ -11,14 +11,6 @@ if not global.pause and instance_exists(owner){
 	    image_angle = owner.dir;
 		
 	}
-	
-	if owner.state == 2 and owner.swing == true{
-		image_blend = c_red;
-		
-	}else {
-		image_blend = c_white;
-		
-	}
 
 	if owner.state == 3 or not instance_exists(owner){
 	    instance_destroy();

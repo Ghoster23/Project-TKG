@@ -59,7 +59,7 @@ switch d {
 			head.sprite_index = spr_peasent_h_b;
         }
         break;
-    case 1: //Rigt
+    case 1: //Right
         image_xscale = 1;
         if gender == 0{
             sprite_index = spr_peasent_f_s;

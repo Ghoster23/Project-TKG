@@ -49,14 +49,7 @@ switch(state){
         
         image_blend = c_white;
         
-        ///Get Damaged
-        if(place_meeting(x,y,obj_swing)){
-            e_hp -= global.p_atk div e_def;
-            damaged = true;
-			flash = true;
-			alarm[5]=room_speed*0.03;
-			
-        }    
+            
         
         if(place_meeting(x,y,obj_sword_t) and obj_sword_t.image_speed>0){
             e_hp -= global.p_satk div e_sdef;
@@ -93,4 +86,21 @@ switch(state){
 	case "pause":
 	break;
 }
-
+///Get Damaged
+if(place_meeting(x,y,obj_swing)){
+    e_hp -= global.p_atk div e_def;
+    damaged = true;
+	flash = true;
+	alarm[5]=room_speed*0.03;
+	
+	if state == 0{
+		state = 1;
+    
+		solid = true;
+		image_speed = .9;
+		sprite_index = spr_mimic_a;
+        
+		e_spd = 4;
+	}
+			
+}

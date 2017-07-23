@@ -21,7 +21,7 @@ head = instance_nearest(x,y,obj_psnt_head);
 
 gender = head.gender;
 opt = head.opt;
-instance_create_layer(x,y,layer,obj_stick);
+instance_create_layer(x,y,layer,obj_e_melee);
 
 if gender == 0{
     sprite_index = spr_peasent_f_f;

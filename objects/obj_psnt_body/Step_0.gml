@@ -78,7 +78,7 @@ if go and not global.pause{
             
         break;
         case 1:  //Go towards the player	
-			dir = point_direction(x,y,path_get_point_x(path,2),path_get_point_y(path,2));
+			dir = point_direction(x,y,path_get_point_x(path,1),path_get_point_y(path,1));
 		
 			//Get hspd and vspd
             hspd = lengthdir_x(e_spd,dir);
