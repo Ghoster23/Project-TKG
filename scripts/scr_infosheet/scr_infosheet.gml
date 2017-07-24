@@ -1,6 +1,6 @@
 switch (global.char_selection){
     case 0:
-        name="Jacob NSOD"
+        name="Jason Carlisle"
         height="1,78 m"
         weight="76 kg"
         weapon="Great Sword"
