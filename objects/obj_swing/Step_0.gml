@@ -24,21 +24,12 @@ if place_meeting(x,y,obj_bomb) and impact==false{
 	scr_sound(snd_hit_wall);
 }
 
-//Hitting barrels
-if (place_meeting(x,y,obj_barrel) or place_meeting(x,y,obj_hspider)) and impact==false{
+//Hitting SPIDER
+if place_meeting(x,y,obj_hspider) and impact==false{
 	impact=true;
 	scr_sound(snd_hit_barrel);
 }
 
-//hitting rocks
-if place_meeting(x,y,obj_rock) and impact==false{
-	impact=true;
-	if audio_is_playing(snd_sword_slash){
-		alarm[0]=3;
-	}
-	scr_sound(snd_hit_rock);
-	
-}
 
 //hitting down wall
 if place_meeting(x,y,obj_wall_down) and obj_head.image_index==0 and impact==false{
