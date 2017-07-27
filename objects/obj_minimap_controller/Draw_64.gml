@@ -47,6 +47,10 @@ if room == rm_level {
 						type = 4;
 					break;
 				}
+				
+				if row == global.current_row and col == global.current_column{
+					type = 5;
+				}
 			
 				draw_sprite_ext(spr_mm_rm, type, xx + 4 * m + col * rw, yy + 4 * m + row * rh, m, m, 0, c_white, 1);
 			}
@@ -77,37 +81,61 @@ if room == rm_level {
 			for(j = 0; j < 3; j++){
 				c_rm = (rs + i) * 8 + cs + j;
 				
-				///If it was already visited
-				if global.ds_roomgrid[# 2, c_rm] and global.ds_roomgrid[# 1, c_rm] != "NULL"{
-					///Show it
+				///If there's a room there
+				if global.ds_roomgrid[# 1, c_rm] != "NULL"{
+					///Get the coords
 					coords = global.ds_roomgrid[# 0, c_rm];
 					var type = 0;
-			
-					switch global.ds_roomgrid[# 1, c_rm] {
-						case "Start":
-							type = 0;
-						break;
-						case "A":
-							type = 0;
-						break;
-						case "B":
-							type = 0;
-						break;
-						case "ST":
-							type = 2;
-						break;
-						case "SP":
-							type = 3;
-						break;
-						case "X":
-							type = 1;
-						break;
-						case "?":
-							type = 4;
-						break;
+					
+					///If it has been visited
+					if global.ds_roomgrid[# 2, c_rm] {
+						///Directions
+						if global.ds_roomgrid[# 1, c_rm - 8] != "NULL" {
+							draw_sprite_ext(spr_mm_rm_os, 0, xx + 4 * m + j * rw, yy + 4 * m + i * rh, m, m, 0, c_white, 1);
+						}
+						if global.ds_roomgrid[# 1, c_rm - 1] != "NULL" {
+							draw_sprite_ext(spr_mm_rm_os, 1, xx + 4 * m + j * rw, yy + 4 * m + i * rh, m, m, 0, c_white, 1);
+						}
+						if global.ds_roomgrid[# 1, c_rm + 8] != "NULL" {
+							draw_sprite_ext(spr_mm_rm_os, 2, xx + 4 * m + j * rw, yy + 4 * m + i * rh, m, m, 0, c_white, 1);
+						}
+						if global.ds_roomgrid[# 1, c_rm + 1] != "NULL" {
+							draw_sprite_ext(spr_mm_rm_os, 3, xx + 4 * m + j * rw, yy + 4 * m + i * rh, m, m, 0, c_white, 1);
+						}
+						
+						///Determine the type of the room
+						switch global.ds_roomgrid[# 1, c_rm] {
+							case "Start":
+							case "A":
+							case "B":
+								type = 0;
+							break;
+							case "ST":
+								type = 2;
+							break;
+							case "SP":
+								type = 3;
+							break;
+							case "X":
+								type = 1;
+							break;
+							case "?":
+								type = 4;
+							break;
+						}
+						
+						if i == 1 and j == 1{
+							type = 5;
+						}
+						
+						draw_sprite_ext(spr_mm_rm_os1, type, xx + 4 * m + j * rw, yy + 4 * m + i * rh, m, m, 0, c_white, 1);
+						
+					///If not and it isn't a diagonal
+					}else if not ((i == 0 and j == 0) or (i == 2 and j == 0) or (i == 0 and j == 2) or (i == 2 and j == 2)){
+						type = 4;
+						
+						draw_sprite_ext(spr_mm_rm_os, type, xx + 4 * m + j * rw, yy + 4 * m + i * rh, m, m, 0, c_white, 1);
 					}
-			
-					draw_sprite_ext(spr_mm_rm_os, type, xx + 4 * m + j * rw, yy + 4 * m + i * rh, m, m, 0, c_white, 0.6);
 				}
 			}
 		}

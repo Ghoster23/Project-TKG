@@ -9,7 +9,7 @@
     "option_windows_copyright_info": "(c) 2017 CompanyName",
     "option_windows_description_info": "A GameMaker Studio 2 Game",
     "option_windows_display_cursor": true,
-    "option_windows_display_name": "Made in GameMaker Studio 2",
+    "option_windows_display_name": "The King's Gauntlet",
     "option_windows_enable_steam": false,
     "option_windows_executable_name": "${project_name}",
     "option_windows_icon": "${base_options_dir}\\windows\\icons\\icon.ico",
@@ -24,7 +24,7 @@
     "option_windows_scale": 0,
     "option_windows_sleep_margin": 10,
     "option_windows_splash_screen": "${base_options_dir}\\windows\\splash\\splash.png",
-    "option_windows_start_fullscreen": false,
+    "option_windows_start_fullscreen": true,
     "option_windows_texture_page": "2048x2048",
     "option_windows_use_splash": false,
     "option_windows_version": {
