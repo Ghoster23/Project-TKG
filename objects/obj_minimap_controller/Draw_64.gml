@@ -19,8 +19,16 @@ if room == rm_level {
 			if global.ds_roomgrid[# 2, i] and global.ds_roomgrid[# 1, i] != "NULL"{
 				///Show it
 				coords = global.ds_roomgrid[# 0, i];
+				doors = global.ds_roomgrid[# 3, i];
 				row = coords div 10;
 				col = coords mod 10;
+				
+				///Directions
+				for(var k = 0; k < 4; k++){
+					if doors[k] == 1 {
+						draw_sprite_ext(spr_mm_rm, k, xx + 4 * m + col * rw, yy + 4 * m + row * rh, m, m, 0, c_white, 1);
+					}
+				}
 				
 				var type = 0;
 			
@@ -52,7 +60,7 @@ if room == rm_level {
 					type = 5;
 				}
 			
-				draw_sprite_ext(spr_mm_rm, type, xx + 4 * m + col * rw, yy + 4 * m + row * rh, m, m, 0, c_white, 1);
+				draw_sprite_ext(spr_mm_rm1, type, xx + 4 * m + col * rw, yy + 4 * m + row * rh, m, m, 0, c_white, 1);
 			}
 		}
 		
@@ -85,22 +93,16 @@ if room == rm_level {
 				if global.ds_roomgrid[# 1, c_rm] != "NULL"{
 					///Get the coords
 					coords = global.ds_roomgrid[# 0, c_rm];
+					doors = global.ds_roomgrid[# 3, c_rm];
 					var type = 0;
 					
 					///If it has been visited
 					if global.ds_roomgrid[# 2, c_rm] {
 						///Directions
-						if global.ds_roomgrid[# 1, c_rm - 8] != "NULL" {
-							draw_sprite_ext(spr_mm_rm_os, 0, xx + 4 * m + j * rw, yy + 4 * m + i * rh, m, m, 0, c_white, 1);
-						}
-						if global.ds_roomgrid[# 1, c_rm - 1] != "NULL" {
-							draw_sprite_ext(spr_mm_rm_os, 1, xx + 4 * m + j * rw, yy + 4 * m + i * rh, m, m, 0, c_white, 1);
-						}
-						if global.ds_roomgrid[# 1, c_rm + 8] != "NULL" {
-							draw_sprite_ext(spr_mm_rm_os, 2, xx + 4 * m + j * rw, yy + 4 * m + i * rh, m, m, 0, c_white, 1);
-						}
-						if global.ds_roomgrid[# 1, c_rm + 1] != "NULL" {
-							draw_sprite_ext(spr_mm_rm_os, 3, xx + 4 * m + j * rw, yy + 4 * m + i * rh, m, m, 0, c_white, 1);
+						for(var k = 0; k < 4; k++){
+							if doors[k] == 1 {
+								draw_sprite_ext(spr_mm_rm_os, k, xx + 4 * m + j * rw, yy + 4 * m + i * rh, m, m, 0, c_white, 1);
+							}
 						}
 						
 						///Determine the type of the room
