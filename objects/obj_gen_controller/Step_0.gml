@@ -145,25 +145,37 @@ while roomgenerated < roomstogenerate{
 			        if up {
 			            if(!instance_position((gx+(global.roomwd/2)),(gy-32),obj_door_d)){
 			                instance_create_layer(gx+(global.roomwd/2),(gy-32),"Instances",obj_door_d);
-			                instance_create_layer(gx+(global.roomwd/2),gy+((32*1.5)+11),"Instances",obj_door_u); 
+			                instance_create_layer(gx+(global.roomwd/2),gy+((32*1.5)+11),"Instances",obj_door_u);
+							
+							global.ds_roomgrid[# 3, room_ - 8] = grid_array_set_value(global.ds_roomgrid[# 3, room_ - 8],2,1);
+							global.ds_roomgrid[# 3, room_] = grid_array_set_value(global.ds_roomgrid[# 3, room_],0,1);
 			            }
 			        } 
 			        if left {
 			            if(!instance_position((gx-33),(gy+(global.roomwd/2)),obj_door_l)){
 			                instance_create_layer(gx-34,gy+(global.roomhg/2),"Instances",obj_door_l);
 			                instance_create_layer(gx+33,gy+(global.roomhg/2),"Instances",obj_door_r);
+							
+							global.ds_roomgrid[# 3, room_ - 1] = grid_array_set_value(global.ds_roomgrid[# 3, room_ - 1],3,1);
+							global.ds_roomgrid[# 3, room_] = grid_array_set_value(global.ds_roomgrid[# 3, room_],1,1);
 			            }
 			        } 
 			        if down {
 			            if(!instance_position(gx+(global.roomwd/2),(gy+global.roomhg-32),obj_door_d)){
 			                instance_create_layer(gx+(global.roomwd/2),(gy+global.roomhg-32),"Instances",obj_door_d);
-			                instance_create_layer(gx+(global.roomwd/2),gy+global.roomhg+((32*1.5)+11),"Instances",obj_door_u); 
+			                instance_create_layer(gx+(global.roomwd/2),gy+global.roomhg+((32*1.5)+11),"Instances",obj_door_u);
+							
+							global.ds_roomgrid[# 3, room_ + 8] = grid_array_set_value(global.ds_roomgrid[# 3, room_ + 8],0,1);
+							global.ds_roomgrid[# 3, room_] = grid_array_set_value(global.ds_roomgrid[# 3, room_],2,1);
 			            }
 			        } 
 			        if right {
 			            if(!instance_position((gx+global.roomwd+16),(gy+(global.roomhg/2)),obj_door_r)){
 			                instance_create_layer((gx+global.roomwd-34),(gy+(global.roomhg/2)),"Instances",obj_door_l);
-			                instance_create_layer((gx+global.roomwd+33),(gy+(global.roomhg/2)),"Instances",obj_door_r); 
+			                instance_create_layer((gx+global.roomwd+33),(gy+(global.roomhg/2)),"Instances",obj_door_r);
+							
+							global.ds_roomgrid[# 3, room_ + 1] = grid_array_set_value(global.ds_roomgrid[# 3, room_ + 1],1,1);
+							global.ds_roomgrid[# 3, room_] = grid_array_set_value(global.ds_roomgrid[# 3, room_],3,1);
 			            }
 			        }
 				}else {
@@ -171,25 +183,38 @@ while roomgenerated < roomstogenerate{
 					if up and (global.ds_roomgrid[# 1, room_ - 8] == "A" or global.ds_roomgrid[# 1, room_ - 8] == "B"){
 				        if(!instance_position((gx+(global.roomwd/2)),(gy-32),obj_door_d)){
 				            instance_create_layer(gx+(global.roomwd/2),(gy-32),"Instances",obj_door_d);
-				            instance_create_layer(gx+(global.roomwd/2),gy+((32*1.5)+11),"Instances",obj_door_u); 
+				            instance_create_layer(gx+(global.roomwd/2),gy+((32*1.5)+11),"Instances",obj_door_u);
+							
+							global.ds_roomgrid[# 3, room_ - 8] = grid_array_set_value(global.ds_roomgrid[# 3, room_ - 8],2,1);
+							global.ds_roomgrid[# 3, room_] = grid_array_set_value(global.ds_roomgrid[# 3, room_],0,1);
 				        }
 				    }else 
 				    if left and (global.ds_roomgrid[# 1, room_ - 1] == "A" or global.ds_roomgrid[# 1, room_ - 1] == "B"){
 				        if(!instance_position((gx-33),(gy+(global.roomwd/2)),obj_door_l)){
 				            instance_create_layer(gx-34,gy+(global.roomhg/2),"Instances",obj_door_l);
 				            instance_create_layer(gx+33,gy+(global.roomhg/2),"Instances",obj_door_r);
+							
+							global.ds_roomgrid[# 3, room_ - 1] = grid_array_set_value(global.ds_roomgrid[# 3, room_ - 1],3,1);
+							global.ds_roomgrid[# 3, room_] = grid_array_set_value(global.ds_roomgrid[# 3, room_],1,1);
 				        }
 				    }else
 				    if down and (global.ds_roomgrid[# 1, room_ + 8] == "A" or global.ds_roomgrid[# 1, room_ + 8] == "B"){
 				        if(!instance_position(gx+(global.roomwd/2),(gy+global.roomhg-32),obj_door_d)){
 				            instance_create_layer(gx+(global.roomwd/2),(gy+global.roomhg-32),"Instances",obj_door_d);
-				            instance_create_layer(gx+(global.roomwd/2),gy+global.roomhg+((32*1.5)+11),"Instances",obj_door_u); 
+				            instance_create_layer(gx+(global.roomwd/2),gy+global.roomhg+((32*1.5)+11),"Instances",obj_door_u);
+							
+							global.ds_roomgrid[# 3, room_ + 8] = grid_array_set_value(global.ds_roomgrid[# 3, room_ + 8],0,1);
+							global.ds_roomgrid[# 3, room_] = grid_array_set_value(global.ds_roomgrid[# 3, room_],2,1);
 				        }
 				    }else
 				    if right and (global.ds_roomgrid[# 1, room_ + 1] == "A" or global.ds_roomgrid[# 1, room_ + 1] == "B"){
 				        if(!instance_position((gx+global.roomwd+16),(gy+(global.roomhg/2)),obj_door_r)){
 				            instance_create_layer((gx+global.roomwd-34),(gy+(global.roomhg/2)),"Instances",obj_door_l);
-				            instance_create_layer((gx+global.roomwd+33),(gy+(global.roomhg/2)),"Instances",obj_door_r); 
+				            instance_create_layer((gx+global.roomwd+33),(gy+(global.roomhg/2)),"Instances",obj_door_r);
+							
+							global.ds_roomgrid[# 3, room_ + 1] = grid_array_set_value(global.ds_roomgrid[# 3, room_ + 1],1,1);
+							global.ds_roomgrid[# 3, room_] = grid_array_set_value(global.ds_roomgrid[# 3, room_],3,1);
+							
 				        }
 				    }
 					
