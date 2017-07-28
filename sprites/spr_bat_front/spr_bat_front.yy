@@ -119,8 +119,8 @@
             "visible": true
         }
     ],
-    "origin": 0,
-    "playbackSpeed": 1,
+    "origin": 4,
+    "playbackSpeed": 0.4,
     "playbackSpeedType": 1,
     "sepmasks": false,
     "swatchColours": null,
