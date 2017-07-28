@@ -15,14 +15,15 @@ if room == rm_level {
 	
 		///Check all the rooms
 		for(i = 0; i < 64; i++){
+			doors = global.ds_roomgrid[# 3, i];
+			coords = global.ds_roomgrid[# 0, i];
+			row = coords div 10;
+			col = coords mod 10;
+			
+			var type = 0;
+		
 			///If it was already visited
-			if global.ds_roomgrid[# 2, i] and global.ds_roomgrid[# 1, i] != "NULL"{
-				///Show it
-				coords = global.ds_roomgrid[# 0, i];
-				doors = global.ds_roomgrid[# 3, i];
-				row = coords div 10;
-				col = coords mod 10;
-				
+			if global.ds_roomgrid[# 2, i] {
 				///Directions
 				for(var k = 0; k < 4; k++){
 					if doors[k] == 1 {
@@ -30,8 +31,6 @@ if room == rm_level {
 					}
 				}
 				
-				var type = 0;
-			
 				switch global.ds_roomgrid[# 1, i] {
 					case "Start":
 						type = 0;
@@ -61,6 +60,38 @@ if room == rm_level {
 				}
 			
 				draw_sprite_ext(spr_mm_rm1, type, xx + 4 * m + col * rw, yy + 4 * m + row * rh, m, m, 0, c_white, 1);
+				
+			///Rooms adjacent to visited rooms that have not been visisted
+			}else if (global.ds_roomgrid[# 2, i - 8] and doors[0] == 1) or 
+					 (global.ds_roomgrid[# 2, i - 1] and doors[1] == 1) or 
+					 (global.ds_roomgrid[# 2, i + 8] and doors[2] == 1) or 
+					 (global.ds_roomgrid[# 2, i + 1] and doors[3] == 1){
+				
+				///Directions
+				for(var k = 0; k < 4; k++){
+					var draw = false;
+					
+					if doors[k] == 1 {
+						if k == 0 and global.ds_roomgrid[# 2, i - 8]{
+							draw = true;
+						}
+						if k == 1 and global.ds_roomgrid[# 2, i - 1]{
+							draw = true;
+						}
+						if k == 2 and global.ds_roomgrid[# 2, i + 8]{
+							draw = true;
+						}
+						if k == 3 and global.ds_roomgrid[# 2, i + 1]{
+							draw = true;
+						}
+						
+						if draw {
+							draw_sprite_ext(spr_mm_rm, k, xx + 4 * m + col * rw, yy + 4 * m + row * rh, m, m, 0, c_white, 1);
+						}
+					}
+				}
+				
+				draw_sprite_ext(spr_mm_rm, 4, xx + 4 * m + col * rw, yy + 4 * m + row * rh, m, m, 0, c_white, 1);
 			}
 		}
 		

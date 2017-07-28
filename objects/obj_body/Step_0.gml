@@ -1,4 +1,5 @@
 /// @description Move the player
+if not global.pause {
 script_execute(state);
 event_inherited();
 
@@ -53,4 +54,5 @@ if global.walking==true{
 	if !audio_is_playing(snd_footstep2){
 		scr_sound(snd_footstep2);
 	}
+}
 }
