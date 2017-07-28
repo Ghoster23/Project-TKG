@@ -48,7 +48,7 @@ if go and not global.pause{
     switch(state){
 		///Idle
         case 0:
-			image_speed=.4;
+			image_speed=1.5;
 			
 			///Determine anchor after state change
             if state_change == true{
@@ -85,7 +85,7 @@ if go and not global.pause{
 		
 		///Chase the player
         case 1:
-			image_speed=.4;
+			image_speed=1.5;
             dir = point_direction(x,y,obj_body.x,obj_body.y);
             
             //Get hspd and vspd

@@ -28,29 +28,35 @@ if flash == false{
 	    break;
 	    case -1: //Left
 	        image_xscale = -1;
-	        sprite_index = spr_bat_side;
+	        sprite_index = spr_bat;
 	    break;
 	    case -2: //Up and Right
-	        sprite_index = spr_bat_back;
+			image_xscale = 1;
+	        sprite_index = spr_bat;
 	    break;
 	    case -3: //Up
-	        sprite_index = spr_bat_back;
+			image_xscale = 1;
+	        sprite_index = spr_bat;
 	    break;
 	    case -4: //Up and Left
-	        sprite_index = spr_bat_back;
+	        sprite_index = spr_bat;
+			image_xscale = -1;
 	    break;
 	    case 1: //Rigt
 	        image_xscale = 1;
-	        sprite_index = spr_bat_side;
+	        sprite_index = spr_bat;
 	    break;
 	    case 2: //Left and Down
-	        sprite_index = spr_bat_front;
+			image_xscale = -1;	
+	        sprite_index = spr_bat;
 	    break;
 	    case 3: //Down
-	        sprite_index = spr_bat_front;
+			image_xscale = -1;
+	        sprite_index = spr_bat;
 	    break;
 	    case 4: //Down and Right
-	        sprite_index = spr_bat_front;
+			image_xscale = 1;
+	        sprite_index = spr_bat;
 	    break;
 	}
 }

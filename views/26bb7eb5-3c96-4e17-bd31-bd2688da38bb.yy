@@ -7,7 +7,8 @@
         "bd2f3590-9033-409e-8afe-f7628f468900",
         "48300256-0cbe-4b71-9243-7e5835153ee2",
         "88b665ed-cbd6-4301-a807-0aa9c6f5adc6",
-        "c50cacfc-ccad-4027-a29f-de22a81fb88e"
+        "c50cacfc-ccad-4027-a29f-de22a81fb88e",
+        "165d2917-cd3d-4765-ac77-b5e631fbb7f3"
     ],
     "filterType": "GMSprite",
     "folderName": "bat",

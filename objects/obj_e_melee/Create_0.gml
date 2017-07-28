@@ -4,15 +4,8 @@ allow = true;
 alarm_0 = -1;
 tell = 0;
 event_inherited();
-spr = irandom(1);
+spr = sprite_get_number(spr_e_melee)
 offs = 5;
 offset = true;
-
-switch spr{
-	case 0:
-		sprite_index = spr_e_wd_sword;
-	break;
-	case 1:
-		sprite_index = spr_e_baton;
-	break;
-}
+sprite_index = spr_e_melee;
+image_index=irandom(spr);
