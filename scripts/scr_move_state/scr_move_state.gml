@@ -2,7 +2,7 @@
 scr_get_input();
 
 //check for dash
-if (dash_key && (right_key == true or left_key == true or up_key == true or down_key == true) && global.dash_cd == false and global.st_stuck == false) {
+if (dash_key && (right_key == true or left_key == true or up_key == true or down_key == true) && not global.dash_cd and global.st_stuck == false) {
     state = scr_dash_state;
 	global.p_inv = true;
     alarm[0] = room_speed/3;

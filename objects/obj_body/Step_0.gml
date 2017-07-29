@@ -3,6 +3,10 @@ if not global.pause {
 	script_execute(state);
 	event_inherited();
 	
+	if global.dash_cd and alarm[1] == -1{
+		alarm[1] = 0.6 * room_speed;
+	}
+		
 	for(i = 0; i < 2; i++){
 		if alarms[i] != -1{
 			alarm[i] = alarms[i];

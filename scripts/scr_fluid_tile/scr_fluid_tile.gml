@@ -24,7 +24,7 @@ ad = 0;
 
 //Adjacents
 ///Up
-if grid[# gx, gy - 1] {
+if grid[# gx, gy - iy] {
 	u = true;
 	ad ++;
 }
