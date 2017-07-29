@@ -1,14 +1,6 @@
 gx = argument0;
 gy = argument1;
-grid = argument2;
 
-if argument2 == global.fluid_grid{
-	ix = 1;
-	iy = 1;
-}else if argument2 == global.ds_roomgrid{
-	ix = 1;
-	iy = 8;
-}
 
 u = false;
 u_r = false;
@@ -24,49 +16,49 @@ ad = 0;
 
 //Adjacents
 ///Up
-if grid[# gx, gy - iy] {
+if global.fluid_grid[# gx, gy - 1] {
 	u = true;
 	ad ++;
 }
 
 ///Up and Right
-if grid[# gx + 1, gy - 1] {
+if global.fluid_grid[# gx + 1, gy - 1] {
 	u_r = true;
 	ad ++;
 }
 
 ///Right
-if grid[# gx + 1, gy] {
+if global.fluid_grid[# gx + 1, gy] {
 	r = true;
 	ad ++;
 }
 
 ///Down and Right
-if grid[# gx + 1, gy + 1] {
+if global.fluid_grid[# gx + 1, gy + 1] {
 	d_r = true;
 	ad ++;
 }
 
 ///Down
-if grid[# gx, gy + 1] {
+if global.fluid_grid[# gx, gy + 1] {
 	d = true;
 	ad ++;
 }
 
 ///Down and Left
-if grid[# gx - 1, gy + 1] {
+if global.fluid_grid[# gx - 1, gy + 1] {
 	d_l = true;
 	ad ++;
 }
 
 ///Left
-if grid[# gx - 1, gy] {
+if global.fluid_grid[# gx - 1, gy] {
 	l = true;
 	ad ++;
 }
 
 ///Up and Left
-if grid[# gx - 1, gy - 1] {
+if global.fluid_grid[# gx - 1, gy - 1] {
 	u_l = true;
 	ad ++;
 }

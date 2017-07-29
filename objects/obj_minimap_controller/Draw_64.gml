@@ -25,11 +25,9 @@ if room == rm_level {
 			///If it was already visited
 			if global.ds_roomgrid[# 2, i] {
 				///Directions
-				for(var k = 0; k < 4; k++){
-					if doors[k] == 1 {
-						draw_sprite_ext(spr_mm_rm, k, xx + 4 * m + col * rw, yy + 4 * m + row * rh, m, m, 0, c_white, 1);
-					}
-				}
+				spr = scr_mm_tile(i);
+				show_debug_message(spr);
+				draw_sprite_ext(spr_mm_rm, spr, xx + 4 * m + col * rw, yy + 4 * m + row * rh, m, m, 0, c_white, 1);
 				
 				switch global.ds_roomgrid[# 1, i] {
 					case "Start":
@@ -66,32 +64,11 @@ if room == rm_level {
 					 (global.ds_roomgrid[# 2, i - 1] and doors[1] == 1) or 
 					 (global.ds_roomgrid[# 2, i + 8] and doors[2] == 1) or 
 					 (global.ds_roomgrid[# 2, i + 1] and doors[3] == 1){
+				spr = scr_mm_tile(i);
+				show_debug_message(spr);
+				draw_sprite_ext(spr_mm_rm, spr, xx + 4 * m + col * rw, yy + 4 * m + row * rh, m, m, 0, c_white, 1);
 				
-				///Directions
-				for(var k = 0; k < 4; k++){
-					var draw = false;
-					
-					if doors[k] == 1 {
-						if k == 0 and global.ds_roomgrid[# 2, i - 8]{
-							draw = true;
-						}
-						if k == 1 and global.ds_roomgrid[# 2, i - 1]{
-							draw = true;
-						}
-						if k == 2 and global.ds_roomgrid[# 2, i + 8]{
-							draw = true;
-						}
-						if k == 3 and global.ds_roomgrid[# 2, i + 1]{
-							draw = true;
-						}
-						
-						if draw {
-							draw_sprite_ext(spr_mm_rm, k, xx + 4 * m + col * rw, yy + 4 * m + row * rh, m, m, 0, c_white, 1);
-						}
-					}
-				}
-				
-				draw_sprite_ext(spr_mm_rm, 4, xx + 4 * m + col * rw, yy + 4 * m + row * rh, m, m, 0, c_white, 1);
+				draw_sprite_ext(spr_mm_rm, 0, xx + 4 * m + col * rw, yy + 4 * m + row * rh, m, m, 0, c_white, 1);
 			}
 		}
 		
@@ -126,12 +103,7 @@ if room == rm_level {
 					
 					///If it has been visited
 					if global.ds_roomgrid[# 2, c_rm] {
-						///Directions
-						for(var k = 0; k < 4; k++){
-							if doors[k] == 1 {
-								draw_sprite_ext(spr_mm_rm_os, k, xx + 4 * m + j * rw, yy + 4 * m + i * rh, m, m, 0, c_white, 1);
-							}
-						}
+						draw_sprite_ext(spr_mm_rm_os, scr_mm_tile(c_rm), xx + 4 * m + j * rw, yy + 4 * m + i * rh, m, m, 0, c_white, 1);
 						
 						///Determine the type of the room
 						switch global.ds_roomgrid[# 1, c_rm] {
@@ -162,29 +134,7 @@ if room == rm_level {
 						
 					///If not and it isn't a diagonal
 					}else if not ((i == 0 and j == 0) or (i == 2 and j == 0) or (i == 0 and j == 2) or (i == 2 and j == 2)){
-						///Directions
-						for(var k = 0; k < 4; k++){
-							var draw = false;
-					
-							if doors[k] == 1 {
-								if k == 0 and global.ds_roomgrid[# 2, c_rm - 8]{
-									draw = true;
-								}
-								if k == 1 and global.ds_roomgrid[# 2, c_rm - 1]{
-									draw = true;
-								}
-								if k == 2 and global.ds_roomgrid[# 2, c_rm + 8]{
-									draw = true;
-								}
-								if k == 3 and global.ds_roomgrid[# 2, c_rm + 1]{
-									draw = true;
-								}
-						
-								if draw {
-									draw_sprite_ext(spr_mm_rm_os, k, xx + 4 * m + j * rw, yy + 4 * m + i * rh, m, m, 0, c_white, 1);
-								}
-							}
-						}
+						draw_sprite_ext(spr_mm_rm_os, scr_mm_tile(c_rm), xx + 4 * m + j * rw, yy + 4 * m + i * rh, m, m, 0, c_white, 1);
 						
 						type = 4;
 						

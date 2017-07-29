@@ -2071,6 +2071,14 @@
             }
         },
         {
+            "Key": "97ad3363-68e1-478b-b1a6-0cc1008f3a6c",
+            "Value": {
+                "id": "2428280a-8d32-4ee3-b16c-2115c95dabd3",
+                "resourcePath": "scripts\\scr_mm_tile\\scr_mm_tile.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "98c895e1-df99-4228-9e8d-166ea6d30275",
             "Value": {
                 "id": "fc6f9862-b2e8-414c-93a0-8c4a8a4ef60c",
@@ -3487,6 +3495,7 @@
         "5585f984-692e-42d4-8cef-84c5dd87ca43",
         "1d79937b-1c36-469a-96d3-e40d79ca0025",
         "43e92121-66ff-4ca0-a864-5ac52130fefb",
+        "97ad3363-68e1-478b-b1a6-0cc1008f3a6c",
         "31655573-06fa-4766-988e-0de279a78b7e",
         "063a1891-e073-4594-8f5d-a53fe1f1a34b",
         "77dfd3e2-4088-4c09-9919-9ca49dd0ac52",

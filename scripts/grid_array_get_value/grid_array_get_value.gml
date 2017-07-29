@@ -2,7 +2,6 @@
 ///@param Grid cell
 ///@param Position
 
-a = argument0;
 pos = argument1;
 
-return a[pos];
+return argument0[pos];
