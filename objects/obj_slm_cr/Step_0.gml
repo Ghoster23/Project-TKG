@@ -96,7 +96,7 @@ if go and not global.pause{
             damaged = true;
 			flash=true;
 			alarm[5] = room_speed*0.05;
-            alarm[4] = 20;
+            alarm[4] = 15;
         }
     } 
     
@@ -106,7 +106,7 @@ if go and not global.pause{
             damaged = true;
 			flash=true;
 			alarm[5] = room_speed*0.05;
-            alarm[4] = 20;
+            alarm[4] = 15;
         }
     }
     
