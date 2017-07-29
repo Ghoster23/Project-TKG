@@ -35,7 +35,7 @@ if global.ds_roomgrid[# 1, c_rm] == "B" or room != rm_level{
 				op = (val mod 30) / 60;
 		
 				draw_set_alpha(op);
-				draw_sprite_ext(sprite,scr_fluid_tile(i,j),off_x + i * 4,off_y + j * 4,1,1,0,c_white,op);
+				draw_sprite_ext(sprite,scr_fluid_tile(i,j,global.fluid_grid),off_x + i * 4,off_y + j * 4,1,1,0,c_white,op);
 			
 				ds_grid_set(global.fluid_grid,i,j,val);
 		
