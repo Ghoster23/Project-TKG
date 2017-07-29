@@ -5,7 +5,7 @@ if(not instance_exists(creator)){
 }
 
 if(place_meeting(x,y,obj_body) and abs(y - creator.y) < 24){
-    if(global.invuln == false){
+    if(global.p_inv == false){
         global.p_hp -= 1;
         
         with(creator){

@@ -31,9 +31,9 @@ if not global.pause {
 				state = 2;
 			}
 		
-			if place_meeting(x,y,obj_body) and global.p_inv == false and global.invuln == false{
+			if place_meeting(x,y,obj_body) and global.p_hurt == false and global.p_inv == false{
 				global.p_hp -= global.b_atk div global.p_def;
-				global.p_inv = true;
+				global.p_hurt = true;
 			}
 		break;
 		case 2:

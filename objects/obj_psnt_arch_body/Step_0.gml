@@ -7,7 +7,7 @@ bl_sight = collision_line(x,y,obj_body.x,obj_body.y,obj_solid_parent,true,true);
 
 if(place_meeting(x,y,obj_ppon)) and visible == false{
     visible = true;
-    global.combat += 1;
+    global.act_enemies += 1;
     
     alarm[0] = 1 * room_speed;
 }
@@ -96,7 +96,7 @@ if go and not global.pause{
         
         break;
         case 3:  //Dead State
-			global.combat -= 1;
+			global.act_enemies -= 1;
 			sprite_index = spr_bat_d;
 	        if((irandom(99) + 1) <= 10){
 	            instance_create_layer(x,y,layer,obj_hheart);

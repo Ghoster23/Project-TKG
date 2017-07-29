@@ -31,6 +31,6 @@ if(image_index >= 6){
     with(obj_gui){
         instance_destroy();
     }
-    global.brooma = true; 
+    
 }
 

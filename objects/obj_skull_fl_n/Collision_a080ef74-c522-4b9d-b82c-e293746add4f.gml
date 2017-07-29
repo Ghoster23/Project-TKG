@@ -1,6 +1,6 @@
-if global.p_inv == false{
+if global.p_hurt == false{
     global.p_hp -= 10 div global.p_sdef;
-    global.p_inv = true;
+    global.p_hurt = true;
 }
 
 instance_destroy();

@@ -1,6 +1,4 @@
 ///@description Die
-state = 3;
-
 //Temporary cadaver
 sprite_index = spr_mimic_d;
 solid = false;
@@ -22,3 +20,5 @@ if((irandom(99) + 1) <= 10){
     instance_create_layer(x,y,"Instances",obj_fheart);
                 
 }
+
+instance_destroy();

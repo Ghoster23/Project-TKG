@@ -3,7 +3,7 @@ if place_meeting(x,y,obj_ppon) and k == false{
     image_speed = 0.3;
     k = true;
     
-    global.combat += 1;
+    global.act_enemies += 1;
 
 }
 
@@ -110,7 +110,7 @@ if go == true{
     
     ///Die
     if(e_hp <= 0){
-        global.combat -= 1;
+        global.act_enemies -= 1;
         instance_destroy();
         if((irandom(99) + 1) <= 10){
             instance_create_layer(x,y,layer,obj_hheart);
