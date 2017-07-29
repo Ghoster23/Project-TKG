@@ -1223,14 +1223,6 @@
             }
         },
         {
-            "Key": "532d81a9-0b7e-4d6f-8bb6-6bd410780dfd",
-            "Value": {
-                "id": "c1412015-3084-4289-8927-955e9a5b762a",
-                "resourcePath": "sprites\\spr_flr_old\\spr_flr_old.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "53b3afad-2e78-4717-911a-8e41feb1a001",
             "Value": {
                 "id": "b0097592-9883-48ff-abd6-d241c68ae042",
