@@ -82,7 +82,7 @@ if instance_exists(obj_CH_tree_state) and not global.pause{
 			if jab == true and place_meeting(x,y,obj_body){
 				global.p_hp -= 3;
 				visible = true;
-				global.p_inv = true;
+				global.p_hurt = true;
 			
 			}
 		

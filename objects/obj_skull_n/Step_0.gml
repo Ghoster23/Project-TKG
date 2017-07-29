@@ -1,7 +1,7 @@
 ///Exist
 if place_meeting(x,y,obj_ppon) and k == false{
     k = true;
-    global.combat += 1;
+    global.act_enemies += 1;
     
     alarm[0] = 0.5 * room_speed;
 
@@ -112,7 +112,7 @@ if go == true{
     
     ///Die
     if(e_hp <= 0){
-        global.combat -= 1;
+        global.act_enemies -= 1;
         instance_destroy();
         if((irandom(99) + 1) <= 10){
             instance_create_layer(x,y,obj_skull_n.layer,obj_hheart);

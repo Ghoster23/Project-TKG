@@ -28,3 +28,7 @@ dis = 0
 ///Knockback
 kb_x = 0;
 kb_y = 0;
+
+for(i = 0; i < 6; i++){
+	alarms[i] = -1;
+}

@@ -1,20 +1,24 @@
-global.d_cd = false;
+///Game
+//Game pause
 global.pause = false;
-global.brooma = false;
-global.bk = false;
-global.combat = 0;
-once = false;
-alarm_2 = false;
-shout=true;
 
-for(i = 0; i < 8; i += 1){
-    for(j = 0; j < 8; j += 1){
-        global.level_room_types[i,j] = "none";
-    }
-}
+///Enemies
+//Active enemies
+global.act_enemies = 0;
+global.kld_enemies = 0;
 
-global.level_room_types[4,4] = "start";
+//Coins
+global.coins = 0;
+
+///Player Character
+//Player dead
 dead = false;
+
+//Player shout
+shout = true;
+
+//Invulnerabillity
+global.p_inv = false;
 
 //Stats
 global.p_maxhp = 20;
@@ -25,6 +29,8 @@ global.p_satk = 5;
 global.p_sdef = 5;
 global.p_spd = 4;
 
+//Dash
+global.dash_cd = false;
 
 //Equipables
     ///Spawned
@@ -52,15 +58,11 @@ status_check = true;
 global.st_poison = false;
 global.st_stuck = false;
 
-global.p_inv = false;
+global.p_hurt = false;
 
 ///Status duration
 global.st_poison_d = 0;
 global.st_stuck_d = 0;
-
-//Current Room
-global.current_column = 4;
-global.current_row = 4;
 
 //Character Selection
 global.char = 0;
@@ -77,3 +79,11 @@ global.char_bsprs[0,6] = spr_roll_side;
 ///Player Character head sprites
 global.char_hsprs[0] = spr_head;
 
+
+///Rooms
+//Current Room
+global.current_column = 4;
+global.current_row = 4;
+
+//Door Cooldown
+global.d_cd = false;

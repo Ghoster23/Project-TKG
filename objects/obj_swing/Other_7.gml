@@ -1,3 +1,6 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Destroy
 instance_destroy();
+
+with(obj_kb){
+	instance_destroy();
+}

@@ -66,9 +66,9 @@ if go == true and not global.pause {
 	phy_position_y += vspd;
 
 	//Damage the player
-	if(place_meeting(x,y,obj_body) and global.invuln == false and global.p_inv == false){
+	if(place_meeting(x,y,obj_body) and global.p_inv == false and global.p_hurt == false){
 	    global.p_hp -= global.b_satk div global.p_sdef;
-		global.p_inv = true;
+		global.p_hurt = true;
 	    instance_destroy();
 	}
 	

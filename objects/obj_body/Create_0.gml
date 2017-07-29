@@ -19,7 +19,8 @@ spr_side=1;
 spr_body = global.char_bsprs[global.char,3]
 
 i_cd = false;
-global.invuln = false;
-global.inv_cd = false;
-global.dash_cd = false;
 
+
+for(i = 0; i < 2; i++){
+	alarms[i] = -1;
+}

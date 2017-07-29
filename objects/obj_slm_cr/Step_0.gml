@@ -3,7 +3,7 @@ randomize();
 ///Start enemy
 if(place_meeting(x,y,obj_ppon)) and visible == false{
     visible = true;
-    global.combat += 1;
+    global.act_enemies += 1;
     
     alarm[0] = 1 * room_speed;
 }
@@ -114,7 +114,7 @@ if go and not global.pause{
     if(e_hp <= 0) and state != 2{
 		flash=true;
 		alarm[5] = room_speed*0.02;
-        global.combat -= 1;
+        global.act_enemies -= 1;
         alarm[1] = 16;
                 
         sprite_index = spr_slime_d;

@@ -2,7 +2,7 @@ event_inherited();
 //Appear
 if(place_meeting(x,y,obj_ppon)) and visible == false{
     visible = true;
-    global.combat += 1;
+    global.act_enemies += 1;
     
     alarm[0] = 1 * room_speed;
 }
@@ -125,7 +125,7 @@ if go and not global.pause{
 		
 		///Die
         case 3:
-			global.combat -= 1;
+			global.act_enemies -= 1;
             sprite_index = spr_bat_d;
 			
 	        if((irandom(99) + 1) <= 10){

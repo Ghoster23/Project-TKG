@@ -10,6 +10,6 @@ with obj_roll{
 }
 
 state = scr_move_state;
-global.invuln = false;
+global.p_inv = false;
 global.dash_cd = true;
 alarm[1] = 1 * room_speed;

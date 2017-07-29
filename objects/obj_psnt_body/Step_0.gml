@@ -5,7 +5,7 @@ if state == 1 {
 
 if(place_meeting(x,y,obj_ppon)) and visible == false{
     visible = true;
-    global.combat += 1;
+    global.act_enemies += 1;
     
     alarm[0] = 1 * room_speed;
 }
@@ -151,7 +151,7 @@ if go and not global.pause{
     
     ///Die
     if(e_hp <= 0) and state != 3{
-        global.combat -= 1;
+        global.act_enemies -= 1;
         state = 3;
         alarm[5] = 5;
         

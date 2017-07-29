@@ -1,5 +1,3 @@
-sprite_index = global.char_hsprs[global.char];
-
 //find if there is a torch
 
 if instance_exists(obj_torch){
