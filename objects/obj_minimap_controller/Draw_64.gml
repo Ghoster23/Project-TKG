@@ -23,7 +23,7 @@ if room == rm_level {
 			var type = 0;
 		
 			///If it was already visited
-			if global.ds_roomgrid[# 2, i] {
+			if global.ds_roomgrid[# 2, i] and global.ds_roomgrid[# 1, i]!="NULL" {
 				///Directions
 				spr = scr_mm_tile(i);
 				show_debug_message(spr);
@@ -60,10 +60,11 @@ if room == rm_level {
 				draw_sprite_ext(spr_mm_rm1, type, xx + 4 * m + col * rw, yy + 4 * m + row * rh, m, m, 0, c_white, 1);
 				
 			///Rooms adjacent to visited rooms that have not been visisted
-			}else if (global.ds_roomgrid[# 2, i - 8] and doors[0] == 1) or 
+			}else if ((global.ds_roomgrid[# 2, i - 8] and doors[0] == 1) or 
 					 (global.ds_roomgrid[# 2, i - 1] and doors[1] == 1) or 
 					 (global.ds_roomgrid[# 2, i + 8] and doors[2] == 1) or 
-					 (global.ds_roomgrid[# 2, i + 1] and doors[3] == 1){
+					 (global.ds_roomgrid[# 2, i + 1] and doors[3] == 1)) and 
+					  global.ds_roomgrid[# 1, i]!="NULL"{
 				spr = scr_mm_tile(i);
 				show_debug_message(spr);
 				draw_sprite_ext(spr_mm_rm, spr, xx + 4 * m + col * rw, yy + 4 * m + row * rh, m, m, 0, c_white, 1);

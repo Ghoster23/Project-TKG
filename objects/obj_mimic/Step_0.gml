@@ -96,10 +96,6 @@ if not global.pause {
 			//Wooble
 	        a += 1;
 	        phy_rotation = 25 * sin(a);
-        
-			//Move
-	        phy_position_x += floor(sign(obj_body.x - x)*e_spd);
-	        phy_position_y += floor(sign(obj_body.y - y)*e_spd);
 	    break;
 	
 		//Pause
