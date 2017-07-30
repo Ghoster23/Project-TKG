@@ -33,8 +33,8 @@ if go and not global.pause{
         }
     }
     
-    if p_state != state{
-        p_state = state;
+    if prev_state != state{
+        prev_state = state;
         state_change = true;
     }
     
@@ -42,46 +42,12 @@ if go and not global.pause{
     switch(state){
         case 0:  //Walk around a bit
 			image_speed = 0.4;
-            if state_change == true{
-                ini_point_x = x;
-                ini_point_y = y;
-                
-                state_change = false;
-            }
-            
-            if distance_to_point(ini_point_x,ini_point_y) <= 32{
-            
-                if dir_change == true{
-                    alarm[3] = 20;
-                    dir_change = false;
-                    i_dir = irandom(360);
-                }
-            }else{
-                i_dir = point_direction(x,y,ini_point_x,ini_point_y);
-                
-            }
-            
-            //Get hspd and vspd
-            hspd = lengthdir_x(e_spd,i_dir);
-            vspd = lengthdir_y(e_spd,i_dir);
-   
-            //Move
-            phy_position_x += hspd;
-            phy_position_y += vspd;
+            scr_idle_enemy(32,20);
             
         break;
         case 1:  //Go towards the player
 			image_speed = 0.4;
-            dir = point_direction(x,y,path_get_point_x(path,2),path_get_point_y(path,2));
-		
-			//Get hspd and vspd
-            hspd = lengthdir_x(e_spd,dir);
-            vspd = lengthdir_y(e_spd,dir);
-   
-            //Move
-            phy_position_x += hspd;
-            phy_position_y += vspd;
-			
+            scr_move_enemy(point_direction(x,y,path_get_point_x(path,2),path_get_point_y(path,2)),1);
             
         break;
         case 2:  //Attack the player
@@ -99,10 +65,7 @@ if go and not global.pause{
 			global.act_enemies -= 1;
 			sprite_index = spr_bat_d;
 	        if((irandom(99) + 1) <= 10){
-	            instance_create_layer(x,y,layer,obj_hheart);
-                
-	        }else if((irandom(99) + 1) == 1){
-	            instance_create_layer(x,y,layer,obj_fheart);
+	            instance_create_layer(x,y,obj_bat.layer,obj_heart);
                 
 	        }
 			instance_destroy();
@@ -114,15 +77,7 @@ if go and not global.pause{
     image_blend = c_white;
     
     ///Get Damaged
-    if(place_meeting(x,y,obj_swing)){
-        e_hp -= global.p_atk div e_def;
-        damaged = true;
-    }
-    
-    if(place_meeting(x,y,obj_sword_t) and obj_sword_t.image_speed>0){
-        e_hp -= global.p_satk div e_sdef;
-        damaged = true;
-    }
+    scr_damage_enemy();
     
     if damaged == true{
         if flash == false{

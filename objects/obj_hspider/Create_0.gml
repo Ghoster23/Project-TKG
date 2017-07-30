@@ -25,7 +25,7 @@ e_spd = 3;
 //States
 state = 0;
 state_change = false;
-p_state = 0;
+prev_state = 0;
 
 for(i = 0; i < 6; i += 1){	
 	alarms[i] = -1;

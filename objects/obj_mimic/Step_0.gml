@@ -62,16 +62,6 @@ if not global.pause {
         
 	        image_blend = c_white;
         
-            
-        
-	        if(place_meeting(x,y,obj_sword_t) and obj_sword_t.image_speed>0){
-	            e_hp -= global.p_satk div e_sdef;
-	            damaged = true;
-				flash=true;
-				alarm[5] = room_speed*0.03;
-			
-	        }
-        
 			///Flash when damaged
 	        if damaged = true{
 				//stop damaged
@@ -103,9 +93,11 @@ if not global.pause {
 		break;
 	}
 	///Get Damaged
+	scr_damage_enemy();
+	
 	if(place_meeting(x,y,obj_swing)){
-	    e_hp -= global.p_atk div e_def;
-	    damaged = true;
+	    
+	    
 		flash = true;
 		alarm[5]=room_speed*0.03;
 	

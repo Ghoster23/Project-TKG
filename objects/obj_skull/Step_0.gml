@@ -90,15 +90,7 @@ if go == true{
     
     ///Get Damaged
     image_blend = c_white;
-    if(place_meeting(x,y,obj_swing)){
-        e_hp -= global.p_atk div e_def;
-        damaged = true;
-    }
-    
-    if(place_meeting(x,y,obj_sword_t) and obj_sword_t.image_speed>0){
-        e_hp -= global.p_satk div e_sdef;
-        damaged = true;
-    }
+    scr_damage_enemy();
     
     if damaged == true{
         if flash == false{
@@ -113,12 +105,9 @@ if go == true{
         global.act_enemies -= 1;
         instance_destroy();
         if((irandom(99) + 1) <= 10){
-            instance_create_layer(x,y,layer,obj_hheart);
+	        instance_create_layer(x,y,obj_bat.layer,obj_heart);
                 
-        }else if((irandom(99) + 1) == 1){
-            instance_create_layer(x,y,layer,obj_fheart);
-                
-        }
+	    }
     }
     
     go = true;

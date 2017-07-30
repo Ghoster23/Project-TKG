@@ -306,7 +306,7 @@ switch(typeroom){
 	    instance_create_layer(gx+224,gy+192,"Instances",obj_vase);
 	    instance_create_layer(gx+288,gy+192,"Instances",obj_vase);
 	    instance_create_layer(gx+192,gy+224,"Instances",obj_vase);
-	    instance_create_layer(gx+256,gy+224,"Instances",obj_fheart);
+	    instance_create_layer(gx+256,gy+224,"Instances",obj_heart);
 	    instance_create_layer(gx+320,gy+224,"Instances",obj_vase);
 	    instance_create_layer(gx+224,gy+256,"Instances",obj_vase);
 	    instance_create_layer(gx+288,gy+256,"Instances",obj_vase);
@@ -401,7 +401,7 @@ switch(typeroom){
 	    instance_create_layer(gx+160,gy+192,"Instances",obj_vase);
 	    instance_create_layer(gx+352,gy+192,"Instances",obj_vase);
 	    instance_create_layer(gx+192,gy+224,"Instances",obj_vase);
-	    instance_create_layer(gx+256,gy+224,"Instances",obj_fheart);
+	    instance_create_layer(gx+256,gy+224,"Instances",obj_heart);
 	    instance_create_layer(gx+320,gy+224,"Instances",obj_vase);
 	    instance_create_layer(gx+224,gy+256,"Instances",obj_vase);
 	    instance_create_layer(gx+288,gy+256,"Instances",obj_vase);

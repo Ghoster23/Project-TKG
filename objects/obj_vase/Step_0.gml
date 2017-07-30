@@ -8,10 +8,10 @@ if (place_meeting(x,y,obj_swing) or place_meeting(x,y,obj_explosion)){
 		flash = true;
 		
         if((irandom(99) + 1) == 1){
-                instance_create_layer(x,y,"Instances",obj_hheart);
+                instance_create_layer(x,y,"Instances",obj_heart);
                 
             }else if((irandom(99) + 1) == 1){
-                instance_create_layer(x,y,"Instances",obj_fheart);
+                instance_create_layer(x,y,"Instances",obj_heart);
     }
 }
 

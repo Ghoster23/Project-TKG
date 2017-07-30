@@ -37,14 +37,14 @@ e_spd = 3;
 //States
 state = 0;
 state_change = false;
-p_state = 0;
+prev_state = 0;
 atk_cd = false;
 ini_point_x = x;
 ini_point_y = y;
 dir_change = false;
 i_dir = 0;
 dir = point_direction(x,y,obj_body.x,obj_body.y);
-p_state = 0;
+prev_state = 0;
 d = 0;
 d_ = 0;
 offset_x = 0;

@@ -27,7 +27,7 @@ e_spd =1;
 //States
 state = 0;
 state_change = false;
-p_state = 0;
+prev_state = 0;
 atk_cd = false;
 ini_point_x = x;
 ini_point_y = y;

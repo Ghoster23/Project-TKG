@@ -25,13 +25,7 @@ if go and not global.pause{
 					image_xscale=1;
 				}
 				
-	            //Get hspd and vspd
-	            hspd = lengthdir_x(e_spd,action_dir);
-	            vspd = lengthdir_y(e_spd,action_dir);
-			
-	            //Move
-	            phy_position_x += hspd;
-	            phy_position_y += vspd;
+	            scr_move_enemy(action_dir,1);
 				
             }
 			else if moved==true{ 
@@ -69,9 +63,9 @@ if go and not global.pause{
 		
 		break; 
 		
-		case 3: //ded
+		case 3: //dead
 		
-		solid = false;
+			solid = false;
 			image_speed = 0;
             instance_create_layer(x,y,layer,obj_cadaver);
             
@@ -85,12 +79,9 @@ if go and not global.pause{
             }
             
             if((irandom(99) + 1) <= 10){
-                instance_create_layer(x,y,layer,obj_hheart);
+	            instance_create_layer(x,y,obj_bat.layer,obj_heart);
                 
-            }else if((irandom(99) + 1) == 1){
-                instance_create_layer(x,y,layer,obj_fheart);
-                
-            }
+	        }
             
 		instance_destroy();
 		break;
@@ -110,20 +101,7 @@ if go and not global.pause{
 	
 
 	///Get Damaged
-    if(place_meeting(x,y,obj_swing) and state==0){
-        e_hp -= global.p_atk div e_def;
-        damaged = true;
-    }
-    
-    if(place_meeting(x,y,obj_sword_t) and obj_sword_t.phy_angular_velocity>0) and state == 0{
-        e_hp -= global.p_satk div e_sdef;
-        damaged = true;
-    }
-    
-	if place_meeting(x,y,obj_explosion){
-		e_hp -= global.p_satk div e_sdef;
-		damaged = true;
-	}
+    scr_damage_enemy();
 	
     if damaged == true{
         flash=true;

@@ -14,10 +14,7 @@ with instance_nearest(x,y,obj_cadaver){
 
 //Spawn a heart		
 if((irandom(99) + 1) <= 10){
-    instance_create_layer(x,y,"Instances",obj_hheart);
-                
-}else if((irandom(99) + 1) == 1){
-    instance_create_layer(x,y,"Instances",obj_fheart);
+	instance_create_layer(x,y,obj_bat.layer,obj_heart);
                 
 }
 

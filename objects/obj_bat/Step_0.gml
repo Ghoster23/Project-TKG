@@ -39,8 +39,8 @@ if go and not global.pause{
         }
     }
     
-    if p_state != state{
-        p_state = state;
+    if prev_state != state{
+        prev_state = state;
         state_change = true;
     }
     
@@ -49,51 +49,14 @@ if go and not global.pause{
 		///Idle
         case 0:
 			image_speed=1.5;
-			
-			///Determine anchor after state change
-            if state_change == true{
-                ini_point_x = x;
-                ini_point_y = y;
-                
-                state_change = false;
-            }
-            
-			///If in range of anchor
-            if distance_to_point(ini_point_x,ini_point_y) <= 32{
-				///Change direction
-                if dir_change == true{
-                    alarm[3] = 20;
-                    dir_change = false;
-                    i_dir = irandom(360);
-                }
-				
-			///Else back get back in range of anchor
-            }else{
-                i_dir = point_direction(x,y,ini_point_x,ini_point_y);
-                
-            }
-            
-            //Get hspd and vspd
-            hspd = lengthdir_x(e_spd,i_dir);
-            vspd = lengthdir_y(e_spd,i_dir);
-   
-            //Move
-            phy_position_x += hspd;
-            phy_position_y += vspd;
+			scr_idle_enemy(32,20);
             
         break;
 		
 		///Chase the player
         case 1:
 			image_speed=1.5;
-            dir = point_direction(x,y,obj_body.x,obj_body.y);
-            
-            //Get hspd and vspd
-            hspd = lengthdir_x(e_spd,dir);
-            vspd = lengthdir_y(e_spd,dir);
-            
-            phy_position_x += hspd;
-            phy_position_y += vspd;
+            scr_move_enemy(point_direction(x,y,obj_body.x,obj_body.y),1);
             
         break;
 		
@@ -106,12 +69,7 @@ if go and not global.pause{
 			}
             
 			if dash {
-				//Get hspd and vspd
-		        hspd = lengthdir_x(e_spd*10,dir);
-		        vspd = lengthdir_y(e_spd*10,dir);
-	            //Move
-		        phy_position_x += hspd;
-		        phy_position_y += vspd;
+				scr_move_enemy(dir,10);
 			
 				//Cooldown
 		        if dash_cd == false{
@@ -129,10 +87,7 @@ if go and not global.pause{
             sprite_index = spr_bat_d;
 			
 	        if((irandom(99) + 1) <= 10){
-	            instance_create_layer(x,y,obj_bat.layer,obj_hheart);
-                
-	        }else if((irandom(99) + 1) == 1){
-	            instance_create_layer(x,y,obj_bat.layer,obj_fheart);
+	            instance_create_layer(x,y,obj_bat.layer,obj_heart);
                 
 	        }
 			
@@ -144,15 +99,7 @@ if go and not global.pause{
     
 	
     ///Get Damaged
-    if(place_meeting(x,y,obj_swing)){
-        e_hp -= global.p_atk div e_def;
-        damaged = true;
-    }
-    
-    if(place_meeting(x,y,obj_sword_t) and obj_sword_t.image_speed>0){
-        e_hp -= global.p_satk div e_sdef;
-        damaged = true;
-    }
+    scr_damage_enemy();
     
 	///Flash
     if damaged == true{
