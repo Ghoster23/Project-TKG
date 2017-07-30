@@ -60,10 +60,10 @@ if room == rm_level {
 				draw_sprite_ext(spr_mm_rm1, type, xx + 4 * m + col * rw, yy + 4 * m + row * rh, m, m, 0, c_white, 1);
 				
 			///Rooms adjacent to visited rooms that have not been visisted
-			}else if ((global.ds_roomgrid[# 2, i - 8] and doors[0] == 1) or 
-					 (global.ds_roomgrid[# 2, i - 1] and doors[1] == 1) or 
-					 (global.ds_roomgrid[# 2, i + 8] and doors[2] == 1) or 
-					 (global.ds_roomgrid[# 2, i + 1] and doors[3] == 1)) and 
+			}else if (i - 8 >= 0 and (global.ds_roomgrid[# 2, i - 8] and doors[0] == 1) or 
+					 (i - 1 >= 0 and global.ds_roomgrid[# 2, i - 1] and doors[1] == 1) or 
+					 (i + 8 <= 63 and global.ds_roomgrid[# 2, i + 8] and doors[2] == 1) or 
+					 (i + 1 <= 63 and global.ds_roomgrid[# 2, i + 1] and doors[3] == 1)) and 
 					  global.ds_roomgrid[# 1, i]!="NULL"{
 				spr = scr_mm_tile(i);
 				show_debug_message(spr);
@@ -97,9 +97,6 @@ if room == rm_level {
 				
 				///If there's a room there
 				if global.ds_roomgrid[# 1, c_rm] != "NULL"{
-					///Get the coords
-					coords = global.ds_roomgrid[# 0, c_rm];
-					doors = global.ds_roomgrid[# 3, c_rm];
 					var type = 0;
 					
 					///If it has been visited
@@ -137,7 +134,7 @@ if room == rm_level {
 					}else if not ((i == 0 and j == 0) or (i == 2 and j == 0) or (i == 0 and j == 2) or (i == 2 and j == 2)){
 						draw_sprite_ext(spr_mm_rm_os, scr_mm_tile(c_rm), xx + 4 * m + j * rw, yy + 4 * m + i * rh, m, m, 0, c_white, 1);
 						
-						type = 4;
+						type = 0;
 						
 						draw_sprite_ext(spr_mm_rm_os, type, xx + 4 * m + j * rw, yy + 4 * m + i * rh, m, m, 0, c_white, 1);
 					}
