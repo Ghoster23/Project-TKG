@@ -15,7 +15,7 @@ if instance_exists(obj_torch){
 		}
 	}
 
-	//handle the sound
+	//handle the sound-------------------------------------------------
 	var distan_max=200;
 	var distan=distance_to_object(torch);
 
@@ -37,3 +37,4 @@ if instance_exists(obj_torch){
 	
 	}
 }
+   //---------------------------------------------------------------------
