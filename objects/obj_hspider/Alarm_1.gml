@@ -1,5 +1,4 @@
 /// @description decide the state
-
 if state != 3{   //if not dead decide between state 0 or 1
 	//get dir of player;
 	action_dir=point_direction(x,y,obj_body.x,obj_body.y);

@@ -1,4 +1,5 @@
 event_inherited();
+
 //Appear
 if(place_meeting(x,y,obj_ppon)) and visible == false{
     visible = true;
@@ -9,40 +10,7 @@ if(place_meeting(x,y,obj_ppon)) and visible == false{
 
 //Exist
 if go and not global.pause{
-	for(i = 0; i < 8; i++){
-		if alarms[i] != -1 {
-			alarm[i] = alarms[i];
-			alarms[i] = -1;
-		}
-	}
-	
-	if prev_image_speed != 0{
-		image_speed = prev_image_speed;
-		prev_image_speed = 0;
-	}
-	
-    /// Enemy States
-    if state != 3  and state != 2{
-        if dis > 100 and dis < 200 and dash == false{
-            state = 1;
-        
-        }else if dis <= 100{
-            if dash_cd == false {
-                ///Dash activation
-                state = 2;
-            }else if dash == false{
-                state = 1;
-            }
-
-        }else if dis >= 200 and dash == false{
-            state = 0;
-        }
-    }
-    
-    if prev_state != state{
-        prev_state = state;
-        state_change = true;
-    }
+	scr_pause_end(8);
     
     ///Enemy Behavior
     switch(state){
@@ -77,21 +45,26 @@ if go and not global.pause{
 					dash_cd = true;
 		        }
 			}
-	
-            
+			
         break;
 		
 		///Die
         case 3:
-			global.act_enemies -= 1;
-            sprite_index = spr_bat_d;
+			//Change sprite
+			if sprite_index != spr_bat_d {
+	            sprite_index = spr_bat_d;
+				image_index = 0;
+				image_speed = 0.5;
+				scr_drops();
+				global.act_enemies -= 1;
+				flash = false;
+			}
 			
-	        if((irandom(99) + 1) <= 10){
-	            instance_create_layer(x,y,obj_bat.layer,obj_heart);
-                
-	        }
+			if image_index == 3{
+				instance_destroy();
+				
+			}
 			
-			instance_destroy();
 		break;
 		case "pause":
 		break;
@@ -102,32 +75,10 @@ if go and not global.pause{
     scr_damage_enemy();
     
 	///Flash
-    if damaged == true{
-        alarm[4] = 0.03*room_speed;
-        damaged = false;
-        if flash == false{
-            flash = true;
-        }
-		
-    }
+	scr_flash_enemy();
     
-    ///Go to death state
-    if(e_hp <= 0) and state != 3{
-        state = 3;
-		
-    }
 }
 
 if global.pause == true{
-	for(i = 0; i < 8; i++){
-		if alarm[i] != -1 {
-			alarms[i] = alarm[i];
-			alarm[i] = -1;
-		}
-	}
-	
-	if prev_image_speed == 0{
-		prev_image_speed = image_speed;
-		image_speed = 0;
-	}
+	scr_pause_start(8);
 }

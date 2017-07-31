@@ -27,18 +27,20 @@ for(i = 0; i < 1; i++){
 }
 
 //Apply damage
-switch type {
-	case 0: //Physical attacks
-		e_hp -= global.p_atk div e_def;
-	break;
-	case 1: //Speacil attacks
-		e_hp -= global.p_satk div e_sdef;
-	break;
-	case 404:
-	break;
-}
-
-if type != 404{
-	//Activate flash and immunity
-	damaged = true;
+if not flash {
+	switch type {
+		case 0: //Physical attacks
+			e_hp -= global.p_atk div e_def;
+		break;
+		case 1: //Speacil attacks
+			e_hp -= global.p_satk div e_sdef;
+		break;
+		case 404:
+		break;
+	}
+	
+	if type != 404{
+		//Activate flash and immunity
+		damaged = true;
+	}
 }

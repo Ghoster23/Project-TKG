@@ -120,3 +120,7 @@ if keyboard_check_pressed(vk_f11){
 if keyboard_check_pressed(vk_f4){
     room_goto(rm_CH_boss);
 }
+
+if keyboard_check_pressed(vk_f3){
+    room_goto(rm_level);
+}

@@ -1,7 +1,7 @@
 randomize();
 
 ///Start enemy
-if(place_meeting(x,y,obj_ppon)) and visible == false{
+if(place_meeting(x,y,obj_ppon)) and not visible{
     visible = true;
     global.act_enemies += 1;
     
@@ -10,23 +10,7 @@ if(place_meeting(x,y,obj_ppon)) and visible == false{
 
 ///Exist
 if go and not global.pause{
-    visible = true;
-    solid = true;
-
-    /// Enemy States
-	if global.pause == false{
-	    if dis < 200 and state != 2{
-	        state = 1;
-
-	    }else if dis >= 200 and state != 2{
-	        state = 0;
-	    }
-	}
-    
-    if prev_state != state{
-        prev_state = state;
-        state_change = true;
-    }
+    scr_pause_end(5);
     
     ///Enemy Behaevior
     switch(state){
@@ -54,41 +38,14 @@ if go and not global.pause{
 
     }
     
-      
-    ///Get Damaged
-    if(place_meeting(x,y,obj_swing)) and damaged == false and state != 2{
-        scr_damage_enemy();
-        if e_hp > 0{
-            
-			flash=true;
-			alarm[5] = room_speed*0.05;
-            alarm[4] = 15;
-        }
-    } 
+	//Get damaged
+	if not flash {
+		scr_damage_enemy();
+		show_debug_message(e_hp);
+	}
     
-    if(place_meeting(x,y,obj_sword_t) and obj_sword_t.image_speed>0) and damaged == false and state != 2{
-        scr_damage_enemy();
-        if e_hp > 0{
-            
-			flash=true;
-			alarm[5] = room_speed*0.05;
-            alarm[4] = 15;
-        }
-    }
-    
-    ///Die
-    if(e_hp <= 0) and state != 2{
-		flash=true;
-		alarm[5] = room_speed*0.02;
-        global.act_enemies -= 1;
-        alarm[1] = 16;
-                
-        sprite_index = spr_slime_d;
-        image_index = 0;
-        image_speed = 0.2;
-        state = 2;
-        
-    }
+	//Flash
+	scr_flash_enemy();
 
     ///Creep
 	rmx = x mod global.roomwd;
@@ -98,10 +55,6 @@ if go and not global.pause{
 		ds_grid_set_region(global.fluid_grid,(rmx - 16) div 4,(rmy + 3) div 4,(rmx + 15) div 4,(rmy + 14) div 4,30);
 		ds_grid_set_region(global.fluid_grid,((rmx - 16) + 4) div 4,((rmy + 3) - 4) div 4,(rmx + 15 - 4) div 4,(rmy + 14 + 4) div 4,30);
 	}
-}
-
-if global.pause == true{
-	image_speed = 0;
-}else {
-	image_speed = 0.2;
+}else if go{
+	scr_pause_start(5);
 }

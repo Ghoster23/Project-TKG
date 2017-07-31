@@ -16,8 +16,8 @@ signal[0] = -1;
 signal[1] = 1;
 
 //Stats
-e_mhp = 5;
-e_hp = 5;
+e_mhp = 15;
+e_hp = 15;
 e_atk = 10;
 e_satk = 0;
 e_def = 5;
@@ -39,7 +39,7 @@ i_dir = 0;
 ///Distance
 dis = 0
 
-///Knockback
-kb_x = 0;
-kb_y = 0;
-
+//Pause
+for(i = 0; i < 6; i++){
+	alarms[i] = -1;
+}

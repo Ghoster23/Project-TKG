@@ -61,3 +61,8 @@ if flash == false{
 	}
 }
 
+///Go to death state
+if e_hp <= 0 {
+	state = 3;
+		
+}
