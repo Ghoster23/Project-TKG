@@ -1,4 +1,4 @@
 event_inherited();
-
+image_speed=0;
 allow = true;
-global.thrown=false;
+thrust=false;
