@@ -26,7 +26,7 @@ if room == rm_level {
 			if global.ds_roomgrid[# 2, i] and global.ds_roomgrid[# 1, i]!="NULL" {
 				///Directions
 				spr = scr_mm_tile(i);
-				show_debug_message(spr);
+				
 				draw_sprite_ext(spr_mm_rm, spr, xx + 4 * m + col * rw, yy + 4 * m + row * rh, m, m, 0, c_white, 1);
 				
 				switch global.ds_roomgrid[# 1, i] {
@@ -66,7 +66,7 @@ if room == rm_level {
 					 (i + 1 <= 63 and global.ds_roomgrid[# 2, i + 1] and doors[3] == 1)) and 
 					  global.ds_roomgrid[# 1, i]!="NULL"{
 				spr = scr_mm_tile(i);
-				show_debug_message(spr);
+				
 				draw_sprite_ext(spr_mm_rm, spr, xx + 4 * m + col * rw, yy + 4 * m + row * rh, m, m, 0, c_white, 1);
 				
 				draw_sprite_ext(spr_mm_rm, 0, xx + 4 * m + col * rw, yy + 4 * m + row * rh, m, m, 0, c_white, 1);

@@ -29,7 +29,7 @@ if not global.pause and go{
 	    state_change = true;
 	}
 
-	if flash == true{
+	if damaged == true{
 		sprite_index = spr_slime_hit;
 		image_speed = 0;
 	}

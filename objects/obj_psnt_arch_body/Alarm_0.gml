@@ -1,2 +1,6 @@
 ///@description Start enemy
-go = true;
+if not go{
+	go = true;
+}else {
+	damaged = false;
+}

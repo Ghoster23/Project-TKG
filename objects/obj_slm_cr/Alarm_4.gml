@@ -1,2 +1,2 @@
-///@description Stop flash
+///@description Stop flash and damaged
 flash=false;

@@ -44,7 +44,9 @@ if go and not global.pause{
     image_blend = c_white;
     
     ///Get Damaged
-    scr_damage_enemy();
+	if not damaged {
+		scr_damage_enemy();
+	}
     
     scr_flash_enemy();
 	

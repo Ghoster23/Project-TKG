@@ -1,5 +1,2 @@
-///@description Reset flashing and damage
-if not global.pause{
-	flash = false;
-	damaged = false;
-}
+///@description Reset flashing
+flash = false;

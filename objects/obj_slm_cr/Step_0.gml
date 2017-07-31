@@ -39,9 +39,9 @@ if go and not global.pause{
     }
     
 	//Get damaged
-	if not flash {
+	if not damaged {
 		scr_damage_enemy();
-		show_debug_message(e_hp);
+	
 	}
     
 	//Flash

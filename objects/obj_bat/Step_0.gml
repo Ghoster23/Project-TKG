@@ -72,7 +72,9 @@ if go and not global.pause{
     
 	
     ///Get Damaged
-    scr_damage_enemy();
+	if not damaged {
+		scr_damage_enemy();
+	}
     
 	///Flash
 	scr_flash_enemy();

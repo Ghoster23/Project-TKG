@@ -23,7 +23,7 @@ global.p_inv = false;
 //Stats
 global.p_maxhp = 20;
 global.p_hp = 20;
-global.p_atk = 5;
+global.p_atk = 10;
 global.p_def = 5;
 global.p_satk = 5;
 global.p_sdef = 5;
