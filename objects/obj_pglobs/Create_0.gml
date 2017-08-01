@@ -79,6 +79,8 @@ global.char_bsprs[0,6] = spr_roll_side;
 ///Player Character head sprites
 global.char_hsprs[0] = spr_head;
 
+//Player abilities
+global.p_will = 1;
 
 ///Rooms
 //Current Room

@@ -1,12 +1,35 @@
-if not global.st_poison{
-	draw_sprite_ext(spr_gui,image_index,0,0,3,3,0,c_white,1);
-}else {
-	draw_sprite_ext(spr_gui,image_index,0,0,3,3,0,c_green,1);
+m = display_get_gui_width() / global.roomwd;
+
+///Draw emblem
+draw_sprite_ext(spr_emblem,global.char,0,0,m,m,0,c_white,1);
+
+///Draw health
+hp = global.p_hp;
+
+xx = 80 * m;
+yy = 34 * m;
+
+for(var i = 0; i < global.p_maxhp div 4; i++){
+	if hp >= 4{
+		draw_sprite_ext(spr_heart,4,xx + (i * 16) * m, yy, m, m, 0, c_white, 1);
+		hp -= 4;
+	}else if hp > 0{
+		draw_sprite_ext(spr_heart, hp,xx + (i * 16) * m, yy, m, m, 0, c_white, 1);
+		hp -= hp;
+	}else {
+		draw_sprite_ext(spr_heart, 0,xx + (i * 16) * m, yy, m, m, 0, c_white, 1);
+	}
 }
 
-draw_set_colour(c_white);
+///Draw coins
+draw_sprite_ext(spr_coin,0,yy - 4 * m,xx,m,m,0,c_white,1);
 draw_set_font(font0);
+draw_text_ext_transformed( yy + 20 * m, xx, string(global.coins), 2 * m, 16 * m, m, m, 0);
 
-draw_set_alpha(1);
-draw_text(view_get_xport(view_current)+152,view_get_yport(view_current)+10,string_hash_to_newline(string(global.p_atk)));
-draw_text(view_get_xport(view_current)+190,view_get_yport(view_current)+10,string_hash_to_newline(string(global.p_def)));
+///Character specific
+switch global.char {
+	case 0:
+		draw_sprite_ext(spr_sword_of_will,0,62 *m,55 *m,m,m,0,c_white,1);
+		draw_rectangle(92 * m, 67 * m, (92 + (68 * global.p_will/100)) * m, 74 * m, false);
+	break;
+}

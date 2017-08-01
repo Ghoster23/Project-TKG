@@ -6,8 +6,7 @@ if(place_meeting(x,y,obj_ppon)) and visible == false{
 
 ///Exist
 if go and not global.pause{
-    visible = true;
-
+	scr_pause_end(6);
 
 //states for enemy behaviour
 
@@ -78,12 +77,9 @@ if go and not global.pause{
                 phy_rotation = irandom(0);
             }
             
-            if((irandom(99) + 1) <= 10){
-	            instance_create_layer(x,y,obj_bat.layer,obj_heart);
-                
-	        }
+            scr_drops();
             
-		instance_destroy();
+			instance_destroy();
 		break;
 		
 		case "pause":
@@ -103,39 +99,8 @@ if go and not global.pause{
 	///Get Damaged
     scr_damage_enemy();
 	
-    if damaged == true{
-        flash=true;
-		damaged=false;
-		alarm[5]=room_speed*0.08;
-    }
+    scr_flash_enemy();
 
-}
-
-if global.pause == true {
-	for(i = 0; i < 6; i += 1){
-		if alarm[i] != -1{
-			alarms[i] = alarm[i];
-			alarm[i] = -1;
-		}
-	}
-	
-	if image_speed != 0{
-		prev_image_speed = image_speed;
-		image_speed = 0;
-	}
-}
-
-if global.pause == false {
-	for(i = 0; i < 6; i += 1){
-		if alarms[i] != -1{
-			alarm[i] = alarms[i];
-			alarms[i] = -1;
-		}
-	}
-	
-	if prev_image_speed != 0{
-		image_speed = prev_image_speed;
-		prev_image_speed = 0;
-	}
-
+}else if go{
+	scr_pause_start(6);
 }

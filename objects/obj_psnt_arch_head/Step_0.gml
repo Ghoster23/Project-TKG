@@ -1,4 +1,4 @@
-if global.pause == false{
+if global.pause == false and instance_exists(body){
 	if body.state == 3{
 	    instance_destroy();
 	}

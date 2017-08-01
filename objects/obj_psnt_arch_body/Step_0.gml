@@ -1,4 +1,4 @@
-if(place_meeting(x,y,obj_ppon)) and visible == false{
+if(place_meeting(x,y,obj_ppon)) and not visible {
     visible = true;
     global.act_enemies += 1;
     
@@ -54,6 +54,6 @@ if go and not global.pause{
 		image_speed = 0;
 	}
 	
-}else {
+}else if go{
 	scr_pause_start(6);
 }

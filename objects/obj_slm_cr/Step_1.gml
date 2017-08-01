@@ -5,6 +5,7 @@ dis = distance_to_object(obj_body);
 if not global.pause and go{
 	if state != 2{
 		image_speed = 0.2;
+		
 		if dis < 200{
 		    state = 1;
 
@@ -13,7 +14,7 @@ if not global.pause and go{
 		}
 		
 		///Die
-	    if e_hp <= 0 {
+	    if e_hp <= 0 and sprite_index != spr_slime_d{
 	        global.act_enemies -= 1;
                 
 	        sprite_index = spr_slime_d;
@@ -29,8 +30,4 @@ if not global.pause and go{
 	    state_change = true;
 	}
 
-	if damaged == true{
-		sprite_index = spr_slime_hit;
-		image_speed = 0;
-	}
 }

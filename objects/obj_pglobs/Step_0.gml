@@ -1,5 +1,8 @@
 scr_get_input();
 
+show_debug_message("act enemies: " + string(global.act_enemies));
+show_debug_message(global.p_inv);
+
 ///Create GUI
 if(instance_exists(obj_body) && !instance_exists(obj_gui)){
     instance_create_layer(obj_body.x-240,obj_body.y-176,"IF",obj_gui);
@@ -97,6 +100,17 @@ if room == rm_level{
     }
 }
 
+///Abilities
+if not global.pause{
+	switch global.char {
+		case 0:
+			if alarm[3] == -1 and global.act_enemies > 0{
+				alarm[3] = 5 * room_speed;
+			}
+		break;
+	}
+}
+
 ///Death
 if(global.p_hp <= 0 && dead == false){
     room_goto(rm_dead);
@@ -110,6 +124,11 @@ if(room == rm_dead){
         
     }
    
+}
+
+///Invulnerabillity guaranteed off
+if global.p_inv and not (global.p_hurt or instance_exists(obj_roll)){
+	global.p_inv = false;
 }
 
 ///Debug

@@ -199,6 +199,14 @@
             }
         },
         {
+            "Key": "07dce2a4-cc62-4791-a2df-e674fb5d15c9",
+            "Value": {
+                "id": "2d426edc-2ef6-4830-a9e9-4a3b15b62f63",
+                "resourcePath": "views\\07dce2a4-cc62-4791-a2df-e674fb5d15c9.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "082ab909-4c84-41fe-b2b7-f550e8b71f18",
             "Value": {
                 "id": "4230a32a-b8f7-487d-9c23-564015000aca",
@@ -452,6 +460,14 @@
                 "id": "636118e3-4241-417f-831c-ece9f6da1c5d",
                 "resourcePath": "views\\19df25bc-9547-434c-a099-5c68cd966370.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "19e3125c-ad78-4da7-ae3c-e897bd19231e",
+            "Value": {
+                "id": "de532198-25ad-4f5e-a482-4384732f1e3c",
+                "resourcePath": "sprites\\spr_emblem\\spr_emblem.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -964,6 +980,14 @@
                 "id": "93a53286-3176-4fd3-9d2e-b69ea6dfa67a",
                 "resourcePath": "objects\\obj_fln_rock_shadow\\obj_fln_rock_shadow.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "41f5d3c1-f620-4e64-bbf9-82473fb783f2",
+            "Value": {
+                "id": "9075b25e-0f6f-4d05-acec-093f767a322b",
+                "resourcePath": "sprites\\spr_coin\\spr_coin.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2003,6 +2027,14 @@
             "Value": {
                 "id": "8bf35ccb-210d-49ad-b2e3-895f9853a9b2",
                 "resourcePath": "sprites\\spr_menu2_options\\spr_menu2_options.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8f18658a-31ae-4ce9-89a0-b5e48cfa4cbb",
+            "Value": {
+                "id": "59d01c72-907b-4826-a0c3-5b006b31b815",
+                "resourcePath": "sprites\\spr_sword_of_will\\spr_sword_of_will.yy",
                 "resourceType": "GMSprite"
             }
         },

@@ -25,9 +25,8 @@ if go and not global.pause{
             
         break;
         case 2:  //Dead state
-            sprite_index = spr_slime_d;
-            image_speed = 0.2;
-            
+			image_speed = 0.2;
+			 
             if image_index == 5{
                 instance_destroy();
             }

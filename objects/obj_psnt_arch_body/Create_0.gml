@@ -49,6 +49,8 @@ d = 0;
 d_ = 0;
 offset_x = 0;
 offset_y = 0;
+hspd = 0;
+vspd = 0;
 
 for(i = 0; i < 6; i += 1){	
 	alarms[i] = -1;
