@@ -15,16 +15,6 @@
             "m_owner": "18dfca2e-a2bb-4721-ac9e-30825ebd674c"
         },
         {
-            "id": "b33cafda-7850-425c-8307-42c6f5c03873",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 4,
-            "eventtype": 2,
-            "m_owner": "18dfca2e-a2bb-4721-ac9e-30825ebd674c"
-        },
-        {
             "id": "b33994b1-3445-491f-9754-3248ccda1163",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -95,16 +85,6 @@
             "m_owner": "18dfca2e-a2bb-4721-ac9e-30825ebd674c"
         },
         {
-            "id": "b51502f7-0342-49e5-9aa5-4a760bfa1717",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "8f5bce1a-1647-48aa-88ef-f55adf522555",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "18dfca2e-a2bb-4721-ac9e-30825ebd674c"
-        },
-        {
             "id": "766c9bc4-d2da-43e4-b1ca-10b81f8ea23e",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -115,12 +95,22 @@
             "m_owner": "18dfca2e-a2bb-4721-ac9e-30825ebd674c"
         },
         {
-            "id": "23c65a6b-81d6-4575-a782-8a11aa98ad52",
+            "id": "2e2ac250-12b4-4917-9a71-2f1cd239f576",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 5,
+            "enumb": 3,
+            "eventtype": 2,
+            "m_owner": "18dfca2e-a2bb-4721-ac9e-30825ebd674c"
+        },
+        {
+            "id": "0a96bd9c-3f56-43e6-bc98-57c2680cca7f",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 4,
             "eventtype": 2,
             "m_owner": "18dfca2e-a2bb-4721-ac9e-30825ebd674c"
         }

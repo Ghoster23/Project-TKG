@@ -35,6 +35,7 @@ if go and not global.pause{
         case 3:  //Dead State
 			global.act_enemies -= 1;
 	        scr_drops();
+			instance_destroy(bow);
 			instance_destroy();
 		break;
 		case "pause":
@@ -47,8 +48,6 @@ if go and not global.pause{
 	if not damaged {
 		scr_damage_enemy();
 	}
-    
-    scr_flash_enemy();
 	
 	if hspd == 0 and vspd == 0{
 		image_speed = 0;

@@ -43,5 +43,9 @@ switch type {
 if type != 404{
 	//Activate immunity
 	damaged = true;
+	flash = true;
+	show_debug_message(e_hp);
 	
+	alarm[0] = 0.2 * room_speed;
+	alarm[4] = 0.03 * room_speed;
 }

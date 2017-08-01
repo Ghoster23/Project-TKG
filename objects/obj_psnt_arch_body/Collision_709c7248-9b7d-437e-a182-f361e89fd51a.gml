@@ -1,1 +1,1 @@
-///@description Contact damage
+///@description Contact

@@ -1,2 +1,2 @@
-///@description End damaged
-damaged = false;
+/// @description end flash
+flash=false;

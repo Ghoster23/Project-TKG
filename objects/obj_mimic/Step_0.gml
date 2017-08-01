@@ -3,17 +3,7 @@ scr_get_input();
 event_inherited();
 
 if not global.pause {
-	for(var i = 0; i < 6; i++){
-		if alarms[i] != -1{
-			alarm[i] = alarms[i];
-			alarms[i] = -1;
-		}
-	}
-	
-	if prev_image_speed != 0{
-		image_speed = prev_image_speed;
-		prev_image_speed = 0;
-	}
+	scr_pause_end(5);
 	
 	///Enemy Behaevior
 	switch(state){
@@ -36,7 +26,7 @@ if not global.pause {
 			}
 		
 			/// Enemy States
-			if dis < 32 and interact_key {
+			if (dis < 32 and interact_key) or damaged {
 			    state = 1;
     
 			    solid = true;
@@ -45,8 +35,6 @@ if not global.pause {
         
 			    e_spd = 4;
 			}
-		
-	        ///Do something about the density
 		
 	    break;
 	
@@ -60,19 +48,11 @@ if not global.pause {
 	        phy_position_x += floor(sign(obj_body.x - x)*e_spd);
 	        phy_position_y += floor(sign(obj_body.y - y)*e_spd);
         
-	        image_blend = c_white;
-        
-			///Flash when damaged
-	        if damaged = true{
-				//stop damaged
-	            alarm[4] = 20;
-	        }
-        
 	        ///Die
 	        if e_hp <= 0 and sprite_index != spr_mimic_d{
 				flash=true;
 				//stop flash
-				alarm[5]=room_speed*0.03;
+				alarm[4]=room_speed*0.03;
 				//die
 	            alarm[2] = 20;
 	            sprite_index = spr_mimic_d;
@@ -86,42 +66,19 @@ if not global.pause {
 			//Wooble
 	        a += 1;
 	        phy_rotation = 25 * sin(a);
+			
 	    break;
 	
 		//Pause
 		case "pause":
 		break;
 	}
+	
 	///Get Damaged
-	scr_damage_enemy();
-	
-	if(place_meeting(x,y,obj_swing)){
-	    
-	    
-		flash = true;
-		alarm[5]=room_speed*0.03;
-	
-		if state == 0{
-			state = 1;
-    
-			solid = true;
-			image_speed = .9;
-			sprite_index = spr_mimic_a;
-        
-			e_spd = 4;
-		}
+	if not damaged {
+		scr_damage_enemy();
 	}
 	
 }else {
-	for(var i = 0; i < 6; i++){
-		if alarm[i] != -1{
-			alarms[i] = alarm[i];
-			alarm[i] = -1;
-		}
-	}
-	
-	if image_speed != 0{
-		prev_image_speed = image_speed;
-		image_speed = 0;
-	}
+	scr_pause_start(5);
 }

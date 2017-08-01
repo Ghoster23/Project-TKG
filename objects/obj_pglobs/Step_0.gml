@@ -1,8 +1,5 @@
 scr_get_input();
 
-show_debug_message("act enemies: " + string(global.act_enemies));
-show_debug_message(global.p_inv);
-
 ///Create GUI
 if(instance_exists(obj_body) && !instance_exists(obj_gui)){
     instance_create_layer(obj_body.x-240,obj_body.y-176,"IF",obj_gui);

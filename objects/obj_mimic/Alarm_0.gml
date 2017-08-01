@@ -1,2 +1,1 @@
-atk_cd = false;
-
+damaged = false;

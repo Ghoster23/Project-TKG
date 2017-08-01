@@ -1,7 +1,4 @@
 ///@description Damage the player
-if global.p_inv == false{
-    global.p_hp -= 10 div global.p_def;
-    global.p_hurt = true;
-}
+scr_damage_player(0,10,global.p_def);
 
 instance_destroy();

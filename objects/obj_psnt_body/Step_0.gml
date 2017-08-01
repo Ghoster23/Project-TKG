@@ -62,7 +62,7 @@ if go and not global.pause{
 		
 	}
     
-    scr_flash_enemy();
+    ;
 	
 }else if go{
 	scr_pause_start(6);	

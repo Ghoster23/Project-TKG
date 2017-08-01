@@ -42,9 +42,6 @@ if go and not global.pause{
 		scr_damage_enemy();
 	
 	}
-    
-	//Flash
-	scr_flash_enemy();
 
     ///Creep
 	rmx = x mod global.roomwd;
