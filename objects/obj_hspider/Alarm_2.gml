@@ -9,7 +9,7 @@ if state == 1{
 		alarm[2]=room_speed*1;
 		image_index=0;
 		image_speed=2;
-		alarm[4]=room_speed*0.25;
+		alarm[5]=room_speed*0.25;
 		
 		
 	}
@@ -19,7 +19,7 @@ if state == 1{
 		alarm[2]=room_speed*1;
 		image_index=0;
 		image_speed=2;
-		alarm[4]=room_speed*0.25;
+		alarm[5]=room_speed*0.25;
 	
 	}
 }

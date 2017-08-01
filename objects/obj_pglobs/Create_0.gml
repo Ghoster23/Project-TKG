@@ -34,24 +34,17 @@ global.dash_cd = false;
 
 //Equipables
     ///Spawned
-    global.selectc_0 = false;
-    global.selectc_1 = false;
-    global.selectc_2 = false;
-    global.selectc_3 = false;
-    global.selectc_4 = false;
-    global.selectc_5 = false;
-    
-    ///Equipped
-    global.eq_0 = false;
-    global.eq_1 = false;
-    global.eq_2 = false;
-    global.eq_3 = false;
-    global.eq_4 = false;
-    global.eq_5 = false;
-    
-    //Counted
-    eq_0c = false;
-    eq_1c = false;
+    for(var i = 0; i < 5; i++){
+		///Spawned
+		global.equipable[i] = false;
+		
+		///Equipped
+		global.equiped[i] = false;
+		
+		//Counted
+	    eq_active[i] = false;
+	    
+	}
 
 //Statuses
 status_check = true;

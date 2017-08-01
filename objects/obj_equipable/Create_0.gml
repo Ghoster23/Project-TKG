@@ -1,5 +1,5 @@
 event_inherited();
-global.select = irandom(1);
+select = irandom(1);
 image_speed = 0;
 ox = x;
 oy = y;
@@ -7,29 +7,29 @@ t = 0;
 inc = 4;
 amp = 7;
 
-if(global.select == 0 && global.selectc_0 == false){
+if(select == 0 && global.equipable[0] == false){
     image_index = 0;
-    global.selectc_0 = true;
+    global.equipable[0] = true;
 }
-else if(global.select == 1 && global.selectc_1 == false){
+else if(select == 1 && global.equipable[1] == false){
     image_index = 1;
-    global.selectc_1 = true;
+    global.equipable[1] = true;
 }
-else if(global.select == 2 && global.selectc_2 == false){
+else if(select == 2 && global.equipable[2] == false){
     image_index = 2;
-    global.selectc_2 = true;
+    global.equipable[2] = true;
 }
-else if(global.select == 3 && global.selectc_3 == false){
+else if(select == 3 && global.equipable[3] == false){
     image_index = 3;
-    global.selectc_3 = true;
+    global.equipable[3] = true;
 }
-else if(global.select == 4 && global.selectc_4 == false){
+else if(select == 4 && global.equipable[4] == false){
     image_index = 4;
-    global.selectc_4 = true;
+    global.equipable[4] = true;
 }
-else if(global.select == 5 && global.selectc_5 == false){
+else if(select == 5 && global.equipable[5] == false){
     image_index = 5;
-    global.selectc_5 = true;
+    global.equipable[5] = true;
 }
     
     

@@ -1,30 +1,30 @@
 scr_get_input();
 
-if(distance_to_object(obj_body) <= 5 && interact_key == true){
+if(distance_to_object(obj_body) <= 32 && interact_key == true){
     instance_destroy();
+	
     //Equipping
-    switch(global.select){
-                case 0:
-                    global.eq_0 = true;
-                break;
-                case 1:
-                    global.eq_1 = true;
-                break;
-                case 2:
-                    global.eq_2 = true;
-                break;
-                case 3:
-                    global.eq_3 = true;
-                break;
-                case 4:
-                    global.eq_4 = true;
-                break;
-                case 5:
-                    global.eq_5 = true;
-                break;
-            break;
-            }    
-        }
+    switch(select){
+		case 0:
+		    global.equipped[0] = true;
+		break;
+		case 1:
+		    global.equipped[1] = true;
+		break;
+		case 2:
+		    global.equipped[2] = true;
+		break;
+		case 3:
+		    global.equipped[3] = true;
+		break;
+		case 4:
+		    global.equipped[4] = true;
+		break;
+		case 5:
+		    global.equipped[5] = true;
+		break;
+	}    
+}
     
 
 

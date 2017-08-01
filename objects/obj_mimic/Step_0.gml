@@ -18,22 +18,26 @@ if not global.pause {
 			if blink == true{
 			    if image_speed == 0{
 			        image_speed = 0.2;
+					
 			    }else if image_speed == 0.2 and (image_index == 0 or image_index == 9){
 			        image_speed = 0;
 			        image_index = 0;
 			        blink = false;
+					
 			    }
 			}
 		
 			/// Enemy States
 			if (dis < 32 and interact_key) or damaged {
-			    state = 1;
-    
-			    solid = true;
+			    alarm[5] = 0.5 * room_speed;
+				
 			    image_speed = .9;
 			    sprite_index = spr_mimic_a;
-        
+				x += 16;
+				y += 16;
+				
 			    e_spd = 4;
+				
 			}
 		
 	    break;

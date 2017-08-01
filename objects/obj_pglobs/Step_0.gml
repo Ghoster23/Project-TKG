@@ -15,51 +15,13 @@ if room != rm_menu_1 and room != rm_menu_2 and room != rm_chsl and room != rm_de
 }
 
 ///Equipables' effects
-if(global.eq_0 == true && eq_0c == false){
+if(global.equiped[0] == true && eq_active[0] == false){
     global.p_atk = global.p_atk + 2;
-    eq_0c = true; 
+    eq_active[0] = true; 
 }
-if(global.eq_1 == true && eq_1c == false){
+if(global.equiped[1] == true && eq_active[1] == false){
     global.p_hp = global.p_maxhp;
-    eq_1c = true;
-}
-
-
-///GUI - Will move this
-if(instance_exists(obj_body) and instance_exists(obj_gui)){
-if(global.p_hp > global.p_maxhp*0.10*9 && global.p_hp <= global.p_maxhp){
-    obj_gui.image_index = 0;
-}
-if(global.p_hp > global.p_maxhp*0.10*8 && global.p_hp <= global.p_maxhp*0.10*9){
-    obj_gui.image_index = 1;
-}
-if(global.p_hp > global.p_maxhp*0.10*7 && global.p_hp <= global.p_maxhp*0.10*8){
-    obj_gui.image_index = 2;
-}
-if(global.p_hp > global.p_maxhp*0.10*6 && global.p_hp <= global.p_maxhp*0.10*7){
-    obj_gui.image_index = 3;
-}
-if(global.p_hp > global.p_maxhp*0.10*5 && global.p_hp <= global.p_maxhp*0.10*6){
-    obj_gui.image_index = 4;
-}
-if(global.p_hp > global.p_maxhp*0.10*4 && global.p_hp <= global.p_maxhp*0.10*5){
-    obj_gui.image_index = 5;
-}
-if(global.p_hp > global.p_maxhp*0.10*3 && global.p_hp <= global.p_maxhp*0.10*4){
-    obj_gui.image_index = 6;
-}
-if(global.p_hp > global.p_maxhp*0.10*2 && global.p_hp <= global.p_maxhp*0.10*3){
-    obj_gui.image_index = 7;
-}
-if(global.p_hp > global.p_maxhp*0.10*1 && global.p_hp <= global.p_maxhp*0.10*2){
-    obj_gui.image_index = 8;
-}
-if(global.p_hp > 0 && global.p_hp <= global.p_maxhp*0.10*1 ){
-    obj_gui.image_index = 9;
-}
-if(global.p_hp == 0 && instance_exists(obj_gui)){
-    obj_gui.image_index = 10;
-}
+    eq_active[1] = true;
 }
 
 ///Statuses

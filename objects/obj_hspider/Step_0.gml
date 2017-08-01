@@ -8,8 +8,7 @@ if(place_meeting(x,y,obj_ppon)) and visible == false{
 if go and not global.pause{
 	scr_pause_end(6);
 
-//states for enemy behaviour
-
+	//states for enemy behaviour
 	switch(state){
         case 0:  //move like a spider
 			if moved==false{ 
@@ -91,7 +90,6 @@ if go and not global.pause{
     if(e_hp <= 0) and state != 3{
         global.act_enemies -= 1;
         state = 3;
-        alarm[5] = 5;
         
     }
 	
@@ -103,4 +101,5 @@ if go and not global.pause{
 
 }else if go{
 	scr_pause_start(6);
+	
 }
