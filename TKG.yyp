@@ -3543,6 +3543,14 @@
             }
         },
         {
+            "Key": "fcfc58f7-0834-4227-bfe9-3f28ce4298f7",
+            "Value": {
+                "id": "6c866d5b-3c86-4cd9-86d1-e9adb5fe439e",
+                "resourcePath": "objects\\obj_coin\\obj_coin.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "fd8b44cf-5a57-49df-b03e-db46c2fa9800",
             "Value": {
                 "id": "1af1911f-23a4-4dec-807d-2b0c3376961d",

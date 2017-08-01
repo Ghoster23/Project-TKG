@@ -95,9 +95,9 @@ if go and not global.pause{
 	
 
 	///Get Damaged
-    scr_damage_enemy();
-	
-    ;
+	if not damaged and not sprite_index == spr_hspider_hide{
+		scr_damage_enemy();
+	}
 
 }else if go{
 	scr_pause_start(6);

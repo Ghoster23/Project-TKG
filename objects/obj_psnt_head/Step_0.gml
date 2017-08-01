@@ -4,6 +4,8 @@ if global.pause == false and instance_exists(body){
 	}
 	
 	visible = body.visible;
+	
+	flash = body.flash;
 
 	image_index = opt;
 

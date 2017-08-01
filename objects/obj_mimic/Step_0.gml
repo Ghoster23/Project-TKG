@@ -33,8 +33,8 @@ if not global.pause {
 				
 			    image_speed = .9;
 			    sprite_index = spr_mimic_a;
-				x += 16;
-				y += 16;
+				phy_position_x += 4;
+				phy_position_y += 4;
 				
 			    e_spd = 4;
 				
