@@ -64,7 +64,7 @@ if not global.pause{
 	switch global.char {
 		case 0:
 			if alarm[3] == -1 and global.act_enemies > 0{
-				alarm[3] = 5 * room_speed;
+				alarm[3] = 1 * room_speed;
 			}
 		break;
 	}
