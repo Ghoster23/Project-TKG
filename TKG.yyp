@@ -871,6 +871,14 @@
             }
         },
         {
+            "Key": "34ebba2b-d015-43bf-8753-c4de80cf8275",
+            "Value": {
+                "id": "b8516976-e09d-4bc3-a6a8-3c9b1725023d",
+                "resourcePath": "objects\\obj_spell_caster\\obj_spell_caster.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "353a8b0e-0f7a-44ca-ae98-98aa32aa55bc",
             "Value": {
                 "id": "82b01ded-dcd8-4368-80e1-0055abee21e8",
@@ -2727,6 +2735,14 @@
             }
         },
         {
+            "Key": "c0612ff9-647c-4d03-949a-5f95bf08bc54",
+            "Value": {
+                "id": "1b91ff9a-3070-4179-9d10-b9bd8834a68b",
+                "resourcePath": "sprites\\spr_sword_projectiles\\spr_sword_projectiles.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c0804d8a-c56e-48f5-92dc-e89624fda88c",
             "Value": {
                 "id": "b070f994-e53d-4f09-a21a-e450533ac5ef",
@@ -2843,6 +2859,14 @@
             "Value": {
                 "id": "76f5fd43-c824-47eb-8af2-2c6cf5ce89ed",
                 "resourcePath": "objects\\obj_e_bow\\obj_e_bow.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c7817172-fd22-4acb-9257-0b407c567150",
+            "Value": {
+                "id": "7bdd9846-aa02-4991-8150-dcfcc7813ff9",
+                "resourcePath": "objects\\obj_sword_projectile\\obj_sword_projectile.yy",
                 "resourceType": "GMObject"
             }
         },

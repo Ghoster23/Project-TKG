@@ -9,7 +9,9 @@
         "377cc7fd-3812-440d-ab59-5637c46a746d",
         "8f5bce1a-1647-48aa-88ef-f55adf522555",
         "e15fd4b7-758e-456f-a73e-059db7900ce1",
-        "912414a0-546a-4e32-8e0e-fabe6651411e"
+        "912414a0-546a-4e32-8e0e-fabe6651411e",
+        "34ebba2b-d015-43bf-8753-c4de80cf8275",
+        "c7817172-fd22-4acb-9257-0b407c567150"
     ],
     "filterType": "GMObject",
     "folderName": "sword",
