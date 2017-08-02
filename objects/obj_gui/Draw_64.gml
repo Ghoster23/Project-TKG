@@ -22,7 +22,7 @@ for(var i = 0; i < global.p_maxhp div 4; i++){
 }
 
 ///Draw coins
-draw_sprite_ext(spr_coin,0,yy - 4 * m,xx,m,m,0,c_white,1);
+draw_sprite_ext(spr_coin,0,yy + 4 * m,xx + 8 * m,m,m,0,c_white,1);
 draw_set_font(font0);
 draw_text_ext_transformed( yy + 20 * m, xx, string(global.coins), 2 * m, 16 * m, m, m, 0);
 

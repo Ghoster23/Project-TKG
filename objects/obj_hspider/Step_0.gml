@@ -95,9 +95,9 @@ if go and not global.pause{
 	
 
 	///Get Damaged
-    scr_damage_enemy();
-	
-    ;
+	if not damaged and not (state == 1 and substate == "hiding"){
+		scr_damage_enemy();
+	}
 
 }else if go{
 	scr_pause_start(6);
