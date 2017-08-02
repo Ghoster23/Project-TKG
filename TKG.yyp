@@ -2071,6 +2071,14 @@
             }
         },
         {
+            "Key": "912414a0-546a-4e32-8e0e-fabe6651411e",
+            "Value": {
+                "id": "be1f263a-6099-4fa4-b51b-0a173545489e",
+                "resourcePath": "objects\\obj_sword_aoe\\obj_sword_aoe.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "9182bf83-542c-4572-8666-0e74e1a82c1b",
             "Value": {
                 "id": "3c2d07da-9dd8-4d82-b1d5-83550b134969",
@@ -2091,6 +2099,14 @@
             "Value": {
                 "id": "ebd52820-bfab-4e68-bcd5-2d31094acb8f",
                 "resourcePath": "sprites\\spr_dungeon_wall\\spr_dungeon_wall.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "93458c3d-21a6-4299-a531-f0eb43c63503",
+            "Value": {
+                "id": "f2f4bc62-9127-4f33-8b7c-7e3318fbf99f",
+                "resourcePath": "sprites\\spr_sword_aoe\\spr_sword_aoe.yy",
                 "resourceType": "GMSprite"
             }
         },
