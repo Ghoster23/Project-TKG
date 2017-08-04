@@ -12,5 +12,6 @@ if distance_to_object(obj_body)<=20 and interact_key{
 			instance_destroy();
 		}
 	}
+	global.p_satk -= 5;
 	instance_destroy();
 }

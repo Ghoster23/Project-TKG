@@ -36,8 +36,8 @@ e_mhp = 20;
 e_hp = 20;
 e_atk = 5;
 e_satk = 0;
-e_def = 5;
-e_sdef = 5;
+e_def = 3;
+e_sdef = 3;
 e_spd = 3;
 
 //States

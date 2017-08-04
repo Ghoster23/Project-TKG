@@ -107,5 +107,7 @@ if type != 404{
 	flash = true;
 	show_debug_message(e_hp);
 	
+	global.shake = 10;
+	
 	alarm[4] = 0.03 * room_speed;
 }

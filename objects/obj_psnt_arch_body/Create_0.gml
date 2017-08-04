@@ -30,9 +30,9 @@ if gender == 0{
 e_mhp = 20;
 e_hp = 20;
 e_atk = 5;
-e_satk = 0;
-e_def = 5;
-e_sdef = 5;
+e_satk = 1;
+e_def = 2;
+e_sdef = 2;
 e_spd = 3;
 
 //States
