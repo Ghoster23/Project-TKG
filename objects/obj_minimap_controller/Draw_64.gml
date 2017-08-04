@@ -100,7 +100,7 @@ if room == rm_level {
 					var type = 0;
 					
 					///If it has been visited
-					if global.ds_roomgrid[# 2, c_rm] {
+					if c_rm >= 0 and c_rm <= 63 and global.ds_roomgrid[# 2, c_rm] {
 						draw_sprite_ext(spr_mm_rm_os, scr_mm_tile(c_rm), xx + 4 * m + j * rw, yy + 4 * m + i * rh, m, m, 0, c_white, 1);
 						
 						///Determine the type of the room
@@ -131,7 +131,7 @@ if room == rm_level {
 						draw_sprite_ext(spr_mm_rm_os1, type, xx + 4 * m + j * rw, yy + 4 * m + i * rh, m, m, 0, c_white, 1);
 						
 					///If not and it isn't a diagonal
-					}else if not ((i == 0 and j == 0) or (i == 2 and j == 0) or (i == 0 and j == 2) or (i == 2 and j == 2)){
+					}else if c_rm >= 0 and c_rm <= 63 and not ((i == 0 and j == 0) or (i == 2 and j == 0) or (i == 0 and j == 2) or (i == 2 and j == 2)){
 						draw_sprite_ext(spr_mm_rm_os, scr_mm_tile(c_rm), xx + 4 * m + j * rw, yy + 4 * m + i * rh, m, m, 0, c_white, 1);
 						
 						type = 0;

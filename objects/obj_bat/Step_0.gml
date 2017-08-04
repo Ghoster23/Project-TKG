@@ -37,7 +37,7 @@ if go and not global.pause{
 			}
             
 			if dash {
-				scr_move_enemy(dir,10);
+				scr_move_enemy(dir,4);
 			
 				//Cooldown
 		        if dash_cd == false{
@@ -72,7 +72,7 @@ if go and not global.pause{
     
 	
     ///Get Damaged
-	if not damaged {
+	if not damaged and state != 3{
 		scr_damage_enemy();
 	}
     

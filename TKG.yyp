@@ -743,6 +743,14 @@
             }
         },
         {
+            "Key": "2ac721a2-e09a-4f62-ad99-2fa0fe48f689",
+            "Value": {
+                "id": "a9da2f25-8b8a-44d3-9e02-255da1075220",
+                "resourcePath": "views\\2ac721a2-e09a-4f62-ad99-2fa0fe48f689.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "2b9b52fc-e886-4a84-9ba6-52438bedcbc9",
             "Value": {
                 "id": "cd69f7ff-0eb5-4e8b-9262-38eee68091c9",
@@ -1411,6 +1419,14 @@
             "Value": {
                 "id": "cf6af03a-a551-4890-9317-6b21eeac0499",
                 "resourcePath": "objects\\obj_menu2_controls2\\obj_menu2_controls2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "5ab3983e-9013-44ac-8389-3a9c596def3d",
+            "Value": {
+                "id": "e4f97b05-233e-4d3b-a604-be09b7d57f1b",
+                "resourcePath": "objects\\obj_sell_drop\\obj_sell_drop.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2775,6 +2791,14 @@
             }
         },
         {
+            "Key": "c1373dad-4927-41f8-b771-b591b5770ce3",
+            "Value": {
+                "id": "b0195f87-0bb0-4af1-ad2d-630312da65fd",
+                "resourcePath": "sprites\\spr_interact\\spr_interact.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c22b2ab4-c395-47e5-8761-fe19903e269e",
             "Value": {
                 "id": "2ef20114-bb06-4b32-b20e-188cc93e997a",
@@ -3436,6 +3460,14 @@
                 "id": "99608831-726e-4723-8c49-a4afe1616b11",
                 "resourcePath": "views\\f03afda6-2cca-45df-af1c-d7550d12bf5b.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f0a1f73e-8103-49e5-bdc4-85b22d9e8c19",
+            "Value": {
+                "id": "7ce3ceb9-1e63-4f86-ab70-ed8339b14fb6",
+                "resourcePath": "objects\\obj_hands\\obj_hands.yy",
+                "resourceType": "GMObject"
             }
         },
         {

@@ -3,9 +3,10 @@ select = irandom(1);
 image_speed = 0;
 ox = x;
 oy = y;
+iy = y;
 t = 0;
-inc = 4;
-amp = 7;
+inc = 2;
+amp = 4;
 
 if(select == 0 && global.equipable[0] == false){
     image_index = 0;

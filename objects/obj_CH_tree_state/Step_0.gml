@@ -12,17 +12,11 @@ if not global.pause {
 	    mult = irandom_range(2,3);
 	}
 	
-	for(i = 0; i < 5; i += 1){
-		if alarms[i] != -1{
-			alarm[i] = alarms[i];
-			alarms[i] = -1;
-		}
+	if place_meeting(x,y,obj_swing) {
+		bene = false;
 	}
 	
-	if prev_image_speed != 0{
-		image_speed = prev_image_speed;
-		prev_image_speed = 0;
-	}
+	scr_pause_end(5);
 	
 	///Determine action state
 	if start == true{
@@ -167,15 +161,5 @@ if not global.pause {
 		break;
 	}
 }else {
-	for(i = 0; i < 5; i+= 1){
-		if alarm[i] != -1 {
-			alarms[i] = alarm[i];
-			alarm[i] = -1;
-		}
-	}
-	
-	if prev_image_speed == 0{
-		prev_image_speed = image_speed;
-		image_speed = 0;
-	}
+	scr_pause_start(5);
 }

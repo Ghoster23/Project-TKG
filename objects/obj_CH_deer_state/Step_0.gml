@@ -14,16 +14,12 @@ if not global.pause {
     
 	}
 	
-	for(i = 0; i < 10; i+= 1){
-		if alarms[i] != -1 {
-			alarm[i] = alarms[i];
-			alarms[i] = -1;
-		}
-		
-		if prev_image_speed != 0{
-			image_speed = prev_image_speed;
-			prev_image_speed = 0;
-		}
+	scr_pause_end(10);
+	
+	if place_meeting(x,y,obj_swing){
+		global.b_hp -= global.p_atk * 2 div global.b_def;
+		sprite_index = spr_CH_deer_state_hurt;
+		alarm[6] = 0.5 * room_speed;
 	}
 
 	///Action state based changes
@@ -122,6 +118,7 @@ if not global.pause {
 	        ///Destroy and give rewards
 	        instance_create_layer(x,y,"Instances",obj_CH_stump);
 	        instance_create_layer(x,y+15,"IF",obj_equipable);
+			
 			while instance_exists(obj_CH_deer_brock){
 				with obj_CH_deer_brock{
 					instance_destroy();

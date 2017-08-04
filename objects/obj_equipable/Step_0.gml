@@ -25,10 +25,6 @@ if(distance_to_object(obj_body) <= 32 && interact_key == true){
 		break;
 	}    
 }
-    
-
-
-
 
 t = (t + inc) mod 360;
 shift = amp * sin(degtorad(t));

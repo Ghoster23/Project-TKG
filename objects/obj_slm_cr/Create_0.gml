@@ -16,13 +16,13 @@ signal[0] = -1;
 signal[1] = 1;
 
 //Stats
-e_mhp = 15;
-e_hp = 15;
+e_mhp = 20;
+e_hp = 20;
 e_atk = 10;
 e_satk = 0;
 e_def = 2;
 e_sdef = 2;
-e_spd =1;
+e_spd = 1.5;
 
 //States
 state = 0;

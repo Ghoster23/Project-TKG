@@ -1,6 +1,6 @@
-instance_create_layer(x,y-3,obj_body.layer,obj_head);
-
-instance_create_layer(x,y,obj_body.layer,obj_sword);
+head = instance_create_layer(x,y-3,layer,obj_head);
+hands = instance_create_layer(x,y,layer,obj_hands);
+sword = instance_create_layer(x,y,layer,obj_sword);
 
 ///set a bunch of stuff
 event_inherited();
@@ -15,6 +15,7 @@ yaxis = 0;
 dir = 0;
 image_speed=0;
 spr_side=1;
+rotacao = 0;
 
 spr_body = global.char_bsprs[global.char,3]
 

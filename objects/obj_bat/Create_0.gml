@@ -16,13 +16,13 @@ offset = true;
 offs = 32;
 
 //Stats
-e_mhp = 10;
-e_hp = 10;
+e_mhp = 8;
+e_hp = 8;
 e_atk = 10;
 e_satk = 0;
 e_def = 2;
 e_sdef = 2;
-e_spd =1;
+e_spd = 3;
 
 //States
 state = 0;
