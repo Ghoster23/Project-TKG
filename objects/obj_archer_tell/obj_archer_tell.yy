@@ -2,7 +2,7 @@
     "id": "46a51049-6b54-4478-ac1d-56524604a4c5",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_melee_tell1",
+    "name": "obj_archer_tell",
     "eventList": [
         {
             "id": "1b13b3c2-48a0-4b07-a8fe-d0a33097f829",
@@ -51,6 +51,6 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "solid": false,
-    "spriteId": "4ccdfcf5-26c2-4ab3-82fc-3171366a3a06",
+    "spriteId": "45223daa-51e9-4415-b3b3-394c194a9fa1",
     "visible": true
 }

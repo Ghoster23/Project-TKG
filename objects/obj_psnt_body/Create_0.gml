@@ -48,7 +48,7 @@ prev_state = 0;
 //Idle
 ini_point_x = x;
 ini_point_y = y;
-dir_change = false;
+dir_change = true;
 i_dir = 0;
 
 prev_state = 0;

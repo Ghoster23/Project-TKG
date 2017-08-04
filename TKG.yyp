@@ -1106,7 +1106,7 @@
             "Key": "46a51049-6b54-4478-ac1d-56524604a4c5",
             "Value": {
                 "id": "7991ac4d-da9a-4799-82a8-353d9f39865f",
-                "resourcePath": "objects\\obj_melee_tell1\\obj_melee_tell1.yy",
+                "resourcePath": "objects\\obj_archer_tell\\obj_archer_tell.yy",
                 "resourceType": "GMObject"
             }
         },

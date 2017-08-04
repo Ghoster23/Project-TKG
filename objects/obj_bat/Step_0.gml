@@ -38,6 +38,8 @@ if go and not global.pause{
             
 			if dash {
 				scr_move_enemy(dir,4);
+				part_emitter_region(global.ps_if,em,x,x,y,y,pt_shape_smoke,0);
+				part_emitter_burst(global.ps_if,em,global.pt_smoke,1);
 			
 				//Cooldown
 		        if dash_cd == false{

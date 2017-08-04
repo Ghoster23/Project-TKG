@@ -9,7 +9,7 @@ atk_wep[0] = obj_swing;
 atk_cooldown[0] = 0.2;
 
 //Magical attacks
-satk_wep[0] = obj_sword_t;
+satk_wep[0] = obj_sword_projectile;
 
 //Magical cooldowns
 satk_cooldown[0] = 0.2;

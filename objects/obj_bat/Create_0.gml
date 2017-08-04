@@ -5,6 +5,8 @@ solid = false;
 visible = false;
 phy_fixed_rotation = true;
 
+em = part_emitter_create(global.ps_if);
+
 //Damaged and Flashing
 flash = false;
 damaged = false;

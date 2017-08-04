@@ -28,8 +28,25 @@ if surface_exists(global.lighting) and (room != rm_menu_1 and room != rm_menu_2 
     if instance_exists(obj_skull_fl){
         with (obj_skull_fl) {
         
-            draw_circle(x+hspd,y+vspd,16+r,false);
             draw_circle(x+hspd,y+vspd,26+r,false);
+        }
+    }
+	
+	///Sword bullet
+    gpu_set_blendmode(bm_subtract);
+    draw_set_colour(c_blue);
+    
+    if instance_exists(obj_sword_projectile){
+        with (obj_sword_projectile) {
+			
+            draw_circle(x+hspd,y+vspd,26,false);
+        }
+    }
+	
+	if instance_exists(obj_stuck_sword){
+        with (obj_stuck_sword) {
+			
+            draw_circle(x,y,26,false);
         }
     }
     

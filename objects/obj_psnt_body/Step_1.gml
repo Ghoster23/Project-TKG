@@ -5,13 +5,13 @@ if not global.pause{
 
 	/// Enemy States
 	if state != 3 and not swing and alarm[2] == -1{
-	    if 40 < dis < 200{
+	    if 30 < dis < 200{
 			image_speed = 0.4;
 	        state = 1;
         
 	    }
 		
-		if dis <= 40 {
+		if dis <= 15 {
 	        state = 2;
 			image_speed = 0;
 			

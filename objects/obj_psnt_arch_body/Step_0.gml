@@ -15,7 +15,7 @@ if go and not global.pause{
     switch(state){
         case 0:  //Walk around a bit
 			image_speed = 0.4;
-            scr_idle_enemy(32,20);
+            scr_move_enemy(point_direction(obj_body.x,obj_body.y,x,y),1);
             
         break;
         case 1:  //Go towards the player
@@ -26,23 +26,34 @@ if go and not global.pause{
             
         break;
         case 2:  //Attack the player
-            if cd_arrow == false and bow.image_index == 4{
-                cd_arrow = true;
-                alarm[1] = 2 * room_speed;
+            if shoot == false {
+                shoot = true;
+				tell = instance_create_layer(x,y-24,"IF",obj_archer_tell);
+                
+				with tell {
+					owner = other;
+				}
             }
         
         break;
         case 3:  //Dead State
 			global.act_enemies -= 1;
 	        scr_drops();
+			instance_destroy(tell);
 			instance_destroy(bow);
 			instance_destroy();
+			
 		break;
 		case "pause":
 		break;
 	}
     
     image_blend = c_white;
+	
+	if instance_exists(tell){
+		tell.image_xscale = bow.image_index / 4;
+		tell.image_yscale = bow.image_index / 4;
+	}
     
     ///Get Damaged
 	if not damaged {

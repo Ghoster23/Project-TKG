@@ -5,17 +5,20 @@ if not global.pause{
 	bl_sight = collision_line(x,y,obj_body.x,obj_body.y,obj_solid_parent,true,true);
 
 	/// Enemy States
-	if state != 3{
-	    if 80 < dis < 200 and not bl_sight{
-			image_speed = 0.4;
+	if state != 3 and bow.image_speed == 0 {
+	    if 100 < dis < 200 and not bl_sight and not cd_arrow{
+			image_speed = 0;
 	        state = 2;
         
 	    }
-	    if dis <= 64{
+		
+	    if dis <= 40{
+			image_speed = 0.4;
 	        state = 0;
 
 	    }
-	    if dis >= 200 or bl_sight{
+		
+	    if dis >= 200 or bl_sight {
 			image_speed = 0.4;
 	        state = 1;
 	    }

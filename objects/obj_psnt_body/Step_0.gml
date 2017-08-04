@@ -16,7 +16,7 @@ if go and not global.pause{
     ///Enemy Behaevior
     switch(state){
         case 0:  //Walk around a bit
-			scr_idle_enemy(32,20);
+			scr_idle_enemy(40,20);
             
         break;
         case 1:  //Go towards the player

@@ -13,6 +13,7 @@ damaged = false;
 alt = 1;
 shoot = false;
 go = false;
+tell = 0;
 
 gender = head.gender;
 opt = head.opt;
@@ -41,7 +42,7 @@ prev_state = 0;
 atk_cd = false;
 ini_point_x = x;
 ini_point_y = y;
-dir_change = false;
+dir_change = true;
 i_dir = 0;
 dir = point_direction(x,y,obj_body.x,obj_body.y);
 prev_state = 0;
