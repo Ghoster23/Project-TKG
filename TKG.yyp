@@ -407,6 +407,14 @@
             }
         },
         {
+            "Key": "186889f9-03cf-40ec-9854-80dce525fd2e",
+            "Value": {
+                "id": "6e4a971b-ec36-4b82-9c7d-15ce2b3b1543",
+                "resourcePath": "sprites\\spr_sword_projectile_impact\\spr_sword_projectile_impact.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "18cd8716-8f70-479e-a8cf-866a41802374",
             "Value": {
                 "id": "8708d187-19db-4439-825a-9a0b932d7805",
@@ -2527,6 +2535,14 @@
             }
         },
         {
+            "Key": "b2ddf785-2698-4916-85d8-ab439fdd5900",
+            "Value": {
+                "id": "d380d2f4-9328-430f-881e-c72326edb634",
+                "resourcePath": "sprites\\spr_sword_projectile_impact1\\spr_sword_projectile_impact1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b3650341-c0db-4094-ad10-841b26e12b9f",
             "Value": {
                 "id": "4f90a4a9-a30a-4e72-887b-6dc33f3ff109",
@@ -3124,6 +3140,14 @@
                 "id": "13b2ec88-f791-4362-85bb-af43cc57d608",
                 "resourcePath": "sprites\\spr_roll_test\\spr_roll_test.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d945e67d-cec2-4fb7-b917-b863bfa294d8",
+            "Value": {
+                "id": "226179b9-1a43-4320-ace7-7ea7070df278",
+                "resourcePath": "objects\\obj_sword_projectile_impact\\obj_sword_projectile_impact.yy",
+                "resourceType": "GMObject"
             }
         },
         {

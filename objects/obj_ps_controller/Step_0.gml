@@ -39,14 +39,14 @@ if surface_exists(global.lighting) and (room != rm_menu_1 and room != rm_menu_2 
     if instance_exists(obj_sword_projectile){
         with (obj_sword_projectile) {
 			
-            draw_circle(x+hspd,y+vspd,26,false);
+            draw_circle(phy_position_x+hspd,phy_position_y+vspd,32,false);
         }
     }
 	
 	if instance_exists(obj_stuck_sword){
         with (obj_stuck_sword) {
 			
-            draw_circle(x,y,26,false);
+            draw_circle(x,y,32,false);
         }
     }
     
