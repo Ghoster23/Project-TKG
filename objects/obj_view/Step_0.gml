@@ -23,8 +23,8 @@ if room == rm_dead{
 }
 
 if global.shake > 0 and stopped	{
-	x = ox + irandom_range(-global.shake,global.shake);
-	y = oy + irandom_range(-global.shake,global.shake);
+	x = ox + random_range(-global.shake,global.shake);
+	y = oy + random_range(-global.shake,global.shake);
 	
-	global.shake *= 0.8;
+	global.shake *= 0.9;
 }
