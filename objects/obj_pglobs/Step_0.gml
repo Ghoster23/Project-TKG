@@ -15,13 +15,11 @@ if room != rm_menu_1 and room != rm_menu_2 and room != rm_chsl and room != rm_de
 }
 
 ///Equipables' effects
-if(global.equiped[0] == true && eq_active[0] == false){
-    global.p_atk = global.p_atk + 2;
-    eq_active[0] = true; 
-}
-if(global.equiped[1] == true && eq_active[1] == false){
-    global.p_hp = global.p_maxhp;
-    eq_active[1] = true;
+for(var i = 0; i < 16; i++){
+	if global.equiped[i] and not eq_active[i]{
+		scr_item_effects(i);
+		
+	}
 }
 
 ///Statuses
@@ -63,7 +61,7 @@ if room == rm_level{
 if not global.pause{
 	switch global.char {
 		case 0:
-			if alarm[3] == -1 and global.act_enemies > 0{
+			if alarm[3] == -1 and global.act_enemies > 0 and global.p_will < 100{
 				alarm[3] = 0.1 * room_speed;
 			}
 		break;

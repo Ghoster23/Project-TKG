@@ -7,6 +7,8 @@ global.pause = false;
 global.act_enemies = 0;
 global.kld_enemies = 0;
 
+global.killer = 0;
+
 //Coins
 global.coins = 0;
 
@@ -34,7 +36,7 @@ global.dash_cd = false;
 
 //Equipables
     ///Spawned
-    for(var i = 0; i < 5; i++){
+    for(var i = 0; i < 16; i++){
 		///Spawned
 		global.equipable[i] = false;
 		

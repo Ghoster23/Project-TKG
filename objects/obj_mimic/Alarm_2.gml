@@ -13,4 +13,6 @@ with instance_create_layer(x,y,"Instances",obj_cadaver){
 
 scr_drops();
 
+global.kld_enemies += 1;
+
 instance_destroy();

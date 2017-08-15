@@ -16,6 +16,7 @@ if not global.pause and go{
 		///Die
 	    if e_hp <= 0 and sprite_index != spr_slime_d{
 	        global.act_enemies -= 1;
+			global.kld_enemies += 1;
                 
 	        sprite_index = spr_slime_d;
 	        image_index = 0;

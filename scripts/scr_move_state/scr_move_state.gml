@@ -20,7 +20,7 @@ dir = point_direction(0, 0, xaxis, yaxis);
 if (xaxis == 0 and yaxis = 0) {
     len = 0;
 } else {
-    len = spd;
+    len = global.p_spd;
 }
 
 //get the hspd and vspd

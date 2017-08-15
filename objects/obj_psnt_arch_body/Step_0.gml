@@ -38,6 +38,7 @@ if go and not global.pause{
         break;
         case 3:  //Dead State
 			global.act_enemies -= 1;
+			global.kld_enemies += 1;
 	        scr_drops();
 			instance_destroy(tell);
 			instance_destroy(bow);

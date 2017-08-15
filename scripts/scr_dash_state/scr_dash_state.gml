@@ -9,7 +9,7 @@ with (obj_sword)
 }
 
 
-len = spd*3;
+len = global.p_spd*3;
 
 //get the hspd and vspd
 hspd = lengthdir_x(len,dir);

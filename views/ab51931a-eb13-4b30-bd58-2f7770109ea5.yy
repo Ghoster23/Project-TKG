@@ -9,10 +9,11 @@
         "a2c83942-bb1d-48c6-821e-31da845032d8",
         "3dca46e7-2351-4854-951a-4dd804288677",
         "84d1a246-9ec5-4065-ae72-ae70be79fdbc",
-        "8191645c-4cae-4e1f-9694-5320aebe464c"
+        "8191645c-4cae-4e1f-9694-5320aebe464c",
+        "e78b823f-3de8-4cfb-9804-5406ea042b08"
     ],
     "filterType": "GMSprite",
-    "folderName": "spr_peasent",
+    "folderName": "peasent",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

@@ -10,7 +10,7 @@ if type == 0{
 	var def = argument[2];
 }
 
-if not global.p_hurt and not global.p_inv{
+if not global.p_hurt and not global.p_inv and global.p_hp > 0{
 	switch type {
 		case 0:
 			global.p_hp -= dmg div def;
@@ -32,4 +32,8 @@ if not global.p_hurt and not global.p_inv{
 			global.p_will = 0;
 		}
 	}
+}
+
+if global.p_hp <= 0 and global.killer == 0{
+	global.killer = object_get_name(object_index);
 }

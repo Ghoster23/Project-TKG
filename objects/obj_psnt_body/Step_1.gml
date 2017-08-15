@@ -33,6 +33,7 @@ if not global.pause{
 	///Die
     if e_hp <= 0 {
         global.act_enemies -= 1;
+		global.kld_enemies += 1;
         state = 3;
         alarm[5] = 5;
         

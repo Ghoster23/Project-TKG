@@ -59,6 +59,7 @@ if go and not global.pause{
 				image_speed = 0.5;
 				scr_drops();
 				global.act_enemies -= 1;
+				global.kld_enemies += 1;
 				flash = false;
 			}
 			

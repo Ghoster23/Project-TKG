@@ -89,6 +89,7 @@ if go and not global.pause{
 	///Die
     if(e_hp <= 0) and state != 3{
         global.act_enemies -= 1;
+		global.kld_enemies += 1;
         state = 3;
         
     }
