@@ -3,11 +3,11 @@ event_inherited();
 instance_create_layer(x,y,layer,obj_psnt_head);
 solid = false;
 visible = false;
-trigger = false;
+
 flash = false;
 cd_swing = false;
 damaged = false;
-alt = 1;
+
 swing = false;
 go = false;
 prev_image_speed = 0;

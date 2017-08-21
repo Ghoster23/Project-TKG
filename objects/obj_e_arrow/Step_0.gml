@@ -1,22 +1,20 @@
 if not global.pause{
-	if alarm_0 != -1{
-		alarm[0] = alarm_0;
-		alarm_0 = -1;
+	
+	if state == 0{
+	    //Get hspd and vspd
+	    hspd = lengthdir_x(15,dir);
+	    vspd = lengthdir_y(15,dir);
+   
+	    //Move
+	    phy_position_x += hspd;
+	    phy_position_y += vspd;
+		
+		phy_rotation = -point_direction(x,y,x + hspd,y + vspd) + 90;
+		phy_fixed_rotation = true;
 	}
 	
-    //Get hspd and vspd
-    hspd = lengthdir_x(15,dir);
-    vspd = lengthdir_y(15,dir);
-   
-    //Move
-    phy_position_x += hspd;
-    phy_position_y += vspd;
-    
-    phy_rotation = -point_direction(x,y,x + hspd,y + vspd) + 90;
-	phy_fixed_rotation = true;
-	
-	if (place_meeting(phy_position_x+hspd,phy_position_y+vspd,obj_barrel) or place_meeting(phy_position_x+hspd,phy_position_y+vspd,obj_crate)) and des{
-		stuck = instance_create_layer(phy_position_x,phy_position_y,layer,obj_stuck_projectile);
+	if (place_meeting(phy_position_x,phy_position_y,obj_barrel) or place_meeting(phy_position_x,phy_position_y,obj_crate)) and des{
+		/*stuck = instance_create_layer(phy_position_x,phy_position_y,layer,obj_stuck_projectile);
 
 		with stuck {
 			visible = false;
@@ -26,16 +24,15 @@ if not global.pause{
 			visible = true;
 		}
 
-		instance_destroy();
+		instance_destroy();*/
+		
+		state = 1;
+		layer = layer_get_id("BH");
+		
 	}
 	
 	if place_meeting(phy_position_x+hspd,phy_position_y+vspd,obj_rock) and des{
 		instance_destroy();
 	}
 
-}else {
-	if alarm[0] != -1 {
-		alarm_0 = alarm[0];
-		alarm[0] = -1;
-	}
 }

@@ -33,7 +33,7 @@ if(place_meeting(x,y,obj_body) && !place_meeting(x,y,obj_ppon) && global.lock ==
         instance_destroy();
     }
     
-    with(obj_sword_t){
+    with(obj_stuck_sword){
         instance_destroy();
     }
     

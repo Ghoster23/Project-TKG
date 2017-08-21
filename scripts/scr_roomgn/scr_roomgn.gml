@@ -11,7 +11,7 @@ switch(typeroom){
 	    instance_create_layer(gx+256,gy+128,"Instances",obj_rock);
 	    instance_create_layer(gx+288,gy+128,"Instances",obj_rock);
 	    instance_create_layer(gx+320,gy+128,"Instances",obj_rock);
-	    instance_create_layer(gx+128,gy+160,"Instances",obj_skull);
+	    
 	    instance_create_layer(gx+64,gy+192,"Instances",obj_rock);
 	    instance_create_layer(gx+192,gy+192,"Instances",obj_rock);
 	    instance_create_layer(gx+320,gy+192,"Instances",obj_rock);
@@ -24,7 +24,7 @@ switch(typeroom){
 	    instance_create_layer(gx+192,gy+256,"Instances",obj_rock);
 	    instance_create_layer(gx+320,gy+256,"Instances",obj_rock);
 	    instance_create_layer(gx+448,gy+256,"Instances",obj_rock);
-	    instance_create_layer(gx+384,gy+288,"Instances",obj_skull);
+	    
 	    instance_create_layer(gx+192,gy+320,"Instances",obj_rock);
 	    instance_create_layer(gx+224,gy+320,"Instances",obj_rock);
 	    instance_create_layer(gx+256,gy+320,"Instances",obj_rock);
@@ -319,7 +319,7 @@ switch(typeroom){
 	break;
 	case 9:
 	    instance_create_layer(gx+96,gy+128,"Instances",obj_rock);
-	    instance_create_layer(gx+128,gy+128,"Instances",obj_skull);
+	    
 	    instance_create_layer(gx+96,gy+160,"Instances",obj_rock);
 	    instance_create_layer(gx+192,gy+160,"Instances",obj_rock);
 	    instance_create_layer(gx+224,gy+160,"Instances",obj_rock);
@@ -344,7 +344,7 @@ switch(typeroom){
 	    instance_create_layer(gx+288,gy+288,"Instances",obj_rock);
 	    instance_create_layer(gx+320,gy+288,"Instances",obj_rock);
 	    instance_create_layer(gx+416,gy+288,"Instances",obj_rock);
-	    instance_create_layer(gx+384,gy+320,"Instances",obj_skull);
+	    
 	    instance_create_layer(gx+416,gy+320,"Instances",obj_rock);
 	    instance_create_layer(gx+(roomwd/2),gy+240,"Instances",obj_ppoff);
 		

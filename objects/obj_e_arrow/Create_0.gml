@@ -7,7 +7,6 @@ r = 0;
 hspd = 0;
 vspd = 0;
 
-alarm[0] = 5;
+state = 0;
 
-alarm_0 = -1;
-des = false;
+des = true;

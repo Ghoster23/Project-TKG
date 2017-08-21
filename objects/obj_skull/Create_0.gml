@@ -5,7 +5,7 @@ solid = false;
 
 image_speed = 0;
 
-trigger = false;
+
 flash = false;
 damaged = false;
 go = false;

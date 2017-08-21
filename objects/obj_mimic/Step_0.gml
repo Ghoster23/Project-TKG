@@ -33,8 +33,8 @@ if not global.pause {
 				
 			    image_speed = .9;
 			    sprite_index = spr_mimic_a;
-				phy_position_x += 4;
-				phy_position_y += 4;
+				phy_position_x += 5;
+				phy_position_y += 5;
 				
 			    e_spd = 4;
 				
@@ -49,8 +49,9 @@ if not global.pause {
 	        phy_rotation = 25 * sin(a);
         
 			//Move
-	        phy_position_x += floor(sign(obj_body.x - x)*e_spd);
-	        phy_position_y += floor(sign(obj_body.y - y)*e_spd);
+	        scr_define_path(self, obj_body);
+			path = global.ai_path;
+			scr_move_enemy(point_direction(x,y,path_get_point_x(path,1),path_get_point_y(path,1)),1);
         
 	        ///Die
 	        if e_hp <= 0 and sprite_index != spr_mimic_d{

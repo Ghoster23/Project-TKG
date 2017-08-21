@@ -6,7 +6,7 @@ if not global.pause {
 		offs=30;
 		image_angle=scr_aproach(image_angle,180,10);
 		y=scr_aproach(y,obj_body.y-20,5);
-		global.st_stuck = true;
+		
 	}
 	else{
 		event_inherited();

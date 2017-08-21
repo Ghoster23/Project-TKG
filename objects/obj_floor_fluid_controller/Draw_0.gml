@@ -13,7 +13,7 @@ if room == rm_level {
 	c_rm = 0;
 }
 
-if global.ds_roomgrid[# 1, c_rm] == "B" or room != rm_level{
+//if global.ds_roomgrid[# 1, c_rm] == "B" or room != rm_level{
 	for(i = 0; i < ds_grid_width(global.fluid_grid); i++){
 		for(j = 0; j < ds_grid_height(global.fluid_grid); j++){
 			var val = ds_grid_get(global.fluid_grid,i,j);
@@ -45,6 +45,6 @@ if global.ds_roomgrid[# 1, c_rm] == "B" or room != rm_level{
 			}
 		}
 	}
-}
+//}
 
 draw_set_alpha(1);

@@ -1,5 +1,6 @@
 head = instance_create_layer(x,y-3,layer,obj_head);
 hands = instance_create_layer(x,y,layer,obj_hands);
+feet = instance_create_layer(x,y,layer,obj_feet);
 sword = instance_create_layer(x,y,layer,obj_sword);
 
 ///set a bunch of stuff

@@ -9,10 +9,10 @@ atk_wep[0] = obj_swing;
 atk_cooldown[0] = 0.2;
 
 //Magical attacks
-satk_wep[0] = obj_sword_projectile;
+satk_wep[0] = obj_sword_projectile_impact;
 
 //Magical cooldowns
-satk_cooldown[0] = 0.2;
+satk_cooldown[0] = 0.4;
 
 ///Enemy/Object on Enemy attacks
 //Physical attacks
@@ -115,6 +115,8 @@ switch type {
 if type != 404{
 	//Activate flash
 	flash = true;
+	
+	show_debug_message(e_hp);
 	
 	global.shake = 2;
 	

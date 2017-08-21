@@ -4,7 +4,7 @@ image_speed=.2;
 solid = false;
 visible = false;
 image_alpha = 0.7;
-trigger = false;
+
 flash = false;
 damaged = false;
 go = false;

@@ -5,12 +5,12 @@ bow = instance_create_layer(x,y,layer,obj_e_bow);
 image_speed=.4;
 solid = false;
 visible = false;
-trigger = false;
+
 flash = false;
 cr_cd = false;
 cd_arrow = false;
 damaged = false;
-alt = 1;
+
 shoot = false;
 go = false;
 tell = 0;

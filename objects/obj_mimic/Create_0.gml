@@ -26,6 +26,8 @@ state = 0;
 ///Distance
 dis = 0
 
+path = path_add();
+
 for(i = 0; i < 6; i++){
 	alarms[i] = -1;
 }

@@ -1,2 +1,2 @@
 /// @description Insert description here
-image_speed = 0.9;
+image_speed = 1.2;
