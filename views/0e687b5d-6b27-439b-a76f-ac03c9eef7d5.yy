@@ -7,10 +7,13 @@
         "0fcbf809-d4a6-4c60-a512-1d2d1ee5281e",
         "12d8ffd4-f097-4662-bbc9-b5d02dd47da0",
         "53b3afad-2e78-4717-911a-8e41feb1a001",
-        "e2e893bb-5298-4378-ad44-e856b51db762",
-        "75d96945-3755-42b7-83d0-17b9e193a68c",
-        "ed33066f-95ae-49ea-88f0-aee9d0e15260",
-        "444b80a1-5dcc-4940-a77a-334ea6461adb"
+        "444b80a1-5dcc-4940-a77a-334ea6461adb",
+        "a074e87a-3f6f-4d2d-84d2-7af8d38864e0",
+        "2b6d8134-3695-428f-ac4c-83e8d8eab18c",
+        "e6b5af9f-b8b8-45c6-8fae-2bb832a8f90a",
+        "6163f59f-b5a1-4d76-a7ba-c22b465349d7",
+        "59a66ead-3f31-42fd-9fec-a8f444010394",
+        "8fcad648-dfb6-4103-b6a5-0cabd9b89396"
     ],
     "filterType": "GMSprite",
     "folderName": "Character Select",
