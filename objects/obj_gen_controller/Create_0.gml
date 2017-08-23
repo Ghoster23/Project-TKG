@@ -16,7 +16,7 @@ global.ds_roomgrid = ds_grid_create(4,64);
 for(i = 0; i < 64; i++){
 	global.ds_roomgrid[# 0, i] = (i div 8) * 10 + i mod 8;
 	global.ds_roomgrid[# 1, i] = "NULL";
-	global.ds_roomgrid[# 2, i] = false;
+	global.ds_roomgrid[# 2, i] = true;
 	global.ds_roomgrid[# 3, i] = [0,0,0,0];
 }
 
@@ -62,13 +62,5 @@ roomspc = 0;
 roomequip = 1;
 roomequipc = 0;
 
-roomtpa = 6;
-roomtpac = 0;
-roomtpb = 6;
-roomtpbc = 0;
-
 roomst = 1;
 roomstc = 0;
-
-
-

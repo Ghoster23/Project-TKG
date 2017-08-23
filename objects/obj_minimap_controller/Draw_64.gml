@@ -30,25 +30,16 @@ if room == rm_level {
 				draw_sprite_ext(spr_mm_rm, spr, xx + 4 * m + col * rw, yy + 4 * m + row * rh, m, m, 0, c_white, 1);
 				
 				switch global.ds_roomgrid[# 1, i] {
-					case "Start":
-						type = 0;
-					break;
-					case "A":
-						type = 0;
-					break;
-					case "B":
-						type = 0;
-					break;
-					case "ST":
+					case 15:
 						type = 2;
 					break;
-					case "SP":
+					case 16:
 						type = 3;
 					break;
-					case "X":
+					case 18:
 						type = 1;
 					break;
-					case "?":
+					case 17:
 						type = 4;
 					break;
 				}

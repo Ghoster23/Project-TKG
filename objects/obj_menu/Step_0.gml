@@ -72,7 +72,3 @@ if point_in_rectangle(mouse_x,mouse_y,257,238,383,255){
 if point_in_rectangle(mouse_x,mouse_y,245,270,395,287){
 	state="quit";
 }
-
-
-show_debug_message(state);
-//show_debug_message(string(mouse_x)+" , "+string(mouse_y));
