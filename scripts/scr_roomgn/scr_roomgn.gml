@@ -469,8 +469,8 @@ switch(typeroom){
 	///Type SP
 	case 15:
 	case 16:
-	    instance_create_layer(gx+(roomwd/2)-16,gy-48+(roomhg/2),"IF",obj_equipable);
 	    instance_create_layer(gx+(roomwd/2)-16,gy-16+(roomhg/2),"Instances",obj_pedestal);
+		instance_create_layer(gx+(roomwd/2)-16,gy-48+(roomhg/2),"IF",obj_equipable);
 		
 		return "SP";
 	break;

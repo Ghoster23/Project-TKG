@@ -4,7 +4,26 @@
     "mvc": "1.0",
     "name": "obj_pedestal",
     "eventList": [
-        
+        {
+            "id": "257d9e2a-2bd9-42a8-aa82-11fb153fa117",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "6aaee583-7eaf-40cd-aaa6-417a0319d462"
+        },
+        {
+            "id": "468a7fdd-26e8-43a8-af9a-d99032f1455a",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "6aaee583-7eaf-40cd-aaa6-417a0319d462"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "parentObjectId": "b8453c71-24f2-4852-a377-e9d9f6c7873d",

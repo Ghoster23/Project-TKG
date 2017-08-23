@@ -1,4 +1,4 @@
-switch (global.char_selection){
+switch (global.char){
     case 0:
         return c_gray;
         break;

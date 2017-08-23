@@ -1,6 +1,6 @@
 draw_self();
 
-if distance_to_object(obj_body) <= 32 {
+if pedestal.dis {
 	draw_sprite(spr_interact,0,x,iy-32);
 }
 

@@ -14,3 +14,5 @@ while global.equipable[select] {
 
 global.equipable[select] = true;
 image_index = select;
+
+pedestal = instance_nearest(x,y+32,obj_pedestal);

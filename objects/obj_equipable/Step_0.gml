@@ -1,6 +1,6 @@
 scr_get_input();
 
-if(distance_to_object(obj_body) <= 32 && interact_key == true){
+if(pedestal.dis && interact_key){
     instance_destroy();
 	
     global.equiped[select] = true;

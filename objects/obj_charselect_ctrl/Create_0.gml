@@ -1,2 +1,2 @@
-global.char_selection=0;
+global.char=0;
 image_alpha=0.95

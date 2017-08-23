@@ -1,7 +1,7 @@
 var key = argument0;
 
 
-switch global.char_selection{
+switch global.char{
 	case 0:
 		if key==1{
 			text="dodge roll";

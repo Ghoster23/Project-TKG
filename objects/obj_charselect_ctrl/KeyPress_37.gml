@@ -1,29 +1,29 @@
-if (global.char_selection==0){
-    global.char_selection=12
+if (global.char==0){
+    global.char=12
 }
 else {
-    global.char_selection-=1
+    global.char-=1
 }
 
 //change background
 var lay_id = layer_get_id("Background");
 var back_id = layer_background_get_id(lay_id);
 
-layer_background_index(back_id, global.char_selection);
+layer_background_index(back_id, global.char);
 
 //change banner
 with obj_bannernew{
-	image_index=global.char_selection;
+	image_index=global.char;
 }
 
 //change char
 with obj_charselected{
-	image_index=global.char_selection
+	image_index=global.char
 }
 
 //change_info
 with obj_info{
-	image_index=global.char_selection
+	image_index=global.char
 }
 
 //change stats

@@ -1,6 +1,6 @@
-switch global.char_selection{
+switch global.char{
 	case 0:
-		name="Jacob Carlisle";
+		name="Jason Carlisle";
 		break;
 		
 	case 1:

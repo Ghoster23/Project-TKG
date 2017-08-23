@@ -22,14 +22,19 @@ shout = true;
 //Invulnerabillity
 global.p_inv = false;
 
+//Character Selection
+global.char = 0;
+
 //Stats
-global.p_maxhp = 20;
-global.p_hp = 20;
-global.p_atk = 10;
-global.p_def = 5;
-global.p_satk = 5;
-global.p_sdef = 5;
-global.p_spd = 4;
+scr_ini_char_stats();
+
+global.p_maxhp = global.ds_char_stat_grid[# global.char, 0];
+global.p_hp = global.ds_char_stat_grid[# global.char, 0];
+global.p_atk = global.ds_char_stat_grid[# global.char, 1];
+global.p_def = global.ds_char_stat_grid[# global.char, 2];
+global.p_satk = global.ds_char_stat_grid[# global.char, 3];
+global.p_sdef = global.ds_char_stat_grid[# global.char, 4];
+global.p_spd = global.ds_char_stat_grid[# global.char, 5];
 
 //Dash
 global.dash_cd = false;
@@ -58,9 +63,6 @@ global.p_hurt = false;
 ///Status duration
 global.st_poison_d = 0;
 global.st_stuck_d = 0;
-
-//Character Selection
-global.char = 0;
 
 ///Player Character body sprites
 global.char_bsprs[0,0] = spr_body_up;
