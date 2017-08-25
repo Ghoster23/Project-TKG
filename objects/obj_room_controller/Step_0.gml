@@ -49,13 +49,11 @@ if global.n_room {
 		global.lock = true;
 	}
 	
-	global.act_enemies += ds_list_size(global.act_enemy_list);
-	
 	global.n_room = false;
-	show_debug_message("");
+	
 }
 
-if global.lock == true and ds_list_size(global.act_enemy_list) == 0{
+if global.lock == true and ds_list_size(global.act_enemy_list) == 0 and not global.n_room{
 	global.lock = false;
 	
 }
