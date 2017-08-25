@@ -1,5 +1,5 @@
 {
-    "id": "5585f984-692e-42d4-8cef-84c5dd87ca43",
+    "id": "40646ae1-0b2d-4e0f-88a8-cca303cf5446",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "scr_roomgn",

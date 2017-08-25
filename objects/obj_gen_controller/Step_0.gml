@@ -204,7 +204,9 @@ while roomgenerated < roomstogenerate{
 		        ///Register the room
 				global.ds_roomgrid[# 1, room_] = typeroom;
 				
-				if typeroom < 15 {
+				scr_roomgn(typeroom);
+				
+				/*if typeroom < 15 {
 					scr_roomgn(irandom_range(0,10),gx,gy);
 				}else if typeroom == 15 {
 					scr_roomgn(irandom_range(11,14),gx,gy);
@@ -214,7 +216,7 @@ while roomgenerated < roomstogenerate{
 					scr_roomgn(irandom_range(17,19),gx,gy);
 				}else {
 					scr_roomgn(50,gx,gy);
-				}
+				}*/
             
 		        ///Doors for normal rooms
 				if typeroom < 15{

@@ -1,0 +1,1 @@
+image_index=global.lvl_room_type

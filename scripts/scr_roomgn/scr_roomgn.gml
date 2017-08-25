@@ -1,9 +1,10 @@
-roomhg = global.roomhg;
-roomwd = global.roomwd;
+//reads .csv file and generates code to fill room
 
-typeroom = argument0;
-gx = argument1;
-gy = argument2;
+
+var type = argument0;
+
+roomwd=global.roomwd;
+roomhg=global.roomhg;
 
 ///Base Room
 instance_create_layer(gx + (global.roomwd / 2) + 64,gy + 48,"Instances",obj_torch);
@@ -14,487 +15,202 @@ instance_create_layer(gx,gy+global.roomhg-32,"Instances",obj_wall_down);
 instance_create_layer(gx+global.roomwd-32,gy,"Instances",obj_wall_right);
 instance_create_layer(gx+(global.roomwd/2),gy+(global.roomhg/2)+31,"Floor",obj_floor);
 
-switch(typeroom){
-	///Type A
+//create grid to house the room
+global.room_grid = ds_grid_create(19,9);
+
+//open the right .csv file
+
+switch type{
 	case 0:
-	    instance_create_layer(gx+192,gy+128,"Instances",obj_rock);
-	    instance_create_layer(gx+224,gy+128,"Instances",obj_rock);
-	    instance_create_layer(gx+256,gy+128,"Instances",obj_rock);
-	    instance_create_layer(gx+288,gy+128,"Instances",obj_rock);
-	    instance_create_layer(gx+320,gy+128,"Instances",obj_rock);
-	    
-	    instance_create_layer(gx+64,gy+192,"Instances",obj_rock);
-	    instance_create_layer(gx+192,gy+192,"Instances",obj_rock);
-	    instance_create_layer(gx+320,gy+192,"Instances",obj_rock);
-	    instance_create_layer(gx+448,gy+192,"Instances",obj_rock);
-	    instance_create_layer(gx+64,gy+224,"Instances",obj_rock);
-	    instance_create_layer(gx+160,gy+224,"Instances",obj_rock);
-	    instance_create_layer(gx+352,gy+224,"Instances",obj_rock);
-	    instance_create_layer(gx+448,gy+224,"Instances",obj_rock);
-	    instance_create_layer(gx+64,gy+256,"Instances",obj_rock);
-	    instance_create_layer(gx+192,gy+256,"Instances",obj_rock);
-	    instance_create_layer(gx+320,gy+256,"Instances",obj_rock);
-	    instance_create_layer(gx+448,gy+256,"Instances",obj_rock);
-	    
-	    instance_create_layer(gx+192,gy+320,"Instances",obj_rock);
-	    instance_create_layer(gx+224,gy+320,"Instances",obj_rock);
-	    instance_create_layer(gx+256,gy+320,"Instances",obj_rock);
-	    instance_create_layer(gx+288,gy+320,"Instances",obj_rock);
-	    instance_create_layer(gx+320,gy+320,"Instances",obj_rock);
-	    instance_create_layer(gx+(roomwd/2),gy+240,"Instances",obj_ppoff);
-        
-		return 14;
-	break;
+		room_file = file_text_open_read(working_directory+"roomtype0.csv");
+		break;
 	case 1:
-	    instance_create_layer(gx+32,gy+96,"Instances",obj_barrel);
-	    instance_create_layer(gx+64,gy+96,"Instances",obj_barrel);
-	    instance_create_layer(gx+448,gy+96,"Instances",obj_barrel);
-	    instance_create_layer(gx+480,gy+96,"Instances",obj_barrel);
-	    instance_create_layer(gx+32,gy+128,"Instances",obj_barrel);
-	    instance_create_layer(gx+64,gy+128,"Instances",obj_barrel);
-	    instance_create_layer(gx+128,gy+128,"Instances",obj_psnt_body);
-	    instance_create_layer(gx+384,gy+128,"Instances",obj_psnt_body);
-	    instance_create_layer(gx+448,gy+128,"Instances",obj_barrel);
-	    instance_create_layer(gx+480,gy+128,"Instances",obj_barrel);
-	    instance_create_layer(gx+32,gy+160,"Instances",obj_barrel);
-	    instance_create_layer(gx+64,gy+160,"Instances",obj_barrel);
-	    instance_create_layer(gx+448,gy+160,"Instances",obj_barrel);
-	    instance_create_layer(gx+480,gy+160,"Instances",obj_barrel);
-	    instance_create_layer(gx+224,gy+192,"Instances",obj_barrel);
-	    instance_create_layer(gx+256,gy+192,"Instances",obj_barrel);
-	    instance_create_layer(gx+288,gy+192,"Instances",obj_barrel);
-	    instance_create_layer(gx+224,gy+224,"Instances",obj_barrel);
-	    instance_create_layer(gx+256,gy+224,"Instances",obj_barrel);
-	    instance_create_layer(gx+288,gy+224,"Instances",obj_barrel);
-	    instance_create_layer(gx+224,gy+256,"Instances",obj_barrel);
-	    instance_create_layer(gx+256,gy+256,"Instances",obj_barrel);
-	    instance_create_layer(gx+288,gy+256,"Instances",obj_barrel);
-	    instance_create_layer(gx+32,gy+288,"Instances",obj_barrel);
-	    instance_create_layer(gx+64,gy+288,"Instances",obj_barrel);
-	    instance_create_layer(gx+448,gy+288,"Instances",obj_barrel);
-	    instance_create_layer(gx+480,gy+288,"Instances",obj_barrel);
-	    instance_create_layer(gx+32,gy+320,"Instances",obj_barrel);
-	    instance_create_layer(gx+64,gy+320,"Instances",obj_barrel);
-	    instance_create_layer(gx+128,gy+320,"Instances",obj_psnt_body);
-	    instance_create_layer(gx+384,gy+320,"Instances",obj_psnt_body);
-	    instance_create_layer(gx+448,gy+320,"Instances",obj_barrel);
-	    instance_create_layer(gx+480,gy+320,"Instances",obj_barrel);
-	    instance_create_layer(gx+32,gy+352,"Instances",obj_barrel);
-	    instance_create_layer(gx+64,gy+352,"Instances",obj_barrel);
-	    instance_create_layer(gx+448,gy+352,"Instances",obj_barrel);
-	    instance_create_layer(gx+480,gy+352,"Instances",obj_barrel);
-	    instance_create_layer(gx+(roomwd/2),gy+240,"Instances",obj_ppoff);
-        
-		return 14;
-	break;
+		room_file = file_text_open_read(working_directory+"roomtype1.csv");
+		break;
 	case 2:
-	    instance_create_layer(gx+32,gy+96,"Instances",obj_vase);
-	    instance_create_layer(gx+480,gy+96,"Instances",obj_vase);
-	    instance_create_layer(gx+32,gy+128,"Instances",obj_barrel);
-	    instance_create_layer(gx+96,gy+128,"Instances",obj_psnt_arch_body);
-	    instance_create_layer(gx+224,gy+128,"Instances",obj_barrel);
-	    instance_create_layer(gx+288,gy+128,"Instances",obj_barrel);
-	    instance_create_layer(gx+416,gy+128,"Instances",obj_psnt_body);
-	    instance_create_layer(gx+480,gy+128,"Instances",obj_barrel);
-	    instance_create_layer(gx+128,gy+160,"Instances",obj_barrel);
-	    instance_create_layer(gx+160,gy+160,"Instances",obj_barrel);
-	    instance_create_layer(gx+256,gy+160,"Instances",obj_barrel);
-	    instance_create_layer(gx+352,gy+160,"Instances",obj_barrel);
-	    instance_create_layer(gx+384,gy+160,"Instances",obj_barrel);
-	    instance_create_layer(gx+160,gy+192,"Instances",obj_barrel);
-	    instance_create_layer(gx+352,gy+192,"Instances",obj_barrel);
-	    instance_create_layer(gx+160,gy+256,"Instances",obj_barrel);
-	    instance_create_layer(gx+352,gy+256,"Instances",obj_barrel);
-	    instance_create_layer(gx+128,gy+288,"Instances",obj_barrel);
-	    instance_create_layer(gx+160,gy+288,"Instances",obj_barrel);
-	    instance_create_layer(gx+256,gy+288,"Instances",obj_barrel);
-	    instance_create_layer(gx+352,gy+288,"Instances",obj_barrel);
-	    instance_create_layer(gx+384,gy+288,"Instances",obj_barrel);
-	    instance_create_layer(gx+32,gy+320,"Instances",obj_barrel);
-	    instance_create_layer(gx+96,gy+320,"Instances",obj_psnt_body);
-	    instance_create_layer(gx+224,gy+320,"Instances",obj_barrel);
-	    instance_create_layer(gx+288,gy+320,"Instances",obj_barrel);
-	    instance_create_layer(gx+416,gy+320,"Instances",obj_psnt_arch_body);
-	    instance_create_layer(gx+480,gy+320,"Instances",obj_barrel);
-	    instance_create_layer(gx+32,gy+352,"Instances",obj_vase);
-	    instance_create_layer(gx+480,gy+352,"Instances",obj_vase);
-	    instance_create_layer(gx+(roomwd/2),gy+240,"Instances",obj_ppoff);
-		return 14;
-	break;
+		room_file = file_text_open_read(working_directory+"roomtype2.csv");
+		break;
 	case 3:
-	    instance_create_layer(gx+448,gy+96,"Instances",obj_barrel);
-	    instance_create_layer(gx+480,gy+96,"Instances",obj_crate);
-	    instance_create_layer(gx+96,gy+128,"Instances",obj_crate);
-	    instance_create_layer(gx+128,gy+128,"Instances",obj_barrel);
-	    instance_create_layer(gx+160,gy+128,"Instances",obj_bat);
-	    instance_create_layer(gx+288,gy+128,"Instances",obj_crate);
-	    instance_create_layer(gx+320,gy+128,"Instances",obj_barrel);
-	    instance_create_layer(gx+352,gy+128,"Instances",obj_crate);
-	    instance_create_layer(gx+448,gy+128,"Instances",obj_crate);
-	    instance_create_layer(gx+480,gy+128,"Instances",obj_crate);
-	    instance_create_layer(gx+96,gy+160,"Instances",obj_crate);
-	    instance_create_layer(gx+128,gy+160,"Instances",obj_crate);
-	    instance_create_layer(gx+288,gy+160,"Instances",obj_mimic);
-	    instance_create_layer(gx+320,gy+160,"Instances",obj_crate);
-	    instance_create_layer(gx+128,gy+192,"Instances",obj_crate);
-	    instance_create_layer(gx+416,gy+192,"Instances",obj_bat);
-	    instance_create_layer(gx+192,gy+256,"Instances",obj_crate);
-	    instance_create_layer(gx+224,gy+256,"Instances",obj_crate);
-	    instance_create_layer(gx+384,gy+256,"Instances",obj_crate);
-	    instance_create_layer(gx+32,gy+288,"Instances",obj_mimic);
-	    instance_create_layer(gx+192,gy+288,"Instances",obj_crate);
-	    instance_create_layer(gx+224,gy+288,"Instances",obj_barrel);
-	    instance_create_layer(gx+352,gy+288,"Instances",obj_barrel);
-	    instance_create_layer(gx+384,gy+288,"Instances",obj_crate);
-	    instance_create_layer(gx+32,gy+320,"Instances",obj_crate);
-	    instance_create_layer(gx+64,gy+320,"Instances",obj_crate);
-	    instance_create_layer(gx+96,gy+320,"Instances",obj_bat);
-	    instance_create_layer(gx+352,gy+320,"Instances",obj_barrel);
-	    instance_create_layer(gx+384,gy+320,"Instances",obj_crate);
-	    instance_create_layer(gx+32,gy+352,"Instances",obj_barrel);
-	    instance_create_layer(gx+(roomwd/2),gy+240,"Instances",obj_ppoff);
-        
-		return 14;
-	break;
+		room_file = file_text_open_read(working_directory+"roomtype3.csv");
+		break;
 	case 4:
-	    instance_create_layer(gx+32,gy+96,"Instances",obj_rock);
-	    instance_create_layer(gx+64,gy+96,"Instances",obj_rock);
-	    instance_create_layer(gx+96,gy+96,"Instances",obj_rock);
-	    instance_create_layer(gx+320,gy+96,"Instances",obj_rock);
-	    instance_create_layer(gx+352,gy+96,"Instances",obj_rock);
-	    instance_create_layer(gx+384,gy+96,"Instances",obj_rock);
-	    instance_create_layer(gx+32,gy+128,"Instances",obj_rock);
-	    instance_create_layer(gx+64,gy+128,"Instances",obj_rock);
-	    instance_create_layer(gx+96,gy+128,"Instances",obj_rock);
-	    instance_create_layer(gx+128,gy+128,"Instances",obj_rock);
-	    instance_create_layer(gx+192,gy+128,"Instances",obj_bat);
-	    instance_create_layer(gx+352,gy+128,"Instances",obj_rock);
-	    instance_create_layer(gx+384,gy+128,"Instances",obj_rock);
-	    instance_create_layer(gx+416,gy+128,"Instances",obj_rock);
-	    instance_create_layer(gx+480,gy+128,"Instances",obj_bat);
-	    instance_create_layer(gx+64,gy+160,"Instances",obj_rock);
-	    instance_create_layer(gx+96,gy+160,"Instances",obj_rock);
-	    instance_create_layer(gx+128,gy+160,"Instances",obj_rock);
-	    instance_create_layer(gx+352,gy+160,"Instances",obj_rock);
-	    instance_create_layer(gx+384,gy+160,"Instances",obj_rock);
-	    instance_create_layer(gx+320,gy+192,"Instances",obj_rock);
-	    instance_create_layer(gx+352,gy+192,"Instances",obj_rock);
-	    instance_create_layer(gx+160,gy+256,"Instances",obj_rock);
-	    instance_create_layer(gx+192,gy+256,"Instances",obj_rock);
-	    instance_create_layer(gx+224,gy+256,"Instances",obj_rock);
-	    instance_create_layer(gx+384,gy+256,"Instances",obj_bat);
-	    instance_create_layer(gx+32,gy+288,"Instances",obj_rock);
-	    instance_create_layer(gx+64,gy+288,"Instances",obj_rock);
-	    instance_create_layer(gx+160,gy+288,"Instances",obj_rock);
-	    instance_create_layer(gx+352,gy+288,"Instances",obj_rock);
-	    instance_create_layer(gx+416,gy+288,"Instances",obj_rock);
-	    instance_create_layer(gx+32,gy+320,"Instances",obj_rock);
-	    instance_create_layer(gx+64,gy+320,"Instances",obj_rock);
-	    instance_create_layer(gx+96,gy+320,"Instances",obj_rock);
-	    instance_create_layer(gx+352,gy+320,"Instances",obj_rock);
-	    instance_create_layer(gx+384,gy+320,"Instances",obj_rock);
-	    instance_create_layer(gx+416,gy+320,"Instances",obj_rock);
-	    instance_create_layer(gx+448,gy+320,"Instances",obj_rock);
-	    instance_create_layer(gx+32,gy+352,"Instances",obj_rock);
-	    instance_create_layer(gx+64,gy+352,"Instances",obj_rock);
-	    instance_create_layer(gx+96,gy+352,"Instances",obj_rock);
-	    instance_create_layer(gx+128,gy+352,"Instances",obj_rock);
-	    instance_create_layer(gx+192,gy+352,"Instances",obj_bat);
-	    instance_create_layer(gx+352,gy+352,"Instances",obj_rock);
-	    instance_create_layer(gx+384,gy+352,"Instances",obj_rock);
-	    instance_create_layer(gx+416,gy+352,"Instances",obj_rock);
-	    instance_create_layer(gx+(roomwd/2),gy+240,"Instances",obj_ppoff);
-        
-		return 14;
-	break;
+		room_file = file_text_open_read(working_directory+"roomtype4.csv");
+		break;
 	case 5:
-	    instance_create_layer(gx+32,gy+96,"Instances",obj_barrel);
-	    instance_create_layer(gx+64,gy+96,"Instances",obj_barrel);
-	    instance_create_layer(gx+96,gy+96,"Instances",obj_barrel);
-	    instance_create_layer(gx+416,gy+96,"Instances",obj_barrel);
-	    instance_create_layer(gx+448,gy+96,"Instances",obj_barrel);
-	    instance_create_layer(gx+480,gy+96,"Instances",obj_barrel);
-	    instance_create_layer(gx+32,gy+128,"Instances",obj_barrel);
-	    instance_create_layer(gx+64,gy+128,"Instances",obj_vase);
-	    instance_create_layer(gx+128,gy+128,"Instances",obj_psnt_body);
-	    instance_create_layer(gx+384,gy+128,"Instances",obj_psnt_body);
-	    instance_create_layer(gx+448,gy+128,"Instances",obj_vase);
-	    instance_create_layer(gx+480,gy+128,"Instances",obj_barrel);
-	    instance_create_layer(gx+32,gy+160,"Instances",obj_barrel);
-	    instance_create_layer(gx+480,gy+160,"Instances",obj_barrel);
-	    instance_create_layer(gx+160,gy+192,"Instances",obj_crate);
-	    instance_create_layer(gx+192,gy+192,"Instances",obj_crate);
-	    instance_create_layer(gx+320,gy+192,"Instances",obj_crate);
-	    instance_create_layer(gx+352,gy+192,"Instances",obj_crate);
-	    instance_create_layer(gx+160,gy+224,"Instances",obj_crate);
-	    instance_create_layer(gx+192,gy+224,"Instances",obj_crate);
-	    instance_create_layer(gx+320,gy+224,"Instances",obj_crate);
-	    instance_create_layer(gx+352,gy+224,"Instances",obj_crate);
-	    instance_create_layer(gx+160,gy+256,"Instances",obj_crate);
-	    instance_create_layer(gx+192,gy+256,"Instances",obj_crate);
-	    instance_create_layer(gx+320,gy+256,"Instances",obj_crate);
-	    instance_create_layer(gx+352,gy+256,"Instances",obj_crate);
-	    instance_create_layer(gx+32,gy+288,"Instances",obj_barrel);
-	    instance_create_layer(gx+480,gy+288,"Instances",obj_barrel);
-	    instance_create_layer(gx+32,gy+320,"Instances",obj_barrel);
-	    instance_create_layer(gx+64,gy+320,"Instances",obj_vase);
-	    instance_create_layer(gx+128,gy+320,"Instances",obj_psnt_body);
-	    instance_create_layer(gx+384,gy+320,"Instances",obj_psnt_body);
-	    instance_create_layer(gx+448,gy+320,"Instances",obj_vase);
-	    instance_create_layer(gx+480,gy+320,"Instances",obj_barrel);
-	    instance_create_layer(gx+32,gy+352,"Instances",obj_barrel);
-	    instance_create_layer(gx+64,gy+352,"Instances",obj_barrel);
-	    instance_create_layer(gx+96,gy+352,"Instances",obj_barrel);
-	    instance_create_layer(gx+416,gy+352,"Instances",obj_barrel);
-	    instance_create_layer(gx+448,gy+352,"Instances",obj_barrel);
-	    instance_create_layer(gx+480,gy+352,"Instances",obj_barrel);
-	    instance_create_layer(gx+(roomwd/2),gy+240,"Instances",obj_ppoff);
-        
-		return 14
-	break;
-	///Type B
+		room_file = file_text_open_read(working_directory+"roomtype5.csv");
+		break;
 	case 6:
-	    instance_create_layer(gx+32,gy+96,"Instances",obj_rock);
-	    instance_create_layer(gx+64,gy+96,"Instances",obj_rock);
-	    instance_create_layer(gx+448,gy+96,"Instances",obj_rock);
-	    instance_create_layer(gx+480,gy+96,"Instances",obj_rock);
-	    instance_create_layer(gx+32,gy+128,"Instances",obj_rock);
-	    instance_create_layer(gx+96,gy+128,"Instances",obj_slm_cr);
-	    instance_create_layer(gx+416,gy+128,"Instances",obj_slm_cr);
-	    instance_create_layer(gx+480,gy+128,"Instances",obj_rock);
-	    instance_create_layer(gx+32,gy+160,"Instances",obj_rock);
-	    instance_create_layer(gx+480,gy+160,"Instances",obj_rock);
-	    instance_create_layer(gx+256,gy+224,"Instances",obj_slm_cr);
-	    instance_create_layer(gx+32,gy+288,"Instances",obj_rock);
-	    instance_create_layer(gx+480,gy+288,"Instances",obj_rock);
-	    instance_create_layer(gx+32,gy+320,"Instances",obj_rock);
-	    instance_create_layer(gx+96,gy+320,"Instances",obj_slm_cr);
-	    instance_create_layer(gx+416,gy+320,"Instances",obj_slm_cr);
-	    instance_create_layer(gx+480,gy+320,"Instances",obj_rock);
-	    instance_create_layer(gx+32,gy+352,"Instances",obj_rock);
-	    instance_create_layer(gx+64,gy+352,"Instances",obj_rock);
-	    instance_create_layer(gx+448,gy+352,"Instances",obj_rock);
-	    instance_create_layer(gx+480,gy+352,"Instances",obj_rock);
-	    instance_create_layer(gx+(roomwd/2),gy+240,"Instances",obj_ppoff);
-        
-		return 14;
-	break;
+		room_file = file_text_open_read(working_directory+"roomtype6.csv");
+		break;
 	case 7:
-	    instance_create_layer(gx+32,gy+96,"Instances",obj_rock);
-	    instance_create_layer(gx+480,gy+96,"Instances",obj_rock);
-	    instance_create_layer(gx+64,gy+128,"Instances",obj_rock);
-	    instance_create_layer(gx+128,gy+128,"Instances",obj_rock);
-	    instance_create_layer(gx+192,gy+128,"Instances",obj_slm_cr);
-	    instance_create_layer(gx+384,gy+128,"Instances",obj_rock);
-	    instance_create_layer(gx+448,gy+128,"Instances",obj_rock);
-	    instance_create_layer(gx+96,gy+160,"Instances",obj_rock);
-	    instance_create_layer(gx+416,gy+160,"Instances",obj_rock);
-	    instance_create_layer(gx+224,gy+192,"Instances",obj_rock);
-	    instance_create_layer(gx+288,gy+192,"Instances",obj_rock);
-	    instance_create_layer(gx+192,gy+224,"Instances",obj_rock);
-	    instance_create_layer(gx+256,gy+224,"Instances",obj_bat);
-	    instance_create_layer(gx+320,gy+224,"Instances",obj_rock);
-	    instance_create_layer(gx+384,gy+224,"Instances",obj_slm_cr);
-	    instance_create_layer(gx+224,gy+256,"Instances",obj_rock);
-	    instance_create_layer(gx+288,gy+256,"Instances",obj_rock);
-	    instance_create_layer(gx+96,gy+288,"Instances",obj_rock);
-	    instance_create_layer(gx+160,gy+288,"Instances",obj_slm_cr);
-	    instance_create_layer(gx+416,gy+288,"Instances",obj_rock);
-	    instance_create_layer(gx+64,gy+320,"Instances",obj_rock);
-	    instance_create_layer(gx+128,gy+320,"Instances",obj_rock);
-	    instance_create_layer(gx+384,gy+320,"Instances",obj_rock);
-	    instance_create_layer(gx+448,gy+320,"Instances",obj_rock);
-	    instance_create_layer(gx+32,gy+352,"Instances",obj_rock);
-	    instance_create_layer(gx+480,gy+352,"Instances",obj_rock);
-	    instance_create_layer(gx+(roomwd/2),gy+240,"Instances",obj_ppoff);
-        
-		return 14;
-	break;
+		room_file = file_text_open_read(working_directory+"roomtype7.csv");
+		break;
 	case 8:
-		instance_create_layer(gx+96,gy+128,"Instances",obj_slm_cr);
-	    instance_create_layer(gx+416,gy+128,"Instances",obj_slm_cr);
-	    instance_create_layer(gx+256,gy+160,"Instances",obj_vase);
-	    instance_create_layer(gx+224,gy+192,"Instances",obj_vase);
-	    instance_create_layer(gx+288,gy+192,"Instances",obj_vase);
-	    instance_create_layer(gx+192,gy+224,"Instances",obj_vase);
-	    instance_create_layer(gx+256,gy+224,"Instances",obj_heart);
-	    instance_create_layer(gx+320,gy+224,"Instances",obj_vase);
-	    instance_create_layer(gx+224,gy+256,"Instances",obj_vase);
-	    instance_create_layer(gx+288,gy+256,"Instances",obj_vase);
-	    instance_create_layer(gx+256,gy+288,"Instances",obj_vase);
-	    instance_create_layer(gx+96,gy+320,"Instances",obj_slm_cr);
-	    instance_create_layer(gx+416,gy+320,"Instances",obj_slm_cr);
-	    instance_create_layer(gx+(roomwd/2),gy+240,"Instances",obj_ppoff);
-		
-		return 14;
-	break;
+		room_file = file_text_open_read(working_directory+"roomtype8.csv");
+		break;
 	case 9:
-	    instance_create_layer(gx+96,gy+128,"Instances",obj_rock);
-	    
-	    instance_create_layer(gx+96,gy+160,"Instances",obj_rock);
-	    instance_create_layer(gx+192,gy+160,"Instances",obj_rock);
-	    instance_create_layer(gx+224,gy+160,"Instances",obj_rock);
-	    instance_create_layer(gx+256,gy+160,"Instances",obj_rock);
-	    instance_create_layer(gx+288,gy+160,"Instances",obj_rock);
-	    instance_create_layer(gx+320,gy+160,"Instances",obj_rock);
-	    instance_create_layer(gx+352,gy+160,"Instances",obj_rock);
-	    instance_create_layer(gx+416,gy+160,"Instances",obj_rock);
-	    instance_create_layer(gx+96,gy+192,"Instances",obj_rock);
-	    instance_create_layer(gx+416,gy+192,"Instances",obj_rock);
-	    instance_create_layer(gx+96,gy+224,"Instances",obj_rock);
-	    instance_create_layer(gx+160,gy+224,"Instances",obj_rock);
-	    instance_create_layer(gx+352,gy+224,"Instances",obj_rock);
-	    instance_create_layer(gx+416,gy+224,"Instances",obj_rock);
-	    instance_create_layer(gx+96,gy+256,"Instances",obj_rock);
-	    instance_create_layer(gx+416,gy+256,"Instances",obj_rock);
-	    instance_create_layer(gx+96,gy+288,"Instances",obj_rock);
-	    instance_create_layer(gx+160,gy+288,"Instances",obj_rock);
-	    instance_create_layer(gx+192,gy+288,"Instances",obj_rock);
-	    instance_create_layer(gx+224,gy+288,"Instances",obj_rock);
-	    instance_create_layer(gx+256,gy+288,"Instances",obj_rock);
-	    instance_create_layer(gx+288,gy+288,"Instances",obj_rock);
-	    instance_create_layer(gx+320,gy+288,"Instances",obj_rock);
-	    instance_create_layer(gx+416,gy+288,"Instances",obj_rock);
-	    
-	    instance_create_layer(gx+416,gy+320,"Instances",obj_rock);
-	    instance_create_layer(gx+(roomwd/2),gy+240,"Instances",obj_ppoff);
-		
-		return 14;
-	break;
+		room_file = file_text_open_read(working_directory+"roomtype9.csv");
+		break;
 	case 10:
-	    instance_create_layer(gx+160,gy+96,"Instances",obj_rock);
-	    instance_create_layer(gx+192,gy+96,"Instances",obj_rock);
-	    instance_create_layer(gx+320,gy+96,"Instances",obj_rock);
-	    instance_create_layer(gx+352,gy+96,"Instances",obj_rock);
-	    instance_create_layer(gx+32,gy+128,"Instances",obj_rock);
-	    instance_create_layer(gx+96,gy+128,"Instances",obj_psnt_arch_body);
-	    instance_create_layer(gx+192,gy+128,"Instances",obj_rock);
-	    instance_create_layer(gx+320,gy+128,"Instances",obj_rock);
-	    instance_create_layer(gx+480,gy+128,"Instances",obj_rock);
-	    instance_create_layer(gx+32,gy+160,"Instances",obj_rock);
-	    instance_create_layer(gx+64,gy+160,"Instances",obj_rock);
-	    instance_create_layer(gx+192,gy+160,"Instances",obj_rock);
-	    instance_create_layer(gx+320,gy+160,"Instances",obj_rock);
-	    instance_create_layer(gx+448,gy+160,"Instances",obj_rock);
-	    instance_create_layer(gx+480,gy+160,"Instances",obj_rock);
-	    instance_create_layer(gx+32,gy+288,"Instances",obj_rock);
-	    instance_create_layer(gx+64,gy+288,"Instances",obj_rock);
-	    instance_create_layer(gx+192,gy+288,"Instances",obj_rock);
-	    instance_create_layer(gx+320,gy+288,"Instances",obj_rock);
-	    instance_create_layer(gx+448,gy+288,"Instances",obj_rock);
-	    instance_create_layer(gx+480,gy+288,"Instances",obj_rock);
-	    instance_create_layer(gx+32,gy+320,"Instances",obj_rock);
-	    instance_create_layer(gx+192,gy+320,"Instances",obj_rock);
-	    instance_create_layer(gx+320,gy+320,"Instances",obj_rock);
-	    instance_create_layer(gx+416,gy+320,"Instances",obj_psnt_arch_body);
-	    instance_create_layer(gx+480,gy+320,"Instances",obj_rock);
-	    instance_create_layer(gx+160,gy+352,"Instances",obj_rock);
-	    instance_create_layer(gx+192,gy+352,"Instances",obj_rock);
-	    instance_create_layer(gx+320,gy+352,"Instances",obj_rock);
-	    instance_create_layer(gx+352,gy+352,"Instances",obj_rock);
-	    instance_create_layer(gx+(roomwd/2),gy+240,"Instances",obj_ppoff);
-		
-		return 14;
-	break;
-	///Type Store
+		room_file = file_text_open_read(working_directory+"roomtype10.csv");
+		break;
 	case 11:
-	    instance_create_layer(gx+32,gy+96,"Instances",obj_barrel);
-	    instance_create_layer(gx+64,gy+96,"Instances",obj_barrel);
-	    instance_create_layer(gx+448,gy+96,"Instances",obj_barrel);
-	    instance_create_layer(gx+480,gy+96,"Instances",obj_barrel);
-	    instance_create_layer(gx+32,gy+128,"Instances",obj_barrel);
-	    instance_create_layer(gx+224,gy+128,"Instances",obj_vase);
-	    instance_create_layer(gx+288,gy+128,"Instances",obj_vase);
-	    instance_create_layer(gx+480,gy+128,"Instances",obj_barrel);
-	    instance_create_layer(gx+192,gy+160,"Instances",obj_vase);
-	    instance_create_layer(gx+256,gy+160,"Instances",obj_vase);
-	    instance_create_layer(gx+320,gy+160,"Instances",obj_vase);
-	    instance_create_layer(gx+160,gy+192,"Instances",obj_vase);
-	    instance_create_layer(gx+352,gy+192,"Instances",obj_vase);
-	    instance_create_layer(gx+192,gy+224,"Instances",obj_vase);
-	    instance_create_layer(gx+256,gy+224,"Instances",obj_heart);
-	    instance_create_layer(gx+320,gy+224,"Instances",obj_vase);
-	    instance_create_layer(gx+224,gy+256,"Instances",obj_vase);
-	    instance_create_layer(gx+288,gy+256,"Instances",obj_vase);
-	    instance_create_layer(gx+256,gy+288,"Instances",obj_vase);
-	    instance_create_layer(gx+32,gy+320,"Instances",obj_barrel);
-	    instance_create_layer(gx+480,gy+320,"Instances",obj_barrel);
-	    instance_create_layer(gx+32,gy+352,"Instances",obj_barrel);
-	    instance_create_layer(gx+64,gy+352,"Instances",obj_barrel);
-	    instance_create_layer(gx+448,gy+352,"Instances",obj_barrel);
-	    instance_create_layer(gx+480,gy+352,"Instances",obj_barrel);
-		
-		return 15;
-	break;
+		room_file = file_text_open_read(working_directory+"roomtype11.csv");
+		break;
 	case 12:
-	    instance_create_layer(gx+384,gy+96,"Instances",obj_crate);
-	    instance_create_layer(gx+416,gy+96,"Instances",obj_barrel);
-	    instance_create_layer(gx+448,gy+96,"Instances",obj_crate);
-	    instance_create_layer(gx+96,gy+128,"Instances",obj_barrel);
-	    instance_create_layer(gx+128,gy+128,"Instances",obj_crate);
-	    instance_create_layer(gx+160,gy+128,"Instances",obj_vase);
-	    instance_create_layer(gx+384,gy+128,"Instances",obj_vase);
-	    instance_create_layer(gx+416,gy+128,"Instances",obj_mimic);
-	    instance_create_layer(gx+448,gy+128,"Instances",obj_crate);
-	    instance_create_layer(gx+96,gy+160,"Instances",obj_mimic);
-	    instance_create_layer(gx+160,gy+160,"Instances",obj_crate);
-	    instance_create_layer(gx+256,gy+192,"Instances",obj_crate);
-	    instance_create_layer(gx+288,gy+192,"Instances",obj_barrel);
-	    instance_create_layer(gx+224,gy+224,"Instances",obj_chest);
-	    instance_create_layer(gx+256,gy+224,"Instances",obj_crate);
-	    instance_create_layer(gx+288,gy+224,"Instances",obj_crate);
-	    instance_create_layer(gx+32,gy+288,"Instances",obj_barrel);
-	    instance_create_layer(gx+64,gy+288,"Instances",obj_vase);
-	    instance_create_layer(gx+448,gy+288,"Instances",obj_barrel);
-	    instance_create_layer(gx+32,gy+320,"Instances",obj_crate);
-	    instance_create_layer(gx+64,gy+320,"Instances",obj_crate);
-	    instance_create_layer(gx+96,gy+320,"Instances",obj_barrel);
-	    instance_create_layer(gx+416,gy+320,"Instances",obj_crate);
-	    instance_create_layer(gx+448,gy+320,"Instances",obj_crate);
-	    instance_create_layer(gx+416,gy+352,"Instances",obj_vase);
-	    instance_create_layer(gx+448,gy+352,"Instances",obj_crate);
-		
-		return 15;
-	break;
+		room_file = file_text_open_read(working_directory+"roomtype12.csv");
+		break;
 	case 13:
-	    instance_create_layer(gx+256,gy+160,"Instances",obj_vase);
+		room_file = file_text_open_read(working_directory+"roomtype13.csv");
+		break;
+	case 14:
+		room_file = file_text_open_read(working_directory+"roomtype14.csv");
+		break;
+	//shop rooms
+	case 15:
+		instance_create_layer(gx+256,gy+160,"Instances",obj_vase);
 	    instance_create_layer(gx+128,gy+224,"Instances",obj_vase);
 	    instance_create_layer(gx+192,gy+224,"Instances",obj_chest);
-	    instance_create_layer(gx+320,gy+224,"Instances",obj_mimic);
 	    instance_create_layer(gx+384,gy+224,"Instances",obj_vase);
 	    instance_create_layer(gx+256,gy+288,"Instances",obj_vase);
-	    instance_create_layer(gx+(roomwd/2),gy+240,"Instances",obj_ppoff);
-       
-		return 15;
-	break;
-	case 14:
-	    instance_create_layer(gx+256,gy+160,"Instances",obj_vase);
-	    instance_create_layer(gx+128,gy+224,"Instances",obj_vase);
-	    instance_create_layer(gx+192,gy+224,"Instances",obj_mimic);
-	    instance_create_layer(gx+320,gy+224,"Instances",obj_chest);
-	    instance_create_layer(gx+384,gy+224,"Instances",obj_vase);
-	    instance_create_layer(gx+256,gy+288,"Instances",obj_vase);
-		
-		return 15;
-	break;
-	///Type SP
-	case 15:
+		exit;
+		break;
+	//item room
 	case 16:
-	    instance_create_layer(gx+(roomwd/2)-16,gy-16+(roomhg/2),"Instances",obj_pedestal);
+		instance_create_layer(gx+(roomwd/2)-16,gy-16+(roomhg/2),"Instances",obj_pedestal);
 		instance_create_layer(gx+(roomwd/2)-16,gy-48+(roomhg/2),"IF",obj_equipable);
-		
-		return 17;
-	break;
+		exit;
+		break;
+	//speacial room
 	case 17:
+		exit;
+		break;
+	//boss room	
 	case 18:
-	case 19:
-	case 20:
-		return 16;
-	break;
-	///Boss
-	case 50:
-		instance_create_layer(gx+(roomwd/2),gy+32+(roomhg/2),"Instances",obj_bdoor);
-	
-		return 18;
-	break;
+		instance_create_layer(gx+(roomwd/2),gy+(roomhg/2),"Instances",obj_bdoor);
+		exit;
+		break;	
+	default:
+		show_debug_message("That file doen't exist");
+		exit;
+		break;
+
 }
+
+//read the total number of rooms and pick random room
+roomtotal=file_text_read_real(room_file);
+file_text_readln(room_file);
+
+room_id=irandom_range(0,roomtotal);
+
+//navigate to the right tag based on id
+
+l=room_id*10;
+while (l!=0){
+	file_text_readln(room_file);
+	l-=1;
+}
+line=file_text_read_string(room_file);
+if line!=string(room_id)+",,,,,,,,,,,,,,,,,,"{
+	show_debug_message("nao existe uma sala com este numero");
+	exit;
+}
+
+
+file_text_readln(room_file);
+
+//ready to parse through the lines
+
+
+var j=0, i=0, index, count;
+
+
+repeat(9){
+	
+	//go through the 19 collums of the grid
+	line=file_text_read_string(room_file);
+	index=1;
+	count=0;
+	
+	for(i=0;i<19;i++){
+		
+		//if its between ""
+		if string_char_at(line,index)==chr(34) {
+		
+			if (i==18){
+				content=string_copy(line,index,string_length(line)-(index-1));
+			}
+			else{
+				index+=1;
+				while(string_char_at(line,index)!=chr(34)){
+					index++;
+					count++;
+				}	
+				content=string_copy(line,index-count,count);
+				index+=2;
+				count=0;
+			}
+		}
+		
+		//if its not
+		else{
+			if (i==18){
+				content=string_copy(line,index,string_length(line)-(index-1));
+			}
+			else{
+				while(string_char_at(line,index)!=chr(44)){
+					index++;
+					count++;
+				}	
+				content=string_copy(line,index-count,count);
+				index+=1;
+				count=0;
+			}
+		}
+		
+		//add content to grid	
+		ds_grid_add(global.room_grid,i,j,content);
+	}
+	
+	//next line
+	j++;
+	file_text_readln(room_file);
+}
+
+//close the file his job is done :3
+file_text_close(room_file);
+
+
+//read dsgrid and do generation code
+
+for(i=0;i<9;i++){
+	for(j=0;j<19;j++){
+		object=ds_grid_get(global.room_grid, j, i);
+		if (object != "#"){
+			x_pos=32+j*32;
+			y_pos=96+i*32;
+			
+			//find comma
+			var comma = 1;
+			char = string_char_at(object,comma)
+			while (char!=","){
+				char=string_char_at(object,++comma)
+			}
+			
+			//get the name and layer 
+			obj_name=string_copy(object,2,comma-2);
+			obj_id=asset_get_index(obj_name);
+			
+			obj_layer=string_copy(object,comma+1,string_length(object)-(comma+1));
+			
+			instance_create_layer(gx+x_pos,gy+y_pos,obj_layer,obj_id);
+			
+			show_debug_message(string(gx+x_pos)+ " , " + string(gy+y_pos) + " , " + obj_layer + " , " + string(obj_id));
+		}
+		
+	}
+
+}
+
+//delete the ds grid and we are done :)
+ds_grid_destroy(global.room_grid);

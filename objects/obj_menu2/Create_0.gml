@@ -1,0 +1,4 @@
+{
+  scr_InitMenu();
+}
+

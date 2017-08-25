@@ -1,0 +1,31 @@
+{
+    "id": "0921c4a2-dbfc-47b4-9773-40adcf8f9682",
+    "modelName": "GMFolder",
+    "mvc": "1.1",
+    "name": "0921c4a2-dbfc-47b4-9773-40adcf8f9682",
+    "children": [
+        "0012ac3b-c8b2-4109-a7f1-e71293b5de5a",
+        "4df75dc8-693b-44a6-a6e6-eb3b4d94505c",
+        "eba3eca1-2a53-49ac-8ad7-d4b3d9406401",
+        "584b7eb8-388b-4e88-b682-6a2f159aa5a5",
+        "dc13197f-0650-4b6b-81f0-51092c997e83",
+        "fe0b9d80-16df-47db-9c5b-8c41c9eb52ef",
+        "48b1659c-9265-4392-9f13-c9f04cb3f0a9",
+        "dccfe2ba-385e-42dd-9a0d-3815750160cc",
+        "576f52a3-c784-4da8-bc44-08b589689b0f",
+        "02a9b20b-1d92-4896-bac3-2b12942002b0",
+        "611937b4-39a9-4267-b6a8-0e41d795e908",
+        "641069d5-0490-4223-af08-50238adf657a",
+        "bb3a1be2-b4ac-4c43-ab51-a7f79e060fa0",
+        "615fe669-1875-458a-a81f-0e1c409594e3",
+        "237e3e2b-7571-4bcb-94f5-82ed86f6c18f",
+        "e47fe393-8ed8-4301-95a7-646f6006d447",
+        "191a36b5-2d2c-4946-97e3-01c1b3ee71e0",
+        "ea9784f4-2021-4290-aaca-57aa6cc36a90",
+        "86fba45c-ae2d-4082-a861-e78d39c2933a"
+    ],
+    "filterType": "GMSprite",
+    "folderName": "room editor",
+    "isDefaultView": false,
+    "localisedFolderName": ""
+}
