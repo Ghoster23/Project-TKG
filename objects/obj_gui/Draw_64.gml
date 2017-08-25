@@ -40,7 +40,9 @@ if global.st_stuck {
 ///Draw coins
 draw_sprite_ext(spr_coin,0,yy + 4 * m,xx + 8 * m,m,m,0,c_white,1);
 draw_set_font(font_chsl_tags);
-draw_text_ext_transformed( yy + 20 * m, xx, string(global.coins), 2 * m, 16 * m, m, m, 0);
+draw_text_ext_transformed( yy + 20 * m, xx + 8 * m, string(global.coins), 2 * m, 16 * m, m, m, 0);
+draw_text_ext_transformed( yy + 40 * m, xx + 8 * m, string(global.act_enemies), 2 * m, 16 * m, m, m, 0);
+draw_text_ext_transformed( yy + 50 * m, xx + 8 * m, string(global.kld_enemies), 2 * m, 16 * m, m, m, 0);
 
 ///Character specific
 switch global.char {

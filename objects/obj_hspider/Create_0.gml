@@ -6,6 +6,7 @@ visible=false;
 flash=false;
 damaged=false;
 go=false;
+start = false;
 moved=false;
 
 //times

@@ -10,6 +10,7 @@ damaged = false;
 
 swing = false;
 go = false;
+start = false;
 prev_image_speed = 0;
 
 xx = x;

@@ -1,11 +1,7 @@
 randomize();
 
-//2D Array for room existence
-l[4,4] = true;
-
 //Gen the map
 while roomgenerated < roomstogenerate{
-	show_debug_message(roomgenerated);
 	confirm = false  //Will we build?
     
 	up = false       //Is there a room up?
@@ -64,11 +60,15 @@ while roomgenerated < roomstogenerate{
 				ad++;
 	        }
 	    }
-        
-		show_debug_message("ad:" + string(ad));
 		
 	    ///If there is, determine type
 	    if ad {
+			attempts++;
+			
+			if attempts > 1000 {
+				break;
+			}
+			
 	    //Decide room type
 			//Special rooms
 	        if roomgenerated == 12 {
@@ -87,8 +87,8 @@ while roomgenerated < roomstogenerate{
 				confirm = true;
 			
 			//Boss room
-			}else if roomgenerated == 15{
-				broom++;
+			}else if roomgenerated == 15 and ad == 1 and
+					((up and u < 15) or (down and d < 15) or (left and l < 15) or (right and r < 15)){
 				typeroom = 18;
 				confirm = true;
 				
@@ -96,7 +96,6 @@ while roomgenerated < roomstogenerate{
 	        }else if roomgenerated < 12{
 	            while confirm == false {
 					typeroom = irandom(14);
-					show_debug_message("idiot ");
 					
 					switch typeroom {
 						case 0:
@@ -192,7 +191,7 @@ while roomgenerated < roomstogenerate{
 	        }
             
 			if confirm {
-				show_debug_message("RT: " + string(typeroom));
+				attempts = 0;
 				
 		        //Gen the room
 		        roomgenerated += 1;
@@ -301,7 +300,11 @@ while roomgenerated < roomstogenerate{
 	}
 }
 
-if once == false{
+if attempts > 1000 {
+	room_goto(rm_level);
+}
+
+if once == false and attempts < 1000{
 	
 	once = true;
 

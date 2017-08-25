@@ -1,9 +1,6 @@
-event_inherited();
-
 //Appear
-if(place_meeting(x,y,obj_ppon)) and visible == false{
+if start and visible == false{
     visible = true;
-    global.act_enemies += 1;
     
     alarm[0] = 1 * room_speed;
 }
@@ -57,13 +54,11 @@ if go and not global.pause{
 	            sprite_index = spr_bat_d;
 				image_index = 0;
 				image_speed = 0.5;
-				scr_drops();
-				global.act_enemies -= 1;
-				global.kld_enemies += 1;
 				flash = false;
 			}
 			
 			if image_index == 3{
+				scr_drops();
 				instance_destroy();
 				
 			}

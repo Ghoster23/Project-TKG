@@ -7,3 +7,7 @@ if((irandom(99) + 1) <= 10){
 }else if (irandom(99) + 1) <= 40{
 	instance_create_layer(x,y,"IF",obj_coin);
 }
+
+ds_list_clear(global.act_enemy_list);
+global.n_room = true;
+global.kld_enemies += 1;
