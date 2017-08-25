@@ -13,6 +13,7 @@ damaged = false;
 
 shoot = false;
 go = false;
+start = false;
 tell = 0;
 
 gender = head.gender;

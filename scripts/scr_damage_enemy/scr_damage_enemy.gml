@@ -116,7 +116,6 @@ if type != 404{
 	//Activate flash
 	flash = true;
 	
-	show_debug_message(e_hp);
 	
 	global.shake = 2;
 	

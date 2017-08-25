@@ -1,6 +1,6 @@
-if(place_meeting(x,y,obj_ppon)) and visible == false{
+if start and visible == false{
     visible = true;
-    global.act_enemies += 1;
+    
 	alarm[0]=room_speed*2;
 }
 
@@ -77,7 +77,6 @@ if go and not global.pause{
             }
             
             scr_drops();
-            
 			instance_destroy();
 		break;
 		

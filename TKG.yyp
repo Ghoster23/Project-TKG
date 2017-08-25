@@ -247,6 +247,14 @@
             }
         },
         {
+            "Key": "0cb20a3c-6269-4144-a409-eaf8bad4227a",
+            "Value": {
+                "id": "37dea453-76bf-4eca-9ca5-727eb6b3570d",
+                "resourcePath": "scripts\\collision_rectangle_list\\collision_rectangle_list.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0dac272c-d91c-4a24-bee2-161a664d24b0",
             "Value": {
                 "id": "7c1d772a-b130-44be-9cb2-bd2bfe88874c",
@@ -3823,6 +3831,14 @@
             }
         },
         {
+            "Key": "f4e7eb32-cdf5-4581-96b5-4c6d62802b88",
+            "Value": {
+                "id": "aaad0b16-4bac-41fb-a45f-7a93463eb587",
+                "resourcePath": "objects\\obj_room_controller\\obj_room_controller.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f5b709bb-3964-41b0-bdb5-23e3f3404ac8",
             "Value": {
                 "id": "92133a49-c216-4496-b3c6-4e0a1b732360",
@@ -3996,6 +4012,7 @@
         "1d79937b-1c36-469a-96d3-e40d79ca0025",
         "43e92121-66ff-4ca0-a864-5ac52130fefb",
         "97ad3363-68e1-478b-b1a6-0cc1008f3a6c",
+        "0cb20a3c-6269-4144-a409-eaf8bad4227a",
         "31655573-06fa-4766-988e-0de279a78b7e",
         "063a1891-e073-4594-8f5d-a53fe1f1a34b",
         "77dfd3e2-4088-4c09-9919-9ca49dd0ac52",

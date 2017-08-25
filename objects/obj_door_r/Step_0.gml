@@ -1,9 +1,4 @@
-tpx = 0;
-tpy = 0;
-roomwd = global.roomwd;
-roomhg = global.roomhg;
-
-if(place_meeting(x,y,obj_body) && !place_meeting(x,y,obj_ppon) && global.lock == false && global.d_cd == false and obj_view.stopped){
+if(place_meeting(x,y,obj_body) and not global.lock and not global.d_cd and obj_view.stopped){
     tpx = (obj_body.x - (32 * 3.5));
     tpy = obj_body.y;
 	global.current_column++;

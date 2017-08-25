@@ -1,10 +1,4 @@
-with (other) {
-tpx = 0;
-tpy = 0;
-roomwd = global.roomwd;
-roomhg = global.roomhg;
-
-if(place_meeting(x,y,obj_body) && !place_meeting(x,y,obj_ppon) && global.lock == false && global.d_cd == false and obj_view.stopped){
+if(place_meeting(x,y,obj_body) and not global.lock and not global.d_cd and obj_view.stopped){
     tpx = obj_body.x;
     tpy = (obj_body.y - (32 * 5.5));
 	global.current_row--;
@@ -54,7 +48,4 @@ if(global.lock == false && image_index != 0){
     image_speed = -1;
 }else if(global.lock == false && image_index == 0){
     image_speed = 0;
-}
-
-
 }

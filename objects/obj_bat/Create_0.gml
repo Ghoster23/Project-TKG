@@ -13,6 +13,7 @@ damaged = false;
 shift = 0;
 
 //Start
+start = false;
 go = false;
 offset = true;
 offs = 32;

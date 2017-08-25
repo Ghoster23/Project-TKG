@@ -8,6 +8,7 @@ image_alpha = 0.7;
 flash = false;
 damaged = false;
 go = false;
+start = false;
 
 signal_x = 0;
 signal_y = 0;

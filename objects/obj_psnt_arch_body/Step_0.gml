@@ -1,6 +1,5 @@
-if(place_meeting(x,y,obj_ppon)) and not visible {
+if start and not visible {
     visible = true;
-    global.act_enemies += 1;
     
     alarm[0] = 1 * room_speed;
 }
@@ -37,8 +36,6 @@ if go and not global.pause{
         
         break;
         case 3:  //Dead State
-			global.act_enemies -= 1;
-			global.kld_enemies += 1;
 	        scr_drops();
 			instance_destroy(tell);
 			instance_destroy(bow);
