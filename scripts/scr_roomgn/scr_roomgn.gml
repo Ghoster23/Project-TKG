@@ -138,7 +138,7 @@ repeat(9){
 		if string_char_at(line,index)==chr(34) {
 		
 			if (i==18){
-				content=string_copy(line,index,string_length(line)-(index-1));
+				content=string_copy(line,index+1,string_length(line)-(index+1));
 			}
 			else{
 				index+=1;
@@ -151,7 +151,6 @@ repeat(9){
 				count=0;
 			}
 		}
-		
 		//if its not
 		else{
 			if (i==18){
@@ -180,6 +179,7 @@ repeat(9){
 //close the file his job is done :3
 file_text_close(room_file);
 
+show_debug_message("type: "+string(type)+" ID: "+string(room_id))
 
 //read dsgrid and do generation code
 
@@ -189,6 +189,8 @@ for(i=0;i<9;i++){
 		if (object != "#"){
 			x_pos=32+j*32;
 			y_pos=96+i*32;
+			
+			show_debug_message("object: "+object);
 			
 			//find comma
 			var comma = 1;
@@ -204,7 +206,7 @@ for(i=0;i<9;i++){
 			obj_layer=string_copy(object,comma+1,string_length(object)-(comma+1));
 			
 			instance_create_layer(gx+x_pos,gy+y_pos,obj_layer,obj_id);
-			
+			show_debug_message("name: "+obj_name)
 			show_debug_message(string(gx+x_pos)+ " , " + string(gy+y_pos) + " , " + obj_layer + " , " + string(obj_id));
 		}
 		
