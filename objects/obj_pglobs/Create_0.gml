@@ -2,6 +2,10 @@
 //Game pause
 global.pause = false;
 
+//Measurements
+global.roomwd = 672;
+global.roomhg = 416;
+
 ///Enemies
 //Active enemies
 global.act_enemies = 0;

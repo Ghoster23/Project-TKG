@@ -19,7 +19,8 @@
         "6816e3f8-adf6-4926-b918-703af4b287ab",
         "9a0f4e4a-57ca-44f0-86c5-6aec46e1e5a6",
         "6db61493-99e4-4a52-a756-22ea4db95f98",
-        "dbae7153-bc6c-4579-8ee5-ce42b228eb5f"
+        "dbae7153-bc6c-4579-8ee5-ce42b228eb5f",
+        "568ca0fb-01b7-409e-927a-6b9fd3a05ae7"
     ],
     "filterType": "GMObject",
     "folderName": "room editor",

@@ -50,7 +50,7 @@ repeat(9){
 		if string_char_at(line,index)==chr(34) {
 		
 			if (i==18){
-				content=string_copy(line,index,string_length(line)-(index-1));
+				content=string_copy(line,index+1,string_length(line)-(index+1));
 			}
 			else{
 				index+=1;
@@ -108,7 +108,7 @@ for(i=0;i<9;i++){
 			obj_name=string_copy(object,2,comma-2);
 			
 			//find the category and subcategory of the obj name in the arra
-			for(var q=1; q<4; q++){
+			for(var q=1; q<5; q++){
 				for(var t=0; t<menuText[q,0]; t++){
 					if menuText[q,t]==obj_name{
 						category=q;
@@ -119,6 +119,7 @@ for(i=0;i<9;i++){
 			global.square_ID[id_counter].block_ID[0]=category;
 			global.square_ID[id_counter].block_ID[1]=subcategory;
 			scr_category([category,subcategory],global.square_ID[id_counter]);	
+			
 		}
 		else{
 			global.square_ID[id_counter].block_ID[0]=0;

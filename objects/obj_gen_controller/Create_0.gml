@@ -1,6 +1,4 @@
-//Measurements
-global.roomwd = 672;
-global.roomhg = 416;
+
 once = false;
 
 //Gen Cursor

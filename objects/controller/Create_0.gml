@@ -28,6 +28,7 @@ global.lvl_room_number=0;
 global.room_file_read=file_text_open_read(working_directory + "roomtype0.csv");
 global.lvl_numrooms=file_text_read_real(global.room_file_read);
 
+scr_loadroom(global.lvl_room_type,global.lvl_room_number);
 
 
 

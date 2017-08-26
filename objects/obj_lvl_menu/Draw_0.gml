@@ -1,4 +1,6 @@
 {
+  draw_set_valign(fa_top);
+  draw_set_halign(fa_left);
   draw_set_font(font0)
   prev_space=0
   for (i = 1; i <= menuText[0]; i+=1) {
