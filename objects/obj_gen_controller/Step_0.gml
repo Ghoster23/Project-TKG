@@ -307,7 +307,7 @@ if attempts > 1000 {
 if once == false and attempts < 1000{
 	
 	once = true;
-
+	global.gen = false;
 	instance_create_layer(0,0,"IF",obj_AI_controller);
 	instance_create_layer(0,0,"PS",obj_minimap_controller);
 	instance_create_layer(0,0,"BH",obj_floor_fluid_controller);

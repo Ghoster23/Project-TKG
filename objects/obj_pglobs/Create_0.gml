@@ -6,6 +6,11 @@ global.pause = false;
 global.roomwd = 672;
 global.roomhg = 416;
 
+//Gen
+global.gen = false;
+
+global.fallen_items = 0;
+
 ///Enemies
 //Active enemies
 global.act_enemies = 0;

@@ -35,7 +35,7 @@ if not global.pause {
 			    sprite_index = spr_mimic_a;
 				phy_position_x += 5;
 				phy_position_y += 5;
-				
+				phy_fixed_rotation = false;
 			    e_spd = 4;
 				
 			}

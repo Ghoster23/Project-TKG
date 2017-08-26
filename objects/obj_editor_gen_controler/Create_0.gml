@@ -1,3 +1,5 @@
+global.gen = true;
+
 //spawn player
 switch global.lvl_room_type{
 	//down
@@ -30,6 +32,7 @@ switch global.lvl_room_type{
 
 }
 
+global.gen = false;
 
 for(i=0;i<171;i++){
 	if ds_grid_get(global.room_grid, 0, i)!=-1 {

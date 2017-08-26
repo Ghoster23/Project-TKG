@@ -2,6 +2,7 @@
 event_inherited();
 image_speed=0;
 prev_image_speed = 0;
+phy_fixed_rotation = true;
 
 flash = false;
 a = 0;

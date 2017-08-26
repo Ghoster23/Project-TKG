@@ -1,4 +1,4 @@
-
+global.gen = true;
 once = false;
 
 //Gen Cursor
