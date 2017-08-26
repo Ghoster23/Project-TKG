@@ -3759,6 +3759,14 @@
             }
         },
         {
+            "Key": "d573fbfd-e68d-40f0-bccf-a0f5457626e4",
+            "Value": {
+                "id": "ed30c8f7-2b50-4fec-b92d-e5c5255db76b",
+                "resourcePath": "objects\\obj_press_escape\\obj_press_escape.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d5b8497b-35be-4ff7-a11e-74d7ad8ff32b",
             "Value": {
                 "id": "047e296b-e991-4b10-89af-d4d9d87094ac",

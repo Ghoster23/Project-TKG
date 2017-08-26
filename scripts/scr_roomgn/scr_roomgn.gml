@@ -1,5 +1,5 @@
 //reads .csv file and generates code to fill room
-
+scr_InitSubMenu();
 
 var type = argument0;
 
@@ -186,11 +186,8 @@ show_debug_message("type: "+string(type)+" ID: "+string(room_id))
 for(i=0;i<9;i++){
 	for(j=0;j<19;j++){
 		object=ds_grid_get(global.room_grid, j, i);
+		var offset=0;
 		if (object != "#"){
-			x_pos=32+j*32;
-			y_pos=96+i*32;
-			
-			show_debug_message("object: "+object);
 			
 			//find comma
 			var comma = 1;
@@ -202,12 +199,24 @@ for(i=0;i<9;i++){
 			//get the name and layer 
 			obj_name=string_copy(object,2,comma-2);
 			obj_id=asset_get_index(obj_name);
-			
 			obj_layer=string_copy(object,comma+1,string_length(object)-(comma+1));
 			
+			//determine weather it should have an ofset or not
+			for(var q=1; q<5; q++){
+				for(var t=0; t<menuText[q,0]; t++){
+					if menuText[q,t]==obj_name{
+						category=q;
+					}
+				}
+			}
+			if category==2{
+				offset=16;
+			}
+			//get coords
+			x_pos=32+j*32+offset;
+			y_pos=96+i*32+offset;
+		
 			instance_create_layer(gx+x_pos,gy+y_pos,obj_layer,obj_id);
-			show_debug_message("name: "+obj_name)
-			show_debug_message(string(gx+x_pos)+ " , " + string(gy+y_pos) + " , " + obj_layer + " , " + string(obj_id));
 		}
 		
 	}

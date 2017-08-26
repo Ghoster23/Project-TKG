@@ -45,7 +45,9 @@ ini_point_x = x;
 ini_point_y = y;
 dir_change = true;
 i_dir = 0;
-dir = point_direction(x,y,obj_body.x,obj_body.y);
+if instance_exists(obj_body){
+	dir = point_direction(x,y,obj_body.x,obj_body.y);
+}
 prev_state = 0;
 d = 0;
 d_ = 0;
