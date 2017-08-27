@@ -1,12 +1,12 @@
 ///@description Damage flash (red)
-if instance_exists(obj_body){
+if instance_exists(global.body){
     if global.p_hurt == true{
 		//Invulnerability
 		global.p_inv = true;
 	
 		//Flash red
-        if obj_body.image_blend == c_white{
-            with obj_body{
+        if global.body.image_blend == c_white{
+            with global.body{
                 image_blend = c_red;
             }
             with obj_head{
@@ -14,8 +14,8 @@ if instance_exists(obj_body){
             }
         
 		//Flash white
-        }else if obj_body.image_blend == c_red{
-            with obj_body{
+        }else if global.body.image_blend == c_red{
+            with global.body{
                 image_blend = c_white;
             }
             with obj_head{

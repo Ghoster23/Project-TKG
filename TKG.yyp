@@ -2359,6 +2359,14 @@
             }
         },
         {
+            "Key": "83d938de-ea1e-4294-8dcf-a2862b64ede5",
+            "Value": {
+                "id": "fb0976b5-cc31-4b2c-9a1c-0944ae2930a0",
+                "resourcePath": "objects\\obj_body_fl\\obj_body_fl.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "84d1a246-9ec5-4065-ae72-ae70be79fdbc",
             "Value": {
                 "id": "ca8d2765-7266-407d-a220-1f39816cb5de",
@@ -3087,6 +3095,14 @@
             }
         },
         {
+            "Key": "b279ea35-ee12-4aab-aee5-fab0c0d8cb11",
+            "Value": {
+                "id": "69b9adba-481d-484f-97a6-69e758def236",
+                "resourcePath": "objects\\obj_flying_lifeform_parent\\obj_flying_lifeform_parent.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b27e00ff-7f22-4dae-b44b-4f36132e249c",
             "Value": {
                 "id": "0f83edb2-e20d-48f8-b139-82cd1eadb1f3",
@@ -3796,6 +3812,14 @@
                 "id": "047e296b-e991-4b10-89af-d4d9d87094ac",
                 "resourcePath": "datafiles_yy\\roomtype12.csv.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "d6360cde-58de-44a4-99b3-b8d331f5e396",
+            "Value": {
+                "id": "97e4fd5f-9233-4186-932f-a10aa001be7a",
+                "resourcePath": "sprites\\spr_player_shadow_fl\\spr_player_shadow_fl.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

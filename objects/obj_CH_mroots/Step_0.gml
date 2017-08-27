@@ -8,7 +8,7 @@ if not global.pause {
 
 	switch state{
 		case 0:
-			dir = point_direction(x,y,obj_body.x,obj_body.y);
+			dir = point_direction(x,y,global.body.x,global.body.y);
             
 			//Get hspd and vspd
 			hspd = lengthdir_x(6,dir);
@@ -17,7 +17,7 @@ if not global.pause {
 			phy_position_x += hspd;
 			phy_position_y += vspd;
 		
-			if distance_to_object(obj_body) < 10{
+			if distance_to_object(global.body) < 10{
 				state = 1;
 			}
 		break;
@@ -31,7 +31,7 @@ if not global.pause {
 				state = 2;
 			}
 		
-			if place_meeting(x,y,obj_body) and global.p_hurt == false and global.p_inv == false{
+			if place_meeting(x,y,global.body) and global.p_hurt == false and global.p_inv == false{
 				global.p_hp -= global.b_atk div global.p_def;
 				global.p_hurt = true;
 			}

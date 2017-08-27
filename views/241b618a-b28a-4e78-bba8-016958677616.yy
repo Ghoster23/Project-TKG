@@ -9,7 +9,7 @@
         "da0e4759-bfe0-4cae-9a10-53e4855c662d"
     ],
     "filterType": "GMSprite",
-    "folderName": "jacob",
+    "folderName": "jason",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

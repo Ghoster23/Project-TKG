@@ -22,6 +22,9 @@ global.killer = 0;
 global.coins = 0;
 
 ///Player Character
+global.body = obj_body;
+global.flight = false;
+
 //Player dead
 dead = false;
 

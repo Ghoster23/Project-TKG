@@ -124,7 +124,7 @@ if not global.pause {
 	    //Grab the player
 	    case 4:        
 	        if not instance_exists(obj_CH_groots){
-	            instance_create_layer(obj_body.x,obj_body.y,"Instances",obj_CH_groots);
+	            instance_create_layer(global.body.x,global.body.y,"Instances",obj_CH_groots);
 	        }
 	        leaves = 1;
 		
@@ -154,7 +154,7 @@ if not global.pause {
 				}
 			}
 	
-			if interact_key and distance_to_object(obj_body) < 30{
+			if interact_key and distance_to_object(global.body) < 30{
 				game_restart();
 			}
 

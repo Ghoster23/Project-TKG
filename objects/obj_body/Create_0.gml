@@ -1,7 +1,7 @@
 head = instance_create_layer(x,y-3,layer,obj_head);
 hands = instance_create_layer(x,y,layer,obj_hands);
 feet = instance_create_layer(x,y,layer,obj_feet);
-sword = instance_create_layer(x,y,layer,obj_sword);
+weapon = instance_create_layer(x,y,layer,obj_sword);
 
 ///set a bunch of stuff
 event_inherited();
@@ -16,8 +16,9 @@ dir = 0;
 image_speed=0;
 spr_side=1;
 rotacao = 0;
+phy_fixed_rotation = true;
 
-spr_body = global.char_bsprs[global.char,3]
+spr_body = global.char_bsprs[global.char,3];
 
 i_cd = false;
 

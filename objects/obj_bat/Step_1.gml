@@ -1,10 +1,10 @@
 ///@description Determine distance to body and knockback point and state
 if not global.pause{
-	dis = distance_to_object(obj_body);
+	dis = distance_to_object(global.body);
 
 	//Only update direction if not dashing
 	if dash == false{
-	    dir = point_direction(x,y,obj_body.x,obj_body.y);
+	    dir = point_direction(x,y,global.body.x,global.body.y);
 	}
 
 	/// Enemy States

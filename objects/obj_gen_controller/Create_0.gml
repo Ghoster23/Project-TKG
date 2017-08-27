@@ -43,7 +43,7 @@ instance_create_layer(gx+global.roomwd-32,gy,"Instances",obj_wall_right);
 instance_create_layer(gx+global.roomwd/2,gy+global.roomhg/2+31,"Floor",obj_floor);
 
 //Player
-instance_create_layer(gx+global.roomwd/2,gy+global.roomhg/2,"Instances",obj_body);
+instance_create_layer(gx+global.roomwd/2,gy+global.roomhg/2,"Instances",global.body);
 
 //Room counts
 for(var i = 0; i < 8; i += 1;){

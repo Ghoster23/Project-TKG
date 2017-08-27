@@ -9,7 +9,7 @@ if phy_rotation < 0{
     speed = 0;
 }
 
-if impact = true and global.thrown = true  and  place_meeting(x, y, obj_body) and pickup{
+if impact = true and global.thrown = true  and  place_meeting(x, y, global.body) and pickup{
     instance_destroy();
     instance_create_layer(x,y,"Instances",obj_sword);
 }

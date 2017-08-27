@@ -1,9 +1,9 @@
 /// @description dash alarm
-obj_body.visible=true;
+global.body.visible=true;
 obj_head.visible=true;
 
 if instance_exists(obj_stuck_sword) == false {
-    instance_create_layer(x,y,obj_body.layer,obj_sword);
+    instance_create_layer(x,y,global.body.layer,weapon);
 }
 
 with obj_roll{

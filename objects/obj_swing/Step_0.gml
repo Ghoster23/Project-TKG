@@ -1,6 +1,6 @@
 //follow the player for the duration of its life span
-x += obj_body.hspd;
-y += obj_body.vspd;
+x += global.body.hspd;
+y += global.body.vspd;
 
 
 //knockback

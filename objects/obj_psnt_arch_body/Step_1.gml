@@ -1,8 +1,8 @@
 ///@description Determine distance to player
 if not global.pause{
-	dis = distance_to_object(obj_body);
-	dir = point_direction(x,y,obj_body.x,obj_body.y);
-	bl_sight = collision_line(x,y,obj_body.x,obj_body.y,obj_solid_parent,true,true);
+	dis = distance_to_object(global.body);
+	dir = point_direction(x,y,global.body.x,global.body.y);
+	bl_sight = collision_line(x,y,global.body.x,global.body.y,obj_solid_parent,true,true);
 
 	/// Enemy States
 	if state != 3 and bow.image_speed == 0 {

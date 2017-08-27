@@ -36,13 +36,27 @@ switch item {
 		eq_active[item] = true;
 		
 	break;
-	case 7:
+	case 7: //Staff of Moses
+		rmx = global.body.x mod global.roomwd;
+		rmy = global.body.y mod global.roomhg;
 		
+		ds_grid_set_region(global.fluid_grid,(rmx - 16) div 4,(rmy + 3) div 4,(rmx + 15) div 4,(rmy + 14) div 4,0);
+		ds_grid_set_region(global.fluid_grid,((rmx - 16) + 4) div 4,((rmy + 3) - 4) div 4,(rmx + 15 - 4) div 4,(rmy + 14 + 4) div 4,0);
 		
 	break;
-	case 8:
+	case 8: //Sandals of Hermes
+		instance_create_layer(global.body.x,global.body.y,"Instances",obj_body_fl);
 		
+		with global.body {
+			instance_destroy(hands);
+			instance_destroy(head);
+			instance_destroy(weapon);
+			instance_destroy();
+		}
 		
+		global.body = obj_body_fl;
+		global.flight = true;
+		eq_active[item] = true;
 	break;
 	case 9:
 		
