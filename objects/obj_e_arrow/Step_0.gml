@@ -16,7 +16,7 @@ if not global.pause{
 	
 	}
 	
-	if place_meeting(phy_position_x,phy_position_y,obj_solid_parent) and des{
+	if place_meeting(phy_position_x,phy_position_y,obj_above_ground_parent) and des{
 		/*stuck = instance_create_layer(phy_position_x,phy_position_y,layer,obj_stuck_projectile);
 
 		with stuck {
@@ -34,7 +34,7 @@ if not global.pause{
 		alarm[0] = 5 * room_speed;
 	}
 	
-	if state != 1 and place_meeting(x,y,global.body){
+	if state != 1 and place_meeting(x,y,global.body) and not instance_exists(obj_roll){
 		scr_damage_player(0,10,global.p_def);
 
 		instance_destroy();

@@ -32,7 +32,7 @@ if not global.pause {
 			global.body.spr_side = 1
 			obj_head.image_index = 0;
 			global.body.rotacao = 270;
-			global.st_stuck = true;
+			
 		}
 	}	
 }
