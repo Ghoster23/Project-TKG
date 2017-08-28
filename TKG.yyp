@@ -159,6 +159,14 @@
             }
         },
         {
+            "Key": "051a82a8-6bda-42c2-ae30-f135458a582b",
+            "Value": {
+                "id": "c29eae43-c550-4ce6-abe5-18c63272abc4",
+                "resourcePath": "objects\\obj_projectile_parent\\obj_projectile_parent.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "05991355-938c-42c4-ad02-ea8178c44584",
             "Value": {
                 "id": "3df70e17-ae3e-433f-b678-7fa0ec68ea0b",
@@ -2183,6 +2191,14 @@
             }
         },
         {
+            "Key": "76eb21dd-afc4-4a48-ba82-96a2aef75e34",
+            "Value": {
+                "id": "7386572a-6864-473f-b19d-796b75a00298",
+                "resourcePath": "objects\\obj_below_ground_parent\\obj_below_ground_parent.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "77673385-dc58-4561-a973-e515ed0777fc",
             "Value": {
                 "id": "a3bf8fe0-e83f-4210-9c6b-c05bd9ca2b75",
@@ -2676,6 +2692,14 @@
                 "id": "7cd9a70a-fc8c-42d3-9322-1ea34a8e1180",
                 "resourcePath": "sprites\\spr_torch_light\\spr_torch_light.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "95308761-9733-47f4-9894-808bcda13fd7",
+            "Value": {
+                "id": "82c27481-f4d6-4f45-9d22-b66fe7dc753b",
+                "resourcePath": "objects\\obj_above_ground_parent\\obj_above_ground_parent.yy",
+                "resourceType": "GMObject"
             }
         },
         {

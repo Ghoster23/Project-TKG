@@ -1,7 +1,7 @@
 head = instance_create_layer(x,y-3,layer,obj_head);
 hands = instance_create_layer(x,y,layer,obj_hands);
 feet = instance_create_layer(x,y,layer,obj_feet);
-weapon = instance_create_layer(x,y,layer,obj_sword);
+weapon = instance_create_layer(x,y,layer,global.weapon);
 
 ///set a bunch of stuff
 event_inherited();
@@ -23,7 +23,7 @@ offs = 32;
 
 head.offs += 32;
 hands.offs += 32;
-weapon.offs += 33;
+weapon.offs += 32;
 
 spr_body = global.char_bsprs[global.char,3];
 
