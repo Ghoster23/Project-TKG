@@ -5,7 +5,7 @@ switch type {
 	break;
 	//Slime creep
 	case 1:
-		if global.st_poison_d == 0{
+		if global.st_poison_d == 0 and not global.p_inv and not global.flight{
 			global.st_poison = true;
 			global.st_poison_d = 15;
 		}

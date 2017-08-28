@@ -5,16 +5,6 @@
     "name": "obj_coin",
     "eventList": [
         {
-            "id": "67adb890-e20a-4e70-b543-9ed0450fb33c",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "202cd182-de09-40aa-b199-91a913531090",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "fcfc58f7-0834-4227-bfe9-3f28ce4298f7"
-        },
-        {
             "id": "67c2f5f7-1c29-4e5c-97ed-46114b4742fd",
             "modelName": "GMEvent",
             "mvc": "1.0",
