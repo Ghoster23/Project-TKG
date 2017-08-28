@@ -3,7 +3,8 @@ global.body.visible=true;
 obj_head.visible=true;
 
 if instance_exists(obj_stuck_sword) == false {
-    instance_create_layer(x,y,global.body.layer,weapon);
+    //instance_create_layer(x,y,global.body.layer,weapon);
+	weapon = instance_create_layer(x,y,layer,obj_sword);
 }
 
 with obj_roll{
