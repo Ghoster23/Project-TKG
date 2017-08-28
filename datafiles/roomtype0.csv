@@ -1,10 +1,10 @@
 2,,,,,,,,,,,,,,,,,,
 0,,,,,,,,,,,,,,,,,,
-"[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]"
-"[obj_rock,Instances]",#,"[obj_psnt_body,Instances]",#,#,#,#,"[obj_rock,Instances]",#,#,#,"[obj_rock,Instances]",#,#,#,#,"[obj_psnt_body,Instances]",#,"[obj_rock,Instances]"
-"[obj_rock,Instances]",#,#,#,#,#,#,"[obj_rock,Instances]",#,#,#,"[obj_rock,Instances]",#,#,#,#,#,#,"[obj_rock,Instances]"
+"[obj_vase,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]"
+"[obj_rock,Instances]",#,"[obj_psnt_body,Instances]",#,#,#,"[obj_psnt_body,Instances]","[obj_rock,Instances]",#,#,#,"[obj_rock,Instances]","[obj_slm_cr,Instances]",#,#,#,"[obj_psnt_body,Instances]",#,"[obj_rock,Instances]"
+"[obj_rock,Instances]",#,#,#,#,#,#,"[obj_rock,Instances]",#,"[obj_rock,Instances]",#,"[obj_rock,Instances]",#,#,#,#,#,#,"[obj_rock,Instances]"
 "[obj_rock,Instances]",#,#,#,#,#,#,"[obj_rock,Instances]",#,#,#,"[obj_crate,Instances]",#,#,#,#,#,#,"[obj_rock,Instances]"
-"[obj_rock,Instances]",#,#,#,#,#,#,"[obj_rock,Instances]",#,#,#,"[obj_rock,Instances]",#,#,#,#,#,#,"[obj_rock,Instances]"
+"[obj_rock,Instances]",#,#,#,#,#,#,"[obj_crate,Instances]",#,#,#,"[obj_crate,Instances]",#,#,#,#,#,#,"[obj_rock,Instances]"
 "[obj_rock,Instances]",#,#,#,#,#,#,"[obj_crate,Instances]",#,#,#,"[obj_rock,Instances]",#,#,#,#,#,#,"[obj_rock,Instances]"
 "[obj_rock,Instances]",#,#,#,"[obj_psnt_body,Instances]",#,#,"[obj_rock,Instances]",#,#,#,"[obj_rock,Instances]",#,#,"[obj_psnt_body,Instances]",#,#,#,"[obj_rock,Instances]"
 "[obj_rock,Instances]",#,#,#,#,#,#,"[obj_rock,Instances]",#,#,#,"[obj_rock,Instances]",#,#,#,#,#,#,"[obj_rock,Instances]"
@@ -20,7 +20,7 @@
 #,"[obj_bat,Instances]",#,"[obj_barrel,Instances]",#,#,#,#,#,#,#,#,#,#,#,"[obj_barrel,Instances]",#,"[obj_bat,Instances]",#
 "[obj_vase,Instances]",#,#,#,#,#,#,#,#,#,#,#,#,#,#,#,#,#,"[obj_vase,Instances]"
 2,,,,,,,,,,,,,,,,,,
-"[obj_slm_cr,Instances]","[obj_rock,Instances]",#,#,#,"[obj_rock,Instances]",#,#,#,"[obj_hspider,Instances]",#,#,#,"[obj_rock,Instances]",#,#,#,"[obj_rock,Instances]","[obj_slm_cr,Instances]"
+"[obj_psnt_body,Instances]","[obj_rock,Instances]",#,#,#,"[obj_rock,Instances]",#,#,#,"[obj_hspider,Instances]",#,#,#,"[obj_rock,Instances]",#,#,#,"[obj_rock,Instances]","[obj_psnt_body,Instances]"
 #,"[obj_rock,Instances]",#,#,#,"[obj_rock,Instances]",#,#,#,#,#,#,#,"[obj_rock,Instances]",#,#,#,"[obj_rock,Instances]",#
 #,"[obj_rock,Instances]",#,#,#,"[obj_rock,Instances]",#,#,#,#,#,#,#,"[obj_rock,Instances]",#,#,#,"[obj_rock,Instances]",#
 #,"[obj_rock,Instances]",#,#,#,"[obj_rock,Instances]",#,#,#,#,#,#,#,"[obj_rock,Instances]",#,#,#,"[obj_rock,Instances]",#

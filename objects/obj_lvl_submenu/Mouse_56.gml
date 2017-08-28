@@ -40,11 +40,21 @@ else if menuPage==4{
             global.selected_block[0]=4
             global.selected_block[1]=i
             global.frozen=false
-            instance_destroy()
+            instance_destroy();
             }
         }
     }
 else if menuPage==5{
+    for(i=1;i<=menuSelected;i+=1;){
+        if menuSelected==i{
+            global.selected_block[0]=5
+            global.selected_block[1]=i
+            global.frozen=false
+            instance_destroy();
+            }
+        }
+    }
+else if menuPage==6{
     for(i=1;i<=menuSelected;i+=1;){
         if menuSelected==i{
             show_debug_message("Level "+string(i));

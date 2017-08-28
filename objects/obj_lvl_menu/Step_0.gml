@@ -17,6 +17,9 @@ else if point_in_rectangle(mouse_x, mouse_y, x+231, y, x+305, y+16){
 else if point_in_rectangle(mouse_x, mouse_y, x+328, y, x+372, y+16){
     menuSelected =5
     }
+else if point_in_rectangle(mouse_x, mouse_y, x+400, y, x+430, y+16){
+    menuSelected =6
+    }
 else{menuSelected =0}
 }
 

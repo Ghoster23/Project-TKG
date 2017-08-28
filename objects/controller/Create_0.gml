@@ -23,6 +23,7 @@ for(i=0;i<9;i+=1){
 
 global.room_file_read=file_text_open_read(working_directory + "roomtype0.csv");
 global.lvl_numrooms=file_text_read_real(global.room_file_read);
+file_text_close(global.room_file_read);
 
 if file_exists(working_directory + "roomtypetemp.csv")==false{
 	scr_loadroom(global.lvl_room_type,global.lvl_room_number);
@@ -32,6 +33,7 @@ else{
 	scr_InitSubMenu();
 	
 	//open file
+	
 	room_file_temp=file_text_open_read(working_directory + "roomtypetemp.csv");
 	
 	//create grid
@@ -92,6 +94,7 @@ else{
 	
 	//close and destroy file
 	file_text_close(room_file_temp);
+	
 	file_delete(working_directory + "roomtypetemp.csv");
 	
 	//read dsgrid and do generation code
@@ -110,7 +113,7 @@ else{
 				obj_name=string_copy(object,2,comma-2);
 			
 				//find the category and subcategory of the obj name in the arra
-				for(var q=1; q<5; q++){
+				for(var q=1; q<6; q++){
 					for(var t=0; t<menuText[q,0]; t++){
 						if menuText[q,t]==obj_name{
 							category=q;

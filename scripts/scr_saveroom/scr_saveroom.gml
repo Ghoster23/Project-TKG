@@ -4,6 +4,7 @@ var room_id = argument1;
 scr_InitSubMenu();
 
 //open the file to read 
+
 global.room_file_read=file_text_open_read(working_directory + "roomtype"+string(roomtype)+".csv");
 
 //determine how to break this up
@@ -33,7 +34,9 @@ while !file_text_eof(global.room_file_read){
 //close the file
 file_text_close(global.room_file_read);
 
+
 //open the correct file to write
+
 global.room_file_write=file_text_open_write(working_directory + "roomtype"+string(roomtype)+".csv");
 
 
@@ -72,4 +75,5 @@ for(i=0;i<9;i++){
 file_text_write_string(global.room_file_write,file_string_2);
 
 //close file
+
 file_text_close(global.room_file_write);

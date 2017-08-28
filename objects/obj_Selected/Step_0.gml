@@ -21,6 +21,10 @@ if mouse_check_button_pressed(mb_left){
 	    sprite_index=spr_traps
 	    image_index=local_selected[1]
 	    break;
+	case(5):
+	    sprite_index=spr_misc
+	    image_index=local_selected[1]
+	    break;
 	}
 
 }

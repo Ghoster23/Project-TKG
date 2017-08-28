@@ -3,7 +3,7 @@
     case 1: // File
         if !instance_exists(obj_lvl_submenu){
             instance_create_layer(x,y+16,"IF",obj_lvl_submenu)
-            obj_lvl_submenu.menuPage=5
+            obj_lvl_submenu.menuPage=6
             global.frozen=true
             }
         break;
@@ -36,7 +36,14 @@
             global.frozen=true
             }
         break;
+		
+	case 6: // Misc
+        if !instance_exists(obj_lvl_submenu){
+            instance_create_layer(x+400,y+16,"IF",obj_lvl_submenu)
+            obj_lvl_submenu.menuPage=5
+            global.frozen=true
+            }
+        break;
     }
 }
    
-

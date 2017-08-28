@@ -27,6 +27,10 @@ if mouse_check_button_pressed(mb_left)==true and point_in_rectangle(mouse_x,mous
         sprite_index=spr_traps
         image_index=block_ID[1]
         }
+	else if block_ID[0]=5{
+        sprite_index=spr_misc
+        image_index=block_ID[1]
+        }
     show_debug_message("self_id: "+string(self_ID))
     show_debug_message("block_id: "+string(block_ID))
 

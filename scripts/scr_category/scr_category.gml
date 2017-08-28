@@ -23,4 +23,8 @@ case(4):
     square.sprite_index=spr_traps
     square.image_index=subcategory
     break;
+case(5):
+    square.sprite_index=spr_misc
+    square.image_index=subcategory
+    break;
 }

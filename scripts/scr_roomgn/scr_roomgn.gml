@@ -25,45 +25,59 @@ switch type{
 		room_file = file_text_open_read(working_directory+"roomtype0.csv");
 		break;
 	case 1:
+		
 		room_file = file_text_open_read(working_directory+"roomtype1.csv");
 		break;
 	case 2:
+		
 		room_file = file_text_open_read(working_directory+"roomtype2.csv");
 		break;
 	case 3:
+		
 		room_file = file_text_open_read(working_directory+"roomtype3.csv");
 		break;
 	case 4:
+		
 		room_file = file_text_open_read(working_directory+"roomtype4.csv");
 		break;
 	case 5:
+		
 		room_file = file_text_open_read(working_directory+"roomtype5.csv");
 		break;
 	case 6:
+		
 		room_file = file_text_open_read(working_directory+"roomtype6.csv");
 		break;
 	case 7:
+		
 		room_file = file_text_open_read(working_directory+"roomtype7.csv");
 		break;
 	case 8:
+		
 		room_file = file_text_open_read(working_directory+"roomtype8.csv");
 		break;
 	case 9:
+		
 		room_file = file_text_open_read(working_directory+"roomtype9.csv");
 		break;
 	case 10:
+		
 		room_file = file_text_open_read(working_directory+"roomtype10.csv");
 		break;
 	case 11:
+		
 		room_file = file_text_open_read(working_directory+"roomtype11.csv");
 		break;
 	case 12:
+		
 		room_file = file_text_open_read(working_directory+"roomtype12.csv");
 		break;
 	case 13:
+		
 		room_file = file_text_open_read(working_directory+"roomtype13.csv");
 		break;
 	case 14:
+		
 		room_file = file_text_open_read(working_directory+"roomtype14.csv");
 		break;
 	//shop rooms
@@ -179,6 +193,7 @@ repeat(9){
 //close the file his job is done :3
 file_text_close(room_file);
 
+
 show_debug_message("type: "+string(type)+" ID: "+string(room_id))
 
 //read dsgrid and do generation code
@@ -202,7 +217,7 @@ for(i=0;i<9;i++){
 			obj_layer=string_copy(object,comma+1,string_length(object)-(comma+1));
 			
 			//determine weather it should have an ofset or not
-			for(var q=1; q<5; q++){
+			for(var q=1; q<6; q++){
 				for(var t=0; t<menuText[q,0]; t++){
 					if menuText[q,t]==obj_name{
 						category=q;

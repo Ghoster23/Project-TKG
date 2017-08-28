@@ -35,8 +35,8 @@ switch global.lvl_room_type{
 }
 
 global.gen = false;
-temp_room_file = file_text_open_read(working_directory+"roomtypetemp.csv");
 
+temp_room_file = file_text_open_read(working_directory+"roomtypetemp.csv");
 global.room_grid = ds_grid_create(19,9);
 
 var j=0, i=0, index, count;
@@ -94,6 +94,7 @@ repeat(9){
 //close the file his job is done :3
 file_text_close(temp_room_file);
 
+
 //read dsgrid and do generation code
 
 for(i=0;i<9;i++){
@@ -115,7 +116,7 @@ for(i=0;i<9;i++){
 			obj_layer=string_copy(object,comma+1,string_length(object)-(comma+1));
 			
 			//determine weather it should have an ofset or not
-			for(var q=1; q<5; q++){
+			for(var q=1; q<6; q++){
 				for(var t=0; t<menuText[q,0]; t++){
 					if menuText[q,t]==obj_name{
 						category=q;

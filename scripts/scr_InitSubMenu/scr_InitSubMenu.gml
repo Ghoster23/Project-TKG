@@ -8,7 +8,7 @@
   menuText[1,3] = "obj_vase"
   menuText[1,4] = "obj_crate"
   menuText[1,5] = "obj_chest"  
-  menuText[1,6] = "Terrain 6"
+  menuText[1,6] = "obj_pit"
   menuText[1,7] = "Terrain 7"
   menuText[1,8] = "Terrain 8"
   menuText[1,9] = "Terrain 9"  
@@ -46,12 +46,23 @@
   menuText[4,8] = "Trap 8"
   menuText[4,9] = "Trap 9" 
   
-  menuText[5,0] = 6;
-  menuText[5,1] = "Level 1"
-  menuText[5,2] = "Level 2"
-  menuText[5,3] = "Level 3"
-  menuText[5,4] = "Level 4"
-  menuText[5,5] = "Level 5"  
-  menuText[5,6] = "Level 6"
+  menuText[5,0] = 9;
+  menuText[5,1] = "obj_pedestal"
+  menuText[5,2] = "Misc 2"
+  menuText[5,3] = "Misc 3"
+  menuText[5,4] = "Misc 4"
+  menuText[5,5] = "Misc 5" 
+  menuText[5,6] = "Misc 6"
+  menuText[5,7] = "Misc 7"
+  menuText[5,8] = "Misc 8"
+  menuText[5,9] = "Misc 9" 
+  
+  menuText[6,0] = 6;
+  menuText[6,1] = "Level 1"
+  menuText[6,2] = "Level 2"
+  menuText[6,3] = "Level 3"
+  menuText[6,4] = "Level 4"
+  menuText[6,5] = "Level 5"  
+  menuText[6,6] = "Level 6"
   
 }
