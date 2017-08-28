@@ -122,6 +122,7 @@
     "origin": 4,
     "playbackSpeed": 0.6,
     "playbackSpeedType": 1,
+    "premultiplyAlpha": false,
     "sepmasks": true,
     "swatchColours": null,
     "swfPrecision": 2.525,
