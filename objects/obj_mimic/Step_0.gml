@@ -49,7 +49,7 @@ if not global.pause {
 	        phy_rotation = 25 * sin(a);
         
 			//Move
-	        scr_define_path(self, obj_body);
+	        scr_define_path(self, global.body);
 			path = global.ai_path;
 			scr_move_enemy(point_direction(x,y,path_get_point_x(path,1),path_get_point_y(path,1)),1);
         

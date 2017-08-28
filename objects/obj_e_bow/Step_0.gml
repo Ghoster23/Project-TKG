@@ -18,7 +18,7 @@ if not global.pause {
 			
 		break;
 		case 2:
-			image_angle = point_direction(x,y,obj_body.x,obj_body.y);
+			image_angle = point_direction(x,y,global.body.x,global.body.y);
 			
 			//atacking
 			if owner.shoot{

@@ -1,7 +1,7 @@
 /// @description decide the state
 if state != 3{   //if not dead decide between state 0 or 1
 	//get dir of player;
-	action_dir=point_direction(x,y,obj_body.x,obj_body.y);
+	action_dir=point_direction(x,y,global.body.x,global.body.y);
 	
 	if (dis >=0 and dis <=80){        //if player is in range
 		if state!=1{		          //and isnt already hiding 

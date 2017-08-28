@@ -9,7 +9,7 @@ if global.pause!=true{
 
 	if place_meeting(x,y,obj_swing){
 		speed=0;
-		dir=point_direction(x,y,obj_body.x,obj_body.y)+180;
+		dir=point_direction(x,y,global.body.x,global.body.y)+180;
 		flash=true;
 		alarm[2]=room_speed*0.06;
 

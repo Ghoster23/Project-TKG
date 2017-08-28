@@ -1,4 +1,4 @@
-if (place_meeting(x,y,obj_swing) or place_meeting(x,y,obj_explosion)){
+if (place_meeting(x,y,obj_swing) or place_meeting(x,y,obj_explosion) or place_meeting(x,y,obj_e_arrow)){
         alarm[0]=0.04*room_speed;
 		//sound
 		scr_sound(snd_hit_vase);

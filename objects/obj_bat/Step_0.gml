@@ -21,7 +21,7 @@ if go and not global.pause{
 		///Chase the player
         case 1:
 			image_speed=1.5;
-            scr_move_enemy(point_direction(x,y,obj_body.x,obj_body.y),1);
+            scr_move_enemy(point_direction(x,y,global.body.x,global.body.y),1);
             
         break;
 		
@@ -67,7 +67,11 @@ if go and not global.pause{
 		case "pause":
 		break;
 	}
-    
+	
+	if state != 3 and place_meeting(x,y,global.body) {
+		scr_damage_player(1);
+	
+	}    
 	
     ///Get Damaged
 	if not damaged and state != 3{

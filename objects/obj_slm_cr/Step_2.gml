@@ -1,7 +1,7 @@
 ///@description Sprite Control
 //Decide which direction to care about
 if state == 1 {
-    var d_ = point_direction(x,y,obj_body.x,obj_body.y);
+    var d_ = point_direction(x,y,global.body.x,global.body.y);
 }else if state == 0{
     var d_ = i_dir;
 }else {

@@ -34,7 +34,7 @@ if go == true and not global.pause {
 	            once = true;
 	        }
         
-	        i_dir = point_direction(x,y,obj_body.x,obj_body.y);
+	        i_dir = point_direction(x,y,global.body.x,global.body.y);
         
 	        hspd = lengthdir_x(6,i_dir);
 	        vspd = lengthdir_y(6,i_dir);
@@ -66,7 +66,7 @@ if go == true and not global.pause {
 	phy_position_y += vspd;
 
 	//Damage the player
-	if(place_meeting(x,y,obj_body) and global.p_inv == false and global.p_hurt == false){
+	if(place_meeting(x,y,global.body) and global.p_inv == false and global.p_hurt == false){
 	    global.p_hp -= global.b_satk div global.p_sdef;
 		global.p_hurt = true;
 	    instance_destroy();

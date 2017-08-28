@@ -14,12 +14,12 @@ if go and not global.pause{
     switch(state){
         case 0:  //Walk around a bit
 			image_speed = 0.4;
-            scr_move_enemy(point_direction(obj_body.x,obj_body.y,x,y),1);
+            scr_move_enemy(point_direction(global.body.x,global.body.y,x,y),1);
             
         break;
         case 1:  //Go towards the player
 			image_speed = 0.4;
-			scr_define_path(self, obj_body);
+			scr_define_path(self, global.body);
 			path = global.ai_path;
             scr_move_enemy(point_direction(x,y,path_get_point_x(path,2),path_get_point_y(path,2)),1);
             

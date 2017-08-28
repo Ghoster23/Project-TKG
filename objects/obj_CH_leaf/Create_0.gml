@@ -1,5 +1,5 @@
-p_x = obj_body.x;
-p_y = obj_body.y;
+p_x = global.body.x;
+p_y = global.body.y;
 once = false;
 go = true;
 des = false;

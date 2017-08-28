@@ -1,6 +1,6 @@
-if(place_meeting(x,y,obj_body) and not global.lock  and not global.d_cd  and obj_view.stopped){
-    tpx = obj_body.x;
-    tpy = (obj_body.y + (32 * 5.5));
+if(place_meeting(x,y,global.body) and not global.lock  and not global.d_cd  and obj_view.stopped){
+    tpx = global.body.x;
+    tpy = (global.body.y + (32 * 5.5));
 	global.current_row++;
     global.d_cd = true;
 	ds_grid_clear(global.fluid_grid,0);
@@ -20,11 +20,11 @@ if(place_meeting(x,y,obj_body) and not global.lock  and not global.d_cd  and obj
         instance_destroy();
     }
     
-    with(obj_sword){
+    with(global.body.weapon){
         instance_destroy();
     }
     
-    with(obj_body){
+    with(global.body){
         instance_destroy();
     }
     
@@ -32,7 +32,7 @@ if(place_meeting(x,y,obj_body) and not global.lock  and not global.d_cd  and obj
         instance_destroy();
     }
     
-   instance_create_layer(tpx,tpy,"Instances",obj_body);
+   instance_create_layer(tpx,tpy,"Instances",global.body);
    
    alarm[1] = 40;
 }

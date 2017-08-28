@@ -4,7 +4,7 @@ if(not instance_exists(creator)){
     instance_destroy();
 }
 
-if(place_meeting(x,y,obj_body) and abs(y - creator.y) < 24){
+if(place_meeting(x,y,global.body) and abs(y - creator.y) < 24){
     if(global.p_inv == false){
         global.p_hp -= 1;
         

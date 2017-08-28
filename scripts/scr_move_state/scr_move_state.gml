@@ -6,7 +6,7 @@ if (dash_key && (right_key == true or left_key == true or up_key == true or down
     state = scr_dash_state;
 	global.p_inv = true;
     alarm[0] = room_speed/3;
-    instance_create_layer(x,y,obj_body.layer,obj_roll);
+    instance_create_layer(x,y,global.body.layer,obj_roll);
 }
 
 // get the axis 

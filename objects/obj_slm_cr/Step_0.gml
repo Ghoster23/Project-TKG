@@ -16,7 +16,7 @@ if go and not global.pause{
             
         break;
         case 1:  //Go after the player
-			scr_define_path(self, obj_body);
+			scr_define_path(self, global.body);
 			path = global.ai_path;
 			scr_move_enemy(point_direction(x,y,path_get_point_x(path,1),path_get_point_y(path,1)),1);
             
@@ -34,6 +34,10 @@ if go and not global.pause{
 		break;
 
     }
+	
+	if state != 2 and place_meeting(x,y,global.body){
+		scr_damage_player(1);
+	}
     
 	//Get damaged
 	if not damaged {
@@ -49,6 +53,7 @@ if go and not global.pause{
 		ds_grid_set_region(global.fluid_grid,(rmx - 16) div 4,(rmy + 3) div 4,(rmx + 15) div 4,(rmy + 14) div 4,30);
 		ds_grid_set_region(global.fluid_grid,((rmx - 16) + 4) div 4,((rmy + 3) - 4) div 4,(rmx + 15 - 4) div 4,(rmy + 14 + 4) div 4,30);
 	}
+	
 }else if go{
 	scr_pause_start(5);
 }

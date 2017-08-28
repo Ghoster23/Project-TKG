@@ -13,8 +13,8 @@ if room == rm_chsl {
 }
 
 ///Create GUI
-if(instance_exists(obj_body) && !instance_exists(obj_gui)){
-    instance_create_layer(obj_body.x-240,obj_body.y-176,"IF",obj_gui);
+if(instance_exists(global.body) && !instance_exists(obj_gui)){
+    instance_create_layer(global.body.x-240,global.body.y-176,"IF",obj_gui);
 }
 
 //Physics toggling for game pausing
@@ -62,9 +62,9 @@ if status_check == true and not global.pause{
 
 ///Current Room
 if room == rm_level{
-    if instance_exists(obj_body){
-        global.current_column = obj_body.x div global.roomwd;
-        global.current_row = obj_body.y div global.roomhg;
+    if instance_exists(global.body){
+        global.current_column = global.body.x div global.roomwd;
+        global.current_row = global.body.y div global.roomhg;
         
     }
 }

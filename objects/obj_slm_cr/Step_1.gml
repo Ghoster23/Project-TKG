@@ -1,5 +1,5 @@
 ///@description Determine distance to player, show hurt and knockback position
-dis = distance_to_object(obj_body);
+dis = distance_to_object(global.body);
 
 /// Enemy States
 if not global.pause and go{

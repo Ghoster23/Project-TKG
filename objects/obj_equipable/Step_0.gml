@@ -1,10 +1,12 @@
 scr_get_input();
 
-if(pedestal.dis && interact_key){
-    instance_destroy();
+if instance_exists(pedestal) {
+	if(pedestal.dis && interact_key){
+	    instance_destroy();
 	
-    global.equiped[select] = true;
+	    global.equiped[select] = true;
 	   
+	}
 }
 
 t = (t + inc) mod 360;

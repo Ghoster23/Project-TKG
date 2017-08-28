@@ -19,13 +19,13 @@ while(confirm == false){
     
 }
 
-if(confirm == true && distance_to_object(obj_body) < 12 && interact_key == true){
+if(confirm == true && distance_to_object(global.body) < 12 && interact_key == true){
     image_speed = 0.3;
 }
 
 if(image_index >= 6){ 
     room_goto(rm_CH_boss);
-    with(obj_body){
+    with(global.body){
         instance_destroy();
     }
     with(obj_gui){

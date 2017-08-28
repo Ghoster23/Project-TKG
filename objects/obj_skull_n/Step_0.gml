@@ -67,22 +67,22 @@ if go == true{
         break;
         case 2:  //Get closer
             //Get hspd and vspd
-            dir = point_direction(x,y,obj_body.x,obj_body.y);
+            dir = point_direction(x,y,global.body.x,global.body.y);
             hspd = lengthdir_x(e_spd,dir);
             vspd = lengthdir_y(e_spd,dir);
             
-            off_x = sign(obj_body.x - x);
-            off_y = sign(obj_body.y - y);
+            off_x = sign(global.body.x - x);
+            off_y = sign(global.body.y - y);
             
         break;
         case 1:  //Run away   
             //Get hspd and vspd
-            dir = point_direction(obj_body.x,obj_body.y,x,y);
+            dir = point_direction(global.body.x,global.body.y,x,y);
             hspd = lengthdir_x(e_spd,dir);
             vspd = lengthdir_y(e_spd,dir);
             
-            off_x = sign(obj_body.x - x);
-            off_y = sign(obj_body.y - y);
+            off_x = sign(global.body.x - x);
+            off_y = sign(global.body.y - y);
 
         break;
     }

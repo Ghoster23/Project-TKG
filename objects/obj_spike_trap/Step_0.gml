@@ -4,7 +4,7 @@ if not global.pause {
 	switch state {
 		//OFF
 		case 0:
-			if instance_exists(obj_body) {
+			if instance_exists(global.body) {
 				if place_meeting(x,y,obj_feet) and alarm[0] == -1{
 					alarm[0] = 0.3 * room_speed;
 					

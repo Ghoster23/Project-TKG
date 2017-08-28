@@ -30,11 +30,11 @@ if not global.pause {
         
 	        ///Falling Rocks
 	        if(alarm[0] > 5 * room_speed and alarm[0] mod 5 == 0){
-	            x_s = obj_body.x - 30;
-	            y_s = obj_body.y - 30;
+	            x_s = global.body.x - 30;
+	            y_s = global.body.y - 30;
             
-	            x_e = obj_body.x + 30;
-	            y_e = obj_body.y + 30;
+	            x_e = global.body.x + 30;
+	            y_e = global.body.y + 30;
             
 	            instance_create_layer(x,y-500,"IF",obj_fln_rock);
 				instance_create_layer(x,y-500,"IF",obj_fln_rock);

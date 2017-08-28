@@ -5,7 +5,7 @@ if not global.pause {
 	if thrust==true{
 		offs=30;
 		image_angle=scr_aproach(image_angle,180,10);
-		y=scr_aproach(y,obj_body.y-20,5);
+		y=scr_aproach(y,global.body.y-20,5);
 		
 	}
 	else{
@@ -29,9 +29,9 @@ if not global.pause {
 			alarm[2]=room_speed*1;
 			image_xscale = 1;
 		    image_yscale = 1;
-			obj_body.spr_side = 1
+			global.body.spr_side = 1
 			obj_head.image_index = 0;
-			obj_body.rotacao = 270;
+			global.body.rotacao = 270;
 			global.st_stuck = true;
 		}
 	}	

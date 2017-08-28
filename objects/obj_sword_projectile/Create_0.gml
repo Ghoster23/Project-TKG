@@ -1,4 +1,4 @@
-dir=point_direction(obj_body.x,obj_body.y,mouse_x,mouse_y);
+dir=point_direction(global.body.x,global.body.y,mouse_x,mouse_y);
 
 phy_rotation=-dir;
 
