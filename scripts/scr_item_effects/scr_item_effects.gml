@@ -45,21 +45,30 @@ switch item {
 		
 	break;
 	case 8: //Sandals of Hermes
+		with global.weapon {
+			instance_destroy();
+		}
+		
 		instance_create_layer(global.body.x,global.body.y,"Instances",obj_body_fl);
 		
 		with global.body {
 			instance_destroy(hands);
 			instance_destroy(head);
-			instance_destroy(weapon);
 			instance_destroy();
 		}
 		
 		global.body = obj_body_fl;
 		global.flight = true;
 		eq_active[item] = true;
-	break;
-	case 9:
 		
+	break;
+	case 9: //Map
+		for(var i = 0; i < 64; i++) {
+			global.ds_roomgrid[# 2, i] = true;
+			
+		}
+		
+		eq_active[item] = true;
 		
 	break;
 	case 10:

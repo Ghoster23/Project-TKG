@@ -99,85 +99,85 @@ while roomgenerated < roomstogenerate{
 					
 					switch typeroom {
 						case 0:
-							if down {
+							if down and not (up or right or left){
 								confirm = true;
 							}
 							
 						break;
 						case 1:
-							if left {
+							if left and not (up or right or down){
 								confirm = true;
 							}
 							
 						break;
 						case 2:
-							if up {
+							if up and not (left or right or down){
 								confirm = true;
 							}
 							
 						break;
 						case 3:
-							if right {
+							if right and not (up or left or down){
 								confirm = true;
 							}
 							
 						break;
 						case 4:
-							if down or right {
+							if down or right and not (up or left){
 								confirm = true;
 							}
 							
 						break;
 						case 5:
-							if down or left{
+							if down or left and not (up or right){
 								confirm = true;
 							}
 							
 						break;
 						case 6:
-							if up or left{
+							if up or left and not (right or down){
 								confirm = true;
 							}
 							
 						break;
 						case 7:
-							if up or right{
+							if up or right and not (left or down){
 								confirm = true;
 							}
 							
 						break;
 						case 8:
-							if left or right{
+							if left or right and not (up or down){
 								confirm = true;
 							}
 							
 						break;
 						case 9:
-							if up or down{
+							if up or down and not (right or left){
 								confirm = true;
 							}
 							
 						break;
 						case 10:
-							if up or down or left{
+							if (up or down or left) and not right{
 								confirm = true;
 							}
 							
 						break;
 						case 11:
-							if up or right or left{
+							if (up or right or left) and not down{
 								confirm = true;
 							}
 							
 						break;
 						case 12:
-							if up or down or right{
+							if (up or down or right) and not left{
 								confirm = true;
 							}
 							
 						break;
 						case 13:
-							if down or right or left{
+							if (down or right or left) and not up{
 								confirm = true;
 							}
 							

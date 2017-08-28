@@ -23,6 +23,7 @@ global.coins = 0;
 
 ///Player Character
 global.body = obj_body;
+global.weapon = obj_sword;
 global.flight = false;
 
 //Player dead
