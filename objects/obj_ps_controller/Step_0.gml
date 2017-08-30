@@ -49,7 +49,7 @@ if surface_exists(global.lighting) and (room != rm_menu_1 and room != rm_menu_2 
             draw_circle(x,y,32,false);
         }
     }
-    
+	
 	///explosion
 	gpu_set_blendmode(bm_subtract);
     draw_set_colour(c_white);
@@ -79,6 +79,7 @@ if surface_exists(global.lighting) and (room != rm_menu_1 and room != rm_menu_2 
 
 if room == rm_dead and once == false{
 once = true;
+
 //Particles
 part_type_destroy(global.pt_vbits);
 part_type_destroy(global.pt_cbits);

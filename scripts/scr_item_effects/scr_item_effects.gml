@@ -71,8 +71,10 @@ switch item {
 		eq_active[item] = true;
 		
 	break;
-	case 10:
+	case 10: //Shield of Zeus
+		instance_create_layer(global.body.x, global.body.y + 32, "IF", obj_shield_of_zeus);
 		
+		eq_active[item] = true;
 		
 	break;
 	case 11:

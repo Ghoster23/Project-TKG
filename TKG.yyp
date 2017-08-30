@@ -2639,6 +2639,14 @@
             }
         },
         {
+            "Key": "919a20e2-8be7-48fd-856b-4f909ad17ce7",
+            "Value": {
+                "id": "3f7772bc-643e-4cac-84fa-64a51c3a8035",
+                "resourcePath": "sprites\\spr_shield_of_zeus\\spr_shield_of_zeus.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "923c2a72-1251-41c2-8a39-4b1f35884795",
             "Value": {
                 "id": "5e3363c1-8b75-4562-ab86-7d7dc5c53a15",
@@ -2932,6 +2940,14 @@
                 "id": "9cbb53ff-2aa8-43d4-b139-b1cca09897b9",
                 "resourcePath": "notes\\compatibility_report_120717_123402342.yy",
                 "resourceType": "GMNotes"
+            }
+        },
+        {
+            "Key": "a2ba5568-7845-42ae-a41e-f4b502caf743",
+            "Value": {
+                "id": "e62349de-e47d-4a06-bdd3-6878190c1be4",
+                "resourcePath": "objects\\obj_shield_of_zeus\\obj_shield_of_zeus.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -3823,6 +3839,14 @@
             }
         },
         {
+            "Key": "d3917285-953e-410f-a26a-30d739c37bbc",
+            "Value": {
+                "id": "8956b0f6-91e9-4bc8-af0a-518d8a9fd139",
+                "resourcePath": "scripts\\scr_circle_movement\\scr_circle_movement.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d3afcea5-fe28-4080-af1c-0757b222a0b7",
             "Value": {
                 "id": "9ef7491e-bcfd-419f-a5aa-90b4ae4a05a0",
@@ -3940,6 +3964,14 @@
                 "id": "d3f87760-915c-41de-b26a-a45de8030b93",
                 "resourcePath": "rooms\\rm_test\\rm_test.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "da00b328-ebba-4422-897b-39ec0cb60efc",
+            "Value": {
+                "id": "0d593982-ee38-4c26-9187-b3970dc148f9",
+                "resourcePath": "objects\\obj_e_projectile_parent\\obj_e_projectile_parent.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -4667,7 +4699,8 @@
         "71cbd4c2-e0d0-4411-81bb-c42f7265fcac",
         "606ac10a-1308-4de1-bd03-3e979a87b3dc",
         "73170cf0-6f47-4a5f-b8f5-448a3a9f67f5",
-        "0cb20a3c-6269-4144-a409-eaf8bad4227a"
+        "0cb20a3c-6269-4144-a409-eaf8bad4227a",
+        "d3917285-953e-410f-a26a-30d739c37bbc"
     ],
     "tutorial": ""
 }

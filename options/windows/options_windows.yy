@@ -3,7 +3,7 @@
     "modelName": "GMWindowsOptions",
     "mvc": "1.0",
     "name": "Windows",
-    "option_windows_allow_fullscreen_switching": false,
+    "option_windows_allow_fullscreen_switching": true,
     "option_windows_borderless": false,
     "option_windows_company_info": "",
     "option_windows_copyright_info": "(c) 2017 Francisco Nicolau and Manuel Correia",
@@ -33,5 +33,5 @@
         "minor": 0,
         "revision": 0
     },
-    "option_windows_vsync": false
+    "option_windows_vsync": true
 }
