@@ -37,3 +37,8 @@ if not global.p_hurt and not global.p_inv and global.p_hp > 0{
 if global.p_hp <= 0 and global.killer == 0{
 	global.killer = object_get_name(object_index);
 }
+
+if instance_exists(obj_crystal_bubble) and obj_crystal_bubble.state == 0 {
+	global.p_inv = false;
+	obj_crystal_bubble.state = 1;
+}

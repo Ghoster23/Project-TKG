@@ -77,8 +77,10 @@ switch item {
 		eq_active[item] = true;
 		
 	break;
-	case 11:
+	case 11: //Crystal Bubble
+		instance_create_layer(global.body.x, global.body.y, "IF", obj_crystal_bubble)
 		
+		eq_active[item] = true;
 		
 	break;
 	case 12:
