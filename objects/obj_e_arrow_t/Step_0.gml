@@ -1,3 +1,4 @@
+
 if not global.pause{
 	scr_pause_end(1);
    

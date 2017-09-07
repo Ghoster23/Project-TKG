@@ -3159,6 +3159,14 @@
             }
         },
         {
+            "Key": "b0c2dd25-12ff-48c9-ab05-5e401dfa10a1",
+            "Value": {
+                "id": "b6c832d3-979f-4653-b3ac-8dc61a837531",
+                "resourcePath": "sprites\\spr_arrow_trap\\spr_arrow_trap.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b0d3815b-859d-46e6-bafb-1a1ef968e76d",
             "Value": {
                 "id": "7bd4c183-ba4e-493d-9ac2-e21a76e463b4",
@@ -3903,6 +3911,14 @@
             }
         },
         {
+            "Key": "d59a387c-f7df-4d7d-8da9-28d0d2113ded",
+            "Value": {
+                "id": "540ee1f0-71de-443a-8517-9fa7bfd199a3",
+                "resourcePath": "sprites\\spr_e_arrow1\\spr_e_arrow1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d5b8497b-35be-4ff7-a11e-74d7ad8ff32b",
             "Value": {
                 "id": "047e296b-e991-4b10-89af-d4d9d87094ac",
@@ -4164,14 +4180,6 @@
                 "id": "661e73f6-2df4-4df7-8c74-58f057cc41cf",
                 "resourcePath": "sounds\\snd_wood_bits3\\snd_wood_bits3.yy",
                 "resourceType": "GMSound"
-            }
-        },
-        {
-            "Key": "e344889c-d99d-4387-8f3b-0ec34135cd5e",
-            "Value": {
-                "id": "5c6b715b-6a2b-4ab4-9626-c2cf38f1a94e",
-                "resourcePath": "scripts\\scr_part_trail_init\\scr_part_trail_init.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -4676,7 +4684,6 @@
         "9eb827e5-22cf-41d7-8372-0b2635a4c902",
         "941795e9-206b-460a-96e2-c26b2e5bab09",
         "6e4b9b9b-a875-4d60-b722-5d5f760d13c6",
-        "e344889c-d99d-4387-8f3b-0ec34135cd5e",
         "17dc5cb1-d401-457e-a792-a8fd7d99d6bb",
         "b683eff3-ec3d-4ae5-a60d-4ebb866416a1",
         "4dc79388-29f4-4bdd-b7b0-3c7116a86638",

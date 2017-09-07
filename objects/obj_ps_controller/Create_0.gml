@@ -22,7 +22,6 @@ scr_part_CHdirt_init();
 scr_part_cbits_init();
 scr_part_vbits_init();    
 scr_part_sflame_init();
-scr_part_trail_init();
 part_system_layer(global.ps,"BH");
 part_system_layer(global.ps_if,"IF");
 

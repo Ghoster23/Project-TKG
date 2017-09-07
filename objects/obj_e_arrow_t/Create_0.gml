@@ -1,5 +1,5 @@
 once = false;
-
+offset=0;
 phy_fixed_rotation = true;
 visible = false;
 

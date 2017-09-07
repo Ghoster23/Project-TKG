@@ -1,7 +1,8 @@
 dir = point_direction(x,y,global.body.x,global.body.y);
+offset=0;
 go = false;
 once = false;
-phy_rotation = dir + 90;
+phy_rotation = dir;
 
 r = 0;
 hspd = 0;
