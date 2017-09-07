@@ -3,7 +3,7 @@
 if not once {
 	dir = creator.dir;
 	
-	phy_rotation = -dir +90;
+	phy_rotation = -dir;
 	visible = true;
 	
 	//Get hspd and vspd

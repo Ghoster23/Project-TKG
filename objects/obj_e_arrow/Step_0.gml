@@ -9,7 +9,7 @@ if not global.pause{
 	    phy_position_x += hspd;
 	    phy_position_y += vspd;
 		
-		phy_rotation = -point_direction(x,y,x + hspd,y + vspd) + 90;
+		phy_rotation = -point_direction(x,y,x + hspd,y + vspd);
 		phy_fixed_rotation = true;
 	}else {
 		image_alpha = alarm[0] / 150;
@@ -28,7 +28,6 @@ if not global.pause{
 		}
 
 		instance_destroy();*/
-		
 		state = 1;
 		layer = layer_get_id("BH");
 		alarm[0] = 5 * room_speed;
