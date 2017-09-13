@@ -19,6 +19,16 @@ if check == true{
 			}
 	
 		break;
+		case "stats":
+			///Close Mini Map and return to Menu
+			if menu_key {
+				state = "menu";
+				check = false;
+				alarm[0] = 0.5 * room_speed;
+		
+			}
+	
+		break;
 		case "mmap":
 			///Close Mini Map and return to Menu
 			if menu_key {

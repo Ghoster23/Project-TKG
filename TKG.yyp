@@ -1871,6 +1871,14 @@
             }
         },
         {
+            "Key": "657859e2-7950-4730-abe8-4664060d8e46",
+            "Value": {
+                "id": "0d32c8aa-372d-41b3-a619-67c03b2b3d56",
+                "resourcePath": "fonts\\font_ig_menu\\font_ig_menu.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "666f1c9b-dcc1-4a6f-a8b3-d5552f894365",
             "Value": {
                 "id": "fb6a0f50-f38e-4516-aef7-6b3b5846bf00",
@@ -2319,6 +2327,14 @@
             }
         },
         {
+            "Key": "7ebc1791-af88-4669-a52b-a735c44bfbd5",
+            "Value": {
+                "id": "8d5e35cb-6a1c-40c2-89ec-881343c2c135",
+                "resourcePath": "sprites\\spr_shield_of_zeus\\spr_shield_of_zeus.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7ec61ed8-87d1-4882-9089-c5668d1129f0",
             "Value": {
                 "id": "fdfa6418-e0db-4178-a6d7-959edf55780c",
@@ -2644,14 +2660,6 @@
                 "id": "3c2d07da-9dd8-4d82-b1d5-83550b134969",
                 "resourcePath": "objects\\obj_menu2_video\\obj_menu2_video.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "919a20e2-8be7-48fd-856b-4f909ad17ce7",
-            "Value": {
-                "id": "3f7772bc-643e-4cac-84fa-64a51c3a8035",
-                "resourcePath": "sprites\\spr_shield_of_zeus\\spr_shield_of_zeus.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
@@ -3596,6 +3604,14 @@
                 "id": "c6d10a74-e4a8-4cf1-8e5b-a11814051ee3",
                 "resourcePath": "sprites\\spr_pedestal\\spr_pedestal.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c4d47286-f16c-4c1e-bc34-1e31a4dc93fe",
+            "Value": {
+                "id": "d08e11f2-ed8d-4f10-9cae-e18de3acad1e",
+                "resourcePath": "scripts\\scr_unique_inst\\scr_unique_inst.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -4723,7 +4739,8 @@
         "606ac10a-1308-4de1-bd03-3e979a87b3dc",
         "73170cf0-6f47-4a5f-b8f5-448a3a9f67f5",
         "0cb20a3c-6269-4144-a409-eaf8bad4227a",
-        "d3917285-953e-410f-a26a-30d739c37bbc"
+        "d3917285-953e-410f-a26a-30d739c37bbc",
+        "c4d47286-f16c-4c1e-bc34-1e31a4dc93fe"
     ],
     "tutorial": ""
 }

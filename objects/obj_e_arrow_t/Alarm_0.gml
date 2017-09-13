@@ -1,2 +1,2 @@
-/// @description Can be destroyed
-des = true;
+/// @description Destroy
+instance_destroy();

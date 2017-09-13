@@ -17,17 +17,6 @@ if not global.pause{
 	}
 	
 	if place_meeting(phy_position_x,phy_position_y,obj_above_ground_parent) and des{
-		/*stuck = instance_create_layer(phy_position_x,phy_position_y,layer,obj_stuck_projectile);
-
-		with stuck {
-			visible = false;
-			sprite_index = spr_e_arrow_stuck;
-			phy_rotation = other.phy_rotation;
-			phy_fixed_rotation = true;
-			visible = true;
-		}
-
-		instance_destroy();*/
 		state = 1;
 		layer = layer_get_id("BH");
 		alarm[0] = 5 * room_speed;

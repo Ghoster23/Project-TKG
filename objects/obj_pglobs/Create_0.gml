@@ -11,6 +11,8 @@ global.gen = false;
 
 global.fallen_items = 0;
 
+global.lock = false;
+
 ///Enemies
 //Active enemies
 global.act_enemies = 0;

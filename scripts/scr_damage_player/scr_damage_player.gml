@@ -5,6 +5,8 @@
 
 var type = argument[0];
 
+var act = false;
+
 if type == 0{
 	var dmg = argument[1];
 	var def = argument[2];
@@ -24,6 +26,7 @@ if not global.p_hurt and not global.p_inv and global.p_hp > 0{
 	}
 	
     global.p_hurt = true;
+	act = true;
 	
 	if global.char == 0 and global.p_will > 0{
 		global.p_will -= 5;
@@ -42,3 +45,5 @@ if instance_exists(obj_crystal_bubble) and obj_crystal_bubble.state == 0 {
 	global.p_inv = false;
 	obj_crystal_bubble.state = 1;
 }
+
+return act;

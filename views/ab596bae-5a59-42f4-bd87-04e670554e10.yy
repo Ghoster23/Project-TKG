@@ -6,7 +6,9 @@
     "children": [
         "0246befb-6681-4b13-887a-bb1dfb7a06d7",
         "c04a1acd-1ee4-43b2-9c49-aee8211ff447",
-        "296cdb55-286e-4d4f-a923-b5c6a01276e2"
+        "296cdb55-286e-4d4f-a923-b5c6a01276e2",
+        "a2ba5568-7845-42ae-a41e-f4b502caf743",
+        "22fdc0c8-d825-42cf-af5a-df584b1fe43a"
     ],
     "filterType": "GMObject",
     "folderName": "Specials",

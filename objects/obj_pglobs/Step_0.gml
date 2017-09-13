@@ -1,5 +1,10 @@
 scr_get_input();
 
+/*if instance_exists(100024) {
+	var i = 100024;
+	show_debug_message(object_get_name(i.object_index));
+}*/
+
 //Stats
 if room == rm_chsl {
 	global.p_maxhp = global.ds_char_stat_grid[# global.char, 0];
@@ -73,7 +78,7 @@ if room == rm_level{
 if not global.pause{
 	switch global.char {
 		case 0:
-			if alarm[3] == -1 and global.act_enemies > 0 and global.p_will < 100{
+			if alarm[3] == -1 and global.lock and global.p_will < 100{
 				alarm[3] = 0.1 * room_speed;
 			}
 		break;
