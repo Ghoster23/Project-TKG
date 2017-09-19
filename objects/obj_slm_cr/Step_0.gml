@@ -1,7 +1,9 @@
 ///Start enemy
 if start and not visible {
     visible = true;
-    
+    if ds_list_find_index(global.act_enemy_list,id) == -1 {
+		ds_list_add(global.act_enemy_list,id);
+	}
     alarm[0] = 1 * room_speed;
 }
 
@@ -26,6 +28,9 @@ if go and not global.pause{
 			 
             if image_index == 5{
 				scr_drops();
+				var pos = ds_list_find_index(global.act_enemy_list,id);
+				show_debug_message(pos);
+				ds_list_delete(global.act_enemy_list,pos);
 				instance_destroy();
             }
 			

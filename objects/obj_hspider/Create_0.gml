@@ -8,6 +8,7 @@ damaged=false;
 go=false;
 start = false;
 moved=false;
+path = 0;
 
 //times
 move_time=0.7;

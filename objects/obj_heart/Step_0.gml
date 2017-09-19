@@ -3,7 +3,10 @@
 scr_fall();
 
 if place_meeting(x,y,global.body) {
-	global.coins++;
+	global.p_hp++;
+	if global.p_hp > global.p_maxhp {
+		global.p_hp = global.p_maxhp;
+	}
 	instance_destroy();
 	
 }

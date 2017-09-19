@@ -11,7 +11,7 @@ if room == rm_level {
 		rw = 67 * m;
 		rh = 35 * m;
 	
-		draw_sprite_ext( spr_minimap, 0, xx, yy, m, m, 0, c_white, 0.6);
+		draw_sprite_ext( spr_minimap, 0, xx, yy, m, m, 0, c_white, 1);
 	
 		///Check all the rooms
 		for(i = 0; i < 64; i++){
@@ -47,8 +47,12 @@ if room == rm_level {
 				if row == global.current_row and col == global.current_column{
 					type = 5;
 				}
-			
-				draw_sprite_ext(spr_mm_rm1, type, xx + 4 * m + col * rw, yy + 4 * m + row * rh, m, m, 0, c_white, 1);
+				
+				if type == 5 and global.char != 0{
+					draw_sprite_ext(spr_mm_rm1, type, xx + 4 * m + col * rw, yy + 4 * m + row * rh, m, m, 0, scr_char_color(), 1);
+				}else {
+					draw_sprite_ext(spr_mm_rm1, type, xx + 4 * m + col * rw, yy + 4 * m + row * rh, m, m, 0, c_white, 1);
+				}
 				
 			///Rooms adjacent to visited rooms that have not been visisted
 			}else if (i - 8 >= 0 and (global.ds_roomgrid[# 2, i - 8] and doors[0] == 1) or 

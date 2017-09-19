@@ -1,6 +1,8 @@
 if start and visible == false{
     visible = true;
-    
+	if ds_list_find_index(global.act_enemy_list,id) == -1 {
+		ds_list_add(global.act_enemy_list,id);
+	}
 	alarm[0]=room_speed*2;
 }
 
@@ -77,6 +79,9 @@ if go and not global.pause{
             }
             
             scr_drops();
+			var pos = ds_list_find_index(global.act_enemy_list,id);
+			show_debug_message(pos);
+			ds_list_delete(global.act_enemy_list,pos);
 			instance_destroy();
 		break;
 		
@@ -95,7 +100,7 @@ if go and not global.pause{
 	
 
 	///Get Damaged
-	if not damaged and not (state == 1 and substate == "hiding"){
+	if not damaged and not state == 1{
 		scr_damage_enemy();
 	}
 

@@ -1,4 +1,3 @@
-/// @description Insert description here
 if window_get_fullscreen() {
 	if room == rm_menu_1 or room == rm_menu_2 or room == rm_chsl or room== rm_lvl_editor{
 		draw_sprite_ext(spr_cursor,0,x * (display_get_gui_width() / room_width),y * (display_get_gui_height() / room_height),display_get_gui_width() / room_width, display_get_gui_height() / room_height,0,c_white,1);

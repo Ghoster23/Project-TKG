@@ -1,9 +1,12 @@
 /// @description decide the state
 if state != 3{   //if not dead decide between state 0 or 1
 	//get dir of player;
-	action_dir=point_direction(x,y,global.body.x,global.body.y);
+	scr_define_path(self, global.body);
+	path = global.ai_path;
+	action_dir=point_direction(x,y,path_get_point_x(global.ai_path,1),path_get_point_y(global.ai_path,1));
 	
-	if (dis >=0 and dis <=80){        //if player is in range
+	if (dis >= 0 and dis < 128) and not collision_line(x,y,global.body.x,global.body.y,obj_solid_parent,false,true)
+	and not collision_line(x,y,global.body.x,global.body.y,obj_below_ground_parent,false,true){        //if player is in range
 		if state!=1{		          //and isnt already hiding 
 			state = 1;				
 			substate="hiding";        //hide
@@ -15,7 +18,7 @@ if state != 3{   //if not dead decide between state 0 or 1
 
     }
 	else{					          //if player is not in range
-		if state == 1{				  //and spider is hiding
+		if state == 1 and distance_to_object(obj_bomb_hs) > 96 {				  //and spider is hiding
 			image_speed=0;	          
 			state = 2;                //come out
 			substate="nothing";		  //reset substate

@@ -1,5 +1,5 @@
 event_inherited();
-dir=obj_hspider.player_dir;
+dir = (instance_nearest(x,y,obj_hspider)).player_dir;
 impact = false;
 explode = false;
 physics_apply_impulse(x, y, lengthdir_x(10, dir ),lengthdir_y(10, dir ));

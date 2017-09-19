@@ -123,37 +123,37 @@ while roomgenerated < roomstogenerate{
 							
 						break;
 						case 4:
-							if down or right and not (up or left){
+							if (down or right) and not (up or left){
 								confirm = true;
 							}
 							
 						break;
 						case 5:
-							if down or left and not (up or right){
+							if (down or left) and not (up or right){
 								confirm = true;
 							}
 							
 						break;
 						case 6:
-							if up or left and not (right or down){
+							if (up or left) and not (right or down){
 								confirm = true;
 							}
 							
 						break;
 						case 7:
-							if up or right and not (left or down){
+							if (up or right) and not (left or down){
 								confirm = true;
 							}
 							
 						break;
 						case 8:
-							if left or right and not (up or down){
+							if (left or right) and not (up or down){
 								confirm = true;
 							}
 							
 						break;
 						case 9:
-							if up or down and not (right or left){
+							if (up or down) and not (right or left){
 								confirm = true;
 							}
 							
@@ -203,19 +203,11 @@ while roomgenerated < roomstogenerate{
 		        ///Register the room
 				global.ds_roomgrid[# 1, room_] = typeroom;
 				
+				show_debug_message(up);
+				show_debug_message(left);
+				show_debug_message(down);
+				show_debug_message(right);
 				scr_roomgn(typeroom);
-				
-				/*if typeroom < 15 {
-					scr_roomgn(irandom_range(0,10),gx,gy);
-				}else if typeroom == 15 {
-					scr_roomgn(irandom_range(11,14),gx,gy);
-				}else if typeroom == 16 {
-					scr_roomgn(irandom_range(15,16),gx,gy);
-				}else if typeroom == 17 {
-					scr_roomgn(irandom_range(17,19),gx,gy);
-				}else {
-					scr_roomgn(50,gx,gy);
-				}*/
             
 		        ///Doors for normal rooms
 				if typeroom < 15{
