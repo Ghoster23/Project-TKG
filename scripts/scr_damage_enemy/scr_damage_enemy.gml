@@ -17,14 +17,22 @@ satk_cooldown[0] = 0.4;
 ///Enemy/Object on Enemy attacks
 //Physical attacks
 e_wep[0] = obj_explosion;
+e_wep[1] = obj_e_arrow_t;
+e_wep[2] = obj_fl_spikes;
+e_wep[3] = obj_fl_spikes_alt;
+e_wep[4] = obj_spike_trap;
 
 //Other attacks cooldown - Physical
 e_wep_cd[0] = 1;
+e_wep_cd[1] = 0.2;
+e_wep_cd[2] = 0.2;
+e_wep_cd[3] = 0.2;
+e_wep_cd[4] = 0.2;
 
-//Physical attacks
+//Magical attacks
 e_swep[0] = "None";
 
-//Other attacks cooldown - Physical
+//Other attacks cooldown - Magical
 e_swep_cd[0] = 0;
 
 //Check for physical attack from player
@@ -52,17 +60,17 @@ if type == 404{
 
 //Check for physical attacks from enemies/objects
 if type == 404{
-	for(k = 0; k < 1; k++){
+	for(k = 0; k < 5; k++){
 		obj = e_wep[k];
 
-		if place_meeting(x,y,obj){
+		if place_meeting(x,y,obj) and not(object_is_ancestor(self, obj_flying_enemy_parent) and (k == 2 or k == 3)){
 			type = 2;
 			break;
 		}
 	}
 }
 
-//Check for physical attacks from enemies/objects
+//Check for Magical attacks from enemies/objects
 if type == 404{
 	for(l = 0; l < 1; l++){
 		obj = e_swep[l];

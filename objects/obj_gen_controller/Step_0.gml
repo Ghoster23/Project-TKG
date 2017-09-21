@@ -203,10 +203,6 @@ while roomgenerated < roomstogenerate{
 		        ///Register the room
 				global.ds_roomgrid[# 1, room_] = typeroom;
 				
-				show_debug_message(up);
-				show_debug_message(left);
-				show_debug_message(down);
-				show_debug_message(right);
 				scr_roomgn(typeroom);
             
 		        ///Doors for normal rooms
