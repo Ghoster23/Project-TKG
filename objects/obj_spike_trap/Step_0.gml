@@ -5,7 +5,7 @@ if not global.pause {
 		//OFF
 		case 0:
 			if instance_exists(global.body) {
-				if place_meeting(x,y,obj_feet) and alarm[0] == -1{
+				if (place_meeting(x,y,obj_feet) or place_meeting(x,y,obj_enemy_parent)) and alarm[0] == -1{
 					alarm[0] = 0.3 * room_speed;
 					
 				}

@@ -2,6 +2,8 @@ event_inherited();
 
 state = 0;
 
+e_atk = 15;
+
 offset = true;
 offs = -12;
 

@@ -9,7 +9,7 @@ atk_wep[0] = obj_swing;
 atk_cooldown[0] = 0.2;
 
 //Magical attacks
-satk_wep[0] = obj_sword_projectile_impact;
+satk_wep[0] = obj_sword_projectile;
 
 //Magical cooldowns
 satk_cooldown[0] = 0.4;
@@ -91,6 +91,10 @@ switch type {
 		var d = point_direction(obj.x,obj.y,x,y);
 		
 		physics_apply_impulse(x,y,lengthdir_x(10,d),lengthdir_y(10,d));
+		
+		if obj == obj_swing {
+			global.p_will += 2.5;
+		}
 		
 		alarm[0] = atk_cooldown[i] * room_speed;
 		

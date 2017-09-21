@@ -1,8 +1,15 @@
-dir=point_direction(global.body.x,global.body.y,mouse_x,mouse_y);
+dir=global.body.rotacao;
 
-phy_rotation=-dir;
+phy_rotation=-dir + 90;
 
-image_speed = 0.6;
+image_speed = 1.1;
+
+alarm[0] = 6 * room_speed;
+
+scale = global.p_will / 100;
+
+image_xscale = scale + 1;
+image_yscale = scale + 1;
 
 hspd = 0;
 vspd = 0;
