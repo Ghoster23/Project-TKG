@@ -1,11 +1,13 @@
-if global.n_room and obj_view.stopped{
-	global.n_room = false;
+if (room == rm_level and obj_view.stopped) or room != rm_level {
+	if global.n_room{
+		global.n_room = false;
 	
-	enemy = obj_enemy_parent;
-	scr_get_active_enemies();
-	enemy = obj_flying_enemy_parent;
-	scr_get_active_enemies();
+		enemy = obj_enemy_parent;
+		scr_get_active_enemies();
+		enemy = obj_flying_enemy_parent;
+		scr_get_active_enemies();
 	
+	}
 }
 
 if ds_list_size(global.act_enemy_list) == 0 {
