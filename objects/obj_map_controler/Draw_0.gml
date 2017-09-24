@@ -1,4 +1,5 @@
 //draw_path(path_boat2, path_boat1.x, path_boat1.y, true);
+//draw_path(path_boat1, path_boat1.x, path_boat1.y, true);
 
 if ds_exists(ds_menumapgrid, ds_type_grid) {
     var mapgrid = ds_menumapgrid;
