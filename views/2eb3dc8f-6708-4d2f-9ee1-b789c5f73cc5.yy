@@ -19,7 +19,10 @@
         "10888766-b279-4624-aa63-bdbb8230c4f4",
         "4d3d251b-7943-4047-b039-392acdacc821",
         "72f93568-9143-41da-ad48-acadd04b8d69",
-        "1db9db96-debb-450d-b0dd-2eb603875692"
+        "1db9db96-debb-450d-b0dd-2eb603875692",
+        "008beee9-fa63-4847-a219-5a34d2431f67",
+        "262de46e-53c4-40a9-a9f4-86832f98c817",
+        "47d105c5-def8-43b3-9731-f129dd9c78a5"
     ],
     "filterType": "GMSprite",
     "folderName": "things for map",

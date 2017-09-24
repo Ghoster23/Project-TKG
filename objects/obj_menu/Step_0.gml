@@ -5,13 +5,13 @@ switch state{
 
 	case "play":
 		if !instance_exists(obj_pointer){
-			instance_create_layer(303,214,"Instances",obj_pointer);
+			instance_create_layer(303,267,"Instances",obj_pointer);
 		}
 		else{
 		obj_pointer.x=303;
-		obj_pointer.y=214;
+		obj_pointer.y=267;
 		}
-		if (attack_key and point_in_rectangle(mouse_x,mouse_y,268,207,372,224)) or enter_key{
+		if (attack_key and point_in_rectangle(mouse_x,mouse_y,305,258,342,275)) or enter_key{
 			alarm[0]=room_speed*0.2;
 		}
 		if a_down{
@@ -24,13 +24,13 @@ switch state{
 	
 	case "options":
 		if !instance_exists(obj_pointer){
-			instance_create_layer(291,245,"Instances",obj_pointer);
+			instance_create_layer(291,298,"Instances",obj_pointer);
 		}
 		else{
 		obj_pointer.x=291;
-		obj_pointer.y=245;
+		obj_pointer.y=298;
 		}
-		if (attack_key and point_in_rectangle(mouse_x,mouse_y,257,238,383,255)) or enter_key{
+		if (attack_key and point_in_rectangle(mouse_x,mouse_y,294,289,354,306)) or enter_key{
 			alarm[1]=room_speed*0.2;
 		}
 		if a_down{
@@ -43,13 +43,13 @@ switch state{
 	
 	case "quit":
 		if !instance_exists(obj_pointer){
-			instance_create_layer(303,278,"Instances",obj_pointer);
+			instance_create_layer(303,331,"Instances",obj_pointer);
 		}
 		else{
 		obj_pointer.x=303;
-		obj_pointer.y=278;
+		obj_pointer.y=331;
 		}
-		if (attack_key and point_in_rectangle(mouse_x,mouse_y,245,270,395,287)) or enter_key{
+		if (attack_key and point_in_rectangle(mouse_x,mouse_y,304,323,338,337)) or enter_key{
 			alarm[2]=room_speed*0.2;
 		}
 		if a_down{
@@ -63,12 +63,12 @@ switch state{
 }
 
 
-if point_in_rectangle(mouse_x,mouse_y,268,207,372,224){
+if point_in_rectangle(mouse_x,mouse_y,305,258,342,275){
 	state="play";
 }
-if point_in_rectangle(mouse_x,mouse_y,257,238,383,255){
+if point_in_rectangle(mouse_x,mouse_y,294,289,354,306){
 	state="options";
 }
-if point_in_rectangle(mouse_x,mouse_y,245,270,395,287){
+if point_in_rectangle(mouse_x,mouse_y,304,323,338,337){
 	state="quit";
 }
