@@ -44,6 +44,7 @@ if go and not global.pause{
 			ds_list_delete(global.act_enemy_list,pos);
 			instance_destroy(tell);
 			instance_destroy(bow);
+			global.kld_enemies += 1;
 			instance_destroy();
 			
 		break;

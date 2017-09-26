@@ -41,7 +41,7 @@ if global.st_stuck {
 draw_sprite_ext(spr_coin,0,yy + 4 * m,xx + 8 * m,m,m,0,c_white,1);
 draw_set_font(font_chsl_tags);
 draw_text_ext_transformed( yy + 20 * m, xx + 8 * m, string(global.coins), 2 * m, 16 * m, m, m, 0);
-draw_text_ext_transformed( yy + 40 * m, xx + 8 * m, string(global.act_enemies), 2 * m, 16 * m, m, m, 0);
+
 draw_text_ext_transformed( yy + 50 * m, xx + 8 * m, string(global.kld_enemies), 2 * m, 16 * m, m, m, 0);
 
 ///Character specific
@@ -52,10 +52,14 @@ switch global.char {
 		}
 		
 		draw_sprite_ext(spr_sword_of_will,0,62 *m,55 *m,m,m,0,c_white,1);
-		draw_set_color(c_blue);
-		draw_rectangle(92 * m, 68 * m, (92 + (68 * o_v/100)) * m, 73 * m, false);
-		draw_set_color(c_white);
-		draw_rectangle(92 * m, 68 * m, (92 + (68 * global.p_will/100)) * m, 73 * m, false);
+		
+		for(i = 0; i < o_v div 10; i += 1){
+			draw_sprite_ext(spr_sow_pip,0,(93 + i * 7)*m,67*m,m,m,0,c_blue,1);
+		}
+		
+		for(i = 0; i < global.p_will div 10; i += 1){
+			draw_sprite_ext(spr_sow_pip,0,(93 + i * 7)*m,67*m,m,m,0,c_white,1);
+		}
 		
 		if o_v > global.p_will{
 			o_v -= 0.5;

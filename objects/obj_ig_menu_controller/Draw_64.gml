@@ -112,7 +112,7 @@ switch state{
 		var pip = stats[0] div 4;
 		
 		for(var i = 0; i < pip; i++){
-			draw_sprite_ext(spr_pip,0,display_get_gui_width() / 2 - 83 * m * s, (263 - 7 * i * s) * m,m*s,m*s,0,col,1);
+			draw_sprite_ext(spr_pip,0,display_get_gui_width() / 2 - 83 * m * s, (295 - 7 * i * s) * m,m*s,m*s,0,col,1);
 			
 		}
 		
@@ -120,7 +120,7 @@ switch state{
 		var pip = stats[1] div 2;
 		
 		for(var i = 0; i < pip; i++){
-			draw_sprite_ext(spr_pip,0,display_get_gui_width() / 2 - 51 * m * s, (263 - 7 * i * s) * m,m*s,m*s,0,col,1);
+			draw_sprite_ext(spr_pip,0,display_get_gui_width() / 2 - 51 * m * s, (295 - 7 * i * s) * m,m*s,m*s,0,col,1);
 			
 		}
 		
@@ -128,7 +128,7 @@ switch state{
 		var pip = stats[2] div 2;
 		
 		for(var i = 0; i < pip; i++){
-			draw_sprite_ext(spr_pip,0,display_get_gui_width() / 2 - 19 * m * s, (263 - 7 * i *s) * m,m*s,m*s,0,col,1);
+			draw_sprite_ext(spr_pip,0,display_get_gui_width() / 2 - 19 * m * s, (295 - 7 * i *s) * m,m*s,m*s,0,col,1);
 			
 		}
 		
@@ -136,7 +136,7 @@ switch state{
 		var pip = stats[3] div 2;
 		
 		for(var i = 0; i < pip; i++){
-			draw_sprite_ext(spr_pip,0,display_get_gui_width() / 2 + 13 * m * s, (263 - 7 * i * s) * m,m*s,m*s,0,col,1);
+			draw_sprite_ext(spr_pip,0,display_get_gui_width() / 2 + 13 * m * s, (295 - 7 * i * s) * m,m*s,m*s,0,col,1);
 			
 		}
 		
@@ -144,7 +144,7 @@ switch state{
 		var pip = stats[4] div 2;
 		
 		for(var i = 0; i < pip; i++){
-			draw_sprite_ext(spr_pip,0,display_get_gui_width() / 2 + 45 * m * s, (263 - 7 * i * s) * m,m*s,m*s,0,col,1);
+			draw_sprite_ext(spr_pip,0,display_get_gui_width() / 2 + 45 * m * s, (295 - 7 * i * s) * m,m*s,m*s,0,col,1);
 			
 		}
 		
@@ -152,7 +152,7 @@ switch state{
 		var pip = stats[5] - 2;
 		
 		for(var i = 0; i < pip; i++){
-			draw_sprite_ext(spr_pip,0,display_get_gui_width() / 2 + 77 * m * s, (263 - 7 * i * s) * m,m*s,m*s,0,col,1);
+			draw_sprite_ext(spr_pip,0,display_get_gui_width() / 2 + 77 * m * s, (295 - 7 * i * s) * m,m*s,m*s,0,col,1);
 			
 		}
 		

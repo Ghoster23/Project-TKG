@@ -1,4 +1,0 @@
-{
-dir_change = true;
-}
-
