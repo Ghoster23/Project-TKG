@@ -1,2 +1,0 @@
-skull.state = 1;
-

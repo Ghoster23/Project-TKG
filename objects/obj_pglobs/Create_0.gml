@@ -15,7 +15,6 @@ global.lock = false;
 
 ///Enemies
 //Active enemies
-global.act_enemies = 0;
 global.kld_enemies = 0;
 
 global.killer = 0;

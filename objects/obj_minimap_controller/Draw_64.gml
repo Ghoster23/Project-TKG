@@ -11,7 +11,7 @@ if room == rm_level {
 		rw = 67 * m;
 		rh = 35 * m;
 	
-		draw_sprite_ext( spr_minimap, 0, xx, yy, m, m, 0, c_white, 1);
+		draw_sprite_ext( spr_minimap, 0, xx-4, yy-4, m, m, 0, c_white, 1);
 	
 		///Check all the rooms
 		for(i = 0; i < 64; i++){

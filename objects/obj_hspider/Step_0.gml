@@ -82,6 +82,7 @@ if go and not global.pause{
 			var pos = ds_list_find_index(global.act_enemy_list,id);
 			show_debug_message(pos);
 			ds_list_delete(global.act_enemy_list,pos);
+			global.kld_enemies += 1;
 			instance_destroy();
 		break;
 		
@@ -92,8 +93,6 @@ if go and not global.pause{
 	
 	///Die
     if(e_hp <= 0) and state != 3{
-        global.act_enemies -= 1;
-		global.kld_enemies += 1;
         state = 3;
         
     }
