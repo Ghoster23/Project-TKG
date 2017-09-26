@@ -1,5 +1,5 @@
 //Draw the surface
-if surface_exists(global.lighting) and (room != rm_menu_1 and room != rm_menu_2 and room != rm_chsl and room != rm_dead and room != rm_lvl_editor){
+if surface_exists(global.lighting) and (room != rm_menu_1 and room != rm_chsl and room != rm_dead and room != rm_lvl_editor){
     surface_set_target(global.lighting);
     
     //Make it dark
@@ -68,7 +68,7 @@ if surface_exists(global.lighting) and (room != rm_menu_1 and room != rm_menu_2 
     draw_set_alpha(1);
     surface_reset_target();
     
-}else if room != rm_menu_1 and room != rm_menu_2 and room != rm_chsl and room != rm_dead{
+}else if room != rm_menu_1 and room != rm_chsl and room != rm_dead{
     global.lighting = surface_create(room_width,room_height);
     
     surface_set_target(global.lighting);

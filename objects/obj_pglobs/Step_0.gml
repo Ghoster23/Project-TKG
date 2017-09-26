@@ -23,7 +23,7 @@ if(instance_exists(global.body) && !instance_exists(obj_gui)){
 }
 
 //Physics toggling for game pausing
-if room != rm_menu_1 and room != rm_menu_2 and room != rm_chsl and room != rm_dead{
+if room != rm_menu_1 and room != rm_chsl and room != rm_dead{
 	if global.pause {
 		physics_pause_enable(true);
 	}else {
