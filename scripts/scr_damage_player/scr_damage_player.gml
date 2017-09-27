@@ -28,13 +28,6 @@ if not global.p_hurt and not global.p_inv and global.p_hp > 0{
     global.p_hurt = true;
 	act = true;
 	
-	if global.char == 0 and global.p_will > 0{
-		global.p_will -= 5;
-		
-		if global.p_will < 0{
-			global.p_will = 0;
-		}
-	}
 }
 
 if global.p_hp <= 0 and global.killer == 0{

@@ -53,6 +53,10 @@ switch global.char {
 		
 		draw_sprite_ext(spr_sword_of_will,0,62 *m,55 *m,m,m,0,c_white,1);
 		
+		for(i = 0; i < 10; i += 1){
+			draw_sprite_ext(spr_sow_pip,0,(93 + i * 7)*m,67*m,m,m,0,c_dkgray,1);
+		}
+		
 		for(i = 0; i < o_v div 10; i += 1){
 			draw_sprite_ext(spr_sow_pip,0,(93 + i * 7)*m,67*m,m,m,0,c_blue,1);
 		}
