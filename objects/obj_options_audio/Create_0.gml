@@ -3,13 +3,13 @@ scr_unique_inst();
 state="master";
 m = display_get_gui_width() / global.roomwd;
 c = surface_get_width(application_surface)/2;
-off = 96;
+off = 86;
 image_speed=0.5;
 
 
 //audio
-audio_width = string_width_ext("Audio",2,12)*m;
-audio_height = string_height_ext("Audio",2,12)*m; 
+audio_width = string_width_ext("Audio Options",2,200)*m;
+audio_height = string_height_ext("Audio Options",2,200)*m; 
 audio_x1 = c-((audio_width)/2);
 audio_y1 = (off) * m
 audio_x2 = audio_x1 + audio_width;
