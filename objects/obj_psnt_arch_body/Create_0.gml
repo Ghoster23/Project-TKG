@@ -10,6 +10,7 @@ flash = false;
 cr_cd = false;
 cd_arrow = false;
 damaged = false;
+stun = false;
 
 shoot = false;
 go = false;
@@ -56,6 +57,6 @@ offset_y = 0;
 hspd = 0;
 vspd = 0;
 
-for(i = 0; i < 6; i += 1){	
+for(i = 0; i < 7; i += 1){	
 	alarms[i] = -1;
 }

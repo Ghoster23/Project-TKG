@@ -10,7 +10,7 @@ if start and not visible {
 if go and not global.pause{
     visible = true;
 	
-	scr_pause_end(6);
+	scr_pause_end(7);
     
     ///Enemy Behaevior
     switch(state){
@@ -48,7 +48,8 @@ if go and not global.pause{
 			instance_destroy();
 			
 		break;
-		case "pause":
+		case "stun":
+			image_blend = c_teal;
 		break;
 	}
     
@@ -62,6 +63,7 @@ if go and not global.pause{
     ///Get Damaged
 	if not damaged {
 		scr_damage_enemy();
+		
 	}
 	
 	if hspd == 0 and vspd == 0{
@@ -69,5 +71,5 @@ if go and not global.pause{
 	}
 	
 }else if go{
-	scr_pause_start(6);
+	scr_pause_start(7);
 }

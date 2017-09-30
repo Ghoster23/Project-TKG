@@ -8,7 +8,7 @@ if start and visible == false{
 
 ///Exist
 if go and not global.pause{
-    scr_pause_end(6);
+    scr_pause_end(7);
 	
 	if swing == true{
 		image_speed = 0;
@@ -56,7 +56,7 @@ if go and not global.pause{
 			global.kld_enemies += 1;
 			instance_destroy();
 		
-		case "pause":
+		case "stun":
 		break;
 	}
     
@@ -67,5 +67,5 @@ if go and not global.pause{
 	}
 	
 }else if go{
-	scr_pause_start(6);	
+	scr_pause_start(7);	
 }

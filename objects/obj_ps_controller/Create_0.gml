@@ -1,4 +1,5 @@
 application_surface_draw_enable(false);
+scr_unique_inst();
 
 //Start
 global.MonitorW = display_get_width();

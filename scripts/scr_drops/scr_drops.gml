@@ -1,9 +1,15 @@
 ///@description Spawn drops
 randomize();
 
-if((irandom(99) + 1) <= 10){
+chance = irandom(99) + 1;
+
+if(chance <= 10){
 	instance_create_layer(x,y,"IF",obj_heart);
               
-}else if (irandom(99) + 1) <= 40{
+}else if chance <= 60{
 	instance_create_layer(x,y,"IF",obj_coin);
+	
+}else if chance <= 90{
+	instance_create_layer(x,y,"IF",obj_potion);
+	
 }

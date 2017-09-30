@@ -42,6 +42,7 @@ for(i = 0; i < 1; i++){
 	if place_meeting(x,y,obj){
 		type = 0;
 		break;
+		
 	}
 	
 }
@@ -63,8 +64,18 @@ if type == 404{
 	for(k = 0; k < 5; k++){
 		obj = e_wep[k];
 
-		if place_meeting(x,y,obj) and not(object_is_ancestor(self, obj_flying_enemy_parent) and (k == 2 or k == 3)){
-			type = 2;
+		if place_meeting(x,y,obj){
+			switch obj {
+				default:
+					type = 2;
+				break;
+				case obj_fl_spikes:
+				case obj_fl_spikes_alt:
+					if obj.state == 1 and not object_is_ancestor(self.object_index,obj_flying_enemy_parent){ 
+						type = 2;
+					}
+				break;
+			}
 			break;
 		}
 	}
@@ -86,7 +97,6 @@ if type == 404{
 switch type {
 	case 0: //Physical attacks
 		e_hp -= global.p_atk div e_def;
-		damaged = true;
 		
 		var d = point_direction(obj.x,obj.y,x,y);
 		
@@ -101,21 +111,18 @@ switch type {
 	break;
 	case 1: //Speacil attacks
 		e_hp -= global.p_satk div e_sdef;
-		damaged = true;
 		
 		alarm[0] = satk_cooldown[j] * room_speed;
 		
 	break;
 	case 2:
 		e_hp -= e_wep[k].e_atk div e_def;
-		damaged = true;
 		
 		alarm[0] = e_wep_cd[k] * room_speed;
 		
 	break;
 	case 3:
 		e_hp -= e_wep[l].e_satk div e_sdef;
-		damaged = true;
 		
 		alarm[0] = e_swep_cd[l] * room_speed;
 		
@@ -127,7 +134,14 @@ switch type {
 if type != 404{
 	//Activate flash
 	flash = true;
+	damaged = true;
 	
+	if self.object_index == obj_psnt_body or self.object_index == obj_psnt_arch_body {
+		state = "stun";
+		alarm[6] = 0.6 * room_speed;
+		scr_alarms_pause(6);
+		
+	} 
 	
 	global.shake = 2;
 	

@@ -1,5 +1,6 @@
 //set all the diferent volumes, this will be done
 //by loading a file later on
+scr_unique_inst();
 
 global.masterVolume=1;
 global.musicVolume=1;

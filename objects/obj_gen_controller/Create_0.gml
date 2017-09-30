@@ -1,3 +1,4 @@
+scr_unique_inst();
 global.gen = true;
 once = false;
 

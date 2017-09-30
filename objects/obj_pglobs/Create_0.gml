@@ -1,4 +1,6 @@
 ///Game
+scr_unique_inst();
+
 //Game pause
 global.pause = false;
 
@@ -54,7 +56,6 @@ global.p_spd = global.ds_char_stat_grid[# global.char, 5];
 global.dash_cd = false;
 
 //Equipables
-    ///Spawned
     for(var i = 0; i < 16; i++){
 		///Spawned
 		global.equipable[i] = false;
@@ -66,6 +67,10 @@ global.dash_cd = false;
 	    eq_active[i] = false;
 	    
 	}
+	
+///Potion
+global.potion[0] = 0;
+global.potion[1] = c_white;
 
 //Statuses
 status_check = true;
