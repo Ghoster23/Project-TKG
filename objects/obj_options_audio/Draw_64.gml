@@ -14,7 +14,8 @@ draw_set_alpha(1);
 //draw the text
 draw_set_halign(fa_center);
 draw_set_color(c_white);
-draw_text_ext_transformed(c, audio_y1,"Audio",2,12,m,m,0);
+draw_text_ext_transformed(c, audio_y1,"Audio Options",2,200,m,m,0);
+draw_line_width(audio_x1,audio_y2,audio_x2,audio_y2,2*m);
 //draw_rectangle(audio_x1,audio_y1,audio_x2,audio_y2,true);
 
 mastervolume=scr_volume("a",global.masterVolume);
