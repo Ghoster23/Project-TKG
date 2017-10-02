@@ -5,6 +5,8 @@ if distance_to_object(global.body) <= 32 and interact_key{
 		global.potion[0] = image_index;
 		global.potion[1] = color;
 		
+		instance_destroy();
+		
 	}else {
 		var l = image_index;
 		var c = color;

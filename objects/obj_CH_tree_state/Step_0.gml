@@ -138,9 +138,9 @@ if not global.pause {
 				instance_destroy();
 			}
 			
-			if global.st_stuck == true{
-				global.st_stuck = false;
-				global.st_stuck_d = 0;
+			if global.st_stuck != 0{
+				global.st_stuck = 0;
+				
 			}
 	
 			while instance_exists(obj_CH_root){

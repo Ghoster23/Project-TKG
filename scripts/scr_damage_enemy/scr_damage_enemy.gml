@@ -91,6 +91,9 @@ if type == 404{
 			break;
 		}
 	}
+}else if obj_potion_controller.alarm[2] != -1{
+	type = 4;
+	obj_potion_controller.alarm[2] = -1;
 }
 
 //Apply damage
@@ -126,6 +129,9 @@ switch type {
 		
 		alarm[0] = e_swep_cd[l] * room_speed;
 		
+	break;
+	case 4:
+		e_hp = 0;
 	break;
 	case 404:
 	break;

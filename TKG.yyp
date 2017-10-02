@@ -4215,6 +4215,14 @@
             }
         },
         {
+            "Key": "e0dd5a0f-57ed-436b-b5e8-0ff3612279ae",
+            "Value": {
+                "id": "a6aa8ce4-85a0-4655-9458-3aacc2e64ae1",
+                "resourcePath": "scripts\\scr_player_status_check\\scr_player_status_check.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e15fd4b7-758e-456f-a73e-059db7900ce1",
             "Value": {
                 "id": "d967db31-27b4-42ec-b632-ce9bf91d214b",
@@ -4695,6 +4703,14 @@
             }
         },
         {
+            "Key": "fa59d357-1768-430a-93e0-d55ce44c9282",
+            "Value": {
+                "id": "c5650478-0fba-4af7-809e-015b6ba33654",
+                "resourcePath": "objects\\obj_potion_controller\\obj_potion_controller.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "fa758400-0950-4c4d-873c-51747877d442",
             "Value": {
                 "id": "3cdd9649-8b4e-4a77-827c-8309e598684c",
@@ -4784,6 +4800,7 @@
         "8f012420-c873-40fc-abb6-9f67a06f250f",
         "4a88cae2-8926-4855-bded-8c1d4e904562",
         "e790be6c-bbdb-41c2-a846-9fe50e54dc5a",
+        "e0dd5a0f-57ed-436b-b5e8-0ff3612279ae",
         "bbadc0d7-a5fe-4e5e-965b-a09a76020ddc",
         "bb1b1a3b-40ab-4126-8e8a-672ae3679613",
         "8c6637f8-a10d-41da-9bd5-80beeb161e5d",
