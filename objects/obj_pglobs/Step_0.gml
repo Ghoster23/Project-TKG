@@ -42,24 +42,12 @@ for(var i = 0; i < 16; i++){
 ///Statuses
 if status_check == true and not global.pause{
 	//Poisoned
-    if global.st_poison == true and global.st_poison_d > 0{
-        global.p_hp -= 1;
-        global.st_poison_d -= 3;
-        
-        if global.st_poison_d <= 0{
-            global.st_poison = false;
-			global.st_poison_d = 0;
-        }
-    }
+    scr_player_status_check("st_poison");
     
 	//Stuck
-    if global.st_stuck == true{
-    
-        if global.st_stuck_d <= 0{
-            global.st_stuck = false;
-			global.st_stuck = 0;
-        }
-    }
+	
+	//Regen
+	scr_player_status_check("st_regen");
         
     status_check = false;
     alarm[1] = 1 * room_speed;

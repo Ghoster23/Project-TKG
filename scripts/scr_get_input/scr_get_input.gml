@@ -7,6 +7,7 @@ dash_key = keyboard_check(vk_shift);
 attack_key = mouse_check_button(mb_left);    
 mouse_r_key = mouse_check_button(mb_right);  
 interact_key = keyboard_check(ord("F"));
+potion_key = keyboard_check(ord("R"));
 debug_key = keyboard_check(ord("Ç"));
 menu_key = keyboard_check_released(vk_escape);
 mmap_key = keyboard_check(ord("M"));

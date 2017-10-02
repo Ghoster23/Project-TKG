@@ -74,14 +74,15 @@ global.potion[1] = c_white;
 
 //Statuses
 status_check = true;
-global.st_poison = false;
-global.st_stuck = false;
 
-global.p_hurt = false;
+///Positive
+	global.st_regen = 0;
+	
+///Negative
+	global.st_poison = 0;
+	global.st_stuck = 0;
 
-///Status duration
-global.st_poison_d = 0;
-global.st_stuck_d = 0;
+	global.p_hurt = false;
 
 ///Player Character body sprites
 global.char_bsprs[0,0] = spr_body_up;
