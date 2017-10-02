@@ -113,7 +113,11 @@ switch type {
 		
 	break;
 	case 1: //Speacil attacks
-		e_hp -= global.p_satk div e_sdef;
+		if obj != obj_sword_projectile {
+			e_hp -= global.p_satk div e_sdef;
+		}else {
+			e_hp -= global.p_satk * global.p_will div e_sdef;
+		}
 		
 		alarm[0] = satk_cooldown[j] * room_speed;
 		
@@ -144,7 +148,7 @@ if type != 404{
 	
 	if self.object_index == obj_psnt_body or self.object_index == obj_psnt_arch_body {
 		state = "stun";
-		alarm[6] = 0.6 * room_speed;
+		alarm[6] = 0.8 * room_speed;
 		scr_alarms_pause(6);
 		
 	} 
