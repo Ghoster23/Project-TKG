@@ -1119,6 +1119,14 @@
             }
         },
         {
+            "Key": "36fbc842-5238-4571-b51c-f28b828d9960",
+            "Value": {
+                "id": "fbfa8280-c3b0-40b5-a129-6536919f098e",
+                "resourcePath": "datafiles_yy\\saveoptions.ini.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "377cc7fd-3812-440d-ab59-5637c46a746d",
             "Value": {
                 "id": "665b8498-86a0-4bf0-8b77-1cc911cdd60d",
@@ -1354,7 +1362,7 @@
             "Key": "44d6cab3-4de8-43eb-a40c-84b7e35355ec",
             "Value": {
                 "id": "ea313749-61bd-467a-b3bd-f9ae4fff7e2a",
-                "resourcePath": "objects\\obj_sound_controller\\obj_sound_controller.yy",
+                "resourcePath": "objects\\obj_options_save\\obj_options_save.yy",
                 "resourceType": "GMObject"
             }
         },

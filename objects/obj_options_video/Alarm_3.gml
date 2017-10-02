@@ -1,14 +1,14 @@
 /// @description particles
-switch particles_state{
+switch global.particles{
 				case "none":
-					particles_state="low";
+					global.particles="low";
 				break;
 	
 				case "low":
-					particles_state="normal"
+					global.particles="normal"
 				break;
 	
 				case "normal":
-					particles_state="none";
+					global.particles="none";
 				break;
 			}

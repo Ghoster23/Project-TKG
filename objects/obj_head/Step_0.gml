@@ -33,7 +33,7 @@ if instance_exists(obj_torch){
 		}
 		//handle the falloff
 		var vol = (distan_max - distan)/distan;
-		audio_sound_gain(snd_torch,vol,0)
+		audio_sound_gain(snd_torch,vol*global.ambientVolume,0)
 	
 	}
 }

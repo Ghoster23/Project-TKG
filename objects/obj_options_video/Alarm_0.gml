@@ -1,8 +1,8 @@
 ///@description fullscreen
 
-if fullscreen_state == "ON"{
-				fullscreen_state = "OFF";
+if global.fullscreen == "ON"{
+				global.fullscreen = "OFF";
 			}
 			else {
-				fullscreen_state = "ON";
+				global.fullscreen = "ON";
 			}

@@ -1,14 +1,14 @@
 /// @description text scroll speed
-switch textscroll_state{
+switch global.textscroll{
 				case "low":
-					textscroll_state="normal";
+					global.textscroll="normal";
 				break;
 	
 				case "normal":
-					textscroll_state="high"
+					global.textscroll="high"
 				break;
 	
 				case "high":
-					textscroll_state="low";
+					global.textscroll="low";
 				break;
 			}
