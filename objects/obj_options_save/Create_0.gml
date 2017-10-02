@@ -41,6 +41,13 @@ else{
 	ini_close();
 }
 
+if global.fullscreen=="OFF"{
+	window_set_size(global.MonitorW,global.MonitorW);
+	window_set_position(0, 0);
+	window_center();
+	window_set_fullscreen(false);
+}
+
 show_debug_message("sound create code ran");
 //set master volume gain
 audio_master_gain(global.masterVolume);

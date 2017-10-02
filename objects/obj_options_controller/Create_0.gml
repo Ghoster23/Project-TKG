@@ -1,5 +1,12 @@
 scr_unique_inst();
 
+if global.fullscreen=="ON"{
+	window_set_fullscreen(true);
+}
+else{
+	window_set_fullscreen(false);
+}
+
 state="audio";
 m = display_get_gui_width() / global.roomwd;
 c = surface_get_width(application_surface)/2;
