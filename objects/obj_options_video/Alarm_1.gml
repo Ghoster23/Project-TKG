@@ -1,19 +1,19 @@
 /// @description screenshake
 
-switch screenshake_state{
+switch global.screenshake{
 	case "none":
-		screenshake_state="low";
+		global.screenshake="low";
 	break;
 	
 	case "low":
-		screenshake_state="normal"
+		global.screenshake="normal"
 	break;
 	
 	case "normal":
-		screenshake_state="high";
+		global.screenshake="high";
 	break;
 	
 	case "high":
-		screenshake_state="none"
+		global.screenshake="none"
 	break;
 }

@@ -27,21 +27,21 @@ switch state{
 	
 	case "screenshake":
 		if a_left{
-			switch screenshake_state{
+			switch global.screenshake{
 				case "none":
-					screenshake_state="high";
+					global.screenshake="high";
 				break;
 	
 				case "low":
-					screenshake_state="none"
+					global.screenshake="none"
 				break;
 	
 				case "normal":
-					screenshake_state="low";
+					global.screenshake="low";
 				break;
 	
 				case "high":
-					screenshake_state="normal"
+					global.screenshake="normal"
 				break;
 			}
 		}
@@ -58,17 +58,17 @@ switch state{
 	
 	case "textscroll":
 		if a_left{
-			switch textscroll_state{
+			switch global.textscroll{
 				case "low":
-					textscroll_state="high";
+					global.textscroll="high";
 				break;
 	
 				case "normal":
-					textscroll_state="low"
+					global.textscroll="low"
 				break;
 	
 				case "high":
-					textscroll_state="normal";
+					global.textscroll="normal";
 				break;
 			}
 		}
@@ -85,17 +85,17 @@ switch state{
 	
 	case "particles":
 		if a_left{
-			switch particles_state{
+			switch global.particles{
 				case "none":
-					particles_state="normal";
+					global.particles="normal";
 				break;
 	
 				case "low":
-					particles_state="none"
+					global.particles="none"
 				break;
 	
 				case "normal":
-					particles_state="low";
+					global.particles="low";
 				break;
 			}
 		}

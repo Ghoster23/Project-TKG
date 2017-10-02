@@ -21,7 +21,7 @@ fullscreen_y1 = (off+32) * m
 fullscreen_x2 = fullscreen_x1 + fullscreen_width;
 fullscreen_y2 = fullscreen_y1+ fullscreen_height;
 
-fullscreen_state="ON"; //-ON -OFF
+//fullscreen_state=global.fullscreen; //-ON -OFF
 
 //screenshake
 screenshake_width = string_width_ext("Screen shake",2,200)*m;
@@ -31,7 +31,7 @@ screenshake_y1 = (off+32+40) * m
 screenshake_x2 = screenshake_x1 + screenshake_width;
 screenshake_y2 = screenshake_y1+ screenshake_height;
 
-screenshake_state="normal" //-none -low -normal -high
+//screenshake_state=global.screenshake; //-none -low -normal -high
 
 //text scroll
 textscroll_width = string_width_ext("Text Scroll",2,200)*m;
@@ -41,7 +41,7 @@ textscroll_y1 = (off+32+40+40) * m
 textscroll_x2 = textscroll_x1 + textscroll_width;
 textscroll_y2 = textscroll_y1+ textscroll_height;
 
-textscroll_state="normal" //-low -normal -high
+//textscroll_state=global.textscroll; //-low -normal -high
 
 //particles
 particles_width = string_width_ext("Particles",2,200)*m;
@@ -51,4 +51,4 @@ particles_y1 = (off+32+40+40+40) * m
 particles_x2 = particles_x1 + particles_width;
 particles_y2 = particles_y1+ particles_height;
 
-particles_state="normal" //-none -low -normal
+//particles_state=global.particles//-none -low -normal

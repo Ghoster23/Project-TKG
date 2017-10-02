@@ -24,7 +24,7 @@ draw_text_ext_transformed(c, fullscreen_y1,"Fullscreen",2,200,m,m,0);
 
 draw_set_font(font_chsl_tags);
 draw_set_alpha(0.6);
-draw_text_ext_transformed(c, fullscreen_y2 + 5, fullscreen_state, 2,200,m,m,0);
+draw_text_ext_transformed(c, fullscreen_y2 + 5, global.fullscreen, 2,200,m,m,0);
 draw_set_font(font_ig_menu);
 draw_set_alpha(1);
 //draw_rectangle(fullscreen_x1,fullscreen_y1,fullscreen_x2,fullscreen_y2,true);
@@ -35,7 +35,7 @@ draw_text_ext_transformed(c, screenshake_y1,"Screen Shake",2,200,m,m,0);
 
 draw_set_font(font_chsl_tags);
 draw_set_alpha(0.6);
-draw_text_ext_transformed(c, screenshake_y2 + 5, screenshake_state, 2,200,m,m,0);
+draw_text_ext_transformed(c, screenshake_y2 + 5, global.screenshake, 2,200,m,m,0);
 draw_set_font(font_ig_menu);
 draw_set_alpha(1);
 //draw_rectangle(screenshake_x1,screenshake_y1,screenshake_x2,screenshake_y2,true);
@@ -47,7 +47,7 @@ draw_text_ext_transformed(c, textscroll_y1,"Text Scroll",2,200,m,m,0);
 
 draw_set_font(font_chsl_tags);
 draw_set_alpha(0.6);
-draw_text_ext_transformed(c, textscroll_y2 + 5, textscroll_state, 2,200,m,m,0);
+draw_text_ext_transformed(c, textscroll_y2 + 5, global.textscroll, 2,200,m,m,0);
 draw_set_font(font_ig_menu);
 draw_set_alpha(1);
 
@@ -58,7 +58,7 @@ draw_text_ext_transformed(c, particles_y1,"Particles",2,200,m,m,0);
 
 draw_set_font(font_chsl_tags);
 draw_set_alpha(0.6);
-draw_text_ext_transformed(c, particles_y2 + 5, particles_state, 2,200,m,m,0);
+draw_text_ext_transformed(c, particles_y2 + 5, global.particles, 2,200,m,m,0);
 draw_set_font(font_ig_menu);
 draw_set_alpha(1);
 
