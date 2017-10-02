@@ -1,4 +1,6 @@
 /// @description Initialize vars
+scr_unique_inst();
+
 //Current room
 global.current_row = 4;
 global.current_column = 4;

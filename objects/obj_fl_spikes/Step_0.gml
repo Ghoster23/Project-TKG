@@ -12,12 +12,12 @@ if not global.pause {
 		}
 		
 	}else if state == 1{
-		if image_index <= 7 {
+		if image_index <= 4 {
 			image_speed = 3;
 		
 		}else {
 			image_speed = 0;
-			image_index = 8;
+			image_index = 5;
 			
 			if place_meeting(x,y,obj_feet) {
 				scr_damage_player(0,1,1);

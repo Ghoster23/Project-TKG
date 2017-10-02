@@ -1,4 +1,6 @@
 /// @description Create grid and variables
+scr_unique_inst();
+
 pr_type = 0;
 type = 0;
 val = 0;

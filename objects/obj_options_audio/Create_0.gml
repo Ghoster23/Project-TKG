@@ -1,3 +1,5 @@
+scr_unique_inst();
+
 state="master";
 m = display_get_gui_width() / global.roomwd;
 c = surface_get_width(application_surface)/2;

@@ -4,7 +4,7 @@ if not global.pause{
 	dir = point_direction(x,y,global.body.x,global.body.y);
 
 	/// Enemy States
-	if state != 3 and not swing and alarm[2] == -1{
+	if state != 3 and not swing and alarm[2] == -1 and state != "stun"{
 	    if 30 < dis < 200{
 			image_speed = 0.4;
 	        state = 1;
