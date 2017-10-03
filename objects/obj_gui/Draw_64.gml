@@ -44,6 +44,55 @@ draw_text_ext_transformed( yy + 20 * m, xx + 8 * m, string(global.coins), 2 * m,
 
 draw_text_ext_transformed( yy + 50 * m, xx + 8 * m, string(global.kld_enemies), 2 * m, 16 * m, m, m, 0);
 
+///Draw Carried Potion
+if global.potion[1] != c_white {
+	draw_sprite_ext(spr_potion_flask,global.potion[0],yy + 5*m,xx + 40 * m,m,m,0,c_white,1);
+	draw_sprite_ext(spr_potion_fluid,global.potion[0],yy + 5*m,xx + 40 * m,m,m,0,global.potion[1],1);
+	
+}else {
+	draw_sprite_ext(spr_potion_flask,0,yy + 5*m,xx + 40 * m,m,m,0,c_white,1);
+}
+
+///Draw Potion Name
+if n_potion {
+	var name = 0;
+	
+	switch global.potion[1] {
+		case c_red:
+			name = "Elixir of Life";
+		break;
+		case c_yellow:
+			name = "Mida's Favourite";
+		break;
+		case c_teal:
+			name = "Crystal Clear";
+		break;
+		case c_fuchsia:
+			name = "Nightshade Juice";
+		break;
+		case c_purple:
+			name = "Immunaization of the Void";
+		break;
+		case c_navy:
+			name = "Compass Concoction";
+		break;
+		case c_orange:
+			name = "Mango Brew";
+		break;
+	}
+	
+	if name != 0 {
+		draw_set_alpha(alarm[0] / (3 * room_speed));
+		draw_text_transformed(display_get_gui_width()/2,256,name,m*1.5,m*1.5,0);
+		draw_set_alpha(1);
+	}
+	
+	if alarm[0] == -1 {
+		alarm[0] = 3 * room_speed;
+	}
+	
+}
+
 ///Character specific
 switch global.char {
 	case 0:

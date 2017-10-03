@@ -1,6 +1,6 @@
 scr_get_input();
 
-if distance_to_object(global.body) <= 32 and interact_key{
+if distance_to_object(global.body) <= 8 and interact_key{
 	if global.potion[1] == c_white {
 		global.potion[0] = image_index;
 		global.potion[1] = color;
@@ -18,4 +18,6 @@ if distance_to_object(global.body) <= 32 and interact_key{
 		global.potion[1] = c;
 		
 	}
+	
+	obj_gui.n_potion = true;
 }
