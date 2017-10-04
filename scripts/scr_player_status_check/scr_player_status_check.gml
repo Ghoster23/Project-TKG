@@ -18,14 +18,20 @@ switch status{
 	case "st_stuck":
 	break;
 	case "st_regen":
-		if global.st_regen and global.p_hp <= global.p_maxhp{
-			global.p_hp += 1;
+		if global.st_regen {
+			if global.p_hp <= global.p_maxhp {
+				global.p_hp += 1;
+			}
+			
 			global.st_regen -= 1;
+			
 		}
 		
 		if global.st_regen < 0 {
 			global.st_regen = 0;
 		}
+		
+		show_debug_message(global.st_regen);
 	break;
 }
 }

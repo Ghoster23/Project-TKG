@@ -1,9 +1,9 @@
 randomize();
+event_inherited();
 image_speed = 0;
 image_index = irandom_range(0,3);
 
 type = irandom_range(0,60);
-duration = 0;
 
 if(type < 30){
 	//Elixir of Life - Regen

@@ -3,7 +3,7 @@ scr_get_input();
 if potion_key and global.potion[1] != c_white{
 	switch global.potion[1] {
 		case c_red:
-			global.st_regen = 4 * image_index;
+			global.st_regen = 4 * global.potion[0];
 		break;
 		case c_yellow:
 			alarm[0] = 15 * room_speed * image_index;
