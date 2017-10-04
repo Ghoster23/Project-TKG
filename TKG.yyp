@@ -359,6 +359,14 @@
             }
         },
         {
+            "Key": "11b3a6c3-40db-425c-8016-2c996ff554d9",
+            "Value": {
+                "id": "a9e76872-5a69-4b6b-a093-d9b24ff200cf",
+                "resourcePath": "objects\\obj_options_controls\\obj_options_controls.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "128c9b40-bb69-4998-8946-72170d49ece7",
             "Value": {
                 "id": "741664e4-608f-4da6-9dc4-452b3f147970",
@@ -412,6 +420,14 @@
                 "id": "2d5d164a-f9a8-4c32-a076-07eeb65b8990",
                 "resourcePath": "sprites\\spr_sword1\\spr_sword1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "161b4ddc-68e0-4b4a-9baa-aa45c1af3dc4",
+            "Value": {
+                "id": "b088a911-6cce-45ed-b3d1-e9d6e79fba6f",
+                "resourcePath": "scripts\\scr_keyname\\scr_keyname.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1116,14 +1132,6 @@
                 "id": "0eb6991f-ef11-4691-a815-4ad4eb0978c4",
                 "resourcePath": "scripts\\scr_get_active_enemies\\scr_get_active_enemies.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "36fbc842-5238-4571-b51c-f28b828d9960",
-            "Value": {
-                "id": "fbfa8280-c3b0-40b5-a129-6536919f098e",
-                "resourcePath": "datafiles_yy\\saveoptions.ini.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -4818,6 +4826,7 @@
         "35e4e20a-84b4-47e5-8966-538eee98483f",
         "31655573-06fa-4766-988e-0de279a78b7e",
         "063a1891-e073-4594-8f5d-a53fe1f1a34b",
+        "161b4ddc-68e0-4b4a-9baa-aa45c1af3dc4",
         "77dfd3e2-4088-4c09-9919-9ca49dd0ac52",
         "c8585593-156b-4eb9-9361-431a110ba32d",
         "31c00a38-d4df-4221-93d0-4bfde00c4bb4",
