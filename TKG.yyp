@@ -1023,14 +1023,6 @@
             }
         },
         {
-            "Key": "31655573-06fa-4766-988e-0de279a78b7e",
-            "Value": {
-                "id": "e2249a4c-bcd2-466a-bce5-b81ddfe294e4",
-                "resourcePath": "scripts\\scr_get_input\\scr_get_input.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "31b001b5-b659-44dc-8c29-b3e713610a4c",
             "Value": {
                 "id": "86f84634-574c-46f8-9997-d3db7e4c012c",
@@ -1300,6 +1292,14 @@
                 "id": "5a22c852-9355-456e-83d2-c601fe0b7cda",
                 "resourcePath": "sprites\\spr_birds\\spr_birds.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "432dfd92-babd-4b1e-bca4-9db76f53ab4a",
+            "Value": {
+                "id": "4f7611f5-6400-43af-8c18-6ac9d48e21df",
+                "resourcePath": "scripts\\scr_get_input\\scr_get_input.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -3863,6 +3863,14 @@
             }
         },
         {
+            "Key": "ce4b4c78-19ab-49d7-9eec-273e7085983e",
+            "Value": {
+                "id": "6435aeac-b760-45f1-bba2-d7c22853a03a",
+                "resourcePath": "scripts\\scr_keybind\\scr_keybind.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "cf578cb3-00c2-4187-9219-a07394930cb6",
             "Value": {
                 "id": "8f5677ad-9110-4ed1-bb1e-c96e188653fb",
@@ -4824,9 +4832,10 @@
         "40646ae1-0b2d-4e0f-88a8-cca303cf5446",
         "818c35bc-1af7-456a-bcf0-45b2573d1467",
         "35e4e20a-84b4-47e5-8966-538eee98483f",
-        "31655573-06fa-4766-988e-0de279a78b7e",
         "063a1891-e073-4594-8f5d-a53fe1f1a34b",
         "161b4ddc-68e0-4b4a-9baa-aa45c1af3dc4",
+        "ce4b4c78-19ab-49d7-9eec-273e7085983e",
+        "432dfd92-babd-4b1e-bca4-9db76f53ab4a",
         "77dfd3e2-4088-4c09-9919-9ca49dd0ac52",
         "c8585593-156b-4eb9-9361-431a110ba32d",
         "31c00a38-d4df-4221-93d0-4bfde00c4bb4",

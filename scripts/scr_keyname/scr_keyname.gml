@@ -36,7 +36,7 @@ if argument0 = (vk_enter)
 //Escape
 if argument0 = (vk_escape)
 {
-    return "Escape";
+    return "Esc";
 }
 
 //Space
@@ -46,19 +46,19 @@ if argument0 = (vk_space)
 }
 
 //Shift
-if argument0 = (vk_shift)
+if argument0 = (vk_shift) or argument0 = (vk_lshift) or argument0 = (vk_rshift)
 {
     return "Shift";
 }
 
 //Control
-if argument0 = (vk_control)
+if argument0 = (vk_control) or argument0 = (vk_rcontrol) or argument0 = (vk_lcontrol)
 {
     return "Control";
 }
 
 //Alt
-if argument0 = (vk_alt)
+if argument0 = (vk_alt) or argument0 = (vk_ralt) or argument0 = (vk_lalt)
 {
     return "Alt";
 }
@@ -283,6 +283,18 @@ if argument0 = (vk_subtract)
 if argument0 = (vk_decimal)
 {
     return "Decimal";
+}
+
+if argument0 == (mb_left){
+	return "Mouse 1";
+}
+
+if argument0 == (mb_right){
+	return "Mouse 2";
+}
+
+if argument0 == (mb_middle){
+	return "Mouse 3";
 }
 
 // Printable characters.

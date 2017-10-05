@@ -1,10 +1,12 @@
 state="up_key";
+vis=true;
+alarm[1]=0.6*room_speed;
 
 m = display_get_gui_width() / global.roomwd;
 c = surface_get_width(application_surface)/2;
 c1= (c*10/18);
 c2 = c +(c/18);
-ic1=c-(c/18)
+ic1=c-(2*c/18)
 ic2=c+(8*c/18)
 off = 96;
 sep=28;
@@ -125,3 +127,11 @@ menu_key_x1 = c2;
 menu_key_y1 = (off+sep*6) * m
 menu_key_x2 = menu_key_x1 + menu_key_width;
 menu_key_y2 = menu_key_y1+ menu_key_height;
+
+//reset
+reset_width = string_width_ext("Reset Controls",2,200)*m;
+reset_height = string_height_ext("Reset Controls",2,200)*m; 
+reset_x1 = c2;
+reset_y1 = (off+sep*7) * m
+reset_x2 =reset_x1 + reset_width;
+reset_y2 = reset_y1+ reset_height;
