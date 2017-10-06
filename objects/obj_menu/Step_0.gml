@@ -11,7 +11,7 @@ switch state{
 		obj_pointer.x=303;
 		obj_pointer.y=267;
 		}
-		if (attack_key and point_in_rectangle(mouse_x,mouse_y,305,258,342,275)) or enter_key{
+		if (mouse_click and point_in_rectangle(mouse_x,mouse_y,305,258,342,275)) or enter_key{
 			alarm[0]=room_speed*0.2;
 		}
 		if a_down{
@@ -30,7 +30,7 @@ switch state{
 		obj_pointer.x=291;
 		obj_pointer.y=298;
 		}
-		if (attack_key and point_in_rectangle(mouse_x,mouse_y,294,289,354,306)) or enter_key{
+		if (mouse_click and point_in_rectangle(mouse_x,mouse_y,294,289,354,306)) or enter_key{
 			alarm[1]=room_speed*0.2;
 		}
 		if a_down{
@@ -49,7 +49,7 @@ switch state{
 		obj_pointer.x=303;
 		obj_pointer.y=331;
 		}
-		if (attack_key and point_in_rectangle(mouse_x,mouse_y,304,323,338,337)) or enter_key{
+		if (mouse_click and point_in_rectangle(mouse_x,mouse_y,304,323,338,337)) or enter_key{
 			alarm[2]=room_speed*0.2;
 		}
 		if a_down{

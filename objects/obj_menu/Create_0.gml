@@ -10,5 +10,3 @@ state="play";
 posx1=mouse_x
 posy1=mouse_y
 
-
-

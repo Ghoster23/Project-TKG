@@ -6,12 +6,12 @@ mousey = display_mouse_get_y();
 //show_debug_message("x "+string(mousex));
 //show_debug_message("y "+string(mousey));
 
-if menu_key or (point_in_rectangle(mousex,mousey,c-17*m,creatures_y1+creatures_height+18*m,c+17*m,creatures_y1+creatures_height+28*m) and attack_key){
+if menu_key or (point_in_rectangle(mousex,mousey,c-17*m,creatures_y1+creatures_height+18*m,c+17*m,creatures_y1+creatures_height+28*m) and mouse_click){
 	instance_create_layer(x,y,layer,obj_options_controller);
 	instance_destroy();
 }
 
-if attack_key{
+if mouse_click{
 	offx=c-63*m;
 	
 	if mousex > offx+0 and mousex <offx+7*m{

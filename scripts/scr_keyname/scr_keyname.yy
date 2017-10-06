@@ -1,8 +1,8 @@
 {
-    "id": "432dfd92-babd-4b1e-bca4-9db76f53ab4a",
+    "id": "161b4ddc-68e0-4b4a-9baa-aa45c1af3dc4",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scr_get_input",
+    "name": "scr_keyname",
     "IsCompatibility": false,
     "IsDnD": false
 }
