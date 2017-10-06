@@ -8,7 +8,36 @@ if distance_to_object(global.body) < 24 {
 		
 		switch sprite_index{
 			case spr_heart:
+				global.p_hp += image_index;
 				
+				if global.p_hp > global.p_maxhp {
+					global.p_hp = global.p_maxhp;
+				}
+				
+				instance_destroy();
+				
+			break;
+			case spr_potion_flask:
+				if global.potion[1] == c_white {
+					global.potion[0] = image_index;
+					global.potion[1] = color;
+		
+					
+		
+				}else {
+					var l = image_index;
+					var c = color;
+		
+					image_index = global.potion[0];
+					color = global.potion[1];
+		
+					global.potion[0] = l;
+					global.potion[1] = c;
+		
+				}
+				
+				instance_destroy();
+				obj_gui.n_potion = true;
 			break;
 		}
     

@@ -30,8 +30,6 @@ switch status{
 		if global.st_regen < 0 {
 			global.st_regen = 0;
 		}
-		
-		show_debug_message(global.st_regen);
 	break;
 }
 }

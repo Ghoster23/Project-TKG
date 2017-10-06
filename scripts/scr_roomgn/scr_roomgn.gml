@@ -82,11 +82,9 @@ switch type{
 		break;
 	//shop rooms
 	case 15:
-		instance_create_layer(gx+256,gy+160,"Instances",obj_vase);
-	    instance_create_layer(gx+128,gy+224,"Instances",obj_vase);
-	    instance_create_layer(gx+192,gy+224,"Instances",obj_chest);
-	    instance_create_layer(gx+384,gy+224,"Instances",obj_vase);
-	    instance_create_layer(gx+256,gy+288,"Instances",obj_vase);
+		instance_create_layer(gx+(roomwd/2)-16-64,gy-16+(roomhg/2),"Instances",obj_sell_drop);
+		instance_create_layer(gx+(roomwd/2)-16,gy-16+(roomhg/2),"Instances",obj_sell_drop);
+		instance_create_layer(gx+(roomwd/2)-16+64,gy-16+(roomhg/2),"Instances",obj_sell_drop);
 		exit;
 		break;
 	//item room

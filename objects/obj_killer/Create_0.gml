@@ -18,4 +18,7 @@ switch global.killer {
 	case "spr_bomb" :
 		sprite_index = spr_hspider_walk;
 	break;
+	default:
+		sprite_index = spr_melee_tell;
+	break;
 }  

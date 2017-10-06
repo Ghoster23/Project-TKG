@@ -23,6 +23,7 @@ global.killer = 0;
 
 //Coins
 global.coins = 0;
+global.total_coins = 0;
 
 ///Player Character
 global.body = obj_body;

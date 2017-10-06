@@ -519,6 +519,14 @@
             }
         },
         {
+            "Key": "199c9f62-c621-4af8-8282-c560a0133861",
+            "Value": {
+                "id": "0889fb49-9510-4e44-a21e-75e93ed7bd96",
+                "resourcePath": "sprites\\spr_tattered\\spr_tattered.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "199e42e3-bf9b-4fc3-836b-c8db8c95951f",
             "Value": {
                 "id": "34d0cf1a-e999-4bee-a4ee-0c7ce9562cb6",
@@ -1983,6 +1991,14 @@
             }
         },
         {
+            "Key": "69979dcf-3f00-4d31-80d0-bc657f878a28",
+            "Value": {
+                "id": "9be29033-5f6d-4c24-9796-2e536d3df3c6",
+                "resourcePath": "sprites\\spr_fallen_wep\\spr_fallen_wep.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "69a48308-92bf-4295-9e31-16a78bf977bf",
             "Value": {
                 "id": "2cb9f0cf-46f4-4eca-a122-8fbf8f766607",
@@ -2019,6 +2035,14 @@
             "Value": {
                 "id": "7155b827-553f-4f0d-ac77-6313774cda22",
                 "resourcePath": "objects\\obj_pedestal\\obj_pedestal.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6b368dde-fe1c-4079-ac81-9bbca51e25fa",
+            "Value": {
+                "id": "7d1fda79-003d-425a-9c1f-a6cb46805ecc",
+                "resourcePath": "objects\\obj_death_screen_controller\\obj_death_screen_controller.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -4116,6 +4140,14 @@
                 "id": "14674b45-cb0f-4fe7-ba78-8a19ac8c2c7d",
                 "resourcePath": "objects\\obj_chsl_name\\obj_chsl_name.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "db566f1b-7b10-41a8-ba79-93ac70998735",
+            "Value": {
+                "id": "9f5607f4-e708-4540-aa45-6948a9bcab79",
+                "resourcePath": "sprites\\spr_b_light\\spr_b_light.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

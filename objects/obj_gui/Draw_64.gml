@@ -62,7 +62,7 @@ if n_potion {
 			name = "Elixir of Life";
 		break;
 		case c_yellow:
-			name = "Mida's Favourite";
+			name = "Midas' Favourite";
 		break;
 		case c_teal:
 			name = "Crystal Clear";

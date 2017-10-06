@@ -1,4 +1,3 @@
-phy_fixed_rotation = true;
 impact = true;
 image_speed = 0;
 
