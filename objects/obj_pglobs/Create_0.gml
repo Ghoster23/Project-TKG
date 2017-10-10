@@ -15,6 +15,8 @@ global.fallen_items = 0;
 
 global.lock = false;
 
+global.level = 0;
+
 ///Enemies
 //Active enemies
 global.kld_enemies = 0;
@@ -29,6 +31,7 @@ global.total_coins = 0;
 global.body = obj_body;
 global.weapon = obj_sword;
 global.flight = false;
+global.p_level = 0;
 
 //Player dead
 dead = false;

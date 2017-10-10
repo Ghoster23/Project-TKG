@@ -130,6 +130,8 @@ if not global.pause {
 		
 			if stop == 3{
 				state = 5;
+				
+				global.st_regen = 20;
 			}
 		
 	    break;
@@ -155,6 +157,7 @@ if not global.pause {
 			}
 	
 			if interact_key and distance_to_object(global.body) < 30{
+				global.level++;
 				game_restart();
 			}
 
