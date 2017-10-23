@@ -63,8 +63,9 @@ switch state{
 		wd = string_width_ext("Options",2,12) / 2 * m;
 		//draw_rectangle(c-wd,(160 + off) * m,c+wd,(160 + off + 15) * m,true);
 		if point_in_rectangle(display_mouse_get_x(),display_mouse_get_y(),c-wd,(150 + off) * m,c+wd,(160 + off + 15) * m){
-			if mouse_check_button_released(mb_left) {
-				state = "closed";
+			if mouse_check_button_pressed(mb_left) {
+				instance_create_layer(x,y,layer,obj_options_controller);
+				state = "options";
 				check = false;
 				alarm[0] = 0.5 * room_speed;
 			}

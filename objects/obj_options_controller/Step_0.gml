@@ -7,7 +7,7 @@ if menu_key or (point_in_rectangle(mousex,mousey,c-17*m,controls_y1+controls_hei
 	instance_activate_object(obj_menu);
 	var thislayer = layer_background_get_id("buttons");
 	layer_background_visible(thislayer,true);
-	instance_destroy();
+	alarm[3]=0.2*room_speed;
 	
 	var thislayer = layer_background_get_id("blackout");
 	layer_background_visible(thislayer,false);

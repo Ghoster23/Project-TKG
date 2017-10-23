@@ -61,6 +61,15 @@ if check == true{
 			}
 	
 		break;
+		
+		case "options":
+			///Pause Game and open Menu
+			if !instance_exists(obj_options_controller) and !instance_exists(obj_options_audio) and !instance_exists(obj_options_video) and !instance_exists(obj_options_controls) {
+				state = "menu";
+				check = false;
+				alarm[0] = 0.5 * room_speed;
+			}
+		break;
 	}
 }
 
