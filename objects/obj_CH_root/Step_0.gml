@@ -81,9 +81,8 @@ if instance_exists(obj_CH_tree_state) and not global.pause{
 			}
 		
 			if jab == true and place_meeting(x,y,global.body){
-				global.p_hp -= global.b_atk div global.p_def;
+				scr_damage_player(0,global.b_atk,global.p_def);
 				visible = true;
-				global.p_hurt = true;
 			
 			}
 		

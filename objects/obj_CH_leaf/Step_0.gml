@@ -67,8 +67,7 @@ if go == true and not global.pause {
 
 	//Damage the player
 	if(place_meeting(x,y,global.body) and global.p_inv == false and global.p_hurt == false){
-	    global.p_hp -= global.b_satk div global.p_sdef;
-		global.p_hurt = true;
+		scr_damage_player(0,global.b_satk,global.p_sdef);
 	    instance_destroy();
 	}
 	

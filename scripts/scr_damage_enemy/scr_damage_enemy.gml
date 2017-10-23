@@ -105,7 +105,7 @@ switch type {
 		
 		physics_apply_impulse(x,y,lengthdir_x(10,d),lengthdir_y(10,d));
 		
-		if obj == obj_swing {
+		if obj == obj_swing and global.p_will <= 97.5{
 			global.p_will += 2.5;
 		}
 		

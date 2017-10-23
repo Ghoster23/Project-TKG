@@ -29,7 +29,7 @@ if not global.pause {
 	        ///Screen shake
         
 	        ///Falling Rocks
-	        if(alarm[0] > 5 * room_speed and alarm[0] mod 5 == 0){
+	        if(alarm[0] > 5 * room_speed and alarm[0] mod 2 == 0){
 	            x_s = global.body.x - 30;
 	            y_s = global.body.y - 30;
             
@@ -37,8 +37,7 @@ if not global.pause {
 	            y_e = global.body.y + 30;
             
 	            instance_create_layer(x,y-500,"IF",obj_fln_rock);
-				instance_create_layer(x,y-500,"IF",obj_fln_rock);
-				instance_create_layer(x,y-500,"IF",obj_fln_rock);
+				
 	            sprite_index = spr_CH_deer_state_hurt;
 	        }
         
