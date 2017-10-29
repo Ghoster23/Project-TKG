@@ -1,5 +1,5 @@
 if not global.pause {
-	part_particles_create(global.ps, x, y, global.pt_CHdirt, 5);
+	part_particles_create(global.ps_if, x, y, global.pt_CHdirt, 5);
 	
 	if prev_image_speed != 0{
 		image_speed = prev_image_speed;

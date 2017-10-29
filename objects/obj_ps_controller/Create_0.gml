@@ -15,16 +15,25 @@ adjust = true;
 step_number = 0;
 
 //Particle System
-global.ps = part_system_create();
+global.ps    = part_system_create();
 global.ps_if = part_system_create();
+global.ps_ps = part_system_create();
+
 scr_part_fire_init();
 scr_part_smoke_init();
 scr_part_CHdirt_init();
 scr_part_cbits_init();
 scr_part_vbits_init();    
 scr_part_sflame_init();
-part_system_layer(global.ps,"BH");
+scr_part_smflame_init();
+scr_part_flnrbits_init();
+scr_part_sowflame_init();
+scr_part_ember_init();
+
+part_system_layer(global.ps,   "BH");
 part_system_layer(global.ps_if,"IF");
+part_system_layer(global.ps_ps,"PS");
+
 
 
 //Surface

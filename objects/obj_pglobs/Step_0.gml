@@ -66,9 +66,9 @@ if room == rm_level{
 if not global.pause{
 	switch global.char {
 		case 0:
-			if alarm[3] == -1 and global.lock and global.p_will < 100{
+			/*if alarm[3] == -1 and global.lock and global.p_will < 100{
 				alarm[3] = 0.1 * room_speed;
-			}
+			}*/
 		break;
 	}
 }

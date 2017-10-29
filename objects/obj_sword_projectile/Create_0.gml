@@ -1,15 +1,14 @@
 dir=global.body.rotacao;
 
-phy_rotation=-dir + 90;
+phy_rotation=-dir;
 
-image_speed = 1.1;
+image_speed = 0;
+
+image_index = 2;
+
+image_blend = c_aqua;
 
 alarm[0] = 6 * room_speed;
-
-scale = global.p_will / 100;
-
-image_xscale = scale + 1;
-image_yscale = scale + 1;
 
 hspd = 0;
 vspd = 0;

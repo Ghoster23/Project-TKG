@@ -1,3 +1,3 @@
 /// @description Insert description here
 // You can write your code in this editor
-global.p_will=100;
+global.p_will=global.p_maxwill;

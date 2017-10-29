@@ -28,13 +28,17 @@ if ds_exists(ds_depthgrid, ds_type_grid) {
 		var instanceID = ds_depthgrid[# 0, yy];
 		
 		with(instanceID){
-			if instanceID.flash == true{
+			if instanceID.flash {
 					shader_set(sh_white);
 					draw_self();
 					shader_reset();	
 			}
-			else if instanceID.visible == true{
+			else if instanceID.visible {
 				draw_self();
+				
+				if self.object_index == obj_potion {
+					draw_sprite_ext(spr_potion_fluid,image_index,x,y,1,1,0,color,1);
+				}
 			}
 		}
 		

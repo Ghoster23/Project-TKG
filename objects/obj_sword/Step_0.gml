@@ -1,9 +1,35 @@
 scr_get_input();
 
-
 if not global.pause {
 	scr_pause_end(3);
 	
+	amount = amount * 0.3;
+	
+	angle = degtorad(-(image_angle+90));
+	
+	//part_emitter_region(global.ps_if, em, x + 5 * cos(angle), x + 36 * cos(angle), y + 10 * sin(angle), y + 36 * sin(angle), ps_shape_ellipse, ps_distr_gaussian);
+	if global.body.spr_side != 0{
+		if(l == 1){
+			part_emitter_clear(global.ps,em_);
+			
+			l = 0;
+		}
+		
+		part_emitter_region(global.ps_if, em, x+ 5 * cos(angle), x+ 5 * cos(angle), y + 10 * sin(angle), y + 10 * sin(angle), ps_shape_ellipse, ps_distr_gaussian);
+	
+		part_emitter_stream(global.ps_if, em, global.pt_sow_fire, round(amount));
+	}else {
+		if(l == 0){
+			part_emitter_clear(global.ps_if,em);
+			
+			l = 1;
+		}
+		
+		part_emitter_region(global.ps, em_, x+ 5 * cos(angle), x+ 5 * cos(angle), y + 10 * sin(angle), y + 10 * sin(angle), ps_shape_ellipse, ps_distr_gaussian);
+	
+		part_emitter_stream(global.ps, em_, global.pt_sow_fire, round(amount));
+	}
+		
 	if thrust==true{
 		offs=30;
 		image_angle=scr_aproach(image_angle,180,10);
@@ -17,7 +43,7 @@ if not global.pause {
 		global.thrown=false;
 
 		//atacking
-		if (attack_key) and allow = true and swing=="no"{
+		if attack_key and allow and swing=="no"{
 		    allow = false;
 		    alarm[1] = 0.5 * room_speed; 
 			
@@ -45,13 +71,22 @@ if not global.pause {
 			*/
 		}
 		
-		if mouse_r_key and global.p_will >= 10 and alarm[2] == -1{
+		if mouse_r_key and global.p_will >= 10 and alarm[2] == -1 and swing=="no"{
 			global.p_will -= 10;
-			image_xscale = -1*image_xscale;
-		    image_yscale = -1*image_yscale;
+			
+			if off==0{
+				swing="right_";
+			}
+			else if off==180{
+				swing="left_";
+			}
+			
 			alarm[2] = 0.5 * room_speed;
 			
-			instance_create_layer(global.body.x + lengthdir_x(30,global.body.rotacao),global.body.y + lengthdir_y(30,global.body.rotacao),"IF",obj_sword_projectile);
+			image_speed = 2.3;
+			
+			amount = 3;
+			
 			/*thrust=true;
 			alarm[2]=room_speed*1;
 			image_xscale = 1;
@@ -96,9 +131,33 @@ if not global.pause {
 			}
 		}
 		
+		if swing=="right_"{
+			part_type_gravity(global.pt_sow_fire,0.01,(image_angle+180));
+			off=scr_aproach(off,30,4);
+			amount = 3;
+			if off==30 and !mouse_r_key{
+				instance_create_layer(global.body.x + lengthdir_x(30,global.body.rotacao),global.body.y + lengthdir_y(30,global.body.rotacao),"IF",obj_sword_projectile);
+				scr_sound(snd_sword_slash);
+				off=180;
+				swing="no";
+				
+			}
+		}
+		if swing=="left_"{
+			part_type_gravity(global.pt_sow_fire,0.01,(image_angle));
+			off=scr_aproach(off,150,4);
+			amount = 3;
+			if off==150 and !mouse_r_key{
+				instance_create_layer(global.body.x + lengthdir_x(30,global.body.rotacao),global.body.y + lengthdir_y(30,global.body.rotacao),"IF",obj_sword_projectile);
+				scr_sound(snd_sword_slash);
+				off=0;
+				swing="no";
+				
+			}
+		}
+		
 	}	
 }else {
 	scr_pause_start(3);
+	
 }
-
-//show_debug_message(swing);

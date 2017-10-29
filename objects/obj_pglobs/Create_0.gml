@@ -101,7 +101,8 @@ global.char_bsprs[0,6] = spr_roll_side;
 global.char_hsprs[0] = spr_head;
 
 //Player abilities
-global.p_will = 1;
+global.p_will = 0;
+global.p_maxwill = 60;
 
 ///Rooms
 //Current Room

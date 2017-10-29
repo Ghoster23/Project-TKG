@@ -16,20 +16,17 @@ if not global.pause {
 	
 	scr_pause_end(10);
 	
-	if place_meeting(x,y,obj_swing){
-		global.b_hp -= global.p_atk * 2 div global.b_def;
-		sprite_index = spr_CH_deer_state_hurt;
-		alarm[6] = 0.5 * room_speed;
-	}
+	scr_damage_enemy(true);
 
 	///Action state based changes
 	switch(state){
 	    //Rock state
 	    case 0:
 	        ///Screen shake
-        
+			global.shake = 5;
+			
 	        ///Falling Rocks
-	        if(alarm[0] > 5 * room_speed and alarm[0] mod 2 == 0){
+	        if(alarm[0] > 5 * room_speed and alarm[0] mod 10 == 0){
 	            x_s = global.body.x - 30;
 	            y_s = global.body.y - 30;
             
@@ -37,6 +34,24 @@ if not global.pause {
 	            y_e = global.body.y + 30;
             
 	            instance_create_layer(x,y-500,"IF",obj_fln_rock);
+				
+				x_s = global.body.x - 45;
+	            y_s = global.body.y - 45;
+            
+	            x_e = global.body.x + 45;
+	            y_e = global.body.y + 45;
+            
+	            instance_create_layer(x,y-500,"IF",obj_fln_rock);
+				
+				for(i = 0; i < 1; i++){
+					x_s = 32;
+		            y_s = 286;
+            
+		            x_e = 542;
+		            y_e = 508;
+            
+		            instance_create_layer(x,y-500,"IF",obj_fln_rock);
+				}
 				
 	            sprite_index = spr_CH_deer_state_hurt;
 	        }
@@ -62,6 +77,7 @@ if not global.pause {
 	    case 1:
 	        ///Leaf Barrage
 	        if(once == false){
+				global.shake = 0; 
 	            pat = "w";
 	            alarm[1] = 10 * room_speed;
 			

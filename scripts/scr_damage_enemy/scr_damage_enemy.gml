@@ -1,5 +1,12 @@
 ///@description Damage the enemy
-type =  404;
+{
+var boss = false;
+
+if argument_count == 1 {
+	boss = argument[0];
+}
+
+var type =  404;
 
 ///Player on Enemy attacks
 //Physical attacks
@@ -91,69 +98,117 @@ if type == 404{
 			break;
 		}
 	}
-}else if obj_potion_controller.alarm[2] != -1{
+}
+
+if obj_potion_controller.alarm[2] != -1{
 	type = 4;
 	obj_potion_controller.alarm[2] = -1;
 }
 
 //Apply damage
-switch type {
-	case 0: //Physical attacks
-		e_hp -= global.p_atk div e_def;
+if not boss {
+	switch type {
+		case 0: //Physical attacks
+			e_hp -= global.p_atk div e_def;
 		
-		var d = point_direction(obj.x,obj.y,x,y);
+			var d = point_direction(obj.x,obj.y,x,y);
 		
-		physics_apply_impulse(x,y,lengthdir_x(10,d),lengthdir_y(10,d));
+			physics_apply_impulse(x,y,lengthdir_x(10,d),lengthdir_y(10,d));
 		
-		if obj == obj_swing and global.p_will <= 97.5{
-			global.p_will += 2.5;
-		}
+			if obj == obj_swing and global.p_will <= global.p_maxwill{
+				global.p_will += 5;
+			}
 		
-		alarm[0] = atk_cooldown[i] * room_speed;
+			alarm[0] = atk_cooldown[i] * room_speed;
 		
-	break;
-	case 1: //Speacil attacks
-		if obj != obj_sword_projectile {
+		break;
+		case 1: //Speacil attacks
 			e_hp -= global.p_satk div e_sdef;
-		}else {
-			e_hp -= global.p_satk * global.p_will div e_sdef;
-		}
 		
-		alarm[0] = satk_cooldown[j] * room_speed;
+			alarm[0] = satk_cooldown[j] * room_speed;
 		
-	break;
-	case 2:
-		e_hp -= e_wep[k].e_atk div e_def;
+		break;
+		case 2:
+			e_hp -= e_wep[k].e_atk div e_def;
 		
-		alarm[0] = e_wep_cd[k] * room_speed;
+			alarm[0] = e_wep_cd[k] * room_speed;
 		
-	break;
-	case 3:
-		e_hp -= e_wep[l].e_satk div e_sdef;
+		break;
+		case 3:
+			e_hp -= e_wep[l].e_satk div e_sdef;
 		
-		alarm[0] = e_swep_cd[l] * room_speed;
+			alarm[0] = e_swep_cd[l] * room_speed;
 		
-	break;
-	case 4:
-		e_hp = 0;
-	break;
-	case 404:
-	break;
+		break;
+		case 4:
+			e_hp = 0;
+		break;
+		case 404:
+		break;
+	}
+	
+	if type != 404 {
+		//Activate flash
+		flash = true;
+		damaged = true;
+	
+		if self.object_index == obj_psnt_body or self.object_index == obj_psnt_arch_body {
+			state = "stun";
+			alarm[6] = 0.8 * room_speed;
+			scr_alarms_pause(6);
+		
+		} 
+	
+		global.shake = 3;
+	
+		alarm[4] = 0.03 * room_speed;
+	}
+	
+}else {
+	switch type {
+		case 0: //Physical attacks
+			global.b_hp -= global.p_atk div global.b_def;
+		
+			var d = point_direction(obj.x,obj.y,x,y);
+		
+			physics_apply_impulse(x,y,lengthdir_x(10,d),lengthdir_y(10,d));
+		
+			if obj == obj_swing and global.p_will <= 97.5{
+				global.p_will += 2.5;
+			}
+			
+			global.shake = 3;
+		
+		break;
+		case 1: //Speacil attacks
+			if obj != obj_sword_projectile {
+				global.b_hp -= global.p_satk div global.b_sdef;
+			}else {
+				global.b_hp -= global.p_satk * global.p_will div global.b_sdef;
+			}
+			
+			global.shake = 3;
+		
+		break;
+		case 2:
+			global.b_hp -= e_wep[k].e_atk div global.b_def;
+			
+			global.shake = 3;
+		break;
+		case 3:
+			global.b_hp -= e_wep[l].e_satk div global.b_sdef;
+			
+			global.shake = 3;
+		break;
+		case 4:
+			global.b_hp -= 20;
+			
+			global.shake = 3;
+		break;
+		case 404:
+		break;
+	}
+	
 }
 	
-if type != 404{
-	//Activate flash
-	flash = true;
-	damaged = true;
-	
-	if self.object_index == obj_psnt_body or self.object_index == obj_psnt_arch_body {
-		state = "stun";
-		alarm[6] = 0.8 * room_speed;
-		scr_alarms_pause(6);
-		
-	} 
-	
-	global.shake = 2;
-	
-	alarm[4] = 0.03 * room_speed;
 }

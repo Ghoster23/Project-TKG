@@ -26,9 +26,6 @@ with obj_info{
 	image_index=global.char
 }
 
-//change stats
-scr_chsl_stats();
-
 //change color
 obj_info.color=scr_char_color();
 with obj_chsl_name{

@@ -1,3 +1,5 @@
+randomize();
+
 //Draw the surface
 if surface_exists(global.lighting) and (room != rm_menu_1 and room != rm_chsl and room != rm_dead and room != rm_lvl_editor){
     surface_set_target(global.lighting);
@@ -8,10 +10,8 @@ if surface_exists(global.lighting) and (room != rm_menu_1 and room != rm_chsl an
     draw_rectangle(0,0,room_width,room_height,0);
     
     //Light sources
-    
-    ///Torch
-    gpu_set_blendmode(bm_subtract);
-    
+	gpu_set_blendmode(bm_subtract);
+	///Torch
     with obj_torch{
         if lit == true{
             var a = sin(o) * 0.01;
@@ -64,6 +64,14 @@ if surface_exists(global.lighting) and (room != rm_menu_1 and room != rm_chsl an
     
     draw_clear_alpha(c_black, 0);
     surface_reset_target();
+}
+
+if global.pause {
+	part_system_automatic_update(global.ps,false);
+	part_system_automatic_update(global.ps_if,false);
+}else {
+	part_system_automatic_update(global.ps,true);
+	part_system_automatic_update(global.ps_if,true);
 }
 
 if room == rm_dead and once == false{

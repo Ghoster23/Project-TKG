@@ -28,7 +28,7 @@ hspd = lengthdir_x(len,dir);
 vspd = lengthdir_y(len,dir);
 
 // move
-if global.st_stuck == 0{
+if not global.st_stuck{
     phy_position_x += hspd;
     phy_position_y += vspd;
 }

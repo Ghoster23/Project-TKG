@@ -7,4 +7,6 @@ if lit{
 	}
 }
 
-o++;
+if not global.pause {
+	o++;
+}

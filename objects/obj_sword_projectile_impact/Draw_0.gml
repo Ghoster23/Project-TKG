@@ -1,4 +1,4 @@
-draw_self();
+      draw_self();
 
 if surface_exists(global.lighting) {
 	surface_set_target(global.lighting);
@@ -8,4 +8,4 @@ if surface_exists(global.lighting) {
 	
 	surface_reset_target();
 	gpu_set_blendmode(bm_normal);
-}
+}   

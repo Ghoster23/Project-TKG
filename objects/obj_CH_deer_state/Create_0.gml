@@ -8,12 +8,12 @@ depth = -y;
 phy_fixed_rotation = true;
 inv = false;
 
-global.b_mhp = 120;
-global.b_hp = 120;
-global.b_atk = 8;
-global.b_satk = 6;
-global.b_def = 6;
-global.b_sdef = 3;
+global.b_mhp = 200;
+global.b_hp = 200;
+global.b_atk = 12;
+global.b_satk = 8;
+global.b_def = 8;
+global.b_sdef = 6;
 global.b_spd = 0;
 
 x_s = 145;

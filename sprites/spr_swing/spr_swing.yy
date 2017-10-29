@@ -8,11 +8,12 @@
     "VTile": false,
     "bbox_bottom": 63,
     "bbox_left": 0,
-    "bbox_right": 45,
+    "bbox_right": 63,
     "bbox_top": 0,
-    "bboxmode": 2,
-    "colkind": 2,
+    "bboxmode": 1,
+    "colkind": 0,
     "coltolerance": 0,
+    "edgeFiltering": false,
     "frames": [
         {
             "id": "b8489197-734d-4a72-be60-000a4898b902",
@@ -120,10 +121,11 @@
         }
     ],
     "origin": 0,
+    "originLocked": false,
     "playbackSpeed": 1,
     "playbackSpeedType": 1,
     "premultiplyAlpha": false,
-    "sepmasks": false,
+    "sepmasks": true,
     "swatchColours": null,
     "swfPrecision": 2.525,
     "textureGroupId": "1225f6b0-ac20-43bd-a82e-be73fa0b6f4f",
