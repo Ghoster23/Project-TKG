@@ -52,6 +52,16 @@ if surface_exists(global.lighting) and (room != rm_menu_1 and room != rm_chsl an
         }
     }
 	
+	///Big Light
+	gpu_set_blendmode(bm_subtract);
+    draw_set_colour(c_white);
+    draw_set_alpha(1);
+    
+    with obj_cage_light{
+        draw_sprite_ext(spr_big_light,0,x+1,y+212,1+i*0.005,1+i*0.005,0,c_white,1);
+		
+    }
+	
     //Resets
     gpu_set_blendmode(bm_normal);
     draw_set_alpha(1);

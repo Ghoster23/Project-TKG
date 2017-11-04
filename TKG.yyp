@@ -4343,6 +4343,14 @@
             }
         },
         {
+            "Key": "dffa89e7-48c1-4b8d-bd74-0dcbd565c276",
+            "Value": {
+                "id": "56a14bbc-3b40-43da-8480-a5dd4a6a9b08",
+                "resourcePath": "sprites\\spr_big_light\\spr_big_light.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e013661e-91ea-4c65-b503-ae0100dc59b6",
             "Value": {
                 "id": "6b28161b-d0a9-4a3b-b90e-6075ce3c3ab6",
