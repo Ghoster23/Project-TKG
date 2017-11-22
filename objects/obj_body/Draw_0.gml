@@ -1,5 +1,4 @@
 event_inherited();
-
 surface_set_target(global.lighting);
 gpu_set_blendmode(bm_subtract);
 draw_set_colour(c_white);

@@ -42,12 +42,27 @@ for(var i = 0; i < 16; i++){
 ///Statuses
 if status_check == true and not global.pause{
 	//Poisoned
-    scr_player_status_check("st_poison");
+    scr_player_status_check(0);
     
 	//Stuck
 	
 	//Regen
-	scr_player_status_check("st_regen");
+	scr_player_status_check(2);
+	
+	//Compass
+	scr_player_status_check(3);
+	
+	//OHKO
+	scr_player_status_check(4);
+	
+	//AllSee
+	scr_player_status_check(5);
+	
+	//Mida's
+	scr_player_status_check(6);
+	
+	//Immune
+	scr_player_status_check(7);
         
     status_check = false;
     alarm[1] = 1 * room_speed;
@@ -118,4 +133,10 @@ if keyboard_check_pressed(vk_f4){
 
 if keyboard_check_pressed(vk_f3){
     room_goto(rm_level);
+}
+
+if keyboard_check_pressed(vk_f1){
+    scr_player_status_apply(3,60);
+	scr_player_status_apply(4,60);
+	scr_player_status_apply(7,60);
 }

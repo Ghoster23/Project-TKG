@@ -5,15 +5,15 @@ event_inherited();
 
 i = irandom(100);
 
-if 0 <= i <= 9{
+if i <= 20{
 	image_index = 4;
-}
-if 10 <= i <= 29{
+}else
+if i <= 50{
 	image_index = 3;
-}
-if 30 <= i <= 59{
+}else
+if i <= 90{
 	image_index = 2;
-}
-if 60 <= i <= 99{
+}else
+if i <= 100{
 	image_index = 1;
 }

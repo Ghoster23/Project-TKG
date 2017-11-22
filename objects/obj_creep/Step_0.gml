@@ -1,6 +1,6 @@
 //Poison status
-if place_meeting(x,y,global.body) and not global.st_poison and not cr_cd and not global.pause and not global.p_inv and not place_meeting(x,y,obj_roll){
-    global.st_poison = 15;
+if place_meeting(x,y,global.body) and not global.status[0,0] and not cr_cd and not global.pause and not global.p_inv and not place_meeting(x,y,obj_roll){
+    global.status[0,0] = 15;
     
     cr_cd = true;
     alarm[1] = 1 * room_speed;

@@ -9,10 +9,17 @@ if not global.pause {
 	switch(state){
 		//Concealed
 		case 0:
+			part_emitter_region(global.ps_if,em,x-2,x+2,y-2,y+2,ps_shape_ellipse,ps_distr_linear);
+			
 			///Mimic Tell
 			if interval == false and blink == false{
 			    interval = true;
 			    alarm[1] = 5 * room_speed;
+				
+			}
+			
+			if(global.status[5,0]){
+				part_emitter_stream(global.ps_if,em,global.pt_danger,-6);
 			}
 
 			if blink == true{
@@ -52,7 +59,15 @@ if not global.pause {
 	        scr_define_path(self, global.body);
 			path = global.ai_path;
 			scr_move_enemy(point_direction(x,y,path_get_point_x(path,1),path_get_point_y(path,1)),1);
-        
+			
+			///Damage the Player
+			if(place_meeting(x,y,global.body)){
+				if state == 1 and e_hp > 0 and not atk_cd{
+					scr_damage_player(1);
+					alarm[3] = 0.2 * room_speed;
+				}
+			}
+			
 	        ///Die
 	        if e_hp <= 0 and sprite_index != spr_mimic_d{
 				flash=true;

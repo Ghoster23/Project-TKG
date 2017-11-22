@@ -9,11 +9,8 @@ roomhg=global.roomhg;
 ///Base Room
 instance_create_layer(gx + (global.roomwd / 2) + 64,gy + 48,"Instances",obj_torch);
 instance_create_layer(gx+global.roomwd/2-96,gy+48,"Instances",obj_torch);
-instance_create_layer(gx,gy,"Instances",obj_wall_left);
-instance_create_layer(gx,gy,"Instances",obj_wall_up);
-instance_create_layer(gx,gy+global.roomhg-32,"Instances",obj_wall_down);
-instance_create_layer(gx+global.roomwd-32,gy,"Instances",obj_wall_right);
-instance_create_layer(gx+(global.roomwd/2),gy+(global.roomhg/2)+31,"Floor",obj_floor);
+
+scr_base_roomgn();
 
 //create grid to house the room
 global.room_grid = ds_grid_create(19,9);

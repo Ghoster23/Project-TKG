@@ -34,7 +34,22 @@ if ds_exists(ds_depthgrid, ds_type_grid) {
 					shader_reset();	
 			}
 			else if instanceID.visible {
+				if((instanceID.object_index == global.body or instanceID == global.body.head or instanceID.object_index == obj_roll) and global.status[7,0]){
+					shader_set(sh_outline);
+					shader_set_uniform_f(upH,texelH);
+					shader_set_uniform_f(upW,texelW);
+					image_blend = c_white;
+				}
+				if(instanceID.object_index == global.weapon and global.status[4,0]){
+					shader_set(sh_outline);
+					shader_set_uniform_f(upH,texelH);
+					shader_set_uniform_f(upW,texelW);
+					image_blend = c_white;
+				}
+				
 				draw_self();
+				
+				shader_reset();
 				
 				if self.object_index == obj_potion {
 					draw_sprite_ext(spr_potion_fluid,image_index,x,y,1,1,0,color,1);

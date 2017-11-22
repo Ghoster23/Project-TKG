@@ -2,7 +2,7 @@
 scr_get_input();
 
 //check for dash
-if (dash_key && (right_key == true or left_key == true or up_key == true or down_key == true) && not global.dash_cd and global.st_stuck == 0) {
+if (dash_key && (right_key == true or left_key == true or up_key == true or down_key == true) && not mouse_r_key and not global.dash_cd and global.status[1,0] == 0) {
     state = scr_dash_state;
 	global.p_inv = true;
     alarm[0] = room_speed/3;
@@ -28,7 +28,7 @@ hspd = lengthdir_x(len,dir);
 vspd = lengthdir_y(len,dir);
 
 // move
-if not global.st_stuck{
+if not global.status[1,0]{
     phy_position_x += hspd;
     phy_position_y += vspd;
 }

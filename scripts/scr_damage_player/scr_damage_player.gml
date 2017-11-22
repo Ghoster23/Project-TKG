@@ -12,7 +12,7 @@ if type == 0{
 	var def = argument[2];
 }
 
-if not global.p_hurt and not global.p_inv and global.p_hp > 0{
+if not global.p_hurt and not global.p_inv and global.p_hp > 0 and not global.status[7,0]{
 	switch type {
 		case 0:
 			global.p_hp -= dmg div def;

@@ -14,7 +14,7 @@ if not global.pause {
 		}
 	}
 	
-	if not global.st_stuck {
+	if not global.status[1,0] {
 		rotacao = point_direction(x,y,mouse_x,mouse_y);
 
 		if (rotacao > 315 or rotacao < 45){

@@ -1,11 +1,11 @@
 /// @description scr_dash_state
 global.body.visible=false;
 obj_head.visible=false;
+
 if instance_exists(obj_sword) {
-with (obj_sword)
-   {
-    instance_destroy();
-   }
+	with (obj_sword){
+		instance_destroy();
+	}
 }
 
 

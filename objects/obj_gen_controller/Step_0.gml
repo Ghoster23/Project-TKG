@@ -2,6 +2,10 @@ randomize();
 
 //Gen the map
 while roomgenerated < roomstogenerate{
+	if attempts > 1000 {
+		break;
+	}
+			
 	confirm = false  //Will we build?
     
 	up = false       //Is there a room up?
@@ -65,32 +69,32 @@ while roomgenerated < roomstogenerate{
 	    if ad {
 			attempts++;
 			
-			if attempts > 1000 {
-				break;
-			}
-			
 	    //Decide room type
 			//Special rooms
 	        if roomgenerated == 12 {
 				//Make a store
 				typeroom = 15
 				confirm = true;
+				global.rm_store_id = room_;
 					
 			}else if roomgenerated == 13 and ad == 1 and
 					((up and u < 15) or (down and d < 15) or (left and l < 15) or (right and r < 15)){
 				typeroom = 16;
 				confirm = true;
+				global.rm_item_id = room_;
 				
 			}else if roomgenerated == 14 and ad == 1 and
 					((up and u < 15) or (down and d < 15) or (left and l < 15) or (right and r < 15)){
 				typeroom = 17;
 				confirm = true;
+				global.rm_sp_id = room_;
 			
 			//Boss room
 			}else if roomgenerated == 15 and ad == 1 and
 					((up and u < 15) or (down and d < 15) or (left and l < 15) or (right and r < 15)){
 				typeroom = 18;
 				confirm = true;
+				global.rm_boss_id = room_;
 				
 			//Normal rooms
 	        }else if roomgenerated < 12{
@@ -209,40 +213,52 @@ while roomgenerated < roomstogenerate{
 				if typeroom < 15{
 			        if up {
 			            if(!instance_position((gx+(global.roomwd/2)),(gy-32),obj_door_d)){
-			                instance_create_layer(gx+(global.roomwd/2),(gy-32),"Instances",obj_door_d);
-			                instance_create_layer(gx+(global.roomwd/2),gy+((32*1.5)+11),"Instances",obj_door_u);
+							instance_destroy(instance_nearest(gx+(global.roomwd/2),(gy-2),obj_wall_down_fillin));
+							instance_destroy(instance_nearest(gx+(global.roomwd/2),(gy+2),obj_wall_up_fillin));
+			                //instance_create_layer(gx+(global.roomwd/2),(gy-32),"Instances",obj_door_d);
+			                //instance_create_layer(gx+(global.roomwd/2),gy+((32*1.5)+11),"Instances",obj_door_u);
 							
 							global.ds_roomgrid[# 3, room_ - 8] = grid_array_set_value(global.ds_roomgrid[# 3, room_ - 8],2,1);
 							global.ds_roomgrid[# 3, room_] = grid_array_set_value(global.ds_roomgrid[# 3, room_],0,1);
 			            }
-			        } 
+			        }
+					
 			        if left {
 			            if(!instance_position((gx-33),(gy+(global.roomwd/2)),obj_door_l)){
-			                instance_create_layer(gx-34,gy+(global.roomhg/2),"Instances",obj_door_l);
-			                instance_create_layer(gx+33,gy+(global.roomhg/2),"Instances",obj_door_r);
+							instance_destroy(instance_nearest(gx+2,gy+(global.roomwd/2),obj_wall_left_fillin));
+							instance_destroy(instance_nearest(gx-2,gy+(global.roomwd/2),obj_wall_right_fillin));
+			                //instance_create_layer(gx-34,gy+(global.roomhg/2),"Instances",obj_door_l);
+			                //instance_create_layer(gx+33,gy+(global.roomhg/2),"Instances",obj_door_r);
 							
 							global.ds_roomgrid[# 3, room_ - 1] = grid_array_set_value(global.ds_roomgrid[# 3, room_ - 1],3,1);
 							global.ds_roomgrid[# 3, room_] = grid_array_set_value(global.ds_roomgrid[# 3, room_],1,1);
 			            }
 			        } 
+					
 			        if down {
 			            if(!instance_position(gx+(global.roomwd/2),(gy+global.roomhg-32),obj_door_d)){
-			                instance_create_layer(gx+(global.roomwd/2),(gy+global.roomhg-32),"Instances",obj_door_d);
-			                instance_create_layer(gx+(global.roomwd/2),gy+global.roomhg+((32*1.5)+11),"Instances",obj_door_u);
+							instance_destroy(instance_nearest(gx+(global.roomwd/2),gy+global.roomhg-2,obj_wall_down_fillin));
+							instance_destroy(instance_nearest(gx+(global.roomwd/2),gy+global.roomhg+2,obj_wall_up_fillin));
+			                //instance_create_layer(gx+(global.roomwd/2),(gy+global.roomhg-32),"Instances",obj_door_d);
+			                //instance_create_layer(gx+(global.roomwd/2),gy+global.roomhg+((32*1.5)+11),"Instances",obj_door_u);
 							
 							global.ds_roomgrid[# 3, room_ + 8] = grid_array_set_value(global.ds_roomgrid[# 3, room_ + 8],0,1);
 							global.ds_roomgrid[# 3, room_] = grid_array_set_value(global.ds_roomgrid[# 3, room_],2,1);
 			            }
-			        } 
+			        }
+					
 			        if right {
 			            if(!instance_position((gx+global.roomwd+16),(gy+(global.roomhg/2)),obj_door_r)){
-			                instance_create_layer((gx+global.roomwd-34),(gy+(global.roomhg/2)),"Instances",obj_door_l);
-			                instance_create_layer((gx+global.roomwd+33),(gy+(global.roomhg/2)),"Instances",obj_door_r);
+							instance_destroy(instance_nearest(gx+global.roomwd-2,gy+(global.roomhg/2),obj_wall_right_fillin));
+							instance_destroy(instance_nearest(gx+global.roomwd+2,gy+(global.roomhg/2),obj_wall_left_fillin));
+			                //instance_create_layer((gx+global.roomwd-34),(gy+(global.roomhg/2)),"Instances",obj_door_l);
+			                //instance_create_layer((gx+global.roomwd+33),(gy+(global.roomhg/2)),"Instances",obj_door_r);
 							
 							global.ds_roomgrid[# 3, room_ + 1] = grid_array_set_value(global.ds_roomgrid[# 3, room_ + 1],1,1);
 							global.ds_roomgrid[# 3, room_] = grid_array_set_value(global.ds_roomgrid[# 3, room_],3,1);
 			            }
 			        }
+					
 				}else {
 					
 					if up and (u < 15){
@@ -289,15 +305,17 @@ while roomgenerated < roomstogenerate{
 }
 
 if attempts > 1000 {
+	attempts = 0;
 	room_goto(rm_level);
 }
 
-if once == false and attempts < 1000{
+if once == false {
 	
 	once = true;
 	global.gen = false;
 	instance_create_layer(0,0,"IF",obj_AI_controller);
 	instance_create_layer(0,0,"PS",obj_minimap_controller);
 	instance_create_layer(0,0,"BH",obj_floor_fluid_controller);
+	instance_create_layer(0,0,"IF",obj_potion_controller);
 	instance_destroy();
 }

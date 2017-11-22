@@ -10,30 +10,45 @@ xx = 80 * m;
 yy = 34 * m;
 
 for(i = 0; i < global.p_maxhp div 4; i++){
-	if hp >= 4{
-		draw_sprite_ext(spr_heart,4,xx + (i * 16) * m, yy, m, m, 0, c_white, 1);
-		hp -= 4;
-	}else if hp > 0{
-		draw_sprite_ext(spr_heart, hp,xx + (i * 16) * m, yy, m, m, 0, c_white, 1);
-		hp -= hp;
+	if(i < 5){
+		o = sprite_get_height(spr_heart) + 4;
+		
+		if hp >= 4{
+			draw_sprite_ext(spr_heart,  4,xx + (i * 18.5) * m, yy - o * m, m, m, 0, c_white, 1);
+			hp -= 4;
+		}else if hp > 0{
+			draw_sprite_ext(spr_heart, hp,xx + (i * 18.5) * m, yy - o * m, m, m, 0, c_white, 1);
+			hp -= hp;
+		}else {
+			draw_sprite_ext(spr_heart,  0,xx + (i * 18.5) * m, yy - o * m, m, m, 0, c_white, 1);
+		}
 	}else {
-		draw_sprite_ext(spr_heart, 0,xx + (i * 16) * m, yy, m, m, 0, c_white, 1);
+		var j = i - 5;
+		
+		if hp >= 4{
+			draw_sprite_ext(spr_heart,  4,xx + (j * 18.5) * m, yy, m, m, 0, c_white, 1);
+			hp -= 4;
+		}else if hp > 0{
+			draw_sprite_ext(spr_heart, hp,xx + (j * 18.5) * m, yy, m, m, 0, c_white, 1);
+			hp -= hp;
+		}else {
+			draw_sprite_ext(spr_heart,  0,xx + (j * 18.5) * m, yy, m, m, 0, c_white, 1);
+		}
 	}
 }
 
 ///Status effects
-if global.st_poison {
-	i++;
-	
-	draw_sprite_ext(spr_poisoned, 0, xx + (i * 16) * m, yy, m, m, 0, c_white, 1);
-	
-}
+j = 5;
 
-if global.st_stuck {
-	i++;
+for(i = 0; i < 8; i++){
+	var t      = global.status[i,0];
+	var prev_t = global.status[i,1];
+	var spr    = global.status[i,2];
 	
-	draw_sprite_ext(spr_stuck, 0, xx + (i * 16) * m, yy, m, m, 0, c_white, 1);
-	
+	if(t){
+		draw_sprite_ext(spr, 13 - 13 * (t / prev_t), xx + ((j) * 18.5) * m, yy - (o + 2) * m, m, m, 0, c_white, 1);
+		j++;
+	}
 }
 
 
@@ -41,6 +56,7 @@ if global.st_stuck {
 draw_sprite_ext(spr_coin,0,yy + 4 * m,xx + 8 * m,m,m,0,c_white,1);
 draw_set_font(font_chsl_tags);
 draw_text_ext_transformed( yy + 20 * m, xx + 8 * m, string(global.coins), 2 * m, 16 * m, m, m, 0);
+draw_text_ext_transformed( yy + 63 * m, xx + 8 * m, string(global.current_row * 8 + global.current_column), 2 * m, 16 * m, m, m, 0);
 
 ///Draw Carried Potion
 if global.potion[1] != c_white {

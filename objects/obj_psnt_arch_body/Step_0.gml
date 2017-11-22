@@ -40,7 +40,7 @@ if go and not global.pause{
         case 3:  //Dead State
 	        scr_drops();
 			var pos = ds_list_find_index(global.act_enemy_list,id);
-			show_debug_message(pos);
+			show_debug_message("arch pos: " + string(pos));
 			ds_list_delete(global.act_enemy_list,pos);
 			instance_destroy(tell);
 			instance_destroy(bow);

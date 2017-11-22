@@ -9,7 +9,10 @@
         "97ad3363-68e1-478b-b1a6-0cc1008f3a6c",
         "40646ae1-0b2d-4e0f-88a8-cca303cf5446",
         "818c35bc-1af7-456a-bcf0-45b2573d1467",
-        "35e4e20a-84b4-47e5-8966-538eee98483f"
+        "35e4e20a-84b4-47e5-8966-538eee98483f",
+        "c57fe3f5-74a6-4ec9-8e59-050150c5d66e",
+        "dbad1b9e-be7e-4a53-83d3-131bc14572c2",
+        "b1feb13e-e11b-44fa-afff-708cf50a1a81"
     ],
     "filterType": "GMScript",
     "folderName": "Level",

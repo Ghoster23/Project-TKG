@@ -12,3 +12,6 @@ if room == rm_level {
 	global.fluid_grid = ds_grid_create(room_width div 4, room_height div 4);
 	
 }
+
+alarms[0] = -1;
+prev_image_speed = 0;

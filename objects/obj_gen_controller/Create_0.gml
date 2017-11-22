@@ -35,13 +35,8 @@ left = false;
 
 ///Base Room
 instance_create_layer(gx+(global.roomwd div 2),gy+(global.roomhg div 2),"IF",obj_view);
-instance_create_layer(gx+global.roomwd/2+64,gy+48,"Instances",obj_torch);
-instance_create_layer(gx+global.roomwd/2-96,gy+48,"Instances",obj_torch);
-instance_create_layer(gx,gy,"Instances",obj_wall_left);
-instance_create_layer(gx,gy,"Instances",obj_wall_up);
-instance_create_layer(gx,gy+global.roomhg-32,"Instances",obj_wall_down);
-instance_create_layer(gx+global.roomwd-32,gy,"Instances",obj_wall_right);
-instance_create_layer(gx+global.roomwd/2,gy+global.roomhg/2+31,"Floor",obj_floor);
+
+scr_base_roomgn();
 
 //Player
 instance_create_layer(gx+global.roomwd/2,gy+global.roomhg/2,"Instances",global.body);
@@ -52,3 +47,12 @@ for(var i = 0; i < 8; i += 1;){
         l[i,j] = false;
     }
 }
+
+//Unique Rooms
+global.rm_store_id = 0;
+global.rm_item_id = 0;
+global.rm_sp_id = 0;
+global.rm_boss_id = 0;
+
+//Fluids
+global.fluid_grid = -1;

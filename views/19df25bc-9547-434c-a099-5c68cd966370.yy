@@ -13,7 +13,10 @@
         "786afd70-cc06-41d3-9286-9a32c24ecd3f",
         "fe917d84-6749-4a1e-b305-ca6491643827",
         "2299b2ee-8a3d-4dd4-ad36-f85b06aaaffa",
-        "ab54cb93-b868-482f-9560-99a6ed43c8c3"
+        "ab54cb93-b868-482f-9560-99a6ed43c8c3",
+        "5e146fbc-3b65-4373-aa54-d1c6fd039f79",
+        "b08444c6-2cdb-4413-99c3-f5cdf32b2777",
+        "54ec438b-a955-430f-be8d-440c7f2fe687"
     ],
     "filterType": "GMScript",
     "folderName": "Particles",

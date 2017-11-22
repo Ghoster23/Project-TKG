@@ -33,3 +33,7 @@ path = path_add();
 for(i = 0; i < 6; i++){
 	alarms[i] = -1;
 }
+
+///Shine
+em = part_emitter_create(global.ps_if);
+part_emitter_region(global.ps_if,em,x+8,x+8,y-16,y+8,ps_shape_rectangle,ps_distr_linear);

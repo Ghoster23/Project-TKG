@@ -131,7 +131,7 @@ if not global.pause {
 			if stop == 3{
 				state = 5;
 				
-				global.st_regen = 20;
+				scr_player_status_apply(2,20);
 			}
 		
 	    break;
@@ -140,8 +140,8 @@ if not global.pause {
 				instance_destroy();
 			}
 			
-			if global.st_stuck != 0{
-				global.st_stuck = 0;
+			if global.status[1,0] != 0{
+				global.status[1,0] = 0;
 				
 			}
 	

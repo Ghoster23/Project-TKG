@@ -3,7 +3,7 @@ if(place_meeting(x,y,global.body) and not global.lock and not global.d_cd and ob
     tpy = (global.body.y - (32 * 5.5));
 	global.current_row--;
     global.d_cd = true;
-	ds_grid_clear(global.fluid_grid,0);
+	global.room_change = true;
     
     if instance_exists(obj_view){
         global.vfx = obj_view.x;

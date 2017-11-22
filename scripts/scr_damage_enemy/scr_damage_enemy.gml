@@ -100,9 +100,9 @@ if type == 404{
 	}
 }
 
-if obj_potion_controller.alarm[2] != -1{
+if(global.status[4,0] and type != 404){
 	type = 4;
-	obj_potion_controller.alarm[2] = -1;
+	
 }
 
 //Apply damage

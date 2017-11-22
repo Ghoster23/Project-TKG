@@ -22,7 +22,7 @@ if not global.pause {
 	if(mouse_check_button_released(mb_left)){
 	    obj_CH_tree_state.bene = false;
 		obj_CH_tree_state.state = 1;
-		global.st_stuck = 0;
+		global.status[1,0] = 0;
 		instance_destroy();
 
 	}

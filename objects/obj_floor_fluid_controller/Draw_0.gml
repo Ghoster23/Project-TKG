@@ -1,4 +1,5 @@
 /// @description Draw fluids
+if(not global.pause){
 var sprite;
 
 if room == rm_level {
@@ -48,3 +49,4 @@ if room == rm_level {
 //}
 
 draw_set_alpha(1);
+}

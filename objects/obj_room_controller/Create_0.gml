@@ -5,6 +5,10 @@ global.n_room = -1;
 enemy_list = 0;
 global.act_enemy_list = ds_list_create();
 
+path[0] = 0;
+
+global.room_change = true;
+
 if not ds_exists(global.fallen_items,ds_type_list) {
 	global.fallen_items = ds_list_create();
 	

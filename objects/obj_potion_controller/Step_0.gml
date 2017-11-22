@@ -3,24 +3,26 @@ scr_get_input();
 if potion_key and global.potion[1] != c_white{
 	switch global.potion[1] {
 		case c_red:
-			global.st_regen = 4 * global.potion[0];
+			scr_player_status_apply(2,4 * global.potion[0] + 1);
 		break;
 		case c_yellow:
-			alarm[0] = 15 * room_speed * image_index;
+			scr_player_status_apply(6,15 * (global.potion[0] + 1));
 		break;
 		case c_teal:
-			alarm[1] = 30 * room_speed * image_index;
+			scr_player_status_apply(5,60 * (global.potion[0] + 1));
 		break;
 		case c_fuchsia:
-			alarm[2] = 300 * room_speed * image_index;
+			scr_player_status_apply(4,10 * (global.potion[0] + 1));
 		break;
 		case c_purple:
-			global.st_poison = 0;
+			global.status[0,0] = 0;
 		break;
 		case c_navy:
+			scr_player_status_apply(3,60 * (global.potion[0] + 1));
+			global.room_change = true;
 		break;
 		case c_orange:
-			alarm[3] = 10 * room_speed * image_index;
+			scr_player_status_apply(7,10 * (global.potion[0] + 1));
 		break;
 	}
 	

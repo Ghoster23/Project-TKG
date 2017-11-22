@@ -7,7 +7,6 @@ if not global.pause {
 	
 	angle = degtorad(-(image_angle+90));
 	
-	//part_emitter_region(global.ps_if, em, x + 5 * cos(angle), x + 36 * cos(angle), y + 10 * sin(angle), y + 36 * sin(angle), ps_shape_ellipse, ps_distr_gaussian);
 	if global.body.spr_side != 0{
 		if(l == 1){
 			part_emitter_clear(global.ps,em_);
@@ -29,6 +28,11 @@ if not global.pause {
 	
 		part_emitter_stream(global.ps, em_, global.pt_sow_fire, round(amount));
 	}
+	
+	if(dash_key){
+		part_emitter_clear(global.ps,em_);
+		part_emitter_clear(global.ps_if,em);
+	}
 		
 	if thrust==true{
 		offs=30;
@@ -47,31 +51,16 @@ if not global.pause {
 		    allow = false;
 		    alarm[1] = 0.5 * room_speed; 
 			
-		    //image_xscale = -1*image_xscale;
-		    //image_yscale = -1*image_yscale;
-			
-			
-			/*if off==0{
-				off=180+30;
-				swing="right";
-			}
-			else if off==180{
-				off=-30;
-				swing="left";
-			}*/
 			if off==0{
 				swing="right";
 			}
 			else if off==180{
 				swing="left";
 			}
-			/*
-		    instance_create_layer(x, y, "IF",obj_swing); 
-			scr_sound(snd_sword_slash);
-			*/
+			
 		}
 		
-		if mouse_r_key and global.p_will >= 10 and alarm[2] == -1 and swing=="no"{
+		if mouse_r_key and global.p_will >= 10 and alarm[2] == -1 and swing=="no" {
 			global.p_will -= 10;
 			
 			if off==0{
@@ -87,29 +76,7 @@ if not global.pause {
 			
 			amount = 3;
 			
-			/*thrust=true;
-			alarm[2]=room_speed*1;
-			image_xscale = 1;
-		    image_yscale = 1;
-			global.body.spr_side = 1
-			obj_head.image_index = 0;
-			global.body.rotacao = 270;*/
-			
 		}
-		/*
-		if swing=="right"{
-			off=scr_aproach(off,180,4);
-			if off==180{
-				swing="no";
-			}
-		}
-		if swing=="left"{
-			off=scr_aproach(off,0,4);
-			if off==0{
-				swing="no";
-			}
-		}
-		*/
 		
 		if swing=="right"{
 			off=scr_aproach(off,30,4);
@@ -118,6 +85,7 @@ if not global.pause {
 				scr_sound(snd_sword_slash);
 				off=180;
 				swing="no";
+				
 			}
 		}
 		if swing=="left"{

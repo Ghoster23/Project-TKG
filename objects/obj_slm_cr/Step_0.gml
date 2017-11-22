@@ -29,7 +29,7 @@ if go and not global.pause{
             if image_index == 5{
 				scr_drops();
 				var pos = ds_list_find_index(global.act_enemy_list,id);
-				show_debug_message(pos);
+				show_debug_message("slime pos: " + string(pos));
 				ds_list_delete(global.act_enemy_list,pos);
 				global.kld_enemies += 1;
 				instance_destroy();
@@ -43,6 +43,7 @@ if go and not global.pause{
 	
 	if state != 2 and place_meeting(x,y,global.body){
 		scr_damage_player(1);
+		scr_player_status_apply(0,6);
 	}
     
 	//Get damaged

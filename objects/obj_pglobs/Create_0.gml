@@ -79,12 +79,37 @@ global.potion[1] = c_white;
 //Statuses
 status_check = true;
 
-///Positive
-	global.st_regen = 0;
+	global.status[0,0] = 0;
+	global.status[0,1] = 0;
+	global.status[0,2] = spr_poisoned;
 	
-///Negative
-	global.st_poison = 0;
-	global.st_stuck = 0;
+	global.status[1,0] = 0;
+	global.status[1,1] = 0;
+	global.status[1,2] = spr_stuck;
+	
+	global.status[2,0] = 0;
+	global.status[2,1] = 0;
+	global.status[2,2] = spr_regen;
+	
+	global.status[3,0] = 0;
+	global.status[3,1] = 0;
+	global.status[3,2] = spr_compass;
+	
+	global.status[4,0] = 0;
+	global.status[4,1] = 0;
+	global.status[4,2] = spr_ohko;
+	
+	global.status[5,0] = 0;
+	global.status[5,1] = 0;
+	global.status[5,2] = spr_seeall;
+	
+	global.status[6,0] = 0;
+	global.status[6,1] = 0;
+	global.status[6,2] = spr_midastch;
+	
+	global.status[7,0] = 0;
+	global.status[7,1] = 0;
+	global.status[7,2] = spr_immu;
 
 	global.p_hurt = false;
 
