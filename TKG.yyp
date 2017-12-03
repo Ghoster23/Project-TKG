@@ -1071,6 +1071,14 @@
             }
         },
         {
+            "Key": "2f0c17ad-1b95-4f63-9e74-ac6d46678223",
+            "Value": {
+                "id": "76265763-0977-437b-8b6c-2ab4faa33f7e",
+                "resourcePath": "objects\\obj_blood_part\\obj_blood_part.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2f1f625f-50de-45e0-b1d9-85ab4c5aa89c",
             "Value": {
                 "id": "5f743a7a-f276-4c8c-9bb8-8ef329f8a049",
@@ -5308,6 +5316,14 @@
                 "id": "6c866d5b-3c86-4cd9-86d1-e9adb5fe439e",
                 "resourcePath": "objects\\obj_coin\\obj_coin.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "fd93d9d2-b4c1-4500-b32f-a7a0fc6b6d13",
+            "Value": {
+                "id": "19567be4-6277-45a8-a244-19348f18f645",
+                "resourcePath": "sprites\\spr_blood_spurt\\spr_blood_spurt.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
