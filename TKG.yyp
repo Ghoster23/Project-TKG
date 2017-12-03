@@ -3215,6 +3215,14 @@
             }
         },
         {
+            "Key": "9d3c620b-6948-46c1-be06-abf450439aa1",
+            "Value": {
+                "id": "667ecacc-f285-4a03-8364-d26d62fb8387",
+                "resourcePath": "scripts\\scr_blood\\scr_blood.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "9d3cd0cf-ca55-45d5-b27b-d2e4bb525207",
             "Value": {
                 "id": "8f2265bc-45f4-414f-a0fc-38d043d5d63e",
@@ -5399,6 +5407,7 @@
         "54ec438b-a955-430f-be8d-440c7f2fe687",
         "e3d3b7b9-a4a4-411a-b282-689cd2719c8e",
         "5747e9d2-ce91-4975-9537-e2e35012a8af",
+        "9d3c620b-6948-46c1-be06-abf450439aa1",
         "4dc79388-29f4-4bdd-b7b0-3c7116a86638",
         "ecd69029-6318-4ab9-aeea-20ae9791dce4",
         "2fef601d-cf35-4479-be0f-f2592a2b690f",

@@ -1,7 +1,5 @@
 ///@description Damage the enemy
 
-obj_name = object_get_name(object_index);
-
 {
 var boss = false;
 
@@ -50,6 +48,7 @@ for(i = 0; i < 1; i++){
 	obj = atk_wep[i];
 
 	if place_meeting(x,y,obj){
+		dealer_id = instance_place(x, y, obj);
 		type = 0;
 		break;
 		
@@ -60,19 +59,11 @@ for(i = 0; i < 1; i++){
 //Check for magical attack from player
 if type == 404{
 	
-	//blood babby!!!
-
-	if obj_name == "obj_slime"{
-		//poop
-	}
-	else{
-		instance_create_layer(x,y,"IF",obj_blood_part);
-	}
-	
 	for(j = 0; j < 1; j++){
 		obj = satk_wep[j];
 
 		if place_meeting(x,y,obj){
+			dealer_id = instance_place(x, y, obj);
 			type = 1;
 			break;
 		}
@@ -85,6 +76,7 @@ if type == 404{
 		obj = e_wep[k];
 
 		if place_meeting(x,y,obj){
+			dealer_id = instance_place(x, y, obj);
 			switch obj {
 				default:
 					type = 2;
@@ -107,6 +99,7 @@ if type == 404{
 		obj = e_swep[l];
 
 		if place_meeting(x,y,obj){
+			dealer_id = instance_place(x, y, obj);
 			type = 3;
 			break;
 		}
@@ -165,6 +158,8 @@ if not boss {
 		//Activate flash
 		flash = true;
 		damaged = true;
+		
+		scr_blood(dealer_id);
 	
 		if self.object_index == obj_psnt_body or self.object_index == obj_psnt_arch_body {
 			state = "stun";
