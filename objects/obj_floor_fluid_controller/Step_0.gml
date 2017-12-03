@@ -8,7 +8,11 @@ if(not global.pause){
 	
 	//Update fluid type with which player is colliding
 	if instance_exists(global.body) {
-		val = ds_grid_get(global.fluid_grid,(global.body.x mod global.roomwd) div 4,(global.body.y mod global.roomhg + 11) div 4);
+		if(room == rm_level){
+			val = ds_grid_get(global.fluid_grid,(global.body.x mod global.roomwd) div 4,(global.body.y mod global.roomhg + 11) div 4);
+		}else {
+			val = ds_grid_get(global.fluid_grid,(global.body.x mod room_width) div 4,(global.body.y mod room_height + 11) div 4);
+		}
 	
 	}
 

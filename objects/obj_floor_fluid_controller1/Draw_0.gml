@@ -14,36 +14,34 @@ if room == rm_level {
 	c_rm = 0;
 }
 
-//if global.ds_roomgrid[# 1, c_rm] == "B" or room != rm_level{
-	for(i = 0; i < width; i++){
-		for(j = 0; j < height; j++){
-			var val = global.fluid_grid[i,j];
+for(i = 0; i < width; i++){
+	for(j = 0; j < height; j++){
+		var val = global.fluid_grid[i,j];
 		
-			if val > 0{		
-				//What fluid is it
-				if val <= 30 {
-					sprite = spr_slm_creep;
+		if val > 0{		
+			//What fluid is it
+			if val <= 30 {
+				sprite = spr_slm_creep;
 				
-				}
-				
-				//Ticks
-				if not global.pause{
-					val -= 0.1;
-				
-				}
-		
-				//Opacity
-				op = (val mod 30) / 60;
-		
-				draw_set_alpha(op);
-				draw_sprite_ext(sprite,/*scr_fluid_tile(i,j)*/0,off_x + i * 4,off_y + j * 4,1,1,0,c_white,op);
-			
-				global.fluid_grid[i,j] = val;
-		
 			}
+				
+			//Ticks
+			if not global.pause{
+				val -= 0.1;
+				
+			}
+		
+			//Opacity
+			op = (val mod 30) / 60;
+		
+			draw_set_alpha(op);
+			draw_sprite_ext(sprite,/*scr_fluid_tile(i,j)*/0,off_x + i * 4,off_y + j * 4,1,1,0,c_white,op);
+			
+			global.fluid_grid[i,j] = val;
+		
 		}
 	}
-//}
+}
 
 draw_set_alpha(1);
 }

@@ -9,7 +9,7 @@ if(global.room_change){
 }
 
 /* Add enemies to active enemy list */
-if((room == rm_level and obj_view.stopped and global.n_room)){
+if((room == rm_level and obj_view.stopped and global.n_room) || (room == rm_test and global.n_room)){
 	enemy = obj_enemy_parent;
 	scr_get_active_enemies();
 	
@@ -29,6 +29,7 @@ if ds_list_size(global.act_enemy_list) == 0 {
 
 if keyboard_check_released(ord("P")) {
 	var size = ds_list_size(global.act_enemy_list);
+	global.n_room = true;
 	show_debug_message(size);
 	for(var i = 0; i < size; i++){
 		show_debug_message(string(global.act_enemy_list[| i]));
