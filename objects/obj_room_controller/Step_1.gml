@@ -8,6 +8,7 @@ if(pr_column != global.current_column or pr_row != global.current_row){
 	
 }*/
 
+if(room == rm_level){
 global.room_change = false;
 
 if(not collision_rectangle(global.current_column      * global.roomwd - 24,
@@ -24,4 +25,5 @@ if(global.room_change){
 	/// Get current Player room
 	global.current_column = global.body.phy_position_x div global.roomwd;
 	global.current_row    = global.body.phy_position_y div global.roomhg;
+}
 }

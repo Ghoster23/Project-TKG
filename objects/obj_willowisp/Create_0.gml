@@ -5,6 +5,9 @@ alarm[0] = 15 * room_speed;
 
 path = path_add();
 
-image_alpha = 0;
+image_alpha = 0.7;
+image_speed = 1.5;
 
 e_spd = 5;
+alarms[0] = -1;
+prev_image_speed = 0;
