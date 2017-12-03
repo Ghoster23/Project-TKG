@@ -1039,6 +1039,14 @@
             }
         },
         {
+            "Key": "2dba1152-8947-4ea0-91f3-044ff67bacf1",
+            "Value": {
+                "id": "e326c97f-aeea-4b59-bbe0-9991e8e00a5f",
+                "resourcePath": "objects\\obj_blood_part2\\obj_blood_part2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2e4dfa02-7cc3-4dd5-8891-09f9cbbcc243",
             "Value": {
                 "id": "3bc307e3-d594-4c45-a70d-d59adc263c36",
@@ -1319,6 +1327,14 @@
             }
         },
         {
+            "Key": "3a67c650-781b-4592-b5b0-8e7a84231bd3",
+            "Value": {
+                "id": "9ba0d6fe-5961-4720-9aaf-449a145146fb",
+                "resourcePath": "sprites\\spr_blood_burst1\\spr_blood_burst1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3ab3197e-d2c7-47f3-b639-1d4d64d419ef",
             "Value": {
                 "id": "e8729446-1574-47a9-9aca-0e60e0a608e9",
@@ -1363,6 +1379,14 @@
             "Value": {
                 "id": "414526b4-dfbc-4d75-8bef-c7254e24af39",
                 "resourcePath": "sprites\\spr_e_melee\\spr_e_melee.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3edef168-a805-4a40-9aef-77437094772f",
+            "Value": {
+                "id": "9eb6fbe2-f874-4e4d-8440-a02097338e20",
+                "resourcePath": "sprites\\spr_blood_burst2\\spr_blood_burst2.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2364,6 +2388,14 @@
                 "id": "1675c41b-2b42-4ec6-a379-bc7f0dcd7da2",
                 "resourcePath": "datafiles_yy\\roomtype0.csv.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "7006701f-86d5-44d6-8817-5e892c5304da",
+            "Value": {
+                "id": "275cb780-ac48-456a-9290-d74f52e8d711",
+                "resourcePath": "scripts\\scr_part_blood\\scr_part_blood.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -4815,6 +4847,14 @@
             }
         },
         {
+            "Key": "e3750357-177a-44fc-b9ee-db410506b413",
+            "Value": {
+                "id": "469ac0b2-a742-41c0-8145-a7c94a5f7115",
+                "resourcePath": "views\\e3750357-177a-44fc-b9ee-db410506b413.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "e3d16dbd-3703-4b93-9d19-2b429f032901",
             "Value": {
                 "id": "09a57129-fcdc-46c6-a2a4-879f99dd0b34",
@@ -5408,6 +5448,7 @@
         "e3d3b7b9-a4a4-411a-b282-689cd2719c8e",
         "5747e9d2-ce91-4975-9537-e2e35012a8af",
         "9d3c620b-6948-46c1-be06-abf450439aa1",
+        "7006701f-86d5-44d6-8817-5e892c5304da",
         "4dc79388-29f4-4bdd-b7b0-3c7116a86638",
         "ecd69029-6318-4ab9-aeea-20ae9791dce4",
         "2fef601d-cf35-4479-be0f-f2592a2b690f",

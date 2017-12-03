@@ -1,1 +1,2 @@
-image_angle = dir;
+image_angle = dir+ off;
+
