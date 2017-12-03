@@ -1,4 +1,7 @@
 ///@description Damage the enemy
+
+obj_name = object_get_name(object_index);
+
 {
 var boss = false;
 
@@ -56,6 +59,16 @@ for(i = 0; i < 1; i++){
 
 //Check for magical attack from player
 if type == 404{
+	
+	//blood babby!!!
+
+	if obj_name == "obj_slime"{
+		//poop
+	}
+	else{
+		instance_create_layer(x,y,"IF",obj_blood_part);
+	}
+	
 	for(j = 0; j < 1; j++){
 		obj = satk_wep[j];
 
@@ -104,6 +117,7 @@ if(global.status[4,0] and type != 404){
 	type = 4;
 	
 }
+
 
 //Apply damage
 if not boss {
