@@ -56,9 +56,12 @@ if go and not global.pause{
 	rmx = x mod global.roomwd;
 	rmy = y mod global.roomhg;
 	
-	if (x div global.roomwd == global.current_column and y div global.roomhg == global.current_row and room == rm_level) or room != rm_level{
-		ds_grid_set_region(global.fluid_grid,(rmx - 16) div 4,(rmy + 3) div 4,(rmx + 15) div 4,(rmy + 14) div 4,30);
+	if (x div global.roomwd == global.current_column and y div global.roomhg == global.current_row and room == rm_level){
+		ds_grid_set_region(global.fluid_grid,      (rmx - 16) div 4,      (rmy + 3) div 4,    (rmx + 15) div 4,    (rmy + 14) div 4,30);
 		ds_grid_set_region(global.fluid_grid,((rmx - 16) + 4) div 4,((rmy + 3) - 4) div 4,(rmx + 15 - 4) div 4,(rmy + 14 + 4) div 4,30);
+	}else if(room != rm_level){
+		ds_grid_set_region(global.fluid_grid,      (x - 16) div 4,       (y + 3) div 4,     (x + 15) div 4, (y + 14) div 4,30);
+		ds_grid_set_region(global.fluid_grid,((x - 16) + 4) div 4, ((y + 3) - 4) div 4, (x + 15 - 4) div 4, (y + 14 + 4) div 4,30);
 	}
 	
 }else if go{
