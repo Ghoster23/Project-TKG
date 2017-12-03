@@ -23,9 +23,13 @@ if potion_key and global.potion[1] != c_white{
 		break;
 		case c_orange:
 			scr_player_status_apply(7,10 * (global.potion[0] + 1));
+			part_emitter_burst(global.ps_if,global.body_em,global.pt_boinv,10);
 		break;
 	}
 	
 	global.potion[1] = c_white;
-	global.potion[0] = 0;
+}
+
+if(!instance_exists(obj_willowisp) and global.status[3,0]){
+	instance_create_layer(global.body.phy_position_x,global.body.phy_position_y,"Instances",obj_willowisp);
 }

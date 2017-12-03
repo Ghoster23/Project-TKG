@@ -21,7 +21,7 @@ if go and not global.pause{
             
         break;
         case 1:  //Go towards the player
-			scr_define_path(self, global.body);
+			scr_define_path(self, obj_beacon);
 			path = global.ai_path;
 			scr_move_enemy(point_direction(x,y,path_get_point_x(path,1),path_get_point_y(path,1)),1);
 			

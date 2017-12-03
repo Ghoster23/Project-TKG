@@ -1,5 +1,7 @@
 draw_self();
 
+shader_reset();
+
 surface_set_target(global.lighting);
 gpu_set_blendmode(bm_subtract);
 

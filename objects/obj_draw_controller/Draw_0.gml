@@ -47,6 +47,7 @@ if ds_exists(ds_depthgrid, ds_type_grid) {
 					image_blend = c_white;
 				}
 				
+				
 				draw_self();
 				
 				shader_reset();

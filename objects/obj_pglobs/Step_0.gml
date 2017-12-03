@@ -68,15 +68,6 @@ if status_check == true and not global.pause{
     alarm[1] = 1 * room_speed;
 }
 
-///Current Room
-if room == rm_level{
-    if instance_exists(global.body){
-        global.current_column = global.body.x div global.roomwd;
-        global.current_row = global.body.y div global.roomhg;
-        
-    }
-}
-
 ///Abilities
 if not global.pause{
 	switch global.char {

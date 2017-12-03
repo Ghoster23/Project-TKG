@@ -10,7 +10,7 @@ if(type < 30){
 	color = c_red;
 }else if(type < 40){
 	//Midas Favourite - Coins are the only possible drop but are more common
-	color = c_yellow;
+	color = make_color_rgb(255,198,0);
 }else if(type < 50){
 	//Crystal Clear - Spot Mimics
 	color = c_teal;

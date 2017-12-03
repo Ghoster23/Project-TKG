@@ -1,5 +1,5 @@
 /// @description Draw fluids
-if(not global.pause){
+if(not global.pause ){
 var sprite;
 
 if room == rm_level {

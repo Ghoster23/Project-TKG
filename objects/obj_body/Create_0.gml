@@ -31,3 +31,6 @@ i_cd = false;
 for(i = 0; i < 2; i++){
 	alarms[i] = -1;
 }
+
+global.body_em = part_emitter_create(global.ps_if);
+part_emitter_region(global.ps_if,global.body_em,x,x,y,y,pt_shape_circle,ps_distr_gaussian);

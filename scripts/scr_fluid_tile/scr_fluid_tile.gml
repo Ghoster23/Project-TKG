@@ -12,53 +12,54 @@ l = false;
 u_l = false;
 ad = 0;
 
-
+wd = 168;
+hg = 104;
 
 //Adjacents
 ///Up
-if global.fluid_grid[# gx, gy - 1] {
+if gy - 1 >= 0 and global.fluid_grid[# gx, gy - 1] {
 	u = true;
 	ad ++;
 }
 
 ///Up and Right
-if global.fluid_grid[# gx + 1, gy - 1] {
+if gx + 1 < wd and gy - 1 >= 0 and global.fluid_grid[# gx + 1, gy - 1] {
 	u_r = true;
 	ad ++;
 }
 
 ///Right
-if global.fluid_grid[# gx + 1, gy] {
+if gx + 1 < wd and global.fluid_grid[# gx + 1, gy] {
 	r = true;
 	ad ++;
 }
 
 ///Down and Right
-if global.fluid_grid[# gx + 1, gy + 1] {
+if gx + 1 < wd and gy + 1 < hg and global.fluid_grid[# gx + 1, gy + 1] {
 	d_r = true;
 	ad ++;
 }
 
 ///Down
-if global.fluid_grid[# gx, gy + 1] {
+if gy + 1 < hg and global.fluid_grid[# gx, gy + 1] {
 	d = true;
 	ad ++;
 }
 
 ///Down and Left
-if global.fluid_grid[# gx - 1, gy + 1] {
+if gx - 1 >= 0 and gy + 1 < hg and global.fluid_grid[# gx - 1, gy + 1] {
 	d_l = true;
 	ad ++;
 }
 
 ///Left
-if global.fluid_grid[# gx - 1, gy] {
+if gx - 1 >= 0 and global.fluid_grid[# gx - 1, gy] {
 	l = true;
 	ad ++;
 }
 
 ///Up and Left
-if global.fluid_grid[# gx - 1, gy - 1] {
+if gx - 1 >= 0 and gy - 1 >= 0 and global.fluid_grid[# gx - 1, gy - 1] {
 	u_l = true;
 	ad ++;
 }

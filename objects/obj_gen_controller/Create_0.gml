@@ -34,7 +34,7 @@ right = false;
 left = false;
 
 ///Base Room
-instance_create_layer(gx+(global.roomwd div 2),gy+(global.roomhg div 2),"IF",obj_view);
+instance_create_layer(gx+(global.roomwd div 2),gy+(global.roomhg div 2)-16,"IF",obj_view);
 
 scr_base_roomgn();
 

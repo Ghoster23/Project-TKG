@@ -91,6 +91,7 @@ switch type{
 		break;
 	//speacial room
 	case 17:
+		instance_create_layer(gx+(roomwd/2),gy+(roomhg/2),"Instances",obj_beacon);
 		exit;
 		break;
 	//boss room	

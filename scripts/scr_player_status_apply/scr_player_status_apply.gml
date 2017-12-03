@@ -3,7 +3,7 @@
 ///@param Counter
 {
 	var status = argument[0];
-	var count = argument[1];
+	var count  = argument[1];
 	
 	if(global.status[status,0] < count){
 		switch status{

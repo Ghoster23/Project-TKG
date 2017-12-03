@@ -14,4 +14,5 @@ if room == rm_level {
 }
 
 alarms[0] = -1;
+alarms[1] = -1;
 prev_image_speed = 0;

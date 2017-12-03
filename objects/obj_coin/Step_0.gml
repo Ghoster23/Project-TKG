@@ -8,3 +8,13 @@ if place_meeting(x,y,global.body) {
 	instance_destroy();
 	
 }
+
+if(global.pause and image_speed != 0){
+	prev_image_speed = image_speed;
+	image_speed = 0;
+}
+
+if(not global.pause and prev_image_speed != 0){
+	image_speed = prev_image_speed;
+	prev_image_speed = 0;
+}

@@ -10,6 +10,9 @@ image_blend = c_aqua;
 
 alarm[0] = 6 * room_speed;
 
+prev_image_speed = 0;
+alarms[0] = -1;
+
 hspd = 0;
 vspd = 0;
 

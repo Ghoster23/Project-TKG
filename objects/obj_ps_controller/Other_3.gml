@@ -11,6 +11,8 @@ part_type_destroy(global.pt_embers);
 part_type_destroy(global.pt_shine);
 part_type_destroy(global.pt_danger);
 part_type_destroy(global.pt_way);
+part_type_destroy(global.pt_boinv);
+part_type_destroy(global.pt_willowisp);
 part_system_destroy(global.ps);
 part_system_destroy(global.ps_if);
 part_system_destroy(global.ps_ps);

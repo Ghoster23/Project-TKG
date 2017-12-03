@@ -13,4 +13,4 @@ for(i = 0; i < room_height; i += 32){
 
 draw_set_alpha(1);
 
-//draw_path(global.ai_path,x,y,true);
+draw_path(global.ai_path,x,y,true);

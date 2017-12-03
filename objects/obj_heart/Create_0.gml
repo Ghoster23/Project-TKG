@@ -1,6 +1,8 @@
 impact = true;
 image_speed = 0;
 
+size = 0;
+
 event_inherited();
 
 i = irandom(100);

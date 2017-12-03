@@ -16,12 +16,14 @@ switch room {
 			x = ox + random_range(-global.shake,global.shake);
 			y = oy + random_range(-global.shake,global.shake);
 			show_debug_message(global.shake);
+			
 		}else {
 			x = room_width div 2;
 			y = global.body.phy_position_y;
 			ox = x;
 			oy = y;
 			global.shake = 0;
+			
 		}
 		
 		global.shake = global.shake * 0.6;

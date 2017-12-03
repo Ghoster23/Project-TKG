@@ -1,6 +1,10 @@
 /// @description Fluid effects
 if(not global.pause){
-	scr_pause_end(1);
+	scr_pause_end(2);
+	
+	if(global.room_change and ds_exists(global.fluid_grid,ds_type_grid)){
+		ds_grid_clear(global.fluid_grid,0);
+	}
 	
 	//Update fluid type with which player is colliding
 	if instance_exists(global.body) {
@@ -35,6 +39,6 @@ if(not global.pause){
 	}
 	
 }else {
-	scr_pause_start(1);
+	scr_pause_start(2);
 	
 }

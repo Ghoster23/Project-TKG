@@ -32,6 +32,8 @@ scr_part_ember_init();
 scr_part_shine_init();
 scr_part_danger_init();
 scr_part_way_init();
+scr_part_brewoinv_init();
+scr_part_willowisp_init();
 
 part_system_layer(global.ps,   "BH");
 part_system_layer(global.ps_if,"IF");

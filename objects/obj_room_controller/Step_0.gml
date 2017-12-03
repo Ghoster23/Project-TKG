@@ -1,26 +1,22 @@
-/* Add enemies to active enemy list */
-if((room == rm_level and obj_view.stopped) or room != rm_level){
-	if global.n_room{
-		global.n_room = false;
-	
-		enemy = obj_enemy_parent;
-		scr_get_active_enemies();
-		enemy = obj_flying_enemy_parent;
-		scr_get_active_enemies();
-	
-	}
-}
-
 /* Things to do on room change */
 if(global.room_change){
-	if(room == rm_level and obj_view.stopped and global.status[3,0]){
-		path = scr_rm2rm_path(global.current_row * 8 + global.current_column,global.rm_sp_id);
-		global.room_change = false;
+	//Check path to the special room if potion is active
+	if(room == rm_level and global.status[3,0]){
+		//path = scr_rm2rm_path(global.current_row * 8 + global.current_column,global.rm_sp_id);
+
 	}
 	
-	if(ds_exists(global.fluid_grid,ds_type_grid)){
-		ds_grid_clear(global.fluid_grid,0);
-	}
+}
+
+/* Add enemies to active enemy list */
+if((room == rm_level and obj_view.stopped and global.n_room)){
+	enemy = obj_enemy_parent;
+	scr_get_active_enemies();
+	
+	enemy = obj_flying_enemy_parent;
+	scr_get_active_enemies();
+	
+	global.n_room = false;
 }
 
 if ds_list_size(global.act_enemy_list) == 0 {

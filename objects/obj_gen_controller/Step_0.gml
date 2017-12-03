@@ -210,13 +210,12 @@ while roomgenerated < roomstogenerate{
 				scr_roomgn(typeroom);
             
 		        ///Doors for normal rooms
-				if typeroom < 15{
+				if typeroom < 20{
 			        if up {
-			            if(!instance_position((gx+(global.roomwd/2)),(gy-32),obj_door_d)){
+			            if(!instance_position((gx+(global.roomwd/2)),(gy-32),obj_vcorridor)){
 							instance_destroy(instance_nearest(gx+(global.roomwd/2),(gy-2),obj_wall_down_fillin));
 							instance_destroy(instance_nearest(gx+(global.roomwd/2),(gy+2),obj_wall_up_fillin));
-			                //instance_create_layer(gx+(global.roomwd/2),(gy-32),"Instances",obj_door_d);
-			                //instance_create_layer(gx+(global.roomwd/2),gy+((32*1.5)+11),"Instances",obj_door_u);
+			                instance_create_layer(gx+(global.roomwd/2)-48,(gy-64),"PS",obj_vcorridor);
 							
 							global.ds_roomgrid[# 3, room_ - 8] = grid_array_set_value(global.ds_roomgrid[# 3, room_ - 8],2,1);
 							global.ds_roomgrid[# 3, room_] = grid_array_set_value(global.ds_roomgrid[# 3, room_],0,1);
@@ -224,11 +223,11 @@ while roomgenerated < roomstogenerate{
 			        }
 					
 			        if left {
-			            if(!instance_position((gx-33),(gy+(global.roomwd/2)),obj_door_l)){
+			            if(!instance_position(gx,(gy+(global.roomwd/2)),obj_hcorridor)){
 							instance_destroy(instance_nearest(gx+2,gy+(global.roomwd/2),obj_wall_left_fillin));
 							instance_destroy(instance_nearest(gx-2,gy+(global.roomwd/2),obj_wall_right_fillin));
-			                //instance_create_layer(gx-34,gy+(global.roomhg/2),"Instances",obj_door_l);
-			                //instance_create_layer(gx+33,gy+(global.roomhg/2),"Instances",obj_door_r);
+			                instance_create_layer(gx-32,gy+(global.roomhg/2)-96,"Instances",obj_hcorridor);
+							instance_create_layer(gx-32,gy+(global.roomhg/2)+32,"PS",obj_hcorridorB);
 							
 							global.ds_roomgrid[# 3, room_ - 1] = grid_array_set_value(global.ds_roomgrid[# 3, room_ - 1],3,1);
 							global.ds_roomgrid[# 3, room_] = grid_array_set_value(global.ds_roomgrid[# 3, room_],1,1);
@@ -236,11 +235,10 @@ while roomgenerated < roomstogenerate{
 			        } 
 					
 			        if down {
-			            if(!instance_position(gx+(global.roomwd/2),(gy+global.roomhg-32),obj_door_d)){
+			            if(!instance_position(gx+(global.roomwd/2),(gy+global.roomhg-32),obj_vcorridor)){
 							instance_destroy(instance_nearest(gx+(global.roomwd/2),gy+global.roomhg-2,obj_wall_down_fillin));
 							instance_destroy(instance_nearest(gx+(global.roomwd/2),gy+global.roomhg+2,obj_wall_up_fillin));
-			                //instance_create_layer(gx+(global.roomwd/2),(gy+global.roomhg-32),"Instances",obj_door_d);
-			                //instance_create_layer(gx+(global.roomwd/2),gy+global.roomhg+((32*1.5)+11),"Instances",obj_door_u);
+			                instance_create_layer(gx+(global.roomwd/2)-48,(gy+global.roomhg-64),"PS",obj_vcorridor);
 							
 							global.ds_roomgrid[# 3, room_ + 8] = grid_array_set_value(global.ds_roomgrid[# 3, room_ + 8],0,1);
 							global.ds_roomgrid[# 3, room_] = grid_array_set_value(global.ds_roomgrid[# 3, room_],2,1);
@@ -248,11 +246,11 @@ while roomgenerated < roomstogenerate{
 			        }
 					
 			        if right {
-			            if(!instance_position((gx+global.roomwd+16),(gy+(global.roomhg/2)),obj_door_r)){
+			            if(!instance_position(gx+global.roomwd,(gy+(global.roomhg/2)),obj_hcorridor)){
 							instance_destroy(instance_nearest(gx+global.roomwd-2,gy+(global.roomhg/2),obj_wall_right_fillin));
 							instance_destroy(instance_nearest(gx+global.roomwd+2,gy+(global.roomhg/2),obj_wall_left_fillin));
-			                //instance_create_layer((gx+global.roomwd-34),(gy+(global.roomhg/2)),"Instances",obj_door_l);
-			                //instance_create_layer((gx+global.roomwd+33),(gy+(global.roomhg/2)),"Instances",obj_door_r);
+			                instance_create_layer((gx+global.roomwd-32),(gy+(global.roomhg/2)-96),"Instances",obj_hcorridor);
+							instance_create_layer((gx+global.roomwd-32),(gy+(global.roomhg/2)+32),"PS",obj_hcorridorB);
 							
 							global.ds_roomgrid[# 3, room_ + 1] = grid_array_set_value(global.ds_roomgrid[# 3, room_ + 1],1,1);
 							global.ds_roomgrid[# 3, room_] = grid_array_set_value(global.ds_roomgrid[# 3, room_],3,1);
@@ -313,6 +311,7 @@ if once == false {
 	
 	once = true;
 	global.gen = false;
+	instance_create_layer(0,0,"IF",obj_room_controller);
 	instance_create_layer(0,0,"IF",obj_AI_controller);
 	instance_create_layer(0,0,"PS",obj_minimap_controller);
 	instance_create_layer(0,0,"BH",obj_floor_fluid_controller);
