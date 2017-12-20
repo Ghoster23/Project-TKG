@@ -23,9 +23,20 @@
             "enumb": 0,
             "eventtype": 0,
             "m_owner": "83dd4390-b20e-4e09-bf51-088335d48637"
+        },
+        {
+            "id": "99c71f39-1ff6-4a50-98ad-df824d9f09ad",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
+            "m_owner": "83dd4390-b20e-4e09-bf51-088335d48637"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
+    "overriddenProperties": null,
     "parentObjectId": "b8453c71-24f2-4852-a377-e9d9f6c7873d",
     "persistent": false,
     "physicsAngularDamping": 0.1,
@@ -40,35 +51,36 @@
     "physicsShape": 1,
     "physicsShapePoints": [
         {
-            "id": "4e0fadfe-97ec-4f02-ab7e-95d8eb7e8659",
+            "id": "41c8960b-140b-4b81-86fb-0a400207739a",
             "modelName": "GMPoint",
             "mvc": "1.0",
-            "x": 0,
+            "x": -16,
             "y": 32
         },
         {
-            "id": "72a53bfe-4378-43b9-ad9a-637fc902d1ba",
+            "id": "8f084a26-0853-4fb5-8aff-652d05b26ba8",
             "modelName": "GMPoint",
             "mvc": "1.0",
-            "x": 96,
+            "x": 114,
             "y": 32
         },
         {
-            "id": "6b1d15e5-08e2-43af-9f48-970e9c48ec53",
+            "id": "da8d6f61-6f52-4cbd-a02e-7d520a6cec79",
             "modelName": "GMPoint",
             "mvc": "1.0",
-            "x": 96,
+            "x": 114,
             "y": 64
         },
         {
-            "id": "331d8196-9620-4bb1-95fd-f9b86b01a9ba",
+            "id": "c795342b-0f50-488b-8fbb-e0e1133967f1",
             "modelName": "GMPoint",
             "mvc": "1.0",
-            "x": 0,
+            "x": -16,
             "y": 64
         }
     ],
     "physicsStartAwake": true,
+    "properties": null,
     "solid": true,
     "spriteId": "09f71d36-7739-4fa6-961d-0f5ce4f51c50",
     "visible": true
