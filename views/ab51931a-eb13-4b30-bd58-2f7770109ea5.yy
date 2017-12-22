@@ -10,7 +10,10 @@
         "3dca46e7-2351-4854-951a-4dd804288677",
         "84d1a246-9ec5-4065-ae72-ae70be79fdbc",
         "8191645c-4cae-4e1f-9694-5320aebe464c",
-        "e78b823f-3de8-4cfb-9804-5406ea042b08"
+        "0b86c613-a840-415a-93c1-708ea147fca4",
+        "588c0c31-5ecc-4db9-a5f0-eb0ea0b83e50",
+        "41dd2579-c7e7-4b87-93c3-9519ff711f56",
+        "1040dfd1-e4a8-4df3-b75a-4aeb6d639741"
     ],
     "filterType": "GMSprite",
     "folderName": "peasent",

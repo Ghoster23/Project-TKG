@@ -1,8 +1,8 @@
 /// @description Inicialise the enemy
 event_inherited();
-instance_create_layer(x,y,layer,obj_psnt_head);
 solid = false;
 visible = false;
+draw_script=scr_psnt_draw;
 
 flash = false;
 cd_swing = false;
@@ -18,19 +18,47 @@ yy = y;
 pos = 1;
 path = path_add();
 
+//get number of specific parts so its cool to add more later and it wont ruin anything 
+n_faces=sprite_get_number(spr_psnt_ff);
+n_hairs=sprite_get_number(spr_psnt_hf);
+n_skin_colors=sprite_get_number(spr_head);
+
+//values that need to be manually updated if changed to account for more 
+n_body_types = 4; 
+n_hair_colors = 7;
+n_body_colors = 4;
+
+//pick the phisical characteristics at random
+face = irandom(n_faces);
+hair = irandom(n_hairs);
+skin_color = irandom(n_skin_colors);
+body_type = irandom(n_body_types-1);
+hair_color = irandom(n_hair_colors-1);
+body_color = irandom(n_body_colors-1);
+
+//set sprites for body
+
+//get string for body type
+var b_type;
+b_type[0] ="b1";
+b_type[1] ="b2";
+b_type[2] ="b3";
+b_type[3] ="b4";
+
+bodyf_sprite=asset_get_index("spr_psnt_"+b_type[body_type]+"f");
+bodys_sprite=asset_get_index("spr_psnt_"+b_type[body_type]+"s");
+bodyb_sprite=asset_get_index("spr_psnt_"+b_type[body_type]+"b");
+body_dead_sprite =asset_get_index("spr_psnt_"+b_type[body_type]+"_dead");
+
+sprite_index = bodyf_sprite;
+
+//create head
+instance_create_layer(x,y,layer,obj_psnt_head);
 head = instance_nearest(x,y,obj_psnt_head);
 
-gender = head.gender;
-opt = head.opt;
+//create weapon
 weapon = instance_create_layer(x,y,layer,obj_e_melee);
-
-if gender == 0{
-    sprite_index = spr_peasent_f_f;
-	head.sprite_index = spr_peasent_hf_f;
-}else {
-    sprite_index = spr_peasent_m_f;
-	head.sprite_index = spr_peasent_h_f
-}
+weapon.skin_color = skin_color;
 
 //Stats
 e_mhp = 20;
