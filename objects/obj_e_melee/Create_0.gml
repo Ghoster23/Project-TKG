@@ -1,5 +1,4 @@
 owner = instance_nearest(x,y,obj_psnt_body);
-wielded = true;
 draw_script = scr_psnt_draw;
 allow = true;
 alarm_0 = -1;

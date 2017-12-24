@@ -29,9 +29,9 @@ n_hair_colors = 7;
 n_body_colors = 4;
 
 //pick the phisical characteristics at random
-face = irandom(n_faces);
-hair = irandom(n_hairs);
-skin_color = irandom(n_skin_colors);
+face = irandom(n_faces-1);
+hair = irandom(n_hairs-1);
+skin_color = irandom(n_skin_colors-1);
 body_type = irandom(n_body_types-1);
 hair_color = irandom(n_hair_colors-1);
 body_color = irandom(n_body_colors-1);
@@ -53,8 +53,7 @@ body_dead_sprite =asset_get_index("spr_psnt_"+b_type[body_type]+"_dead");
 sprite_index = bodyf_sprite;
 
 //create head
-instance_create_layer(x,y,layer,obj_psnt_head);
-head = instance_nearest(x,y,obj_psnt_head);
+head=instance_create_layer(x,y,layer,obj_psnt_head);
 
 //create weapon
 weapon = instance_create_layer(x,y,layer,obj_e_melee);

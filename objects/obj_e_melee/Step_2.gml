@@ -1,10 +1,11 @@
 ///@description Follow the body
-
 image_speed = 0;
-y=owner.y+2;
-x=owner.x;
+
 
 if instance_exists(owner){
+	
+	y=owner.y+2;
+	x=owner.x;
 	
 	switch owner.d {
     case 0:
