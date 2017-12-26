@@ -49,7 +49,6 @@ if not global.pause {
 		//atacking
 		if attack_key and allow and swing=="no"{
 		    allow = false;
-		    alarm[1] = 0.5 * room_speed; 
 			
 			if off==0{
 				swing="right";
@@ -80,20 +79,22 @@ if not global.pause {
 		
 		if swing=="right"{
 			off=scr_aproach(off,30,4);
-			if off==30 and !attack_key{
+			if !attack_key{
 				instance_create_layer(x, y, "IF",obj_swing); 
 				scr_sound(snd_sword_slash);
 				off=180;
+				alarm[1] = 0.4 * room_speed; 
 				swing="no";
 				
 			}
 		}
 		if swing=="left"{
 			off=scr_aproach(off,150,4);
-			if off==150 and !attack_key{
+			if !attack_key{
 				instance_create_layer(x, y, "IF",obj_swing); 
 				scr_sound(snd_sword_slash);
 				off=0;
+				alarm[1] = 0.4 * room_speed; 
 				swing="no";
 				
 			}
