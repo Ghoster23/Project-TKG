@@ -1,21 +1,15 @@
 event_inherited();
 image_speed = 0;
 draw_script=scr_psnt_draw;
-body = instance_nearest(x,y,obj_psnt_body)
+//body = instance_nearest(x,y,obj_psnt_body);
 
 flash = false;
-
-//get vars from body
-face = body.face;
-hair = body.hair;
-skin_color = body.skin_color;
-hair_color = body.hair_color;
 
 //set sprites
 
 //here we set the head to the respective skin color
 sprite_index = spr_psnt_head;
-image_index = skin_color;
+
 //here we set the face, hair sprite    
 hairf_sprite = spr_psnt_hf;
 hairs_sprite = spr_psnt_hs;

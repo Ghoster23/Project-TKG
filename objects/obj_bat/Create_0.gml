@@ -1,4 +1,4 @@
- /// @description Inicialise the enemy
+           /// @description Inicialise the enemy
 event_inherited();
 image_speed=1.5;
 solid = false;

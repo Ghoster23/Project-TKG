@@ -1,7 +1,7 @@
 /*-------------------------------*/
 /*use this code to draw psnt body*/
 /*-------------------------------*/
-if (self.object_index == obj_psnt_body){
+if (self.object_index == obj_psnt_body) or (self.object_index == obj_psnt_arch_body){
 
 	v_offset= shader_get_uniform(shdr_palette_swap, "Offset");
 	v_normal=body_color/256;
@@ -27,6 +27,12 @@ if (self.object_index == obj_psnt_body){
 	
 	//draw head
 	draw_self();
+	
+	//see if we are dealing with an archer
+	archer = false;
+	if body.object_index==obj_psnt_arch_body{
+		var archer = true;
+	}
 
 	v_offset= shader_get_uniform(shdr_palette_swap, "Offset");
 	palette_swap_sampler = shader_get_sampler_index(shdr_palette_swap,"Palette");
@@ -56,12 +62,14 @@ if (self.object_index == obj_psnt_body){
 			draw_sprite_ext(hairs_sprite,hair,x,y,1,1,0,c_white,1); //hair
 			shader_reset();
 			
-			v_normal=skin_color/256;
-			shader_set(shdr_palette_swap);
-			texture_set_stage(palette_swap_sampler, texture_palette);
-			shader_set_uniform_f(v_offset, v_normal);
-			draw_sprite_ext(spr_e_offhand,0,x,y,1,1,0,c_white,1); //hand
-			shader_reset();
+			if(!archer){ 
+				v_normal=skin_color/256;
+				shader_set(shdr_palette_swap);
+				texture_set_stage(palette_swap_sampler, texture_palette);
+				shader_set_uniform_f(v_offset, v_normal);
+				draw_sprite_ext(spr_e_offhand,0,x,y,1,1,0,c_white,1); //hand
+				shader_reset();
+			}
 	        break;
   
 	    case "up": //Up
@@ -73,12 +81,14 @@ if (self.object_index == obj_psnt_body){
 			draw_sprite_ext(hairb_sprite,hair,x,y,1,1,0,c_white,1); //hair
 			shader_reset();
 			
-			v_normal=skin_color/256;
-			shader_set(shdr_palette_swap);
-			texture_set_stage(palette_swap_sampler, texture_palette);
-			shader_set_uniform_f(v_offset, v_normal);
-			draw_sprite_ext(spr_e_offhand,0,x,y,-1,1,0,c_white,1); //hand
-			shader_reset();
+			if(!archer){ 
+				v_normal=skin_color/256;
+				shader_set(shdr_palette_swap);
+				texture_set_stage(palette_swap_sampler, texture_palette);
+				shader_set_uniform_f(v_offset, v_normal);
+				draw_sprite_ext(spr_e_offhand,0,x,y,-1,1,0,c_white,1); //hand
+				shader_reset();
+			}
 	        break;
 		
 	    case "right": //Right
@@ -104,13 +114,14 @@ if (self.object_index == obj_psnt_body){
 			draw_sprite_ext(hairs_sprite,hair,x,y,-1,1,0,c_white,1); //hair
 			shader_reset();
 			
-			v_normal=skin_color/256;
-			shader_set(shdr_palette_swap);
-			texture_set_stage(palette_swap_sampler, texture_palette);
-			shader_set_uniform_f(v_offset, v_normal);
-			draw_sprite_ext(spr_e_offhand,0,x,y,1,1,0,c_white,1); //hand
-			shader_reset();
-			
+			if(!archer){ 
+				v_normal=skin_color/256;
+				shader_set(shdr_palette_swap);
+				texture_set_stage(palette_swap_sampler, texture_palette);
+				shader_set_uniform_f(v_offset, v_normal);
+				draw_sprite_ext(spr_e_offhand,0,x,y,1,1,0,c_white,1); //hand
+				shader_reset();
+			}
 	        break;
 		
 	    case "down": //Down
@@ -136,13 +147,14 @@ if (self.object_index == obj_psnt_body){
 			draw_sprite_ext(hairf_sprite,hair,x,y,1,1,0,c_white,1); //hair
 			shader_reset();
 			
-			v_normal=skin_color/256;
-			shader_set(shdr_palette_swap);
-			texture_set_stage(palette_swap_sampler, texture_palette);
-			shader_set_uniform_f(v_offset, v_normal);
-			draw_sprite_ext(spr_e_offhand,0,x,y,1,1,0,c_white,1); //hand
-			shader_reset();
-			
+			if(!archer){ 
+				v_normal=skin_color/256;
+				shader_set(shdr_palette_swap);
+				texture_set_stage(palette_swap_sampler, texture_palette);
+				shader_set_uniform_f(v_offset, v_normal);
+				draw_sprite_ext(spr_e_offhand,0,x,y,1,1,0,c_white,1); //hand
+				shader_reset();
+			}
 	        break;
 	}
 
@@ -153,7 +165,7 @@ if (self.object_index == obj_psnt_body){
 /*---------------------------------------*/
 } else if (self.object_index == obj_e_melee){
 	
-	//draw head
+	//draw melee weapon
 	draw_self();
 		
 	//hand that holds weapon
@@ -166,6 +178,28 @@ if (self.object_index == obj_psnt_body){
 	texture_set_stage(palette_swap_sampler, texture_palette);
 	shader_set_uniform_f(v_offset, v_normal);
 	draw_sprite_ext(spr_e_hand,0,x,y,image_xscale,1,image_angle,c_white,1);
+	shader_reset();
+		
+
+
+/*---------------------------------------*/
+/*use this code to draw psnt bow*/
+/*---------------------------------------*/
+} else if (self.object_index == obj_e_bow){
+	
+	//draw bow
+	draw_self();
+		
+	//hands that holds bow
+	v_offset= shader_get_uniform(shdr_palette_swap, "Offset");
+	palette_swap_sampler = shader_get_sampler_index(shdr_palette_swap,"Palette");
+	texture_palette = sprite_get_texture(palette_psnt_body,0);
+		
+	v_normal=skin_color/256;
+	shader_set(shdr_palette_swap);
+	texture_set_stage(palette_swap_sampler, texture_palette);
+	shader_set_uniform_f(v_offset, v_normal);
+	draw_sprite_ext(spr_e_arch_hands,image_index,x,y,image_xscale,image_yscale,image_angle,c_white,1);
 	shader_reset();
 		
 }

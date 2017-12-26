@@ -54,6 +54,17 @@ sprite_index = bodyf_sprite;
 
 //create head
 head=instance_create_layer(x,y,layer,obj_psnt_head);
+with head{
+	body = instance_nearest(x,y,obj_psnt_body);
+	//get vars from body
+	face = body.face;
+	hair = body.hair;
+	skin_color = body.skin_color;
+	hair_color = body.hair_color;
+	
+	image_index = skin_color;
+	
+}
 
 //create weapon
 weapon = instance_create_layer(x,y,layer,obj_e_melee);

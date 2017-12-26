@@ -1,6 +1,6 @@
 image_speed=0;
 
-draw_script=scr_psnt_draw;
+//draw_script=scr_psnt_draw;
 
 body_type=0;
 body_color=0;

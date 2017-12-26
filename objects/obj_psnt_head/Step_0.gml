@@ -11,5 +11,4 @@ if global.pause == false and instance_exists(body){
 	
 }else if not instance_exists(body) {
 	instance_destroy();
-	
 }

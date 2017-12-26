@@ -1,8 +1,6 @@
 /// @description Inicialise the enemy
 event_inherited();
 
-//draw_script=scr_santa_slimes;
-
 image_speed=.2;
 solid = false;
 visible = false;
