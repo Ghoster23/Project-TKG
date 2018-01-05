@@ -1,3 +1,5 @@
+draw_sprite_ext(sprite_index, 0,0,0,m,m,0,c_white,1);
+
 draw_set_halign(fa_left);
 
 draw_text_transformed(x,y-48,"Enemies defeated: " + string(global.kld_enemies),1,1,0);

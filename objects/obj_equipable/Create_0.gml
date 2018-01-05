@@ -8,6 +8,9 @@ t = 0;
 inc = 2;
 amp = 4;
 
+offs = 32;
+offset = true;
+
 while global.equipable[select] {
 	select = irandom(15);
 }

@@ -51,6 +51,13 @@ if ds_exists(ds_depthgrid, ds_type_grid) {
 					image_blend = c_white;
 				}
 				
+				if(object_get_parent(instanceID.object_index) == obj_interactable_parent and instanceID.in_range){
+					shader_set(sh_outline);
+					shader_set_uniform_f(upH,texelH);
+					shader_set_uniform_f(upW,texelW);
+					image_blend = c_white;
+				}
+				
 				
 				draw_self();
 				

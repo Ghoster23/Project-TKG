@@ -70,10 +70,21 @@ if check == true{
 				alarm[0] = 0.5 * room_speed;
 			}
 		break;
+		
+		case "death":
+		if menu_key {
+			game_restart();
+		}
+		
+		break;
+	}
+	
+	if(room == rm_dead){
+		state = "death";
 	}
 }
 
-if state != "closed"{
+if state != "closed" || obj_pglobs.dead {
 	global.pause = true;
 }else {
 	global.pause = false;

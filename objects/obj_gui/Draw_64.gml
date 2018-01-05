@@ -1,3 +1,4 @@
+if(!obj_pglobs.dead){
 m = display_get_gui_width() / global.roomwd;
 
 ///Draw emblem
@@ -138,4 +139,5 @@ switch global.char {
 			o_v = global.p_will;
 		}
 	break;
+}
 }

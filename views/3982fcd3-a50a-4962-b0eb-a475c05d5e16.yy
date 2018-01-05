@@ -8,7 +8,8 @@
         "00177ef7-23c9-4828-a818-dbac8440709d",
         "901e8e99-ff73-4f4e-9d3c-6760a75b5668",
         "ebc6a388-1559-4998-8b41-180c196cc6cf",
-        "3a613816-e7a0-4e7c-88cd-89cc2d71f05d"
+        "3a613816-e7a0-4e7c-88cd-89cc2d71f05d",
+        "2d2e7746-7e4f-4039-a069-2154baaceef4"
     ],
     "filterType": "GMSprite",
     "folderName": "In Game Menus",
