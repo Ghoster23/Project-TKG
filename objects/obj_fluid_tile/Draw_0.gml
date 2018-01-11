@@ -1,0 +1,39 @@
+if(active){
+	active = false;
+	
+	for(var i = 1; i < 9; i++){
+		for(var j = 1; j < 9; j++){
+			var val = tiles[i,j];
+					
+			if val > 0{
+				active = true;
+				
+				//What fluid is it
+				if val <= 30 {
+					sprite = spr_slm_creep;
+				
+				}
+				
+				//Ticks
+				if not global.pause{
+					val -= 0.1;
+				
+				}
+		
+				//Opacity
+				op = (val mod 30) / 60;
+		
+				draw_set_alpha(op);
+				var img = scr_fluid_tile_v21( i, j);
+				
+				draw_sprite_ext(sprite, img, x + i * 4, y + j * 4,1,1,0,c_white,op);
+			
+				tiles[i,j] = val;
+		
+			}else if val < 0{
+				tiles[i,j] = 0;
+			
+			}
+		}
+	}
+}

@@ -87,6 +87,11 @@ if type == 404{
 						type = 2;
 					}
 				break;
+				case obj_explosion:
+					if obj.image_index < 3 {
+						type = 2;
+					}
+				break;
 			}
 			break;
 		}

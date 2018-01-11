@@ -1,6 +1,6 @@
 /// @description In-Game Menu
 scr_unique_inst();
-state = "closed";
+state = "generation";
 check = true;
 m = display_get_gui_width() / global.roomwd;
 box_wd = 4;

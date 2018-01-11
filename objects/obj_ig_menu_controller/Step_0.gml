@@ -72,20 +72,31 @@ if check == true{
 		break;
 		
 		case "death":
-		if menu_key {
-			game_restart();
-		}
+			if menu_key {
+				game_restart();
+			}
 		
+		break;
+		
+		case "generation":
+			if(!instance_exists(obj_gen_controller)){
+				state = "closed";
+			}
 		break;
 	}
 	
 	if(room == rm_dead){
 		state = "death";
 	}
+
 }
 
-if state != "closed" || obj_pglobs.dead {
+if state != "closed" || obj_pglobs.dead || state = "generation" {
 	global.pause = true;
 }else {
 	global.pause = false;
+}
+
+if(global.gen){
+	state = "generation";
 }

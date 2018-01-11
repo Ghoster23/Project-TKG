@@ -5,10 +5,6 @@ obj_name = object_get_name(object_index);
 dealer_id = argument[0];
 dealer_name = object_get_name(dealer_id.object_index);
 
-show_debug_message(obj_name);
-show_debug_message(dealer_id);
-show_debug_message(dealer_name);
-
 switch obj_name {
 	
 	case "obj_slm_cr": //slime

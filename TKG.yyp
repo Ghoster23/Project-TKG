@@ -495,6 +495,14 @@
             }
         },
         {
+            "Key": "1533d2f8-0cf6-4495-98f4-f11ef864645d",
+            "Value": {
+                "id": "3d5e9588-959f-4f6b-bffb-0a1f01578ee1",
+                "resourcePath": "objects\\obj_fluid_tile\\obj_fluid_tile.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "16162d98-47f7-4203-ba62-4c7ebba21aa2",
             "Value": {
                 "id": "2d5d164a-f9a8-4c32-a076-07eeb65b8990",
@@ -2911,6 +2919,14 @@
             }
         },
         {
+            "Key": "7d0ddea0-e289-4b26-884b-7eac20c9fbd9",
+            "Value": {
+                "id": "b3635c98-d8b5-4c27-9f74-adc513d893a6",
+                "resourcePath": "scripts\\scr_fluid_tile_v21\\scr_fluid_tile_v21.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "7d1deccc-d611-4b91-98d6-e1427c71f45c",
             "Value": {
                 "id": "520ffc6d-34d3-45de-aaf0-233edd9b0f1e",
@@ -3927,6 +3943,14 @@
             }
         },
         {
+            "Key": "aff192b4-fe63-400a-92e6-70546c995bbd",
+            "Value": {
+                "id": "0f38f9f1-0661-47e4-9afb-05723beee22d",
+                "resourcePath": "sprites\\spr_slm_creep1\\spr_slm_creep1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "affb7018-f9d3-4759-9dbf-117a84c44533",
             "Value": {
                 "id": "bbc2cf77-bf34-4083-b10b-a2df377cf43f",
@@ -4300,6 +4324,14 @@
                 "id": "f6a20a9f-a1be-4f75-85e4-ea527a031590",
                 "resourcePath": "datafiles_yy\\roomtype12.csv.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "bf54cc9b-3395-457b-bda0-b115d6f63e33",
+            "Value": {
+                "id": "17131fb9-06db-44a6-b65f-c306fd08c070",
+                "resourcePath": "scripts\\scr_fluid_tile_req\\scr_fluid_tile_req.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -5870,6 +5902,8 @@
         "c57fe3f5-74a6-4ec9-8e59-050150c5d66e",
         "dbad1b9e-be7e-4a53-83d3-131bc14572c2",
         "b1feb13e-e11b-44fa-afff-708cf50a1a81",
+        "bf54cc9b-3395-457b-bda0-b115d6f63e33",
+        "7d0ddea0-e289-4b26-884b-7eac20c9fbd9",
         "063a1891-e073-4594-8f5d-a53fe1f1a34b",
         "161b4ddc-68e0-4b4a-9baa-aa45c1af3dc4",
         "ce4b4c78-19ab-49d7-9eec-273e7085983e",

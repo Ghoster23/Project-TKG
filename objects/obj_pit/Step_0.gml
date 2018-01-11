@@ -12,4 +12,5 @@ if not once and not global.gen {
 	if(nDown) count += 4;
 	if(nLeft) count += 8;
 	image_index = count;
+	once = true;
 }

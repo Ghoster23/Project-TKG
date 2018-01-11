@@ -67,6 +67,6 @@
 	}
 
 	ds_list_destroy(list);
-	show_debug_message("path: " + string(path));
+	
 	return path;
 }
