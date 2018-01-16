@@ -5,6 +5,7 @@ if room == rm_level{
 	if global.ds_roomgrid[# 2, i] == false{
 		global.ds_roomgrid[# 2, i] = true;
 		global.n_room = true;
+		
 	}
 	
 	return [global.ds_roomgrid[# 0, i],global.ds_roomgrid[# 1, i],global.ds_roomgrid[# 2, i]];

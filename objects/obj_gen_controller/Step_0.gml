@@ -1,10 +1,28 @@
 randomize();
 
+if attempts >= 75 {
+	attempts = 0;
+	comp = 0;
+	room_goto(rm_level);
+}
+
+if once == false && roomgenerated >= roomstogenerate {
+	
+	once = true;
+	
+	instance_create_layer(0,0,"IF",obj_AI_controller);
+	comp += 7;
+	
+	instance_create_layer(0,0,"BH",obj_floor_fluid_controller);
+	comp += 7;
+	instance_create_layer(0,0,"IF",obj_potion_controller);
+	comp += 8;
+	global.gen = false;
+	instance_destroy();
+}
+
 //Gen the map
-while roomgenerated < roomstogenerate{
-	if attempts > 1000 {
-		break;
-	}
+if roomgenerated < roomstogenerate and attempts < 75 {
 			
 	confirm = false  //Will we build?
     
@@ -83,7 +101,7 @@ while roomgenerated < roomstogenerate{
 				confirm = true;
 				global.rm_item_id = room_;
 				
-			}else if roomgenerated == 14 and ad == 1 and
+			}else if roomgenerated == 14 and ad >= 1 and
 					((up and u < 15) or (down and d < 15) or (left and l < 15) or (right and r < 15)){
 				typeroom = 17;
 				confirm = true;
@@ -208,6 +226,7 @@ while roomgenerated < roomstogenerate{
 				global.ds_roomgrid[# 1, room_] = typeroom;
 				
 				scr_roomgn(typeroom);
+				comp+=4;
             
 		        ///Doors for normal rooms
 				if typeroom < 20{
@@ -300,21 +319,4 @@ while roomgenerated < roomstogenerate{
 			} 
 	    }
 	}
-}
-
-if attempts > 1000 {
-	attempts = 0;
-	room_goto(rm_level);
-}
-
-if once == false {
-	
-	once = true;
-	global.gen = false;
-	instance_create_layer(0,0,"IF",obj_room_controller);
-	instance_create_layer(0,0,"IF",obj_AI_controller);
-	instance_create_layer(0,0,"PS",obj_minimap_controller);
-	instance_create_layer(0,0,"BH",obj_floor_fluid_controller);
-	instance_create_layer(0,0,"IF",obj_potion_controller);
-	instance_destroy();
 }

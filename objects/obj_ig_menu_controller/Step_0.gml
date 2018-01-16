@@ -70,11 +70,33 @@ if check == true{
 				alarm[0] = 0.5 * room_speed;
 			}
 		break;
+		
+		case "death":
+			if menu_key {
+				game_restart();
+			}
+		
+		break;
+		
+		case "generation":
+			if(!instance_exists(obj_gen_controller)){
+				state = "closed";
+			}
+		break;
 	}
+	
+	if(room == rm_dead){
+		state = "death";
+	}
+
 }
 
-if state != "closed"{
+if state != "closed" || obj_pglobs.dead || state = "generation" {
 	global.pause = true;
 }else {
 	global.pause = false;
+}
+
+if(global.gen){
+	state = "generation";
 }

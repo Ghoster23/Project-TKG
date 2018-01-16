@@ -29,7 +29,7 @@ if go and not global.pause{
             if image_index == 5{
 				scr_drops();
 				var pos = ds_list_find_index(global.act_enemy_list,id);
-				show_debug_message("slime pos: " + string(pos));
+				
 				ds_list_delete(global.act_enemy_list,pos);
 				global.kld_enemies += 1;
 				instance_destroy();
@@ -53,16 +53,17 @@ if go and not global.pause{
 	}
 
     ///Creep
-	rmx = x mod global.roomwd;
+	/*rmx = x mod global.roomwd;
 	rmy = y mod global.roomhg;
 	
 	if (x div global.roomwd == global.current_column and y div global.roomhg == global.current_row and room == rm_level){
 		ds_grid_set_region(global.fluid_grid,      (rmx - 16) div 4,      (rmy + 3) div 4,    (rmx + 15) div 4,    (rmy + 14) div 4,30);
 		ds_grid_set_region(global.fluid_grid,((rmx - 16) + 4) div 4,((rmy + 3) - 4) div 4,(rmx + 15 - 4) div 4,(rmy + 14 + 4) div 4,30);
+		
 	}else if(room != rm_level){
 		ds_grid_set_region(global.fluid_grid,      (x - 16) div 4,       (y + 3) div 4,     (x + 15) div 4, (y + 14) div 4,30);
 		ds_grid_set_region(global.fluid_grid,((x - 16) + 4) div 4, ((y + 3) - 4) div 4, (x + 15 - 4) div 4, (y + 14 + 4) div 4,30);
-	}
+	}*/
 	
 }else if go{
 	scr_pause_start(5);

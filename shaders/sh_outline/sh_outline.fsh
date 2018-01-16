@@ -20,10 +20,10 @@ void main()
 	alpha += ceil(texture2D(gm_BaseTexture,v_vTexcoord - offsetx).a);
 	alpha += ceil(texture2D(gm_BaseTexture,v_vTexcoord + offsety).a);
 	alpha += ceil(texture2D(gm_BaseTexture,v_vTexcoord - offsety).a);
-	alpha += ceil(texture2D(gm_BaseTexture,v_vTexcoord + offsetx + offsety).a);
+	/*alpha += ceil(texture2D(gm_BaseTexture,v_vTexcoord + offsetx + offsety).a);
 	alpha += ceil(texture2D(gm_BaseTexture,v_vTexcoord - offsetx + offsety).a);
 	alpha += ceil(texture2D(gm_BaseTexture,v_vTexcoord + offsety - offsety).a);
-	alpha += ceil(texture2D(gm_BaseTexture,v_vTexcoord - offsety - offsety).a);
+	alpha += ceil(texture2D(gm_BaseTexture,v_vTexcoord - offsety - offsety).a);*/
 	
     gl_FragColor = (v_vColour * (1.0 - originAlpha)) + texture2D(gm_BaseTexture, v_vTexcoord);
 	gl_FragColor.a = alpha;

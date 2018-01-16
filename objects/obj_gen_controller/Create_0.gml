@@ -56,3 +56,10 @@ global.rm_boss_id = 0;
 
 //Fluids
 global.fluid_grid = -1;
+
+comp = 0;
+
+instance_create_layer(0,0,"IF",obj_room_controller);
+comp += 7;
+instance_create_layer(0,0,"PS",obj_minimap_controller);
+comp += 7;

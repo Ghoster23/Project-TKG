@@ -48,7 +48,7 @@
   
   menuText[5,0] = 9;
   menuText[5,1] = "obj_pedestal"
-  menuText[5,2] = "Misc 2"
+  menuText[5,2] = "obj_fluid_tile"
   menuText[5,3] = "Misc 3"
   menuText[5,4] = "Misc 4"
   menuText[5,5] = "Misc 5" 

@@ -95,17 +95,10 @@ if(global.p_hp <= 0 && dead == false && room=rm_lvl_editor_test){
 
 ///Death
 if(global.p_hp <= 0 && dead == false){
-    room_goto(rm_dead);
-    dead = true;
-}
-
-///Game restart
-if(room == rm_dead){
-    if(interact_key == true){
-        game_restart();
-        
-    }
-   
+	global.status[1,0] = 1;
+	global.pause       = true;
+	dead = true;
+    
 }
 
 ///Invulnerabillity guaranteed off

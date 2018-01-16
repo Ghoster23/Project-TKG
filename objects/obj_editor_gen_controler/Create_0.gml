@@ -143,4 +143,4 @@ ds_grid_destroy(global.room_grid);
 global.current_column=0;
 global.current_row=0;
 global.n_room=true;
-instance_create_layer(0,0,"BH",obj_floor_fluid_controller);
+//instance_create_layer(0,0,"BH",obj_floor_fluid_controller);

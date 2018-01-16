@@ -3,6 +3,8 @@ event_inherited();
 image_speed = 0;
 image_index = irandom_range(0,3);
 
+dis = 16;
+
 type = irandom_range(0,60);
 
 if(type < 30){

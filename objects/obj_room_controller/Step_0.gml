@@ -9,7 +9,7 @@ if(global.room_change){
 }
 
 /* Add enemies to active enemy list */
-if((room == rm_level and obj_view.stopped and global.n_room) || (room == rm_test and global.n_room)){
+if((room == rm_level and obj_view.stopped and global.n_room) || (room == rm_test and global.n_room) || (room == rm_lvl_editor_test and global.n_room)){
 	enemy = obj_enemy_parent;
 	scr_get_active_enemies();
 	
