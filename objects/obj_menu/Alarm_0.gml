@@ -1,2 +1,2 @@
 /// @description char selection
-room_goto(rm_chsl);
+room_goto(rm_char_select);

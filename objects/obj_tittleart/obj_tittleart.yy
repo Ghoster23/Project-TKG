@@ -5,7 +5,7 @@
     "name": "obj_tittleart",
     "eventList": [
         {
-            "id": "9fd45d5c-76fc-4345-adcf-a8f1a86a2af9",
+            "id": "fe0ad3f3-bfc5-4492-bf53-223e4fd8d658",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -13,9 +13,20 @@
             "enumb": 0,
             "eventtype": 0,
             "m_owner": "4b677d77-e6c0-4bb3-9ae8-0678a99cb482"
+        },
+        {
+            "id": "fdf6ef34-d2dd-4823-88a2-ff324e3e1a3b",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "4b677d77-e6c0-4bb3-9ae8-0678a99cb482"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
+    "overriddenProperties": null,
     "parentObjectId": "00000000-0000-0000-0000-000000000000",
     "persistent": false,
     "physicsAngularDamping": 0.1,
@@ -30,6 +41,7 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
+    "properties": null,
     "solid": false,
     "spriteId": "0c8c8315-69e4-4902-b801-f53af4a254a6",
     "visible": true

@@ -12,7 +12,11 @@ switch state{
 		obj_pointer.y=267;
 		}
 		if (mouse_click and point_in_rectangle(mouse_x,mouse_y,305,258,342,275)) or enter_key{
-			alarm[0]=room_speed*0.2;
+			part_emitter_destroy(global.ps,global.pe_1);
+			part_emitter_destroy(global.ps,global.pe_star);
+			obj_tittleart.fade=true;
+			obj_whiteout.fade="out";
+			alarm[0]=room_speed*1.5;
 		}
 		if a_down{
 			state="options";

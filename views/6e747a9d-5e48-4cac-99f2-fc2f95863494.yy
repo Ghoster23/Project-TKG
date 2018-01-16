@@ -15,7 +15,7 @@
         "daa7f89f-43a2-492d-82ae-b002acbff62b"
     ],
     "filterType": "GMObject",
-    "folderName": "Character Select",
+    "folderName": "old chr select",
     "isDefaultView": false,
     "localisedFolderName": ""
 }
