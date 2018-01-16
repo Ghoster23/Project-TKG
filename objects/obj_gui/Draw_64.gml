@@ -57,7 +57,7 @@ for(i = 0; i < 8; i++){
 draw_sprite_ext(spr_coin,0,yy + 4 * m,xx + 8 * m,m,m,0,c_white,1);
 draw_set_font(font_chsl_tags);
 draw_text_ext_transformed( yy + 20 * m, xx + 8 * m, string(global.coins), 2 * m, 16 * m, m, m, 0);
-draw_text_ext_transformed( yy + 63 * m, xx + 8 * m, string(ds_list_size(global.act_enemy_list)), 2 * m, 16 * m, m, m, 0);
+draw_text_ext_transformed( yy + 63 * m, xx + 8 * m, string(fps_real), 2 * m, 16 * m, m, m, 0);
 
 ///Draw Carried Potion
 if global.potion[1] != c_white {

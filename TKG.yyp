@@ -79,6 +79,14 @@
             }
         },
         {
+            "Key": "013a7746-7161-4e0e-bf82-47ca27575160",
+            "Value": {
+                "id": "1c63b73f-afe8-4344-ac00-b8e10903cdca",
+                "resourcePath": "sprites\\spr_oil\\spr_oil.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "019c4081-bd2b-43b4-9b85-c294de15c801",
             "Value": {
                 "id": "586f27f7-cf84-43e3-9e3a-1a896db736d1",

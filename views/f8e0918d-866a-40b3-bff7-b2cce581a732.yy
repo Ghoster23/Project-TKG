@@ -7,7 +7,8 @@
         "09a31a35-cec5-4eef-809c-caf40200689a",
         "77a8a53c-cf16-49db-a45a-44332ad55413",
         "ee8415ef-3dfc-4925-b23f-48e95ff75939",
-        "3803c365-8429-4a6f-a1c0-d0d9893f1781"
+        "3803c365-8429-4a6f-a1c0-d0d9893f1781",
+        "013a7746-7161-4e0e-bf82-47ca27575160"
     ],
     "filterType": "GMSprite",
     "folderName": "hermit spider",

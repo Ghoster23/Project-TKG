@@ -9,6 +9,11 @@ if(active){
 				active = true;
 				
 				//What fluid is it
+				if val <= 60 {
+					sprite = spr_oil;
+				
+				}
+				
 				if val <= 30 {
 					sprite = spr_slm_creep;
 				
@@ -24,15 +29,18 @@ if(active){
 				op = (val mod 30) / 60;
 		
 				draw_set_alpha(op);
-				var img = scr_fluid_tile_v21( i, j);
+				var img = scr_fluid_tile_v21( i, j, val div 30);
 				
 				draw_sprite_ext(sprite, img, x + i * 4, y + j * 4,1,1,0,c_white,op);
 			
 				tiles[i,j] = val;
 		
-			}else if val < 0{
-				tiles[i,j] = 0;
+			}
 			
+			for(var k = 0; k < 2; k++){
+				if(k * 30 + 0.1  == val){
+					tiles[i,j] = 0;
+				}
 			}
 		}
 	}

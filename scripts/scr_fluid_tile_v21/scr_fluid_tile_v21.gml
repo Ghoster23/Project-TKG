@@ -1,6 +1,7 @@
 {
-var i = argument0;
-var j = argument1;
+var i    = argument0;
+var j    = argument1;
+var type = argument2;
 
 var u   = false;
 var u_r = false;
@@ -13,59 +14,68 @@ var u_l = false;
 
 var ad  = 0;
 var val = 0;
+var t   = 0;
 
 //Adjacents
 ///Up
-if(tiles[i,j-1]){
+t = tiles[i,j-1];
+if(t && t div 30 == type){
 	u = true;
 	ad++;
 		
 }
 
 ///Up and Right
-if(tiles[i+1,j-1]){
+t = tiles[i+1,j-1];
+if(t && t div 30 == type){
 	u_r = true;
 	ad++;
 		
 }
 
 ///Right
-if(tiles[i+1,j]){
+t = tiles[i+1,j];
+if(t && t div 30 == type){
 	r = true;
 	ad++;
 		
 }
 
 ///Down and Right
-if(tiles[i+1,j+1]){
+t = tiles[i+1,j+1];
+if(t && t div 30 == type){
 	d_r = true;
 	ad++;
 		
 }
 
 ///Down
-if(tiles[i,j+1]){
+t = tiles[i,j+1];
+if(t && t div 30 == type){
 	d = true;
 	ad++;
 		
 }
 
 ///Down and Left
-if(tiles[i-1,j+1]){
+t = tiles[i-1,j+1];
+if(t && t div 30 == type){
 	d_l = true;
 	ad++;
 		
 }
 
 ///Left
-if(tiles[i-1,j]){
+t = tiles[i-1,j];
+if(t && t div 30 == type){
 	l = true;
 	ad++;
 		
 }
 
 ///Up and Left
-if(tiles[i-1,j-1]){
+t = tiles[i-1,j-1];
+if(t && t div 30 == type){
 	u_l = true;
 	ad++;
 		

@@ -4,20 +4,6 @@ x=640/2;
 y=360/2;
 count =0;
 
-//transition
-global.pt_t = part_type_create();
-part_type_sprite(global.pt_t, spr_circle, 1, 0, 0);
-part_type_size(global.pt_t, 0.80, 0.80, 0.03, 0.40);
-part_type_scale(global.pt_t, 1, 1);
-part_type_orientation(global.pt_t, 43, 50, 0, 0, 0);
-part_type_color3(global.pt_t, c_white, 12615680,c_navy);
-part_type_alpha3(global.pt_t, 1, 1, 1);
-part_type_blend(global.pt_t, 0);
-part_type_life(global.pt_t, 80, 81);
-part_type_speed(global.pt_t, 0, 3, 0, 0);
-part_type_direction(global.pt_t, 90, 91, 0, 0);
-part_type_gravity(global.pt_t, 0, 0);
-
 
 //1 shine
 global.pt_1 = part_type_create();
@@ -68,7 +54,7 @@ part_type_orientation(global.pt_2, 43, 50, 0, 0, 0);
 part_type_color3(global.pt_2, c1,c2,c3);
 part_type_alpha3(global.pt_2, 1, 1, 1);
 part_type_blend(global.pt_2, 0);
-part_type_life(global.pt_2, 80, 81);
+part_type_life(global.pt_2, 90, 91);
 part_type_speed(global.pt_2, 0, 3, 0, 0);
 part_type_direction(global.pt_2, 90, 91, 0, 0);
 part_type_gravity(global.pt_2, 0, 0);
@@ -114,7 +100,7 @@ part_emitter_region(global.ps, global.pe_1, 0, 640, 0, 380, ps_shape_rectangle, 
 part_emitter_stream(global.ps, global.pe_1, global.pt_1, 2);
 
 part_emitter_region(global.ps_if, global.pe_2, 0, 640, 300, 360, ps_shape_rectangle, ps_distr_linear);
-part_emitter_stream(global.ps_if, global.pe_2, global.pt_2, 150);
+part_emitter_stream(global.ps_if, global.pe_2, global.pt_2, 6);
 
 part_emitter_region(global.ps, global.pe_star, -320, 320, -100, -50, ps_shape_rectangle, ps_distr_linear);
 part_emitter_stream(global.ps, global.pe_star, global.pt_star, -30);

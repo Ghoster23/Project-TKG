@@ -12,7 +12,8 @@ if(not global.gen and not once){
 	
 }
 
-if(collision_rectangle(x,y,x+32,y+32,obj_slm_cr,true,false)){
+if(collision_rectangle(x,y,x+32,y+32,obj_slm_cr,true,false) ||
+   collision_rectangle(x,y,x+32,y+32,obj_hspider,true,false)){
 	active = true;
 }
 
@@ -20,7 +21,9 @@ if(active){
 	for(var i = 1; i < 9; i++){
 		for(var j = 1; j < 9; j++){
 			if(collision_rectangle(x+(i-1)*4,y+(j-1)*4,x+i*4,y+j*4,obj_slm_cr,true,false)){
-				tiles[i,j] = 30;
+				tiles[i,j] = 29.9;
+			}else if(collision_rectangle(x+(i-1)*4,y+(j-1)*4,x+i*4,y+j*4,obj_hspider,true,false)){
+				tiles[i,j] = 59.9;
 			}
 		}
 	}
@@ -30,6 +33,5 @@ if(active){
 			scr_fluid_tile_req(i);
 		}
 	}
-	
-	show_debug_message(tiles);
+
 }
