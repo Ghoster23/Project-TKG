@@ -136,3 +136,5 @@ global.current_row = 4;
 
 //Door Cooldown
 global.d_cd = false;
+
+global.fluid_detail = 5;

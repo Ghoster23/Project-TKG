@@ -1,8 +1,8 @@
 if(active){
 	active = false;
 	
-	for(var i = 1; i < 9; i++){
-		for(var j = 1; j < 9; j++){
+	for(var i = 1; i < grid_size - 1; i++){
+		for(var j = 1; j < grid_size - 1; j++){
 			var val = tiles[i,j];
 					
 			if val > 0{
@@ -31,7 +31,7 @@ if(active){
 				draw_set_alpha(op);
 				var img = scr_fluid_tile_v21( i, j, val div 30);
 				
-				draw_sprite_ext(sprite, img, x + i * 4, y + j * 4,1,1,0,c_white,op);
+				draw_sprite_ext(sprite, img, x + i * cell_size, y + j * cell_size,1,1,0,c_white,op);
 			
 				tiles[i,j] = val;
 		

@@ -1,3 +1,4 @@
+event_inherited();
 once = false;
 offset=0;
 phy_fixed_rotation = true;

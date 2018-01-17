@@ -1471,6 +1471,14 @@
             }
         },
         {
+            "Key": "3d5800fb-90f8-4eff-bb4c-3d8ac2094036",
+            "Value": {
+                "id": "eabe1ece-8cf7-48b0-84e9-f3185122d076",
+                "resourcePath": "objects\\obj_wall_parent\\obj_wall_parent.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3dc40adb-119c-4203-a598-10eafb368158",
             "Value": {
                 "id": "dec3f975-6652-4e06-a0e9-7a7dd59e0826",
