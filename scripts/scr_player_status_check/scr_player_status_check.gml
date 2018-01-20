@@ -26,7 +26,7 @@
 				
 			break;
 			case 4: //OHKO
-				
+				global.weapon.draw_script    = scr_draw_outline;
 			break;
 			case 5: //See all
 				
@@ -35,7 +35,8 @@
 			
 			break;
 			case 7: //Immunity
-			
+				global.body.draw_script      = scr_draw_outline;
+				global.body.head.draw_script = scr_draw_outline;
 			break;
 		}
 		
@@ -45,5 +46,16 @@
 		global.status[status,0] = 0;
 		global.status[status,1] = 0;
 		
+		switch status{
+			default:
+			break;
+			case 4: //OHKO
+				global.weapon.draw_script    = null;
+			break;
+			case 7: //Immunity
+				global.body.draw_script      = null;
+				global.body.head.draw_script = null;
+			break;
+		}
 	}
 }

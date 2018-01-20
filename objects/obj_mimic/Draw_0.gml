@@ -5,5 +5,3 @@ if state == 0 {
 		draw_sprite(spr_interact,0,x-16,y-48);
 	}
 }
-
-draw_path(path,0,0,true);

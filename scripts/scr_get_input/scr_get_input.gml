@@ -37,7 +37,7 @@ if global.os_mmap_key_bind==mb_left or global.os_mmap_key_bind==mb_right or glob
 else{os_mmap_key=keyboard_check(global.os_mmap_key_bind); }
 
 if global.enter_key_bind==mb_left or global.enter_key_bind==mb_right or global.enter_key_bind==mb_middle{enter_key=mouse_check_button(global.enter_key_bind);}
-else{enter_key=keyboard_check(global.enter_key_bind); }
+else{enter_key=keyboard_check_pressed(global.enter_key_bind); }
 
 
 //these are for menus, we dont mess with them 

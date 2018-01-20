@@ -23,8 +23,8 @@ if(room == rm_level){
 			info = global.fallen_items[| 0];
 		
 			item = info[0];
-			col = info[1] div global.roomwd;
-			row = info[2] div global.roomhg;
+			col  = info[1] div global.roomwd;
+			row  = info[2] div global.roomhg;
 		
 			if global.ds_roomgrid[# 1, row * 8 + col] != "NULL" {
 				instance_create_layer(info[1],info[2],"Instances",item);

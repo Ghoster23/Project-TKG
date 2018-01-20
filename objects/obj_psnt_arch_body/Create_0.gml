@@ -1,10 +1,8 @@
 /// @description Inicialise the enemy
 event_inherited();
-draw_script=scr_psnt_draw;
+draw_script = scr_psnt_draw;
 
-image_speed=.4;
-solid = false;
-visible = false;
+image_speed = 0.4;
 
 flash = false;
 cr_cd = false;

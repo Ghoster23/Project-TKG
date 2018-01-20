@@ -16,10 +16,3 @@ part_type_destroy(global.pt_willowisp);
 part_system_destroy(global.ps);
 part_system_destroy(global.ps_if);
 part_system_destroy(global.ps_ps);
-
-//Surface
-if surface_exists(global.lighting){
-    surface_free(global.lighting);
-}
-
-scr_screen_res();

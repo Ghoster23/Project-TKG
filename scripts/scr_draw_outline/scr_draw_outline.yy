@@ -1,5 +1,5 @@
 {
-    "id": "c742ef9e-3b2e-4d9f-be24-44b57f47ad22",
+    "id": "68130a2e-3532-4e1d-ba95-b8e1b2072345",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "scr_draw_outline",

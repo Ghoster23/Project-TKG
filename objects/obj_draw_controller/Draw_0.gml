@@ -1,6 +1,6 @@
 if ds_exists(ds_depthgrid, ds_type_grid) {
 	var depthgrid = ds_depthgrid;
-	var instNum = instance_number(obj_depth_parent);
+	var instNum   = instance_number(obj_depth_parent);
 	
 	if instNum != 0{
 		ds_grid_resize(depthgrid, 2, instNum);
@@ -34,30 +34,10 @@ if ds_exists(ds_depthgrid, ds_type_grid) {
 					shader_reset();	
 			}
 			//execute custom drawing if object has any
-			else if(variable_instance_exists(id,"draw_script")){
+			else if(draw_script != null){
 				script_execute(draw_script);
 			}
-			else if instanceID.visible {
-				if((instanceID.object_index == global.body or instanceID == global.body.head or instanceID.object_index == obj_roll) and global.status[7,0]){
-					shader_set(sh_outline);
-					shader_set_uniform_f(upH,texelH);
-					shader_set_uniform_f(upW,texelW);
-					image_blend = c_white;
-				}
-				if(instanceID.object_index == global.weapon and global.status[4,0]){
-					shader_set(sh_outline);
-					shader_set_uniform_f(upH,texelH);
-					shader_set_uniform_f(upW,texelW);
-					image_blend = c_white;
-				}
-				
-				if(object_get_parent(instanceID.object_index) == obj_interactable_parent and instanceID.in_range){
-					shader_set(sh_outline);
-					shader_set_uniform_f(upH,texelH);
-					shader_set_uniform_f(upW,texelW);
-					image_blend = c_white;
-				}
-				
+			else if instanceID.visible {	
 				
 				draw_self();
 				

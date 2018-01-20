@@ -1,14 +1,19 @@
 {
-var col = argument0;
-var alp = argument1;
-shader_set(sh_white);
-draw_sprite_ext(self.sprite_index,self.image_index,x+1,y+1,self.image_xscale,self.image_yscale,0,col,alp);
-draw_sprite_ext(self.sprite_index,self.image_index,x-1,y+1,self.image_xscale,self.image_yscale,0,col,alp);
-draw_sprite_ext(self.sprite_index,self.image_index,x+1,y-1,self.image_xscale,self.image_yscale,0,col,alp);
-draw_sprite_ext(self.sprite_index,self.image_index,x-1,y-1,self.image_xscale,self.image_yscale,0,col,alp);
-draw_sprite_ext(self.sprite_index,self.image_index,x,y+1,self.image_xscale,self.image_yscale,0,col,alp);
-draw_sprite_ext(self.sprite_index,self.image_index,x+1,y,self.image_xscale,self.image_yscale,0,col,alp);
-draw_sprite_ext(self.sprite_index,self.image_index,x,y-1,self.image_xscale,self.image_yscale,0,col,alp);
-draw_sprite_ext(self.sprite_index,self.image_index,x-1,y,self.image_xscale,self.image_yscale,0,col,alp);
-shader_reset();
+	if(argument_count > 0){
+		image_blend = argument[0];
+	}
+
+	shader_set(sh_outline);
+	shader_set_uniform_f(upH,texelH);
+	shader_set_uniform_f(upW,texelW);
+
+	if(argument_count > 0){
+		draw_self();
+	}
+	
+	image_blend = c_white;
+	
+	draw_self();
+
+	shader_reset();
 }

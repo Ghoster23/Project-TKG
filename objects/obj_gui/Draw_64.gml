@@ -1,4 +1,4 @@
-if(!obj_pglobs.dead){
+if(!obj_pglobs.dead && room == rm_level){
 m = display_get_gui_width() / global.roomwd;
 
 ///Draw emblem

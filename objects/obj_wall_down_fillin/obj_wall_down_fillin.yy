@@ -5,16 +5,6 @@
     "name": "obj_wall_down_fillin",
     "eventList": [
         {
-            "id": "d1c59359-b6f9-4ccb-923a-f4df775cb7f9",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "748cab6e-7a35-46a0-9cd4-d45e9879dfcc",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "83dd4390-b20e-4e09-bf51-088335d48637"
-        },
-        {
             "id": "aaa76344-85be-488a-bfa9-051f82a3937d",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -37,7 +27,7 @@
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "b8453c71-24f2-4852-a377-e9d9f6c7873d",
+    "parentObjectId": "0eb59043-ff9a-4694-af4f-f069f6e0dd25",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0,

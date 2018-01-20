@@ -4,18 +4,10 @@
     "mvc": "1.1",
     "name": "52820c31-8bed-407b-929a-fc51505ce99a",
     "children": [
-        "c22b2ab4-c395-47e5-8761-fe19903e269e",
-        "748cab6e-7a35-46a0-9cd4-d45e9879dfcc",
-        "b8453c71-24f2-4852-a377-e9d9f6c7873d",
-        "71021b35-953e-4f32-9148-badf83fc1fcf",
-        "31061adc-20de-48dc-a8e2-011e352f8cea",
-        "3b953ffe-fde5-4671-9c9f-cce971135dbe",
-        "b279ea35-ee12-4aab-aee5-fab0c0d8cb11",
-        "95308761-9733-47f4-9894-808bcda13fd7",
-        "76eb21dd-afc4-4a48-ba82-96a2aef75e34",
-        "051a82a8-6bda-42c2-ae30-f135458a582b",
-        "da00b328-ebba-4422-897b-39ec0cb60efc",
-        "3233943d-5e40-4fb6-b1ad-5e2b735067b0"
+        "3c5e7fb7-65db-48a1-9c96-52f5032807dd",
+        "f5a1934e-b6e8-4329-9aa1-4aa2d2bc09c8",
+        "2cb21157-6acc-4439-bc88-1add0dc36a82",
+        "2b8c77b3-4951-4566-a709-ed860b9f54c0"
     ],
     "filterType": "GMObject",
     "folderName": "Parents",

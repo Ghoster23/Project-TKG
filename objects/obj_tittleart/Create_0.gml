@@ -10,13 +10,13 @@ global.pt_1 = part_type_create();
 part_type_shape(global.pt_1, pt_shape_square);
 //spr_1_part = sprite_add("1.png", 1, 0, 0, 10, 10);
 part_type_sprite(global.pt_1, spr_morpho, 1, 0, 0);
-part_type_size(global.pt_1, 0.07, 0.07, 0, 0.5);
+part_type_size(global.pt_1, 0.2, 0.2, 0, 0.5);
 part_type_scale(global.pt_1, 0.3, 0.30);
 part_type_orientation(global.pt_1, 0, 308, 0, 200, 0);
 part_type_color3(global.pt_1, c_white, c_white, c_white);
 part_type_alpha3(global.pt_1, 0.5, 1, 1);
 part_type_blend(global.pt_1, true);
-part_type_life(global.pt_1, 80, 200);
+part_type_life(global.pt_1, 80, 100);
 part_type_speed(global.pt_1, 0, 0, 0, 0.05);
 part_type_direction(global.pt_1, 242, 248, 0, 50);
 part_type_gravity(global.pt_1, 0, 0);
@@ -48,21 +48,21 @@ ct_b=226;   //blue
 
 global.pt_2 = part_type_create();
 part_type_sprite(global.pt_2, spr_circle, 1, 0, 0);
-part_type_size(global.pt_2, 0.80, 0.80, 0.03, 0.40);
+part_type_size(global.pt_2, 2, 2, 0.03, 0.40);
 part_type_scale(global.pt_2, 1, 1);
 part_type_orientation(global.pt_2, 43, 50, 0, 0, 0);
 part_type_color3(global.pt_2, c1,c2,c3);
 part_type_alpha3(global.pt_2, 1, 1, 1);
 part_type_blend(global.pt_2, 0);
-part_type_life(global.pt_2, 90, 91);
+part_type_life(global.pt_2, 130,131);
 part_type_speed(global.pt_2, 0, 3, 0, 0);
-part_type_direction(global.pt_2, 90, 91, 0, 0);
+part_type_direction(global.pt_2, 90, 90, 0, 0);
 part_type_gravity(global.pt_2, 0, 0);
 
 //star
 global.pt_star = part_type_create();
 part_type_shape(global.pt_star, pt_shape_disk);
-part_type_size(global.pt_star, 0.3, 0.3, -0.05, 0);
+part_type_size(global.pt_star, 0.8, 0.8, -0.05, 0);
 part_type_scale(global.pt_star, 0.09, 0.09);
 part_type_orientation(global.pt_star, 0, 0, 0, 0, 0);
 part_type_color3(global.pt_star, 16777215, 16777215, 16777215);
@@ -97,10 +97,10 @@ part_type_step(global.pt_star, 5, global.pt_trail);
 //Adjusting Emitter positions. Starting Emitter Streams or Bursts.
 
 part_emitter_region(global.ps, global.pe_1, 0, 640, 0, 380, ps_shape_rectangle, ps_distr_linear);
-part_emitter_stream(global.ps, global.pe_1, global.pt_1, 2);
+part_emitter_stream(global.ps, global.pe_1, global.pt_1, 1);
 
 part_emitter_region(global.ps_if, global.pe_2, 0, 640, 300, 360, ps_shape_rectangle, ps_distr_linear);
-part_emitter_stream(global.ps_if, global.pe_2, global.pt_2, 6);
+part_emitter_stream(global.ps_if, global.pe_2, global.pt_2, 1);
 
 part_emitter_region(global.ps, global.pe_star, -320, 320, -100, -50, ps_shape_rectangle, ps_distr_linear);
 part_emitter_stream(global.ps, global.pe_star, global.pt_star, -30);

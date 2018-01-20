@@ -1,8 +1,8 @@
 /// @description Inicialize the enemy
 event_inherited();
 image_speed=0;
-solid=false;
-visible=false;
+solid   = false;
+
 flash=false;
 damaged=false;
 go=false;

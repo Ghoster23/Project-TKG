@@ -19,7 +19,7 @@ if not global.pause {
 			}
 			
 			if(global.status[5,0]){
-				part_emitter_stream(global.ps_if,em,global.pt_danger,-6);
+				draw_script = scr_draw_outline(c_red);
 			}
 
 			if blink == true{

@@ -8,11 +8,13 @@
     "inheritLayers": false,
     "instanceCreationOrderIDs": [
         "36a74b07-b9d9-4f28-ade2-03cf7851da7f",
+        "76790d35-14b7-4ef5-880a-efda99efe5b1",
+        "181247a0-e0bb-4264-ad27-639b381b7df5",
+        "6c1e712f-f504-4475-95fc-6ee8a8f23196",
         "9f85cc3a-1e22-4969-94ee-806731aafc0f",
         "005d14b0-7dcf-411d-a1a1-e02231b8eb81",
         "4f49bdf7-d67d-4e1d-8003-b732c2ddd4a2",
         "6f189db0-c602-4d1b-9597-aabaaf917b5b",
-        "181247a0-e0bb-4264-ad27-639b381b7df5",
         "363c5c85-effc-4feb-8e90-fd395ee95798",
         "95ce835f-707c-4d1f-958f-8c36ebf57850",
         "ab451fa3-0a30-49e1-977b-6e483b215869"
@@ -33,7 +35,9 @@
             "inheritSubLayers": false,
             "inheritVisibility": false,
             "instances": [
+{"name": "inst_4EA807DD","id": "76790d35-14b7-4ef5-880a-efda99efe5b1","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_4EA807DD","objId": "02855f4e-8f12-487b-82ac-40d572e8d4cd","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": -64,"y": -64},
 {"name": "inst_1B991F88","id": "181247a0-e0bb-4264-ad27-639b381b7df5","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_1B991F88","objId": "44d6cab3-4de8-43eb-a40c-84b7e35355ec","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 102,"y": 1},
+{"name": "inst_336E9C16","id": "6c1e712f-f504-4475-95fc-6ee8a8f23196","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_336E9C16","objId": "296cdb55-286e-4d4f-a923-b5c6a01276e2","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": -32,"y": -64},
 {"name": "inst_7332567E","id": "6f189db0-c602-4d1b-9597-aabaaf917b5b","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_7332567E","objId": "50363e6f-cd4a-42cd-ac83-14ff4a479114","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 73,"y": 1},
 {"name": "inst_400A1FD7","id": "4f49bdf7-d67d-4e1d-8003-b732c2ddd4a2","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_400A1FD7","objId": "cb0870d4-1695-4719-8bf4-388502efbe37","properties": null,"rotation": 3.040923,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 20,"y": 0},
 {"name": "inst_3785DB74","id": "005d14b0-7dcf-411d-a1a1-e02231b8eb81","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_3785DB74","objId": "e2927d17-3d47-4b71-b038-cf79208e7186","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 48,"y": 0},
@@ -145,9 +149,9 @@
         "id": "fe7c1369-485c-48b8-9bda-9be498e3a806",
         "inheritPhysicsSettings": false,
         "modelName": "GMRoomPhysicsSettings",
-        "PhysicsWorld": false,
+        "PhysicsWorld": true,
         "PhysicsWorldGravityX": 0,
-        "PhysicsWorldGravityY": 10,
+        "PhysicsWorldGravityY": 0,
         "PhysicsWorldPixToMeters": 0.1,
         "mvc": "1.0"
     },

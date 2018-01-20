@@ -4,19 +4,11 @@
     "mvc": "1.0",
     "name": "obj_wall_left_fillin",
     "eventList": [
-        {
-            "id": "0c11bf43-d4b0-42ca-97f7-5f0f4ce3fc61",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "868d4876-c62c-4d4b-9144-34de0e2fe499"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
-    "parentObjectId": "b8453c71-24f2-4852-a377-e9d9f6c7873d",
+    "overriddenProperties": null,
+    "parentObjectId": "0eb59043-ff9a-4694-af4f-f069f6e0dd25",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0,
@@ -59,6 +51,7 @@
         }
     ],
     "physicsStartAwake": true,
+    "properties": null,
     "solid": true,
     "spriteId": "1f6bce2a-58aa-48fb-98f9-b929598dfd51",
     "visible": true

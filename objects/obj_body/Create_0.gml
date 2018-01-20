@@ -1,12 +1,7 @@
-head = instance_create_layer(x,y-3,layer,obj_head);
-hands = instance_create_layer(x,y,layer,obj_hands);
-feet = instance_create_layer(x,y,layer,obj_feet);
-weapon = instance_create_layer(x,y,layer,global.weapon);
-
-upH = shader_get_uniform(sh_outline,"pH");
-upW = shader_get_uniform(sh_outline,"pW");
-texelW = texture_get_texel_width(sprite_get_texture(sprite_index,0));
-texelH = texture_get_texel_width(sprite_get_texture(sprite_index,0));
+head   = instance_create_layer(x,y-3,layer,     obj_head);
+hands  = instance_create_layer(x,  y,layer,    obj_hands);
+feet   = instance_create_layer(x,  y,layer,     obj_feet);
+weapon = instance_create_layer(x,  y,layer,global.weapon);
 
 ///set a bunch of stuff
 event_inherited();
