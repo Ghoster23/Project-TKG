@@ -122,7 +122,6 @@ if keyboard_check_pressed(vk_f3){
 }
 
 if keyboard_check_pressed(vk_f1){
-    scr_player_status_apply(3,60);
 	scr_player_status_apply(4,60);
 	scr_player_status_apply(7,60);
 }
