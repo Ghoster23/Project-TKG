@@ -9,7 +9,7 @@ if not global.pause {
 	switch(state){
 		//Concealed
 		case 0:
-			part_emitter_region(global.ps_if,em,x-2,x+2,y-2,y+2,ps_shape_ellipse,ps_distr_linear);
+			//part_emitter_region(global.ps_if,em,x-2,x+2,y-2,y+2,ps_shape_ellipse,ps_distr_linear);
 			
 			///Mimic Tell
 			if interval == false and blink == false{

@@ -21,9 +21,9 @@ if go and not global.pause{
             
         break;
         case 2:  //Attack the player
-            if shoot == false {
+            if(shoot == false){
                 shoot = true;
-				tell = instance_create_layer(x,y-32,"IF",obj_archer_tell);
+				tell  = instance_create_layer(x,y-32,"IF",obj_archer_tell);
                 
 				with tell {
 					owner = other;

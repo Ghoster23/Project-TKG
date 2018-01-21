@@ -3,8 +3,8 @@
 /*-------------------------------*/
 if (self.object_index == obj_psnt_body) or (self.object_index == obj_psnt_arch_body){
 
-	v_offset= shader_get_uniform(shdr_palette_swap, "Offset");
-	v_normal=body_color/256;
+	v_offset = shader_get_uniform(shdr_palette_swap, "Offset");
+	v_normal = body_color/256;
 
 	palette_swap_sampler = shader_get_sampler_index(shdr_palette_swap,"Palette");
 	texture_palette = sprite_get_texture(palette_psnt_body,0);

@@ -1,24 +1,24 @@
 ///@description Determine distance to player
-if not global.pause{
+if(not global.pause){
 	dis = distance_to_object(global.body);
 	dir = point_direction(x,y,global.body.x,global.body.y);
-	bl_sight = collision_line(x,y,global.body.x,global.body.y,obj_solid_parent,true,true);
+	bl_sight = collision_line(x,y,global.body.x,global.body.y,obj_above_ground_parent,true,true);
 
 	/// Enemy States
-	if state != 3 and weapon.image_speed == 0 and state != "stun"{
-	    if 100 < dis < 200 and not bl_sight and not cd_arrow{
+	if(state != 3 and weapon.image_speed == 0 and state != "stun"){
+	    if(100 < dis < 200 and not bl_sight and not cd_arrow){
 			image_speed = 0;
 	        state = 2;
         
 	    }
 		
-	    if dis <= 40{
+	    if(dis <= 40){
 			image_speed = 0.4;
 	        state = 0;
 
 	    }
 		
-	    if dis >= 200 or bl_sight {
+	    if(dis >= 200 or bl_sight){
 			image_speed = 0.4;
 	        state = 1;
 	    }
