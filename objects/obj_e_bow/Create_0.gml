@@ -1,3 +1,4 @@
+event_inherited();
 owner = instance_nearest(x,y,obj_psnt_arch_body);
 
 draw_script=scr_psnt_draw;
@@ -5,6 +6,5 @@ draw_script=scr_psnt_draw;
 allow = true;
 image_speed = 0;
 prev_image_speed = 0;
-event_inherited();
 offs = 5;
 offset = true;
