@@ -1,10 +1,4 @@
-if start and not visible {
-    visible = true;
-    if ds_list_find_index(global.act_enemy_list,id) == -1 {
-		ds_list_add(global.act_enemy_list,id);
-	}
-    alarm[0] = 1 * room_speed;
-}
+event_inherited();
 
 ///Exist
 if go and not global.pause{
@@ -41,24 +35,27 @@ if go and not global.pause{
 			solid = false;
 			image_speed = 0;
 			
-			dead_head=instance_create_layer(x,y,"BH",obj_psnt_deadhead);
+			dead_head      = instance_create_layer(x,y,"BH",obj_psnt_deadhead);
 			dead_head.face = face;
 			dead_head.hair = hair;
-			dead_head.skin_color = skin_color;
-			dead_head.hair_color = hair_color;
-			dead_head.image_xscale=image_xscale;
 			
-			dead_body=instance_create_layer(x,y,"BH",obj_psnt_deadbody);
-			dead_body.body_color=body_color;
-			dead_body.image_xscale=image_xscale;
+			dead_head.skin_color   = skin_color;
+			dead_head.hair_color   = hair_color;
+			dead_head.image_xscale = image_xscale;
+			
+			dead_body = instance_create_layer(x,y,"BH",obj_psnt_deadbody);
+			dead_body.body_color   = body_color;
+			dead_body.image_xscale = image_xscale;
 			dead_body.sprite_index = body_dead_sprite;
+			
 			//link the two
-			dead_head.body=dead_body;
-			if(irandom(4)==1){
-				dropped_weapon=instance_create_layer(weapon.x,weapon.y,layer,obj_dropped_bow);
-				dropped_weapon.phy_rotation=weapon.image_angle;
-				dropped_weapon.image_xscale=weapon.image_xscale;
-				dropped_weapon.image_yscale=weapon.image_yscale;
+			dead_head.body = dead_body;
+			
+			if(irandom(4) == 1){
+				dropped_weapon = instance_create_layer(weapon.x,weapon.y,layer,obj_dropped_bow);
+				dropped_weapon.phy_rotation = weapon.image_angle;
+				dropped_weapon.image_xscale = weapon.image_xscale;
+				dropped_weapon.image_yscale = weapon.image_yscale;
 			}
 		
 	        scr_drops();
@@ -89,10 +86,6 @@ if go and not global.pause{
 	if not damaged {
 		scr_damage_enemy();
 		
-	}
-	
-	if hspd == 0 and vspd == 0{
-		image_speed = 0;
 	}
 	
 }else if go{

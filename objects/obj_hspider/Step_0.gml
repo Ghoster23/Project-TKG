@@ -1,10 +1,4 @@
-if start and visible == false{
-    visible = true;
-	if ds_list_find_index(global.act_enemy_list,id) == -1 {
-		ds_list_add(global.act_enemy_list,id);
-	}
-	alarm[0]=room_speed*2;
-}
+event_inherited();
 
 ///Exist
 if go and not global.pause{
@@ -13,7 +7,7 @@ if go and not global.pause{
 	//states for enemy behaviour
 	switch(state){
         case 0:  //move like a spider
-			if moved==false{ 
+			if moved == false{ 
 				
 				sprite_index=spr_hspider_walk;
 				image_speed=2;

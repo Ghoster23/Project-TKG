@@ -1,10 +1,4 @@
-if start and visible == false{
-    visible = true;
-    if ds_list_find_index(global.act_enemy_list,id) == -1 {
-		ds_list_add(global.act_enemy_list,id);
-	}
-    alarm[0] = 1 * room_speed;
-}
+event_inherited();
 
 ///Exist
 if go and not global.pause{
@@ -75,7 +69,6 @@ if go and not global.pause{
     
     ///Get Damaged
 	if not damaged {
-		
 		scr_damage_enemy();
 		
 	}

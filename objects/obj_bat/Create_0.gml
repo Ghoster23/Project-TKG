@@ -1,57 +1,26 @@
-           /// @description Inicialise the enemy
+/// @description Initialise the enemy
 event_inherited();
 image_speed=1.5;
-solid = false;
-visible = false;
-phy_fixed_rotation = true;
 
-em = part_emitter_create(global.ps_if);
-
-//Damaged and Flashing
-flash = false;
-damaged = false;
-shift = 0;
-
-//Start
-start = false;
-go = false;
 offset = true;
-offs = 32;
+offs   = 48;
 
 //Stats
-e_mhp = 8;
-e_hp = 8;
-e_atk = 10;
-e_satk = 0;
-e_def = 2;
-e_sdef = 2;
-e_spd = 3;
+e_mhp  =  8;
+e_hp   =  8;
+e_atk  = 10;
+e_satk =  0;
+e_def  =  2;
+e_sdef =  2;
+e_spd  =  3;
 
-//States
-state = 0;
-state_change = false;
-prev_state = 0;
-///Dash
-dash = false;
+///Enemy unique
+//Dash
+dash    = false;
 dash_cd = false;
+em = part_emitter_create(global.ps_if);
 
-//Idle anchor
-ini_point_x = x;
-ini_point_y = y;
-
-///Directions
-dir_change = true;
-i_dir = 0;
-
-///Wooble
-t = 0;
-inc = 5;
-amp = 5;
-
-///Knockback
-kb_x = 0;
-kb_y = 0;
-
+///Pause
 for(i = 0; i < 8; i++){
 	alarms[i] = -1;
 }

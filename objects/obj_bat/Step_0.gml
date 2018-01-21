@@ -1,13 +1,6 @@
-//Appear
-if start and visible == false{
-    visible = true;
-    if ds_list_find_index(global.act_enemy_list,id) == -1 {
-		ds_list_add(global.act_enemy_list,id);
-	}
-    alarm[0] = 1 * room_speed;
-}
+event_inherited();
 
-//Exist
+///Exist
 if go and not global.pause{
 	scr_pause_end(8);
     

@@ -1,4 +1,3 @@
-/// @description inicialise the LIFE FORM
 event_inherited();
 
 visible            = true;

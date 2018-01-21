@@ -1,11 +1,4 @@
-///Start enemy
-if start and not visible {
-    visible = true;
-    if ds_list_find_index(global.act_enemy_list,id) == -1 {
-		ds_list_add(global.act_enemy_list,id);
-	}
-    alarm[0] = 1 * room_speed;
-}
+event_inherited();
 
 ///Exist
 if go and not global.pause{
@@ -51,19 +44,6 @@ if go and not global.pause{
 		scr_damage_enemy();
 	
 	}
-
-    ///Creep
-	/*rmx = x mod global.roomwd;
-	rmy = y mod global.roomhg;
-	
-	if (x div global.roomwd == global.current_column and y div global.roomhg == global.current_row and room == rm_level){
-		ds_grid_set_region(global.fluid_grid,      (rmx - 16) div 4,      (rmy + 3) div 4,    (rmx + 15) div 4,    (rmy + 14) div 4,30);
-		ds_grid_set_region(global.fluid_grid,((rmx - 16) + 4) div 4,((rmy + 3) - 4) div 4,(rmx + 15 - 4) div 4,(rmy + 14 + 4) div 4,30);
-		
-	}else if(room != rm_level){
-		ds_grid_set_region(global.fluid_grid,      (x - 16) div 4,       (y + 3) div 4,     (x + 15) div 4, (y + 14) div 4,30);
-		ds_grid_set_region(global.fluid_grid,((x - 16) + 4) div 4, ((y + 3) - 4) div 4, (x + 15 - 4) div 4, (y + 14 + 4) div 4,30);
-	}*/
 	
 }else if go{
 	scr_pause_start(5);

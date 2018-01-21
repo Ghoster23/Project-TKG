@@ -19,7 +19,7 @@ if not global.pause {
 			}
 			
 			if(global.status[5,0]){
-				draw_script = scr_draw_outline(c_red);
+				draw_script = scr_draw_outline;
 			}
 
 			if blink == true{

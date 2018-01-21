@@ -26,7 +26,9 @@
 				
 			break;
 			case 4: //OHKO
-				global.weapon.draw_script    = scr_draw_outline;
+				if(instance_exists(global.weapon)){
+					global.weapon.draw_script    = scr_draw_outline;
+				}
 			break;
 			case 5: //See all
 				
@@ -50,7 +52,9 @@
 			default:
 			break;
 			case 4: //OHKO
-				global.weapon.draw_script    = null;
+				if(instance_exists(global.weapon)){
+					global.weapon.draw_script = null;
+				}
 			break;
 			case 7: //Immunity
 				global.body.draw_script      = null;
