@@ -12,16 +12,16 @@ yy = 34 * m;
 
 for(i = 0; i < global.p_maxhp div 4; i++){
 	if(i < 5){
-		o = sprite_get_height(spr_heart) + 4;
+		o = sprite_get_height(spr_heart_d) + 4;
 		
 		if hp >= 4{
-			draw_sprite_ext(spr_heart,  4,xx + (i * 18.5) * m, yy - o * m, m, m, 0, c_white, 1);
+			draw_sprite_ext(spr_heart_d,  -1,xx + (i * 18.5) * m, yy - o * m, m, m, 0, c_white, 1);
 			hp -= 4;
 		}else if hp > 0{
-			draw_sprite_ext(spr_heart, hp,xx + (i * 18.5) * m, yy - o * m, m, m, 0, c_white, 1);
+			draw_sprite_ext(spr_heart_d,  -1,xx + (i * 18.5) * m, yy - o * m, m, m, 0, c_white, 1);
 			hp -= hp;
-		}else {
-			draw_sprite_ext(spr_heart,  0,xx + (i * 18.5) * m, yy - o * m, m, m, 0, c_white, 1);
+		}else if hp == 0{
+			draw_sprite_ext(spr_heart_d,  -1,xx + (i * 18.5) * m, yy - o * m, m, m, 0, c_white, 1);
 		}
 	}else {
 		var j = i - 5;

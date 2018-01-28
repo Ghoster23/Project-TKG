@@ -19,7 +19,7 @@ if((room == rm_level and obj_view.stopped and global.n_room) || (room == rm_test
 	global.n_room = false;
 }
 
-if ds_list_size(global.act_enemy_list) == 0 {
+if (ds_exists(global.act_enemy_list,ds_type_list) and ds_list_size(global.act_enemy_list) == 0) {
 	global.lock = false;
 	
 }else {

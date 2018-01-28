@@ -11,3 +11,4 @@ if(global.fullscreen){
 o_v = -1;
 
 n_potion = false;
+
