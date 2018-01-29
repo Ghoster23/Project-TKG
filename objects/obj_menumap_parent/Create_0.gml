@@ -2,6 +2,8 @@ image_speed=0;
 
 angle_off=0;
 
+highltd=false;
+
 len = point_distance(320,180,x,y);
 dir = point_direction(320,180,x,y);
 

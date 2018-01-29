@@ -1,3 +1,7 @@
+event_inherited();
+
+draw_script = scr_psnt_draw;
+
 image_speed=0;
 
 //draw_script=scr_psnt_draw;

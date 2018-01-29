@@ -32,14 +32,14 @@ if go and not global.pause{
             solid = false;
 			image_speed = 0;
 			
-			dead_head=instance_create_layer(x,y,"BH",obj_psnt_deadhead);
+			dead_head=instance_create_layer(x,y,"Instances",obj_psnt_deadhead);
 			dead_head.face = face;
 			dead_head.hair = hair;
 			dead_head.skin_color = skin_color;
 			dead_head.hair_color = hair_color;
 			dead_head.image_xscale=image_xscale;
 			
-			dead_body=instance_create_layer(x,y,"BH",obj_psnt_deadbody);
+			dead_body=instance_create_layer(x,y,"Instances",obj_psnt_deadbody);
 			dead_body.body_color=body_color;
 			dead_body.image_xscale=image_xscale;
 			dead_body.sprite_index = body_dead_sprite;

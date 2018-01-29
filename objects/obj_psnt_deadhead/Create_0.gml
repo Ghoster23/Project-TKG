@@ -1,4 +1,12 @@
 image_speed=0;
+
+event_inherited();
+
+draw_script=scr_psnt_draw;
+
+offset=true;
+offs=1;
+
 face = 0;
 hair = 0;
 skin_color = 0;
