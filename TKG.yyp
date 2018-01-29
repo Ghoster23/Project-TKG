@@ -951,6 +951,14 @@
             }
         },
         {
+            "Key": "2509bbc1-0205-4a1c-a3be-c1b2c3159c90",
+            "Value": {
+                "id": "d015ffdb-d245-4de2-8124-b462c8c7f3a2",
+                "resourcePath": "datafiles_yy\\test.csv.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "251b3a23-9a61-4289-a86a-3dc4873e6e00",
             "Value": {
                 "id": "c79ff10f-1313-4614-933c-79c1cb4ee188",
