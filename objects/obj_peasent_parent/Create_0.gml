@@ -3,7 +3,7 @@ event_inherited();
 //get number of specific parts so its cool to add more later and it wont ruin anything 
 n_faces = sprite_get_number(spr_psnt_ff);
 n_hairs = sprite_get_number(spr_psnt_hf);
-n_skin_colors = sprite_get_number(spr_head);
+n_skin_colors = sprite_get_number(spr_psnt_head);
 
 //values that need to be manually updated if changed to account for more 
 n_body_types  = 4; 

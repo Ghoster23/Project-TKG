@@ -20,7 +20,7 @@ yaxis = 0;
 dir = 0;
 image_speed=0;
 spr_side=1;
-rotacao = 0;
+rotation = 0;
 phy_fixed_rotation = true;
 
 offset = true;

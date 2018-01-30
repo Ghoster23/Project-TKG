@@ -1,2 +1,2 @@
 /// @description stop flash
-flash=false;
+flash = false;

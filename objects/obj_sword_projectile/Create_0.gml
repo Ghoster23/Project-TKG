@@ -1,4 +1,4 @@
-dir=global.body.rotacao;
+dir=global.body.rotation;
 
 phy_rotation=-dir;
 

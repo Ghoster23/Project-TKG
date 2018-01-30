@@ -1,2 +1,2 @@
-x=global.body.x;
-y=global.body.y-8;
+x = global.body.x;
+y = global.body.y-8;

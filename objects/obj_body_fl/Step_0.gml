@@ -15,9 +15,9 @@ if not global.pause {
 	}
 	
 	if not global.status[1,0] {
-		rotacao = point_direction(x,y,mouse_x,mouse_y);
+		rotation = point_direction(x,y,mouse_x,mouse_y);
 
-		if (rotacao > 315 or rotacao < 45){
+		if (rotation > 315 or rotation < 45){
 		    spr_body = global.char_bsprs[global.char,2];
 		    image_xscale = 1;
 		    image_speed = .5; 
@@ -28,7 +28,7 @@ if not global.pause {
 		
 		    }                   
 		} 
-		else if rotacao < 135{
+		else if rotation < 135{
 		    spr_body = global.char_bsprs[global.char,0];
 		    image_speed = .5;  
 		    spr_side = 0;
@@ -38,7 +38,7 @@ if not global.pause {
 		
 		    }                    
 		} 
-		else if rotacao < 225{
+		else if rotation < 225{
 		    spr_body = global.char_bsprs[global.char,2];
 		    image_xscale = -1;
 		    image_speed = .5; 
@@ -49,7 +49,7 @@ if not global.pause {
 		
 		    }                          
 		} 
-		else if rotacao < 315{
+		else if rotation < 315{
 		    spr_body = global.char_bsprs[global.char,1];
 		    image_speed = .5; 
 		    spr_side = 1;      

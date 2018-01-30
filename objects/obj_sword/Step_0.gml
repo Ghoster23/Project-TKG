@@ -105,7 +105,7 @@ if not global.pause {
 			off=scr_aproach(off,30,4);
 			amount = 3;
 			if off==30 and !mouse_r_key{
-				instance_create_layer(global.body.x + lengthdir_x(30,global.body.rotacao),global.body.y + lengthdir_y(30,global.body.rotacao),"IF",obj_sword_projectile);
+				instance_create_layer(global.body.x + lengthdir_x(30,global.body.rotation),global.body.y + lengthdir_y(30,global.body.rotation),"IF",obj_sword_projectile);
 				scr_sound(snd_sword_slash);
 				off=180;
 				swing="no";
@@ -117,7 +117,7 @@ if not global.pause {
 			off=scr_aproach(off,150,4);
 			amount = 3;
 			if off==150 and !mouse_r_key{
-				instance_create_layer(global.body.x + lengthdir_x(30,global.body.rotacao),global.body.y + lengthdir_y(30,global.body.rotacao),"IF",obj_sword_projectile);
+				instance_create_layer(global.body.x + lengthdir_x(30,global.body.rotation),global.body.y + lengthdir_y(30,global.body.rotation),"IF",obj_sword_projectile);
 				scr_sound(snd_sword_slash);
 				off=0;
 				swing="no";

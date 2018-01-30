@@ -48,7 +48,7 @@ switch global.char{
 		break;
 	
 	case 12:
-		name="Orpheus Thorley";
+		name="Nox Thornley";
 		break;
 }
 return name;

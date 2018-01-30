@@ -1,5 +1,4 @@
 //find if there is a torch
-
 if instance_exists(obj_torch){
 	
 	var torch = noone;  //Clear initial closest object
