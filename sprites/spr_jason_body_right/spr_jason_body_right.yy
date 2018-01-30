@@ -2,7 +2,7 @@
     "id": "59eef39b-5fae-4ba8-ad6e-2103aae15090",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "spr_jason_body_side",
+    "name": "spr_jason_body_right",
     "For3D": false,
     "HTile": false,
     "VTile": false,

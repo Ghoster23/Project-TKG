@@ -50,6 +50,21 @@ global.p_inv = false;
 //Character Selection
 global.char = 0;
 
+//Bodies
+bodies[ 0] = obj_body;
+bodies[ 1] = obj_body;/*Harlow*/
+bodies[ 2] = obj_body;/*Brenton*/
+bodies[ 3] = obj_body;/*Penelope*/
+bodies[ 4] = obj_luna_body;
+bodies[ 5] = obj_body;/*Mahli*/
+bodies[ 6] = obj_body;/*Thalia*/
+bodies[ 7] = obj_body;/*Alexis*/
+bodies[ 8] = obj_body;/*Zimri*/
+bodies[ 9] = obj_body;/*Patricia*/
+bodies[10] = obj_body;/*Straton*/
+bodies[11] = obj_body;/*Dorothea*/
+bodies[12] = obj_body;/*Nox*/
+
 //Stats
 scr_ini_char_stats();
 

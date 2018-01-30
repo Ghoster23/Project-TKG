@@ -506,7 +506,7 @@
             "Key": "13d6c8c0-04b0-4160-9d0b-5bbad6dcfaee",
             "Value": {
                 "id": "66030239-c58a-43a9-b08d-c8767e322cef",
-                "resourcePath": "sprites\\spr_luna_body_side\\spr_luna_body_side.yy",
+                "resourcePath": "sprites\\spr_luna_body_right\\spr_luna_body_right.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2319,6 +2319,14 @@
             }
         },
         {
+            "Key": "59a0f571-ffd3-4e81-b91b-ea0a7d1a0f90",
+            "Value": {
+                "id": "15c73652-ce46-4141-83fe-40c43fa116ad",
+                "resourcePath": "sprites\\spr_jason_body_left\\spr_jason_body_left.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "59a66ead-3f31-42fd-9fec-a8f444010394",
             "Value": {
                 "id": "8a693515-da69-4c54-8780-b14f9b43f252",
@@ -2354,7 +2362,7 @@
             "Key": "59eef39b-5fae-4ba8-ad6e-2103aae15090",
             "Value": {
                 "id": "123eb0c3-6bbb-442d-aba2-16ab6dfd4303",
-                "resourcePath": "sprites\\spr_jason_body_side\\spr_jason_body_side.yy",
+                "resourcePath": "sprites\\spr_jason_body_right\\spr_jason_body_right.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2431,6 +2439,14 @@
             }
         },
         {
+            "Key": "5f7447e8-e959-4e9e-b0a4-61156ad352e3",
+            "Value": {
+                "id": "eb2ab4f7-d0a7-4767-a754-ea8a9b3f2d0e",
+                "resourcePath": "sprites\\spr_luna_body_still\\spr_luna_body_still.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5fdf63e3-e928-44be-a3bb-6e3e18835e99",
             "Value": {
                 "id": "e193e31c-45ef-4119-bfaf-1c629e2cd01e",
@@ -2491,6 +2507,14 @@
             "Value": {
                 "id": "93d09202-9246-471d-ab8d-a10fa47a46f3",
                 "resourcePath": "sprites\\spr_info\\spr_info.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "61ee0906-e7eb-43c1-9d6c-5be83de97e27",
+            "Value": {
+                "id": "94ca4066-95bb-4f73-8079-40d2eb90ade9",
+                "resourcePath": "sprites\\spr_luna_body_left\\spr_luna_body_left.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -5583,14 +5607,6 @@
             }
         },
         {
-            "Key": "e442bc61-2866-4cbe-9c02-b1d23be30383",
-            "Value": {
-                "id": "98f6a828-2620-4d92-8747-2247a9c461a8",
-                "resourcePath": "views\\e442bc61-2866-4cbe-9c02-b1d23be30383.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "e46cf251-01f6-440c-94ef-1edcc2880fd8",
             "Value": {
                 "id": "950609b9-9d22-46ad-af91-e4d1de741cd7",
@@ -5943,6 +5959,14 @@
             }
         },
         {
+            "Key": "f2e16033-2ad6-4012-ba9f-22c2e9f3a171",
+            "Value": {
+                "id": "28a2e939-c270-4108-bd65-7f8baaa70570",
+                "resourcePath": "objects\\obj_luna_body\\obj_luna_body.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f363d194-8229-4b7f-9a60-0fb683ac1b71",
             "Value": {
                 "id": "a5c880e0-1636-46f3-baf5-75be1dfd3bac",
@@ -6180,14 +6204,6 @@
                 "id": "59f96837-d8f6-4d59-9a40-ce1a45c93f34",
                 "resourcePath": "sprites\\spr_pointer\\spr_pointer.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "ff6fc487-9552-49d0-94ee-6c39a51ec704",
-            "Value": {
-                "id": "e232e442-bdb5-4df4-9848-f7cb16f85ecb",
-                "resourcePath": "views\\ff6fc487-9552-49d0-94ee-6c39a51ec704.yy",
-                "resourceType": "GMFolder"
             }
         },
         {

@@ -2,7 +2,7 @@
 if(len != 0){
 	sprite_index = body_sprs[spr_side];
 }else {
-	sprite_index = body_sprs[3];
+	sprite_index = body_sprs[4];
 	image_index  = spr_side;
 }
 
@@ -14,6 +14,9 @@ hands.image_xscale = image_xscale;
 
 x = phy_position_x;
 y = phy_position_y;
+
+head.x = x;
+head.y = y - 16 + head_offset;
 
 if(part_emitter_exists(global.ps_if,global.body_em)){
 	part_emitter_region(global.ps_if,global.body_em,phy_position_x,phy_position_x,phy_position_y,phy_position_y,pt_shape_circle,ps_distr_gaussian);

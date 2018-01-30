@@ -8,7 +8,9 @@ hands.sprite_index = hands_spr;
 feet   = instance_create_layer(x,  y,layer,     obj_feet);
 feet.sprite_index  = feet_spr;
 
-weapon = instance_create_layer(x,  y,layer,global.weapon);
+if(global.char == 0){
+	weapon = instance_create_layer(x,  y,layer,global.weapon);
+}
 
 roll   = obj_roll;
 
@@ -29,9 +31,11 @@ yaxis = 0;
 dir   = 0;
 
 //Appearence
-image_speed = 0;
-spr_side    = 1;
-rotation    = 0;
+image_speed =   0;
+spr_side    =   1;
+head_offset =   0;
+rotation    =   0;
+is          = 0.5;
 
 spr_body = body_sprs[3];
 

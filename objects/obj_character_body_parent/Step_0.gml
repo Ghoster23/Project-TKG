@@ -16,29 +16,25 @@ if not global.pause {
 	
 		//Right
 		if (rotation > 315 or rotation < 45){
-		    image_xscale =   1;
-		    image_speed  = 0.5; 
+		    image_speed  = is; 
 		    spr_side     =   1;
                   
 		}
 		//Up
 		else if rotation < 135{
-			image_xscale =   1;
-		    image_speed  = 0.5;  
+		    image_speed  = is;  
 		    spr_side     =   0;
                        
 		}
 		//Left
 		else if rotation < 225{
-		    image_xscale =  -1;
-		    image_speed  = 0.5; 
-		    spr_side     =   1; 
+		    image_speed  = is; 
+		    spr_side     =   3; 
                            
 		}
 		//Down
 		else if rotation < 315{
-			image_xscale =   1;
-		    image_speed =  0.5; 
+		    image_speed =  is; 
 		    spr_side    =    2;      
                        
 		} 

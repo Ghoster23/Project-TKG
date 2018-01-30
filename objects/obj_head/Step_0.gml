@@ -2,7 +2,7 @@
 if instance_exists(obj_torch){
 	
 	var torch = noone;  //Clear initial closest object
-	var c_dis = 600; //Maximum distance to check
+	var c_dis =   600;  //Maximum distance to check
 
 	with (obj_torch) {
 		if (lit == true) {
