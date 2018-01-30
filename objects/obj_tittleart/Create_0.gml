@@ -1,4 +1,4 @@
-image_speed=0;
+image_speed=0.9;
 fade=false;
 x=640/2;
 y=360/2;

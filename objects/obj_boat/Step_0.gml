@@ -1,5 +1,4 @@
 y_comp=y;
-path_rotate(path_boat1,-0.2);
 
 pt_pos+=0.0006;
 pt_pos=scr_wrap(pt_pos, 0, 1)

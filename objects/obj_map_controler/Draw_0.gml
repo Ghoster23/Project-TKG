@@ -29,13 +29,21 @@ if ds_exists(ds_menumapgrid, ds_type_grid) {
       with(instanceID){
         if instanceID.visible == true{
             
-            for (var i = 0; i < image_number; i++){
-				if(self.object_index == obj_map_controler.highltd){
-					//dont draw for now
-				}
-				else{
+			if(self.object_index == obj_map_controler.highltd){
+				//draw_outline
+				for (var i = 0; i < image_number; i++){
+					shader_set(sh_outline);
+					shader_set_uniform_f(upH,texelH);
+					shader_set_uniform_f(upW,texelW);
+	
+					image_blend = c_white;
 					draw_sprite_ext(sprite_index, i, x, y - i, image_xscale, image_yscale, global.map_angle+angle_off, c_white, image_alpha);
+					shader_reset();
+				
 				}
+			}
+            for (var i = 0; i < image_number; i++){
+				draw_sprite_ext(sprite_index, i, x, y - i, image_xscale, image_yscale, global.map_angle+angle_off, c_white, image_alpha);
             }
         
          }

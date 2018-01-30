@@ -1,5 +1,10 @@
 image_speed=0;
 
+upH    = shader_get_uniform(sh_outline,"pH");
+upW    = shader_get_uniform(sh_outline,"pW");
+texelW = texture_get_texel_width(sprite_get_texture(sprite_index,0));
+texelH = texture_get_texel_width(sprite_get_texture(sprite_index,0));
+
 angle_off=0;
 
 len = point_distance(320,180,x,y);
