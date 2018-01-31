@@ -14,6 +14,6 @@ hands_spr = spr_jason_hands;
 
 feet_spr  = spr_jason_feet;
 
-is = 0.3;
-
 event_inherited();
+
+is = 1.5;
