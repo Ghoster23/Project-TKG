@@ -14,4 +14,5 @@ for(var i = 0; i < 8; i++){
 }
 
 active = false;
+activate_adjacent = false;
 once   = false;

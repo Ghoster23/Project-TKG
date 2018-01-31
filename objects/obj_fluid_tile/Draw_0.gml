@@ -33,8 +33,9 @@ if(active){
 				
 				draw_sprite_ext(sprite, img, x + i * cell_size, y + j * cell_size,1,1,0,c_white,op);
 			
+				draw_set_alpha(1);
+				
 				tiles[i,j] = val;
-		
 			}
 			
 			for(var k = 0; k < 2; k++){

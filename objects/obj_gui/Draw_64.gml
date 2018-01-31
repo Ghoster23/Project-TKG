@@ -1,4 +1,4 @@
-if(!obj_pglobs.dead && room == rm_level){
+if(!obj_pglobs.dead && (room == rm_level || room == rm_lvl_editor_test || room == rm_CH_boss)){
 m = display_get_gui_width() / global.roomwd;
 
 ///Draw emblem

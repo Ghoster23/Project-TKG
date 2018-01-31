@@ -34,9 +34,20 @@ if go and not global.pause{
 
     }
 	
-	if state != 2 and place_meeting(x,y,global.body){
-		scr_damage_player(1);
-		scr_player_status_apply(0,6);
+	if state != 2 {
+		if(place_meeting(x,y,global.body)){
+			scr_damage_player(1);
+			scr_player_status_apply(0,6);
+		}
+		
+		var tile = instance_place(x,y,obj_fluid_tile);
+			
+		if(tile != noone){
+			with(tile){
+				active = true;
+				activate_adjacent = true;
+			}
+		}
 	}
     
 	//Get damaged

@@ -35,7 +35,7 @@ if room != rm_menu_1 and room != rm_char_select and room != rm_dead{
 if(instance_exists(global.body)){
 	///Equipables' effects
 	for(var i = 0; i < 16; i++){
-		if global.equiped[i] and not eq_active[i]{
+		if(global.equiped[i] and not eq_active[i]){
 			scr_item_effects(i);
 		
 		}

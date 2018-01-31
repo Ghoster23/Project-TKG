@@ -37,11 +37,15 @@ switch item {
 		
 	break;
 	case 7: //Staff of Moses
-		rmx = global.body.x mod global.roomwd;
-		rmy = global.body.y mod global.roomhg;
-		
-		ds_grid_set_region(global.fluid_grid,(rmx - 16) div 4,(rmy + 3) div 4,(rmx + 15) div 4,(rmy + 14) div 4,0);
-		ds_grid_set_region(global.fluid_grid,((rmx - 16) + 4) div 4,((rmy + 3) - 4) div 4,(rmx + 15 - 4) div 4,(rmy + 14 + 4) div 4,0);
+		with(global.body){
+			var tile = instance_place(x,y,obj_fluid_tile);
+			
+			if(tile != noone){
+				with(tile){
+					active = true;
+				}
+			}
+		}
 		
 	break;
 	case 8: //Sandals of Hermes
