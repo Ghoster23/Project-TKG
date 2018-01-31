@@ -4,3 +4,4 @@ if keyboard_check_pressed(vk_space){
 	selected=scr_wrap(selected,0,8);
 	highltd=ds_list_find_value(ds_places,selected);
 }
+
