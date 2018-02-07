@@ -3199,14 +3199,6 @@
             }
         },
         {
-            "Key": "7e2602a7-96e2-44c6-ac91-e49c98211da3",
-            "Value": {
-                "id": "2255a396-329d-4d23-bfec-6d022adf31d3",
-                "resourcePath": "sprites\\spr_charselectflag\\spr_charselectflag.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "7ebc1791-af88-4669-a52b-a735c44bfbd5",
             "Value": {
                 "id": "8d5e35cb-6a1c-40c2-89ec-881343c2c135",

@@ -30,10 +30,6 @@ if ds_exists(ds_menumapgrid, ds_type_grid) {
         if instanceID.visible == true{
             
 			if(self.object_index == obj_map_controler.highltd){
-				//draw little flag 
-				image_speed=-1;
-				draw_sprite_ext(spr_charselectflag, 0, x, y, 1, 1, 0, c_white, 1);
-				image_speed=0;
 				//draw_outline
 				for (var i = 0; i < image_number; i++){
 					shader_set(sh_outline);
@@ -57,6 +53,4 @@ if ds_exists(ds_menumapgrid, ds_type_grid) {
 
    ds_grid_clear(ds_menumapgrid, 0);
 }
-
-
 
