@@ -41,8 +41,8 @@ switch state{
 		global.interact_key_bind=newkey;
 		break;
 		
-	case "potion_key":
-		global.potion_key_bind=newkey;
+	case "consumable_key":
+		global.consumable_key_bind=newkey;
 		break;
 		
 	case "mmap_key":

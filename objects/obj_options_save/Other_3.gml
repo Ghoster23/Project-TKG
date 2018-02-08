@@ -17,7 +17,7 @@ ini_write_real("controls", "dash_key", global.dash_key_bind);
 ini_write_real("controls", "attack_key", global.attack_key_bind);
 ini_write_real("controls", "mouse_r_key", global.mouse_r_key_bind);
 ini_write_real("controls", "interact_key", global.interact_key_bind);
-ini_write_real("controls", "potion_key", global.potion_key_bind);
+ini_write_real("controls", "consumable_key", global.consumable_key_bind);
 ini_write_real("controls", "menu_key", global.menu_key_bind);
 ini_write_real("controls", "mmap_key", global.mmap_key_bind);
 ini_write_real("controls", "os_mmap_key", global.os_mmap_key_bind);

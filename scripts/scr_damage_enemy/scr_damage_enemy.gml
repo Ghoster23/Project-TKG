@@ -121,7 +121,7 @@ if(global.status[4,0] and type != 404){
 if not boss {
 	switch type {
 		case 0: //Physical attacks
-			e_hp -= global.p_atk div e_def;
+			e_hp -= global.atk div e_def;
 		
 			var d = point_direction(obj.x,obj.y,x,y);
 		
@@ -135,7 +135,7 @@ if not boss {
 		
 		break;
 		case 1: //Speacil attacks
-			e_hp -= global.p_satk div e_sdef;
+			e_hp -= global.satk div e_sdef;
 		
 			alarm[0] = satk_cooldown[j] * room_speed;
 		
@@ -181,7 +181,7 @@ if not boss {
 }else {
 	switch type {
 		case 0: //Physical attacks
-			global.b_hp -= global.p_atk div global.b_def;
+			global.b_hp -= global.atk div global.b_def;
 		
 			var d = point_direction(obj.x,obj.y,x,y);
 		
@@ -196,9 +196,9 @@ if not boss {
 		break;
 		case 1: //Speacil attacks
 			if obj != obj_sword_projectile {
-				global.b_hp -= global.p_satk div global.b_sdef;
+				global.b_hp -= global.satk div global.b_sdef;
 			}else {
-				global.b_hp -= global.p_satk * global.p_will div global.b_sdef;
+				global.b_hp -= global.satk * global.p_will div global.b_sdef;
 			}
 			
 			global.shake = 3;

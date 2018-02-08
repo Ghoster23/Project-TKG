@@ -9,7 +9,7 @@ if instance_exists(global.weapon) {
 }
 
 
-len = global.p_spd*3;
+len = global.spd*3;
 
 //get the hspd and vspd
 hspd = lengthdir_x(len,dir);

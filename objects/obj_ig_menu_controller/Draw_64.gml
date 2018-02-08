@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 var off = 96;
-var c = surface_get_width(application_surface)/2;
+var c  = surface_get_width(application_surface)/2;
 var c_ = surface_get_height(application_surface)/2;
 draw_set_font(font_ig_menu);
 
@@ -9,6 +9,7 @@ switch state{
 	case "menu":
 		draw_set_color(c_black);
 		draw_set_alpha(1);
+		draw_set_halign(fa_center);
 		
 		if(box_wd < 68){
 			box_wd += 4;
@@ -110,12 +111,12 @@ switch state{
 		draw_set_alpha(1);
 	break;
 	case "stats":
-		stats[0] = global.p_maxhp;
-		stats[1] = global.p_atk;
-		stats[2] = global.p_def;
-		stats[3] = global.p_satk;
+		stats[0] = global.maxhp;
+		stats[1] = global.atk;
+		stats[2] = global.def;
+		stats[3] = global.satk;
 		stats[4] = global.p_sdef;
-		stats[5] = global.p_spd;
+		stats[5] = global.spd;
 		
 		var s = 1;
 		
@@ -195,6 +196,25 @@ switch state{
 	case "mmap":
 		wd = string_width_ext("Back",2,12) / 2 * m;
 		//draw_rectangle(c-wd,(192 + off) * m,c+wd,(192 + off + 15) * m,true);
+		if point_in_rectangle(display_mouse_get_x(),display_mouse_get_y(),c-wd,(256 + 96) * m,c+wd,(256 + 96 + 15) * m){
+			if mouse_check_button_released(mb_left) {
+				state = "menu";
+				box_wd = 0;
+				check = false;
+				alarm[0] = 0.5 * room_speed;
+			}
+			draw_set_alpha(0.6);
+		}
+		
+		draw_text_ext_transformed(c, (256 + 96) * m,"Back",2,12,m,m,0);
+		
+		draw_set_alpha(1);
+	break;
+	case "inv":
+		wd = string_width_ext("Back",2,12) / 2 * m;
+		var v = 3 * 32 + 16;
+		
+		scr_9SB(spr_9S_frame, c - v * m, (off) * m, c + v * m, (off + v) * m);
 		if point_in_rectangle(display_mouse_get_x(),display_mouse_get_y(),c-wd,(256 + 96) * m,c+wd,(256 + 96 + 15) * m){
 			if mouse_check_button_released(mb_left) {
 				state = "menu";

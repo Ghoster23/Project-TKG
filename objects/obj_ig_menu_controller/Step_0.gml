@@ -83,6 +83,12 @@ if check == true{
 				state = "closed";
 			}
 		break;
+		
+		case "inv":
+			if menu_key {
+				state = "closed";
+			}
+		break;
 	}
 	
 	if(room == rm_dead){

@@ -4,13 +4,46 @@ if not global.pause {
 	script_execute(state);
 	
 	//End Pause
-	scr_pause_end(2);
+	scr_pause_end(3);
 	
 	//Dash 
 	if global.dash_cd and alarm[1] == -1{
 		alarm[1] = 0.6 * room_speed;
 	}
-		
+	
+	///Equipables' effects
+	
+
+	///Statuses
+	if(status_check == true and not global.pause){
+		//Poisoned
+	    scr_player_status_check(0);
+    
+		//Stuck
+	
+		//Regen
+		scr_player_status_check(2);
+	
+		//Compass
+		scr_player_status_check(3);
+	
+		//OHKO
+		scr_player_status_check(4);
+	
+		//AllSee
+		scr_player_status_check(5);
+	
+		//Mida's
+		scr_player_status_check(6);
+	
+		//Immune
+		scr_player_status_check(7);
+        
+	    status_check = false;
+	    alarm[2] = 1 * room_speed;
+	}
+	
+	//Orientation
 	if(not global.status[1,0]){
 		rotation = point_direction(x,y,mouse_x,mouse_y);
 	
@@ -49,6 +82,6 @@ if not global.pause {
 	
 }else {
 	//Start Pause
-	scr_pause_start(2);
+	scr_pause_start(3);
 	
 }

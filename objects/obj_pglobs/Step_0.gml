@@ -7,13 +7,13 @@ scr_get_input();
 
 //Stats
 if(room == rm_char_select){
-	global.p_maxhp = global.ds_char_stat_grid[# global.char, 0];
-	global.p_hp    = global.ds_char_stat_grid[# global.char, 0];
-	global.p_atk   = global.ds_char_stat_grid[# global.char, 1];
-	global.p_def   = global.ds_char_stat_grid[# global.char, 2];
-	global.p_satk  = global.ds_char_stat_grid[# global.char, 3];
+	global.maxhp = global.ds_char_stat_grid[# global.char, 0];
+	global.hp    = global.ds_char_stat_grid[# global.char, 0];
+	global.atk   = global.ds_char_stat_grid[# global.char, 1];
+	global.def   = global.ds_char_stat_grid[# global.char, 2];
+	global.satk  = global.ds_char_stat_grid[# global.char, 3];
 	global.p_sdef  = global.ds_char_stat_grid[# global.char, 4];
-	global.p_spd   = global.ds_char_stat_grid[# global.char, 5];
+	global.spd   = global.ds_char_stat_grid[# global.char, 5];
 	
 	global.body    = bodies[global.char];
 }
@@ -32,72 +32,22 @@ if room != rm_menu_1 and room != rm_char_select and room != rm_dead{
 	}
 }
 
-if(instance_exists(global.body)){
-	///Equipables' effects
-	for(var i = 0; i < 16; i++){
-		if(global.equiped[i] and not eq_active[i]){
-			scr_item_effects(i);
-		
-		}
-	}
-
-	///Statuses
-	if status_check == true and not global.pause{
-		//Poisoned
-	    scr_player_status_check(0);
-    
-		//Stuck
-	
-		//Regen
-		scr_player_status_check(2);
-	
-		//Compass
-		scr_player_status_check(3);
-	
-		//OHKO
-		scr_player_status_check(4);
-	
-		//AllSee
-		scr_player_status_check(5);
-	
-		//Mida's
-		scr_player_status_check(6);
-	
-		//Immune
-		scr_player_status_check(7);
-        
-	    status_check = false;
-	    alarm[1] = 1 * room_speed;
-	}
-	
-	///Abilities
-	if not global.pause{
-		switch global.char {
-			case 0:
-				/*if alarm[3] == -1 and global.lock and global.p_will < 100{
-					alarm[3] = 0.1 * room_speed;
-				}*/
-			break;
-		}
-	}
-}
-
 
 ///patchwork no pay atention to this
-if(global.p_hp <= 0 && dead == false && room = rm_lvl_editor_test){
-    global.p_maxhp = global.ds_char_stat_grid[# global.char, 0];
-	global.p_hp    = global.ds_char_stat_grid[# global.char, 0];
-	global.p_atk   = global.ds_char_stat_grid[# global.char, 1];
-	global.p_def   = global.ds_char_stat_grid[# global.char, 2];
-	global.p_satk  = global.ds_char_stat_grid[# global.char, 3];
+if(global.hp <= 0 && dead == false && room = rm_lvl_editor_test){
+    global.maxhp = global.ds_char_stat_grid[# global.char, 0];
+	global.hp    = global.ds_char_stat_grid[# global.char, 0];
+	global.atk   = global.ds_char_stat_grid[# global.char, 1];
+	global.def   = global.ds_char_stat_grid[# global.char, 2];
+	global.satk  = global.ds_char_stat_grid[# global.char, 3];
 	global.p_sdef  = global.ds_char_stat_grid[# global.char, 4];
-	global.p_spd   = global.ds_char_stat_grid[# global.char, 5];
+	global.spd   = global.ds_char_stat_grid[# global.char, 5];
 	room_goto(rm_lvl_editor);
 }
 
 
 ///Death
-if(global.p_hp <= 0 && dead == false){
+if(global.hp <= 0 && dead == false){
 	global.status[1,0] = 1;
 	global.pause       = true;
 	dead               = true;

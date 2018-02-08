@@ -1,5 +1,5 @@
 /// @description proper view
-window_set_size( 1344, 832 );
+application_surface_draw_enable(true);
 
 global.frozen=false
 

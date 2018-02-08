@@ -88,13 +88,13 @@ interact_key_y1 = (off+sep) * m
 interact_key_x2 = interact_key_x1 + interact_key_width;
 interact_key_y2 = interact_key_y1+ interact_key_height;
 
-//potion_key
-potion_key_width = string_width_ext("Use Item",2,200)*m;
-potion_key_height = string_height_ext("Use Item",2,200)*m; 
-potion_key_x1 = c2;
-potion_key_y1 = (off+sep*2) * m
-potion_key_x2 = potion_key_x1 + potion_key_width;
-potion_key_y2 = potion_key_y1+ potion_key_height;
+//consumable_key
+consumable_key_width = string_width_ext("Use Item",2,200)*m;
+consumable_key_height = string_height_ext("Use Item",2,200)*m; 
+consumable_key_x1 = c2;
+consumable_key_y1 = (off+sep*2) * m
+consumable_key_x2 = consumable_key_x1 + consumable_key_width;
+consumable_key_y2 = consumable_key_y1+ consumable_key_height;
 
 //mmap_key
 mmap_key_width = string_width_ext("Map key",2,200)*m;

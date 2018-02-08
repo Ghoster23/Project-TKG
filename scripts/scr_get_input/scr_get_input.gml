@@ -24,8 +24,8 @@ else{mouse_r_key=keyboard_check(global.mouse_r_key_bind); }
 if global.interact_key_bind==mb_left or global.interact_key_bind==mb_right or global.interact_key_bind==mb_middle{interact_key=mouse_check_button(global.interact_key_bind);}
 else{interact_key=keyboard_check_pressed(global.interact_key_bind); }
 
-if global.potion_key_bind==mb_left or global.potion_key_bind==mb_right or global.potion_key_bind==mb_middle{potion_key=mouse_check_button(global.potion_key_bind);}
-else{potion_key=keyboard_check_pressed(global.potion_key_bind); }
+if global.consumable_key_bind==mb_left or global.consumable_key_bind==mb_right or global.consumable_key_bind==mb_middle{consumable_key=mouse_check_button(global.consumable_key_bind);}
+else{consumable_key=keyboard_check_pressed(global.consumable_key_bind); }
 
 if global.menu_key_bind==mb_left or global.menu_key_bind==mb_right or global.menu_key_bind==mb_middle{menu_key=mouse_check_button(global.menu_key_bind);}
 else{menu_key=keyboard_check_pressed(global.menu_key_bind); }

@@ -14,7 +14,7 @@ attempts = 0;
 offs = 32;
 offset = true;
 
-while global.equipable[select] {
+/*while global.equipable[select] {
 	select = irandom(equipable_count);
 	attempts++;
 	
@@ -23,7 +23,7 @@ while global.equipable[select] {
 	}
 }
 
-global.equipable[select] = true;
+global.equipable[select] = true;*/
 image_index = select;
 
 pedestal = -1;

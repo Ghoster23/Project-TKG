@@ -12,11 +12,8 @@ global.roomhg = 416;
 //Generation on-going
 global.gen = false;
 
-//Fallen Item Count
-global.fallen_items = 0;
-
 //Door lock
-global.lock  = false;
+global.lock = false;
 
 //Current Level
 global.level = 0;
@@ -68,38 +65,17 @@ bodies[12] = obj_body;/*Nox*/
 //Stats
 scr_ini_char_stats();
 
-global.p_maxhp = global.ds_char_stat_grid[# global.char, 0];
-global.p_hp    = global.ds_char_stat_grid[# global.char, 0];
-global.p_atk   = global.ds_char_stat_grid[# global.char, 1];
-global.p_def   = global.ds_char_stat_grid[# global.char, 2];
-global.p_satk  = global.ds_char_stat_grid[# global.char, 3];
-global.p_sdef  = global.ds_char_stat_grid[# global.char, 4];
-global.p_spd   = global.ds_char_stat_grid[# global.char, 5];
+global.maxhp = global.ds_char_stat_grid[# global.char, 0];
+global.hp    = global.maxhp;
+global.atk   = global.ds_char_stat_grid[# global.char, 1];
+global.def   = global.ds_char_stat_grid[# global.char, 2];
+global.satk  = global.ds_char_stat_grid[# global.char, 3];
+global.sdef  = global.ds_char_stat_grid[# global.char, 4];
+global.spd   = global.ds_char_stat_grid[# global.char, 5];
+
 
 ///Dash
 global.dash_cd = false;
-
-///Equipables
-for(var i = 0; i < 16; i++){
-	//Spawned
-	global.equipable[i] = false;
-		
-	//Equipped
-	global.equiped[i] = false;
-		
-	//Counted
-	eq_active[i] = false;
-	    
-}
-	
-///Potion
-global.potion[0] = 0;
-global.potion[1] = c_white;
-
-//Statuses
-status_check = true;
-
-scr_player_status_init();
 
 //Hurt
 global.p_hurt = false;

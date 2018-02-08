@@ -4,18 +4,10 @@
     "mvc": "1.1",
     "name": "bd3b2cf0-0633-4ac1-b209-dc20ae9a9e4d",
     "children": [
-        "1d79937b-1c36-469a-96d3-e40d79ca0025",
-        "43e92121-66ff-4ca0-a864-5ac52130fefb",
-        "97ad3363-68e1-478b-b1a6-0cc1008f3a6c",
-        "40646ae1-0b2d-4e0f-88a8-cca303cf5446",
-        "818c35bc-1af7-456a-bcf0-45b2573d1467",
-        "35e4e20a-84b4-47e5-8966-538eee98483f",
-        "c57fe3f5-74a6-4ec9-8e59-050150c5d66e",
-        "dbad1b9e-be7e-4a53-83d3-131bc14572c2",
-        "b1feb13e-e11b-44fa-afff-708cf50a1a81",
-        "bf54cc9b-3395-457b-bda0-b115d6f63e33",
-        "7d0ddea0-e289-4b26-884b-7eac20c9fbd9",
-        "77c0a910-716f-417b-8af1-2c0365ff5be6"
+        "dacbfbfa-6aad-4b64-bcdd-a293a6555ace",
+        "ef3a09b5-629d-4f51-9abb-19e3268cb279",
+        "7cfc629f-ec4e-49d0-b88e-25d15cae1ea1",
+        "2bd67d38-3b94-4bba-bc5c-a33c68a3844b"
     ],
     "filterType": "GMScript",
     "folderName": "Level",

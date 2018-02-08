@@ -40,9 +40,14 @@ is          = 0.5;
 spr_body = body_sprs[3];
 
 //Pause
-for(i = 0; i < 2; i++){
+for(i = 0; i < 3; i++){
 	alarms[i] = -1;
 }
+
+//Statuses
+status_check = true;
+
+scr_player_status_init();
 
 //Body particle emitter
 global.body_em = part_emitter_create(global.ps_if);

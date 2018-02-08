@@ -142,16 +142,16 @@ if !(listen_for_key==true and state=="interact_key"){
 
 draw_set_halign(fa_left);
 draw_set_color(c_white);
-draw_text_transformed(c2, potion_key_y1,"Use Item",m,m,0);
-//draw_rectangle(potion_key_x1,potion_key_y1,potion_key_x2,potion_key_y2,true);
+draw_text_transformed(c2, consumable_key_y1,"Use Item",m,m,0);
+//draw_rectangle(consumable_key_x1,consumable_key_y1,consumable_key_x2,consumable_key_y2,true);
 
-if !(listen_for_key==true and state=="potion_key"){
-	var text=scr_keyname(global.potion_key_bind);
+if !(listen_for_key==true and state=="consumable_key"){
+	var text=scr_keyname(global.consumable_key_bind);
 	var bx = (string_width_ext(text,2,200)*m)/2;
-	draw_roundrect(ic2-(bx+2*m),potion_key_y1,ic2+(bx+2*m),potion_key_y2,false);
+	draw_roundrect(ic2-(bx+2*m),consumable_key_y1,ic2+(bx+2*m),consumable_key_y2,false);
 	draw_set_color(c_black);
 	draw_set_halign(fa_center);
-	draw_text_transformed(ic2,potion_key_y1,text,m,m,0);
+	draw_text_transformed(ic2,consumable_key_y1,text,m,m,0);
 }
 //---------------------------------------------------------------------------
 
@@ -286,9 +286,9 @@ switch state{
 		draw_sprite_ext(spr_pointer,-1,pointer_x,pointer_y,m,m,0,c_white,1);
 		break;
 	
-	case "potion_key":
-		pointer_x=potion_key_x1;
-		pointer_y=potion_key_y1+potion_key_height/2-1;
+	case "consumable_key":
+		pointer_x=consumable_key_x1;
+		pointer_y=consumable_key_y1+consumable_key_height/2-1;
 		draw_sprite_ext(spr_pointer,-1,pointer_x,pointer_y,m,m,0,c_white,1);
 		break;
 		

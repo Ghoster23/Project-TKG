@@ -23,7 +23,7 @@ if not global.pause{
 	}
 	
 	if state != 1 and place_meeting(x,y,global.body) and not instance_exists(obj_roll){
-		scr_damage_player(0,10,global.p_def);
+		scr_damage_player(0,10,global.def);
 
 		instance_destroy();
 	}

@@ -4,14 +4,10 @@
     "mvc": "1.1",
     "name": "d21694f6-61c2-4198-a249-30b7fa4fc455",
     "children": [
-        "05991355-938c-42c4-ad02-ea8178c44584",
-        "8f012420-c873-40fc-abb6-9f67a06f250f",
         "4a88cae2-8926-4855-bded-8c1d4e904562",
-        "e790be6c-bbdb-41c2-a846-9fe50e54dc5a",
-        "e0dd5a0f-57ed-436b-b5e8-0ff3612279ae",
-        "fe73c630-e5d2-49c4-a914-eec75a0679ff",
-        "b8593544-0090-40ca-88b4-4182298a637f",
-        "5b55d4b5-395f-472d-ad42-7e3ebc5c75b0"
+        "49d21d61-8ce9-4d9b-aaf1-1008bd713a5c",
+        "5a2bc03f-be01-4c31-9226-fbd7285fdc86",
+        "71677787-0c59-4ead-ae69-97f17be4ebda"
     ],
     "filterType": "GMScript",
     "folderName": "Player",

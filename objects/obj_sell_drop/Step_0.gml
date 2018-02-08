@@ -8,10 +8,10 @@ if distance_to_object(global.body) < 24 {
 		
 		switch sprite_index{
 			case spr_heart:
-				global.p_hp += image_index;
+				global.hp += image_index;
 				
-				if global.p_hp > global.p_maxhp {
-					global.p_hp = global.p_maxhp;
+				if global.hp > global.maxhp {
+					global.hp = global.maxhp;
 				}
 				
 				instance_destroy();

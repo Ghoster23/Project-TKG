@@ -38,7 +38,7 @@ if listen_for_key==false{
 				state="down_key";
 			}
 			if a_right{
-				state="potion_key";
+				state="consumable_key";
 			}
 			break;
 		
@@ -109,14 +109,14 @@ if listen_for_key==false{
 				state="menu_key"; 
 			}
 			if a_down{
-				state="potion_key";
+				state="consumable_key";
 			}
 			if a_left{
 				state="up_key";
 			}
 			break;
 		
-		case "potion_key":
+		case "consumable_key":
 			if a_up{
 				state="interact_key"; 
 			}
@@ -130,7 +130,7 @@ if listen_for_key==false{
 		
 		case "mmap_key":
 			if a_up{
-				state="potion_key"; 
+				state="consumable_key"; 
 			}
 			if a_down{
 				state="os_mmap_key";
@@ -196,7 +196,7 @@ if listen_for_key==false{
 				global.attack_key_bind=mb_left;
 				global.mouse_r_key_bind=mb_right;
 				global.interact_key_bind=ord("F");
-				global.potion_key_bind=ord("E");
+				global.consumable_key_bind=ord("E");
 				global.menu_key_bind=vk_escape;
 				global.mmap_key_bind=ord("M");
 				global.os_mmap_key_bind=vk_tab;
@@ -209,7 +209,7 @@ if listen_for_key==false{
 				ini_write_real("controls", "attack_key", global.attack_key_bind);
 				ini_write_real("controls", "mouse_r_key", global.mouse_r_key_bind);
 				ini_write_real("controls", "interact_key", global.interact_key_bind);
-				ini_write_real("controls", "potion_key", global.potion_key_bind);
+				ini_write_real("controls", "consumable_key", global.consumable_key_bind);
 				ini_write_real("controls", "menu_key", global.menu_key_bind);
 				ini_write_real("controls", "mmap_key", global.mmap_key_bind);
 				ini_write_real("controls", "os_mmap_key", global.os_mmap_key_bind);
@@ -272,8 +272,8 @@ if listen_for_key==false{
 			listen_for_key=true;
 		}
 	}
-	if point_in_rectangle(mousex,mousey,potion_key_x1,potion_key_y1,potion_key_x2,potion_key_y2+12*m){
-		state="potion_key";
+	if point_in_rectangle(mousex,mousey,consumable_key_x1,consumable_key_y1,consumable_key_x2,consumable_key_y2+12*m){
+		state="consumable_key";
 		if mouse_click{
 			listen_for_key=true;
 		}
@@ -314,7 +314,7 @@ if listen_for_key==false{
 			global.attack_key_bind=mb_left;
 			global.mouse_r_key_bind=mb_right;
 			global.interact_key_bind=ord("F");
-			global.potion_key_bind=ord("E");
+			global.consumable_key_bind=ord("E");
 			global.menu_key_bind=vk_escape;
 			global.mmap_key_bind=ord("M");
 			global.os_mmap_key_bind=vk_tab;
@@ -327,7 +327,7 @@ if listen_for_key==false{
 			ini_write_real("controls", "attack_key", global.attack_key_bind);
 			ini_write_real("controls", "mouse_r_key", global.mouse_r_key_bind);
 			ini_write_real("controls", "interact_key", global.interact_key_bind);
-			ini_write_real("controls", "potion_key", global.potion_key_bind);
+			ini_write_real("controls", "consumable_key", global.consumable_key_bind);
 			ini_write_real("controls", "menu_key", global.menu_key_bind);
 			ini_write_real("controls", "mmap_key", global.mmap_key_bind);
 			ini_write_real("controls", "os_mmap_key", global.os_mmap_key_bind);

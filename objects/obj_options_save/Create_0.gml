@@ -26,7 +26,7 @@ if file_exists("saveoptions.ini"){
 	global.attack_key_bind   =ini_read_real("controls",   "attack_key", 0); 
 	global.mouse_r_key_bind  =ini_read_real("controls",  "mouse_r_key", 0); 
 	global.interact_key_bind =ini_read_real("controls", "interact_key", 0); 
-	global.potion_key_bind   =ini_read_real("controls",   "potion_key", 0); 
+	global.consumable_key_bind   =ini_read_real("controls",   "consumable_key", 0); 
 	global.menu_key_bind     =ini_read_real("controls",     "menu_key", 0); 
 	global.mmap_key_bind     =ini_read_real("controls",     "mmap_key", 0); 
 	global.os_mmap_key_bind  =ini_read_real("controls",  "os_mmap_key", 0); 
@@ -66,7 +66,7 @@ else{
 	global.attack_key_bind   =   mb_left;
 	global.mouse_r_key_bind  =  mb_right;
 	global.interact_key_bind =  ord("F");
-	global.potion_key_bind   =  ord("E");
+	global.consumable_key_bind   =  ord("E");
 	global.menu_key_bind     = vk_escape;
 	global.mmap_key_bind     =  ord("M");
 	global.os_mmap_key_bind  =    vk_tab;
@@ -79,7 +79,7 @@ else{
 	ini_write_real("controls",   "attack_key",   global.attack_key_bind);
 	ini_write_real("controls",  "mouse_r_key",  global.mouse_r_key_bind);
 	ini_write_real("controls", "interact_key", global.interact_key_bind);
-	ini_write_real("controls",   "potion_key",   global.potion_key_bind);
+	ini_write_real("controls",   "consumable_key",   global.consumable_key_bind);
 	ini_write_real("controls",     "menu_key",     global.menu_key_bind);
 	ini_write_real("controls",     "mmap_key",     global.mmap_key_bind);
 	ini_write_real("controls",  "os_mmap_key",  global.os_mmap_key_bind);
