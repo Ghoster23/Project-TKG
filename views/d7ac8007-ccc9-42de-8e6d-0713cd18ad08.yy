@@ -20,7 +20,10 @@
         "12aabb48-435f-4cdd-8cda-2657ebd3f8d2",
         "8fc79b85-cccd-4635-9a85-051a2f56631b",
         "4eb33e09-9ac4-42b4-9d2b-70b9e1cc4f95",
-        "59da5ed8-d442-4734-b859-f15fff8e65b3"
+        "59da5ed8-d442-4734-b859-f15fff8e65b3",
+        "024d4ffa-e704-4f46-a343-868f118e138f",
+        "b83c38db-09d0-43e1-add2-74dd3def23ca",
+        "2ee9e2e6-71fd-428c-898e-034722bf4957"
     ],
     "filterType": "GMObject",
     "folderName": "map",
