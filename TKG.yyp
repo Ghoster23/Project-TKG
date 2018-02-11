@@ -5943,14 +5943,6 @@
             }
         },
         {
-            "Key": "e9832c7f-5093-45fe-901c-cc3941318581",
-            "Value": {
-                "id": "e75faad5-6e0f-4634-8909-8bd6d7df98cb",
-                "resourcePath": "extensions\\Bloom_shader\\Bloom_shader.yy",
-                "resourceType": "GMExtension"
-            }
-        },
-        {
             "Key": "ea9784f4-2021-4290-aaca-57aa6cc36a90",
             "Value": {
                 "id": "adb2f1e5-0d96-4fa1-8a01-d37857c0baa6",

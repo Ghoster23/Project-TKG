@@ -2,6 +2,8 @@
 //by loading a file later on
 
 //read options file if it does exist
+global.MonitorW = display_get_width();
+global.MonitorH = display_get_height();
 
 
 if file_exists("saveoptions.ini"){

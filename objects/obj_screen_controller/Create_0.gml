@@ -21,3 +21,5 @@ if(window_get_fullscreen()){
 }
 
 prev_t = t;
+
+scr_screen_res();
