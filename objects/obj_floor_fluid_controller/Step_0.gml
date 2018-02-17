@@ -42,7 +42,7 @@ if(not global.pause){
 			var x0 = (inst.phy_position_x mod global.roomwd) div 32 - 1;
 			var y0 = (inst.phy_position_y mod global.roomhg) div 32 - 3;
 			
-			show_debug_message("x0: " + string(x0) + " y0: " + string(y0));
+			//show_debug_message("x0: " + string(x0) + " y0: " + string(y0));
 			
 			if(x0 < 0){ x0 = 0;}
 			if(y0 < 0){ y0 = 0;}
