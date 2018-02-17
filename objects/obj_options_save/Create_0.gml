@@ -2,9 +2,6 @@
 //by loading a file later on
 
 //read options file if it does exist
-global.MonitorW = display_get_width();
-global.MonitorH = display_get_height();
-
 
 if file_exists("saveoptions.ini"){
 	show_debug_message("load from file");
@@ -89,12 +86,12 @@ else{
 	ini_close();
 }
 
-if global.fullscreen=="OFF"{
+/*if global.fullscreen == "OFF"{
 	window_set_size(global.MonitorW,global.MonitorH);
 	window_set_position(0, 0);
 	window_center();
 	window_set_fullscreen(false);
-}
+}*/
 
 
 //set master volume gain

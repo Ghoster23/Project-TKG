@@ -8,4 +8,3 @@ enum potions{
 	immunity     = 6
 	
 }
-
