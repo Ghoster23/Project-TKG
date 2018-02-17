@@ -24,7 +24,7 @@ switch(argument){
 		return 8;		
 	break;
 					
-	case item_type.weapon:
+	case item_type.weapons:
 		return 8;
 	break;
 					

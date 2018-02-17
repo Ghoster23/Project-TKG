@@ -1,6 +1,6 @@
 {
 switch(argument) {
-	case weapon.wood_sword:
+	case weapons.wood_sword:
 		return "Wood Sword";
 	break;
 	default:

@@ -4,7 +4,7 @@ enum item_type{
 	potion            = 2,
 	chess_piece       = 3,
 	constellation     = 4,
-	weapon            = 5,
+	weapons           = 5,
 	tool              = 6,
 	equipable         = 7,
 	drop              = 8

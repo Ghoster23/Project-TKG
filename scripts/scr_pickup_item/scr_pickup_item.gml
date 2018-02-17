@@ -10,7 +10,7 @@ var amount = argument2;
 if(obj_inventory_controller.capacity > 0){
 	var inv = obj_inventory_controller.inventory;
 
-	var max = scr_inv_item_stack_size(type);
+	var maximum = scr_inv_item_stack_size(type);
 
 	for(var i = 0; i < 9; i++){
 		var temp_type = inv[# i, 0];
@@ -19,18 +19,18 @@ if(obj_inventory_controller.capacity > 0){
 			var temp_item   = inv[# i, 1];
 			var temp_amount = inv[# i, 2];
 		
-			if(temp_item == item && temp_amount < max){
-				var excess = max - amount - temp_amount;
+			if(temp_item == item && temp_amount < maximum){
+				var excess = maximum - amount - temp_amount;
 			
 				if(excess < 0){
 					amount      = excess * -1;
-					inv[# i, 2] = max;
+					inv[# i, 2] = maximum;
 				}else if(excess > 0){
 					inv[# i, 2] += amount;
 					amount = 0;
 					break;
 				}else {
-					inv[# i, 2] = max;
+					inv[# i, 2] = maximum;
 					amount = 0;
 					break;
 				}

@@ -41,7 +41,7 @@ switch(type){
 		draw_sprite_ext(spr_tool,item,xx,yy,xscale,yscale,0,c_white,1);	
 	break;
 					
-	case item_type.weapon:
+	case item_type.weapons:
 		draw_sprite_ext(spr_weapon,item,xx,yy,xscale,yscale,0,c_white,1);
 	break;
 					
