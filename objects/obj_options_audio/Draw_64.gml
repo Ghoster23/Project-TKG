@@ -60,33 +60,32 @@ draw_sprite_ext(spr_back,0,c,creatures_y1+creatures_height+18*m,m,m,0,c_white,1)
 switch state{
 
 	case "master":
-		pointer_x=master_x1;
-		pointer_y=master_y1+master_height/2-1;
+		pointer_x = master_x1;
+		pointer_y = master_y1+master_height/2-1;
 		draw_sprite_ext(spr_pointer,-1,pointer_x,pointer_y,m,m,0,c_white,1);
 		break;
 	
 	case "music":
-		pointer_x=music_x1;
-		pointer_y=music_y1+music_height/2-1;
+		pointer_x = music_x1;
+		pointer_y = music_y1+music_height/2-1;
 		draw_sprite_ext(spr_pointer,-1,pointer_x,pointer_y,m,m,0,c_white,1);
 		break;
 	
 	case "effects":
-		pointer_x=effects_x1;
-		pointer_y=effects_y1+effects_height/2-1;
+		pointer_x = effects_x1;
+		pointer_y = effects_y1+effects_height/2-1;
 		draw_sprite_ext(spr_pointer,-1,pointer_x,pointer_y,m,m,0,c_white,1);
 		break;
 		
 	case "ambient":
-		pointer_x=ambient_x1;
-		pointer_y=ambient_y1+ambient_height/2-1;
+		pointer_x = ambient_x1;
+		pointer_y = ambient_y1+ambient_height/2-1;
 		draw_sprite_ext(spr_pointer,-1,pointer_x,pointer_y,m,m,0,c_white,1);
 		break;
 		
 	case "creatures":
-		pointer_x=creatures_x1;
-		pointer_y=creatures_y1+creatures_height/2-1;
+		pointer_x = creatures_x1;
+		pointer_y = creatures_y1+creatures_height/2-1;
 		draw_sprite_ext(spr_pointer,-1,pointer_x,pointer_y,m,m,0,c_white,1);
 		break;
-
 }

@@ -5,30 +5,30 @@ image_index = irandom_range(0,3);
 
 dis = 16;
 
-type = irandom_range(0,60);
+var val = irandom_range(0,60);
 
-if(type < 30){
+if(val < 30){
 	//Elixir of Life - Regen
-	color = c_red;
-}else if(type < 40){
+	type = potions.regeneration;
+}else if(val < 40){
 	//Midas Favourite - Coins are the only possible drop but are more common
-	color = make_color_rgb(255,198,0);
-}else if(type < 50){
+	type = potions.midas;
+}else if(val < 50){
 	//Crystal Clear - Spot Mimics
-	color = c_teal;
-}else if(type < 53){
+	type = potions.seeall;
+}else if(val < 53){
 	//Nighshade Juice - OHKO for next hit
-	color = c_fuchsia;
-}else if(type < 55){
+	type = potions.ohko;
+}else if(val < 55){
 	//Immunaization of the Void - Cures all status and gives immunity for its duration
-	color = c_purple;
-}else if(type < 57){
+	type = potions.cure;
+}else if(val < 57){
 	//Compass Concoction - Directs you to the special room
-	color = c_navy;
-}else if(type <= 59){
+	type = potions.compass;
+}else if(val <= 59){
 	//Mango Brew - Invulnerabillity
-	color = c_orange;
-}else {
+	type = potions.immunity;
+}/*else {
 	//Ambrosia
-	color = scr_char_color();
+	type = scr_char_color();
 }

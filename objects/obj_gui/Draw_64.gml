@@ -1,11 +1,13 @@
 if(!obj_pglobs.dead && (room == rm_level || room == rm_lvl_editor_test || room == rm_CH_boss)){
-m = global.MonitorW / global.roomwd;
+m = display_get_gui_width() / global.roomwd;
 
 xx = 80 * m;
 yy = 34 * m;
 
 ///Draw emblem
 draw_sprite_ext(spr_emblem,global.char,0,0,m,m,0,c_white,1);
+
+draw_rectangle(0,0,64*m,64*m,true);
 
 ///Draw health
 scr_health_bar();
@@ -17,6 +19,7 @@ scr_status_bar();
 draw_sprite_ext(spr_coin,0,yy + 4 * m,xx + 8 * m,m,m,0,c_white,1);
 draw_set_font(font_chsl_tags);
 draw_text_ext_transformed( yy + 20 * m, xx + 8 * m, string(global.coins), 2 * m, 16 * m, m, m, 0);
+draw_text_ext_transformed( yy + 63 * m, xx + 8 * m, string(fps_real), 2 * m, 16 * m, m, m, 0);
 
 ///Draw Quick-Access Slots
 

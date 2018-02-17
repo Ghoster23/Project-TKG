@@ -71,32 +71,32 @@ draw_sprite_ext(spr_back,0,c,particles_y1+particles_height+18*m,m,m,0,c_white,1)
 switch state{
 
 	case "fullscreen":
-		pointer_x=fullscreen_x1;
-		pointer_y=fullscreen_y1+fullscreen_height/2-1;
+		pointer_x = fullscreen_x1;
+		pointer_y = fullscreen_y1+fullscreen_height/2-1;
 		draw_sprite_ext(spr_pointer,-1,pointer_x,pointer_y,m,m,0,c_white,1);
 		break;
 	
 	case "resolution":
-		pointer_x=resolution_x1;
-		pointer_y=resolution_y1+resolution_height/2-1;
+		pointer_x = resolution_x1;
+		pointer_y = resolution_y1+resolution_height/2-1;
 		draw_sprite_ext(spr_pointer,-1,pointer_x,pointer_y,m,m,0,c_white,1);
 		break;
 	
 	case "screenshake":
-		pointer_x=screenshake_x1;
-		pointer_y=screenshake_y1+screenshake_height/2-1;
+		pointer_x = screenshake_x1;
+		pointer_y = screenshake_y1+screenshake_height/2-1;
 		draw_sprite_ext(spr_pointer,-1,pointer_x,pointer_y,m,m,0,c_white,1);
 		break;
 		
 	case "textscroll":
-		pointer_x=textscroll_x1;
-		pointer_y=textscroll_y1+textscroll_height/2-1;
+		pointer_x = textscroll_x1;
+		pointer_y = textscroll_y1+textscroll_height/2-1;
 		draw_sprite_ext(spr_pointer,-1,pointer_x,pointer_y,m,m,0,c_white,1);
 		break;
 		
 	case "particles":
-		pointer_x=particles_x1;
-		pointer_y=particles_y1+particles_height/2-1;
+		pointer_x = particles_x1;
+		pointer_y = particles_y1+particles_height/2-1;
 		draw_sprite_ext(spr_pointer,-1,pointer_x,pointer_y,m,m,0,c_white,1);
 		break;
 

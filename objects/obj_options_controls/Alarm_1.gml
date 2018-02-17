@@ -1,7 +1,7 @@
-if vis==true{
-	vis=false;
+if vis {
+	vis = false;
 }
 else {
-	vis=true;
+	vis = true;
 }
-alarm[1]=0.6*room_speed;
+alarm[1] = 0.6 * room_speed;

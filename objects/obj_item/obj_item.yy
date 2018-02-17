@@ -1,23 +1,33 @@
 {
-    "id": "fa59d357-1768-430a-93e0-d55ce44c9282",
+    "id": "89d08756-8fdd-4f6b-a114-e248957228db",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_potion_controller",
+    "name": "obj_item",
     "eventList": [
         {
-            "id": "9e13c037-f170-4544-b3fb-21b2046c6eda",
+            "id": "af3e3ee7-8cc2-4152-9382-87e17857561a",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "fa59d357-1768-430a-93e0-d55ce44c9282"
+            "eventtype": 0,
+            "m_owner": "89d08756-8fdd-4f6b-a114-e248957228db"
+        },
+        {
+            "id": "0c5a11b8-e20c-46d0-9609-c04b860ea0f1",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "a3c66920-061f-4c76-9fd6-cd704e6e1b55",
+            "enumb": 0,
+            "eventtype": 4,
+            "m_owner": "89d08756-8fdd-4f6b-a114-e248957228db"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "b8453c71-24f2-4852-a377-e9d9f6c7873d",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

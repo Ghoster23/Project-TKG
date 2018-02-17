@@ -1,1 +1,1 @@
-listen_for_key=false;
+listen_for_key = false;
