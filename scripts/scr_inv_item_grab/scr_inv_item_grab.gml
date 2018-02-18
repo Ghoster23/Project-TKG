@@ -1,7 +1,7 @@
 ///@description Place item in the 'graber' from pos
 ///@param pos
 {
-var pos = argument;
+var pos = argument0;
 
 var type     = holder[0];
 var sub_type = holder[1];

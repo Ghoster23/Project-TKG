@@ -1,5 +1,7 @@
 {
-switch(argument){
+var type = argument0;
+
+switch(type){
 	case potions.regeneration:
 		return c_red;
 	break;

@@ -1,3 +1,4 @@
+event_inherited();
 type   = 0;
 item   = 0;
 amount = 0;

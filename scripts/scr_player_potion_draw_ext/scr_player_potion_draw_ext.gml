@@ -18,6 +18,8 @@ var yscale = argument5;
 
 var alpha = argument6;
 
+show_debug_message(string(amount) + string(type));
+
 draw_sprite_ext( spr_potion_fluid, amount, xx, yy, xscale, yscale, 0, 
                  scr_player_potion_get_color(type),alpha);
 						

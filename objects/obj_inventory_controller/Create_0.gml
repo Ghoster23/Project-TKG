@@ -21,5 +21,5 @@ for(var i = 0; i < 16; i++){
 	eq_active[i] = false;   
 }
 
-width  = sprite_get_width(spr_minimap);
-height = sprite_get_height(spr_minimap);
+inv_wd  = sprite_get_width(spr_inventory);
+inv_hg  = sprite_get_height(spr_inventory);

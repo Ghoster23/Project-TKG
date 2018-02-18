@@ -11,13 +11,10 @@ if once == false && roomgenerated >= roomstogenerate {
 	once = true;
 	
 	instance_create_layer( 0, 0, "IF",          obj_AI_controller);
-	comp += 7;
-	
-	instance_create_layer( 0, 0, "BH", obj_floor_fluid_controller);
-	comp += 7;
+	comp += 10;
 	
 	instance_create_layer( 0, 0, "IF",   obj_inventory_controller);
-	comp += 8;
+	comp += 12;
 	global.gen = false;
 	instance_destroy();
 }

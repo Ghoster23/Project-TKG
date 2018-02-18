@@ -1,5 +1,7 @@
 {
-switch(argument){
+var type = argument0;
+
+switch(type){
 	case item_type.unique_consumable:
 		return 1;			
 	break;

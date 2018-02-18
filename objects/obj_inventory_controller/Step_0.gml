@@ -2,9 +2,9 @@ scr_get_input();
 
 if(not global.pause && obj_ig_menu_controller.state == "closed"){
 	if(consumable_key){
-		var type   = inventory[# consumable, 0];
-		var item   = inventory[# consumable, 1];
-		var amount = inventory[# consumable, 2];
+		var type   = inventory[# 0, consumable];
+		var item   = inventory[# 1, consumable];
+		var amount = inventory[# 2, consumable];
 		
 		if      (type == item_type.unique_consumable){
 			scr_player_unique_consume_effect(item);

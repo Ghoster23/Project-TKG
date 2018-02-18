@@ -46,19 +46,19 @@ switch state{
 			draw_set_alpha(alpha);
 		
 
-			wd = string_width_ext("Stats",2,12) / 2 * m;
+			wd = string_width_ext("Status",2,12) / 2 * m;
 			//draw_rectangle(c-wd,(96 + off) * m,c+wd,(96 + off + 15) * m,true);
 			if point_in_rectangle(mousex,mousey,c-wd,(86 + off) * m,c+wd,(96 + off + 15) * m){
 				if mouse_check_button_pressed(mb_left) {
 					box_wd   = 0;
-					state    = "stats";
+					state    = "status";
 					check    = false;
 					alarm[0] = 0.5 * room_speed;
 				}
 				draw_set_alpha(0.6);
 			}
 		
-			draw_text_ext_transformed(c, (86 + off) * m,"Stats",2,12,m,m,0);
+			draw_text_ext_transformed(c, (86 + off) * m,"Status",2,12,m,m,0);
 			draw_set_alpha(alpha);
 		
 		
@@ -144,26 +144,7 @@ switch state{
 		
 		draw_set_alpha(1);
 	break;
-	case "inv":
-		wd = string_width_ext("Back",2,12) / 2 * m;
-		var v = 3 * 32 + 16;
-		
-		scr_9SB(spr_9S_frame, c - v * m, (off) * m, c + v * m, (off + v) * m);
-		if point_in_rectangle(mousex,mousey,c-wd,(256 + 96) * m,c+wd,(256 + 96 + 15) * m){
-			if mouse_check_button_released(mb_left) {
-				state    = "menu";
-				box_wd   = 0;
-				check    = false;
-				alarm[0] = 0.5 * room_speed;
-			}
-			draw_set_alpha(0.6);
-		}
-		
-		draw_text_ext_transformed(c, (256 + 96) * m,"Back",2,12,m,m,0);
-		
-		draw_set_alpha(1);
-	break;
 	default:
-		box_wd = 0;
+	
 	break;
 }

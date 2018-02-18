@@ -1,7 +1,7 @@
 ///@description Place item from 'graber' in pos
 ///@param pos
 {
-var pos = argument;
+var pos = argument0;
 
 var type     = ds_grid_get(inventory,0,pos);
 var sub_type = ds_grid_get(inventory,1,pos);

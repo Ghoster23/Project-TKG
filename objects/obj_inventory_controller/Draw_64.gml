@@ -13,30 +13,36 @@ if room == rm_level {
 		
 		var c  = display_get_gui_width()  / 2;
 		var c_ = display_get_gui_height() / 2;
+		
+		draw_line( device_mouse_x_to_gui(0), device_mouse_y_to_gui(0), c, c_);
 	
-		draw_sprite_ext( spr_minimap, 0, (c - width) * m, (c_ - height) * m, m, m, 0, c_white, 1);
+		draw_sprite_ext(spr_inventory, 0, c - (inv_wd / 2) * m, c_ - (inv_hg / 2) * m, m, m, 0, c_white, 1);
 	
 		///Check all the the inventory
-		for(i = 0; i < 14; i++){
-			var type   = inventory[# i, 0];
+		for(i = 0; i < 9; i++){
+			var type   = inventory[# 0, i];
 			
-			var j = i mod 4;
-			var k = i div 4;
+			var j = i mod 3;
+			var k = i div 3;
+			
+			draw_set_color(c_red);
 			
 			///Draw the rectangle
-			draw_rectangle((c - width + 4 + i * 32) * m,
-						   (c - height + 4 + j * 32) * m,
-						   (c - width + 4 + (i + 1) * 32) * m,
-						   (c - height + 4 + (j + 1) * 32) * m,
+			draw_rectangle(c  - (inv_wd / 2 - 8) * m + 8 * m + 64 * j * m,
+						   c_ - (inv_hg / 2 - 8) * m + 8 * m + 64 * k * m,
+						   c  - (inv_wd / 2 - 8) * m + 64 * (j + 1) * m,
+						   c_ - (inv_hg / 2 - 8) * m + 64 * (k + 1) * m,
 						   true);
 		
 			///If there's an item there draw it
 			if(type != -1){
-				var item   = inventory[# i, 1];
-				var amount = inventory[# i, 2];
+				var item   = inventory[# 1, i];
+				var amount = inventory[# 2, i];
 				
-				scr_draw_item(type,item,amount,(c - width + 4 + i * 32) * m,
-				(c - height + 4 + j * 32) * m,m,m,1);
+				scr_draw_item( type, item, amount,
+				c  - (inv_wd / 2 - 8) * m + 8 * m + (64 * j) * m,
+				c_ - (inv_hg / 2 - 8) * m + 8 * m + (64 * k) * m,
+				m * 2, m * 2, 1);
 			}
 		}
 	}else if obj_ig_menu_controller.state == "closed" {

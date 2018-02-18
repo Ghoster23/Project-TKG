@@ -9,17 +9,17 @@ if(zooming){
 			cam_wd_c += (cam_wd - cam_wd_c) * rate;
 			
 			zooming = true;
-		}/*else {
+		}else {
 			cam_wd_c = cam_wd;
-		}*/
+		}
 		
 		if(abs(cam_hg - cam_hg_c) > tolerance){
 			cam_hg_c += (cam_hg - cam_hg_c) * rate;
 			
 			zooming = true;
-		}/*else {
+		}else {
 			cam_hg_c = cam_hg;
-		}*/
+		}
 		
 		if(abs(x - vfx) > tolerance){
 			var dir = point_direction(x,y,vfx,vfy);
@@ -27,10 +27,10 @@ if(zooming){
 			x += lengthdir_x(abs(x - vfx) * rate,dir);
 			
 			zooming = true;
-		}/*else {
+		}else {
 			x = vfx;
 			
-		}*/
+		}
 		
 		if(abs(y - vfy) > tolerance){
 			var dir = point_direction(x,y,vfx,vfy);
@@ -38,10 +38,10 @@ if(zooming){
 			y += lengthdir_y(abs(y - vfy) * rate,dir);
 			
 			zooming = true;
-		}/*else {
+		}else {
 			y = vfy;
 			
-		}*/
+		}
 		
 		if(zooming == false){			
 			zoomed  = false;
@@ -53,17 +53,17 @@ if(zooming){
 			cam_wd_c -= (cam_wd_c - cam_wd_z) * rate;
 			
 			zooming = true;
-		}/*else {
+		}else {
 			cam_wd_c = cam_wd_z;
-		}*/
+		}
 		
 		if(abs(cam_hg_z - cam_hg_c) > tolerance){
 			cam_hg_c -= (cam_hg_c - cam_hg_z) * rate;
 			
 			zooming = true;
-		}/*else {
+		}else {
 			cam_hg_c = cam_hg_z;
-		}*/
+		}
 		
 		if(abs(x - global.body.phy_position_x) > tolerance){
 			var dir = point_direction(x,y,global.body.phy_position_x,global.body.phy_position_y);
@@ -71,10 +71,10 @@ if(zooming){
 			x += lengthdir_x(abs(x - global.body.phy_position_x) * rate,dir);
 			
 			zooming = true;
-		}/*else {
+		}else {
 			x = global.body.phy_position_x;
 			
-		}*/
+		}
 		
 		if(abs(y - global.body.phy_position_y) > tolerance){
 			var dir = point_direction(x,y,global.body.phy_position_x,global.body.phy_position_y);
@@ -82,10 +82,10 @@ if(zooming){
 			y += lengthdir_y(abs(y - global.body.phy_position_y) * rate,dir);
 			
 			zooming = true;
-		}/*else {
+		}else {
 			y = global.body.phy_position_y;
 			
-		}*/
+		}
 		
 		if(zooming == false){
 			zoomed = true;

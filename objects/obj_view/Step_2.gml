@@ -31,3 +31,11 @@ switch room {
 		
 	break;
 }
+
+if(not zooming and not zoomed and obj_ig_menu_controller.state == "status"){
+	zooming = true;
+}
+
+if(not zooming and zoomed and obj_ig_menu_controller.state != "status"){
+	zooming = true;
+}

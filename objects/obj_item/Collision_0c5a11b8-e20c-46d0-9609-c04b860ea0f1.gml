@@ -1,1 +1,0 @@
-amount = scr_pickup_item(type,item,amount);
