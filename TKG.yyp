@@ -767,14 +767,6 @@
             }
         },
         {
-            "Key": "1aaac4cf-b6ba-4db8-9d58-ad819ebe5a9a",
-            "Value": {
-                "id": "5b52890a-44df-4340-b931-f94acac30e8a",
-                "resourcePath": "objects\\obj_tile_stone\\obj_tile_stone.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "1ac96de7-5b64-4a28-a3c9-1d7ec78b9958",
             "Value": {
                 "id": "013c8efb-9651-4757-821a-a65c62640f8e",
@@ -2100,14 +2092,6 @@
                 "id": "909276a5-f044-431f-937b-8ed616ff3ba2",
                 "resourcePath": "scripts\\scr_inv_item_drop\\scr_inv_item_drop.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "49f5b5e5-0212-4ee4-83f5-e052e4f58e0e",
-            "Value": {
-                "id": "03e78a4e-54ba-42f9-a16d-7ecc0ce67ad8",
-                "resourcePath": "objects\\obj_tile_grass\\obj_tile_grass.yy",
-                "resourceType": "GMObject"
             }
         },
         {
