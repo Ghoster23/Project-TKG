@@ -55,6 +55,7 @@ for(var i = 0; i < width; i++){
 ds_grid_filter_gaussian(floor_grid,0.8);
 
 //"posterise" the noise to appear solid spots	
+
 var w = width;
 var h = height;
 
@@ -82,13 +83,13 @@ for (var i=0; i<w; i++)
 //finally, lets set all the tiles under the wall to copy the tiles next to them 
 
 //horizontal lines
-for (var i=0; i<h; i++)
+for (var i=0; i<h-1; i++)
 {
 	//if its a upper line wall 
 	if(i mod 13 == 2){
 		//copy whats underneath to fill that line
 		for (var j=0; j<w; j++){
-			var tile = string((ds_grid_get(floor_grid,j,i+1)));
+			var tile = string((ds_grid_get(floor_grid,j,i-1)));
 			ds_grid_set(floor_grid,j,i,tile);
 		}
 	}
@@ -97,7 +98,7 @@ for (var i=0; i<h; i++)
 	else if(i mod 13 == 12){
 		//copy whats above to fill that line
 		for (var j=0; j<w; j++){
-			var tile = string((ds_grid_get(floor_grid,j,i-1)));
+			var tile = string((ds_grid_get(floor_grid,j,i+1)));
 			ds_grid_set(floor_grid,j,i,tile);
 		}
 	}
@@ -108,7 +109,7 @@ for (var i=0; i<h; i++)
 for (var j=0; j<w; j++){
 	
 	//if its a left line wall
-	if (j mod 21 == 0){
+	if(j mod 21 == 0){
 		//copy whats to the right to fill that line
 		for (var i=0; i<h; i++){
 			var tile = string((ds_grid_get(floor_grid,j+1,i)));
