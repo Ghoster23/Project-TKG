@@ -1,6 +1,6 @@
 scr_get_input();
 
-if(not global.pause && obj_ig_menu_controller.state == "closed"){
+if(obj_ig_menu_controller.state == "closed"){
 	if(consumable_key){
 		var type   = inventory[# 0, consumable];
 		var item   = inventory[# 1, consumable];

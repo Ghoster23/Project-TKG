@@ -7,8 +7,6 @@ yy = 34 * m;
 ///Draw emblem
 draw_sprite_ext(spr_emblem,global.char,0,0,m,m,0,c_white,1);
 
-draw_rectangle(0,0,64*m,64*m,true);
-
 ///Draw health
 scr_health_bar();
 

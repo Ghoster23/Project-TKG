@@ -41,7 +41,7 @@ else{enter_key=keyboard_check_pressed(global.enter_key_bind); }
 
 
 //these are for menus, we dont mess with them 
-mouse_click = mouse_check_button_pressed(mb_left);  
+mouse_click = mouse_check_button_released(mb_left);  
 a_up        = keyboard_check_pressed(vk_up);
 a_down      = keyboard_check_pressed(vk_down);
 a_left      = keyboard_check_pressed(vk_left);

@@ -32,6 +32,6 @@ if keyboard_check_released(ord("P")) {
 	global.n_room = true;
 	show_debug_message(size);
 	for(var i = 0; i < size; i++){
-		show_debug_message(string(global.act_enemy_list[| i]));
+		show_debug_message(object_get_name(global.act_enemy_list[| i].object_index));
 	}
 }

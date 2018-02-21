@@ -37,12 +37,14 @@ if(obj_inventory_controller.capacity > 0){
 					
 				}
 			}
+		}else if(type == item_type.potion){
+			break;
 		}
 	}
 	
 	if(amount != -1){
 		for(var i = 0; i < 9; i++){
-			var temp_type = inv[# i, 0];
+			var temp_type = inv[# 0, i];
 		
 			if(temp_type == -1){
 				inv[# 0, i] = type;

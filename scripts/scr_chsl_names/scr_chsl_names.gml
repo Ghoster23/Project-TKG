@@ -36,7 +36,7 @@ switch global.char{
 		break;
 		
 	case 9:
-		name="Patricia Vela";
+		name="Calista Vela";
 		break;
 		
 	case 10:
