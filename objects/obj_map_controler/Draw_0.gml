@@ -30,6 +30,61 @@ if ds_exists(ds_menumapgrid, ds_type_grid) {
         if instanceID.visible == true{
             
 			if(self.object_index == obj_map_controler.highltd){
+				
+				//speacial case for windmill
+				if(self.object_index==obj_windmill){
+					with(obj_windmill1){
+						for (var i = 0; i < image_number; i++){
+							shader_set(sh_outline);
+							shader_set_uniform_f(upH,texelH);
+							shader_set_uniform_f(upW,texelW);
+	
+							image_blend = c_white;
+							draw_sprite_ext(sprite_index, i, x, y - i, image_xscale, image_yscale, global.map_angle+angle_off, c_white, image_alpha);
+							shader_reset();
+						}
+						for (var i = 0; i < image_number; i++){
+							draw_sprite_ext(sprite_index, i, x, y - i, image_xscale, image_yscale, global.map_angle+angle_off, c_white, image_alpha);
+						}
+						
+					}
+				}
+				
+				//speacial case for hydra
+				if(self.object_index==obj_hydra){
+					with(obj_boat){
+						for (var i = 0; i < image_number; i++){
+							shader_set(sh_outline);
+							shader_set_uniform_f(upH,texelH);
+							shader_set_uniform_f(upW,texelW);
+	
+							image_blend = c_white;
+							draw_sprite_ext(sprite_index, i, x, y - i, image_xscale, image_yscale, global.map_angle+angle_off, c_white, image_alpha);
+							shader_reset();
+						}
+						for (var i = 0; i < image_number; i++){
+							draw_sprite_ext(sprite_index, i, x, y - i, image_xscale, image_yscale, global.map_angle+angle_off, c_white, image_alpha);
+						}
+						
+					}
+					with(obj_boat2){
+						for (var i = 0; i < image_number; i++){
+							shader_set(sh_outline);
+							shader_set_uniform_f(upH,texelH);
+							shader_set_uniform_f(upW,texelW);
+	
+							image_blend = c_white;
+							draw_sprite_ext(sprite_index, i, x, y - i, image_xscale, image_yscale, global.map_angle+angle_off, c_white, image_alpha);
+							shader_reset();
+						}
+						for (var i = 0; i < image_number; i++){
+							draw_sprite_ext(sprite_index, i, x, y - i, image_xscale, image_yscale, global.map_angle+angle_off, c_white, image_alpha);
+						}
+						
+					}
+				}
+				
+				
 				//draw_outline
 				for (var i = 0; i < image_number; i++){
 					shader_set(sh_outline);

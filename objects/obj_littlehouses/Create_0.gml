@@ -5,7 +5,7 @@ texelH = texture_get_texel_width(sprite_get_texture(sprite_index,0));
 
 image_speed=0;
 
-angle_off=-15;
+angle_off=-24;
 
 len = point_distance(320,180,x,y);
 dir = point_direction(320,180,x,y);
@@ -21,3 +21,4 @@ yoff = 180-y;
 sprite_set_offset(sprite_index,xoff,yoff)
 x=320;
 y=180;
+

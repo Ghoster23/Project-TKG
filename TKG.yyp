@@ -1831,6 +1831,14 @@
             }
         },
         {
+            "Key": "44654474-d793-4da4-aad5-3183d081b902",
+            "Value": {
+                "id": "ad813f1d-7c4f-4789-bc68-1457a03c39b2",
+                "resourcePath": "objects\\obj_littlehouses\\obj_littlehouses.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "44a51968-9ab2-489e-a900-d7493c698868",
             "Value": {
                 "id": "83977641-f3fe-49c2-acf4-d243dd116aba",
@@ -5884,6 +5892,14 @@
                 "id": "9c0b8b2c-0625-42c5-81ff-0fce4451a11f",
                 "resourcePath": "datafiles_yy\\roomtype2.csv.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "e5f00341-2a3c-4055-8e6b-57d6ebc85c27",
+            "Value": {
+                "id": "34cd7acb-9d85-4acf-966d-fc9b563b86b0",
+                "resourcePath": "sprites\\spr_littlehouses\\spr_littlehouses.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
