@@ -1,16 +1,25 @@
 scr_get_input();
 
-if(not global.pause && obj_ig_menu_controller.state == "closed"){
+if(obj_ig_menu_controller.state == "closed"){
 	if(consumable_key){
-		var type = global.consumable[0];
+		var type   = inventory[# 0, consumable];
+		var item   = inventory[# 1, consumable];
+		var amount = inventory[# 2, consumable];
 		
-		if      (type == 0){ //One-time Consumables
+		if      (type == item_type.unique_consumable){
+			scr_player_unique_consume_effect(item);
 			
-		}else if(type == 1){ //Potions
-			scr_player_potion_effect(global.consumable[1],global.consumable[2]);
-		}else if(type == 2){ //Chess Pieces
+		}else if(type == item_type.food){
+			scr_player_food_effect(item);
 			
-		}else if(type == 3){ //Constellations
+		}else if(type == item_type.potion){
+			scr_player_potion_effect(item,amount);
+			
+		}else if(type == item_type.chess_piece){
+			scr_player_chessP_effect(item);
+			
+		}else if(type == item_type.constellation){
+			scr_player_constellation_effect(item);
 			
 		}
 	}

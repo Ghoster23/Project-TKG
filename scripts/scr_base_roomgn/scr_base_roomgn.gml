@@ -17,4 +17,14 @@ instance_create_layer(gx+global.roomwd-32,gy,"Instances",obj_wall_right_up);
 instance_create_layer(gx+global.roomwd-32,gy+176+32,"Instances",obj_wall_right_fillin);
 instance_create_layer(gx+global.roomwd-32,gy+176+96,"Instances",obj_wall_right_down);
 
-instance_create_layer(gx+(global.roomwd/2),gy+(global.roomhg/2)+31,"Floor",obj_floor);
+
+//lets generate that floor boiiii
+
+//find first entry in the table
+gxtile=gx/32; 
+gytile=gy/32;
+
+flr=instance_create_layer(gx+(global.roomwd/2),gy+(global.roomhg/2)+31,"Floor",obj_floor);
+flr.gxtile=gxtile;
+flr.gytile=gytile;
+

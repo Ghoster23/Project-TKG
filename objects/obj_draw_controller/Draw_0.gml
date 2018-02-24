@@ -37,9 +37,6 @@ if ds_exists(ds_depthgrid, ds_type_grid) {
 			else if(draw_script != null and instanceID.visible){
 				script_execute(draw_script);
 				
-				if self.object_index == obj_potion {
-					draw_sprite_ext(spr_potion_fluid,image_index,x,y,1,1,0,color,1);
-				}
 			}
 			else if instanceID.visible {	
 				

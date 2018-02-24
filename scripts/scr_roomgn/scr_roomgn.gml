@@ -189,7 +189,7 @@ repeat(9){
 file_text_close(room_file);
 
 
-show_debug_message("type: "+string(type)+" ID: "+string(room_id))
+//show_debug_message("type: "+string(type)+" ID: "+string(room_id))
 
 //read dsgrid and do generation code
 

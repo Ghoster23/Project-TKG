@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 upH    = shader_get_uniform(sh_outline,"pH");
 upW    = shader_get_uniform(sh_outline,"pW");
 texelW = texture_get_texel_width(sprite_get_texture(sprite_index,0));
@@ -21,3 +22,10 @@ yoff = 180-y;
 sprite_set_offset(sprite_index,xoff,yoff)
 x=320;
 y=180;
+=======
+image_speed=0;
+angle_off=0;
+pt_pos=0;
+pt_rt=0;
+path_start(path_boat2, 0.5, path_action_stop, true);
+>>>>>>> origin/update

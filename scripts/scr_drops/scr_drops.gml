@@ -11,7 +11,7 @@ if not global.status[6,0] {
 		return instance_create_layer(x,y,"IF",obj_coin);
 	
 	}else if chance <= 65{
-		return instance_create_layer(x,y,"IF",obj_potion);
+		return scr_spawn_item(item_type.potion,-7,-3,x,y);
 	
 	}
 }else {

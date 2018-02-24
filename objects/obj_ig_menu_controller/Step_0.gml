@@ -1,6 +1,14 @@
 /// @description States
 scr_get_input();
 
+if(instance_exists(obj_cursor)){
+	mousex = obj_cursor.x;
+	mousey = obj_cursor.y;
+}else {
+	mousex = mouse_x;
+	mousey = mouse_y
+}
+
 if check == true{
 	switch state{
 		case "menu":
@@ -19,8 +27,8 @@ if check == true{
 			}
 	
 		break;
-		case "stats":
-			///Close Mini Map and return to Menu
+		case "status":
+			///Close Status Screen and return to Menu
 			if menu_key {
 				state = "menu";
 				check = false;
@@ -73,7 +81,7 @@ if check == true{
 		
 		case "death":
 			if menu_key {
-				game_restart();
+				room_goto(rm_menu_1);
 			}
 		
 		break;
@@ -84,11 +92,6 @@ if check == true{
 			}
 		break;
 		
-		case "inv":
-			if menu_key {
-				state = "closed";
-			}
-		break;
 	}
 	
 	if(room == rm_dead){

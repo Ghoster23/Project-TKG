@@ -41,8 +41,16 @@ else{enter_key=keyboard_check_pressed(global.enter_key_bind); }
 
 
 //these are for menus, we dont mess with them 
-mouse_click=mouse_check_button_pressed(mb_left);  
-a_up = keyboard_check_pressed(vk_up);
-a_down = keyboard_check_pressed(vk_down);
-a_left = keyboard_check_pressed(vk_left);
-a_right = keyboard_check_pressed(vk_right);
+mouse_click = mouse_check_button_released(mb_left);  
+a_up        = keyboard_check_pressed(vk_up);
+a_down      = keyboard_check_pressed(vk_down);
+a_left      = keyboard_check_pressed(vk_left);
+a_right     = keyboard_check_pressed(vk_right);
+
+if(room == rm_level || room == rm_CH_boss){
+	mousex = display_mouse_get_x();
+	mousey = display_mouse_get_y();
+}else {
+	mousex = mouse_x * (display_get_gui_width() / room_width);
+	mousey = mouse_y * (display_get_gui_height() / room_height);
+}

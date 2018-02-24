@@ -25,23 +25,23 @@ draw_text_ext_transformed(c, controls_y1,"Controls",2,12,m,m,0);
 draw_sprite_ext(spr_back,0,c,controls_y1+controls_height+18*m,m,m,0,c_white,1);
 //draw_rectangle(controls_x1,controls_y1,controls_x2,controls_y2,true);
 
-switch state{
+switch state {
 
 	case "audio":
-		pointer_x=audio_x1;
-		pointer_y=audio_y1+audio_height/2-1;
+		pointer_x = audio_x1;
+		pointer_y = audio_y1+audio_height/2-1;
 		draw_sprite_ext(spr_pointer,-1,pointer_x,pointer_y,m,m,0,c_white,1);
 		break;
 	
 	case "video":
-		pointer_x=video_x1;
-		pointer_y=video_y1+video_height/2-1;
+		pointer_x = video_x1;
+		pointer_y = video_y1+video_height/2-1;
 		draw_sprite_ext(spr_pointer,-1,pointer_x,pointer_y,m,m,0,c_white,1);
 		break;
 	
 	case "controls":
-		pointer_x=controls_x1;
-		pointer_y=controls_y1+controls_height/2-1;
+		pointer_x = controls_x1;
+		pointer_y = controls_y1+controls_height/2-1;
 		draw_sprite_ext(spr_pointer,-1,pointer_x,pointer_y,m,m,0,c_white,1);
 		break;
 
