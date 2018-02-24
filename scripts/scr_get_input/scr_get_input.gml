@@ -46,6 +46,7 @@ a_up        = keyboard_check_pressed(vk_up);
 a_down      = keyboard_check_pressed(vk_down);
 a_left      = keyboard_check_pressed(vk_left);
 a_right     = keyboard_check_pressed(vk_right);
+escape      = keyboard_check_pressed(vk_escape); 
 
 if(room == rm_level || room == rm_CH_boss){
 	mousex = display_mouse_get_x();
