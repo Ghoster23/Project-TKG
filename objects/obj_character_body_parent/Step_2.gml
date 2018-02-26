@@ -1,9 +1,19 @@
 ///@description Get everything in place
-if(len != 0){
-	sprite_index = body_sprs[spr_side];
-}else {
-	sprite_index = body_sprs[4];
-	image_index  = spr_side;
+switch state{
+	case 0:
+		if(len != 0){
+			sprite_index = body_sprs[spr_side];
+		}else {
+			sprite_index = body_sprs[4];
+			image_index  = spr_side;
+		}
+	break;
+	case 1:
+	break;
+	case 2:
+	break;
+	case 3:
+	break;
 }
 
 head.image_index  = spr_side;

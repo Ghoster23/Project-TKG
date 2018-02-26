@@ -21,7 +21,7 @@ switch item {
 		
 	break;
 	case 4: //Ring of Dispel
-		global.p_sdef -= 5;
+		global.sdef -= 5;
 		
 	break;
 	case 5: //Seven-League Boot prototype

@@ -1,2 +1,2 @@
-x = global.body.x;
-y = global.body.y-8;
+phy_position_x = global.body.phy_position_x;
+phy_position_y = global.body.phy_position_y;

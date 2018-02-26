@@ -7,7 +7,7 @@ if room == rm_level {
 		stats[1] = global.atk;
 		stats[2] = global.def;
 		stats[3] = global.satk;
-		stats[4] = global.p_sdef;
+		stats[4] = global.sdef;
 		stats[5] = global.spd;
 		
 		var i = 0;
@@ -34,29 +34,47 @@ if room == rm_level {
 			
 			var xx_ = inv_x + 11 * m + (77 * (j) + 64) * m;
 			var yy_ = inv_y + 12 * m + (77 * (k) + 64) * m;
-		
-			///If there's an item there draw it
-			if(type != -1){
-				var item   = inventory[# 1, i];
-				var amount = inventory[# 2, i];
-				
-				if(xx < mx && mx < xx_ && yy < my && my < yy_){
-					draw_sprite_ext(spr_circle,0,xx,yy,m,m,0,c_white,1);
-					
-					if(mouse_click && alarm[0] == -1){
-						 scr_inv_item_grab(i);
-						alarm[0] = 5;
-					}
-				}
-				
-				scr_draw_item( type, item, amount, xx, yy, m * 2, m * 2, 1);
-				
-			}else if(type == -1 && holder[0] != -1 && xx < mx && mx < xx_ && yy < my && my < yy_ 
-			         && mouse_click && alarm[0] == -1){
-				scr_inv_item_place(i);
-				alarm[0] = 5;
+			
+			if(xx < mx && mx < xx_ && yy < my && my < yy_){
+				selected = i;
+			}
+			
+			if(selected == i){
+				var text = "type: " + string(type);
+				var text_ = "h type: " + string(holder[0]);
+				draw_set_font(font_chsl_tags);
+				draw_set_valign(false);
+				draw_set_halign(false);
+				var box_height = string_height(text);
+				var box_length = string_width(text);
+				draw_set_color(c_red);
+				draw_rectangle(mx+10*m,my-6*m,mx+(box_length+14)*m,my+(box_height-4)*m,false);
+				draw_set_color(c_white);
+				scr_draw_text_outlined(mx+13*m,my-5*m,c_black,c_white,text);
+				scr_draw_text_outlined(mx+13*m,my-(5+box_height)*m,c_black,c_white,text_);
 				
 			}
+			
+			if(selected &&
+			  ((mouse_click && xx < mx && mx < xx_ && yy < my && my < yy_) ||
+			    enter_key) && alarm[0] == -1){
+				switch(obj_cursor.holder[0]){
+					case -1:
+						scr_inv_item_grab(i);
+					break;
+					default:						
+						scr_inv_item_place(i);
+					break;
+				}
+				
+				alarm[0] = 5;
+			}
+		}
+		
+		if(holder[0] != -1 && mouse_click &&
+		(mx < inv_x || mx > inv_x + inv_wd * m ||
+		my < inv_y || my > inv_y + inv_hg * m)){
+			scr_inv_item_drop();
 		}
 	}else if obj_ig_menu_controller.state == "closed" {
 				

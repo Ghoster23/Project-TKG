@@ -28,5 +28,9 @@ if(amount > 0){
 	spawn.amount = irandom(amount * -1);
 }else {
 	instance_destroy(spawn);
+	return;
 }
+
+spawn.jump = true;
+spawn.dir  = point_direction(mouse_x,mouse_y,global.body.phy_position_x,global.body.phy_position_y);
 }

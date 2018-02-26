@@ -25,7 +25,7 @@ if(not global.p_hurt      and  //Player not recently hurt
 			global.hp -= e_atk div global.def;
 		break;
 		case 2:  //Speacial Damage
-			global.hp -= e_satk div global.p_sdef;
+			global.hp -= e_satk div global.sdef;
 		break;
 	}
 	

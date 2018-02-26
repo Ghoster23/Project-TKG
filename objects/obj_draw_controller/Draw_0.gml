@@ -28,6 +28,7 @@ if ds_exists(ds_depthgrid, ds_type_grid) {
 		var instanceID = ds_depthgrid[# 0, yy];
 		
 		with(instanceID){
+			physics_draw_debug();
 			if instanceID.flash {
 					shader_set(sh_white);
 					draw_self();

@@ -22,6 +22,11 @@ if(obj_ig_menu_controller.state == "closed"){
 			scr_player_constellation_effect(item);
 			
 		}
+		
+		inventory[# 0, consumable] = -1;
+		inventory[# 1, consumable] = -1;
+		inventory[# 2, consumable] = -1;
+		capacity++;
 	}
 	
 	/*
@@ -41,6 +46,38 @@ if(obj_ig_menu_controller.state == "closed"){
 		
 		if(e_id != -1){
 			scr_player_equip_effect_on(e_id);
+		}
+	}
+}else if(obj_ig_menu_controller.state == "status"){
+	if(up_key || a_up){
+		if(selected div 3 > 0){
+			selected -= 3;
+		}else {
+			selected = 9 + selected;
+		}
+	}
+	
+	if(right_key || a_right){
+		if(selected mod 3 < 2){
+			selected++;
+		}else {
+			selected = selected - 2;
+		}
+	}
+	
+	if(down_key || a_down){
+		if(selected div 3 < 3){
+			selected += 3;
+		}else {
+			selected = selected mod 3;
+		}
+	}
+	
+	if(left_key || a_left){
+		if(selected mod 3 > 0){
+			selected--;
+		}else {
+			selected = selected + 2;
 		}
 	}
 }

@@ -9,7 +9,7 @@ stats[0] = global.maxhp;
 stats[1] = global.atk;
 stats[2] = global.def;
 stats[3] = global.satk;
-stats[4] = global.p_sdef;
+stats[4] = global.sdef;
 stats[5] = global.spd;
 
 mousex = 0;

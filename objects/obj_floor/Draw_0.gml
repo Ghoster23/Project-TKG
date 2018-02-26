@@ -1,6 +1,6 @@
 draw_rectangle_color(x-608/2-32,y+290/2+32,x+608/2+32,y-290/2-64,make_color_rgb(145,101,80),make_color_rgb(145,101,80),make_color_rgb(145,101,80),make_color_rgb(145,101,80),false);
 
-if (first_time==true){
+if (first_time==true && room == rm_level){
 
 	surface_set_target(floor_surface);
 

@@ -39,7 +39,7 @@ draw_line_width(prev_p[0],prev_p[1],curr_p[0],curr_p[1],1);
 //S Def
 prev_p = curr_p;
 
-curr_p = [x - global.p_sdef / 20 * 26, (y + 1) + global.p_sdef / 20 * 17];
+curr_p = [x - global.sdef / 20 * 26, (y + 1) + global.sdef / 20 * 17];
 
 draw_line_width(prev_p[0],prev_p[1],curr_p[0],curr_p[1],1);
 

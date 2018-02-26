@@ -9,6 +9,7 @@ global.equiped = [-1,-1,-1];
 
 tool_slot  = 0;
 consumable = 1;
+selected   = 0;
 
 capacity = 9;
 

@@ -1,0 +1,1 @@
+scr_spawn_item(2,2,2,phy_position_x+32,phy_position_y);

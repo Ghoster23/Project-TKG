@@ -1,22 +1,14 @@
 /// @description scr_dash_state
-visible      = false;
+//Hide head and other player objects
 head.visible = false;
+global.weapon.visible = false;
 
-if instance_exists(global.weapon) {
-	with (global.weapon){
-		instance_destroy();
-	}
-}
+//Give it more speed
+len = global.spd * 2;
 
-
-len = global.spd*3;
-
-//get the hspd and vspd
-hspd = lengthdir_x(len,dir);
-vspd = lengthdir_y(len,dir);
-
-// move
-phy_position_x += hspd;
-phy_position_y += vspd;
-
+//Make it invulnerable
 global.p_inv = true;
+
+//Put it on cooldown
+alarm[0] = room_speed/3;
+global.dash_cd = true;

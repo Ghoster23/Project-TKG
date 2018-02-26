@@ -9,16 +9,16 @@ feet   = instance_create_layer(x,  y,layer,     obj_feet);
 feet.sprite_index  = feet_spr;
 
 if(global.char == 0){
-	weapon = instance_create_layer(x,  y,layer,global.weapon);
+	weapon = instance_create_layer(x,y,layer,global.weapon);
 }
-
-roll   = obj_roll;
 
 event_inherited();
 
 scr_get_input();
 
-state = scr_move_state;
+state = 0;
+prev_state = 0;
+state_change = false;
 
 hspd  = 0;
 vspd  = 0;

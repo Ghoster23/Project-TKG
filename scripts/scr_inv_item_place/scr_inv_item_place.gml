@@ -3,9 +3,11 @@
 {
 var pos = argument0;
 
-var type     = ds_grid_get(inventory,0,pos);
-var sub_type = ds_grid_get(inventory,1,pos);
-var maximum  = scr_inv_item_stack_size(type);
+var type     = inventory[# 0, pos];
+var sub_type = inventory[# 1, pos];
+var maximum  = scr_inv_item_stack_size(type) - 1;
+
+var holder   = obj_cursor.holder;
 
 //Place it
 if(type == -1){
@@ -13,35 +15,30 @@ if(type == -1){
 	inventory[# 1, pos] = holder[1];
 	inventory[# 2, pos] = holder[2];
 	
-	holder = [-1,-1,-1];
-	
 	obj_cursor.cursor = true;
+	obj_cursor.holder = [-1,-1,-1];
 	
-	obj_cursor.holder = holder;
+	capacity--;
 	
 //Stack it
 }else if(type     == holder[0] && 
          sub_type == holder[1] && 
-		 maximum  >  holder[2]){
-	inventory[# 0, pos]  = holder[0];
-	inventory[# 1, pos]  = holder[1];
-	inventory[# 2, pos] += holder[2];
+		 maximum  >  holder[2] &&
+		 maximum  >  inventory[# 2, pos] &&
+		 not (type == 2 || type == 3)){
 	
-	var excess = inventory[# 2, pos] - maximum;
-	
-	if(excess <= 0){
+	if(maximum >= inventory[# 2, pos] + holder[2]){
+		inventory[# 2, pos] += holder[2];
 		holder = [-1,-1,-1];
-		
 		obj_cursor.cursor = true;
-		
-		obj_cursor.holder = holder;
 	}else {
+		var excess = inventory[# 2, pos] + holder[2] - maximum;
+		inventory[# 2, pos] = maximum;
 		holder[2] = excess;
-		
 		obj_cursor.cursor = false;
-		
-		obj_cursor.holder = holder;
 	}
+	
+	obj_cursor.holder = holder;
 	
 //Switch it
 }else {

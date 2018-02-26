@@ -1,25 +1,18 @@
 /// @description Dash done
 //Become visible
-visible = true;
-
-//Make the head visible
-if(instance_exists(head)){
-	head.visible    = true;
-}
-
-//Make weapon reappear
-instance_create_layer(x,y,layer,global.weapon);
+head.visible          = true;
+global.weapon.visible = true;
 
 //Destroy roll
-with(roll){
-    instance_destroy();
-}
-
-//Determine state
-state = scr_move_state;
+//with(roll){
+//    instance_destroy();
+//}
+sprite_index = body_sprs[4];
+image_index  = spr_side;
 
 //Remove invincibility
 global.p_inv   = false;
 
 //Start dash cooldown
-global.dash_cd =  true;
+state = 0;
+alarm[1] = 0.6 * room_speed;
