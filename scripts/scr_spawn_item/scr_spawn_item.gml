@@ -36,6 +36,11 @@ if(amount > 0){
 	
 }
 
-spawn.jump = true;
-spawn.dir  = point_direction(global.body.phy_position_x,global.body.phy_position_y,mouse_x,mouse_y);
+var dir = point_direction(global.body.phy_position_x,global.body.phy_position_y,mouse_x,mouse_y);
+
+with spawn {
+	id.dir = dir;
+	physics_apply_impulse(phy_position_x,phy_position_y,lengthdir_x(6,id.dir),lengthdir_y(6,id.dir));
+	s = phy_speed;
+}
 }

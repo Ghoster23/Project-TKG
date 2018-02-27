@@ -2,7 +2,6 @@ event_inherited();
 type   = 0;
 item   = 0;
 amount = 0;
-jump   = false;
 
 pick_up = false;
 
@@ -14,6 +13,8 @@ phy_fixed_rotation = true;
 
 z  = 0;
 x_ = 0;
+s  = 0;
+c = 0;
 
 draw_script = scr_item_jump;
 
