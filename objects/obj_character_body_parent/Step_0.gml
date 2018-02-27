@@ -135,7 +135,7 @@ if not global.pause {
 	//Pick-up
 	var pick_up = instance_place(x,y,obj_item);
 	
-	if(pick_up != noone){
+	if(pick_up != noone && pick_up.pick_up){
 		with(pick_up){
 			amount = scr_pickup_item(type,item,amount);
 		}

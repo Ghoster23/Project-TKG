@@ -18,19 +18,24 @@ spawn.type = type;
 
 if(item >= 0){
 	spawn.item = item;
+	
 }else {
 	spawn.item = irandom(item * -1);
+	
 }
 
 if(amount > 0){
 	spawn.amount = amount;
+	
 }else if(amount < 0){
 	spawn.amount = irandom(amount * -1);
+	
 }else {
 	instance_destroy(spawn);
 	return;
+	
 }
 
 spawn.jump = true;
-spawn.dir  = point_direction(mouse_x,mouse_y,global.body.phy_position_x,global.body.phy_position_y);
+spawn.dir  = point_direction(global.body.phy_position_x,global.body.phy_position_y,mouse_x,mouse_y);
 }

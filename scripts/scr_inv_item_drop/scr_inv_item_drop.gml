@@ -8,5 +8,7 @@ holder = [-1,-1,-1];
 obj_cursor.holder = [-1,-1,-1];
 obj_cursor.cursor = true;
 
-scr_spawn_item(type,item,amount,global.body.phy_position_x, global.body.phy_position_y + 32);
+var dir = point_direction(global.body.x,global.body.y,mouse_x,mouse_y);
+
+scr_spawn_item(type,item,amount,global.body.x + lengthdir_x(32,dir), global.body.y + lengthdir_y(32,dir));
 }

@@ -2,13 +2,19 @@ event_inherited();
 type   = 0;
 item   = 0;
 amount = 0;
-jump = false;
-dir = point_direction(phy_position_x,phy_position_y,mouse_x,mouse_y);
+jump   = false;
+
+pick_up = false;
+
+once = false;
+
+dir = 0;
 
 phy_fixed_rotation = true;
 
-physics_apply_impulse(phy_position_x,phy_position_y,lengthdir_x(32,dir),lengthdir_y(32,dir));
-
 z  = 0;
+x_ = 0;
 
 draw_script = scr_item_jump;
+
+alarm[0] = 0.5 * room_speed;

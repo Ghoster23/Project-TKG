@@ -24,7 +24,7 @@ if room == rm_level {
 	
 		///Check all the the inventory
 		for(i = 0; i < 12; i++){
-			var type = inventory[# 0, i];
+			var type   = inventory[# 0, i];
 			
 			var j = i mod 3;
 			var k = i div 3;
@@ -34,6 +34,13 @@ if room == rm_level {
 			
 			var xx_ = inv_x + 11 * m + (77 * (j) + 64) * m;
 			var yy_ = inv_y + 12 * m + (77 * (k) + 64) * m;
+			
+			if(type != -1){
+				var item   = inventory[# 1, i];
+				var amount = inventory[# 2, i];
+			
+				scr_draw_item(type,item,amount,xx,yy,m*2,m*2,1);
+			}
 			
 			if(xx < mx && mx < xx_ && yy < my && my < yy_){
 				selected = i;
@@ -51,7 +58,7 @@ if room == rm_level {
 				draw_rectangle(mx+10*m,my-6*m,mx+(box_length+14)*m,my+(box_height-4)*m,false);
 				draw_set_color(c_white);
 				scr_draw_text_outlined(mx+13*m,my-5*m,c_black,c_white,text);
-				scr_draw_text_outlined(mx+13*m,my-(5+box_height)*m,c_black,c_white,text_);
+				scr_draw_text_outlined(mx+13*m,my-(5-box_height)*m,c_black,c_white,text_);
 				
 			}
 			
