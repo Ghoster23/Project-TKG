@@ -1,5 +1,5 @@
 if room == rm_level {
-	if obj_ig_menu_controller.state == "status"{
+	if obj_ig_menu_controller.state == "status" {
 		var mx = device_mouse_x_to_gui(0);
 		var my = device_mouse_y_to_gui(0);
 		
@@ -62,10 +62,11 @@ if room == rm_level {
 				
 			}
 			
-			if(selected &&
+			if(selected == i &&
 			  ((mouse_click && xx < mx && mx < xx_ && yy < my && my < yy_) ||
 			    enter_key) && alarm[0] == -1){
-				switch(obj_cursor.holder[0]){
+					
+				switch(inventory[# 0, 12]){
 					case -1:
 						scr_inv_item_grab(i);
 					break;
@@ -74,7 +75,7 @@ if room == rm_level {
 					break;
 				}
 				
-				alarm[0] = 5;
+				alarm[0] = 0.5 * room_speed;
 			}
 		}
 		

@@ -7,81 +7,54 @@ var type     = inventory[# 0, pos];
 var sub_type = inventory[# 1, pos];
 var maximum  = scr_inv_item_stack_size(type) - 1;
 
-var holder   = obj_cursor.holder;
-
 if(pos < 9){
 	//Place it
 	if(type == -1){
-		inventory[# 0, pos] = holder[0];
-		inventory[# 1, pos] = holder[1];
-		inventory[# 2, pos] = holder[2];
+		scr_inv_swap_pos(pos,12);
 	
 		obj_cursor.cursor = true;
-		obj_cursor.holder = [-1,-1,-1];
 	
 		capacity--;
 	
 	//Stack it
-	}else if(type     == holder[0] && 
-	         sub_type == holder[1] && 
-			 maximum  >  holder[2] &&
-			 maximum  >  inventory[# 2, pos] &&
-			 not (type == 2 || type == 3)){
+	}else if(type     == inventory[# 0,  12] &&  //The same type in holder and in inv
+	         sub_type == inventory[# 1,  12] &&  //The same item in holder and in inv
+			 maximum  >  inventory[# 2, pos] &&  //The amount in inv is less than the max
+			 not (type == 2 || type == 3)){      //The type is not potion nor chess piece (don't stack)
 	
-		if(maximum >= inventory[# 2, pos] + holder[2]){
-			inventory[# 2, pos] += holder[2];
-			holder = [-1,-1,-1];
+		if(maximum >= inventory[# 2, pos] + inventory[# 2, 12]){ //Total amount is less or equal to maximum
+			inventory[# 2, pos] += inventory[# 2, 12];
+			ds_grid_set_region(inventory,0,12,2,12,-1);
+			
 			obj_cursor.cursor = true;
+			
 		}else {
 			var excess = inventory[# 2, pos] + holder[2] - maximum;
 			inventory[# 2, pos] = maximum;
-			holder[2] = excess;
+			inventory[# 2,  12] = excess;
+			
 			obj_cursor.cursor = false;
 		}
 	
-		obj_cursor.holder = holder;
-	
 	//Switch it
-	}else {
-		var temp = holder;
-	
-		holder[0] = inventory[# 0, pos];
-		holder[1] = inventory[# 1, pos];
-		holder[2] = inventory[# 2, pos];
-	
-		inventory[# 0, pos] = temp[0];
-		inventory[# 1, pos] = temp[1];
-		inventory[# 2, pos] = temp[2];
+	}else {	
+		scr_inv_swap_pos(pos,12);
 	
 		obj_cursor.cursor = false;
-	
-		obj_cursor.holder = holder;
 	}
-}else if(holder[0] == 7){
+	
+}else if(inventory[# 0, 12] == 7){
 	//Place it
 	if(type == -1){
-		inventory[# 0, pos] = holder[0];
-		inventory[# 1, pos] = holder[1];
-		inventory[# 2, pos] = holder[2];
+		scr_inv_swap_pos(pos,12);
 	
 		obj_cursor.cursor = true;
-		obj_cursor.holder = [-1,-1,-1];
 		
 	//Switch it
 	}else {
-		var temp = holder;
-	
-		holder[0] = inventory[# 0, pos];
-		holder[1] = inventory[# 1, pos];
-		holder[2] = inventory[# 2, pos];
-	
-		inventory[# 0, pos] = temp[0];
-		inventory[# 1, pos] = temp[1];
-		inventory[# 2, pos] = temp[2];
+		scr_inv_swap_pos(pos,12);
 	
 		obj_cursor.cursor = false;
-	
-		obj_cursor.holder = holder;
 	}
 }
 }

@@ -1,5 +1,5 @@
-inventory = ds_grid_create(3,12);
-ds_grid_set_region(inventory,0,0,2,11,-1);
+inventory = ds_grid_create(3,13);
+ds_grid_set_region(inventory,0,0,2,12,-1);
 
 holder = [-1,-1,-1];
 
