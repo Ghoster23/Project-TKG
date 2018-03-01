@@ -1,17 +1,25 @@
 if(!obj_pglobs.dead && (room == rm_level || room == rm_lvl_editor_test || room == rm_CH_boss)){
 m = display_get_gui_width() / global.roomwd;
 
-xx = 80 * m;
-yy = 34 * m;
+xx = 64 * m;
+yy = 64 * m;
 
 ///Draw emblem
 draw_sprite_ext(spr_emblem,global.char,0,0,m,m,0,c_white,1);
 
-///Draw health
+///Draw health bar
 scr_health_bar();
 
-///Status effects
+///Draw status bar
 scr_status_bar();
+
+///Draw tool slot
+scr_tool_slot();
+
+///Draw Consumable slot
+scr_consumable_slot();
+
+///Draw consumeable slot
 
 ///Draw coins
 draw_sprite_ext(spr_coin,0,yy + 4 * m,xx + 8 * m,m,m,0,c_white,1);

@@ -1,31 +1,25 @@
 {
 var hp = global.hp;
 
+var hw = sprite_get_width(spr_heart);
+var hh = sprite_get_height(spr_heart);
+
 for(var i = 0; i < global.maxhp div 4; i++){
-	if(i < 5){
-		o = sprite_get_height(spr_heart) + 4;
-		
-		if hp >= 4{
-			draw_sprite_ext(spr_heart,  4,xx + (i * 18.5) * m, yy - o * m, m, m, 0, c_white, 1);
-			hp -= 4;
-		}else if hp > 0{
-			draw_sprite_ext(spr_heart, hp,xx + (i * 18.5) * m, yy - o * m, m, m, 0, c_white, 1);
-			hp -= hp;
-		}else if hp == 0{
-			draw_sprite_ext(spr_heart,  0,xx + (i * 18.5) * m, yy - o * m, m, m, 0, c_white, 1);
-		}
-	}else {
-		var j = i - 5;
-		
-		if hp >= 4{
-			draw_sprite_ext(spr_heart,  4,xx + (j * 18.5) * m, yy, m, m, 0, c_white, 1);
-			hp -= 4;
-		}else if hp > 0{
-			draw_sprite_ext(spr_heart, hp,xx + (j * 18.5) * m, yy, m, m, 0, c_white, 1);
-			hp -= hp;
-		}else {
-			draw_sprite_ext(spr_heart,  0,xx + (j * 18.5) * m, yy, m, m, 0, c_white, 1);
-		}
+	var ch = 0;
+	
+	if       hp >= 4 {
+		ch = 4;
+			
+	}else if hp >  0 {
+		ch = hp;
+			
+	}else if hp == 0 {
+		ch = 0;
+			
 	}
+		
+	draw_sprite_ext(spr_heart,  ch, xx + (i * hw) * m, yy div 4 - (hh div 2) * m, m, m, 0, c_white, 1);
+	
+	hp -= ch;
 }
 }

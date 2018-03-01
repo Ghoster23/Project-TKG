@@ -83,6 +83,11 @@ if room == rm_level {
 			scr_inv_item_drop();
 		}
 	}else if obj_ig_menu_controller.state == "closed" {
-				
+		var m = display_get_gui_width() / global.roomwd;
+		
+		var c  = display_get_gui_width()  / 2;
+		var c_ = display_get_gui_height() / 2;
+		
+		
 	}
 }

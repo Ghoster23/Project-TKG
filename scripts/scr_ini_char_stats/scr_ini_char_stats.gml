@@ -1,7 +1,7 @@
 global.ds_char_stat_grid = ds_grid_create(16,6);
 
 //Jason Carlisle
-global.ds_char_stat_grid[# 0, 0] = 20;
+global.ds_char_stat_grid[# 0, 0] = 40;
 global.ds_char_stat_grid[# 0, 1] = 10;
 global.ds_char_stat_grid[# 0, 2] = 5;
 global.ds_char_stat_grid[# 0, 3] = 5;

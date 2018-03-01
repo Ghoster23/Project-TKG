@@ -17,3 +17,7 @@ if(a_right || right_key){
 	selected  = scr_wrap(selected,0,8);
 	highltd   = ds_list_find_value(ds_places,selected);
 }
+
+if escape_key{
+	room_goto_previous();
+}
