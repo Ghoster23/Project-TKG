@@ -5,7 +5,12 @@ var pos = argument0;
 
 var type     = inventory[# 0, pos];
 var sub_type = inventory[# 1, pos];
+var amount   = inventory[# 2, pos];
 var maximum  = scr_inv_item_stack_size(type) - 1;
+
+var h_type   = inventory[# 0, holder];
+var h_item   = inventory[# 1, holder];
+var h_amount = inventory[# 2, holder];
 
 if(pos < 9){
 	//Place it
@@ -17,20 +22,21 @@ if(pos < 9){
 		capacity--;
 	
 	//Stack it
-	}else if(type     == inventory[# 0,  holder] &&  //The same type in holder and in inv
-	         sub_type == inventory[# 1,  holder] &&  //The same item in holder and in inv
-			 maximum  >  inventory[# 2, pos] &&  //The amount in inv is less than the max
-			 not (type == 2 || type == 3)){      //The type is not potion nor chess piece (don't stack)
+	}else if(type     == h_type &&  //The same type in holder and in inv
+	         sub_type == h_item &&  //The same item in holder and in inv
+			 maximum  >  amount &&  //The amount in inv is less than the max
+			 not (type == item_type.potion || 
+			      type == item_type.chess_piece)){ //The type is not potion nor chess piece (don't stack)
 	
-		if(maximum >= inventory[# 2, pos] + inventory[# 2, holder]){ //Total amount is less or equal to maximum
-			inventory[# 2, pos] += inventory[# 2, holder];
-			ds_grid_set_region(inventory,0,holder,2,holder,-1);
+		if(maximum >= amount + h_amount){ //Total amount is less or equal to maximum
+			inventory[# 2, pos] += h_amount;
+			scr_inv_set_pos(-1,-1,-1,holder)
 			
 			obj_cursor.cursor = true;
 			
 		}else {
-			var excess = inventory[# 2, pos] + holder[2] - maximum;
-			inventory[# 2, pos] = maximum;
+			var excess = amount + h_amount - maximum;
+			inventory[# 2, pos]     = maximum;
 			inventory[# 2,  holder] = excess;
 			
 			obj_cursor.cursor = false;
@@ -43,7 +49,10 @@ if(pos < 9){
 		obj_cursor.cursor = false;
 	}
 	
-}else if(inventory[# 0, holder] == 7){
+}else if((pos <  12         &&  h_type == item_type.equipable     ) ||
+		 (pos == consumable &&  h_type <= item_type.constellation ) ||
+		 (pos == tool_slot  && (h_type == item_type.weapons         || 
+		                        h_type == item_type.tool          ))){
 	//Place it
 	if(type == -1){
 		scr_inv_swap_pos(pos,holder);

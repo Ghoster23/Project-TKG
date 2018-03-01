@@ -23,8 +23,8 @@ if room == rm_level {
 		draw_sprite_ext(spr_inventory, 0, inv_x, inv_y, m, m, 0, c_white, 1);
 	
 		///Check all the the inventory
-		for(i = 0; i < 12; i++){
-			var type   = inventory[# 0, i];
+		for(i = 0; i < 14; i++){
+			var type = inventory[# 0, i];
 			
 			var j = i mod 3;
 			var k = i div 3;
@@ -64,7 +64,7 @@ if room == rm_level {
 			  ((mouse_click && xx < mx && mx < xx_ && yy < my && my < yy_) ||
 			    enter_key) && alarm[0] == -1){
 					
-				switch(inventory[# 0, 12]){
+				switch(inventory[# 0, holder]){
 					case -1:
 						scr_inv_item_grab(i);
 					break;
@@ -73,21 +73,22 @@ if room == rm_level {
 					break;
 				}
 				
-				alarm[0] = 0.5 * room_speed;
+				alarm[0] = 0.3 * room_speed;
 			}
 		}
 		
-		if(inventory[# 0, holder] != -1 && mouse_click &&
+		/*if(inventory[# 0, holder] != -1 && mouse_click &&
 		(mx < inv_x || mx > inv_x + inv_wd * m ||
 		my < inv_y || my > inv_y + inv_hg * m)){
 			scr_inv_item_drop();
-		}
+			
+		}*/
+		
 	}else if obj_ig_menu_controller.state == "closed" {
 		var m = display_get_gui_width() / global.roomwd;
 		
 		var c  = display_get_gui_width()  / 2;
 		var c_ = display_get_gui_height() / 2;
-		
 		
 	}
 }

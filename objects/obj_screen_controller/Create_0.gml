@@ -3,6 +3,9 @@ scr_unique_inst();
 
 global.roomwd = 672;
 global.roomhg = 416;
+global.as_ratio  = 1;
+global.ratio     = 1;
+
 
 //Start
 if(window_get_fullscreen()){
@@ -17,8 +20,8 @@ if(window_get_fullscreen()){
 	t = 1;
 }
 
-global.ratio = global.MonitorW/global.MonitorH;
-show_debug_message(global.ratio);
+global.as_ratio = global.MonitorW/global.MonitorH;
+show_debug_message(global.as_ratio);
 
 lvl_view_wd = global.roomwd;
 lvl_view_hg = global.roomhg;
@@ -34,3 +37,4 @@ room_set_viewport(rm_level,1,false,0,0,lvl_view_wd div 2,lvl_view_hg div 2);
 prev_t = t;
 
 scr_screen_res();
+display_set_gui_maximise();

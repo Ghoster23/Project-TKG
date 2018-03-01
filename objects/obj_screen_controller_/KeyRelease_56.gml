@@ -1,1 +1,0 @@
-display_set_gui_size(display_get_gui_width()/v,display_get_gui_height()/v);

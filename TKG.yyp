@@ -119,14 +119,6 @@
             }
         },
         {
-            "Key": "02855f4e-8f12-487b-82ac-40d572e8d4cd",
-            "Value": {
-                "id": "790450ca-97c5-449d-80d9-38de60003138",
-                "resourcePath": "objects\\obj_screen_controller_\\obj_screen_controller_.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "02a9b20b-1d92-4896-bac3-2b12942002b0",
             "Value": {
                 "id": "d6af4944-14d1-4974-beff-58a1db7ee344",
@@ -6023,14 +6015,6 @@
             }
         },
         {
-            "Key": "dca7ba48-4169-4924-a1c2-d1350f8dd174",
-            "Value": {
-                "id": "36408fc2-2c32-40fd-a65c-2882627d2d4a",
-                "resourcePath": "scripts\\scr_screen_adjust_fl\\scr_screen_adjust_fl.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "dccfe2ba-385e-42dd-9a0d-3815750160cc",
             "Value": {
                 "id": "fbad384e-30f5-49d1-a724-aac9fc145496",
@@ -7077,7 +7061,6 @@
         "161b4ddc-68e0-4b4a-9baa-aa45c1af3dc4",
         "ce4b4c78-19ab-49d7-9eec-273e7085983e",
         "432dfd92-babd-4b1e-bca4-9db76f53ab4a",
-        "dca7ba48-4169-4924-a1c2-d1350f8dd174",
         "77dfd3e2-4088-4c09-9919-9ca49dd0ac52",
         "c8585593-156b-4eb9-9361-431a110ba32d",
         "31c00a38-d4df-4221-93d0-4bfde00c4bb4",
