@@ -48,7 +48,6 @@ if room == rm_level {
 			
 			if(selected == i){
 				var text = "type: " + string(type);
-				var text_ = "h type: " + string(holder[0]);
 				draw_set_font(font_chsl_tags);
 				draw_set_valign(false);
 				draw_set_halign(false);
@@ -58,7 +57,6 @@ if room == rm_level {
 				draw_rectangle(mx+10*m,my-6*m,mx+(box_length+14)*m,my+(box_height-4)*m,false);
 				draw_set_color(c_white);
 				scr_draw_text_outlined(mx+13*m,my-5*m,c_black,c_white,text);
-				scr_draw_text_outlined(mx+13*m,my-(5-box_height)*m,c_black,c_white,text_);
 				
 			}
 			
@@ -79,7 +77,7 @@ if room == rm_level {
 			}
 		}
 		
-		if(holder[0] != -1 && mouse_click &&
+		if(inventory[# 0, holder] != -1 && mouse_click &&
 		(mx < inv_x || mx > inv_x + inv_wd * m ||
 		my < inv_y || my > inv_y + inv_hg * m)){
 			scr_inv_item_drop();

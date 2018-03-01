@@ -23,9 +23,7 @@ if(obj_ig_menu_controller.state == "closed"){
 			
 		}
 		
-		inventory[# 0, consumable] = -1;
-		inventory[# 1, consumable] = -1;
-		inventory[# 2, consumable] = -1;
+		scr_inv_set_pos(-1,-1,-1,consumable);
 		capacity++;
 	}
 	

@@ -1,14 +1,14 @@
 inventory = ds_grid_create(3,13);
 ds_grid_set_region(inventory,0,0,2,12,-1);
 
-holder = [-1,-1,-1];
-
 scr_inv_types_init();
 
 global.equiped = [-1,-1,-1];
 
+holder     = 12;
 tool_slot  = 0;
 consumable = 1;
+
 selected   = 0;
 
 capacity = 9;
