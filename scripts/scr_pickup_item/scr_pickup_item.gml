@@ -13,44 +13,44 @@ show_debug_message("Amount: " + string(amount));
 
 with(obj_inventory_controller){
 	if(capacity > 0){
-
-		var maximum = scr_inv_item_stack_size(type);
-
 		for(var i = 0; i < 9; i++){
-			var temp_type = inventory[# 0, i];
+			var temp_type   = inventory[# 0, i];
+			var temp_item   = inventory[# 1, i];
+			var temp_amount = inventory[# 2, i];
+			var maximum     = scr_inv_item_stack_size(type);
 	
 			//Stack it
-			if(temp_type == type && type != item_type.potion && type != item_type.chess_piece){
-				var temp_item   = inventory[# 1, i];
-				var temp_amount = inventory[# 2, i];
-		
-				if(temp_item == item && temp_amount < maximum){  //Item is the same and amount is less than maximum
-					temp_amount = amount + temp_amount;
+			if(temp_type == type &&
+			   type != item_type.potion && 
+			   type != item_type.chess_piece &&
+			   temp_item == item &&
+			   temp_amount < maximum){
+				temp_amount = amount + temp_amount;
 			
-					if(temp_amount <= maximum){
-						amount            = -1;
-						inventory[# 2, i] = temp_amount;
-						break;
+				if(temp_amount <= maximum){
+					amount            = -1;
+					inventory[# 2, i] = temp_amount;
+					break;
 					
-					}else {
-						inventory[# 2, i] = maximum;
-						amount       = temp_amount - maximum;
+				}else {
+					inventory[# 2, i] = maximum;
+					amount            = temp_amount - maximum;
 					
-					}
 				}
-			}else if(type == item_type.potion){
+			
+			}else if(type == item_type.potion || 
+			         type == item_type.chess_piece){
 				break;
+				
 			}
 		}
 	
 		if(amount != -1){
 			for(var i = 0; i < 9; i++){
-				var temp_type = inv[# 0, i];
+				var temp_type = inventory[# 0, i];
 		
 				if(temp_type == -1){
-					inventory[# 0, i] = type;
-					inventory[# 1, i] = item;
-					inventory[# 2, i] = amount;
+					scr_inv_set_pos(type, item, amount, i);
 		
 					capacity--;
 		
@@ -58,10 +58,6 @@ with(obj_inventory_controller){
 					break;
 				}
 			}
-		}
-
-		if(amount == -1){
-			instance_destroy();
 		}
 	}
 }

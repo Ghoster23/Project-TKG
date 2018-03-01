@@ -13,5 +13,9 @@ if(z <= 0 && x_ != 0){
 	}
 }
 
+if(amount == -1){
+	instance_destroy();
+}
+
 c += 0.5;
 c = c mod 360;
