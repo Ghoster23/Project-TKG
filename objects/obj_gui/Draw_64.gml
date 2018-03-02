@@ -4,9 +4,6 @@ m = global.ratio;
 xx = 64 * m;
 yy = 64 * m;
 
-///Draw emblem
-draw_sprite_ext(spr_emblem,global.char,0,0,m,m,0,c_white,1);
-
 ///Draw health bar
 scr_health_bar();
 

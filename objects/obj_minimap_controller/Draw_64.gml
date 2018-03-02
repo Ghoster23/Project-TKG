@@ -55,10 +55,10 @@ if room == rm_level {
 				}
 				
 			///Rooms adjacent to visited rooms that have not been visisted
-			}else if (i - 8 >= 0 and (global.ds_roomgrid[# 2, i - 8] and doors[0] == 1) or 
-					 (i - 1 >= 0 and global.ds_roomgrid[# 2, i - 1] and doors[1] == 1) or 
-					 (i + 8 <= 63 and global.ds_roomgrid[# 2, i + 8] and doors[2] == 1) or 
-					 (i + 1 <= 63 and global.ds_roomgrid[# 2, i + 1] and doors[3] == 1)) and 
+			}else if ((i - 8 >= 0  and global.ds_roomgrid[# 2, i - 8] and doors[0] == 1) or 
+					  (i - 1 >= 0  and global.ds_roomgrid[# 2, i - 1] and doors[1] == 1) or 
+					  (i + 8 <= 63 and global.ds_roomgrid[# 2, i + 8] and doors[2] == 1) or 
+					  (i + 1 <= 63 and global.ds_roomgrid[# 2, i + 1] and doors[3] == 1)) and 
 					  global.ds_roomgrid[# 1, i]!="NULL"{
 				spr = scr_mm_tile(i);
 				
@@ -72,13 +72,13 @@ if room == rm_level {
 		var i = 0;
 		var j = 0;
 	
-		m = display_get_gui_width() / global.roomwd;
+		m = global.ratio;
 	
-		xx = display_get_gui_width() - 112 * m;
-		yy = 16 * m;
+		xx = display_get_gui_width() - (sprite_get_width(spr_os_minimap) + 8) * m;
+		yy = 8 * m;
 		
 		cs = global.current_column - 1;
-		rs = global.current_row - 1;
+		rs = global.current_row    - 1;
 
 		rw = (88 / 3) * m;
 		rh = (88 / 3) * m;
