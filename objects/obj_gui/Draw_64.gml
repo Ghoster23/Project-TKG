@@ -22,11 +22,8 @@ draw_set_font(font_chsl_tags);
 draw_text_ext_transformed( yy + 20 * m, xx + 8 * m, string(global.coins), 2 * m, 16 * m, m, m, 0);
 draw_text_ext_transformed( yy + 63 * m, xx + 8 * m,     string(fps_real), 2 * m, 16 * m, m, m, 0);
 
-///Draw Quick-Access Slots
-
-
 ///Character specific
-switch global.char {
+/*switch global.char {
 	case 0:
 		if o_v == -1{
 			o_v = global.p_will;
@@ -56,5 +53,5 @@ switch global.char {
 			o_v = global.p_will;
 		}
 	break;
-}
+}*/
 }

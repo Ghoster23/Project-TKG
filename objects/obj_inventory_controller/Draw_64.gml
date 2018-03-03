@@ -17,10 +17,12 @@ if room == rm_level {
 		var c  = display_get_gui_width()  / 2;
 		var c_ = display_get_gui_height() / 2;
 		
-		var inv_x = c / 2 - (inv_wd / 2) * m;
-		var inv_y = c_    - (inv_hg / 2) * m;
+		var inv_x = c  / 2 - (inv_wd) * m;
+		var inv_y = 16 * m;
 	
-		draw_sprite_ext(spr_inventory, 0, inv_x, inv_y, m, m, 0, c_white, 1);
+		draw_sprite_ext(spr_inventory,  0, inv_x, inv_y, m * 2, m * 2, 0, c_white, 1);
+		
+		draw_sprite_ext(spr_quickslots, 0, inv_x, inv_y + inv_wd * m * 2, m * 2, m * 2, 0, c_white, 1);
 	
 		///Check all the the inventory
 		for(i = 0; i < 14; i++){
