@@ -24,3 +24,12 @@ for(var i = 0; i < 16; i++){
 
 inv_wd  = sprite_get_width(spr_inventory);
 inv_hg  = sprite_get_height(spr_inventory);
+
+m = display_get_gui_width() / global.roomwd;
+r = m * 2;
+		
+c  = display_get_gui_width()  / 2;
+c_ = display_get_gui_height() / 2;
+		
+inv_x = c  / 2 - (inv_wd) * m;
+inv_y = c_ / 4 - 16 * m;

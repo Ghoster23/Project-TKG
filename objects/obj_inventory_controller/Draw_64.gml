@@ -1,54 +1,36 @@
 if room == rm_level {
 	if obj_ig_menu_controller.state == "status" {
-		var mx = device_mouse_x_to_gui(0);
-		var my = device_mouse_y_to_gui(0);
-		
 		stats[0] = global.maxhp;
 		stats[1] = global.atk;
 		stats[2] = global.def;
 		stats[3] = global.satk;
 		stats[4] = global.sdef;
 		stats[5] = global.spd;
-		
-		var i = 0;
 	
-		var m = display_get_gui_width() / global.roomwd;
+		draw_sprite_ext(spr_inventory,  0, inv_x, inv_y, r, r, 0, c_white, 1);
 		
-		var c  = display_get_gui_width()  / 2;
-		var c_ = display_get_gui_height() / 2;
+		draw_sprite_ext(spr_quickslots, 0, inv_x, inv_y + inv_wd * r, r, r, 0, c_white, 1);
 		
-		var inv_x = c  / 2 - (inv_wd) * m;
-		var inv_y = 16 * m;
-	
-		draw_sprite_ext(spr_inventory,  0, inv_x, inv_y, m * 2, m * 2, 0, c_white, 1);
-		
-		draw_sprite_ext(spr_quickslots, 0, inv_x, inv_y + inv_wd * m * 2, m * 2, m * 2, 0, c_white, 1);
+		draw_sprite_ext(spr_equipslots, 0, c + inv_x, inv_y, r, r, 0, c_white, 1);
 	
 		///Check all the the inventory
-		for(i = 0; i < 14; i++){
+		for(i = 0; i < 9; i++){
 			var type = inventory[# 0, i];
 			
 			var j = i mod 3;
 			var k = i div 3;
 			
-			var xx = inv_x + 11 * m + (77 * j) * m;
-			var yy = inv_y + 12 * m + (77 * k) * m;
-			
-			var xx_ = inv_x + 11 * m + (77 * (j) + 64) * m;
-			var yy_ = inv_y + 12 * m + (77 * (k) + 64) * m;
+			var xx = inv_x + 8  * r + (40 * j) * r;
+			var yy = inv_y + 18 * r + (40 * k) * r;
 			
 			if(type != -1){
 				var item   = inventory[# 1, i];
 				var amount = inventory[# 2, i];
 			
-				scr_draw_item(type,item,amount,xx,yy,m*2,m*2,1);
+				scr_draw_item(type, item, amount, xx, yy, r, r, 1);
 			}
 			
-			if(xx < mx && mx < xx_ && yy < my && my < yy_){
-				selected = i;
-			}
-			
-			if(selected == i){
+			/*if(selected == i){
 				var text = "type: " + string(type);
 				draw_set_font(font_chsl_tags);
 				draw_set_valign(false);
@@ -60,37 +42,10 @@ if room == rm_level {
 				draw_set_color(c_white);
 				scr_draw_text_outlined(mx+13*m,my-5*m,c_black,c_white,text);
 				
-			}
-			
-			if(selected == i &&
-			  ((mouse_click && xx < mx && mx < xx_ && yy < my && my < yy_) ||
-			    enter_key) && alarm[0] == -1){
-					
-				switch(inventory[# 0, holder]){
-					case -1:
-						scr_inv_item_grab(i);
-					break;
-					default:						
-						scr_inv_item_place(i);
-					break;
-				}
-				
-				alarm[0] = 0.3 * room_speed;
-			}
+			}*/			
 		}
-		
-		/*if(inventory[# 0, holder] != -1 && mouse_click &&
-		(mx < inv_x || mx > inv_x + inv_wd * m ||
-		my < inv_y || my > inv_y + inv_hg * m)){
-			scr_inv_item_drop();
-			
-		}*/
-		
 	}else if obj_ig_menu_controller.state == "closed" {
-		var m = display_get_gui_width() / global.roomwd;
 		
-		var c  = display_get_gui_width()  / 2;
-		var c_ = display_get_gui_height() / 2;
 		
 	}
 }
