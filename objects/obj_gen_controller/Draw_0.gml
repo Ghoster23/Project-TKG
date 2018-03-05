@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 		
-	
+/*	
 //draw grid fo debuggin' 
 var sx = room_width/2+672/4;
 var sy = room_height/2+416/4;

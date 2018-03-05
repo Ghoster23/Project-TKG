@@ -7,9 +7,10 @@ roomwd=global.roomwd;
 roomhg=global.roomhg;
 
 ///Base Room
+/*
 instance_create_layer(gx + (global.roomwd / 2) + 64,gy + 48,"Instances",obj_torch);
 instance_create_layer(gx+global.roomwd/2-96,gy+48,"Instances",obj_torch);
-
+*/
 scr_base_roomgn();
 
 //create grid to house the room
@@ -228,7 +229,96 @@ for(i=0;i<9;i++){
 		
 			instance_create_layer(gx+x_pos,gy+y_pos,obj_layer,obj_id);
 		}
+		else{
+			instance_create_layer(gx+x_pos,gy+y_pos,"BH",obj_fluid_tile);
+		}
 		
+	}
+
+}
+
+//generate the decor
+
+//lets fill them walls now boi (well actually just like one of the walls becuz of perspective but... you dont need to know that ;) )
+
+var skip = false;
+var ranvalue = 1;
+
+for(var i=0; i<19; i++){
+	//skip door or skip if it was a 2 tile thingy
+	if((i==8) or (i==9) or (i==10)) or skip == true{
+		skip=false;
+		continue;
+	}
+	//if it is the last bit before gap place a 1 tile thingy
+	if(i==7 or i ==18){
+		ranvalue=1;
+	}
+	else{
+		ranvalue=irandom_range(1,2);
+	}	
+	
+	switch(ranvalue){
+		case 1:
+			//decide what kind of 1 tile thing to put in there - (painting,banner,misc or bookcase)
+			switch(irandom_range(0,30)){
+				case 0:
+				case 1:    //painting
+					theobject=obj_painting;	
+					break;
+				case 2:
+				case 3:    //banner
+					theobject=obj_banner;	
+					break;
+				case 4:
+				case 5:    //misc
+					theobject=obj_1tilemisc;	
+					break;
+				case 6:    //bookcase
+					theobject=obj_bookcase;	
+					break;
+				case 7:
+				case 8:
+					theobject = 0;
+					instance_create_layer(gx+32+32*i,gy+48,"Instances",obj_torch);
+					break;
+				default:
+					theobject = 0;
+					break;
+			}
+			if variable_instance_exists(id,"theobject") and theobject!= 0{
+				with(instance_create_layer(gx+32+i*32,gy+32*3,"Instances",theobject)){
+					tile = 1;
+				}
+			}
+			break;
+			
+		case 2:
+			//decide what kind of 2 tile thing to put in there - (painting or bookcase)
+			switch(irandom_range(0,30)){
+				case 0:
+				case 1://painting
+					theobject=obj_painting;	
+					break;
+				case 2:    //bookcase
+					theobject=obj_bookcase;	
+					break;
+				case 3:
+				case 4:
+					theobject = 0;
+					instance_create_layer(gx+32+32*i,gy+48,"Instances",obj_torch);
+					break;
+				default:
+					theobject = 0;
+					break;
+			} 
+			if variable_instance_exists(id,"theobject") and theobject!= 0{
+				with(instance_create_layer(gx+32+i*32,gy+32*3,"Instances",theobject)){
+					tile = 2;
+				}
+			}
+			skip = true;
+			break;
 	}
 
 }

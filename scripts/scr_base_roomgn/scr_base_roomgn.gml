@@ -1,5 +1,5 @@
-instance_create_layer(gx + (global.roomwd / 2) + 64,gy + 48,"Instances",obj_torch);
-instance_create_layer(gx+global.roomwd/2-96,gy+48,"Instances",obj_torch);
+//instance_create_layer(gx + (global.roomwd / 2) + 64,gy + 48,"Instances",obj_torch);
+//instance_create_layer(gx+global.roomwd/2-96,gy+48,"Instances",obj_torch);
 
 instance_create_layer(gx,gy,"Instances",obj_wall_left_up);
 instance_create_layer(gx,gy+176+32,"Instances",obj_wall_left_fillin);
@@ -18,6 +18,7 @@ instance_create_layer(gx+global.roomwd-32,gy+176+32,"Instances",obj_wall_right_f
 instance_create_layer(gx+global.roomwd-32,gy+176+96,"Instances",obj_wall_right_down);
 
 
+	
 //lets generate that floor boiiii
 
 //find first entry in the table

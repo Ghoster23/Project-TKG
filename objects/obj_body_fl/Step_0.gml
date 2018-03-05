@@ -61,12 +61,6 @@ if not global.pause {
 		} 
 	}
 
-	//sound
-	if global.walking==true{
-		if !audio_is_playing(snd_footstep2){
-			scr_sound(snd_footstep2);
-		}
-	}
 }else {
 	for(i = 0; i < 2; i++){
 		if alarm[i] != -1{

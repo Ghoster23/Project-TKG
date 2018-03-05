@@ -124,13 +124,6 @@ if not global.pause {
 		phy_position_x += hspd;
 		phy_position_y += vspd;
 	}
-
-	//Sound
-	if(global.walking == true){
-		if(!audio_is_playing(snd_footstep2)){
-			scr_sound(snd_footstep2);
-		}
-	}
 	
 	//Pick-up
 	var pick_up = instance_place(x,y,obj_item);
@@ -138,6 +131,13 @@ if not global.pause {
 	if(pick_up != noone && pick_up.pick_up){
 		with(pick_up){
 			amount = scr_pickup_item(type,item,amount);
+		}
+	}
+	
+	//footstep sound
+	if(len!=0){
+		if(!audio_is_playing(snd_footstep2)){
+			scr_sound(snd_footstep2);
 		}
 	}
 	
