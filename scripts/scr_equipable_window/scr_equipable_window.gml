@@ -15,7 +15,7 @@ for(var i = 0; i < 3; i++){
 			
 	var xx = dx +             8 * scale;
 	var yy = dy + (18 + 40 * i) * scale;
-			
+
 	if(type != -1){
 		var item   = inventory[# 1, i + 9];
 		var amount = inventory[# 2, i + 9];

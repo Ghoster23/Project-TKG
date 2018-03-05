@@ -1,6 +1,7 @@
 {
-var item = argument0;
-var pos  = argument1;
+var item   = argument0;
+var amount = argument1;
+var pos    = argument2;
 
 switch(item){
 	case item_type.unique_consumable:
@@ -10,12 +11,13 @@ switch(item){
 		scr_food_effect(item);
 	break;
 	case item_type.potion:
-		scr_chessP_effect(item);
+		scr_potion_effect(item,amount);
 	break;
 	case item_type.chess_piece:
-		scr_constellation_effect(item);
+		scr_chessP_effect(item,amount);
 	break;
 	case item_type.constellation:
+		scr_constellation_effect(item);
 	break;
 	default:
 	break;
@@ -23,6 +25,6 @@ switch(item){
 
 if(item <= item_type.constellation){
 	scr_inv_set_pos(-1,-1,-1,pos);
-	capacity++;
+	
 }
 }

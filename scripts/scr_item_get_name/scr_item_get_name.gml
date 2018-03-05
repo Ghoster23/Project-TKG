@@ -30,5 +30,8 @@ switch(type){
 	case item_type.tool:
 		return scr_tool_get_name(item);
 	break;
+	default:
+		return "???";
+	break;
 }
 }

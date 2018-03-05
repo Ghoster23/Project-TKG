@@ -1,6 +1,6 @@
 ///@description Applies statuses based on unique consumables
 {
-switch(argument) {
+switch(argument0) {
 	case unique_consume.eat_me:
 		
 	break;

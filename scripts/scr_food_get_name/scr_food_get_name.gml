@@ -1,5 +1,5 @@
 {
-switch(argument) {
+switch(argument0) {
 	case food.cookie:
 		return "Cookie";
 	break;

@@ -27,7 +27,7 @@ if(active){
 		for(var j = 1; j < grid_size - 1; j++){
 			if(collision_rectangle(x+(i-1)*cell_size,y+(j-1)*cell_size,x+i*cell_size,y+j*cell_size,obj_slm_cr,true,false)){
 				tiles[i,j] = 29.9;
-			}else if(global.equiped[7] && collision_rectangle(x+(i-1)*cell_size,y+(j-1)*cell_size,x+i*cell_size,y+j*cell_size,global.body,true,false)){
+			}else if(global.erase && collision_rectangle(x+(i-1)*cell_size,y+(j-1)*cell_size,x+i*cell_size,y+j*cell_size,global.body,true,false)){
 				tiles[i,j] =    0;
 			}
 		}

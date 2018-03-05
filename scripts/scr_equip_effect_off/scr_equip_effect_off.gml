@@ -33,7 +33,7 @@ switch item {
 		
 	break;
 	case equips.staff_of_moses:
-		
+		global.erase = false;
 		
 	break;
 	case equips.sandals_of_hermes:

@@ -1,6 +1,6 @@
 ///@description Applies statuses based on potions
 {
-switch(argument){
+switch(argument0){
 	case constellation.pisces:
 		
 		

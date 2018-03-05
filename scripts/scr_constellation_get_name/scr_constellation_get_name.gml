@@ -1,5 +1,5 @@
 {
-switch(argument) {
+switch(argument0) {
 	case constellation.pisces:
 		return "Pisces";
 	break;

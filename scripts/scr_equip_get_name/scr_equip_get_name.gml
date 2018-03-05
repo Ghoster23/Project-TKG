@@ -1,4 +1,4 @@
-switch argument {
+switch argument0 {
 	case equips.crown_of_thorns:
 		return "Crown of Thorns";
 		

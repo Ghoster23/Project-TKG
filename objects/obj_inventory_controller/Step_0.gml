@@ -2,7 +2,7 @@ scr_get_input();
 
 if(obj_ig_menu_controller.state == "closed"){
 	if(consumable_key){
-		scr_inv_consume(inventory[# 1, consumable], consumable);
+		scr_inv_consume(inventory[# 1, consumable], inventory[# 2, consumable], consumable);
 		
 	}
 	
@@ -17,21 +17,6 @@ if(obj_ig_menu_controller.state == "closed"){
 		}
 	}
 	*/
-	
-	for(var i = 0; i < 3; i++){
-		var e_id = inventory[# 1, 9 + i];
-		
-		if(e_id != -1 && eq_active[i] != e_id){
-			var prev_id = eq_active[i];
-			
-			if(prev_id != -1){
-				scr_equip_effect_off(prev_id);
-			}
-			
-			scr_equip_effect_on(e_id);
-			eq_active[i] = e_id;
-		}
-	}
 	
 }else if(obj_ig_menu_controller.state == "status"){
 	mx = device_mouse_x_to_gui(0);
@@ -133,12 +118,14 @@ if(obj_ig_menu_controller.state == "closed"){
 			selected = tool_slot;
 	
 		//Equipment
-		}else if(c + inv_x < mx && mx < c + inv_x + 48 * r &&
+		}else if(display_get_gui_width() - inv_x - inv_wd * r < mx && 
+		         mx < display_get_gui_width() - inv_x - inv_wd * r + 48 * r &&
 				 inv_y < my && my < inv_y + inv_hg * r){
+					 
 			for(i = 0; i < 3; i++){
 				var type = inventory[# 0, 8 + i];
 			
-				var xx = c + inv_x + 8 * r;
+				var xx = display_get_gui_width() - inv_x - inv_wd * r + 8 * r;
 				var yy = inv_y    + 18 * r + (40 * i) * r;
 			
 				var xx_ = xx + 32 * r;
@@ -172,8 +159,10 @@ if(obj_ig_menu_controller.state == "closed"){
 		if(selected == -1 && inventory[# 0, holder] != -1 && inventory[# 0, holder] != undefined){
 			scr_inv_item_drop();
 			
-		}else if(selected == 16 && inventory[# 0, holder] <= item_type.constellation){
-			scr_inv_consume(inventory[# 1, holder], pos);
+		}else if(selected == 16 && inventory[# 0, holder] != -1 && inventory[# 0, holder] <= item_type.constellation){
+			scr_inv_consume(inventory[# 1, holder], inventory[# 2, holder], holder);
+			
+			obj_cursor.cursor = true;
 			
 		}else if(selected != -1){
 			switch(inventory[# 0, holder]){
@@ -188,6 +177,21 @@ if(obj_ig_menu_controller.state == "closed"){
 			}
 			
 			alarm[0] = 0.3 * room_speed;
+		}
+	}
+	
+	for(var i = 0; i < 3; i++){
+		var e_id = inventory[# 1, 9 + i];
+		
+		if(e_id != -1 && eq_active[i] != e_id){
+			var prev_id = eq_active[i];
+			
+			if(prev_id != -1){
+				scr_equip_effect_off(prev_id);
+			}
+			
+			scr_equip_effect_on(e_id);
+			eq_active[i] = e_id;
 		}
 	}
 }

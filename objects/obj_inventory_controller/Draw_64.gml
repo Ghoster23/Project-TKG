@@ -1,11 +1,5 @@
 if room == rm_level {
 	if obj_ig_menu_controller.state == "status" {
-		stats[0] = global.maxhp;
-		stats[1] = global.atk;
-		stats[2] = global.def;
-		stats[3] = global.satk;
-		stats[4] = global.sdef;
-		stats[5] = global.spd;
 		
 		if(selected == -1){
 			text = "Drop";
@@ -31,7 +25,7 @@ if room == rm_level {
 		scr_equipable_window(display_get_gui_width() - inv_x - inv_wd * r, inv_y, r);
 		
 		///Stats
-		scr_stats_window(display_get_gui_width() - inv_x - (inv_wd - 48) * r, inv_y, r);
+		scr_stats_window(display_get_gui_width() - inv_x - inv_wd * r + equip_wd * r, inv_y, r);
 		
 		if(text != ""){
 			scr_boxed_text(mx,my,string_width(text),string_height(text),

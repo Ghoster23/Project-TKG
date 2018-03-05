@@ -5,6 +5,7 @@ enum potions{
 	ohko         = 3,
 	cure         = 4,
 	compass      = 5,
-	immunity     = 6
+	immunity     = 6,
+	count        = 7,
 	
 }

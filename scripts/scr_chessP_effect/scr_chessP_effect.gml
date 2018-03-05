@@ -1,6 +1,9 @@
 ///@description Applies statuses based on potions
 {
-switch(argument0) {
+var item  = argument0;
+var color = argument1;
+
+switch(item) {
 	case chessP.pawn:
 		
 	break;

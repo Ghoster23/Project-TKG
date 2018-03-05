@@ -171,7 +171,14 @@ global.fluid_grid = -1;
 
 comp = 0;
 
-instance_create_layer(0,0,"IF",obj_room_controller);
+instance_create_layer( 0, 0, "IF", obj_room_controller);
 comp += 7;
-instance_create_layer(0,0,"PS",obj_minimap_controller);
+
+instance_create_layer( 0, 0, "PS", obj_minimap_controller);
 comp += 7;
+
+instance_create_layer( 0, 0, "IF", obj_AI_controller);
+comp += 10;
+	
+instance_create_layer( 0, 0, "IF", obj_inventory_controller);
+comp += 12;

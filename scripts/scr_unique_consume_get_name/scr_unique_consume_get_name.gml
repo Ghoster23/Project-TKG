@@ -1,5 +1,5 @@
 {
-switch(argument) {
+switch(argument0) {
 	case unique_consume.eat_me:
 		return "Eat Me";
 	break;

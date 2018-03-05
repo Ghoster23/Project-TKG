@@ -9,6 +9,7 @@ enum equips{
 	staff_of_moses    = 7,
 	sandals_of_hermes = 8,
 	shield_of_zeus    = 10,
-	crystal_bubble    = 11
+	crystal_bubble    = 11,
+	count             = 12
 	
 }
