@@ -26,7 +26,7 @@ switch(type){
 	break;
 					
 	case item_type.potion:
-		scr_player_potion_draw_ext(amount,item,xx,yy,xscale,yscale,alpha);					
+		scr_potion_draw_ext(amount,item,xx,yy,xscale,yscale,alpha);					
 	break;
 					
 	case item_type.chess_piece:

@@ -123,6 +123,7 @@ switch state{
 			draw_set_alpha(0.6);
 		}
 		
+		draw_set_halign(fa_center);
 		draw_text_ext_transformed(c, (256 + 96) * m,"Back",2,12,m,m,0);
 		
 		draw_set_alpha(1);
