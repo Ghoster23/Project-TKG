@@ -1,8 +1,3 @@
-//follow the player for the duration of its life span
-x += global.body.hspd;
-y += global.body.vspd;
-
-
 //knockback
 if image_index == 1 and not instance_exists(obj_kb){
     instance_create_layer(x,y,layer,obj_kb);

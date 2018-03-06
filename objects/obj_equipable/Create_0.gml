@@ -1,7 +1,5 @@
 event_inherited();
-equipable_count = 15;
 
-select = irandom(equipable_count);
 image_speed = 0;
 ox = x;
 oy = y;
@@ -14,16 +12,21 @@ attempts = 0;
 offs = 32;
 offset = true;
 
-/*while global.equipable[select] {
-	select = irandom(equipable_count);
+type   = item_type.equipable;
+item   = irandom(equips.count);
+amount = 1;
+
+while global.equipable[item] {
+	item = irandom(equips.count);
 	attempts++;
 	
-	if(attempts >= equipable_count * 2){
+	if(attempts >= equips.count * 2){
 		break;
 	}
 }
 
-global.equipable[select] = true;*/
-image_index = select;
+global.equipable[item] = true;
+
+image_index = item;
 
 pedestal = -1;

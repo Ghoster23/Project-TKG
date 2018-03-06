@@ -7,7 +7,7 @@ global.act_enemy_list = ds_list_create();
 once = false;
 
 //Previous room
-pr_row = global.current_row;
+pr_row    = global.current_row;
 pr_column = global.current_column;
 
 path[0] = 0;

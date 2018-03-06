@@ -3,8 +3,8 @@ scr_unique_inst();
 
 global.roomwd = 672;
 global.roomhg = 416;
-global.as_ratio  = 1;
-global.ratio     = 1;
+global.as_ratio = 1;
+global.ratio    = 1;
 
 
 //Start

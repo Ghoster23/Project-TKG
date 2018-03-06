@@ -2,7 +2,7 @@ if room == rm_level{
 	var i = global.current_row * 8 + global.current_column;
 	
 	//Visited	
-	if global.ds_roomgrid[# 2, i] == false{
+	if global.ds_roomgrid[# 2, i] == false {
 		global.ds_roomgrid[# 2, i] = true;
 		global.n_room = true;
 		
