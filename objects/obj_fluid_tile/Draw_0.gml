@@ -1,3 +1,5 @@
+draw_self();
+
 if(active){
 	active = false;
 	

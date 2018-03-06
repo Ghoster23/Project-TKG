@@ -226,11 +226,16 @@ for(i=0;i<9;i++){
 			//get coords
 			x_pos=32+j*32+offset;
 			y_pos=96+i*32+offset;
-		
+			
+			//check if it is not solid and if so place tile underneath
+			if(object_get_parent(obj_id)!=obj_solid_parent) and (object_get_parent(object_get_parent(obj_id))!=obj_solid_parent){
+				instance_create_layer(gx+32+j*32,gy+96+i*32,"BH",obj_fluid_tile);
+			}
+			
 			instance_create_layer(gx+x_pos,gy+y_pos,obj_layer,obj_id);
 		}
 		else{
-			instance_create_layer(gx+x_pos,gy+y_pos,"BH",obj_fluid_tile);
+			instance_create_layer(gx+32+j*32,gy+96+i*32,"BH",obj_fluid_tile);
 		}
 		
 	}
