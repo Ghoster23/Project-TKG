@@ -7,28 +7,30 @@ if (first_time==true && room == rm_level){
 	for (var i=0; i<13; i++)
 	{
 	    for (var j=0; j<21; j++){
-		
+			draw_set_alpha(1);
 			 switch ds_grid_get(obj_gen_controller.floor_grid,gxtile+j,gytile+i){
 				case "green": break;
 			
 				case "blue": 
 					tx = gxtile+j;
 					ty = gytile+i;
-					shader_set(sh_outline);
-					shader_set_uniform_f(upH,texelH);
-					shader_set_uniform_f(upW,texelW);
-					draw_sprite_ext(spr_tile_grass,scr_autotile_floor("blue"),j*32,i*32,1,1,0,make_color_rgb(117,81,63),1) ;
-					shader_reset();
+					var ind = scr_autotile_floor("blue");
+					
+					outline_start(2,make_color_rgb(117,81,63),spr_tile_grass,ind,8);
+					draw_sprite_ext(spr_tile_grass,ind,j*32,i*32,1,1,0,c_white,1);
+					outline_end();
+					
 					break;
 				
 				case "red" : 
 					tx = gxtile+j;
 					ty = gytile+i;
-					shader_set(sh_outline);
-					shader_set_uniform_f(upH,texelH);
-					shader_set_uniform_f(upW,texelW);
-					draw_sprite_ext(spr_tile_stone,scr_autotile_floor("red"),j*32,i*32,1,1,0,make_color_rgb(117,81,63),1) ;
-					shader_reset();
+					var ind = scr_autotile_floor("red");
+					
+					outline_start(2,make_color_rgb(117,81,63),spr_tile_stone,ind,8);
+					draw_sprite_ext(spr_tile_stone,ind,j*32,i*32,1,1,0,c_white,1);
+					outline_end();
+					
 					break;
 				
 				default: show_debug_message("tile does not exist") break;

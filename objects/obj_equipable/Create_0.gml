@@ -16,7 +16,7 @@ type   = item_type.equipable;
 item   = irandom(equips.count);
 amount = 1;
 
-while global.equipable[item] {
+/*while global.equipable[item] {
 	item = irandom(equips.count);
 	attempts++;
 	
@@ -25,7 +25,7 @@ while global.equipable[item] {
 	}
 }
 
-global.equipable[item] = true;
+global.equipable[item] = true;*/
 
 image_index = item;
 

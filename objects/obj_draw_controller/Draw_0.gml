@@ -1,16 +1,4 @@
-if(!surface_exists(global.fluid_surface)){
-	global.fluid_surface = surface_create(surface_get_width(application_surface),
-	                                      surface_get_height(application_surface));
-}else {
-	surface_set_target(application_surface);
-	outline_start_surface(3,c_green,global.fluid_surface,6);
-	draw_surface_ext(global.fluid_surface,0,0,global.ratio,global.ratio,0,c_white,0.3);
-	outline_end();
-	surface_reset_target();
-	surface_set_target(global.fluid_surface);
-	draw_clear_alpha(c_black,0);
-	surface_reset_target();
-}
+
 
 if ds_exists(ds_depthgrid, ds_type_grid) {
 	var depthgrid = ds_depthgrid;
@@ -69,4 +57,28 @@ if ds_exists(ds_depthgrid, ds_type_grid) {
 	}
 	
 	ds_grid_clear(ds_depthgrid, 0);
+}
+
+if(!surface_exists(global.fluid_surface)){
+	global.fluid_surface = surface_create(global.roomwd,
+	                                      global.roomhg);
+}else {
+	surface_set_target(application_surface);
+	
+	outline_start_surface(1,c_green,global.fluid_surface,6);
+	
+	draw_surface_ext(global.fluid_surface,
+	                 global.current_column * global.roomwd,
+					 global.current_row    * global.roomhg,
+					 1,1,0,c_white,0.5);
+						  
+	outline_end();
+	
+	surface_reset_target();
+	surface_set_target(global.fluid_surface);
+	draw_clear_alpha(c_black,0);
+	draw_rectangle(0,0,32,32,false);
+	draw_rectangle(surface_get_width(global.fluid_surface) - 32,surface_get_height(global.fluid_surface) - 32,
+	surface_get_width(global.fluid_surface),surface_get_height(global.fluid_surface),false);
+	surface_reset_target();
 }
