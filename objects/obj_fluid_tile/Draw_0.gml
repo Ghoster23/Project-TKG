@@ -1,7 +1,6 @@
-draw_self();
-
 if(active){
 	active = false;
+	surface_set_target(global.fluid_surface);
 	
 	for(var i = 1; i < grid_size - 1; i++){
 		for(var j = 1; j < grid_size - 1; j++){
@@ -12,12 +11,12 @@ if(active){
 				
 				//What fluid is it
 				if val <= 60 {
-					sprite = spr_oil;
+					color = c_olive;
 				
 				}
 				
 				if val <= 30 {
-					sprite = spr_slm_creep;
+					color = c_lime;
 				
 				}
 				
@@ -28,14 +27,11 @@ if(active){
 				}
 		
 				//Opacity
-				op = (val mod 30) / 60;
+				//op = (val mod 30) / 60;
 		
-				draw_set_alpha(op);
-				var img = scr_fluid_tile_v21( i, j, val div 30);
+				//draw_set_alpha(op);
 				
-				draw_sprite_ext(sprite, img, x + i * cell_size, y + j * cell_size,1,1,0,c_white,op);
-			
-				draw_set_alpha(1);
+				draw_sprite_ext(spr_creep_circle, 0, ox + i * cell_size, oy + j * cell_size, 1, 1, 0, color, 1);
 				
 				tiles[i,j] = val;
 			}
@@ -47,4 +43,6 @@ if(active){
 			}
 		}
 	}
+	
+	surface_reset_target();
 }

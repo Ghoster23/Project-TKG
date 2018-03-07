@@ -3,28 +3,37 @@
 //
 varying vec2 v_vTexcoord;
 varying vec4 v_vColour;
-uniform float pH;
-uniform float pW;
+
+uniform vec2 size;
+uniform float thick;
+uniform vec3 oColor;
+uniform float accuracy;
+uniform float tol;
+uniform vec4 uvs;
+
+const float rad_circle = 6.28319;
 
 void main()
 {
-	vec2 offsetx;
-	offsetx.x = pW;
-	vec2 offsety;
-	offsety.y = pH;
-	
-	float originAlpha = sign(texture2D(gm_BaseTexture, v_vTexcoord).a);
-	float alpha = originAlpha;
-	
-	alpha += ceil(texture2D(gm_BaseTexture,v_vTexcoord + offsetx).a);
-	alpha += ceil(texture2D(gm_BaseTexture,v_vTexcoord - offsetx).a);
-	alpha += ceil(texture2D(gm_BaseTexture,v_vTexcoord + offsety).a);
-	alpha += ceil(texture2D(gm_BaseTexture,v_vTexcoord - offsety).a);
-	/*alpha += ceil(texture2D(gm_BaseTexture,v_vTexcoord + offsetx + offsety).a);
-	alpha += ceil(texture2D(gm_BaseTexture,v_vTexcoord - offsetx + offsety).a);
-	alpha += ceil(texture2D(gm_BaseTexture,v_vTexcoord + offsety - offsety).a);
-	alpha += ceil(texture2D(gm_BaseTexture,v_vTexcoord - offsety - offsety).a);*/
-	
-    gl_FragColor = (v_vColour * (1.0 - originAlpha)) + texture2D(gm_BaseTexture, v_vTexcoord);
-	gl_FragColor.a = alpha;
+    gl_FragColor = v_vColour * texture2D( gm_BaseTexture, v_vTexcoord );
+    bool outline = false;
+ 
+    for(float i=1.0; i<=thick; i++){
+        for(float d=0.0; d<rad_circle; d+=rad_circle/accuracy){
+			vec2 check_pos = v_vTexcoord + i*vec2(cos(d)*size.x, -sin(d)*size.y);
+            vec4 datPixel =  v_vColour * texture2D( gm_BaseTexture, check_pos);
+            
+			bool out_bound = check_pos.x < uvs.r || check_pos.y < uvs.g || check_pos.x > uvs.b || check_pos.y > uvs.a; 
+			
+            if (datPixel.a>tol && gl_FragColor.a<=tol && !out_bound){
+                outline = true;
+                break;
+            }
+        }
+		if (outline) break;
+    }
+    
+    if (outline) gl_FragColor = vec4(oColor.r, oColor.g, oColor.b, 1.0);
 }
+
+

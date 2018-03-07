@@ -16,3 +16,7 @@ for(var i = 0; i < 8; i++){
 active = false;
 activate_adjacent = false;
 once   = false;
+color = c_white;
+
+ox = x mod global.roomwd;
+oy = y mod global.roomhg;
