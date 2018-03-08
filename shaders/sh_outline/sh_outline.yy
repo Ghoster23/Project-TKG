@@ -1,5 +1,5 @@
 {
-    "id": "e86693d4-3e35-4a4d-b5b3-6a3a1e986dc1",
+    "id": "db1432e1-2fcd-4ddc-8753-3afae20566e8",
     "modelName": "GMShader",
     "mvc": "1.0",
     "name": "sh_outline",

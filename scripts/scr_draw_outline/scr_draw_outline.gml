@@ -1,11 +1,7 @@
 {
-	shader_set(sh_outline);
-	shader_set_uniform_f(upH,texelH);
-	shader_set_uniform_f(upW,texelW);
-	
-	image_blend = c_white;
+	outline_start(1,c_white,sprite_index,image_index,4);
 	
 	draw_self();
 
-	shader_reset();
+	outline_end();
 }

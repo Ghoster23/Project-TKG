@@ -1,6 +1,7 @@
-
-if(active){
+if(active && global.check == 1){
 	active = false;
+	
+	surface_set_target(global.fluid_surface);
 	
 	for(var i = 1; i < grid_size - 1; i++){
 		for(var j = 1; j < grid_size - 1; j++){
@@ -9,41 +10,31 @@ if(active){
 			if val > 0{
 				active = true;
 				
-				//What fluid is it
-				if val <= 60 {
-					sprite = spr_oil;
-				
-				}
-				
-				if val <= 30 {
-					sprite = spr_slm_creep;
-				
-				}
-				
 				//Ticks
 				if not global.pause{
-					val -= 0.1;
+					val -= 1;
 				
 				}
 		
 				//Opacity
-				op = (val mod 30) / 60;
-		
-				draw_set_alpha(op);
-				var img = scr_fluid_tile_v21( i, j, val div 30);
+				op = ln(val mod 30) * 0.05 + 0.75;
 				
-				draw_sprite_ext(sprite, img, x + i * cell_size, y + j * cell_size,1,1,0,c_white,op);
-			
-				draw_set_alpha(1);
+				//outline_start( 1, c_green, spr_creep_circle, 0, 4);
+				//draw_sprite_ext(spr_creep_circle, 0, ox + i * cell_size, oy + j * cell_size, 1, 1, 0, color, 1);
+				//draw_circle_color(ox + i * cell_size + 2, oy + j * cell_size + 2, 2, color, color, false);
+				draw_sprite_ext(spr_pixel, 0, ox + i * cell_size + 2, oy + j * cell_size + 2, cell_size, cell_size, 0, colors[val div 30], op);
+				//outline_end();
 				
 				tiles[i,j] = val;
 			}
 			
 			for(var k = 0; k < 2; k++){
-				if(k * 30 + 0.1  == val){
+				if(k * 30 + 1  == val){
 					tiles[i,j] = 0;
 				}
 			}
 		}
 	}
+	
+	surface_reset_target();
 }

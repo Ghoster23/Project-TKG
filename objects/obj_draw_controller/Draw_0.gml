@@ -1,3 +1,26 @@
+global.check++;
+global.check = global.check % 3;
+
+if(!surface_exists(global.fluid_surface)){
+	global.fluid_surface = surface_create(global.roomwd,
+	                                      global.roomhg);
+}else {
+	//Draw Fluid Surface
+	outline_start_surface(1,color_creep,global.fluid_surface,4);
+	draw_surface_ext(global.fluid_surface,
+	                 global.current_column * global.roomwd,
+					 global.current_row    * global.roomhg,
+					 1,1,0,c_white,1);			  
+	outline_end();
+	
+	//Clear Fluid Surface
+	if(global.check == 1){
+		surface_set_target(global.fluid_surface);
+		draw_clear_alpha(c_black,0);
+		surface_reset_target();
+	}
+}
+
 if ds_exists(ds_depthgrid, ds_type_grid) {
 	var depthgrid = ds_depthgrid;
 	var instNum   = instance_number(obj_depth_parent);

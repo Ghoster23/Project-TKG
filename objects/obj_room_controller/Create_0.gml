@@ -4,6 +4,7 @@ global.lock = false;
 global.n_room = false;
 enemy_list = 0;
 global.act_enemy_list = ds_list_create();
+
 once = false;
 
 //Previous room

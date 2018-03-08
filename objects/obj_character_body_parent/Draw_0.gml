@@ -1,1 +1,0 @@
-draw_line(phy_position_x,phy_position_y,mouse_x,mouse_y);
