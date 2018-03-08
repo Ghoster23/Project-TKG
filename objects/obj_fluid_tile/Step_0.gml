@@ -1,3 +1,4 @@
+//ADJ
 if(not global.gen and not once){
 	once = true;
 	
@@ -12,12 +13,14 @@ if(not global.gen and not once){
 	
 }
 
+//Activation
 if(activate_adjacent){
 	activate_adjacent = false;
 	
 	for(var i = 0; i < 8; i++){
 		if(adj[i] != noone){
 			adj[i].active = true;
+			adj[i].check  = true;
 		}
 	}
 }
@@ -26,9 +29,11 @@ if(active){
 	for(var i = 1; i < grid_size - 1; i++){
 		for(var j = 1; j < grid_size - 1; j++){
 			if(collision_rectangle(x+(i-1)*cell_size,y+(j-1)*cell_size,x+i*cell_size,y+j*cell_size,obj_slm_cr,true,false)){
-				tiles[i,j] = 29.9;
+				tiles[i,j] = 29;
 			}else if(global.erase && collision_rectangle(x+(i-1)*cell_size,y+(j-1)*cell_size,x+i*cell_size,y+j*cell_size,global.body,true,false)){
 				tiles[i,j] =    0;
+			}else if(collision_rectangle(x+(i-1)*cell_size,y+(j-1)*cell_size,x+i*cell_size,y+j*cell_size,obj_hspider,true,false)){
+				tiles[i,j] = 59;
 			}
 		}
 	}

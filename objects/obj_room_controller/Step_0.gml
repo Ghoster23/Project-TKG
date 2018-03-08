@@ -19,6 +19,11 @@ if((room == rm_level and obj_view.stopped and global.n_room) || (room == rm_test
 	global.n_room = false;
 }
 
+if(room == rm_lvl_editor_test){
+	global.current_column = 0;
+	global.current_row    = 0;
+}
+
 if (ds_exists(global.act_enemy_list,ds_type_list) and ds_list_size(global.act_enemy_list) == 0) {
 	global.lock = false;
 	
