@@ -80,7 +80,7 @@ if not global.pause {
 	///Equipables' effects
 	
 
-	///Statuses
+	///Statuses	
 	if(status_check){
 		//Poisoned
 	    scr_player_status_check(0);
