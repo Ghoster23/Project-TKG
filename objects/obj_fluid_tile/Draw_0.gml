@@ -12,7 +12,7 @@ if(active && global.check == 1){
 				
 				//Ticks
 				if not global.pause{
-					val -= 1;
+					val -= 0.5;
 				
 				}
 		

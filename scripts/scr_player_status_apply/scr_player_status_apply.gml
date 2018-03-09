@@ -7,10 +7,8 @@
 	
 	if(global.status[stat,0] < count){
 		switch stat{
-			case statuses.poison : 
-				if(not global.p_inv and not global.p_hurt and not global.status[7,0]){
-					global.status[stat,0] = count;
-				}
+			case statuses.poison :
+				global.status[stat,0] = count;
 				
 			break;
 			case statuses.stuck :
