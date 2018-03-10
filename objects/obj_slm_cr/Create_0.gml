@@ -17,3 +17,6 @@ e_spd  = 1.5;
 for(i = 0; i < 6; i++){
 	alarms[i] = -1;
 }
+
+fl_gen = instance_create_layer(x - 20, y - 2,
+							   layer, obj_slm_cr_fluid_gen);

@@ -13,7 +13,8 @@
         "dbb0b5a9-995a-4864-b902-483624d35043",
         "ba9b4af9-b93a-4979-ac9f-5516ca44bcc9",
         "aff192b4-fe63-400a-92e6-70546c995bbd",
-        "a58bbe17-8494-49b6-a545-ecd9462d5f69"
+        "a58bbe17-8494-49b6-a545-ecd9462d5f69",
+        "537ec6e4-f299-43d0-9235-af8ae2a02aa9"
     ],
     "filterType": "GMSprite",
     "folderName": "slime",

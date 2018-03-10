@@ -34,18 +34,12 @@ if go and not global.pause{
 
     }
 	
-	if state != 2 {
+	fl_gen.x = phy_position_x - 19;
+	fl_gen.y = phy_position_y - 2;
+	
+	if(state != 2){
 		if(place_meeting(x,y,global.body)){
 			scr_damage_player(1);
-		}
-		
-		var tile = instance_place(x,y,obj_fluid_tile);
-			
-		if(tile != noone){
-			with(tile){
-				active = true;
-				activate_adjacent = true;
-			}
 		}
 	}
     
