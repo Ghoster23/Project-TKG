@@ -14,7 +14,7 @@ physics_apply_impulse(x, y, lengthdir_x(10, dir ),lengthdir_y(10,dir));
 
 z         = 0;
 zzero     = 0;
-speedzero = 40;
+speedzero = 50;
 t         = 0;
 a         = -20;
 stop      = false;
@@ -22,8 +22,8 @@ bounce    = false;
 zmax=zzero + ((speedzero*speedzero)/(2*-a));
 phy_linear_damping=0.5;
 
+modulator=1;
 draw_script = scr_item_jump;
-
 
 fix1 = physics_fixture_create();
 physics_fixture_set_circle_shape(fix1,6);

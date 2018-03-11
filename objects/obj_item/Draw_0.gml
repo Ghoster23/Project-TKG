@@ -8,3 +8,5 @@ draw_text_ext_transformed(x,y+40,"linear speed y: "+string(phy_linear_velocity_y
 if stop=true{
 	draw_text_ext_transformed(x,y+50,"STOP",0,10000,0.4,0.4,0);
 } 
+*/
+draw_text_ext_transformed(x,y,string(draw_script),0,10000,0.4,0.4,0);

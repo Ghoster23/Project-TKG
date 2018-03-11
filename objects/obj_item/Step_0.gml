@@ -54,6 +54,9 @@ if pick_up == false{
 	}
 }
 else{
+	image_xscale = 1;
+	image_yscale = 1;
+
 	draw_script = scr_draw_item_floor;
 }
 
