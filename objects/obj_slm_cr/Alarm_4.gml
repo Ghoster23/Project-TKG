@@ -1,2 +1,2 @@
 ///@description Stop flash and damaged
-flash=false;
+flash = false;

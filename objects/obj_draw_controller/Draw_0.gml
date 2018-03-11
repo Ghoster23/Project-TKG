@@ -62,15 +62,11 @@ if ds_exists(ds_depthgrid, ds_type_grid) {
 				script_execute(draw_script);
 				
 			}
-			else if instanceID.visible {	
+			else if instanceID.visible {
 				
 				draw_self();
 				
 				shader_reset();
-				
-				if self.object_index == obj_potion {
-					draw_sprite_ext(spr_potion_fluid,image_index,x,y,1,1,0,color,1);
-				}
 			}
 		}
 		

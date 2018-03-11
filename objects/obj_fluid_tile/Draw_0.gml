@@ -13,11 +13,11 @@ if(active && global.check == 1){
 				
 				//Ticks
 				if not global.pause{
-					val -= 0.5;
+					val -= 0.4;
 				}
 		
 				//Opacity
-				op = ln(val mod 30) * 0.05 + 0.75;
+				op = ln(val mod 30) * 0.05 + 0.65;
 				
 				draw_sprite_ext(spr_pixel, 0,
 								ox + i * cell_size + 2,

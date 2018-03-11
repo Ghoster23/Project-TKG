@@ -25,6 +25,11 @@ if go and not global.pause{
 				
 				ds_list_delete(global.act_enemy_list,pos);
 				global.kld_enemies += 1;
+				
+				if(instance_exists(fl_gen)){
+					instance_destroy(fl_gen);
+				}
+				
 				instance_destroy();
             }
 			
@@ -34,13 +39,14 @@ if go and not global.pause{
 
     }
 	
-	fl_gen.x = phy_position_x - 19;
-	fl_gen.y = phy_position_y - 2;
-	
 	if(state != 2){
 		if(place_meeting(x,y,global.body)){
 			scr_damage_player(1);
+			
 		}
+		
+		fl_gen.x = phy_position_x - 19;
+		fl_gen.y = phy_position_y - 2;
 	}
     
 	//Get damaged

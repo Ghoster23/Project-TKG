@@ -1,6 +1,6 @@
 if(not global.pause and on){
 	var fl_tiles = collision_rectangle_list( x, y, x+sprite_width, y+sprite_height, obj_fluid_tile, true, false);
-			
+	
 	if(fl_tiles != noone){
 		var len = ds_list_size(fl_tiles);
 		
@@ -44,12 +44,8 @@ if(not global.pause and on){
 				
 				for(var i = sx; i < fx; i++){
 					for(var j = sy; j < fy; j++){
-						if(place_meeting(ox + i * cell_size, 
-										 oy + j * cell_size, other)){
-							tiles[i * grid_size + j] = val;
-					
-							active = true;
-						}
+						tiles[i * grid_size + j] = val;
+						active = true;
 					}
 				}
 			}
