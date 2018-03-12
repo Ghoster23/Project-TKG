@@ -90,4 +90,4 @@ global.p_maxwill = 60;
 global.current_column = 4;
 global.current_row    = 4;
 
-global.fluid_detail = 3;
+global.fluid_detail = 16;

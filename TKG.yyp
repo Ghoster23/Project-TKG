@@ -511,6 +511,14 @@
             }
         },
         {
+            "Key": "127970bb-5792-4db3-a7ec-4cfea8f84750",
+            "Value": {
+                "id": "838b986d-e427-4c4a-815c-5a27dc717e2b",
+                "resourcePath": "objects\\obj_fluid_interactor_parent\\obj_fluid_interactor_parent.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "128c9b40-bb69-4998-8946-72170d49ece7",
             "Value": {
                 "id": "741664e4-608f-4da6-9dc4-452b3f147970",
@@ -971,6 +979,14 @@
             "Value": {
                 "id": "37e374b0-b833-43c3-8049-939e59b0de30",
                 "resourcePath": "objects\\obj_psnt_head\\obj_psnt_head.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "21e980a8-332f-4b2b-811f-c31f12868055",
+            "Value": {
+                "id": "b965c265-fd5f-44a2-9475-818568928de0",
+                "resourcePath": "objects\\obj_fluid_tile1\\obj_fluid_tile1.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2396,6 +2412,14 @@
                 "id": "d27b5906-ca49-4883-a02d-f211f81d4540",
                 "resourcePath": "views\\52e72ba9-c439-4642-8806-0315c82963bc.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "537ec6e4-f299-43d0-9235-af8ae2a02aa9",
+            "Value": {
+                "id": "5dee4418-f510-40bd-84f4-843a2289a8e4",
+                "resourcePath": "sprites\\spr_slm_cr_fluid_gen\\spr_slm_cr_fluid_gen.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3963,6 +3987,14 @@
             "Value": {
                 "id": "f9826789-e12e-42ad-9d8e-6ba675f97e47",
                 "resourcePath": "objects\\obj_fl_spikes_alt\\obj_fl_spikes_alt.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "8dc4a9cd-46d9-40f3-8e7f-c927a1b396a8",
+            "Value": {
+                "id": "7236c355-46b3-43fb-b26e-ac64438bfb70",
+                "resourcePath": "objects\\obj_slm_cr_fluid_gen\\obj_slm_cr_fluid_gen.yy",
                 "resourceType": "GMObject"
             }
         },
