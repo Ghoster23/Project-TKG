@@ -1,6 +1,7 @@
 event_inherited();
 
 draw_script = scr_psnt_draw;
+phy_fixed_rotation=true;
 
 image_speed=0;
 
