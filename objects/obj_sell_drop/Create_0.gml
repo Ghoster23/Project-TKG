@@ -1,82 +1,56 @@
 randomize();
+event_inherited();
 image_speed = 0;
+draw_script = scr_draw_item_floor;
+
+cost = 0;
 
 off_x = 0;
 off_y = 0;
 
-chance = irandom(99) + 1;
+chance = irandom(5);
 
-if(chance <= 40){
-	sprite_index = spr_heart;
-	x += 8;
-	y += 8;
-	
-	image_index = irandom_range(1,4);
-              
-}else {
-	sprite_index = spr_potion_flask;
-	
-	image_index = irandom_range(0,3);
-
-	type = irandom_range(0,60);
-
-	if(type < 30){
-		//Elixir of Life - Regen
-		color = c_red;
+switch(chance){
+	case 0: //Potion
+		type = item_type.potion;
+		item = irandom(potions.count);
 		cost = 2;
 		
-	}else if(type < 40){
-		//Midas Favourite - Coins are the only possible drop but are more common
-		color = c_yellow;
-		cost = 4;
+	break;
+	case 1: //Chess Piece
+		type = item_type.chess_piece;
+		item = irandom(chessP.count);
+		cost = 2 + item * 2;
 		
-	}else if(type < 50){
-		//Crystal Clear - Spot Mimics
-		color = c_teal;
-		cost = 3;
+	break;
+	case 2: //Food
+		type = item_type.food;
+		item = irandom(food.count);
+		cost = 4 + irandom(item);
 		
-	}else if(type < 53){
-		//Nighshade Juice - OHKO for next hit
-		color = c_fuchsia;
-		cost = 20;
-		image_index = 1;
+	break;
+	case 3: //Tool
+		type = item_type.tool;
+		item = irandom(tool.count);
+		cost = 10 + item div 2;
 		
-	}else if(type < 55){
-		//Immunaization of the Void - Cures all status and gives immunity for its duration
-		color = c_purple;
-		cost = 8;
+	break;
+	case 4: //Weapon
+		type = item_type.weapons;
+		item = irandom(weapons.count);
+		cost = 10 + (item div 5) * 2;
 		
-	}else if(type < 57){
-		//Compass Concoction - Directs you to the special room
-		color = c_navy;
-		cost = 5;
+	break;
+	case 5: //Heart
+		type = item_type.heart;
+		item = 0;
+		cost = 1;
 		
-	}else if(type <= 59){
-		//Mango Brew - Invulnerabillity
-		color = c_orange;
-		cost = 10;
-		
-	}else {
-		//Ambrosia
-		color = scr_char_color();
-		cost = 10000;
-	}
-	
-	x += 16;
-	y += 16;
-	off_x = -8;
-	off_y = -8;
-	
+	break;
 }
 
-switch sprite_index {
-	case spr_heart:
-		cost = 5 * image_index;
-		
-	break;
-	
-	case spr_potion_flask:
-		cost = cost * (image_index + 1);
-				
-	break;
+amount = irandom(scr_inv_item_stack_size(type) - 1);
+
+if(type == item_type.heart){
+	cost += amount;
 }

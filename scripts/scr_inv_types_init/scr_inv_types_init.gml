@@ -7,5 +7,7 @@ enum item_type{
 	weapons           = 5,
 	tool              = 6,
 	equipable         = 7,
-	drop              = 8
+	drop              = 8,
+	heart             = 9,
+	currency          = 10
 }

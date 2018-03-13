@@ -1,11 +1,3 @@
-/*if(z <= 0 && x_ != 0){
-	
-	
-}else if(draw_script =={
-	
-}
-*/
-
 if pick_up == false{
 	
 	draw_script = scr_item_jump;

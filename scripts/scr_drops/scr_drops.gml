@@ -3,20 +3,20 @@ randomize();
 
 chance = irandom(99) + 1;
 
-if not global.status[6,0] {
+if(not global.status[statuses.midas,0]){
 	if(chance <= 10){
-		return instance_create_layer(x,y,"IF",obj_heart);
+		return scr_spawn_item(   item_type.heart,  0,  -4, x, y);
               
 	}else if chance <= 50{
-		return instance_create_layer(x,y,"IF",obj_coin);
+		return scr_spawn_item(item_type.currency,  0, -16, x, y);
 	
 	}else if chance <= 65{
-		return scr_spawn_item(item_type.potion,-7,-3,x,y);
+		return scr_spawn_item( item_type.potion , -7,  -3, x, y);
 	
 	}
 }else {
 	if chance <= 80{
-		return instance_create_layer(x,y,"IF",obj_coin);
+		return scr_spawn_item(item_type.currency,  0, -16, x, y);
 	
 	}
 }

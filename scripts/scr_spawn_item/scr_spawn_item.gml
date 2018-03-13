@@ -36,7 +36,7 @@ if(amount > 0){
 	
 }
 
-var dir = point_direction(global.body.phy_position_x,global.body.phy_position_y,mouse_x,mouse_y);
+var dir = irandom(360);
 
 with spawn {
 	id.dir = dir;
