@@ -192,8 +192,10 @@ file_text_close(room_file);
 
 //show_debug_message("type: "+string(type)+" ID: "+string(room_id))
 
-//read dsgrid and do generation code
+gxtile=gx/32; 
+gytile=gy/32;
 
+//read dsgrid and do generation code
 for(i=0;i<9;i++){
 	for(j=0;j<19;j++){
 		object=ds_grid_get(global.room_grid, j, i);
@@ -236,10 +238,19 @@ for(i=0;i<9;i++){
 		}
 		else{
 			instance_create_layer(gx+32+j*32,gy+96+i*32,"BH",obj_fluid_tile);
-		}
+			switch ds_grid_get(obj_gen_controller.floor_grid,gxtile+j+1,gytile+i+2){
+			
+				case "blue": 
+					if(irandom_range(0,10) mod 2 == 0){
+						instance_create_layer(gx+32+j*32 + 16,gy+96+i*32 + 21,"Instances",obj_grassblade);
+					}
+					
+					break;
 		
+				default:  break;
+			}
+		}
 	}
-
 }
 
 //generate the decor

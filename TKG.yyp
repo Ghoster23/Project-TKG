@@ -3655,6 +3655,14 @@
             }
         },
         {
+            "Key": "7f895d0c-14fd-404b-ac9f-326a86a738a3",
+            "Value": {
+                "id": "5383b470-396d-4142-ad67-f85ed83f67ab",
+                "resourcePath": "scripts\\scr_drawwind\\scr_drawwind.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "8090e188-f427-49f3-8ffd-6bfcfd1f603d",
             "Value": {
                 "id": "718ff771-563e-4943-9ddf-ee190324a71f",
@@ -5863,6 +5871,14 @@
             }
         },
         {
+            "Key": "d03f4748-ceec-425c-bd9a-5d5adc0e73d1",
+            "Value": {
+                "id": "aa20eae3-0442-42d5-84dd-b0df4e2e6bd1",
+                "resourcePath": "shaders\\sh_wind\\sh_wind.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "d0721d7a-4329-44c8-833b-431ea6973344",
             "Value": {
                 "id": "bfe46543-4999-43f8-b76f-b66e5720c8af",
@@ -7403,6 +7419,7 @@
         "2d270c68-b640-47d2-b116-34fafdf68ecc",
         "82cc035b-9db4-4cfc-a6ba-a113ba803cfe",
         "68130a2e-3532-4e1d-ba95-b8e1b2072345",
+        "7f895d0c-14fd-404b-ac9f-326a86a738a3",
         "2cc88128-aad8-48a1-bdf4-d889aadf4ee0",
         "98757afd-6345-4027-9915-0d30eae7991a",
         "e46cf251-01f6-440c-94ef-1edcc2880fd8",
