@@ -13,4 +13,7 @@ colors[0] = make_color_rgb(102,167,18);
 ox = x mod global.roomwd;
 oy = y mod global.roomhg;
 
+rx = x div global.roomwd;
+ry = y div global.roomhg;
+
 outline_init();

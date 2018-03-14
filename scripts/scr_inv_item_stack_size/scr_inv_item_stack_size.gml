@@ -37,5 +37,11 @@ switch(type){
 	case item_type.drop:
 		return 16;
 	break;
+	case item_type.heart:
+		return 4;
+	break;
+	case item_type.currency:
+		return 16;
+	break;
 }
 }

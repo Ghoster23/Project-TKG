@@ -14,10 +14,11 @@ if(!surface_exists(global.fluid_surface)){
 	outline_end();
 	
 	//Clear Fluid Surface
-	if(global.check == 1){
+	if(global.check == 1 || clear_fluid){
 		surface_set_target(global.fluid_surface);
 		draw_clear_alpha(c_black,0);
 		surface_reset_target();
+		clear_fluid = false;
 	}
 }
 

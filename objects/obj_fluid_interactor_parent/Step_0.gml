@@ -13,7 +13,9 @@ if(not global.pause and on){
 		for(var k = 0; k < len; k++){
 			var inst = fl_tiles[| k];
 			
-			with(inst){		
+			with(inst){
+				sprite_index = spr_pixel;
+				
 				//Left limit
 				if(flx <= x){
 					var sx = 0;	
@@ -44,10 +46,15 @@ if(not global.pause and on){
 				
 				for(var i = sx; i < fx; i++){
 					for(var j = sy; j < fy; j++){
-						tiles[i * grid_size + j] = val;
-						active = true;
+						if(place_meeting(x + cell_size * (i + 0.5),
+						                 y + cell_size * (j + 0.5), other)){
+							tiles[i * grid_size + j] = val;
+							active = true;
+						}
 					}
 				}
+				
+				sprite_index = spr_slm_creep1;
 			}
 		}
 		

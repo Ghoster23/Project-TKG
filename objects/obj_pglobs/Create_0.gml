@@ -72,7 +72,7 @@ global.def   = global.ds_char_stat_grid[# global.char, 2];
 global.satk  = global.ds_char_stat_grid[# global.char, 3];
 global.sdef  = global.ds_char_stat_grid[# global.char, 4];
 global.spd   = global.ds_char_stat_grid[# global.char, 5];
-
+global.armor = 0;
 
 ///Dash
 global.dash_cd = false;
