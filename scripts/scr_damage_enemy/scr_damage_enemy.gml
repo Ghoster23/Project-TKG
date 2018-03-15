@@ -194,7 +194,7 @@ if not boss {
 			global.shake = 3;
 		
 		break;
-		case 1: //Speacil attacks
+		case 1: //Special attacks
 			if obj != obj_sword_projectile {
 				global.b_hp -= global.satk div global.b_sdef;
 			}else {

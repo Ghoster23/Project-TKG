@@ -2,9 +2,15 @@ scr_unique_inst();
 
 once = false;
 
-global.ps    = part_system_create();
-global.ps_if = part_system_create();
-global.ps_ps = part_system_create();
+global.ps    = part_system_create_layer("BH",false);
+global.ps_if = part_system_create_layer("IF",false);
+global.ps_ps = part_system_create_layer("PS",false);
+
+if(room >= rm_level){
+	part_system_automatic_draw(global.ps,    false);
+	part_system_automatic_draw(global.ps_if, false);
+	part_system_automatic_draw(global.ps_ps, false);
+}
 
 scr_part_fire_init();
 scr_part_smoke_init();
@@ -22,7 +28,3 @@ scr_part_way_init();
 scr_part_brewoinv_init();
 scr_part_willowisp_init();
 scr_part_blood();
-
-part_system_layer(global.ps,   "BH");
-part_system_layer(global.ps_if,"IF");
-part_system_layer(global.ps_ps,"PS");

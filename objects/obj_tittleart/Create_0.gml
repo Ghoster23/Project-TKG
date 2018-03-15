@@ -89,8 +89,8 @@ part_type_gravity(global.pt_trail, 0, 255);
 
 //Creating Emitters
 global.pe_1 = part_emitter_create(global.ps);
-global.pe_2 = part_emitter_create(global.ps_if);
-global.pe_star = part_emitter_create(global.ps);
+global.pe_2 = part_emitter_create(global.ps);
+global.pe_star = part_emitter_create(global.ps_if);
 
 part_type_step(global.pt_star, 5, global.pt_trail);
 
@@ -99,11 +99,11 @@ part_type_step(global.pt_star, 5, global.pt_trail);
 part_emitter_region(global.ps, global.pe_1, 0, 640, 0, 380, ps_shape_rectangle, ps_distr_linear);
 part_emitter_stream(global.ps, global.pe_1, global.pt_1, 1);
 
-part_emitter_region(global.ps_if, global.pe_2, 0, 640, 300, 360, ps_shape_rectangle, ps_distr_linear);
-part_emitter_stream(global.ps_if, global.pe_2, global.pt_2, 1);
+part_emitter_region(global.ps, global.pe_2, 0, 640, 300, 360, ps_shape_rectangle, ps_distr_linear);
+part_emitter_stream(global.ps, global.pe_2, global.pt_2, 1);
 
-part_emitter_region(global.ps, global.pe_star, -320, 320, -100, -50, ps_shape_rectangle, ps_distr_linear);
-part_emitter_stream(global.ps, global.pe_star, global.pt_star, -30);
+part_emitter_region(global.ps_if, global.pe_star, -320, 320, -100, -50, ps_shape_rectangle, ps_distr_linear);
+part_emitter_stream(global.ps_if, global.pe_star, global.pt_star, -30);
 
 
 

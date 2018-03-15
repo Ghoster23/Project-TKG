@@ -59,6 +59,11 @@ if global.p_inv and not (global.p_hurt or instance_exists(obj_roll)){
 	global.p_inv = false;
 }
 
+if(global.gen && not instance_exists(obj_gen_controller)){
+	show_debug_message("--  Retry  --")
+	room_restart();
+}
+
 ///Debug
 if keyboard_check_pressed(vk_f11){
     room_goto(rm_test);

@@ -1,13 +1,13 @@
 randomize();
 
 if global.pause {
-	part_system_automatic_update(global.ps,false);
-	part_system_automatic_update(global.ps_if,false);
-	part_system_automatic_update(global.ps_ps,false);
+	part_system_automatic_update(global.ps,    false);
+	part_system_automatic_update(global.ps_if, false);
+	part_system_automatic_update(global.ps_ps, false);
 }else {
-	part_system_automatic_update(global.ps,true);
-	part_system_automatic_update(global.ps_if,true);
-	part_system_automatic_update(global.ps_ps,true);
+	part_system_automatic_update(global.ps,    true);
+	part_system_automatic_update(global.ps_if, true);
+	part_system_automatic_update(global.ps_ps, true);
 }
 
 if room == rm_dead and once == false{

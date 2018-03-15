@@ -1,4 +1,3 @@
-
 if thrust==true{
 	x=global.body.x;
 }

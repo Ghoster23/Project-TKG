@@ -14,12 +14,12 @@ if not global.pause {
 			l = 0;
 		}
 		
-		part_emitter_region(global.ps_if, em, x+ 5 * cos(angle), x+ 5 * cos(angle), y + 10 * sin(angle), y + 10 * sin(angle), ps_shape_ellipse, ps_distr_gaussian);
+		part_emitter_region(global.ps_ps, em, x+ 5 * cos(angle), x+ 5 * cos(angle), y + 10 * sin(angle), y + 10 * sin(angle), ps_shape_ellipse, ps_distr_gaussian);
 	
-		part_emitter_stream(global.ps_if, em, global.pt_sow_fire, round(amount));
+		part_emitter_stream(global.ps_ps, em, global.pt_sow_fire, round(amount));
 	}else {
 		if(l == 0){
-			part_emitter_clear(global.ps_if,em);
+			part_emitter_clear(global.ps_ps,em);
 			
 			l = 1;
 		}
@@ -31,7 +31,7 @@ if not global.pause {
 	
 	if(dash_key){
 		part_emitter_clear(global.ps,em_);
-		part_emitter_clear(global.ps_if,em);
+		part_emitter_clear(global.ps_ps,em);
 	}
 		
 	if thrust==true{
@@ -59,7 +59,7 @@ if not global.pause {
 			
 		}
 		
-		if mouse_r_key and global.p_will >= 10 and alarm[2] == -1 and swing=="no" {
+		if mouse_r_key and alarm[2] == -1 and swing=="no" {
 			global.p_will -= 10;
 			
 			if off==0{

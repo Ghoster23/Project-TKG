@@ -13,6 +13,7 @@ part_type_destroy(global.pt_danger);
 part_type_destroy(global.pt_way);
 part_type_destroy(global.pt_boinv);
 part_type_destroy(global.pt_willowisp);
+part_type_destroy(global.pt_blood);
 part_system_destroy(global.ps);
 part_system_destroy(global.ps_if);
 part_system_destroy(global.ps_ps);

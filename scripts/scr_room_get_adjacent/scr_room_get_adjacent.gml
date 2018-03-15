@@ -1,5 +1,5 @@
 {
-var rm = argument[0];
+var rm = argument0;
 
 var doors = global.ds_roomgrid[# 3, rm];
 

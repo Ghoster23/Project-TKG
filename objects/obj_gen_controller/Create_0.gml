@@ -11,36 +11,35 @@ roomgenerated = 0;
 roomstogenerate = 16;
 
 global.ds_roomgrid = ds_grid_create(4,64);
+available_rooms    = ds_list_create();
 
 for(i = 0; i < 64; i++){
 	global.ds_roomgrid[# 0, i] = (i div 8) * 10 + i mod 8;
 	global.ds_roomgrid[# 1, i] = "NULL";
 	global.ds_roomgrid[# 2, i] = false;
 	global.ds_roomgrid[# 3, i] = [0,0,0,0];
+	
 }
 
 global.ds_roomgrid[# 0, 36] = 44;
 global.ds_roomgrid[# 1, 36] = "Start";
 global.ds_roomgrid[# 2, 36] = true;
 
+ds_list_add(available_rooms,43);
+ds_list_add(available_rooms,45);
+ds_list_add(available_rooms,34);
+ds_list_add(available_rooms,54);
+
 //Control Vars
-confirm = false;
-
-attempts = 0;
-
-up = false;
-down= false;
-right = false;
-left = false;
+comp    = 0;
 
 //generate perlin noise grid to map the floor
-
 //makes a seed
 global.gen_seed = round(random_range(1000000,10000000));
 
 blockSize = 32;
-width = room_width / blockSize;
-height = room_height / blockSize;
+width     = room_width / blockSize;
+height    = room_height / blockSize;
 
 floor_grid = ds_grid_create(width, height);
 
@@ -127,23 +126,6 @@ for (var j=0; j<w; j++){
 	}
 }
 
-//write grid to file for debugging 
-/*
-floortest=file_text_open_write("floortest.txt");
-
-var xx, yy;
-
-for(yy=0; yy<height; yy++)
-{
-     for(xx=0; xx<width; xx++)
-     {
-		file_text_write_string(floortest,string(ds_grid_get(floor_grid,xx,yy))+" ");
-     }
-	 file_text_writeln(floortest);
-}
-
-file_text_close(floortest);
-*/
 
 ///Base Room
 instance_create_layer(gx+(global.roomwd div 2),gy+(global.roomhg div 2)-16,"IF",obj_view);
@@ -162,12 +144,9 @@ for(var i = 0; i < 8; i += 1;){
 
 //Unique Rooms
 global.rm_store_id = 0;
-global.rm_item_id = 0;
-global.rm_sp_id = 0;
-global.rm_boss_id = 0;
-
-//Fluids
-global.fluid_grid = -1;
+global.rm_item_id  = 0;
+global.rm_sp_id    = 0;
+global.rm_boss_id  = 0;
 
 comp = 0;
 

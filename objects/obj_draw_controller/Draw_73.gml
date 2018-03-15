@@ -22,6 +22,8 @@ if(!surface_exists(global.fluid_surface)){
 	}
 }
 
+part_system_drawit(global.ps);
+
 if ds_exists(ds_depthgrid, ds_type_grid) {
 	var depthgrid = ds_depthgrid;
 	var instNum   = instance_number(obj_depth_parent);
@@ -76,3 +78,6 @@ if ds_exists(ds_depthgrid, ds_type_grid) {
 	
 	ds_grid_clear(ds_depthgrid, 0);
 }
+
+part_system_drawit(global.ps_if);
+part_system_drawit(global.ps_ps);
