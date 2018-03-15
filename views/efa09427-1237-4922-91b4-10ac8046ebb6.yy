@@ -6,7 +6,8 @@
     "children": [
         "b93914b8-344a-4490-91be-6fd0d4a32db9",
         "be24a367-c59e-445c-bbc1-d9936d16f10f",
-        "f5a5792c-261f-46bd-892a-ea3875cb19cf"
+        "f5a5792c-261f-46bd-892a-ea3875cb19cf",
+        "d03f4748-ceec-425c-bd9a-5d5adc0e73d1"
     ],
     "filterType": "GMShader",
     "folderName": "shaders",

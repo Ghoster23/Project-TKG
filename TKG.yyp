@@ -3663,6 +3663,14 @@
             }
         },
         {
+            "Key": "7f895d0c-14fd-404b-ac9f-326a86a738a3",
+            "Value": {
+                "id": "5383b470-396d-4142-ad67-f85ed83f67ab",
+                "resourcePath": "scripts\\scr_drawwind\\scr_drawwind.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "8090e188-f427-49f3-8ffd-6bfcfd1f603d",
             "Value": {
                 "id": "718ff771-563e-4943-9ddf-ee190324a71f",
@@ -3959,6 +3967,14 @@
             }
         },
         {
+            "Key": "8cb83503-96d3-451e-ac7a-492db43acc6d",
+            "Value": {
+                "id": "6a46704d-c325-4d07-9da2-ebe8b4969e22",
+                "resourcePath": "objects\\obj_grassblade\\obj_grassblade.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8cf9a5c9-4853-4a09-9881-9d6d99e6b190",
             "Value": {
                 "id": "97a958d1-0703-44d7-844e-043f93f1df14",
@@ -4087,6 +4103,14 @@
             }
         },
         {
+            "Key": "910acc05-e698-43f2-b5a3-463168570014",
+            "Value": {
+                "id": "5b67f983-12f5-4e94-bd31-ad009c040474",
+                "resourcePath": "sprites\\spr_grassblades\\spr_grassblades.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "912414a0-546a-4e32-8e0e-fabe6651411e",
             "Value": {
                 "id": "be1f263a-6099-4fa4-b51b-0a173545489e",
@@ -4124,6 +4148,14 @@
                 "id": "5e3363c1-8b75-4562-ab86-7d7dc5c53a15",
                 "resourcePath": "sprites\\spr_title\\spr_title.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "925a9434-2a1e-42ef-8703-ed1f02fbeb5d",
+            "Value": {
+                "id": "442cc83a-308a-46a7-a6de-1c8e25d738a9",
+                "resourcePath": "objects\\obj_decorparent\\obj_decorparent.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -5871,6 +5903,14 @@
             }
         },
         {
+            "Key": "d03f4748-ceec-425c-bd9a-5d5adc0e73d1",
+            "Value": {
+                "id": "aa20eae3-0442-42d5-84dd-b0df4e2e6bd1",
+                "resourcePath": "shaders\\sh_wind\\sh_wind.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "d0721d7a-4329-44c8-833b-431ea6973344",
             "Value": {
                 "id": "bfe46543-4999-43f8-b76f-b66e5720c8af",
@@ -7415,6 +7455,7 @@
         "2d270c68-b640-47d2-b116-34fafdf68ecc",
         "82cc035b-9db4-4cfc-a6ba-a113ba803cfe",
         "68130a2e-3532-4e1d-ba95-b8e1b2072345",
+        "7f895d0c-14fd-404b-ac9f-326a86a738a3",
         "2cc88128-aad8-48a1-bdf4-d889aadf4ee0",
         "98757afd-6345-4027-9915-0d30eae7991a",
         "e46cf251-01f6-440c-94ef-1edcc2880fd8",
