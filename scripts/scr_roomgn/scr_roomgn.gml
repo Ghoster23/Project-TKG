@@ -235,7 +235,27 @@ for(i=0;i<9;i++){
 				instance_create_layer(gx+32+j*32,gy+96+i*32,"BH",obj_fluid_tile);
 			}
 			
-			instance_create_layer(gx+x_pos,gy+y_pos,obj_layer,obj_id);
+			var thisobj = instance_create_layer(gx+x_pos,gy+y_pos,obj_layer,obj_id);
+			if(obj_name == "obj_rock"){
+				if(ds_grid_get(obj_gen_controller.floor_grid,gxtile+j+1,gytile+i+2) == "blue"){
+					thisobj.sprite_index = spr_grassyrock;
+				}
+			}
+			if(obj_name == "obj_crate"){
+				if(ds_grid_get(obj_gen_controller.floor_grid,gxtile+j+1,gytile+i+2) == "blue"){
+					thisobj.sprite_index = spr_grassycrate;
+				}
+			}
+			if(obj_name == "obj_barrel"){
+				if(ds_grid_get(obj_gen_controller.floor_grid,gxtile+j+1,gytile+i+2) == "blue"){
+					thisobj.sprite_index = spr_grassybarrel;
+				}
+			}
+			if(obj_name == "obj_vase"){
+				if(ds_grid_get(obj_gen_controller.floor_grid,gxtile+j+1,gytile+i+2) == "blue"){
+					thisobj.sprite_index = spr_grassyvase;
+				}
+			}
 		}
 		else{
 			instance_create_layer(gx+32+j*32,gy+96+i*32,"BH",obj_fluid_tile);

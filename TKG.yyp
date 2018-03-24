@@ -919,6 +919,14 @@
             }
         },
         {
+            "Key": "1ea28d71-51a6-4f81-b55b-d316bae70ad8",
+            "Value": {
+                "id": "7aa8ac2b-496c-49b0-a6b1-5a52f9b0e680",
+                "resourcePath": "sprites\\spr_grassycrate\\spr_grassycrate.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1f6bce2a-58aa-48fb-98f9-b929598dfd51",
             "Value": {
                 "id": "b647b711-22a9-477e-845c-3bd732e376a4",
@@ -3439,6 +3447,14 @@
             }
         },
         {
+            "Key": "776aea1e-7bb3-445f-801f-3e0102e56993",
+            "Value": {
+                "id": "fc415aca-e7e5-4c09-bd9a-98e03671dc9d",
+                "resourcePath": "sprites\\spr_grassybarrel\\spr_grassybarrel.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "77a8a53c-cf16-49db-a45a-44332ad55413",
             "Value": {
                 "id": "f4abec32-d692-47ab-b7c1-bc5837cabb3b",
@@ -4084,6 +4100,14 @@
                 "id": "aea1f307-d3ed-45d3-9981-61fac3b0ef24",
                 "resourcePath": "objects\\obj_screen_controller\\obj_screen_controller.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "908c4d59-6f92-4290-a7bc-dd647f86ef1d",
+            "Value": {
+                "id": "7a3e738b-e7d4-45e6-a07c-f4419a7fa998",
+                "resourcePath": "sprites\\spr_grassyrock\\spr_grassyrock.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -6019,6 +6043,14 @@
             "Value": {
                 "id": "0b51635d-a9cf-4754-84ee-d24db2fbcd6a",
                 "resourcePath": "sprites\\spr_misc\\spr_misc.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d3151c22-ec0f-49e0-96a4-9f907c782f11",
+            "Value": {
+                "id": "a6ab417a-f405-4706-beb8-55ed38a62b91",
+                "resourcePath": "sprites\\spr_grassyvase\\spr_grassyvase.yy",
                 "resourceType": "GMSprite"
             }
         },
