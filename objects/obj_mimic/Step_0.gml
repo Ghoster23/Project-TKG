@@ -88,10 +88,6 @@ if not global.pause {
 	        phy_rotation = 25 * sin(a);
 			
 	    break;
-	
-		//Pause
-		case "pause":
-		break;
 	}
 	
 	///Get Damaged
