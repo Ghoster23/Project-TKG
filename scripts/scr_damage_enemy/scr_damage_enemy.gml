@@ -11,7 +11,7 @@ var type =  404;
 
 ///Player on Enemy attacks
 //Physical attacks
-atk_wep[0] = obj_swing;
+atk_wep[0] = obj_greatswing;
 
 //Physical cooldowns
 atk_cooldown[0] = 0.2;
@@ -127,7 +127,7 @@ if not boss {
 		
 			physics_apply_impulse(x,y,lengthdir_x(10,d),lengthdir_y(10,d));
 		
-			if obj == obj_swing and global.p_will <= global.p_maxwill{
+			if obj == obj_greatswing and global.p_will <= global.p_maxwill{
 				global.p_will += 5;
 			}
 		
@@ -187,7 +187,7 @@ if not boss {
 		
 			physics_apply_impulse(x,y,lengthdir_x(10,d),lengthdir_y(10,d));
 		
-			if obj == obj_swing and global.p_will <= 97.5{
+			if obj == obj_greatswing and global.p_will <= 97.5{
 				global.p_will += 2.5;
 			}
 			

@@ -112,7 +112,6 @@ roomtotal=file_text_read_real(room_file);
 file_text_readln(room_file);
 
 room_id=irandom_range(0,roomtotal);
-show_debug_message("Sub_Type: " + string(room_id));
 
 //navigate to the right tag based on id
 

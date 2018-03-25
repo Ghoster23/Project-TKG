@@ -12,7 +12,7 @@ if not global.pause {
 	    mult = irandom_range(2,3);
 	}
 	
-	if place_meeting(x,y,obj_swing) {
+	if place_meeting(x,y,obj_greatswing) {
 		bene = false;
 	}
 	

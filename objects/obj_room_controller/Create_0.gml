@@ -15,6 +15,8 @@ path[0] = 0;
 
 global.room_change = true;
 
+state = 0;
+
 /*if(room == rm_level){
 	if not ds_exists(global.fallen_items,ds_type_list) {
 		global.fallen_items = ds_list_create();

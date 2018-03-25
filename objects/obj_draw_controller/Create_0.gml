@@ -7,4 +7,3 @@ outline_init();
 global.check = 0;
 
 color_creep = make_color_rgb(1,67,53);
-clear_fluid = false;

@@ -114,8 +114,6 @@ if(global.gen){
 			break;
 		}
 	}
-	
-	show_debug_message("Room: " + string(room_));
 		
 	//Gen the room
 	///Place cursor
@@ -138,10 +136,4 @@ if(global.gen){
 	//Update available room list
 	///Remove just filled in room
 	ds_list_delete(available_rooms,ds_list_find_index(available_rooms,room_));
-	
-	show_debug_message("RM GEN: " + string(roomgenerated));
-	
-	for(var i = 0; i < ds_list_size(available_rooms); i++){
-		show_debug_message("Index " + string(i) + " " + string(ds_list_find_value(available_rooms,i)));
-	}
 }

@@ -7,7 +7,7 @@ if global.pause!=true{
 	    speed -= 1;
 	}
 
-	if place_meeting(x,y,obj_swing){
+	if place_meeting(x,y,obj_greatswing){
 		speed=0;
 		dir=point_direction(x,y,global.body.x,global.body.y)+180;
 		flash=true;

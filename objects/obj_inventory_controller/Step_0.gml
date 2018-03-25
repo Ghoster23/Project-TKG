@@ -1,9 +1,10 @@
 scr_get_input();
 
 if(obj_ig_menu_controller.state == "closed"){
-	if(consumable_key){
-		scr_inv_consume(inventory[# 1, consumable], inventory[# 2, consumable], consumable);
+	if(consumable_key && alarm[1] == -1 && inventory[# 0, consumable] != -1){
+		scr_inv_consume(consumable);
 		
+		alarm[1] = 0.3 * room_speed;
 	}
 	
 	/*
@@ -156,34 +157,38 @@ if(obj_ig_menu_controller.state == "closed"){
 	if((mouse_click || enter_key) && 
 		alarm[0] == -1){
 		
-		if(selected == -1 && inventory[# 0, holder] != -1 && inventory[# 0, holder] != undefined){
-			scr_inv_item_drop();
+		var type = inventory[# 0, holder];
+		
+		if(type != -1){
+			if(selected == -1){
+				scr_inv_item_drop();
+				
+			}else if(selected == 16 && type <= item_type.constellation){
+				scr_inv_consume(holder);
 			
-		}else if(selected == 16 && inventory[# 0, holder] != -1 && inventory[# 0, holder] <= item_type.constellation){
-			scr_inv_consume(inventory[# 1, holder], inventory[# 2, holder], holder);
+				obj_cursor.cursor = true;
+			}else {
+				scr_inv_item_place(selected);
+				
+			}
 			
-			obj_cursor.cursor = true;
-			
-		}else if(selected != -1){
-			switch(inventory[# 0, holder]){
-				case -1:
-					scr_inv_item_grab(selected);
-						
-				break;
-				default:						
-					scr_inv_item_place(selected);
-						
-				break;
+			if(is_undefined(type)){
+				scr_inv_set_pos(-1,-1,-1,holder);
 			}
 			
 			alarm[0] = 0.3 * room_speed;
+			
+		}else if(selected != -1 && selected != 16){
+			scr_inv_item_grab(selected);
+			alarm[0] = 0.3 * room_speed;
+			
 		}
 	}
 	
 	for(var i = 0; i < 3; i++){
 		var e_id = inventory[# 1, 9 + i];
 		
-		if(e_id != -1 && eq_active[i] != e_id){
+		if(eq_active[i] != e_id){
 			var prev_id = eq_active[i];
 			
 			if(prev_id != -1){

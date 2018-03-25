@@ -31,7 +31,7 @@ global.total_coins = 0;
 
 ///Player Character
 global.body    =  obj_body;
-global.weapon  = obj_sword;
+global.weapon  = obj_greatsword;
 global.flight  =     false;
 global.p_level =         0;
 

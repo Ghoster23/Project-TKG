@@ -1,4 +1,4 @@
-/*if place_meeting(x,y,obj_swing){
+/*if place_meeting(x,y,obj_greatswing){
     alarm[0]=0.02*room_speed;
 	flash=true;
 }*/

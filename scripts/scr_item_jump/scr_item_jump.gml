@@ -9,6 +9,5 @@ if(phy_speed <= 6 and z <= 3){
 	modulator = power( exp(1) , -0.2*abs(z)-1 ) + 1;  
 }
 
-show_debug_message(":):):):):):):):):):):):):):):)::):):):)::)"+string(modulator));
 scr_draw_item(type,item,amount,x - (sprite_width*(clamp(modulator,1,1.3)-1))/2,(y - z) + (sprite_width*(clamp(modulator,1,1.3)-1))/2 ,clamp(modulator,1,1.3),image_yscale+(1-clamp(modulator,1,1.3)),image_alpha);
 }

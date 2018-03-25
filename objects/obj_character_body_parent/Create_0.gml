@@ -16,8 +16,8 @@ event_inherited();
 
 scr_get_input();
 
-state = 0;
-prev_state = 0;
+state        = 0;
+prev_state   = 0;
 state_change = false;
 
 hspd  = 0;
@@ -40,7 +40,7 @@ is          = 0.5;
 spr_body = body_sprs[3];
 
 //Pause
-for(i = 0; i < 3; i++){
+for(i = 0; i < 4; i++){
 	alarms[i] = -1;
 }
 

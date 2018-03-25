@@ -5,3 +5,5 @@ event_inherited();
 
 offset = true;
 offs = 0;
+
+visible = false;

@@ -1,7 +1,5 @@
 /// @description Move the player
 if not global.pause {
-	//End Pause
-	scr_pause_end(3);
 	
 	if(state == 0 || (state == 2 && !global.dash_cd)){
 		// get the axis
@@ -75,10 +73,9 @@ if not global.pause {
 		break;
 		case 3: //Dead
 		break;
+		case 4: //Idle
+		break;
 	}
-	
-	///Equipables' effects
-	
 
 	///Statuses	
 	if(status_check){

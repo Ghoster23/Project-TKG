@@ -8,28 +8,9 @@ if(global.room_change){
 	
 }
 
-/* Add enemies to active enemy list */
-if((room == rm_level and obj_view.stopped and global.n_room) || (room == rm_test and global.n_room) || (room == rm_lvl_editor_test and global.n_room)){	
-	enemy = obj_enemy_parent;
-	scr_get_active_enemies();
-	
-	enemy = obj_flying_enemy_parent;
-	scr_get_active_enemies();
-	
-	global.n_room = false;
-}
-
 if(room == rm_lvl_editor_test){
 	global.current_column = 0;
 	global.current_row    = 0;
-}
-
-if (ds_exists(global.act_enemy_list,ds_type_list) and ds_list_size(global.act_enemy_list) == 0) {
-	global.lock = false;
-	
-}else {
-	global.lock = true;
-	
 }
 
 if keyboard_check_released(ord("P")) {

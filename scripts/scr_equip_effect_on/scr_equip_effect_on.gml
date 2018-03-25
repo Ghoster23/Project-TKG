@@ -9,7 +9,6 @@ switch item {
 		
 	break;
 	case equips.rod_of_asclepius:
-		global.hp = global.maxhp;
 		
 	break;
 	case equips.styxs_water:
