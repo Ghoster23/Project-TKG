@@ -7,6 +7,7 @@ body_sprs[4] = spr_luna_body_still;
 roll_sprs[0] = spr_jason_roll_up;
 roll_sprs[1] = spr_jason_roll_side;
 roll_sprs[2] = spr_jason_roll_down;
+roll_sprs[3] = spr_jason_roll_side;
 
 head_spr  = spr_luna_head;
 
@@ -16,4 +17,5 @@ feet_spr  = spr_jason_feet;
 
 event_inherited();
 
-is = 1.5;
+is = 1;
+hs = true;

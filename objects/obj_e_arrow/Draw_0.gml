@@ -1,5 +1,3 @@
-draw_self();
-
 if state == 0 {
 //cauda aumenta com tempo ate certo offset
 offset=scr_aproach(offset,50,10);

@@ -21,13 +21,9 @@ if not global.pause {
 			angle = point_direction(x,y,mouse_x,mouse_y);
 			
 			scr_wep_gs_pat_states();
-			
-			image_angle  = angle;
-			sprite_index = drawn;
+		
 		break;
 		case 1: //Stowed
-			image_angle  =  angle;
-			sprite_index = stowed;
 		break;
 	}
 		

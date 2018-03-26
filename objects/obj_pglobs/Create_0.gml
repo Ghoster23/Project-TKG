@@ -30,10 +30,10 @@ global.coins       = 0;
 global.total_coins = 0;
 
 ///Player Character
-global.body    =  obj_body;
+global.body    =       obj_body;
 global.weapon  = obj_greatsword;
-global.flight  =     false;
-global.p_level =         0;
+global.flight  =          false;
+global.p_level =              0;
 
 //Player dead
 dead = false;
@@ -63,15 +63,7 @@ bodies[11] = obj_body;/*Dorothea*/
 bodies[12] = obj_body;/*Nox*/
 
 //Stats
-scr_ini_char_stats();
-
-global.maxhp = global.ds_char_stat_grid[# global.char, 0];
-global.hp    = global.maxhp;
-global.atk   = global.ds_char_stat_grid[# global.char, 1];
-global.def   = global.ds_char_stat_grid[# global.char, 2];
-global.satk  = global.ds_char_stat_grid[# global.char, 3];
-global.sdef  = global.ds_char_stat_grid[# global.char, 4];
-global.spd   = global.ds_char_stat_grid[# global.char, 5];
+scr_char_stats();
 global.armor = 0;
 
 ///Dash
@@ -79,11 +71,6 @@ global.dash_cd = false;
 
 //Hurt
 global.p_hurt = false;
-
-///Player abilities
-//Jason
-global.p_will    =  0;
-global.p_maxwill = 60;
 
 ///Rooms
 //Current Room

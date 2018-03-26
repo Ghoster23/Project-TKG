@@ -8,7 +8,7 @@ hands.sprite_index = hands_spr;
 feet   = instance_create_layer(x,  y,layer,     obj_feet);
 feet.sprite_index  = feet_spr;
 
-if(global.char == 0){
+if(global.weapon != -1){
 	weapon = instance_create_layer(x,y,layer,global.weapon);
 }
 
@@ -36,6 +36,7 @@ spr_side    =   1;
 head_offset =   0;
 rotation    =   0;
 is          = 0.5;
+hs          = false;
 
 spr_body = body_sprs[3];
 
@@ -45,7 +46,7 @@ for(i = 0; i < 4; i++){
 }
 
 //Statuses
-status_check = true;
+alarm[2] = 1;
 
 scr_player_status_init();
 

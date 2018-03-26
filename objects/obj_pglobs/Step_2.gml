@@ -1,9 +1,6 @@
 ///@description Damage flash (red)
 if instance_exists(global.body){
-    if global.p_hurt == true{
-		//Invulnerability
-		global.p_inv = true;
-	
+    if global.p_hurt == true{	
 		//Flash red
         if global.body.image_blend == c_white{
             with global.body{

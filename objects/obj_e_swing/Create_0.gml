@@ -1,3 +1,5 @@
+event_inherited();
+
 image_speed = .5;
 image_angle = point_direction(x,y,global.body.x,global.body.y);
 creator = instance_nearest(x,y,obj_psnt_body);

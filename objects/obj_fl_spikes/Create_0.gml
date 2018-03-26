@@ -1,3 +1,5 @@
+event_inherited();
+
 state = 1;
 
 image_speed = 0;

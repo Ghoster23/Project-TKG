@@ -10,6 +10,8 @@ switch state{
 		
 		head.image_index  = spr_side;
 		head.image_xscale = image_xscale;
+		
+		hands.visible = hs;
 
 		if(hands.visible){
 			hands.image_index = spr_side;
@@ -19,6 +21,7 @@ switch state{
 	case 1: //Stuck
 		head.image_index  = spr_side;
 		head.image_xscale = image_xscale;
+		
 	break;
 	case 2: //Dash
 	break;
@@ -31,7 +34,8 @@ switch state{
 		
 		head.image_index  = image_index;
 		head.image_xscale = image_xscale;
-
+	
+		hands.visible      = true;
 		hands.image_index  = image_index;
 		hands.image_xscale = image_xscale;
 	break;

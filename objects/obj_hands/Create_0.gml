@@ -3,7 +3,8 @@
 image_speed = 0;
 event_inherited();
 
-offset = true;
-offs = 0;
+flash  = false;
+offset =  true;
+offs   =    17;
 
 visible = false;

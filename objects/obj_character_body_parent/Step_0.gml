@@ -76,35 +76,6 @@ if not global.pause {
 		case 4: //Idle
 		break;
 	}
-
-	///Statuses	
-	if(status_check){
-		//Poisoned
-	    scr_player_status_check(0);
-    
-		//Stuck
-	
-		//Regen
-		scr_player_status_check(2);
-	
-		//Compass
-		scr_player_status_check(3);
-	
-		//OHKO
-		scr_player_status_check(4);
-	
-		//AllSee
-		scr_player_status_check(5);
-	
-		//Mida's
-		scr_player_status_check(6);
-	
-		//Immune
-		scr_player_status_check(7);
-        
-	    status_check = false;
-	    alarm[2] = 1 * room_speed;
-	}
 	
 	//Turn to camera in status menu
 	if(obj_ig_menu_controller.state == "status"){

@@ -1,6 +1,6 @@
 {
 draw_set_color(c_white);
-draw_rectangle( 4 * m, yy + 72 * m, 36 * m, yy + 104 * m, true);
+draw_rectangle( 20 * m, 20 * m, 52 * m, 52 * m, true);
 
 var pos = obj_inventory_controller.consumable;
 

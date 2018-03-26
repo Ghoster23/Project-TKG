@@ -1,3 +1,5 @@
+event_inherited();
+
 dir = point_direction(x,y,global.body.x,global.body.y);
 offset=0;
 go = false;

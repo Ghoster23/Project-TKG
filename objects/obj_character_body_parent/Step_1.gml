@@ -39,6 +39,7 @@ if(not global.pause){
 			if(state_change){
 				state_change = false;
 				state        = prev_state;
+				global.weapon.state = 0;
 			}
 			if(input){
 				state = 0;
