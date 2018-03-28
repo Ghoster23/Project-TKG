@@ -11,6 +11,10 @@
 		switch stat{
 			case statuses.poison :
 				global.p_hurt = true;
+				
+				if(global.hp >= 0){
+					global.hp -= 1;
+				}
 		
 			break;
 			case statuses.stuck :

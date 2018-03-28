@@ -19,3 +19,5 @@ event_inherited();
 
 is = 1;
 hs = true;
+
+flgen = instance_create_layer(x,y,layer,obj_luna_fluid_gen);

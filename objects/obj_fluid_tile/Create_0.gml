@@ -8,12 +8,11 @@ for(var i = 0; i < array_len; i++){
 
 active = false;
 
-colors[0] = make_color_rgb(102,167,18);
+colors[0] = make_color_rgb(122,199,21);
+colors[1] = make_color_rgb(0,123,255);
 
 ox = x mod global.roomwd;
 oy = y mod global.roomhg;
 
 rx = x div global.roomwd;
 ry = y div global.roomhg;
-
-outline_init();

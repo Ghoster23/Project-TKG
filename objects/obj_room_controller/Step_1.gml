@@ -22,6 +22,11 @@ switch state {
 				
 				state = 3;
 			}
+		}else if(room = rm_lvl_editor_test){
+			global.current_column = 0;
+			global.current_row    = 0;
+			
+			state = 3;
 		}
 	break;
 	case 1: //Locked
@@ -64,3 +69,11 @@ switch state {
 	break;
 }
 
+if keyboard_check_released(ord("P")) {
+	var size = ds_list_size(global.act_enemy_list);
+	
+	show_debug_message(size);
+	for(var i = 0; i < size; i++){
+		show_debug_message(object_get_name(global.act_enemy_list[| i].object_index));
+	}
+}

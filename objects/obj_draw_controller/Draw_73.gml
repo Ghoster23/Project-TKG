@@ -6,12 +6,12 @@ if(!surface_exists(global.fluid_surface)){
 	                                      global.roomhg);
 }else {
 	//Draw Fluid Surface
-	outline_start_surface(1,color_creep,global.fluid_surface,4);
+	outline_f_start_surface(1,global.fluid_surface,4);
 	draw_surface_ext(global.fluid_surface,
 	                 global.current_column * global.roomwd,
 					 global.current_row    * global.roomhg,
 					 1,1,0,c_white,1);			  
-	outline_end();
+	outline_f_end();
 	
 	//Clear Fluid Surface
 	if(global.check == 1){
