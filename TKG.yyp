@@ -1719,6 +1719,14 @@
             }
         },
         {
+            "Key": "3a5e124f-072d-4818-8dc1-e751700e6c96",
+            "Value": {
+                "id": "f02cec03-9aad-4fdf-832d-89c97d62d507",
+                "resourcePath": "sprites\\spr_wallvegetation\\spr_wallvegetation.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3a613816-e7a0-4e7c-88cd-89cc2d71f05d",
             "Value": {
                 "id": "935402ac-d270-41c3-8327-bdd3d35f23f0",
@@ -6579,6 +6587,14 @@
             "Value": {
                 "id": "53b4e44e-bade-4bd2-b6d8-0527cf90c896",
                 "resourcePath": "objects\\obj_ig_menu_controller\\obj_ig_menu_controller.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "dfab52a2-1293-4bb8-a288-c0294a8363af",
+            "Value": {
+                "id": "9fe840af-25a7-4b66-a5f5-9814bdeb98bd",
+                "resourcePath": "objects\\obj_wallvegetation\\obj_wallvegetation.yy",
                 "resourceType": "GMObject"
             }
         },

@@ -275,21 +275,112 @@ for(i=0;i<9;i++){
 
 //generate the decor
 
+//lets try and put some plants here and there 
+
+//phase one : the top wall
+//case one the left most tree
+if ((ds_grid_get(obj_gen_controller.floor_grid,gxtile+1,gytile+2) == "blue") and 
+	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+2,gytile+2) == "blue") and 
+	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+3,gytile+2) == "blue")){
+		vegie = instance_create_layer(gx,gy,"Instances",obj_wallvegetation);
+		with vegie{
+			num = 1;
+		}
+}
+if ((ds_grid_get(obj_gen_controller.floor_grid,gxtile+6,gytile+2) == "blue") and 
+	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+7,gytile+2) == "blue") ){
+	vegie = instance_create_layer(gx,gy,"Instances",obj_wallvegetation);
+		with vegie{
+			num = 2;
+		}
+}
+if ((ds_grid_get(obj_gen_controller.floor_grid,gxtile+10,gytile+2) == "blue") and 
+	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+11,gytile+2) == "blue") and 
+	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+12,gytile+2) == "blue")){
+		vegie = instance_create_layer(gx,gy,"Instances",obj_wallvegetation);
+		with vegie{
+			num = 3;
+		}
+}
+if ((ds_grid_get(obj_gen_controller.floor_grid,gxtile+14,gytile+2) == "blue") and 
+	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+15,gytile+2) == "blue") and 
+	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+16,gytile+2) == "blue") and
+	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+17,gytile+2) == "blue")){
+		vegie = instance_create_layer(gx,gy,"Instances",obj_wallvegetation);
+		with vegie{
+			num = 4;
+		}
+}
+
+//phase two: the left right and bottom walls
+if ((ds_grid_get(obj_gen_controller.floor_grid,gxtile+1,gytile+10) == "blue") and 
+	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+1,gytile+11) == "blue") and 
+	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+1,gytile+12) == "blue")){
+		vegie = instance_create_layer(gx,gy,"IF",obj_wallvegetation);
+		with vegie{
+			num = 5;
+		}
+}
+
+if ((ds_grid_get(obj_gen_controller.floor_grid,gxtile+17,gytile+10) == "blue") and 
+	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+17,gytile+11) == "blue") and 
+	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+17,gytile+12) == "blue")){
+		vegie = instance_create_layer(gx,gy,"IF",obj_wallvegetation);
+		with vegie{
+			num = 6;
+		}
+}
+
+
+if ((ds_grid_get(obj_gen_controller.floor_grid,gxtile+1,gytile+10) == "blue") and 
+	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+2,gytile+10) == "blue") and 
+	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+3,gytile+10) == "blue")){
+		vegie = instance_create_layer(gx,gy,"IF",obj_wallvegetation);
+		with vegie{
+			num = 7;
+		}
+}
+
+if ((ds_grid_get(obj_gen_controller.floor_grid,gxtile+4,gytile+10) == "blue") and 
+	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+5,gytile+10) == "blue") and 
+	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+6,gytile+10) == "blue") and
+	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+7,gytile+10) == "blue") and
+	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+8,gytile+10) == "blue")){
+		vegie = instance_create_layer(gx,gy,"IF",obj_wallvegetation);
+		with vegie{
+			num = 8;
+		}
+}
+
+if ((ds_grid_get(obj_gen_controller.floor_grid,gxtile+13,gytile+10) == "blue") and 
+	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+14,gytile+10) == "blue") and 
+	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+15,gytile+10) == "blue") and
+	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+16,gytile+10) == "blue") and
+	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+17,gytile+10) == "blue")){
+		vegie = instance_create_layer(gx,gy,"IF",obj_wallvegetation);
+		with vegie{
+			num = 9;
+		}
+}
+
 //lets fill them walls now boi (well actually just like one of the walls becuz of perspective but... you dont need to know that ;) )
 
-var skip = false;
+var skip = 0;
 var ranvalue = 1;
 
 for(var i=0; i<19; i++){
+	
 	//skip door or skip if it was a 2 tile thingy
 	//if((i==8) or (i==9) or (i==10)) or skip == true{
-	if skip == true{	
-		skip=false;
+	if skip >= 0{	
+		skip-=1;
 		continue;
 	}
 	if((i==8) or (i==9) or (i==10)){
 		//if there isnt a door there
-		skip=false;
+		if skip >= 0{	
+			skip-=1;
+		}
 		if(type==1 or type==6 or type==7 or type==9 or type==10 or type==11 or type==12 or type==14){
 			continue;
 		}
@@ -310,11 +401,13 @@ for(var i=0; i<19; i++){
 			obj_name=string_copy(object,2,comma-2);
 			obj_id=asset_get_index(obj_name);
 			if(object_get_parent(obj_id)==obj_solid_parent) or (object_get_parent(object_get_parent(obj_id))==obj_solid_parent){
-				skip=false;
+				if skip >= 0{	
+					skip-=1;
+				}
 				continue;
 			}
 	}
-
+	
 	
 	//if it is the last bit before gap place a 1 tile thingy
 	if(i==7 or i ==18){
@@ -368,7 +461,7 @@ for(var i=0; i<19; i++){
 				case 9:
 					theobject = 0;
 					instance_create_layer(gx+32+32*i,gy+48,"Instances",obj_torch);
-					skip=true;
+					skip=1;
 					break;
 				default:
 					theobject = 0;
@@ -378,7 +471,7 @@ for(var i=0; i<19; i++){
 				with(instance_create_layer(gx+32+i*32,gy+32*3,"Instances",theobject)){
 					tile = 1;
 				}
-				skip=true;
+				skip=1;
 			}
 			break;
 			
@@ -401,7 +494,7 @@ for(var i=0; i<19; i++){
 					tile = 2;
 				}
 			}
-			skip = true;
+			skip = 2;
 			break;
 	}
 
