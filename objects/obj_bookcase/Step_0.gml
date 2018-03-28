@@ -10,3 +10,7 @@ if runonce == true{
 		image_index=irandom_range(3,5);
 	}
 }
+
+if place_meeting(x,y,obj_wallvegetation){
+	instance_destroy();
+}
