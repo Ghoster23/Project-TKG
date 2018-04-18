@@ -14,7 +14,7 @@ if(active && global.check == 1){
 				
 				//Ticks
 				if not global.pause{
-					val -= 0.4;
+					val -= 0.5;
 				}
 				
 				if(global.current_column == rx && global.current_row == ry){

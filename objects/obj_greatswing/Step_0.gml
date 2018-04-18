@@ -1,8 +1,3 @@
-//knockback
-if image_index == 1 and not instance_exists(obj_kb){
-    instance_create_layer(x,y,layer,obj_kb);
-}
-
 //pause
 if global.pause{
 	image_speed = 0;

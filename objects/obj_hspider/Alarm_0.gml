@@ -1,6 +1,6 @@
 if not go{
 	go = true;
-	
+	visible = true;
 	//choose state at end of alarm:
 	//state 0 = move like a spidy
 	//state 1 = hide and throw bombs

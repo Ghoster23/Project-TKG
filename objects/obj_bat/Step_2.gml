@@ -1,4 +1,8 @@
-///@description Sprite control
+///@description Sprite control and immunity
+
+//Immunity
+event_inherited();
+
 //Decide which direction to care about
 if state == 1 {
     var d_ = dir;
@@ -62,7 +66,7 @@ if flash == false{
 }
 
 ///Go to death state
-if e_hp <= 0 {
+if e_stats[stats.hp] <= 0 {
 	state = 3;
 		
 }

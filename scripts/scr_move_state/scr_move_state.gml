@@ -5,6 +5,6 @@ scr_get_input();
 if (xaxis == 0 and yaxis == 0 and alarm[0] == -1) {
 	len = 0;
 } else {
-	len = global.spd;
+	len = global.p_stats[stats.spd];
 }
 

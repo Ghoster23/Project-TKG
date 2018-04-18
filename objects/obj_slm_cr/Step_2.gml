@@ -1,4 +1,8 @@
-///@description Sprite Control
+///@description Sprite Control and immunity
+
+//Immunity
+event_inherited();
+
 //Decide which direction to care about
 if state == 1 {
     var d_ = point_direction(x,y,global.body.x,global.body.y);

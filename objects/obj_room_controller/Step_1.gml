@@ -54,7 +54,7 @@ switch state {
 		   (room == rm_test) || 
 		   (room == rm_lvl_editor_test)){
 			
-			enemy = obj_enemy_parent;
+			enemy = obj_grounded_enemy_parent;
 			scr_get_active_enemies();
 	
 			enemy = obj_flying_enemy_parent;

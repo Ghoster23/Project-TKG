@@ -4,9 +4,6 @@ head.visible          = true;
 global.weapon.visible = true;
 
 //Destroy roll
-//with(roll){
-//    instance_destroy();
-//}
 sprite_index = body_sprs[4];
 image_index  = spr_side;
 

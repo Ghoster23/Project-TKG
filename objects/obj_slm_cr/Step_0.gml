@@ -44,17 +44,14 @@ if go and not global.pause{
 			scr_damage_player(1);
 			
 		}
-		
-		fl_gen.x = phy_position_x - 19;
-		fl_gen.y = phy_position_y - 2;
+	}
+	
+	if(instance_exists(fl_gen)){
+		fl_gen.on = true;
+		fl_gen.x  = phy_position_x - 19 * fl_gen.image_xscale;
+		fl_gen.y  = phy_position_y -  2 * fl_gen.image_yscale;
 	}
     
-	//Get damaged
-	if not damaged {
-		scr_damage_enemy();
-	
-	}
-	
 }else if go{
 	scr_pause_start(5);
 }

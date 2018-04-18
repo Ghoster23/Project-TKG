@@ -71,12 +71,6 @@ if go and not global.pause{
 		scr_damage_player(1);
 	
 	}    
-	
-    ///Get Damaged
-	if not damaged and state != 3{
-		scr_damage_enemy();
-	}
-    
 }
 
 if global.pause == true{

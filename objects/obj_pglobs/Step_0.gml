@@ -28,14 +28,14 @@ if room != rm_menu_1 and room != rm_char_select and room != rm_dead{
 
 
 ///patchwork no pay atention to this
-if(global.hp <= 0 && dead == false && room = rm_lvl_editor_test){
+if(global.p_stats[stats.hp] <= 0 && dead == false && room = rm_lvl_editor_test){
 	scr_char_stats();
 	room_goto(rm_lvl_editor);
 }
 
 
 ///Death
-if(global.hp <= 0 && dead == false){
+if(global.p_stats[stats.hp] <= 0 && dead == false){
 	global.status[1,0] = 1;
 	global.pause       = true;
 	dead               = true;

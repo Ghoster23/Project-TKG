@@ -4,7 +4,7 @@ head.visible = false;
 global.weapon.visible = false;
 
 //Give it more speed
-len = global.spd * 2;
+len = global.p_stats[stats.spd] * 2;
 
 //Make it invulnerable
 global.p_inv = true;

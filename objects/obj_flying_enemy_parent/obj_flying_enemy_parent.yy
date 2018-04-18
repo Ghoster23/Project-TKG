@@ -5,29 +5,19 @@
     "name": "obj_flying_enemy_parent",
     "eventList": [
         {
-            "id": "2266aa58-a6ba-45c0-bdf9-74bcf9d831c4",
+            "id": "885f8643-49ad-41a0-bc4a-0ae0efe81d18",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "collisionObjectId": "0eb59043-ff9a-4694-af4f-f069f6e0dd25",
             "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "3b953ffe-fde5-4671-9c9f-cce971135dbe"
-        },
-        {
-            "id": "b5d27a71-8197-466a-9afa-51c91e70c3cb",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 3,
+            "eventtype": 4,
             "m_owner": "3b953ffe-fde5-4671-9c9f-cce971135dbe"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "b279ea35-ee12-4aab-aee5-fab0c0d8cb11",
+    "parentObjectId": "58371276-295f-47b3-b2e7-892bb302b870",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

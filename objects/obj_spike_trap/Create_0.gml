@@ -2,7 +2,7 @@ event_inherited();
 
 state = 0;
 
-e_atk = 15;
+e_stats[stats.atk] = 15;
 
 offset = true;
 offs = -12;

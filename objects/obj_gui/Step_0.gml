@@ -1,3 +1,3 @@
-if(global.hp <= 0){
+if(global.p_stats[stats.hp] <= 0){
     instance_destroy();
 }

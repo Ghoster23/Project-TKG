@@ -29,17 +29,17 @@ if(not global.p_hurt      and  //Player not recently hurt
    not global.p_inv       and  //Player not invulnerable
    not bubble             and  //Player not immune to damage
    not global.status[statuses.immune,0] and
-   global.hp > 0){             //Player alive
+   global.p_stats[stats.hp] > 0){             //Player alive
 	   
 	switch type {
 		case 0:  //Custom Damage
-			global.hp -= dmg    div def;
+			global.p_stats[stats.hp] -= dmg    div def;
 		break;
 		case 1:	 //Physical Damage
-			global.hp -= e_atk  div global.def;
+			global.p_stats[stats.hp] -= e_stats[stats.atk]  div global.p_stats[stats.def];
 		break;
 		case 2:  //Speacial Damage
-			global.hp -= e_satk div global.sdef;
+			global.p_stats[stats.hp] -= e_stats[stats.satk] div global.p_stats[stats.sdef];
 		break;
 	}
 	
@@ -48,7 +48,7 @@ if(not global.p_hurt      and  //Player not recently hurt
 	
 }
 
-if(global.hp <= 0 and  //Player Dead
+if(global.p_stats[stats.hp] <= 0 and  //Player Dead
    global.killer == 0){  //Killer not determined
 	global.killer = object_get_name(object_index);
 }

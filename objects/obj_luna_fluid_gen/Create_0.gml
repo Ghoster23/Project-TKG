@@ -1,4 +1,4 @@
 event_inherited();
 value = 59;
-visible = true;
+visible = false;
 on = true;

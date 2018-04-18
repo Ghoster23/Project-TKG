@@ -1,15 +1,5 @@
 /// @description Move the player
-if not global.pause {
-	
-	if(state == 0 || (state == 2 && !global.dash_cd)){
-		// get the axis
-		xaxis = (right_key - left_key);
-		yaxis = (down_key  -   up_key);
-
-		//get direction
-		dir = point_direction( 0, 0, xaxis, yaxis);
-	}
-	
+if not global.pause {	
 	//States
 	switch state {
 		case 0: //Free
@@ -49,6 +39,7 @@ if not global.pause {
 		case 2: //Dash
 			if(!global.dash_cd){
 				scr_dash_state();
+				
 			}
 			
 			var ori = 0;
@@ -70,6 +61,7 @@ if not global.pause {
 			}
 			
 			image_speed = 1;
+			global.p_inv = true;
 		break;
 		case 3: //Dead
 		break;

@@ -1,5 +1,5 @@
 if room == rm_level {
-	if obj_ig_menu_controller.state == "status" {
+	if obj_ig_menu_controller.state == "status" and visible{
 		
 		if(selected == -1){
 			text = "Drop";
@@ -19,13 +19,11 @@ if room == rm_level {
 		scr_inventory_window(inv_x, inv_y, r);
 		
 		///Quick Slots
-		scr_quick_slots(inv_x, inv_y + inv_hg * r, r);
+		scr_quick_slots(qa_x, qa_y, r);
 		
 		///Equipment
-		scr_equipable_window(display_get_gui_width() - inv_x - inv_wd * r, inv_y, r);
+		scr_stats_equips_window(equip_x, equip_y, r);
 		
-		///Stats
-		scr_stats_window(display_get_gui_width() - inv_x - inv_wd * r + equip_wd * r, inv_y, r);
 		
 		if(text != ""){
 			scr_boxed_text(mx,my,string_width(text),string_height(text),

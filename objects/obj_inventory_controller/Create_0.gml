@@ -1,3 +1,4 @@
+scr_unique_inst();
 inventory = ds_grid_create(3,15);
 ds_grid_set_region(inventory,0,0,2,14,-1);
 
@@ -37,19 +38,41 @@ for(var i = 0; i < 3; i++){
 
 global.erase = false;
 
-inv_wd   = sprite_get_width(spr_inventory);
-inv_hg   = sprite_get_height(spr_inventory);
-equip_wd = sprite_get_width(spr_equipslots);
+//Measurements
+///Inventory window
+inv_wd   = sprite_get_width( spr_gui_inventory);
+inv_hg   = sprite_get_height(spr_gui_inventory);
 
-m = display_get_gui_width() / global.roomwd;
-r = m * 2;
-		
+///Quick Access window
+qa_wd    = sprite_get_width( spr_gui_quickslots);
+qa_hg    = sprite_get_height(spr_gui_quickslots);
+
+///Stats & Equipment window
+equip_wd = sprite_get_width( spr_equipslots);
+equip_hg = sprite_get_height(spr_equipslots);
+
+///GUI
 c  = display_get_gui_width()  / 2;
 c_ = display_get_gui_height() / 2;
+
+//Scale
+m = display_get_gui_width() / global.roomwd;
+r = m * 1.8;
 		
-inv_x = 0;
-inv_y = c_ / 2 - ((inv_hg + sprite_get_height(spr_quickslots)) / 2) * m;
+//Placements
+///Inventory
+inv_x   = 0;
+inv_y   = c_ - ((inv_hg + qa_hg) / 2) * r;
+
+///Quick Access
+qa_x    = inv_x + (inv_wd / 2 - qa_wd / 2) * r;
+qa_y    = inv_y + inv_hg * r;
+
+///Stats & Equipment
+equip_x = c * 2 - inv_x - inv_wd * r;
+equip_y = inv_y;
 
 prev_mx = 0;
 prev_my = 0;
 text = "";
+click = false;

@@ -5,7 +5,7 @@ if not global.pause {
 		//OFF
 		case 0:
 			if instance_exists(global.body) {
-				if (place_meeting(x,y,obj_feet) or place_meeting(x,y,obj_enemy_parent)) and alarm[0] == -1{
+				if (place_meeting(x,y,obj_feet) or place_meeting(x,y,obj_grounded_enemy_parent)) and alarm[0] == -1{
 					alarm[0] = 0.3 * room_speed;
 					
 				}
@@ -35,7 +35,7 @@ if not global.pause {
 			}
 			
 			if place_meeting(x,y,obj_feet) {
-				scr_damage_player(0,15,global.def);
+				scr_damage_player(0,15,global.p_stats[stats.def]);
 			
 			}
 		

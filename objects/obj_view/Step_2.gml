@@ -6,9 +6,6 @@ switch room {
 	
 		}
 		
-		x += hspeed;
-		y += vspeed;
-		
 		global.shake *= 0.9;
 	break;
 	case rm_CH_boss:

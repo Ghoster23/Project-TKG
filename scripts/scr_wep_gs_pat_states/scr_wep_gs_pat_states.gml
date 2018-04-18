@@ -59,7 +59,9 @@ switch wep_pat_state {
 		angle += wep_ang_off;
 					
 		angle = wep_ang_target;
-		instance_create_layer(x, y, "IF",obj_greatswing); 
+		var swing = instance_create_layer(x, y, "IF",obj_greatswing);
+		swing.damage = dmg;
+		
 	 	alarm[wep_pat_alarm] = wep_pat_cd * room_speed; 
 		scr_sound(snd_sword_slash);
 		wep_pat_state = 5;

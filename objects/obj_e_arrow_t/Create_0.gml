@@ -4,7 +4,7 @@ offset=0;
 phy_fixed_rotation = true;
 visible = false;
 
-e_atk = 10;
+e_stats[stats.atk] = 10;
 
 hspd = 0;
 vspd = 0;

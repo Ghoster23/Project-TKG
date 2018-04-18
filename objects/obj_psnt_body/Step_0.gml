@@ -39,6 +39,7 @@ if go and not global.pause{
 			dead_head.hair_color = hair_color;
 			dead_head.image_xscale=image_xscale;
 			
+			instance_create_layer(x,y,layer,obj_blood_puddle);
 			dead_body=instance_create_layer(x,y,"Instances",obj_psnt_deadbody);
 			dead_body.body_color=body_color;
 			dead_body.image_xscale=image_xscale;
@@ -65,12 +66,6 @@ if go and not global.pause{
 		
 		case "stun":
 		break;
-	}
-    
-    ///Get Damaged
-	if not damaged {
-		scr_damage_enemy();
-		
 	}
 	
 }else if go{

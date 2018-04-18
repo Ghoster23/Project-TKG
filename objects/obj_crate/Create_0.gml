@@ -1,6 +1,5 @@
 randomize();
 image_speed = 0;
-impact = true;
 image_index = irandom(8);
 em = part_emitter_create(global.ps);
 sm = part_emitter_create(global.ps_if);

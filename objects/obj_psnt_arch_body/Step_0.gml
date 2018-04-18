@@ -2,7 +2,6 @@ event_inherited();
 
 ///Exist
 if go and not global.pause{
-    visible = true;
 	
 	scr_pause_end(7);
     
@@ -80,12 +79,6 @@ if go and not global.pause{
 	if instance_exists(tell){
 		tell.image_xscale = weapon.image_index / 4;
 		tell.image_yscale = weapon.image_index / 4;
-	}
-    
-    ///Get Damaged
-	if not damaged {
-		scr_damage_enemy();
-		
 	}
 	
 }else if go{

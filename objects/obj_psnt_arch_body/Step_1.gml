@@ -30,7 +30,7 @@ if(not global.pause){
 	}
 	
 	///Die
-    if e_hp <= 0 {
+    if e_stats[stats.hp] <= 0 {
         state = 3;
         
     }

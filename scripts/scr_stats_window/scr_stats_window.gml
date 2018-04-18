@@ -12,12 +12,12 @@ var sy  = 19 * scale;
 var inc_x =  5 * scale;
 var inc_y = 20 * scale;
 
-var stats = [global.maxhp,
-             global.atk,
-			 global.def,
-			 global.satk,
-			 global.sdef,
-			 global.spd];
+var stats = [global.p_stats[stats.mhp],
+             global.p_stats[stats.atk],
+			 global.p_stats[stats.def],
+			 global.p_stats[stats.satk],
+			 global.p_stats[stats.sdef],
+			 global.p_stats[stats.spd]];
 
 ///Draw Window
 draw_sprite_ext(spr_stattab, 0, dx, dy, scale, scale, 0, c_white, 1);

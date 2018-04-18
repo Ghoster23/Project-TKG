@@ -16,7 +16,7 @@ if not global.pause {
 				instance_destroy();
 			} 
 		}
-		global.satk -= 5;
+		global.p_stats[stats.satk] -= 5;
 		instance_destroy();
 	}
 } else {

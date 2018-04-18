@@ -32,7 +32,7 @@ if not global.pause {
 			}
 		
 			if place_meeting(x,y,global.body) and global.p_hurt == false and global.p_inv == false{
-				global.hp -= global.b_atk div global.def;
+				global.p_stats[stats.hp] -= global.b_atk div global.p_stats[stats.def];
 				global.p_hurt = true;
 			}
 		break;

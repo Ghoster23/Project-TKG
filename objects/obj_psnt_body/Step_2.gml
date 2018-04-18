@@ -1,3 +1,7 @@
+
+//Immunity
+event_inherited();
+
 if state == 1 {
     var d_ = point_direction(x,y,global.body.x,global.body.y);
 }else if state == 0{

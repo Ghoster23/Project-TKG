@@ -2,10 +2,10 @@
 // You can write your code in this editor
 //scr_fall();
 
-if place_meeting(x,y,global.body) and global.hp < global.maxhp{
-	global.hp+=image_index;
-	if global.hp > global.maxhp {
-		global.hp = global.maxhp;
+if place_meeting(x,y,global.body) and global.p_stats[stats.hp] < global.p_stats[stats.mhp]{
+	global.p_stats[stats.hp]+=image_index;
+	if global.p_stats[stats.hp] > global.p_stats[stats.mhp] {
+		global.p_stats[stats.hp] = global.p_stats[stats.mhp];
 	}
 	instance_destroy();
 	

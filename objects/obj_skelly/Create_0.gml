@@ -21,13 +21,13 @@ head = instance_create_layer(x,y,layer,obj_psnt_head);
 head.body = self;
 
 //Stats
-e_mhp = 20;
-e_hp = 20;
-e_atk = 5;
-e_satk = 0;
-e_def = 3;
-e_sdef = 3;
-e_spd = 3;
+e_stats[stats.mhp] = 20;
+e_stats[stats.hp] = 20;
+e_stats[stats.atk] = 5;
+e_stats[stats.satk] = 0;
+e_stats[stats.def] = 3;
+e_stats[stats.sdef] = 3;
+e_stats[stats.spd] = 3;
 
 //States
 state = 0;

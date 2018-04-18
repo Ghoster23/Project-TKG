@@ -4,20 +4,11 @@
     "mvc": "1.0",
     "name": "obj_e_damage_dealer",
     "eventList": [
-        {
-            "id": "37620c63-f331-4876-8f7a-1fbf4b8480d1",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "e239e107-1e41-4096-87d1-7f581aaaee99"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "c22b2ab4-c395-47e5-8761-fe19903e269e",
+    "parentObjectId": "e78a02e2-fbe9-47fb-b40f-eeeb04f32351",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

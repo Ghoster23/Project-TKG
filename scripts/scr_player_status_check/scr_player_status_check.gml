@@ -12,8 +12,8 @@
 			case statuses.poison :
 				global.p_hurt = true;
 				
-				if(global.hp >= 0){
-					global.hp -= 1;
+				if(global.p_stats[stats.hp] >= 0){
+					global.p_stats[stats.hp] -= 1;
 				}
 		
 			break;
@@ -22,8 +22,8 @@
 			
 			break;
 			case statuses.regen :
-				if(global.hp < global.maxhp){
-					global.hp += 1;
+				if(global.p_stats[stats.hp] < global.p_stats[stats.mhp]){
+					global.p_stats[stats.hp] += 1;
 				}
 				
 			break;

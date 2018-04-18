@@ -9,13 +9,24 @@ if(not global.pause){
 	if(global.status[1,0] != 0){
 		state = 1;
 	}
+	
+	//Get direction
+	if(state == 0 || (state == 2 && !global.dash_cd)){
+		//Get the axis
+		xaxis = (right_key - left_key);
+		yaxis = ( down_key -   up_key);
+
+		//Calculate direction
+		dir = point_direction( 0, 0, xaxis, yaxis);
+	}
 
 	/// Player States
 	switch state {
 		case 0: //Free
-			if(global.hp <= 0){
+			if(global.p_stats[stats.hp] <= 0){
 				state = 3;
-			}else if(dash_key && alarm[0] == -1 && not global.dash_cd){
+			}else if(dash_key && (xaxis != 0 || yaxis != 0) &&
+						alarm[0] == -1 && not global.dash_cd){
 				state = 2;
 			}else if(alarm[3] == -1 && not(input)){
 				alarm[3] = 10 * room_speed;

@@ -64,7 +64,7 @@ bodies[12] = obj_body;/*Nox*/
 
 //Stats
 scr_char_stats();
-global.armor = 0;
+global.p_stats[stats.arm] = 0;
 
 ///Dash
 global.dash_cd = false;

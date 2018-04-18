@@ -46,12 +46,6 @@ if go and not global.pause{
 				image_speed=0;
 			}
 			
-			var explosion = instance_place(x,y,obj_explosion);
-		
-			if(explosion){
-				scr_damage_enemy();
-			}
-			
 		break;
 		
 		case 2:  //un-hide
@@ -90,16 +84,10 @@ if go and not global.pause{
 	}
 	
 	///Die
-    if(e_hp <= 0) and state != 3{
+    if(e_stats[stats.hp] <= 0) and state != 3{
         state = 3;
         
     }
-	
-
-	///Get Damaged
-	if not damaged and not state == 1{
-		scr_damage_enemy();
-	}
 
 }else if go{
 	scr_pause_start(6);

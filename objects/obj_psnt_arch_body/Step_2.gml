@@ -1,4 +1,8 @@
-///@description Sprite handling
+///@description Sprite handling and immunity
+
+//Immunity
+event_inherited();
+
 if state != 0 {
     var d_ = point_direction(x,y,global.body.x,global.body.y);
 }else if state == 0{

@@ -43,7 +43,7 @@ if not global.pause {
 				phy_position_x += 5;
 				phy_position_y += 5;
 				phy_fixed_rotation = false;
-			    e_spd = 4;
+			    e_stats[stats.spd] = 4;
 				
 			}
 		
@@ -62,14 +62,14 @@ if not global.pause {
 			
 			///Damage the Player
 			if(place_meeting(x,y,global.body)){
-				if state == 1 and e_hp > 0 and not atk_cd{
+				if state == 1 and e_stats[stats.hp] > 0 and not atk_cd{
 					scr_damage_player(1);
 					alarm[3] = 0.2 * room_speed;
 				}
 			}
 			
 	        ///Die
-	        if e_hp <= 0 and sprite_index != spr_mimic_d{
+	        if e_stats[stats.hp] <= 0 and sprite_index != spr_mimic_d{
 				flash=true;
 				//stop flash
 				alarm[4]=room_speed*0.03;

@@ -6,13 +6,15 @@ offset = true;
 offs   = 48;
 
 //Stats
-e_mhp  =  8;
-e_hp   =  8;
-e_atk  = 10;
-e_satk =  0;
-e_def  =  2;
-e_sdef =  2;
-e_spd  =  3;
+e_stats[stats.mhp]  =  8;
+e_stats[stats.hp]   =  8;
+e_stats[stats.atk]  = 10;
+e_stats[stats.def]  =  0;
+e_stats[stats.satk] =  2;
+e_stats[stats.sdef] =  2;
+e_stats[stats.spd]  =  3;
+
+prev_e_hp = e_stats[stats.hp];
 
 ///Enemy unique
 //Dash
