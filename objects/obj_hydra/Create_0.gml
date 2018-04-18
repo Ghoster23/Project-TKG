@@ -22,3 +22,4 @@ sprite_set_offset(sprite_index,xoff,yoff)
 x=320;
 y=180;
 
+outline_init();
