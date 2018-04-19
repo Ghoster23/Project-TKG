@@ -51,6 +51,12 @@ a_down      = keyboard_check_pressed(vk_down);
 a_left      = keyboard_check_pressed(vk_left);
 a_right     = keyboard_check_pressed(vk_right);
 escape_key  = keyboard_check_pressed(vk_escape);
+if global.right_key_bind==mb_left or global.right_key_bind==mb_right or global.right_key_bind==mb_middle{right_key=mouse_check_button_pressed(global.right_key_bind);}
+else{menu_right_key=keyboard_check_pressed(global.right_key_bind);}
+
+if global.left_key_bind==mb_left or global.left_key_bind==mb_right or global.left_key_bind==mb_middle{left_key=mouse_check_button_pressed(global.left_key_bind);}
+else{menu_left_key=keyboard_check_pressed(global.left_key_bind); }
+
 
 if(room == rm_level || room == rm_CH_boss){
 	mousex = display_mouse_get_x();
