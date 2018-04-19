@@ -56,17 +56,12 @@ if go and not global.pause{
 				dropped_weapon.image_xscale = weapon.image_xscale;
 				dropped_weapon.image_yscale = weapon.image_yscale;
 			}
-		
-	        scr_drops();
-			var pos = ds_list_find_index(global.act_enemy_list,id);
-			ds_list_delete(global.act_enemy_list,pos);
-			global.kld_enemies += 1;
 			
-			//delete old stuff
 			with weapon { instance_destroy(); }
 			with head { instance_destroy(); }
 			instance_destroy(tell);
-			instance_destroy();
+		
+	        scr_kill_enemy();
 			
 		break;
 		case "stun":

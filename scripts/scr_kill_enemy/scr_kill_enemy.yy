@@ -1,8 +1,8 @@
 {
-    "id": "35e4e20a-84b4-47e5-8966-538eee98483f",
+    "id": "cab8cb99-05f9-4ac8-ad03-e758143e22a0",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scr_get_active_enemies",
+    "name": "scr_kill_enemy",
     "IsCompatibility": false,
     "IsDnD": false
 }

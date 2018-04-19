@@ -17,12 +17,6 @@ if not global.pause{
 		layer = layer_get_id("BH");
 		alarm[0] = 5 * room_speed;
 	}
-	
-	if state != 1 and place_meeting(x,y,global.body) and not instance_exists(obj_roll){
-		scr_damage_player(0,10,global.p_stats[stats.def]);
-
-		instance_destroy();
-	}
 
 }else {
 	scr_pause_start(1);

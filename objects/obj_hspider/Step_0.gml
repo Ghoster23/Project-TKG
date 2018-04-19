@@ -11,6 +11,7 @@ if go and not global.pause{
 				
 				sprite_index=spr_hspider_walk;
 				image_speed=2;
+				
 				if (action_dir <= 90 or action_dir >= 270){
 					image_xscale=-1;
 				}
@@ -71,23 +72,13 @@ if go and not global.pause{
                 phy_rotation = irandom(0);
             }
             
-            scr_drops();
-			var pos = ds_list_find_index(global.act_enemy_list,id);
-			ds_list_delete(global.act_enemy_list,pos);
-			global.kld_enemies += 1;
-			instance_destroy();
+            scr_kill_enemy();
+			
 		break;
 		
-		case "pause":
-		
+		case "pause":	
 		break;
-	}
-	
-	///Die
-    if(e_stats[stats.hp] <= 0) and state != 3{
-        state = 3;
-        
-    }
+	}   
 
 }else if go{
 	scr_pause_start(6);

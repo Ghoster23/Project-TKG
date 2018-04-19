@@ -5,6 +5,7 @@ phy_fixed_rotation = true;
 visible = false;
 
 e_stats[stats.atk] = 10;
+damage = 2;
 
 hspd = 0;
 vspd = 0;

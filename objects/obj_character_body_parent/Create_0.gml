@@ -21,6 +21,8 @@ state        = 0;
 prev_state   = 0;
 state_change = false;
 
+prev_hp = global.p_stats[stats.hp];
+
 hspd  = 0;
 vspd  = 0;
 
@@ -32,11 +34,11 @@ yaxis = 0;
 dir   = 0;
 
 //Appearence
-image_speed =   0;
+image_speed =   1;
 spr_side    =   1;
 head_offset =   0;
 rotation    =   0;
-is          = 0.5;
+is          = 0.4;
 hs          = false;
 
 spr_body = body_sprs[3];

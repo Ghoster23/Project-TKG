@@ -2,7 +2,8 @@ event_inherited();
 
 state = 0;
 
-e_stats[stats.atk] = 15;
+e_stats[stats.atk] = 1;
+damage = 15;
 
 offset = true;
 offs = -12;

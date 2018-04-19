@@ -17,5 +17,5 @@ feet_spr  = spr_jason_feet;
 
 event_inherited();
 
-is = 1;
+is = 0.266;
 hs = true;

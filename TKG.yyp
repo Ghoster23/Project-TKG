@@ -1658,7 +1658,7 @@
             "Key": "35e4e20a-84b4-47e5-8966-538eee98483f",
             "Value": {
                 "id": "0eb6991f-ef11-4691-a815-4ad4eb0978c4",
-                "resourcePath": "scripts\\scr_get_active_enemies\\scr_get_active_enemies.yy",
+                "resourcePath": "scripts\\scr_activate_enemies\\scr_activate_enemies.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -6031,6 +6031,14 @@
             }
         },
         {
+            "Key": "cab8cb99-05f9-4ac8-ad03-e758143e22a0",
+            "Value": {
+                "id": "fa7a51da-fb07-401e-a3fa-a344acfe184f",
+                "resourcePath": "scripts\\scr_kill_enemy\\scr_kill_enemy.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "cb0870d4-1695-4719-8bf4-388502efbe37",
             "Value": {
                 "id": "328f70c7-b0f5-4bc4-93e4-be01ac40e054",
@@ -7840,6 +7848,7 @@
         "20c8e131-3299-4203-812a-a0376af9b527",
         "16726cf0-8ee3-4695-ac84-5b68dc595239",
         "16730b80-4e17-4b0e-a88c-242e23379b82",
+        "cab8cb99-05f9-4ac8-ad03-e758143e22a0",
         "43e92121-66ff-4ca0-a864-5ac52130fefb",
         "97ad3363-68e1-478b-b1a6-0cc1008f3a6c",
         "bf54cc9b-3395-457b-bda0-b115d6f63e33",

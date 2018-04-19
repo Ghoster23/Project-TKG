@@ -10,8 +10,8 @@ switch state {
 				(global.current_row    + 1) * global.roomhg + 64 < yy ){
 				
 				/// Get current Player room
-				global.current_column = global.body.phy_position_x div global.roomwd;
-				global.current_row    = global.body.phy_position_y div global.roomhg;
+				global.current_column = xx div global.roomwd;
+				global.current_row    = yy div global.roomhg;
 				
 				///Mark room
 				if(instance_exists(obj_minimap_controller)){
@@ -22,18 +22,21 @@ switch state {
 				
 				state = 3;
 			}
+			
 		}else if(room = rm_lvl_editor_test){
 			global.current_column = 0;
 			global.current_row    = 0;
 			
 			state = 3;
 		}
+		
 	break;
 	case 1: //Locked
 		if(ds_exists(global.act_enemy_list,ds_type_list) &&
 		   ds_list_size(global.act_enemy_list) == 0){
 			state = 2;	
 		}
+		
 	break;
 	case 2: //Cleared
 		if(instance_exists(obj_inventory_controller)){
@@ -47,18 +50,16 @@ switch state {
 		}
 		
 		state = 0;
+		
 	break;
 	case 3: //New Room
 		/* Add enemies to active enemy list */
+		/*        Clear fluid surface       */
 		if((room == rm_level and obj_view.stopped) || 
 		   (room == rm_test) || 
 		   (room == rm_lvl_editor_test)){
 			
-			enemy = obj_grounded_enemy_parent;
-			scr_get_active_enemies();
-	
-			enemy = obj_flying_enemy_parent;
-			scr_get_active_enemies();
+			scr_activate_enemies();
 			
 			surface_set_target(global.fluid_surface);
 			draw_clear_alpha(c_black,0);
@@ -70,10 +71,5 @@ switch state {
 }
 
 if keyboard_check_released(ord("P")) {
-	var size = ds_list_size(global.act_enemy_list);
-	
-	show_debug_message(size);
-	for(var i = 0; i < size; i++){
-		show_debug_message(object_get_name(global.act_enemy_list[| i].object_index));
-	}
+	state = 3;
 }

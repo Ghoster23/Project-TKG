@@ -20,17 +20,11 @@ if go and not global.pause{
 			image_speed = 0.2;
 			 
             if image_index == 5{
-				scr_drops();
-				var pos = ds_list_find_index(global.act_enemy_list,id);
-				
-				ds_list_delete(global.act_enemy_list,pos);
-				global.kld_enemies += 1;
-				
 				if(instance_exists(fl_gen)){
 					instance_destroy(fl_gen);
 				}
 				
-				instance_destroy();
+				scr_kill_enemy();
             }
 			
 		break;
@@ -38,13 +32,6 @@ if go and not global.pause{
 		break;
 
     }
-	
-	if(state != 2){
-		if(place_meeting(x,y,global.body)){
-			scr_damage_player(1);
-			
-		}
-	}
 	
 	if(instance_exists(fl_gen)){
 		fl_gen.on = true;

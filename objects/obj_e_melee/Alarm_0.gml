@@ -2,7 +2,11 @@
 if instance_exists(owner){
 	image_xscale = -1*image_xscale;
 	image_yscale = -1*image_yscale;
-	instance_create_layer(x,y,"IF",obj_e_swing);
+	var swing = instance_create_layer(x,y,"IF",obj_e_swing);
+	swing.e_stats[stats.atk] = owner.e_stats[stats.atk];
+	swing.damage = dmg;
+	swing.creator = id;
+	swing.owner = owner;
 	instance_destroy(tell);
 	owner.swing = false;
 }

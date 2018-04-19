@@ -9,12 +9,14 @@ offs   = 48;
 e_stats[stats.mhp]  =  8;
 e_stats[stats.hp]   =  8;
 e_stats[stats.atk]  = 10;
-e_stats[stats.def]  =  0;
+e_stats[stats.def]  =  1;
 e_stats[stats.satk] =  2;
 e_stats[stats.sdef] =  2;
 e_stats[stats.spd]  =  3;
 
 prev_e_hp = e_stats[stats.hp];
+
+damage = 2;
 
 ///Enemy unique
 //Dash

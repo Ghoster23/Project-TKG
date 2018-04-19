@@ -6,9 +6,6 @@ if not global.pause {
     
 	}
 
-	if place_meeting(x,y,global.body) {
-	    scr_damage_player(1);
-	}
 }else {
 	image_speed = 0;
 }

@@ -80,12 +80,6 @@ if instance_exists(obj_CH_tree_state) and not global.pause{
 				jab = true;
 			}
 		
-			if jab == true and place_meeting(x,y,global.body){
-				scr_damage_player(0,global.b_atk,global.p_stats[stats.def]);
-				visible = true;
-			
-			}
-		
 			if image_index >= 17 and sprite_index != spr_CH_root_idle{
 				sprite_index = spr_CH_root_idle;
 				image_speed = 1;

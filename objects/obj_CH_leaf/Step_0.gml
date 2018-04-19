@@ -64,12 +64,6 @@ if go == true and not global.pause {
 	//Move
 	phy_position_x += hspd;
 	phy_position_y += vspd;
-
-	//Damage the player
-	if(place_meeting(x,y,global.body) and global.p_inv == false and global.p_hurt == false){
-		scr_damage_player(0,global.b_satk,global.p_stats[stats.sdef]);
-	    instance_destroy();
-	}
 	
 }else if go == true{
 	for(i = 0; i < 3; i += 1){

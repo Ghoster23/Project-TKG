@@ -60,14 +60,6 @@ if not global.pause {
 			path = global.ai_path;
 			scr_move_enemy(point_direction(x,y,path_get_point_x(path,1),path_get_point_y(path,1)),1);
 			
-			///Damage the Player
-			if(place_meeting(x,y,global.body)){
-				if state == 1 and e_stats[stats.hp] > 0 and not atk_cd{
-					scr_damage_player(1);
-					alarm[3] = 0.2 * room_speed;
-				}
-			}
-			
 	        ///Die
 	        if e_stats[stats.hp] <= 0 and sprite_index != spr_mimic_d{
 				flash=true;
@@ -88,11 +80,6 @@ if not global.pause {
 	        phy_rotation = 25 * sin(a);
 			
 	    break;
-	}
-	
-	///Get Damaged
-	if not damaged {
-		scr_damage_enemy();
 	}
 	
 }else {

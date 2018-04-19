@@ -33,11 +33,6 @@ if not global.pause {
 				}
 				
 			}
-			
-			if place_meeting(x,y,obj_feet) {
-				scr_damage_player(0,15,global.p_stats[stats.def]);
-			
-			}
 		
 		break;
 	}

@@ -1,5 +1,6 @@
 ///@description Damage the enemy
-if(not damaged and instance_exists(other)){
+if(not damaged and instance_exists(other) and 
+	not ((other.object_index == obj_e_arrow || other.object_index == obj_e_swing) and other.owner == id)){
 	var dmg = other.damage;
 	var ml  = other.mult;
 	var dv  = other.divi;
@@ -24,7 +25,7 @@ if(not damaged and instance_exists(other)){
 	
 	//Damage
 	if(global.status[statuses.ohko,0] == 0){
-		e_stats[stats.hp] -= dmg * (global.p_stats[ml] div e_stats[dv]);
+		e_stats[stats.hp] -= round(dmg * (global.p_stats[ml] div e_stats[dv]));
 	}else {
 		e_stats[stats.hp] = 0;
 	}

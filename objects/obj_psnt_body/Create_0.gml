@@ -27,12 +27,13 @@ path = path_add();
 //create weapon
 weapon = instance_create_layer(x,y,layer,obj_e_melee);
 weapon.skin_color = skin_color;
+weapon.owner = id;
 
 //Stats
 e_stats[stats.mhp]  = 20;
 e_stats[stats.hp]   = 20;
 e_stats[stats.atk]  =  5;
-e_stats[stats.def]  =  0;
+e_stats[stats.def]  =  5;
 e_stats[stats.satk] =  3;
 e_stats[stats.sdef] =  3;
 e_stats[stats.spd]  =  3;

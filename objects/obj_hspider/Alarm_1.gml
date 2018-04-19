@@ -1,8 +1,15 @@
 /// @description decide the state
+if(e_stats[stats.hp] <= 0) and state != 3{
+    state = 3;
+        
+}
+	
 if state != 3{   //if not dead decide between state 0 or 1
 	scr_define_path(self, global.body);
-	path = global.ai_path;
-	action_dir = point_direction(x,y,path_get_point_x(global.ai_path,1),path_get_point_y(global.ai_path,1));
+	
+	path       = global.ai_path;
+	action_dir = point_direction( x, y,
+	path_get_point_x(global.ai_path,1), path_get_point_y(global.ai_path,1));
 	
 	if (dis >= 0 and dis < 128) and 
 	not collision_line(x,y,global.body.x,global.body.y,obj_solid_parent,false,true){ 

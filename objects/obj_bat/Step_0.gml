@@ -25,7 +25,7 @@ if go and not global.pause{
 			image_speed = 0;
 			
 			if alarm[6] == -1 and not dash_cd{
-				alarm[6] = 10;
+				alarm[6] = 0.33 * room_speed;
 			}
             
 			if dash {
@@ -53,24 +53,13 @@ if go and not global.pause{
 			}
 			
 			if image_index == 3{
-				scr_drops();
-				var pos = ds_list_find_index(global.act_enemy_list,id);
-				
-				ds_list_delete(global.act_enemy_list,pos);
-				global.kld_enemies += 1;
-				instance_destroy();
-				
+				scr_kill_enemy();
 			}
 			
 		break;
 		case "pause":
 		break;
-	}
-	
-	if state != 3 and place_meeting(x,y,global.body) {
-		scr_damage_player(1);
-	
-	}    
+	} 
 }
 
 if global.pause == true{

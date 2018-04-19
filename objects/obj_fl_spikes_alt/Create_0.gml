@@ -6,6 +6,7 @@ image_speed = 0;
 prev_image_speed = 0;
 
 e_stats[stats.atk] = 1;
+damage = 2;
 
 alarm[0] = 2 * room_speed;
 
