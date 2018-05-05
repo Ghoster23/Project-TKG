@@ -18,8 +18,17 @@ fall_rate = 0.4;
 piercing  = false;
 destroyed = false;
 
-shadow       = instance_create_layer( phy_position_x, phy_position_y + 24,
+if(fluid_proj){
+	shadow = instance_create_layer( phy_position_x, phy_position_y + 24,
+										"Instances", obj_fluid_projectile_shadow);
+}else if(converter_proj){
+	shadow = instance_create_layer( phy_position_x, phy_position_y + 24,
+										"Instances", obj_fluid_converter_projectile_shadow);
+}else {
+	shadow = instance_create_layer( phy_position_x, phy_position_y + 24,
 										"Instances", obj_projectile_shadow);
+}
+
 shadow.owner = self;
 
 prev_image_speed = 0;

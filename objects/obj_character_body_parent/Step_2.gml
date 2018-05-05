@@ -1,7 +1,7 @@
 ///@description Get everything in place
-if(prev_hp != global.p_stats[stats.hp]){
+if(prev_hp > global.p_stats[stats.hp]){
 	global.p_hurt = true;
-	prev_hp = global.p_stats[stats.hp];
+	prev_hp       = global.p_stats[stats.hp];
 }
 
 switch state{

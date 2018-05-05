@@ -50,7 +50,7 @@ switch global.char {
 		global.p_stats[stats.def]   =  4;
 		global.p_stats[stats.satk]  =  8;
 		global.p_stats[stats.sdef]  =  8;
-		global.p_stats[stats.spd]   =  3;
+		global.p_stats[stats.spd]   =  4;
 		global.weapon = obj_luna_casting;
 	break;
 	

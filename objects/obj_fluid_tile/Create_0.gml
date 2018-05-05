@@ -8,9 +8,10 @@ for(var i = 0; i < array_len; i++){
 
 active = false;
 
-colors[0] = make_color_rgb(122,199,21);
-colors[1] = make_color_rgb(0,123,255);
-colors[2] = make_color_rgb(146,0,0);
+colors[0] = make_color_rgb(122,199, 21); //Slime
+colors[1] = make_color_rgb(  0,123,255); //Water
+colors[2] = make_color_rgb(146,  0,  0); //Blood
+colors[3] = make_color_rgb(178,255,250); //Ice
 
 ox = x mod global.roomwd;
 oy = y mod global.roomhg;

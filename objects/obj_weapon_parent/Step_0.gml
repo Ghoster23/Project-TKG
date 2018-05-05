@@ -5,11 +5,11 @@ if(not global.pause){
 	
 	//Particle
 	///Drawing
+	part_emitter_region(em_sys, emitter, x + 5 * cos(angle), x + 5 * cos(angle), y + 10 * sin(angle), y + 10 * sin(angle), ps_shape_ellipse, ps_distr_gaussian);
+	
 	if(amount >= 0.1){
 		amount = amount * 0.3; //Particle amount
-			
-		part_emitter_region(em_sys, emitter, x + 5 * cos(angle), x + 5 * cos(angle), y + 10 * sin(angle), y + 10 * sin(angle), ps_shape_ellipse, ps_distr_gaussian);
-	
+		
 		part_emitter_stream(em_sys, emitter, particle, round(amount));
 		
 	}else {

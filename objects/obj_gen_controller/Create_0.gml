@@ -158,6 +158,8 @@ comp += 7;
 
 instance_create_layer( 0, 0, "IF", obj_AI_controller);
 comp += 10;
-	
-instance_create_layer( 0, 0, "IF", obj_inventory_controller);
+
+if(!instance_exists(obj_inventory_controller)){
+	instance_create_layer( 0, 0, "IF", obj_inventory_controller);
+}
 comp += 12;

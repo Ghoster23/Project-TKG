@@ -1,6 +1,6 @@
 {
     global.pt_smoke=part_type_create();
-    var pt=global.pt_smoke
+    var pt=global.pt_smoke;
     
     part_type_sprite(pt,spr_smoke,1,1,0);
     part_type_size(pt,1,1,0,0);

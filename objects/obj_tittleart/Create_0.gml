@@ -1,25 +1,8 @@
-image_speed=0.9;
-fade=false;
-x=640/2;
-y=360/2;
-count =0;
-
-
-//1 shine
-global.pt_1 = part_type_create();
-part_type_shape(global.pt_1, pt_shape_square);
-//spr_1_part = sprite_add("1.png", 1, 0, 0, 10, 10);
-part_type_sprite(global.pt_1, spr_morpho, 1, 0, 0);
-part_type_size(global.pt_1, 0.2, 0.2, 0, 0.5);
-part_type_scale(global.pt_1, 0.3, 0.30);
-part_type_orientation(global.pt_1, 0, 308, 0, 200, 0);
-part_type_color3(global.pt_1, c_white, c_white, c_white);
-part_type_alpha3(global.pt_1, 0.5, 1, 1);
-part_type_blend(global.pt_1, true);
-part_type_life(global.pt_1, 80, 100);
-part_type_speed(global.pt_1, 0, 0, 0, 0.05);
-part_type_direction(global.pt_1, 242, 248, 0, 50);
-part_type_gravity(global.pt_1, 0, 0);
+image_speed = 0.9;
+fade = false;
+x = 640/2;
+y = 360/2;
+count = 0;
 
 //1
 c1= 12615680;
@@ -45,19 +28,33 @@ ct_r=44;    //red
 ct_g=204;   //green
 ct_b=226;   //blue
 
+//shine
+pt_1 = part_type_create();
+part_type_sprite(pt_1, spr_morpho, 1, 0, 0);
+part_type_size(pt_1, 0.2, 0.2, 0, 0.5);
+part_type_scale(pt_1, 0.3, 0.30);
+part_type_orientation(pt_1, 0, 308, 0, 200, 0);
+part_type_color3(pt_1, c_white, c_white, c_white);
+part_type_alpha3(pt_1, 0.5, 1, 1);
+part_type_blend(pt_1, true);
+part_type_life(pt_1, 80, 100);
+part_type_speed(pt_1, 0, 0, 0, 0.05);
+part_type_direction(pt_1, 242, 248, 0, 50);
+part_type_gravity(pt_1, 0, 0);
 
-global.pt_2 = part_type_create();
-part_type_sprite(global.pt_2, spr_circle, 1, 0, 0);
-part_type_size(global.pt_2, 2, 2, 0.03, 0.40);
-part_type_scale(global.pt_2, 1, 1);
-part_type_orientation(global.pt_2, 43, 50, 0, 0, 0);
-part_type_color3(global.pt_2, c1,c2,c3);
-part_type_alpha3(global.pt_2, 1, 1, 1);
-part_type_blend(global.pt_2, 0);
-part_type_life(global.pt_2, 130,131);
-part_type_speed(global.pt_2, 0, 3, 0, 0);
-part_type_direction(global.pt_2, 90, 90, 0, 0);
-part_type_gravity(global.pt_2, 0, 0);
+
+pt_2 = part_type_create();
+part_type_sprite(pt_2, spr_circle, 1, 0, 0);
+part_type_size(pt_2, 2, 2, 0.03, 0.40);
+part_type_scale(pt_2, 1, 1);
+part_type_orientation(pt_2, 43, 50, 0, 0, 0);
+part_type_color3(pt_2, c1,c2,c3);
+part_type_alpha3(pt_2, 1, 1, 1);
+part_type_blend(pt_2, 0);
+part_type_life(pt_2, 130,131);
+part_type_speed(pt_2, 0, 3, 0, 0);
+part_type_direction(pt_2, 90, 90, 0, 0);
+part_type_gravity(pt_2, 0, 0);
 
 //star
 global.pt_star = part_type_create();
@@ -88,24 +85,19 @@ part_type_direction(global.pt_trail, 318, 318, 0, 0);
 part_type_gravity(global.pt_trail, 0, 255);
 
 //Creating Emitters
-global.pe_1 = part_emitter_create(global.ps);
-global.pe_2 = part_emitter_create(global.ps);
-global.pe_star = part_emitter_create(global.ps_if);
+pe_1    = part_emitter_create(global.ps);
+pe_2    = part_emitter_create(global.ps);
+pe_star = part_emitter_create(global.ps);
 
 part_type_step(global.pt_star, 5, global.pt_trail);
 
 //Adjusting Emitter positions. Starting Emitter Streams or Bursts.
 
-part_emitter_region(global.ps, global.pe_1, 0, 640, 0, 380, ps_shape_rectangle, ps_distr_linear);
-part_emitter_stream(global.ps, global.pe_1, global.pt_1, 1);
+part_emitter_region(   global.ps,    pe_1,    0, 640, 0, 380, ps_shape_rectangle, ps_distr_linear);
+part_emitter_stream(   global.ps,    pe_1, pt_1, 1);
 
-part_emitter_region(global.ps, global.pe_2, 0, 640, 300, 360, ps_shape_rectangle, ps_distr_linear);
-part_emitter_stream(global.ps, global.pe_2, global.pt_2, 1);
+part_emitter_region(   global.ps,    pe_2,    0, 640, 300, 360, ps_shape_rectangle, ps_distr_linear);
+part_emitter_stream(   global.ps,    pe_2, pt_2, 1);
 
-part_emitter_region(global.ps_if, global.pe_star, -320, 320, -100, -50, ps_shape_rectangle, ps_distr_linear);
-part_emitter_stream(global.ps_if, global.pe_star, global.pt_star, -30);
-
-
-
-
-
+part_emitter_region(global.ps, pe_star, -320, 320, -100, -50, ps_shape_rectangle, ps_distr_linear);
+part_emitter_stream(global.ps, pe_star, global.pt_star, -30);
