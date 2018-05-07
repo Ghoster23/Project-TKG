@@ -1,6 +1,7 @@
 if(instance_exists(shadow)){
-	var scale = alarm[0]/life_time;
+	var x_ = alarm[0]/life_time;
 	
+	var scale = 0.2*ln(x_) + 1;
 	image_xscale = scale;
 	image_yscale = scale;
 	
@@ -13,3 +14,9 @@ if(instance_exists(shadow)){
 scr_break_object();
 
 event_inherited();
+
+if(collided){
+	part_particles_create(global.ps_if,x,y,global.pt_icebits,5);
+	instance_destroy(shadow);
+	instance_destroy();
+}

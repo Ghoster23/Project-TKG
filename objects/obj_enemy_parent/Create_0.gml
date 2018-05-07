@@ -29,6 +29,11 @@ e_stats[stats.satk] =  5;
 e_stats[stats.sdef] =  5;
 e_stats[stats.spd]  =  3;
 
+damage = 0;
+mult   = stats.atk;
+divi   = stats.def;
+kb_amount = 0;
+
 //States
 state        =     0;
 state_change = false;

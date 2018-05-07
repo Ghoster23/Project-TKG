@@ -1,3 +1,4 @@
+//Sprites
 body_sprs[0] = spr_luna_body_up;
 body_sprs[1] = spr_luna_body_right;
 body_sprs[2] = spr_luna_body_down;
@@ -15,7 +16,14 @@ hands_spr = spr_jason_hands;
 
 feet_spr  = spr_jason_feet;
 
+//General
 event_inherited();
 
-is = 1;
+//Visuals
+is = 0.266;
 hs = true;
+
+//Abillity
+global.p_LVB_water = 0;
+
+fl_gen = instance_create_layer(phy_position_x,phy_position_y,layer,obj_luna_fluid_gen);

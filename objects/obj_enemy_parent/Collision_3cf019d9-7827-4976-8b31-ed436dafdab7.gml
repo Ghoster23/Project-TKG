@@ -1,1 +1,3 @@
-scr_damage_enemy();
+if(go and not damaged and not global.pause){
+	scr_damage_enemy();
+}

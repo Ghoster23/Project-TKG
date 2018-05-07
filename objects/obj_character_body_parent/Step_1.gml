@@ -1,6 +1,7 @@
 if(not global.pause){
 	scr_get_input();
 	rotation = point_direction(x,y,mouse_x,mouse_y);
+	//is = 0.2666 * global.p_stats[stats.spd];
 	
 	//End Pause
 	scr_pause_end(4);

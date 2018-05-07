@@ -33,7 +33,7 @@ if(room == rm_level){
 			y = scr_aproach(y,global.body.phy_position_y,8);
 		}else {
 			screen_save(working_directory + "death.png");
-			room_goto(rm_dead);
+			room_goto(rm_menu_1);
 		}		
 	}
 }

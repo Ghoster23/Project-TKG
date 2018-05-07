@@ -16,3 +16,7 @@ hands_spr = spr_jason_hands;
 feet_spr  = spr_jason_feet;
 
 event_inherited();
+
+is = 0.266;
+
+test = instance_create_layer(x,y,layer,obj_testweight);

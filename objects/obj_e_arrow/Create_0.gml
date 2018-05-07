@@ -13,3 +13,8 @@ vspd = 0;
 state = 0;
 
 des = true;
+
+e_stats[stats.atk] = 2;
+damage = 2;
+
+owner = -1;

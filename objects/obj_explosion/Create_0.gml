@@ -12,3 +12,6 @@ once = false;
 //Damage dealer vars
 damage    = 50;
 kb_amount = 30;
+
+e_stats[stats.atk] = 1;
+divi = stats.def;

@@ -32,8 +32,17 @@ void main()
 				if(datPixel.r - 0.478 < 0.001){
 					gl_FragColor = vec4(0.004, 0.263, 0.208, datPixel.a);
 					
+				}else if(datPixel.g - 0.482 < 0.001){
+					gl_FragColor = vec4(  0.0, 0.251,   0.8, datPixel.a);
+					
+				}else if(datPixel.r - 0.572 < 0.001){
+					gl_FragColor = vec4(  0.4, 0.098, 0.039, datPixel.a);
+					
+				}else if(datPixel.r - 0.858 < 0.001){
+					gl_FragColor = vec4(  0.8, 0.843,   1.0, datPixel.a);
+					
 				}else {
-					gl_FragColor = vec4(datPixel.r, 0.0, 0.0, 1.0);
+					gl_FragColor = vec4(  1.0,   1.0,   1.0, datPixel.a);
 					
 				}
 				

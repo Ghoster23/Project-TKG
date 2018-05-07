@@ -19,10 +19,6 @@ if not global.pause {
 			image_speed = 0;
 			image_index = 5;
 			
-			if place_meeting(x,y,obj_feet) {
-				scr_damage_player(0,1,1);
-			}
-			
 		}
 		
 	}

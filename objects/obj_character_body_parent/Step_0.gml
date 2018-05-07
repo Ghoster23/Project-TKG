@@ -7,30 +7,27 @@ if not global.pause {
 			
 			//Orientation
 			//Right
-			if (rotation > 315 or rotation < 45){
-			    image_speed  = is; 
+			if (rotation > 315 or rotation < 45){			    
 			    spr_side     =   1;
                   
 			}
 			//Up
-			else if rotation < 135{
-			    image_speed  = is;  
+			else if rotation < 135{  
 			    spr_side     =   0;
                        
 			}
 			//Left
 			else if rotation < 225{
-			    image_speed  = is; 
 			    spr_side     =   3; 
                            
 			}
 			//Down
-			else if rotation < 315{
-			    image_speed =  is; 
+			else if rotation < 315{ 
 			    spr_side    =    2;      
                        
 			}
 			
+			image_speed  = is * global.p_stats[stats.spd];
 			image_xscale = 1;
 		break;
 		case 1: //Stuck
@@ -60,7 +57,6 @@ if not global.pause {
 				image_xscale = -1;
 			}
 			
-			image_speed = 1;
 			global.p_inv = true;
 		break;
 		case 3: //Dead
@@ -71,7 +67,6 @@ if not global.pause {
 	
 	//Turn to camera in status menu
 	if(obj_ig_menu_controller.state == "status"){
-		image_speed = is;
 		spr_side    = 2;
 	}
 	

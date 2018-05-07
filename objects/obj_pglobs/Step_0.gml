@@ -1,10 +1,5 @@
 scr_get_input();
 
-/*if instance_exists(100024) {
-	var i = 100024;
-	show_debug_message(object_get_name(i.object_index));
-}*/
-
 //Stats
 if(room == rm_char_select){
 	scr_char_stats();
@@ -18,7 +13,7 @@ if(instance_exists(global.body) && !instance_exists(obj_gui)){
 }
 
 //Physics toggling for game pausing
-if room != rm_menu_1 and room != rm_char_select and room != rm_dead{
+if(room != rm_menu_1 and room != rm_char_select and room != rm_dead){
 	if global.pause {
 		physics_pause_enable(true);
 	}else {
@@ -55,6 +50,10 @@ if(global.gen && not instance_exists(obj_gen_controller)){
 ///Debug
 if keyboard_check_pressed(vk_f11){
     room_goto(rm_test);
+}
+
+if keyboard_check_pressed(vk_f12){
+    room_restart();
 }
 
 if keyboard_check_pressed(vk_f4){

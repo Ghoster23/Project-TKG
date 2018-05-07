@@ -1,34 +1,58 @@
 switch wep_pat_state {
 	case 0: //Base
-		if(attack_key){
-			if(wep_ammo){
-				wep_pat_state  = 1; //Go to shoot
-				
-			}else {
-				wep_pat_state  = 2; //Go to icy wind
-				
-			}
+		if(attack_key xor (mouse_r_key and (not wep_pat_frost_count || not wep_pat_block_count))){
+			wep_pat_state        = 1 + mouse_r_key; //Go to Charging
+			wep_pat_charge_count = wep_pat_charge_time;
 			
-		}else if(mouse_r_key){
-			if(!wep_potion){
-				wep_pat_state  = 4; //Go to throw water
-				
-			}else {
-				wep_pat_state  = 5; //Go to drink potion
-				
-			}
-		}else if(keyboard_check_released(ord("R"))){
-			wep_pat_state = 3; //Go to reload
+		}else if(wep_ammo == 0 || keyboard_check_released(ord("R"))){
+			wep_pat_state = 7; //Go to Reload
 			
 		}
 		
 	break;
-	case 1: //Shoot
+	case 1: //Charging left-click
+		if(not attack_key){
+			if(wep_ammo > 0){
+				wep_pat_state = 3; //Go to Ice Shot
+				
+			}else {
+				wep_pat_state = 0; //Go to base
+				
+			}
+			
+			wep_pat_charge_count = 0;
+			
+		}else if(wep_pat_charge_count == 0){
+			if(global.p_LVB_water > 0){
+				wep_pat_state = 5; //Go to Water gun
+				
+			}else {
+				wep_pat_state = 0; //Go to base
+				
+			}
+		}
+		
+	break;
+	case 2: //Charging right-click
+		if(not mouse_r_key){
+			wep_pat_state        = 4; //Go to Frost Cloud
+			wep_pat_charge_count = 0;
+			
+		}else if(wep_pat_charge_count == 0){
+			wep_pat_state = 6; //Go to Ice Blocks
+			
+		}
+		
+	break;
+	case 3: //Ice Shot
 		wep_ammo--;
 		
 		var xx  = x + lengthdir_x(24,angle);
 		var yy  = y + lengthdir_y(24,angle);
 		var rad = degtorad(angle);
+		
+		part_emitter_region(em_sys,emitter,xx-16,xx+16,yy-16,yy+16,ps_shape_ellipse,ps_distr_linear);
+		part_emitter_burst(em_sys,emitter,global.pt_haze,15);
 		
 		for(var i = 0; i < wep_proj_count + 1; i++){
 			var ice = instance_create_layer(xx,yy,"IF",obj_ice_shard);
@@ -44,53 +68,91 @@ switch wep_pat_state {
 			physics_apply_impulse(phy_position_x,phy_position_y,-mult*cos(rad),mult*sin(rad));
 		}
 		
-		alarm[wep_pat_alarm] = wep_pat_cd * room_speed;
-		wep_pat_state        = 6; //Go to cooldown
+		if(wep_ammo > 0){
+			alarm[wep_pat_alarm] = wep_pat_cd * room_speed;
+			wep_pat_state        = 6; //Go to cooldown
+		}else {
+			wep_pat_state        = 7; //Go to cooldown
+		}		
 	break;
-	case 2: //Icy wind
-		var xx  = x + lengthdir_x(8,angle);
-		var yy  = y + lengthdir_y(8,angle);
+	case 4: //Frost Cloud
+		var xx  = x + lengthdir_x(24,angle);
+		var yy  = y + lengthdir_y(24,angle);
+		var rad = degtorad(angle);
 		
-		var ice = instance_create_layer(xx,yy,layer,obj_icy_wind);
-		ice.dir    = degtorad(angle);
-		ice.spd    = 5;
-		ice.damage = dmg * 0.5;
+		instance_create_layer(xx-32,yy-32,"IF",obj_icy_wind);
 		
-		alarm[wep_pat_alarm] = 2 * wep_pat_cd * room_speed;
-		wep_pat_state        = 6; //Go to cooldown
+		wep_pat_frost_count = wep_pat_frost_cd;
+		wep_pat_state       = 0; //Go to Base
 		
 	break;
-	case 3: //Reload
-		if(wep_capacity > wep_ammo){ //If under capacity
-			if(alarm[wep_pat_reload_alarm] == -1){ //Start Reloading
-				var diff = wep_capacity - wep_ammo;
+	case 5: //Throw water
+		if(attack_key and global.p_LVB_water > 0){
+			/*global.p_LVB_water -= 5;
 			
-				alarm[wep_pat_reload_alarm] = diff * wep_pat_reload_cd * room_speed;
+			var xx  = x + lengthdir_x(24,angle);
+			var yy  = y + lengthdir_y(24,angle);
+			var rad = degtorad(angle);
+			
+			for(var i = 0; i < 5; i++){
+				var water_ball = instance_create_layer(xx,yy,"IF",obj_water_ball);
 				
-			}else if(alarm[1] mod (0.1 * room_speed) == 0){ //Regain one shot
-				wep_ammo += wep_pat_reload_rate;
-				
-				if(wep_ammo > wep_capacity){
-					wep_ammo = wep_capacity;
-				}				
-			}
-		}else { //If not
-			wep_pat_state = 0; //Go to base state
+				water_ball.dir    = -rad + random_range(-pi/9,pi/9);
+				water_ball.spd    = 10;
+				water_ball.damage =  0;
+			}*/
+			
+		}else {
+			wep_pat_state  = 0; //Go to base
 			
 		}
 		
 	break;
-	case 4: //Throw water
-		wep_pat_state  = 0; //Go to base
+	case 6: //Blocks
+		if(mouse_r_key){
+			/*if(!instance_exists(obj_frost_circle)){
+				fc = instance_create_layer(x,y,layer,obj_frost_circle);
+			}*/
+			
+		}else {
+			//fc.freeze = true;
+			
+			wep_pat_block_count = wep_pat_block_cd;
+			wep_pat_state       = 0; //Go to base
+			
+		}
 		
 	break;
-	case 5: //Drink Potion
-		wep_pat_state  = 0; //Go to base
+	case 7: //Reload
+		if(wep_pat_reload_count == -1){
+			if(wep_ammo < wep_capacity){
+				wep_pat_reload_count = wep_pat_reload_cd;
+			}else {
+				wep_pat_state = 0;
+			}
+		}else {
+			wep_pat_reload_count--;
+				
+			if(wep_pat_reload_count == 0){
+				wep_ammo = wep_capacity;
+				wep_pat_reload_count = -1;
+				wep_pat_state = 0;
+			}
+		}
 		
 	break;
-	case 6: //Cooldown
+	case 8: //Cooldown
 		if(alarm[0] == -1){
 			wep_pat_state = 0;
 		}
+		
 	break;
+}
+
+//Timers
+if(wep_pat_frost_count > 0){
+	wep_pat_frost_count--;
+}
+if(wep_pat_block_count > 0){
+	wep_pat_block_count--;
 }

@@ -7,13 +7,17 @@ image_alpha = 0.7;
 //Stats
 e_stats[stats.mhp]  = 20;
 e_stats[stats.hp]   = 20;
-e_stats[stats.atk]  = 10;
-e_stats[stats.def]  =  1;
-e_stats[stats.satk] =  2;
-e_stats[stats.sdef] =  2;
+e_stats[stats.atk]  =  2;
+e_stats[stats.def]  =  4;
+e_stats[stats.satk] =  8;
+e_stats[stats.sdef] =  4;
 e_stats[stats.spd]  =  2;
 
 prev_e_hp = e_stats[stats.hp];
+
+damage = 2;
+mult = stats.satk;
+divi = stats.sdef;
 
 //Pause
 for(i = 0; i < 6; i++){

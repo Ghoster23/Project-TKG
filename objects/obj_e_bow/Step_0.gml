@@ -28,7 +28,12 @@ if not global.pause {
 			}
 			
 			if image_index == 4 {
-				instance_create_layer(x,y,"IF",obj_e_arrow);
+				var arrow = instance_create_layer(x,y,"IF",obj_e_arrow);
+				
+				arrow.e_stats[stats.atk] = owner.e_stats[stats.atk];
+				arrow.damage = dmg;
+				arrow.owner = owner;
+				
 				owner.cd_arrow = true;
 				owner.state = 1;
 				owner.alarm[1] = 2 * room_speed;

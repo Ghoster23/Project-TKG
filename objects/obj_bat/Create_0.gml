@@ -16,6 +16,8 @@ e_stats[stats.spd]  =  3;
 
 prev_e_hp = e_stats[stats.hp];
 
+damage = 2;
+
 ///Enemy unique
 //Dash
 dash    = false;
