@@ -40,7 +40,7 @@ if pick_up == false{
 	}
 	
 	//if the object as stopped and is on the ground then you can pick it up
-	if(phy_speed <= 1 and z <= 1){
+	if(phy_speed <= 1 and z <= 4){
 		pick_up = true;
 		phy_linear_damping=5;
 	}
