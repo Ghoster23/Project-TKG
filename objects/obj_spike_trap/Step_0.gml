@@ -4,11 +4,9 @@ if not global.pause {
 	switch state {
 		//OFF
 		case 0:
-			if instance_exists(global.body) {
-				if (place_meeting(x,y,obj_feet) or place_meeting(x,y,obj_grounded_enemy_parent)) and alarm[0] == -1{
-					alarm[0] = 0.3 * room_speed;
+			if (place_meeting(x,y,obj_feet) or place_meeting(x,y,obj_grounded_enemy_parent)) and alarm[0] == -1{
+				alarm[0] = 0.3 * room_speed;
 					
-				}
 			}
 			
 			if image_index > 1{
@@ -20,7 +18,7 @@ if not global.pause {
 		
 		break;
 		//ON
-		case 1:
+		case 1:			
 			if image_index < 5{
 				image_speed = 0.9;
 				

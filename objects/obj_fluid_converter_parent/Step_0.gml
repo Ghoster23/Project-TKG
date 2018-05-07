@@ -52,7 +52,7 @@ if(not global.pause and on){
 								var cval  = tiles[i * grid_size + j];
 								var count = cval mod 30;
 								
-								if(count > 0){
+								if(count > 1){
 									var type  = cval div 30;
 									var diff  = type - val[type];
 									tiles[i * grid_size + j] = cval - 29 * diff;

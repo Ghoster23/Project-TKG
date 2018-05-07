@@ -30,7 +30,7 @@ if not global.pause {
 			if image_index == 4 {
 				var arrow = instance_create_layer(x,y,"IF",obj_e_arrow);
 				
-				arrow.e_stats[stats.atk] = owner.e_stats[stats.atk];
+				arrow.stat[stats.atk] = owner.stat[stats.atk];
 				arrow.damage = dmg;
 				arrow.owner = owner;
 				

@@ -6,15 +6,15 @@ offset = true;
 offs   = 48;
 
 //Stats
-e_stats[stats.mhp]  =  8;
-e_stats[stats.hp]   =  8;
-e_stats[stats.atk]  = 10;
-e_stats[stats.def]  =  1;
-e_stats[stats.satk] =  2;
-e_stats[stats.sdef] =  2;
-e_stats[stats.spd]  =  3;
+stat[stats.mhp]  =  8;
+stat[stats.hp]   =  8;
+stat[stats.atk]  = 10;
+stat[stats.def]  =  1;
+stat[stats.satk] =  2;
+stat[stats.sdef] =  2;
+stat[stats.spd]  =  3;
 
-prev_e_hp = e_stats[stats.hp];
+prev_e_hp = stat[stats.hp];
 
 damage = 2;
 

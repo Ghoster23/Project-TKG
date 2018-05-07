@@ -21,10 +21,8 @@ if(zooming){
 			cam_hg_c = cam_hg;
 		}
 		
-		if(abs(x - vfx) > tolerance){
-			var dir = point_direction(x,y,vfx,vfy);
-		
-			x += lengthdir_x(abs(x - vfx) * rate,dir);
+		if(abs(x - vfx) > tolerance){		
+			x += (vfx - x) * rate;
 			
 			zooming = true;
 		}else {
@@ -32,10 +30,8 @@ if(zooming){
 			
 		}
 		
-		if(abs(y - vfy) > tolerance){
-			var dir = point_direction(x,y,vfx,vfy);
-			
-			y += lengthdir_y(abs(y - vfy) * rate,dir);
+		if(abs(y - vfy) > tolerance){			
+			y += (vfy - y) * rate;
 			
 			zooming = true;
 		}else {
@@ -65,10 +61,8 @@ if(zooming){
 			cam_hg_c = cam_hg_z;
 		}
 		
-		if(abs(x - global.body.phy_position_x) > tolerance){
-			var dir = point_direction(x,y,global.body.phy_position_x,global.body.phy_position_y);
-		
-			x += lengthdir_x(abs(x - global.body.phy_position_x) * rate,dir);
+		if(abs(x - global.body.phy_position_x) > tolerance){		
+			x += (global.body.phy_position_x - x) * rate;
 			
 			zooming = true;
 		}else {
@@ -76,10 +70,8 @@ if(zooming){
 			
 		}
 		
-		if(abs(y - global.body.phy_position_y) > tolerance){
-			var dir = point_direction(x,y,global.body.phy_position_x,global.body.phy_position_y);
-			
-			y += lengthdir_y(abs(y - global.body.phy_position_y) * rate,dir);
+		if(abs(y - global.body.phy_position_y) > tolerance){			
+			y += (global.body.phy_position_y - y) * rate;
 			
 			zooming = true;
 		}else {

@@ -21,13 +21,13 @@ go      = false;
 start   = false;
 
 //Stats
-e_stats[stats.mhp]  =  10;
-e_stats[stats.hp]   =  10;
-e_stats[stats.atk]  =   5;
-e_stats[stats.satk] =   5;
-e_stats[stats.def]  =   5;
-e_stats[stats.sdef] =   5;
-e_stats[stats.spd]  =   3;
+stat[stats.mhp]  =  10;
+stat[stats.hp]   =  10;
+stat[stats.atk]  =   5;
+stat[stats.satk] =   5;
+stat[stats.def]  =   5;
+stat[stats.sdef] =   5;
+stat[stats.spd]  =   3;
 
 //States
 state        =     0;
@@ -47,13 +47,13 @@ dis = 0;
 image_speed = 0;
 
 //Stats
-e_stats[stats.mhp]  = 10;
-e_stats[stats.hp]   = 10;
-e_stats[stats.atk]  = 10;
-e_stats[stats.satk] =  0;
-e_stats[stats.def]  =  3;
-e_stats[stats.sdef] =  5;
-e_stats[stats.spd]  =  0;
+stat[stats.mhp]  = 10;
+stat[stats.hp]   = 10;
+stat[stats.atk]  = 10;
+stat[stats.satk] =  0;
+stat[stats.def]  =  3;
+stat[stats.sdef] =  5;
+stat[stats.spd]  =  0;
 
 ///Enemy unique
 //Side 2 Side

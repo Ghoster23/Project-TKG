@@ -14,7 +14,7 @@ if not global.pause and go{
 		}
 		
 		///Die
-	    if e_stats[stats.hp] <= 0 and sprite_index != spr_slime_d{
+	    if stat[stats.hp] <= 0 and sprite_index != spr_slime_d{
 	        sprite_index = spr_slime_d;
 	        image_index = 0;
 	        image_speed = 0.2;

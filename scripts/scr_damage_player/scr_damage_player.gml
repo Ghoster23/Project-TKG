@@ -15,7 +15,7 @@ if(not global.p_hurt      and  //Player not recently hurt
    not global.status[statuses.immune,0] and
    global.p_stats[stats.hp] > 0){             //Player alive
 	
-	global.p_stats[stats.hp] -= ceil(other.damage * other.e_stats[other.mult] div global.p_stats[other.divi]);
+	global.p_stats[stats.hp] -= ceil(other.damage * other.stat[other.mult] div global.p_stats[other.divi]);
 	
 }
 

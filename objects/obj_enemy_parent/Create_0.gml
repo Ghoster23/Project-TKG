@@ -21,18 +21,22 @@ go      = false;
 start   = false;
 
 //Stats
-e_stats[stats.mhp]  = 10;
-e_stats[stats.hp]   = 10;
-e_stats[stats.atk]  =  5;
-e_stats[stats.def]  =  5;
-e_stats[stats.satk] =  5;
-e_stats[stats.sdef] =  5;
-e_stats[stats.spd]  =  3;
+stat[stats.mhp]  = 10;
+stat[stats.hp]   = 10;
+stat[stats.atk]  =  5;
+stat[stats.def]  =  5;
+stat[stats.satk] =  5;
+stat[stats.sdef] =  5;
+stat[stats.spd]  =  3;
 
 damage = 0;
 mult   = stats.atk;
 divi   = stats.def;
 kb_amount = 0;
+
+//Statuses
+status_list  = ds_list_create();
+status_count = 0;
 
 //States
 state        =     0;

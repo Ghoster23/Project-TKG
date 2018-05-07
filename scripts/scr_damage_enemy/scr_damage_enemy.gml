@@ -25,9 +25,9 @@ if(not damaged and instance_exists(other) and
 	
 	//Damage
 	if(global.status[statuses.ohko,0] == 0){
-		e_stats[stats.hp] -= round(dmg * (global.p_stats[ml] div e_stats[dv]));
+		stat[stats.hp] -= round(dmg * (global.p_stats[ml] div stat[dv]));
 	}else {
-		e_stats[stats.hp] = 0;
+		stat[stats.hp] = 0;
 	}
 	
 	//Knockback
@@ -40,5 +40,5 @@ if(not damaged and instance_exists(other) and
 	
 	//Show damage
 	var pop = instance_create_layer(x,y-16 + 16 * instance_number(obj_damage_done_pop),layer,obj_damage_done_pop);
-	pop.dmg = dmg * (global.p_stats[stats.atk] div e_stats[stats.def]);
+	pop.dmg = dmg * (global.p_stats[stats.atk] div stat[stats.def]);
 }

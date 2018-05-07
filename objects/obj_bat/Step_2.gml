@@ -66,7 +66,7 @@ if flash == false{
 }
 
 ///Go to death state
-if e_stats[stats.hp] <= 0 {
+if stat[stats.hp] <= 0 {
 	state = 3;
 		
 }

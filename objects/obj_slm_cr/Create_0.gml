@@ -5,15 +5,15 @@ image_speed = 0.2;
 image_alpha = 0.7;
 
 //Stats
-e_stats[stats.mhp]  = 20;
-e_stats[stats.hp]   = 20;
-e_stats[stats.atk]  =  2;
-e_stats[stats.def]  =  4;
-e_stats[stats.satk] =  8;
-e_stats[stats.sdef] =  4;
-e_stats[stats.spd]  =  2;
+stat[stats.mhp]  = 20;
+stat[stats.hp]   = 20;
+stat[stats.atk]  =  2;
+stat[stats.def]  =  4;
+stat[stats.satk] =  8;
+stat[stats.sdef] =  4;
+stat[stats.spd]  =  2;
 
-prev_e_hp = e_stats[stats.hp];
+prev_e_hp = stat[stats.hp];
 
 damage = 2;
 mult = stats.satk;

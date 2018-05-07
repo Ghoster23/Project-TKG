@@ -13,5 +13,5 @@ once = false;
 damage    = 50;
 kb_amount = 30;
 
-e_stats[stats.atk] = 1;
+stat[stats.atk] = 1;
 divi = stats.def;

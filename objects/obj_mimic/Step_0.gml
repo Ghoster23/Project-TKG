@@ -43,7 +43,7 @@ if not global.pause {
 				phy_position_x += 5;
 				phy_position_y += 5;
 				phy_fixed_rotation = false;
-			    e_stats[stats.spd] = 4;
+			    stat[stats.spd] = 4;
 				
 			}
 		
@@ -61,7 +61,7 @@ if not global.pause {
 			scr_move_enemy(point_direction(x,y,path_get_point_x(path,1),path_get_point_y(path,1)),1);
 			
 	        ///Die
-	        if e_stats[stats.hp] <= 0 and sprite_index != spr_mimic_d{
+	        if stat[stats.hp] <= 0 and sprite_index != spr_mimic_d{
 				flash=true;
 				//stop flash
 				alarm[4]=room_speed*0.03;

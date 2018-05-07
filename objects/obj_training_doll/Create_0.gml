@@ -1,12 +1,12 @@
 event_inherited();
 
 //Stats
-e_stats[stats.mhp]  = 10000;
-e_stats[stats.hp]   = 10000;
-e_stats[stats.atk]  =     1;
-e_stats[stats.def]  =     1;
-e_stats[stats.satk] =     1;
-e_stats[stats.sdef] =     1;
-e_stats[stats.spd]  =     1;
+stat[stats.mhp]  = 10000;
+stat[stats.hp]   = 10000;
+stat[stats.atk]  =     1;
+stat[stats.def]  =     1;
+stat[stats.satk] =     1;
+stat[stats.sdef] =     1;
+stat[stats.spd]  =     1;
 
-prev_e_hp = e_stats[stats.hp];
+prev_e_hp = stat[stats.hp];

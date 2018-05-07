@@ -8,6 +8,6 @@ path = path_add();
 image_alpha = 0.7;
 image_speed = 1.5;
 
-e_stats[stats.spd] = 5;
+stat[stats.spd] = 5;
 alarms[0] = -1;
 prev_image_speed = 0;

@@ -31,7 +31,7 @@ if not global.pause{
     }
 
 	///Die
-    if e_stats[stats.hp] <= 0 {
+    if stat[stats.hp] <= 0 {
         global.act_enemies -= 1;
 		global.kld_enemies += 1;
         state = 3;

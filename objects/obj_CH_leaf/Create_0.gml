@@ -9,7 +9,7 @@ alarm[2] = 3 * room_speed;
 image_speed = 0;
 image_index = irandom_range(0,35);
 
-e_stats[stats.atk] = 1;
+stat[stats.atk] = 1;
 damage = 1;
 
 if(instance_exists(obj_CH_tree_state)){

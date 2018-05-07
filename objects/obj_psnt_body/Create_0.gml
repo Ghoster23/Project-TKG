@@ -30,15 +30,15 @@ weapon.skin_color = skin_color;
 weapon.owner = id;
 
 //Stats
-e_stats[stats.mhp]  = 20;
-e_stats[stats.hp]   = 20;
-e_stats[stats.atk]  =  5;
-e_stats[stats.def]  =  5;
-e_stats[stats.satk] =  3;
-e_stats[stats.sdef] =  3;
-e_stats[stats.spd]  =  3;
+stat[stats.mhp]  = 20;
+stat[stats.hp]   = 20;
+stat[stats.atk]  =  5;
+stat[stats.def]  =  5;
+stat[stats.satk] =  3;
+stat[stats.sdef] =  3;
+stat[stats.spd]  =  3;
 
-prev_e_hp = e_stats[stats.hp];
+prev_e_hp = stat[stats.hp];
 
 d = 0;
 d_ = 0;

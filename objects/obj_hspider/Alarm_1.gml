@@ -1,5 +1,5 @@
 /// @description decide the state
-if(e_stats[stats.hp] <= 0) and state != 3{
+if(stat[stats.hp] <= 0) and state != 3{
     state = 3;
         
 }
