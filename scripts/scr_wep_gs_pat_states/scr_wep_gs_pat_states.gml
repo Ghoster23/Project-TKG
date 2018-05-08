@@ -5,6 +5,7 @@ switch wep_pat_state {
 		
 		if(attack_key){
 			simple_attack=false;
+			chargetimer = 0;
 			wep_pat_state  = 2; //Go to windup
 			wep_ang_target = wep_ang_off + wep_ang_windup;
 			
@@ -20,6 +21,7 @@ switch wep_pat_state {
 		
 		if(attack_key){
 			simple_attack=false;
+			chargetimer = 0;
 			wep_pat_state  = 3; //Go to windup
 			wep_ang_target = wep_ang_off - wep_ang_windup;
 			
@@ -31,7 +33,6 @@ switch wep_pat_state {
 	break;
 	case 2: //Normal - charging
 		angle += wep_ang_off;
-			
 		if(attack_key_release){
 			simple_attack=true;
 		}
@@ -44,8 +45,14 @@ switch wep_pat_state {
 			wep_pat_nstate =    1;
 			wep_pat_state  =    4;
 		}else{
-			wep_ang_target = wep_ang_off - wep_ang_windup - 360;
-			wep_pat_state  =    9;
+			if(chargetimer >= 30){
+				chargetimer = 0;
+				wep_ang_target = wep_ang_off - wep_ang_windup - 360;
+				repeat360 = 1;
+				originalangle = angle;
+				wep_pat_state  =    9;	
+			}
+			chargetimer++;
 		}
 		
 	break;
@@ -64,12 +71,21 @@ switch wep_pat_state {
 			wep_pat_nstate =   0;
 			wep_pat_state  =   4;
 		}else{
-			wep_ang_target = wep_ang_off + wep_ang_windup + 360;
-			wep_pat_state  =    10;
+			if(chargetimer >= 30){
+				chargetimer = 0;
+				wep_ang_target = wep_ang_off + wep_ang_windup + 360;
+				repeat360 = 1;
+				originalangle = angle;
+				wep_pat_state  =    10;
+			}
+			chargetimer++;
 		}
 
 	break;
 	case 4: //Swing
+		with(global.body){
+			physics_apply_impulse(phy_position_x,phy_position_y,lengthdir_x(80,other.angle),lengthdir_y(80,other.angle));
+		}
 		angle += wep_ang_off;
 					
 		angle = wep_ang_target;
@@ -121,37 +137,123 @@ switch wep_pat_state {
 			ty = -1;
 		}
 	break;
+	
 	case 9: //360 swing normal
+		with(global.body){
+			physics_apply_impulse(phy_position_x,phy_position_y,lengthdir_x(60,other.angle),lengthdir_y(90,other.angle));
+		}
+		angle = originalangle; 
 		angle += wep_ang_off;
-		wep_ang_off = scr_aproach(wep_ang_off, wep_ang_target, 40);
+		wep_ang_off = scr_aproach(wep_ang_off, wep_ang_target, 30);
+		
+		if (angle >= 360){
+		     angle -= 360;
+		}
+		if (angle < 0){
+		     angle += 360;
+		}
+		
+		//Right
+		
+		if (angle > 315 or angle < 45){			    
+			owner.spr_side     =   0;  
+			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
+			swing.damage = dmg*0.5;
+			swing.kb_amount = global.p_stats[stats.atk]*20;
+			swing.phy_rotation = 0;
+		}
+		//Up	
+		else if angle < 135{  
+			owner.spr_side     =   3; 
+			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
+			swing.damage = dmg*0.5;
+			swing.kb_amount = global.p_stats[stats.atk]*10;
+			swing.phy_rotation = -90;
+		}
+		//Left
+		else if angle < 225{
+			owner.spr_side     =   2;   
+			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
+			swing.damage = dmg*0.5;
+			swing.kb_amount = global.p_stats[stats.atk]*10;
+			swing.phy_rotation = -180;
+		}
+		//Down
+		else if angle < 315{ 
+			owner.spr_side    =    1;   
+			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
+			swing.damage = dmg*0.5;
+			swing.kb_amount = global.p_stats[stats.atk]*10;
+			swing.phy_rotation = -180-90;
+		}
+		
 		if(wep_ang_off ==  wep_ang_target){
-			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
-			swing.damage = dmg;
-			swing.phy_rotation = - 120;
-			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
-			swing.damage = dmg;
-			swing.phy_rotation = - 240;
-			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
-			swing.damage = dmg;
-			swing.phy_rotation = - 360;
-			wep_pat_state = 0;
+			if(repeat360 == 0){
+				wep_pat_state = 0;
+			}else{
+				wep_pat_state = 9;
+				wep_ang_target = wep_ang_off - wep_ang_windup - 360;
+				repeat360--;
+			}
 		}
 		
 	break;
+	
 	case 10: //360 swing inverse 
+		with(global.body){
+			physics_apply_impulse(phy_position_x,phy_position_y,lengthdir_x(60,other.angle),lengthdir_y(90,other.angle));
+		}
+		angle = originalangle; 
 		angle += wep_ang_off;
-		wep_ang_off = scr_aproach(wep_ang_off, wep_ang_target, 40);
+		wep_ang_off = scr_aproach(wep_ang_off, wep_ang_target, 30);
+		
+		if (angle >= 360){
+		     angle -= 360;
+		}
+		if (angle < 0){
+		     angle += 360;
+		}
+		//Right
+		if (angle > 315 or angle < 45){			    
+			owner.spr_side     =   0;      
+			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
+			swing.damage = dmg*0.5;
+			swing.kb_amount = global.p_stats[stats.atk]*10;
+			swing.phy_rotation = 0;
+		}
+		//Up
+		else if angle < 135{  
+			owner.spr_side     =   3; 
+			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
+			swing.damage = dmg*0.5;
+			swing.kb_amount = global.p_stats[stats.atk]*10;
+			swing.phy_rotation = -90;
+		}
+		//Left
+		else if angle < 225{
+			owner.spr_side     =   2;
+			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
+			swing.damage = dmg*0.5;
+			swing.kb_amount = global.p_stats[stats.atk]*10;
+			swing.phy_rotation = -180;
+		}
+		//Down
+		else if angle < 315{ 
+			owner.spr_side    =    1;   
+			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
+			swing.damage = dmg*0.5;
+			swing.kb_amount = global.p_stats[stats.atk]*10;
+			swing.phy_rotation = -180-90;
+		}
+		
 		if(wep_ang_off ==  wep_ang_target){
-			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
-			swing.damage = dmg;
-			swing.phy_rotation = - 120;
-			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
-			swing.damage = dmg;
-			swing.phy_rotation = - 240;
-			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
-			swing.damage = dmg;
-			swing.phy_rotation = - 360;
-			wep_pat_state = 1;
+			if(repeat360 == 0){
+				wep_pat_state = 1;
+			}else{
+				wep_pat_state = 10;
+				wep_ang_target = wep_ang_off - wep_ang_windup + 360;
+				repeat360--;
+			}
 		}
 	break;
 }

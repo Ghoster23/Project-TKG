@@ -1,5 +1,5 @@
 event_inherited();
-
+owner = noone;
 //Pause
 prev_image_speed = 0;
 

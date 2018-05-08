@@ -19,4 +19,4 @@ event_inherited();
 
 is = 0.266;
 
-test = instance_create_layer(x,y,layer,obj_testweight);
+//test = instance_create_layer(x,y,layer,obj_testweight);
