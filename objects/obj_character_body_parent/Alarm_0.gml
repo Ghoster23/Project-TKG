@@ -1,6 +1,5 @@
 /// @description Dash done
 //Become visible
-head.visible          = true;
 global.weapon.visible = true;
 
 //Destroy roll

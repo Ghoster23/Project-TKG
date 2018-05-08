@@ -1,5 +1,5 @@
 if(room == rm_level){
-	if(!obj_pglobs.dead){
+	if(!global.dead){
 		if(not zooming and not zoomed){
 			if(x == vfx and y == vfy and not stopped){
 	

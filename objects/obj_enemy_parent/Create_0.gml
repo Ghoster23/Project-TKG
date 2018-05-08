@@ -29,6 +29,7 @@ stat[stats.satk] =  5;
 stat[stats.sdef] =  5;
 stat[stats.spd]  =  3;
 
+//Contact Damage
 damage = 0;
 mult   = stats.atk;
 divi   = stats.def;
@@ -37,12 +38,17 @@ kb_amount = 0;
 //Statuses
 status_list  = ds_list_create();
 status_count = 0;
+alarm[1]     = 0.5 * room_speed;
+
+stuck = false;
 
 //States
 state        =     0;
-state_change = false;
 prev_state   =     0;
+state_change = false;
 atk_cd       = false;
+
+
 ini_point_x  =     x;
 ini_point_y  =     y;
 

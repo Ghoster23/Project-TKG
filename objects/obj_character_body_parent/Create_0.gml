@@ -1,7 +1,4 @@
 /// @description Initiate Variables
-head   = instance_create_layer(x,y-3,layer,     obj_head);
-head.sprite_index  = head_spr;
-
 hands  = instance_create_layer(x,  y,layer,    obj_hands);
 hands.sprite_index = hands_spr;
 
@@ -13,16 +10,55 @@ if(global.weapon != -1){
 	weapon = instance_create_layer(x,y,layer,global.weapon);
 }
 
-event_inherited();
+visible            = true;
+phy_fixed_rotation = true;
+solid              = false;
 
-scr_get_input();
+//Pause
+prev_image_speed = 0;
+prev_rotation    = 0;
 
+for(var i = 0; i < alarm_count; i++){
+	alarms[i] = -1;
+}
+
+//Got damaged
+flash     = false;
+damaged   = false;
+prev_e_hp = 10;
+
+//Move
+path = 0;
+
+dash_cd = false;
+
+//Stats
+stat[stats.mhp]  = 10;
+stat[stats.hp]   = 10;
+stat[stats.atk]  =  5;
+stat[stats.def]  =  5;
+stat[stats.satk] =  5;
+stat[stats.sdef] =  5;
+stat[stats.spd]  =  3;
+
+//Statuses
+status_list  = ds_list_create();
+status_count = 0;
+
+hurt   = false;
+stuck  = false;
+inv    = false;
+immune = false;
+
+//States
 state        = 0;
 prev_state   = 0;
 state_change = false;
+prev_hp      = stat[stats.hp];
 
-prev_hp = global.p_stats[stats.hp];
+scr_get_input();
 
+//Movement
 hspd  = 0;
 vspd  = 0;
 
@@ -36,22 +72,13 @@ dir   = 0;
 //Appearence
 image_speed =   1;
 spr_side    =   1;
-head_offset =   0;
 rotation    =   0;
 is          = 0.4;
 hs          = false;
 
 spr_body = body_sprs[3];
 
-//Pause
-for(i = 0; i < 4; i++){
-	alarms[i] = -1;
-}
-
-//Statuses
-alarm[2] = 1;
-
-scr_player_status_init();
+event_inherited();
 
 //Body particle emitter
 global.body_em = part_emitter_create(global.ps_if);

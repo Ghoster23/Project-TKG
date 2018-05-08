@@ -3,7 +3,7 @@ randomize();
 
 chance = irandom(99) + 1;
 
-if(not global.status[statuses.midas,0]){
+if(not global.body.stuck){ //FIX ME
 	if(chance <= 10){
 		return scr_spawn_item(   item_type.heart,  0,  -4, x, y);
               

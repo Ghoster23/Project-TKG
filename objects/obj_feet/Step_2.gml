@@ -8,7 +8,7 @@ part_emitter_region(global.ps,global.feet_em,x + global.body.hspd * 2,x + global
 
 if(not global.pause){
 	//Get poisoned
-	if(not global.p_inv && global.status[statuses.immune,0] <= 0 && poison_counter < 20){
+	if(!global.body.inv && !global.body.immune && poison_counter < 20){
 		var tile = instance_place( x, y, obj_fluid_tile);
 			
 		if(tile != noone){
@@ -33,7 +33,7 @@ if(not global.pause){
 		poison_counter -= 0.25;
 		
 	}else if(poison_counter >= 15){
-		scr_player_status_apply(statuses.poison,6);
+		scr_status_apply(statuses.poison,6,global.body);
 		
 	}
 	

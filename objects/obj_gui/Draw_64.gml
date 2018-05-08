@@ -1,4 +1,4 @@
-if(!obj_pglobs.dead && (room == rm_level || room == rm_lvl_editor_test || room == rm_CH_boss)){
+if((room == rm_level || room == rm_lvl_editor_test || room == rm_CH_boss) && !global.dead){
 m = global.ratio;
 
 xx = 64 * m;

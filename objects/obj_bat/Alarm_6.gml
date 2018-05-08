@@ -1,3 +1,2 @@
-/// @description Dash
-dash = true;
-alarm[7] = 12;
+///@description Reset Dash cd
+dash_cd = false;

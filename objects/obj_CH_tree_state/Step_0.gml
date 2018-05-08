@@ -131,7 +131,7 @@ if not global.pause {
 			if stop == 3{
 				state = 5;
 				
-				scr_player_status_apply(2,20);
+				scr_status_apply(2,20,global.body);
 			}
 		
 	    break;

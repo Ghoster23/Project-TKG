@@ -1,5 +1,5 @@
-/// @description Move the player
-if not global.pause {	
+/// @description Lots of things!!
+if(not global.pause){	
 	//States
 	switch state {
 		case 0: //Free
@@ -27,14 +27,14 @@ if not global.pause {
                        
 			}
 			
-			image_speed  = is * global.p_stats[stats.spd];
+			image_speed  = is * stat[stats.spd];
 			image_xscale = 1;
 		break;
 		case 1: //Stuck
 			
 		break;
 		case 2: //Dash
-			if(!global.dash_cd){
+			if(!dash_cd){
 				scr_dash_state();
 				
 			}
@@ -57,7 +57,7 @@ if not global.pause {
 				image_xscale = -1;
 			}
 			
-			global.p_inv = true;
+			inv = true;
 		break;
 		case 3: //Dead
 		break;

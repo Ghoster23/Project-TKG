@@ -18,9 +18,9 @@ if not global.pause {
 				
 			}
 			
-			if(global.status[5,0]){
+			/*if(global.status[5,0]){
 				draw_script = scr_draw_outline;
-			}
+			}FIX ME*/
 
 			if blink == true{
 			    if image_speed == 0{

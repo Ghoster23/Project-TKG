@@ -1,8 +1,11 @@
 application_surface_draw_enable(false);
 scr_unique_inst();
 
+//Room measurements
 global.roomwd = 672;
 global.roomhg = 416;
+
+//Ratios
 global.as_ratio = 1;
 global.ratio    = 1;
 

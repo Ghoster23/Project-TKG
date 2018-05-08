@@ -5,7 +5,7 @@ if not go{
 	//state 0 = move like a spidy
 	//state 1 = hide and throw bombs
 	//state 2 = ded
-	event_perform(ev_alarm,1);
+	event_perform(ev_alarm,4);
 }else {
 	damaged = false;
 }

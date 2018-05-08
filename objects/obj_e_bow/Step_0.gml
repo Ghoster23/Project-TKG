@@ -32,11 +32,11 @@ if not global.pause {
 				
 				arrow.stat[stats.atk] = owner.stat[stats.atk];
 				arrow.damage = dmg;
-				arrow.owner = owner;
+				arrow.owner  = owner;
 				
 				owner.cd_arrow = true;
 				owner.state = 1;
-				owner.alarm[1] = 2 * room_speed;
+				owner.alarm[5] = 2 * room_speed;
 			}
 	
 			if image_index >= 5{

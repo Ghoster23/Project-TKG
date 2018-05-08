@@ -1,6 +1,6 @@
 scr_unique_inst();
 global.gen = true;
-once = false;
+once       = false;
 
 //Gen Cursor
 gx = room_width/2;

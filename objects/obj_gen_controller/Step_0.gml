@@ -134,6 +134,6 @@ if(global.gen){
 		
 	}else {
 		instance_destroy();
-		global.gen = false;
+		
 	}	
 }

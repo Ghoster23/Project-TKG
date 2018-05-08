@@ -22,6 +22,6 @@ move_time  = 0.7;
 state_time = 1.5;
 hide_time  = 0.5;
 
-for(i = 0; i < 6; i += 1){	
+for(i = 0; i < 8; i += 1){	
 	alarms[i] = -1;
 }

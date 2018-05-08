@@ -6,7 +6,8 @@
     "children": [
         "d21694f6-61c2-4198-a249-30b7fa4fc455",
         "7cfc629f-ec4e-49d0-b88e-25d15cae1ea1",
-        "1448d7fa-8ecc-4604-87f9-8cfb3ff93966"
+        "bb1b1a3b-40ab-4126-8e8a-672ae3679613",
+        "45e73f24-b0eb-4cdb-b8ff-764867c851ea"
     ],
     "filterType": "GMScript",
     "folderName": "Player + Enemies",

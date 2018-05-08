@@ -16,6 +16,8 @@ hands_spr = spr_jason_hands;
 
 feet_spr  = spr_jason_feet;
 
+alarm_count = 4;
+
 //General
 event_inherited();
 

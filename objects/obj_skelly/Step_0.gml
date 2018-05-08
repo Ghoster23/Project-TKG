@@ -58,7 +58,7 @@ if go and not global.pause{
     
     ///Get Damaged
 	if not damaged {
-		scr_damage_enemy();
+		scr_damage_entity();
 		
 	}
 	

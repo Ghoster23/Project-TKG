@@ -1,71 +1,11 @@
-///@description Updates a player status effect and applies its effect
-///@param Status
-{
-	var status = argument0;
-	var count  = argument1;
-
-	if(count > 1){		
-		switch(status){
-			case statuses.poison :
-				hurt = true;
-				
-				if(stat[stats.hp] >= 0){
-					stat[stats.hp] -= 1;
-				}
-		
-			break;
-			case statuses.stuck :
-				stuck = true;
-			
-			break;
-			case statuses.regen :
-				if(stat[stats.hp] < stat[stats.mhp]){
-					stat[stats.hp] += 1;
-				}
-				
-			break;
-			case statuses.compass :
-				
-				
-			break;
-			case statuses.ohko :
-				if(variable_instance_exists(self,weapon) && instance_exists(weapon)){
-					draw_script = scr_draw_outline;
-				}
-				
-			break;
-			case statuses.seeall :
-				
-				
-			break;
-			case statuses.midas :
-			
-			
-			break;
-			case statuses.immune :
-				draw_script      = scr_draw_outline;
-				
-			break;
-		}
-		
-		count -= 1;
+///@description Checks status effects on entity
+for(var i = 0; i < status_count; i++){
+	var status = status_list[| i];
 	
-	}else if(count == 1){
-		count = 0;
-		
-		switch stat{
-			default:
-			break;
-			case statuses.ohko :
-				if(variable_instance_exists(self,weapon) && instance_exists(weapon)){
-					weapon.draw_script = null;
-				}
-				
-			break;
-			case statuses.immune :
-				draw_script      = null;
-				
-			break;
-		}
+	if(status[1] > 0){
+		status[1] = scr_status_effect(status[0],status[1]);
+		status_list[| i] = [status[0],status[1]];
+	}else {
+		ds_list_delete(status_list,i);
 	}
 }

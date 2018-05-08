@@ -3,11 +3,13 @@ event_inherited();
 ///Exist
 if go and not global.pause{
 	
-	scr_pause_end(7);
+	scr_pause_end(8);
+	
+	image_blend = c_white;
     
     ///Enemy Behaevior
     switch(state){
-        case 0:  //Walk around a bit
+        case 0:  //Walk away
 			image_speed = 0.4;
             scr_move_enemy(point_direction(global.body.x,global.body.y,x,y),1);
             
@@ -68,8 +70,6 @@ if go and not global.pause{
 			image_blend = c_teal;
 		break;
 	}
-    
-    image_blend = c_white;
 	
 	if instance_exists(tell){
 		tell.image_xscale = weapon.image_index / 4;
@@ -77,5 +77,5 @@ if go and not global.pause{
 	}
 	
 }else if go{
-	scr_pause_start(7);
+	scr_pause_start(8);
 }

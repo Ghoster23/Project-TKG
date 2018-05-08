@@ -8,14 +8,14 @@ if go and not global.pause{
     switch(state){
 		///Idle
         case 0:
-			image_speed=1.5;
+			image_speed = 1.5;
 			scr_idle_enemy(32,20);
             
         break;
 		
 		///Chase the player
         case 1:
-			image_speed=1.5;
+			image_speed = 1.5;
             scr_move_enemy(point_direction(x,y,global.body.x,global.body.y),1);
             
         break;
@@ -24,19 +24,19 @@ if go and not global.pause{
         case 2:
 			image_speed = 0;
 			
-			if alarm[6] == -1 and not dash_cd{
-				alarm[6] = 0.33 * room_speed;
+			if(alarm[6] == -1 and not dash_cd){
+				alarm[6] = (1/3) * room_speed;
 			}
             
-			if dash {
+			if(dash){
 				scr_move_enemy(dir,4);
 				part_emitter_region(global.ps_if,em,x,x,y,y,pt_shape_smoke,0);
 				part_emitter_burst(global.ps_if,em,global.pt_smoke,1);
 			
 				//Cooldown
-		        if dash_cd == false{
-					alarm[1] = 15;
-					dash_cd = true;
+		        if(dash_cd == false){
+					alarm[5] = 0.5 * room_speed;
+					dash_cd  = true;
 		        }
 			}
 			

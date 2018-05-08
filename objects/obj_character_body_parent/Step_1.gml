@@ -7,7 +7,7 @@ if(not global.pause){
 	scr_pause_end(4);
 	
 	//Become Stuck
-	if(global.status[1,0] != 0){
+	if(stuck){
 		state = 1;
 	}
 	
@@ -36,7 +36,7 @@ if(not global.pause){
 			}
 		break;
 		case 1: //Stuck
-			if(global.status[1,0] == 0){
+			if(not stuck){
 				state = prev_state;
 			}
 		break;

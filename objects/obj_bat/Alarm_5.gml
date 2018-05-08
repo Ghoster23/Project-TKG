@@ -1,2 +1,2 @@
-///@description Die
-instance_destroy();
+/// @description Dash stop
+dash = false;

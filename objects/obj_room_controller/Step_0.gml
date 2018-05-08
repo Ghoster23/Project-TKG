@@ -1,7 +1,7 @@
 /* Things to do on room change */
 if(global.room_change){
 	//Check path to the special room if potion is active
-	if(room == rm_level and global.status[3,0]){
+	if(room == rm_level){ //FIX ME
 		//path = scr_rm2rm_path(global.current_row * 8 + global.current_column,global.rm_sp_id);
 
 	}

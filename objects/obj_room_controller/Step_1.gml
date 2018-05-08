@@ -44,7 +44,7 @@ switch state {
 	
 			for(var i = 0; i < 3; i++){
 				if(equiped[i] == equips.rod_of_asclepius){
-					scr_player_status_apply(statuses.regen, 4);
+					scr_status_apply(statuses.regen, 4, global.body);
 				}
 			}
 		}

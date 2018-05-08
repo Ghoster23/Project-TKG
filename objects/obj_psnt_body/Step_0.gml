@@ -23,7 +23,7 @@ if go and not global.pause{
         case 2:  //Attack the player
             if not cd_swing {
                 cd_swing = true;
-                alarm[2] = 5;
+                alarm[4] = 5;
                 
             }
         

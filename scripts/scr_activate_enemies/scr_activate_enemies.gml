@@ -13,7 +13,9 @@ if enemy_list != noone { //If enemies were found
 		ds_list_delete(enemy_list,0);     //Remove it from the list
 		
 		with enemy {      //Activate the obj_enemy_parent
-			start = true;
+			alarm[0] = 1 * room_speed;
+			
+			scr_add_to_active_list();
 		}
 	}
 	

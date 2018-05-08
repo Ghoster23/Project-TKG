@@ -6,7 +6,7 @@ if(instance_exists(obj_cursor)){
 	mousey = obj_cursor.y;
 }else {
 	mousex = mouse_x;
-	mousey = mouse_y
+	mousey = mouse_y;
 }
 
 if check == true{
@@ -100,7 +100,7 @@ if check == true{
 
 }
 
-if state != "closed" || obj_pglobs.dead || state = "generation" {
+if state != "closed" || global.dead || state = "generation" {
 	global.pause = true;
 }else {
 	global.pause = false;

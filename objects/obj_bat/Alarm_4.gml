@@ -1,2 +1,3 @@
-///@description End flash
-flash = false;
+/// @description Dash Buildup
+dash = true;
+alarm[7] = 12;
