@@ -8,6 +8,7 @@ feet.sprite_index  = feet_spr;
 weapon = noone;
 if(global.weapon != -1){
 	weapon = instance_create_layer(x,y,layer,global.weapon);
+	weapon.owner = id;
 }
 
 visible            = true;
