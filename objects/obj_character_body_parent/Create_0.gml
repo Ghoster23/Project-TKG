@@ -8,7 +8,7 @@ feet.sprite_index  = feet_spr;
 weapon = noone;
 
 if(global.weapon != -1){
-	scr_create_weapon(x,y,layer,global.weapon,id);
+	weapon = scr_create_weapon(x,y,layer,global.weapon,id);
 }
 
 visible            = true;
@@ -57,7 +57,7 @@ modf[stats.luck] = 0;
 //Statuses
 status_list  = ds_list_create();
 status_count = 0;
-alarm[3]     = 1;
+alarm[3]     = 0.5 * room_speed;
 
 stuck  = false;
 inv    = false;

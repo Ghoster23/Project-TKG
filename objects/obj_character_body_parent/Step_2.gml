@@ -43,6 +43,8 @@ switch state{
 			image_speed  = is * len;
 			
 		}else {
+			sprite_index = body_sprs[4];
+			image_index  = spr_side;
 			image_speed = 0;
 			
 		}
@@ -57,7 +59,7 @@ switch state{
 	case 1: //Stuck
 	break;
 	case 2: //Dash						
-		image_speed  = is * len;
+		image_speed  = is * len * 0.5;
 		sprite_index = roll_sprs[spr_side];
 			
 		if(spr_side == 3){
@@ -70,7 +72,7 @@ switch state{
 	break;
 	case 4: //Idle
 		image_speed   = 0.4;
-		sprite_index  = body_sprs[4];
+		sprite_index  = body_sprs[5];
 		hands.visible = true;
 	break;
 }

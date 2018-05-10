@@ -914,7 +914,7 @@
             "Key": "1cc24e08-9bf5-40ab-b49d-447ce8bb4185",
             "Value": {
                 "id": "96b8f5e9-1337-4a1f-b0db-c2a26b3bc79d",
-                "resourcePath": "sprites\\spr_jason_body_still\\spr_jason_body_still.yy",
+                "resourcePath": "sprites\\spr_jason_body_idle\\spr_jason_body_idle.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -3316,6 +3316,14 @@
                 "id": "2cb9f0cf-46f4-4eca-a122-8fbf8f766607",
                 "resourcePath": "objects\\obj_birds\\obj_birds.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "69e0e5c5-3eac-49dd-890b-9886becf2fd3",
+            "Value": {
+                "id": "1e5c75fe-d9f7-4d8d-b922-894cd1ee0026",
+                "resourcePath": "sprites\\spr_jason_body_still\\spr_jason_body_still.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

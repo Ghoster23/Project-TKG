@@ -39,22 +39,24 @@ if(not global.pause){
 		case 0: //Free
 			len = 0;
 			
-			if(not stuck){
-				if(dead){
-					global.dead = true;
-					state = 3;
-				}else if(not(input)){
-					state = 4;
-					
-					if(instance_exists(weapon)){
-						weapon.state = 1;
-					}
-				}else if(dash_key && alarm[1] == -1 && (xaxis != 0 || yaxis != 0)){
+			if(dead){
+				state = 3;
+				
+			}else if(stuck){
+				state = 1;
+				
+			}else if(input){
+				if(dash_key && alarm[1] == -1 && (xaxis != 0 || yaxis != 0)){
 					state = 2;
 				}
-			}else {
-				state = 1;
+				
+				alarm[4] = -1;
+				
+			}else if(alarm[4] == -1){
+				alarm[4] = 1.5 * room_speed;
+				
 			}
+			
 		break;
 		case 1: //Stuck
 			len = 0;
@@ -66,32 +68,25 @@ if(not global.pause){
 		case 2: //Dash
 		break;
 		case 3: //Dead
+			global.dead = true;
 		break;
 		case 4: //Idle
 			if(state_change){
 				state_change = false;
 				state        = prev_state;
-				global.weapon.state = 0;
+				weapon.state = 0;
 			}
 			if(input){
 				state = 0;
-				global.weapon.state = 0;
+				weapon.state = 0;
 			}
 		break;
 	}
 	
-	if(prev_state != state && state != 1){
-	    prev_state = state;
-	    state_change = true;
-	}else {
-		state_change = false;
+	if(input){
+		alarm[3] = -1;
 	}
 	
 }else {
-	if(state != 4 && obj_ig_menu_controller.state == "status"){
-		prev_state   = state;
-		state        = 4;
-		state_change = true;
-		global.weapon.state = 1;
-	}
+	
 }
