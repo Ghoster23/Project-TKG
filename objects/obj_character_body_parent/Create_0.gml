@@ -6,9 +6,9 @@ feet   = instance_create_layer(x,  y,layer,     obj_feet);
 feet.sprite_index  = feet_spr;
 
 weapon = noone;
+
 if(global.weapon != -1){
-	weapon = instance_create_layer(x,y,layer,global.weapon);
-	weapon.owner = id;
+	scr_create_weapon(x,y,layer,global.weapon,id);
 }
 
 visible            = true;
@@ -26,12 +26,11 @@ for(var i = 0; i < alarm_count; i++){
 //Got damaged
 flash     = false;
 damaged   = false;
-prev_e_hp = 10;
+prev_hp   = 10;
+dead      = false;
 
 //Move
 path = 0;
-
-dash_cd = false;
 
 //Stats
 stat[stats.mhp]  = 10;
@@ -41,18 +40,33 @@ stat[stats.def]  =  5;
 stat[stats.satk] =  5;
 stat[stats.sdef] =  5;
 stat[stats.spd]  =  3;
+stat[stats.arm]  =  0;
+stat[stats.luck] =  0;
+
+//Modifiers
+modf[stats.mhp]  = 0;
+modf[stats.hp]   = 0;
+modf[stats.atk]  = 0;
+modf[stats.def]  = 0;
+modf[stats.satk] = 0;
+modf[stats.sdef] = 0;
+modf[stats.spd]  = 0;
+modf[stats.arm]  = 0;
+modf[stats.luck] = 0;
 
 //Statuses
 status_list  = ds_list_create();
 status_count = 0;
+alarm[3]     = 1;
 
-hurt   = false;
 stuck  = false;
 inv    = false;
 immune = false;
+innoc  = false;
+flight = 0;
 
 //States
-state        = 0;
+state        = 4;
 prev_state   = 0;
 state_change = false;
 prev_hp      = stat[stats.hp];
@@ -78,6 +92,8 @@ is          = 0.4;
 hs          = false;
 
 spr_body = body_sprs[3];
+
+shout = false;
 
 event_inherited();
 

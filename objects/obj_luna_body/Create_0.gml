@@ -22,8 +22,8 @@ alarm_count = 4;
 event_inherited();
 
 //Visuals
-is = 0.266;
-hs = true;
+is = 0.2;
+hs = false;
 
 //Abillity
 global.p_LVB_water = 0;

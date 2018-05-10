@@ -14,7 +14,7 @@ state = 0;
 
 des = true;
 
-stat[stats.atk] = 2;
+divi = stats.def;
 damage = 2;
 
 owner = -1;

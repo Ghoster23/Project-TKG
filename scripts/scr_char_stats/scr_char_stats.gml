@@ -1,6 +1,6 @@
 switch global.char {
 	case 0: //Jason Carlisle
-		global.p_stats[stats.mhp] = 20;
+		global.p_stats[stats.mhp]   = 20;
 		global.p_stats[stats.hp]    = 20;
 		global.p_stats[stats.atk]   = 10;
 		global.p_stats[stats.def]   =  5;

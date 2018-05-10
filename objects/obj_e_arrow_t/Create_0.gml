@@ -4,8 +4,8 @@ offset=0;
 phy_fixed_rotation = true;
 visible = false;
 
-stat[stats.atk] = 10;
-damage = 2;
+divi = stats.def;
+damage = 8;
 
 hspd = 0;
 vspd = 0;

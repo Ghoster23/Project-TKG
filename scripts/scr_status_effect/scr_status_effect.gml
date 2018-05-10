@@ -7,10 +7,8 @@
 
 	if(count > 1){		
 		switch(status){
-			case statuses.poison :
-				hurt = true;
-				
-				if(stat[stats.hp] >= 0){
+			case statuses.poison :				
+				if(stat[stats.hp] > 0){
 					stat[stats.hp] -= 1;
 				}
 		
@@ -44,27 +42,25 @@
 			
 			break;
 			case statuses.immune :
-				draw_script      = scr_draw_outline;
+				draw_script = scr_draw_outline;
+				immune      = true;
 				
 			break;
 		}
-		
-		count -= 1;
 	
-	}else if(count == 1){
-		count = 0;
-		
+	}else if(count == 1){		
 		switch stat{
 			default:
 			break;
 			case statuses.ohko :
-				if(variable_instance_exists(self,weapon) && instance_exists(weapon)){
+				if(variable_instance_exists(id,weapon) && instance_exists(weapon)){
 					weapon.draw_script = null;
 				}
 				
 			break;
 			case statuses.immune :
-				draw_script      = null;
+				draw_script = null;
+				immune      = false;
 				
 			break;
 		}

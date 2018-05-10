@@ -60,30 +60,30 @@ with(obj_inventory_controller){
 	}else if(type == item_type.heart){
 		switch item {
 			case heart.heart:
-				if(global.p_stats[stats.hp] < global.p_stats[stats.mhp]){
-					global.p_stats[stats.hp] += amount;
+				if(stat[stats.hp] < stat[stats.mhp]){
+					stat[stats.hp] += amount;
 					
-					if(global.p_stats[stats.hp] > global.p_stats[stats.mhp]){
-						amount    = global.p_stats[stats.hp] - global.p_stats[stats.mhp];
-						global.p_stats[stats.hp] = global.p_stats[stats.mhp];
+					if(stat[stats.hp] > stat[stats.mhp]){
+						amount    = stat[stats.hp] - stat[stats.mhp];
+						stat[stats.hp] = stat[stats.mhp];
 					}else {
 						amount = -1;
 					}
 				}
 			break;
 			case heart.armor:
-				global.p_stats[stats.arm] += amount;
+				stat[stats.arm] += amount;
 				amount = -1;
 			break;
 			case heart.container:
-				if(global.p_stats[stats.mhp] < 40){
-					global.p_stats[stats.mhp] += amount;
+				if(stat[stats.mhp] < 40){
+					stat[stats.mhp] += amount;
 					amount = -1;
 				}
 			break;
 		}
 	}else if(type == item_type.currency){
-		global.coins += amount;
+		global.coins       += amount;
 		global.total_coins += amount;
 		amount = -1;
 	}

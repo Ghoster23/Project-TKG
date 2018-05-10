@@ -13,7 +13,8 @@ alarm_count      = 0;
 //Get damaged
 flash     = false;
 damaged   = false;
-prev_e_hp = 10;
+prev_hp = 10;
+dead      = false;
 
 //Activation
 path    = 0;
@@ -29,6 +30,15 @@ stat[stats.satk] =  5;
 stat[stats.sdef] =  5;
 stat[stats.spd]  =  3;
 
+//Modifiers
+modf[stats.mhp]  = 0;
+modf[stats.hp]   = 0;
+modf[stats.atk]  = 0;
+modf[stats.def]  = 0;
+modf[stats.satk] = 0;
+modf[stats.sdef] = 0;
+modf[stats.spd]  = 0;
+
 //Contact Damage
 damage = 0;
 mult   = stats.atk;
@@ -40,7 +50,9 @@ status_list  = ds_list_create();
 status_count = 0;
 alarm[1]     = 0.5 * room_speed;
 
-stuck = false;
+stuck  = false;
+immune = false;
+inv    = false;
 
 //States
 state        =     0;

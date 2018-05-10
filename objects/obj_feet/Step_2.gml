@@ -1,5 +1,3 @@
- /// @description Insert description here
-// You can write your code in this editor
 x = global.body.phy_position_x;
 y = global.body.phy_position_y;
 
@@ -37,19 +35,5 @@ if(not global.pause){
 		
 	}
 	
-	prev_poison_counter = poison_counter;
-	
-	/*for(var i = 0; i < 3; i++){
-		if(global.equiped[i] == 7){
-			var tile = instance_place(x,y,obj_fluid_tile);
-			
-			if(tile != noone){
-				with(tile){
-					active = true;
-				}
-			}	
-			break;
-		}
-	}*/
-	
+	prev_poison_counter = poison_counter;	
 }

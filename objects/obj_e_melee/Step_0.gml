@@ -1,10 +1,5 @@
-
-if not global.pause and instance_exists(owner){
-	
-	if alarm_0 != -1{
-		alarm[0] = alarm_0;
-		alarm_0 = -1;
-	}
+if not global.pause and instance_exists(owner){	
+	scr_pause_end(alarm_count);
 	
 	if owner.state == 0{
 		image_angle = owner.i_dir;
@@ -38,11 +33,7 @@ if not global.pause and instance_exists(owner){
 	}
 	
 }else {
-	if alarm[0] != -1{
-		alarm_0 = alarm[0];
-		alarm[0] = -1;
-		
-	}
+	scr_pause_start(alarm_count);
 
 }
 

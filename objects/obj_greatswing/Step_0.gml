@@ -29,7 +29,7 @@ if (place_meeting(x,y,obj_wall_down_left) or place_meeting(x,y,obj_wall_down_rig
 }
 
 //hitting right wall
-if (place_meeting(x,y,obj_wall_right_up) or place_meeting(x,y,obj_wall_right_down)) and obj_head.image_index==1 and impact==false{
+if (place_meeting(x,y,obj_wall_right_up) or place_meeting(x,y,obj_wall_right_down)) and impact==false{
 	impact=true;
 	
 	//stop the swoosh
@@ -40,7 +40,7 @@ if (place_meeting(x,y,obj_wall_right_up) or place_meeting(x,y,obj_wall_right_dow
 }
 
 //hitting up wall
-if (place_meeting(x,y,obj_wall_up_left) or place_meeting(x,y,obj_wall_up_right)) and obj_head.image_index==2 and impact==false{
+if (place_meeting(x,y,obj_wall_up_left) or place_meeting(x,y,obj_wall_up_right)) and impact==false{
 	impact=true;
 	
 	//stop the swoosh
@@ -51,7 +51,7 @@ if (place_meeting(x,y,obj_wall_up_left) or place_meeting(x,y,obj_wall_up_right))
 }
 
 //hitting left wall
-if (place_meeting(x,y,obj_wall_left_up) or place_meeting(x,y,obj_wall_left_down)) and obj_head.image_index==3 and impact==false{
+if (place_meeting(x,y,obj_wall_left_up) or place_meeting(x,y,obj_wall_left_down)) and impact==false{
 	impact=true;
 	
 	//stop the swoosh

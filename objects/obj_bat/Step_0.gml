@@ -24,8 +24,8 @@ if go and not global.pause{
         case 2:
 			image_speed = 0;
 			
-			if(alarm[6] == -1 and not dash_cd){
-				alarm[6] = (1/3) * room_speed;
+			if(alarm[4] == -1 and not dash_cd){
+				alarm[4] = (1/3) * room_speed;
 			}
             
 			if(dash){
@@ -35,7 +35,7 @@ if go and not global.pause{
 			
 				//Cooldown
 		        if(dash_cd == false){
-					alarm[5] = 0.5 * room_speed;
+					alarm[6] = 0.5 * room_speed;
 					dash_cd  = true;
 		        }
 			}

@@ -3,6 +3,8 @@ converter_proj = false;
 
 event_inherited();
 
+owner = global.body;
+
 life_time = 0.3 * room_speed;
 
 fall_rate = offs / life_time;
@@ -11,8 +13,8 @@ fall_rate = offs / life_time;
 mult = stats.satk;
 divi = stats.sdef;
 
-kb_amount = global.p_stats[stats.atk] * 0.8;
-damage    = 1;
+kb_amount = owner.stat[stats.atk] * 0.8;
+damage    = 1 * owner.stat[mult];
 
 shadow.phy_linear_damping = phy_linear_damping;
 

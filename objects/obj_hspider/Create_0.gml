@@ -11,7 +11,7 @@ stat[stats.satk] =  5;
 stat[stats.sdef] =  5;
 stat[stats.spd]  =  3;
 
-prev_e_hp = stat[stats.hp];
+prev_hp = stat[stats.hp];
 
 ///Enemy unique
 //Has moved

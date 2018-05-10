@@ -28,11 +28,7 @@ if not global.pause {
 			}
 			
 			if image_index == 4 {
-				var arrow = instance_create_layer(x,y,"IF",obj_e_arrow);
-				
-				arrow.stat[stats.atk] = owner.stat[stats.atk];
-				arrow.damage = dmg;
-				arrow.owner  = owner;
+				var arrow = scr_create_damage_dealer(x,y,owner.stat[stats.atk],stats.def,obj_e_arrow,owner);
 				
 				owner.cd_arrow = true;
 				owner.state = 1;

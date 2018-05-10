@@ -6,3 +6,5 @@ cd = false;
 prev_image_speed = 0;
 
 damage = 5;
+
+divi = stats.def;

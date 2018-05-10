@@ -1,23 +1,29 @@
 ///@description Get everything in place
-if(prev_hp > stat[stats.hp]){
-	hurt = true;
+if(prev_hp != stat[stats.hp]){
+	if(prev_hp > stat[stats.hp]){
+		damaged = true;
 		
-	//Stop flash
-	if alarm[2] == -1{
+		//Flash timer
 		alarm[2] = 0.5 * room_speed;
-	}
 		
-	//Shout
-	if shout {
-		scr_sound(snd_char1_hurt1,snd_char1_hurt2,snd_char1_hurt3,snd_char1_hurt4);
-		shout = false;
+		//Shout
+		if(shout){
+			scr_sound(snd_char1_hurt1,snd_char1_hurt2,snd_char1_hurt3,snd_char1_hurt4);
+			shout = false;
+		}
+		
+		if(stat[stats.hp] <= 0){
+			dead = true;
+		}
 	}
 
 	prev_hp = stat[stats.hp];
 }
 
+image_blend = c_white;
+
 //Flash red
-if(hurt){
+if(damaged){
 	//Flash red
     if(image_blend == c_white){
         image_blend = c_red;
@@ -30,11 +36,15 @@ if(hurt){
 
 switch state{
 	case 0: //Free
+		image_xscale = 1;
+		
 		if(len != 0){
 			sprite_index = body_sprs[spr_side];
+			image_speed  = is * len;
+			
 		}else {
-			sprite_index = body_sprs[4];
-			image_index  = spr_side;
+			image_speed = 0;
+			
 		}
 		
 		hands.visible = hs;
@@ -46,14 +56,22 @@ switch state{
 	break;
 	case 1: //Stuck
 	break;
-	case 2: //Dash
+	case 2: //Dash						
+		image_speed  = is * len;
+		sprite_index = roll_sprs[spr_side];
+			
+		if(spr_side == 3){
+			image_xscale = -1;
+		}
+			
+		inv = true;
 	break;
 	case 3: //Dead
 	break;
-	case 4: //Idle	
-		hands.visible      = true;
-		hands.image_index  = image_index;
-		hands.image_xscale = image_xscale;
+	case 4: //Idle
+		image_speed   = 0.4;
+		sprite_index  = body_sprs[4];
+		hands.visible = true;
 	break;
 }
 
@@ -70,6 +88,6 @@ if(part_emitter_exists(global.ps_if,global.body_em)){
 }
 
 ///Invulnerabillity guaranteed off
-if inv and not (hurt or instance_exists(obj_roll)){
+if(inv and not instance_exists(obj_roll)){
 	inv = false;
 }

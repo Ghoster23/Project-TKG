@@ -25,6 +25,10 @@ if not global.pause{
 		
 	}
 	
+	if(dead){
+		state = 3;
+	}
+	
 	if prev_state != state{
         prev_state = state;
         state_change = true;

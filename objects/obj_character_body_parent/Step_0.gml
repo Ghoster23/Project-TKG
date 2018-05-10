@@ -3,71 +3,35 @@ if(not global.pause){
 	//States
 	switch state {
 		case 0: //Free
-			scr_move_state();
-			
-			//Orientation
-			//Right
-			if (rotation > 315 or rotation < 45){			    
-			    spr_side     =   1;
-                  
-			}
-			//Up
-			else if rotation < 135{  
-			    spr_side     =   0;
-                       
-			}
-			//Left
-			else if rotation < 225{
-			    spr_side     =   3; 
-                           
-			}
-			//Down
-			else if rotation < 315{ 
-			    spr_side    =    2;      
-                       
-			}
-			
-			image_speed  = is * stat[stats.spd];
-			image_xscale = 1;
-		break;
-		case 1: //Stuck
-			
-		break;
-		case 2: //Dash
-			if(!dash_cd){
-				scr_dash_state();
+			if(xaxis != 0 || yaxis != 0){
+				len = round(stat[stats.spd] * (1 + modf[stats.spd]));
+				
+			}else {
+				len = 0;
 				
 			}
+		break;
+		case 1: //Stuck	
+		break;
+		case 2: //Dash
+			//Give it more speed
+			len = stat[stats.spd] * 2;
 			
-			var ori = 0;
-			
-			if(dir == 0){
-				ori = 1
-			}else if(dir == 90 || dir == 45 || dir == 135){
-				ori = 0;
-			}else if(dir == 180){
-				ori = 3;
-			}else {
-				ori = 2;
+			if(alarm[0] == -1){				
+				//Hide head and other player objects
+				global.weapon.visible = false;
+
+				//Make it invulnerable
+				inv = true;
+
+				//Set dash duration
+				alarm[0] = room_speed/3;
 			}
-			
-			sprite_index = roll_sprs[ori];
-			
-			if(ori == 3){
-				image_xscale = -1;
-			}
-			
-			inv = true;
 		break;
 		case 3: //Dead
 		break;
 		case 4: //Idle
 		break;
-	}
-	
-	//Turn to camera in status menu
-	if(obj_ig_menu_controller.state == "status"){
-		spr_side    = 2;
 	}
 	
 	//Move

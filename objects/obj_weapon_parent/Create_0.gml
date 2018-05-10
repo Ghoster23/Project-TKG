@@ -1,5 +1,6 @@
 event_inherited();
 owner = noone;
+
 //Pause
 prev_image_speed = 0;
 
@@ -31,4 +32,3 @@ amount   = 0;
 //Mechanics
 state   = 0;
 wep_pat = -1;
-dmg     = 0;

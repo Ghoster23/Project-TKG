@@ -7,6 +7,7 @@ o_v = -1;
 n_potion = false;
 
 //Status sprites
+status_spr[statuses.poison]  = spr_status_poisoned;
 status_spr[statuses.regen]   = spr_status_regen;
 status_spr[statuses.ohko]    = spr_status_ohko;
 status_spr[statuses.seeall]  = spr_status_seeall;

@@ -1,6 +1,9 @@
 ///Game
 scr_unique_inst();
 
+//Game pause
+global.pause = false;
+
 ///Gen
 //Generation on-going
 global.gen = false;

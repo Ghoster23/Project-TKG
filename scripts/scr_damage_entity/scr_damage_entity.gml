@@ -1,14 +1,15 @@
 ///@description Damage the entity
+var is_dmg_dl = object_get_parent(other) == obj_damage_dealer;
+
 if(not damaged and 
    not immune  and 
-   not invuln  and
+   not inv     and
    instance_exists(other) and 
-	((variable_instance_exists(other,owner) and other.owner != id) || 
-	 !variable_instance_exists(other,owner))){
+	((is_dmg_dl and other.owner != id) || 
+	 !is_dmg_dl)){
 	
 	//Get info from damage dealer
 	var dmg = other.damage;
-	var ml  = other.mult;
 	var dv  = other.divi;
 	
 	var kb  = other.kb_amount;
@@ -30,7 +31,11 @@ if(not damaged and
 	}
 	
 	//Deal Damage
-	stat[stats.hp] -= round(dmg * (other.stat[ml] div stat[dv]));
+	stat[stats.hp] -= ceil(dmg / (stat[dv] * (1 + modf[dv])));
+	
+	if(stat[stats.hp] <= 0){
+		dead = true;
+	}
 	
 	//Knockback
 	if(kb != 0){		
@@ -42,5 +47,5 @@ if(not damaged and
 	
 	//Show damage
 	var pop = instance_create_layer(x,y-16 + 16 * instance_number(obj_damage_done_pop),layer,obj_damage_done_pop);
-	pop.dmg = round(dmg * (other.stat[ml] div stat[dv]));
+	pop.dmg = ceil(dmg / (stat[dv]*(1+modf[dv])));
 }

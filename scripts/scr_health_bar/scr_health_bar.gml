@@ -1,10 +1,10 @@
 {
-var hp = global.p_stats[stats.hp];
+var hp = global.body.stat[stats.hp];
 
 var hw = sprite_get_width(spr_heart);
 var hh = sprite_get_height(spr_heart);
 
-for(var i = 0; i < global.p_stats[stats.mhp] div 4; i++){
+for(var i = 0; i < global.body.stat[stats.mhp] div 4; i++){
 	var ch = 0;
 	
 	if       hp >= 4 {

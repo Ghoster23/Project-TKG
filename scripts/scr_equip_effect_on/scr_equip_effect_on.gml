@@ -5,52 +5,54 @@ var item = argument0;
 
 switch item {
 	case equips.crown_of_thorns:
-		global.p_stats[stats.atk] += 5;
+		global.body.stat[stats.atk] += 5;
 		
 	break;
 	case equips.rod_of_asclepius:
 		
 	break;
 	case equips.styxs_water:
-		global.p_stats[stats.def] += 5;
+		global.body.stat[stats.def] += 5;
 	
 	break;
 	case equips.sages_phylactery:
-		global.p_stats[stats.satk] += 5;
+		global.body.stat[stats.satk] += 5;
 		
 	break;
 	case equips.ring_of_dispel:
-		global.p_stats[stats.sdef] += 5;
+		global.body.stat[stats.sdef] += 5;
 		
 	break;
 	case equips.league_boots:
-		global.p_stats[stats.spd] += 2;
+		global.body.stat[stats.spd] += 2;
 		
 	break;
 	case equips.unicorn_blood:
-		global.p_stats[stats.mhp] += 4;
+		global.body.stat[stats.mhp] += 4;
 		
 	break;
 	case equips.staff_of_moses:
-		global.erase = true;
+		global.erase = true; //FIX ME
 		
 	break;
 	case equips.sandals_of_hermes:
-		with global.weapon {
-			instance_destroy();
+		global.body.flight++;
+		
+		if(global.body.flight == 1){
+			with global.weapon {
+				instance_destroy();
+			}
+		
+			var bd = scr_spawn_player(global.body.x,global.body.y,"Instances");
+		
+			with global.body {
+				instance_destroy(feet);
+				instance_destroy(hands);
+				instance_destroy();
+			}
+		
+			global.body = bd.object_index;
 		}
-		
-		instance_create_layer(global.body.x,global.body.y,"Instances",obj_body_fl);
-		
-		with global.body {
-			instance_destroy(feet);
-			instance_destroy(hands);
-			instance_destroy(head);
-			instance_destroy();
-		}
-		
-		global.body   = obj_body_fl;
-		global.flight = true;
 		
 	break;
 	case equips.shield_of_zeus:

@@ -30,7 +30,7 @@ if(not global.pause){
 	}
 	
 	///Die
-    if stat[stats.hp] <= 0 {
+    if(dead){
         state = 3;
         
     }

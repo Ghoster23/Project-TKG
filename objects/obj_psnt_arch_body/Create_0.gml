@@ -25,7 +25,7 @@ shoot = false;
 tell = 0;
 
 //create weapon
-weapon = instance_create_layer(x,y,layer,obj_e_bow);
+weapon = scr_create_weapon(x,y,layer,obj_e_bow,id);
 weapon.skin_color = skin_color;
 
 //Stats
@@ -37,7 +37,7 @@ stat[stats.satk] =  2;
 stat[stats.sdef] =  2;
 stat[stats.spd]  =  3;
 
-prev_e_hp = stat[stats.hp];
+prev_hp = stat[stats.hp];
 
 if instance_exists(global.body){
 	dir = point_direction(x,y,global.body.x,global.body.y);
@@ -49,6 +49,6 @@ offset_x = 0;
 offset_y = 0;
 
 ///Pause
-for(i = 0; i < 7; i += 1){	
+for(i = 0; i < 6; i += 1){	
 	alarms[i] = -1;
 }

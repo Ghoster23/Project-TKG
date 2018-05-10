@@ -13,7 +13,7 @@ stat[stats.satk] =  8;
 stat[stats.sdef] =  4;
 stat[stats.spd]  =  2;
 
-prev_e_hp = stat[stats.hp];
+prev_hp = stat[stats.hp];
 
 damage = 2;
 mult = stats.satk;

@@ -45,17 +45,18 @@ else{os_mmap_key=keyboard_check(global.os_mmap_key_bind); }
 if global.enter_key_bind==mb_left or global.enter_key_bind==mb_right or global.enter_key_bind==mb_middle{enter_key=mouse_check_button(global.enter_key_bind);}
 else{enter_key=keyboard_check_pressed(global.enter_key_bind); }
 
-if(right_key || down_key || up_key || left_key || dash_key || attack_key || mouse_r_key || interact_key || consumable_key){
+if(right_key || down_key || up_key || left_key || attack_key || mouse_r_key || interact_key || consumable_key){
 	input = true;
 }
 
-//these are for menus, we dont mess with them 
+//Menu
 mouse_click = mouse_check_button_released(mb_left);  
 a_up        = keyboard_check_pressed(vk_up);
 a_down      = keyboard_check_pressed(vk_down);
 a_left      = keyboard_check_pressed(vk_left);
 a_right     = keyboard_check_pressed(vk_right);
 escape_key  = keyboard_check_pressed(vk_escape);
+
 if global.right_key_bind==mb_left or global.right_key_bind==mb_right or global.right_key_bind==mb_middle{menu_right_key=mouse_check_button_pressed(global.right_key_bind);}
 else{menu_right_key=keyboard_check_pressed(global.right_key_bind);}
 

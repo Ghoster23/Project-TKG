@@ -1,3 +1,3 @@
 /// @description Dash Buildup
-dash = true;
-alarm[7] = 12;
+dash     = true;
+alarm[5] = 0.5 * room_speed;

@@ -1,5 +1,5 @@
-state = 4;
+/// @description Status check
+///Statuses	
+scr_status_check();
 
-if(instance_exists(weapon)){
-	weapon.state = 1;
-}
+alarm[3] = 1 * room_speed;

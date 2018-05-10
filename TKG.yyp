@@ -2367,6 +2367,14 @@
             }
         },
         {
+            "Key": "4a3de0cd-63e0-4c8d-920e-ea6ea852cda8",
+            "Value": {
+                "id": "f52d0014-71a5-42f5-8fb9-fb7a916ada3f",
+                "resourcePath": "scripts\\scr_spawn_player\\scr_spawn_player.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4a656e54-b25c-4c12-b2e1-c312447b2249",
             "Value": {
                 "id": "8b509be7-6b7a-48ea-8e1c-02774fa9f79d",
@@ -4231,6 +4239,14 @@
             }
         },
         {
+            "Key": "898c5b85-93a4-470b-94d4-f10e715505b0",
+            "Value": {
+                "id": "180dd170-622e-4e91-a702-9f214c692a46",
+                "resourcePath": "views\\898c5b85-93a4-470b-94d4-f10e715505b0.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "899eeb6e-f0c3-4c9f-8965-7b1b052ab08d",
             "Value": {
                 "id": "9f28ecf3-4796-4919-a51e-123613a8afb3",
@@ -4332,14 +4348,6 @@
                 "id": "59d01c72-907b-4826-a0c3-5b006b31b815",
                 "resourcePath": "sprites\\spr_sword_of_will\\spr_sword_of_will.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "8f5bce1a-1647-48aa-88ef-f55adf522555",
-            "Value": {
-                "id": "b7f903f5-c1b9-4b49-a0c1-84c20e87a393",
-                "resourcePath": "objects\\obj_kb\\obj_kb.yy",
-                "resourceType": "GMObject"
             }
         },
         {
@@ -5583,6 +5591,14 @@
             }
         },
         {
+            "Key": "ba61d9d4-8141-4d7a-9a6f-1d673d0c448a",
+            "Value": {
+                "id": "be1833dc-dda1-4d7d-85ca-313a35bf9247",
+                "resourcePath": "scripts\\scr_create_damage_dealer\\scr_create_damage_dealer.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "ba9b4af9-b93a-4979-ac9f-5516ca44bcc9",
             "Value": {
                 "id": "63a38bb8-9b2a-4378-b7d4-34baf908cca8",
@@ -6068,14 +6084,6 @@
                 "id": "731b958e-eedd-4cf5-be0f-ec7e5da8253f",
                 "resourcePath": "sprites\\spr_psnt_fs\\spr_psnt_fs.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "c7817172-fd22-4acb-9257-0b407c567150",
-            "Value": {
-                "id": "7bdd9846-aa02-4991-8150-dcfcc7813ff9",
-                "resourcePath": "objects\\obj_sword_projectile\\obj_sword_projectile.yy",
-                "resourceType": "GMObject"
             }
         },
         {
@@ -7519,6 +7527,14 @@
             }
         },
         {
+            "Key": "f3f7954f-c8e5-4bfa-a1b8-0a226dd8a3e5",
+            "Value": {
+                "id": "fa19deac-6c36-4331-9f91-24941150cfe8",
+                "resourcePath": "scripts\\scr_create_weapon\\scr_create_weapon.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
             "Value": {
                 "id": "dfa3f3c6-7803-4f52-a12e-392d60e0d2f2",
@@ -7937,6 +7953,7 @@
         "f87ad9b7-096d-4a47-8668-2e2644e99d1a",
         "989b6e8b-9ba7-4f89-9747-9e6c49ca4c92",
         "2b48978c-116d-45dd-a772-47062343be8f",
+        "4a3de0cd-63e0-4c8d-920e-ea6ea852cda8",
         "35e4e20a-84b4-47e5-8966-538eee98483f",
         "bbadc0d7-a5fe-4e5e-965b-a09a76020ddc",
         "8c6637f8-a10d-41da-9bd5-80beeb161e5d",
@@ -7959,6 +7976,8 @@
         "1d79937b-1c36-469a-96d3-e40d79ca0025",
         "f011e5c0-110a-4aa4-b87e-934ee1bacbbb",
         "4f0aef4a-300e-4bee-af2f-50971d6a46a7",
+        "f3f7954f-c8e5-4bfa-a1b8-0a226dd8a3e5",
+        "ba61d9d4-8141-4d7a-9a6f-1d673d0c448a",
         "77dfd3e2-4088-4c09-9919-9ca49dd0ac52",
         "c8585593-156b-4eb9-9361-431a110ba32d",
         "063a1891-e073-4594-8f5d-a53fe1f1a34b",

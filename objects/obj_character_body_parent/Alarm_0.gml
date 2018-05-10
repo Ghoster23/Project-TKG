@@ -3,12 +3,12 @@
 global.weapon.visible = true;
 
 //Destroy roll
-sprite_index = body_sprs[4];
-image_index  = spr_side;
+sprite_index = body_sprs[spr_side];
+image_speed  = is;
 
 //Remove invincibility
-global.p_inv   = false;
+inv = false;
 
 //Start dash cooldown
-state = 0;
-alarm[1] = 0.6 * room_speed;
+state    = 0;
+alarm[1] = (2/3) * room_speed;

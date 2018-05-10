@@ -89,8 +89,11 @@ switch wep_pat_state {
 		angle += wep_ang_off;
 					
 		angle = wep_ang_target;
-		var swing = instance_create_layer(x, y, "IF",obj_greatswing);
-		swing.damage = dmg;
+		
+		scr_create_damage_dealer(x, y,											  //Position
+								 owner.stat[stats.atk]*(1+owner.modf[stats.atk]), //Damage multiplier
+								 stats.def,										  //Damage divider
+								 obj_greatswing, owner);						  //Damage dealer and owner
 		
 	 	alarm[wep_pat_alarm] = wep_pat_cd * room_speed; 
 		scr_sound(snd_sword_slash);
@@ -154,19 +157,21 @@ switch wep_pat_state {
 		}
 		
 		//Right
-		
 		if (angle > 315 or angle < 45){			    
 			owner.spr_side     =   0;  
-			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
-			swing.damage = dmg*0.5;
-			swing.kb_amount = global.p_stats[stats.atk]*20;
+			var swing = scr_create_damage_dealer(x, y,								  //Position
+									 owner.stat[stats.atk]*(1+owner.modf[stats.atk]), //Damage multiplier
+									 2,												  //Base damage
+									 global.p_stats[stats.atk]*20,					  //Knockback amount
+									 stats.def,										  //Damage divider
+									 obj_greatswing, owner);						  //Damage dealer and owner
 			swing.phy_rotation = 0;
 		}
 		//Up	
 		else if angle < 135{  
 			owner.spr_side     =   3; 
 			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
-			swing.damage = dmg*0.5;
+			swing.damage = 2;
 			swing.kb_amount = global.p_stats[stats.atk]*10;
 			swing.phy_rotation = -90;
 		}
@@ -174,7 +179,7 @@ switch wep_pat_state {
 		else if angle < 225{
 			owner.spr_side     =   2;   
 			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
-			swing.damage = dmg*0.5;
+			swing.damage = 2;
 			swing.kb_amount = global.p_stats[stats.atk]*10;
 			swing.phy_rotation = -180;
 		}
@@ -182,7 +187,7 @@ switch wep_pat_state {
 		else if angle < 315{ 
 			owner.spr_side    =    1;   
 			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
-			swing.damage = dmg*0.5;
+			swing.damage = 2;
 			swing.kb_amount = global.p_stats[stats.atk]*10;
 			swing.phy_rotation = -180-90;
 		}
@@ -217,7 +222,7 @@ switch wep_pat_state {
 		if (angle > 315 or angle < 45){			    
 			owner.spr_side     =   0;      
 			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
-			swing.damage = dmg*0.5;
+			swing.damage = 2;
 			swing.kb_amount = global.p_stats[stats.atk]*10;
 			swing.phy_rotation = 0;
 		}
@@ -225,7 +230,7 @@ switch wep_pat_state {
 		else if angle < 135{  
 			owner.spr_side     =   3; 
 			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
-			swing.damage = dmg*0.5;
+			swing.damage = 2;
 			swing.kb_amount = global.p_stats[stats.atk]*10;
 			swing.phy_rotation = -90;
 		}
@@ -233,7 +238,7 @@ switch wep_pat_state {
 		else if angle < 225{
 			owner.spr_side     =   2;
 			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
-			swing.damage = dmg*0.5;
+			swing.damage = 2;
 			swing.kb_amount = global.p_stats[stats.atk]*10;
 			swing.phy_rotation = -180;
 		}
@@ -241,7 +246,7 @@ switch wep_pat_state {
 		else if angle < 315{ 
 			owner.spr_side    =    1;   
 			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
-			swing.damage = dmg*0.5;
+			swing.damage = 2;
 			swing.kb_amount = global.p_stats[stats.atk]*10;
 			swing.phy_rotation = -180-90;
 		}

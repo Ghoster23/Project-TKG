@@ -133,7 +133,7 @@ instance_create_layer(gx+(global.roomwd div 2),gy+(global.roomhg div 2)-16,"IF",
 scr_base_roomgn();
 
 //Player
-instance_create_layer(gx+global.roomwd/2,gy+global.roomhg/2,"Instances",global.body);
+scr_spawn_player(gx+global.roomwd/2,gy+global.roomhg/2,"Instances");
 
 //Room counts
 for(var i = 0; i < 8; i += 1;){

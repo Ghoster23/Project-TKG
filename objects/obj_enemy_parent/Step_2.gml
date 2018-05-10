@@ -1,4 +1,4 @@
-if(stat[stats.hp] < prev_e_hp){
+if(stat[stats.hp] < prev_hp){
 	//Activate flash
 	damaged = true;
 	flash   = true;
@@ -9,5 +9,9 @@ if(stat[stats.hp] < prev_e_hp){
 	//Activate flash alarm
 	alarm[2] = 0.03 * room_speed;
 	
-	prev_e_hp = stat[stats.hp];
+	prev_hp = stat[stats.hp];
+	
+	if(stat[stats.hp] <= 0){
+		dead = true;
+	}
 }

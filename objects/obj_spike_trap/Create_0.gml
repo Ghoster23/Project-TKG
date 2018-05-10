@@ -2,7 +2,7 @@ event_inherited();
 
 state = 0;
 
-stat[stats.atk] = 1;
+divi = stats.def;
 damage = 15;
 
 

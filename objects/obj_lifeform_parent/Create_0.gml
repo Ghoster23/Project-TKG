@@ -14,6 +14,7 @@ alarm_count      = 0;
 flash     = false;
 damaged   = false;
 prev_e_hp = 10;
+dead      = false;
 
 //Move
 path = 0;
@@ -31,8 +32,9 @@ stat[stats.spd]  =  3;
 status_list  = ds_list_create();
 status_count = 0;
 
-hurt  = false;
-stuck = false;
+stuck  = false;
+immune = false;
+inv    = false;
 
 //States
 state        = 0;

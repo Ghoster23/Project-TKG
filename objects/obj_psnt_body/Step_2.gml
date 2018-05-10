@@ -1,4 +1,3 @@
-
 //Immunity
 event_inherited();
 
