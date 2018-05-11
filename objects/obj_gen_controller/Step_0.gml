@@ -82,15 +82,15 @@ if(global.gen){
 				
 				if(size <= 0){
 					instance_destroy();
-				}
+				}else {
+					pos   = irandom(size - 1);
+					room_ = ds_list_find_value(available_rooms,pos);
 	
-				pos   = irandom(size - 1);
-				room_ = ds_list_find_value(available_rooms,pos);
-	
-				col = room_ mod 10;
-				row = room_ div 10;
+					col = room_ mod 10;
+					row = room_ div 10;
 				
-				grid_id = row * 8 + col;
+					grid_id = row * 8 + col;
+				}
 			}
 		
 			//Register placement

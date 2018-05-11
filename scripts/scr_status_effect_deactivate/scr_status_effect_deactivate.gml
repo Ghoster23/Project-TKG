@@ -7,6 +7,10 @@ switch(status){
 	default:		
 	break;
 	
+	case statuses.frost :
+		modf[stats.spd] += 0.5;
+	break;
+	
 	case statuses.stuck :
 		stuck = false;			
 	break;
