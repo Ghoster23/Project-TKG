@@ -1,3 +1,13 @@
+if(fallingpit == true){
+	draw_script = scr_draw_item_floor;
+	image_xscale = scr_aproach(image_xscale,0,0.1);
+	image_yscale= scr_aproach(image_yscale,0,0.1);
+	if(image_xscale==0){
+		instance_destroy();
+	}
+	phy_linear_damping=5;
+	exit;
+}
 if pick_up == false{
 	
 	draw_script = scr_item_jump;
@@ -19,6 +29,11 @@ if pick_up == false{
 	
 	//this is the bit when the the item connects with the ground and decides the bouncing
 	if z <= 4 and bounce == true{
+		
+		if(place_meeting(x,y,obj_pit)){
+			fallingpit = true;
+			exit;
+		}
 		phy_linear_damping=5;
 		stop = true; 
 		//z = 0;
@@ -48,7 +63,6 @@ if pick_up == false{
 else{
 	image_xscale = 1;
 	image_yscale = 1;
-
 	draw_script = scr_draw_item_floor;
 }
 

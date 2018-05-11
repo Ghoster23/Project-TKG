@@ -7,7 +7,7 @@
 //      hp = Approach(hp, max_hp, heal_amount);
 //      x = Approach(x, target_x, move_speed);
 //      y = Approach(y, target_y, move_speed);
- 
+
 if (argument0 < argument1)
 {
     argument0 += argument2;

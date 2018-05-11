@@ -7,11 +7,6 @@ if (broken){
 	//shader for damage
 	flash = true;
 		
-    if((irandom(99) + 1) == 1){
-            instance_create_layer(x,y,"Instances",obj_heart);
-                
-        }else if((irandom(99) + 1) == 1){
-            instance_create_layer(x,y,"Instances",obj_heart);
-    }
+    scr_drops();
 }
 

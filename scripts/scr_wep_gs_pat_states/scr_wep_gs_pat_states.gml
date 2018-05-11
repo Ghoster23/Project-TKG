@@ -4,8 +4,13 @@ switch wep_pat_state {
 		angle       +=  wep_ang_off;
 		
 		if(attack_key){
+			
 			simple_attack=false;
-			chargetimer = 0;
+			chargeup = false;
+			progressbar = instance_create_layer(x,y,"PS",obj_circular_chargeup);
+			progressbar.time = 1.5 *room_speed;
+			progressbar.owner = self;
+			
 			wep_pat_state  = 2; //Go to windup
 			wep_ang_target = wep_ang_off + wep_ang_windup;
 			
@@ -20,8 +25,13 @@ switch wep_pat_state {
 		angle       +=    wep_ang_off;
 		
 		if(attack_key){
+			
 			simple_attack=false;
-			chargetimer = 0;
+			chargeup = false;
+			progressbar = instance_create_layer(x,y,"PS",obj_circular_chargeup);
+			progressbar.time = 1.5 *room_speed;
+			progressbar.owner = self;
+			
 			wep_pat_state  = 3; //Go to windup
 			wep_ang_target = wep_ang_off - wep_ang_windup;
 			
@@ -33,26 +43,28 @@ switch wep_pat_state {
 	break;
 	case 2: //Normal - charging
 		angle += wep_ang_off;
+		
 		if(attack_key_release){
 			simple_attack=true;
 		}
 			
 		if(wep_ang_off < wep_ang_target){
 			wep_ang_off = scr_aproach(wep_ang_off,wep_ang_target,wep_windup_spd);
-			
-		}else if(simple_attack == true and wep_ang_off >= wep_ang_target){
+		}
+		
+		if(chargeup == true and simple_attack == true){
+			instance_destroy(progressbar);
+			chargeup= false;
+			wep_ang_target = wep_ang_off - wep_ang_windup - 360;
+			repeat360 = 1;
+			originalangle = angle;
+			wep_pat_state  =    9;	
+		}
+		else if(simple_attack == true and wep_ang_off >= wep_ang_target){
+			instance_destroy(progressbar);
 			wep_ang_target = -(wep_ang_swing + wep_ang_windup);
 			wep_pat_nstate =    1;
 			wep_pat_state  =    4;
-		}else{
-			if(chargetimer >= 30){
-				chargetimer = 0;
-				wep_ang_target = wep_ang_off - wep_ang_windup - 360;
-				repeat360 = 1;
-				originalangle = angle;
-				wep_pat_state  =    9;	
-			}
-			chargetimer++;
 		}
 		
 	break;
@@ -65,20 +77,21 @@ switch wep_pat_state {
 		
 		if(wep_ang_off > wep_ang_target){
 			wep_ang_off = scr_aproach(wep_ang_off,wep_ang_target,wep_windup_spd);
-			
-		}else if(simple_attack == true and wep_ang_off <= wep_ang_target){
+		}
+		
+		if(chargeup == true and simple_attack == true){
+			instance_destroy(progressbar);
+			chargeup= false;
+			wep_ang_target = wep_ang_off + wep_ang_windup + 360;
+			repeat360 = 1;
+			originalangle = angle;
+			wep_pat_state  =    10;
+		}
+		else if(simple_attack == true and wep_ang_off <= wep_ang_target){
+			instance_destroy(progressbar);
 			wep_ang_target = wep_ang_swing + wep_ang_windup;
 			wep_pat_nstate =   0;
 			wep_pat_state  =   4;
-		}else{
-			if(chargetimer >= 30){
-				chargetimer = 0;
-				wep_ang_target = wep_ang_off + wep_ang_windup + 360;
-				repeat360 = 1;
-				originalangle = angle;
-				wep_pat_state  =    10;
-			}
-			chargetimer++;
 		}
 
 	break;
@@ -170,25 +183,31 @@ switch wep_pat_state {
 		//Up	
 		else if angle < 135{  
 			owner.spr_side     =   3; 
-			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
-			swing.damage = 2;
-			swing.kb_amount = global.p_stats[stats.atk]*10;
+			var swing = scr_create_damage_dealer(x, y,							  //Position
+								 obj_greatswing, owner,	owner.ohko,				  //Damage dealer and owner
+								 owner.stat[stats.atk]*(1+owner.modf[stats.atk]), //Damage multiplier
+								 stats.def, 									  //Damage divider
+								 2, global.p_stats[stats.atk]*20);				  //Base damage and Knockback
 			swing.phy_rotation = -90;
 		}
 		//Left
 		else if angle < 225{
 			owner.spr_side     =   2;   
-			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
-			swing.damage = 2;
-			swing.kb_amount = global.p_stats[stats.atk]*10;
+			var swing = scr_create_damage_dealer(x, y,							  //Position
+								 obj_greatswing, owner,	owner.ohko,				  //Damage dealer and owner
+								 owner.stat[stats.atk]*(1+owner.modf[stats.atk]), //Damage multiplier
+								 stats.def, 									  //Damage divider
+								 2, global.p_stats[stats.atk]*20);				  //Base damage and Knockback
 			swing.phy_rotation = -180;
 		}
 		//Down
 		else if angle < 315{ 
 			owner.spr_side    =    1;   
-			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
-			swing.damage = 2;
-			swing.kb_amount = global.p_stats[stats.atk]*10;
+			var swing = scr_create_damage_dealer(x, y,							  //Position
+								 obj_greatswing, owner,	owner.ohko,				  //Damage dealer and owner
+								 owner.stat[stats.atk]*(1+owner.modf[stats.atk]), //Damage multiplier
+								 stats.def, 									  //Damage divider
+								 2, global.p_stats[stats.atk]*20);				  //Base damage and Knockback
 			swing.phy_rotation = -180-90;
 		}
 		
@@ -221,33 +240,41 @@ switch wep_pat_state {
 		//Right
 		if (angle > 315 or angle < 45){			    
 			owner.spr_side     =   0;      
-			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
-			swing.damage = 2;
-			swing.kb_amount = global.p_stats[stats.atk]*10;
+			var swing = scr_create_damage_dealer(x, y,							  //Position
+								 obj_greatswing, owner,	owner.ohko,				  //Damage dealer and owner
+								 owner.stat[stats.atk]*(1+owner.modf[stats.atk]), //Damage multiplier
+								 stats.def, 									  //Damage divider
+								 2, global.p_stats[stats.atk]*20);				  //Base damage and Knockback
 			swing.phy_rotation = 0;
 		}
 		//Up
 		else if angle < 135{  
 			owner.spr_side     =   3; 
-			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
-			swing.damage = 2;
-			swing.kb_amount = global.p_stats[stats.atk]*10;
+			var swing = scr_create_damage_dealer(x, y,							  //Position
+								 obj_greatswing, owner,	owner.ohko,				  //Damage dealer and owner
+								 owner.stat[stats.atk]*(1+owner.modf[stats.atk]), //Damage multiplier
+								 stats.def, 									  //Damage divider
+								 2, global.p_stats[stats.atk]*20);				  //Base damage and Knockback
 			swing.phy_rotation = -90;
 		}
 		//Left
 		else if angle < 225{
 			owner.spr_side     =   2;
-			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
-			swing.damage = 2;
-			swing.kb_amount = global.p_stats[stats.atk]*10;
+			var swing = scr_create_damage_dealer(x, y,							  //Position
+								 obj_greatswing, owner,	owner.ohko,				  //Damage dealer and owner
+								 owner.stat[stats.atk]*(1+owner.modf[stats.atk]), //Damage multiplier
+								 stats.def, 									  //Damage divider
+								 2, global.p_stats[stats.atk]*20);				  //Base damage and Knockback
 			swing.phy_rotation = -180;
 		}
 		//Down
 		else if angle < 315{ 
 			owner.spr_side    =    1;   
-			var swing = instance_create_layer(x, y, "IF",obj_greatswing);
-			swing.damage = 2;
-			swing.kb_amount = global.p_stats[stats.atk]*10;
+			var swing = scr_create_damage_dealer(x, y,							  //Position
+								 obj_greatswing, owner,	owner.ohko,				  //Damage dealer and owner
+								 owner.stat[stats.atk]*(1+owner.modf[stats.atk]), //Damage multiplier
+								 stats.def, 									  //Damage divider
+								 2, global.p_stats[stats.atk]*20);				  //Base damage and Knockback
 			swing.phy_rotation = -180-90;
 		}
 		

@@ -32,3 +32,5 @@ physics_fixture_set_restitution(fix1,0.5);
 physics_fixture_set_linear_damping(fix1,1);
 physics_fixture_set_collision_group(fix1,1);
 my_fix=physics_fixture_bind(fix1, self);
+
+fallingpit = false;
