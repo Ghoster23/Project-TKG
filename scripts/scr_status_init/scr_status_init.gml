@@ -7,5 +7,6 @@ enum statuses {
 	seeall  = 5,
 	midas   = 6,
 	immune  = 7,
-	stun    = 8
+	stun    = 8,
+	frost   = 9
 }
