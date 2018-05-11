@@ -20,3 +20,5 @@ for(var i = 0; i < n; i++){
 	
 	drop.sprite_index = spr;
 }
+
+alarm[0] = 0.5*room_speed;

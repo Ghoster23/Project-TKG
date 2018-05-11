@@ -10,7 +10,6 @@ with head{
 	hair_color = body.hair_color;
 	
 	image_index = skin_color;
-	
 }
 
 draw_script = scr_psnt_draw;

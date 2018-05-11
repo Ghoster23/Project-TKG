@@ -65,9 +65,7 @@ if(not global.pause){
 	var pick_up = instance_place(x,y,obj_item);
 	
 	if(pick_up != noone && pick_up.pick_up){
-		with(pick_up){
-			amount = scr_pickup_item(type,item,amount);
-		}
+		pick_up.amount = scr_pickup_item(pick_up.type,pick_up.item,pick_up.amount);
 	}
 	
 	//footstep sound

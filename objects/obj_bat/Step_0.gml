@@ -35,7 +35,7 @@ if go and not global.pause{
 			
 				//Cooldown
 		        if(dash_cd == false){
-					alarm[6] = 0.5 * room_speed;
+					alarm[6] = 1.5 * room_speed;
 					dash_cd  = true;
 		        }
 			}

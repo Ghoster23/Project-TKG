@@ -20,17 +20,12 @@ if(prev_hp != stat[stats.hp]){
 	prev_hp = stat[stats.hp];
 }
 
-image_blend = c_white;
-
-//Flash red
-if(damaged){
+if(not global.pause){
 	//Flash red
-    if(image_blend == c_white){
-        image_blend = c_red;
-        
-	//Flash white
-    }else if(image_blend == c_red){
-		image_blend = c_white;       
+	if(damaged){
+		image_blend = scr_toggle(image_blend,c_white,c_red);
+	}else {
+		image_blend = c_white;
 	}
 }
 

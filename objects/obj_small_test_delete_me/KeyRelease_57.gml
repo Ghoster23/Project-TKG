@@ -1,1 +1,0 @@
-show_debug_message("a: " + string(a) + " b: " + string(b));

@@ -2,7 +2,7 @@
     "id": "5f7447e8-e959-4e9e-b0a4-61156ad352e3",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "spr_luna_body_still",
+    "name": "spr_luna_body_idle",
     "For3D": false,
     "HTile": false,
     "VTile": false,

@@ -9,19 +9,23 @@ var entity = argument2;
 
 var applied = false;
 
-for(var i = 0; i < entity.status_count; i++){
-	var s = entity.status_list[| i];
-	if(s[0] == status){
-		applied = true;
-		var c_count = s[2];
-		break;
+with(entity){
+	for(var i = 0; i < status_count; i++){
+		var s = status_list[| i];
+		if(s[0] == status){
+			applied = true;
+			var c_count = s[2];
+			break;
+		}
 	}
-}
 
-if(applied){
-	ds_list_replace(entity.status_list,i,[status,min(s[1],c_count + count),c_count + count]);
-}else {
-	ds_list_add(entity.status_list,[status,count,count]);
-	entity.status_count++;
+	if(applied){
+		ds_list_replace(status_list,i,[status,min(s[1],c_count + count),c_count + count]);
+		
+	}else {
+		ds_list_add(status_list,[status,count,count]);
+		scr_status_effect_activate(status);
+		status_count++;
+	}
 }
 }

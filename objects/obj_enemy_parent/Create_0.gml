@@ -51,8 +51,10 @@ status_count = 0;
 alarm[1]     = 0.5 * room_speed;
 
 stuck  = false;
-immune = false;
 inv    = false;
+immune = false;
+innoc  = false;
+ohko   = false;
 
 //States
 state        =     0;

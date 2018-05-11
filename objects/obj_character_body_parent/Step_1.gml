@@ -84,7 +84,7 @@ if(not global.pause){
 	}
 	
 	if(input){
-		alarm[3] = -1;
+		alarm[4] = -1;
 	}
 	
 }else {

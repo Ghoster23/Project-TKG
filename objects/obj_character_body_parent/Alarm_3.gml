@@ -2,4 +2,4 @@
 ///Statuses	
 scr_status_check();
 
-alarm[3] = 1 * room_speed;
+alarm[3] = 0.5 * room_speed;

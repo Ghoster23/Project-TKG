@@ -91,9 +91,9 @@ switch wep_pat_state {
 		angle = wep_ang_target;
 		
 		scr_create_damage_dealer(x, y,											  //Position
+								 obj_greatswing, owner,	owner.ohko,				  //Damage dealer and owner
 								 owner.stat[stats.atk]*(1+owner.modf[stats.atk]), //Damage multiplier
-								 stats.def,										  //Damage divider
-								 obj_greatswing, owner);						  //Damage dealer and owner
+								 stats.def);									  //Damage divider
 		
 	 	alarm[wep_pat_alarm] = wep_pat_cd * room_speed; 
 		scr_sound(snd_sword_slash);
@@ -158,13 +158,13 @@ switch wep_pat_state {
 		
 		//Right
 		if (angle > 315 or angle < 45){			    
-			owner.spr_side     =   0;  
-			var swing = scr_create_damage_dealer(x, y,								  //Position
-									 owner.stat[stats.atk]*(1+owner.modf[stats.atk]), //Damage multiplier
-									 2,												  //Base damage
-									 global.p_stats[stats.atk]*20,					  //Knockback amount
-									 stats.def,										  //Damage divider
-									 obj_greatswing, owner);						  //Damage dealer and owner
+			owner.spr_side     =   0;
+			var swing = scr_create_damage_dealer(x, y,							  //Position
+								 obj_greatswing, owner,	owner.ohko,				  //Damage dealer and owner
+								 owner.stat[stats.atk]*(1+owner.modf[stats.atk]), //Damage multiplier
+								 stats.def, 									  //Damage divider
+								 2, global.p_stats[stats.atk]*20);				  //Base damage and Knockback
+								 
 			swing.phy_rotation = 0;
 		}
 		//Up	

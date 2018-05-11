@@ -1,2 +1,3 @@
 /// @description Dash stop
-dash = false;
+dash  = false;
+state = 0;

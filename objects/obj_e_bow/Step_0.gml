@@ -28,7 +28,7 @@ if not global.pause {
 			}
 			
 			if image_index == 4 {
-				var arrow = scr_create_damage_dealer(x,y,owner.stat[stats.atk],stats.def,obj_e_arrow,owner);
+				var arrow = scr_create_damage_dealer(x,y,obj_e_arrow,owner,false,owner.stat[stats.atk],stats.def);
 				
 				owner.cd_arrow = true;
 				owner.state = 1;

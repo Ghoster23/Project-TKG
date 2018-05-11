@@ -19,7 +19,7 @@ if place_meeting(x,y,obj_hspider) and impact==false{
 }
 
 //hitting down wall
-if (place_meeting(x,y,obj_wall_down_left) or place_meeting(x,y,obj_wall_down_right)) and obj_head.image_index==0 and impact==false{
+if (place_meeting(x,y,obj_wall_down_left) or place_meeting(x,y,obj_wall_down_right)) and impact==false{
 	impact=true;
 	//stop the swoosh
 	if audio_is_playing(snd_sword_slash){

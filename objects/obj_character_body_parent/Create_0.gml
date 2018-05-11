@@ -57,12 +57,13 @@ modf[stats.luck] = 0;
 //Statuses
 status_list  = ds_list_create();
 status_count = 0;
-alarm[3]     = 0.5 * room_speed;
+event_perform(ev_alarm,3);
 
 stuck  = false;
 inv    = false;
 immune = false;
 innoc  = false;
+ohko   = false;
 flight = 0;
 
 //States

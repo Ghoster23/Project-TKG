@@ -1,12 +1,14 @@
 ///@description Damage the entity
-var is_dmg_dl = object_get_parent(other) == obj_damage_dealer;
+if(variable_instance_exists(other,"owner") and other.owner != id){
+	var mine = false;
+}else {
+	var mine = true;
+}
 
 if(not damaged and 
    not immune  and 
    not inv     and
-   instance_exists(other) and 
-	((is_dmg_dl and other.owner != id) || 
-	 !is_dmg_dl)){
+   not mine){
 	
 	//Get info from damage dealer
 	var dmg = other.damage;
@@ -31,7 +33,11 @@ if(not damaged and
 	}
 	
 	//Deal Damage
-	stat[stats.hp] -= ceil(dmg / (stat[dv] * (1 + modf[dv])));
+	if(!other.ohko){
+		stat[stats.hp] -= ceil(dmg / (stat[dv] * (1 + modf[dv])));
+	}else {
+		stat[stats.hp]  = 0;
+	}
 	
 	if(stat[stats.hp] <= 0){
 		dead = true;
