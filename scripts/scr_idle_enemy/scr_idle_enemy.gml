@@ -19,9 +19,9 @@ if distance_to_point(ini_point_x,ini_point_y) <= dis{
         
     }
 	
-	scr_move_enemy(i_dir,1);		
+	scr_move_entity(i_dir,1);		
 				
 }else{
-    scr_move_enemy(point_direction(x,y,ini_point_x,ini_point_y),1);
+    scr_move_entity(point_direction(x,y,ini_point_x,ini_point_y),1);
                 
 }

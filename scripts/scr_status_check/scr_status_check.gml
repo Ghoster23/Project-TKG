@@ -4,9 +4,13 @@ for(var i = 0; i < status_count; i++){
 	var count  = status[2] - 1;
 		
 	if(count > 0){
-		scr_status_effect_activate(status[0]);
+		scr_status_effect_ongoing(status[0]);
 		status_list[| i] = [status[0],status[1],count];
 		
+		
+		if(status[0] == statuses.poison){
+			show_debug_message(count);
+		}
 	}else {
 		scr_status_effect_deactivate(status[0]);
 		ds_list_delete(status_list,i);

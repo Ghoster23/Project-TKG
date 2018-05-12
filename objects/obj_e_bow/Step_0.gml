@@ -42,7 +42,6 @@ if not global.pause {
 			
 		break;
 		case 3:
-			instance_destroy();
 			
 		break;
 	}

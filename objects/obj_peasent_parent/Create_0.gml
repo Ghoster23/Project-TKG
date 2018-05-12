@@ -36,3 +36,5 @@ sprite_index = bodyf_sprite;
 
 //create head
 head = instance_create_layer(x,y,layer,obj_psnt_head);
+feet = instance_create_layer(x,y,layer,obj_psnt_feet);
+feet.owner = id;

@@ -9,8 +9,8 @@ tell = 0;
 
 offpos=7;
 
-spr = sprite_get_number(spr_e_melee)
-offs = 5;
+spr = sprite_get_number(spr_e_melee);
+offs   = 5;
 offset = true;
 sprite_index = spr_e_melee;
 image_index=irandom(spr);

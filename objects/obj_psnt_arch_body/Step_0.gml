@@ -11,14 +11,14 @@ if go and not global.pause{
     switch(state){
         case 0:  //Walk away
 			image_speed = 0.4;
-            scr_move_enemy(point_direction(global.body.x,global.body.y,x,y),1);
+            scr_move_entity(point_direction(global.body.x,global.body.y,x,y),1);
             
         break;
         case 1:  //Go towards the player
 			image_speed = 0.4;
 			scr_define_path(self, global.body);
 			path = global.ai_path;
-            scr_move_enemy(point_direction(x,y,path_get_point_x(path,2),path_get_point_y(path,2)),1);
+            scr_move_entity(point_direction(x,y,path_get_point_x(path,2),path_get_point_y(path,2)),1);
             
         break;
         case 2:  //Attack the player
@@ -61,6 +61,7 @@ if go and not global.pause{
 			
 			with weapon { instance_destroy(); }
 			with head { instance_destroy(); }
+			with feet { instance_destroy(); }
 			instance_destroy(tell);
 		
 	        scr_kill_enemy();

@@ -9,11 +9,6 @@ if not global.pause and instance_exists(owner){
 		
 	}
 
-	if owner.state == 3 or not instance_exists(owner){
-		instance_destroy();
-		
-	}
-
 	//atacking
 	if owner.swing == true and alarm[0] == -1 and instance_exists(owner) and instance_exists(owner.head){
 		alarm[0] = 9;

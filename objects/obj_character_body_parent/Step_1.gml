@@ -53,7 +53,7 @@ if(not global.pause){
 				alarm[4] = -1;
 				
 			}else if(alarm[4] == -1){
-				alarm[4] = 1.5 * room_speed;
+				alarm[4] = 3 * room_speed;
 				
 			}
 			

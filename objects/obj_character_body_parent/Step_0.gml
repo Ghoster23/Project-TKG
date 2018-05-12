@@ -17,25 +17,8 @@ if(not global.pause){
 			//Give it more speed
 			len = stat[stats.spd] * 2;
 			
-			//Orientation
-			if(dir > 315 or dir < 45){ //Right    
-				spr_side = 1;
-			}
-			
-			else if(dir < 135){ //Up
-				spr_side = 0; 
-			}
-			
-			else if(dir < 225){ //Left
-				spr_side = 3;     
-			}
-			
-			else if(dir < 315){ //Down
-				spr_side = 2;        
-			}
-			
 			if(alarm[0] == -1){				
-				//Hide head and other player objects
+				//Hide other player objects
 				global.weapon.visible = false;
 
 				//Make it invulnerable
