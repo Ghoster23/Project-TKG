@@ -4,7 +4,7 @@ if(variable_instance_exists(other,"owner") and other.owner != id){
 }else {
 	var mine = true;
 }
-
+///FIX ME
 if(not damaged and 
    not immune  and 
    not inv     and

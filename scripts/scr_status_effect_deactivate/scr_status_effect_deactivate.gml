@@ -11,6 +11,12 @@ switch(status){
 		modf[stats.spd] += 0.5;
 	break;
 	
+	case statuses.frozen :
+		stuck = false;
+		modf[stats.def] += 0.5;
+		modf[stats.def] += 0.5;
+	break;
+	
 	case statuses.stuck :
 		stuck = false;			
 	break;

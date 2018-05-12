@@ -16,7 +16,7 @@ if go and not global.pause{
 		///Chase the player
         case 1:
 			image_speed = 1.5;
-            scr_move_enemy(point_direction(x,y,global.body.x,global.body.y),1);
+            scr_move_entity(point_direction(x,y,global.body.x,global.body.y),1);
             
         break;
 		
@@ -29,7 +29,7 @@ if go and not global.pause{
 			}
             
 			if(dash){
-				scr_move_enemy(dir,4);
+				scr_move_entity(dir,4);
 				part_emitter_region(global.ps_if,em,x,x,y,y,pt_shape_smoke,0);
 				part_emitter_burst(global.ps_if,em,global.pt_smoke,1);
 			

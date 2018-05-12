@@ -20,7 +20,7 @@ if go and not global.pause{
 					image_xscale=1;
 				}
 				
-	            scr_move_enemy(action_dir,1);
+	            scr_move_entity(action_dir,1);
 				
             }
 			else if moved==true{ 

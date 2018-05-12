@@ -41,8 +41,8 @@ modf[stats.spd]  = 0;
 
 //Contact Damage
 damage = 0;
-mult   = stats.atk;
 divi   = stats.def;
+
 kb_amount = 0;
 
 //Statuses

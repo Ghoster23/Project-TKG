@@ -38,9 +38,8 @@ switch state{
 			image_speed  = is * len;
 			
 		}else {
-			sprite_index = body_sprs[4];
-			image_index  = spr_side;
-			image_speed = 0;
+			sprite_index = body_still_sprs[spr_side];
+			image_speed  = 0.4;
 			
 		}
 		
@@ -55,6 +54,24 @@ switch state{
 	break;
 	case 2: //Dash						
 		image_speed  = is * len * 0.5;
+		
+		//Orientation
+		if(dir > 315 or dir < 45){ //Right    
+			spr_side = 1;
+		}
+			
+		else if(dir < 135){ //Up
+			spr_side = 0; 
+		}
+			
+		else if(dir < 225){ //Left
+			spr_side = 3;     
+		}
+			
+		else if(dir < 315){ //Down
+			spr_side = 2;        
+		}
+			
 		sprite_index = roll_sprs[spr_side];
 			
 		if(spr_side == 3){
@@ -67,7 +84,7 @@ switch state{
 	break;
 	case 4: //Idle
 		image_speed   = 0.4;
-		sprite_index  = body_sprs[5];
+		sprite_index  = body_idle;
 		hands.visible = true;
 	break;
 }

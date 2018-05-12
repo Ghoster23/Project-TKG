@@ -7,7 +7,7 @@ if(not global.pause){
 
 		path = global.ai_path;
 
-		scr_move_enemy(point_direction(x,y,path_get_point_x(path,1),path_get_point_y(path,1)),1);
+		scr_move_entity(point_direction(x,y,path_get_point_x(path,1),path_get_point_y(path,1)),1);
 	}else {
 		part_emitter_burst(global.ps_if,em,global.pt_willowisp,20);
 		instance_destroy();

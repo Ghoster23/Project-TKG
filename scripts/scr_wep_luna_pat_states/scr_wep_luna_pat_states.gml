@@ -1,6 +1,6 @@
 switch wep_pat_state {
 	case 0: //Base
-		if(attack_key xor (mouse_r_key and (not wep_pat_frost_count || not wep_pat_block_count))){
+		if(attack_key xor mouse_r_key){
 			wep_pat_state        = 1 + mouse_r_key; //Go to Charging
 			wep_pat_charge_count = wep_pat_charge_time;
 			
@@ -55,11 +55,13 @@ switch wep_pat_state {
 		part_emitter_burst(em_sys,emitter,global.pt_haze,15);
 		
 		for(var i = 0; i < wep_proj_count + 1; i++){
-			var ice = instance_create_layer(xx,yy,"IF",obj_ice_shard);
+			var ice = scr_create_damage_dealer(xx,yy,obj_ice_shard,
+											   owner,owner.ohko,
+											   owner.stat[stats.satk] * (1 + owner.modf[stats.satk]),
+											   stats.sdef);
 			
 			ice.dir    = -rad + random_range(-wep_proj_spread,wep_proj_spread);
 			ice.spd    = wep_proj_speed;
-			ice.damage = dmg;
 		}
 		
 		var mult = wep_proj_count * 2;
@@ -70,21 +72,23 @@ switch wep_pat_state {
 		
 		if(wep_ammo > 0){
 			alarm[wep_pat_alarm] = wep_pat_cd * room_speed;
-			wep_pat_state        = 6; //Go to cooldown
+			wep_pat_state        = 8; //Go to cooldown
 		}else {
-			wep_pat_state        = 7; //Go to cooldown
+			wep_pat_state        = 7; //Go to reload
 		}		
 	break;
 	case 4: //Frost Cloud
-		var xx  = x + lengthdir_x(24,angle);
-		var yy  = y + lengthdir_y(24,angle);
-		var rad = degtorad(angle);
+		if(wep_pat_frost_count == 0){
+			var xx  = x + lengthdir_x(24,angle);
+			var yy  = y + lengthdir_y(24,angle);
+			var rad = degtorad(angle);
 		
-		instance_create_layer(xx-32,yy-32,"IF",obj_icy_wind);
+			instance_create_layer(xx-32,yy-32,"IF",obj_icy_wind);
 		
-		wep_pat_frost_count = wep_pat_frost_cd;
-		wep_pat_state       = 0; //Go to Base
+			wep_pat_frost_count = wep_pat_frost_cd;
+		}
 		
+		wep_pat_state = 0; //Go to Base
 	break;
 	case 5: //Throw water
 		if(attack_key and global.p_LVB_water > 0){
@@ -142,7 +146,7 @@ switch wep_pat_state {
 		
 	break;
 	case 8: //Cooldown
-		if(alarm[0] == -1){
+		if(alarm[wep_pat_alarm] == -1){
 			wep_pat_state = 0;
 		}
 		

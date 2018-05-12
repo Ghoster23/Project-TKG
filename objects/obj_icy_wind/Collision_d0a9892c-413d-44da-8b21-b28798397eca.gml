@@ -1,0 +1,1 @@
+scr_status_apply(statuses.frost,2,other);

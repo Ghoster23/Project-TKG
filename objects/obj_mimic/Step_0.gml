@@ -58,7 +58,7 @@ if not global.pause {
 			//Move
 	        scr_define_path(self, global.body);
 			path = global.ai_path;
-			scr_move_enemy(point_direction(x,y,path_get_point_x(path,1),path_get_point_y(path,1)),1);
+			scr_move_entity(point_direction(x,y,path_get_point_x(path,1),path_get_point_y(path,1)),1);
 			
 	        ///Die
 	        if stat[stats.hp] <= 0 and sprite_index != spr_mimic_d{
