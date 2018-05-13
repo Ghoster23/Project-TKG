@@ -11,15 +11,17 @@ if(active && global.check == 1){
 			var type  = val div 30;
 			var count = val mod 30;
 					
-			if(count > 0){
+			if(count > 1){
 				active = true;
 				
 				//Ticks
 				if(not global.pause){
-					if(type != 3){
+					if(type != 3 && type != 1){
 						val -= 0.5;
-					}else {
+					}else if(type == 3){
 						val -= 0.1;
+					}else {
+						val -= 0.2;
 					}
 				}
 				
@@ -36,7 +38,7 @@ if(active && global.check == 1){
 				
 				tiles[ind] = val;
 				
-			}else if(count <= 0){
+			}else {
 				tiles[ind] = 0;
 				
 			}

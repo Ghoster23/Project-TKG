@@ -2,8 +2,6 @@ type = 0;
 
 event_inherited();
 
-owner = global.body;
-
 life_time = 0.3 * room_speed;
 
 fall_rate = offs / life_time;

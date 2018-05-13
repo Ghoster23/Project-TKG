@@ -10,6 +10,8 @@ if(not global.pause and on){
 		var flfy  = y + sprite_height;
 		var val   = values;
 		var mval  = value;
+		var mtype = value div 30;
+		var p     = paint;
 		
 		for(var k = 0; k < len; k++){
 			var inst = fl_tiles[| k];
@@ -55,9 +57,15 @@ if(not global.pause and on){
 								if(count > 1){
 									var type  = cval div 30;
 									var diff  = type - val[type];
-									tiles[i * grid_size + j] = cval - 29 * diff;
-									active = true;
-								}else if(cval == 0 && mval > 0){
+									
+									if(diff){
+										tiles[i * grid_size + j] = cval - 29 * diff;
+										active = true;
+									}else {
+										tiles[i * grid_size + j] = mval;
+										active = true;
+									}
+								}else if(cval == 0 && p){
 									tiles[i * grid_size + j] = mval;
 									active = true;
 								}

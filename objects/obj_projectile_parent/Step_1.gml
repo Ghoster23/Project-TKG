@@ -1,6 +1,8 @@
 if(not once){
 	once = true;
 	
+	abs_cos = abs(cos(dir));
+	
 	with(shadow){
 		physics_apply_impulse(phy_position_x,phy_position_y,other.spd*cos(other.dir),
 		other.spd*sin(other.dir));

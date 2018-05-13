@@ -11,8 +11,6 @@ if(instance_exists(shadow)){
 	}
 }
 
-scr_break_object();
-
 event_inherited();
 
 if(collided){

@@ -22,12 +22,11 @@ switch wep_pat_state {
 			
 			wep_pat_charge_count = 0;
 			
-		}else if(wep_pat_charge_count == 0){
-			if(global.p_LVB_water > 0){
+		}else {
+			wep_pat_charge_count--;
+			
+			if(wep_pat_charge_count == 0 and global.p_LVB_water > 0){
 				wep_pat_state = 5; //Go to Water gun
-				
-			}else {
-				wep_pat_state = 0; //Go to base
 				
 			}
 		}
@@ -45,32 +44,32 @@ switch wep_pat_state {
 		
 	break;
 	case 3: //Ice Shot
-		wep_ammo--;
-		
-		var xx  = x + lengthdir_x(24,angle);
-		var yy  = y + lengthdir_y(24,angle);
-		var rad = degtorad(angle);
-		
-		part_emitter_region(em_sys,emitter,xx-16,xx+16,yy-16,yy+16,ps_shape_ellipse,ps_distr_linear);
-		part_emitter_burst(em_sys,emitter,global.pt_haze,15);
-		
-		for(var i = 0; i < wep_proj_count + 1; i++){
-			var ice = scr_create_damage_dealer(xx,yy,obj_ice_shard,
-											   owner,owner.ohko,
-											   owner.stat[stats.satk] * (1 + owner.modf[stats.satk]),
-											   stats.sdef);
-			
-			ice.dir    = -rad + random_range(-wep_proj_spread,wep_proj_spread);
-			ice.spd    = wep_proj_speed;
-		}
-		
-		var mult = wep_proj_count * 2;
-		
-		with(global.body){
-			physics_apply_impulse(phy_position_x,phy_position_y,-mult*cos(rad),mult*sin(rad));
-		}
-		
 		if(wep_ammo > 0){
+			wep_ammo--;
+		
+			var xx  = x + lengthdir_x(24,angle);
+			var yy  = y + lengthdir_y(24,angle);
+			var rad = degtorad(angle);
+		
+			part_emitter_region(em_sys,emitter,xx-16,xx+16,yy-16,yy+16,ps_shape_ellipse,ps_distr_linear);
+			part_emitter_burst(em_sys,emitter,global.pt_haze,15);
+		
+			for(var i = 0; i < wep_proj_count + 1; i++){
+				var ice = scr_create_damage_dealer(xx,yy,obj_ice_shard,
+												   owner,owner.ohko,
+												   owner.stat[stats.satk] * (1 + owner.modf[stats.satk]),
+												   stats.sdef);
+			
+				ice.dir    = -rad + random_range(-wep_proj_spread,wep_proj_spread);
+				ice.spd    = wep_proj_speed;
+			}
+		
+			var mult = wep_proj_count * 2;
+		
+			with(global.body){
+				physics_apply_impulse(phy_position_x,phy_position_y,-mult*cos(rad),mult*sin(rad));
+			}
+		
 			alarm[wep_pat_alarm] = wep_pat_cd * room_speed;
 			wep_pat_state        = 8; //Go to cooldown
 		}else {
@@ -92,19 +91,19 @@ switch wep_pat_state {
 	break;
 	case 5: //Throw water
 		if(attack_key and global.p_LVB_water > 0){
-			/*global.p_LVB_water -= 5;
+			global.p_LVB_water -= 1;
 			
 			var xx  = x + lengthdir_x(24,angle);
 			var yy  = y + lengthdir_y(24,angle);
 			var rad = degtorad(angle);
 			
-			for(var i = 0; i < 5; i++){
-				var water_ball = instance_create_layer(xx,yy,"IF",obj_water_ball);
+			for(var i = 0; i < 1; i++){
+				var water_ball = instance_create_layer(xx,yy,"IF",obj_water_gun_bullet);
 				
-				water_ball.dir    = -rad + random_range(-pi/9,pi/9);
-				water_ball.spd    = 10;
+				water_ball.dir    = -rad;
 				water_ball.damage =  0;
-			}*/
+				water_ball.owner  = owner;
+			}
 			
 		}else {
 			wep_pat_state  = 0; //Go to base
