@@ -6,3 +6,4 @@ global.ai_path = path_add();
 
 mp_grid_add_instances(global.ai_grid,obj_above_ground_parent,true);
 mp_grid_add_instances(global.ai_grid,obj_below_ground_parent,true);
+mp_grid_add_instances(global.ai_grid,obj_wall_parent,true);

@@ -16,11 +16,20 @@ prev_hp = stat[stats.hp];
 ///Enemy unique
 //Has moved
 moved = false;
+shot = false;
 
-//times
-move_time  = 0.7;
-state_time = 1.5;
-hide_time  = 0.5;
+state = "follow";
+breaking = false;
+//times 
+move_time  = 0.5*room_speed;
+move_time_counter = move_time;
+
+break_time = 0.2*room_speed;
+
+transition_time = 0.5*room_speed;
+transition_time_counter=transition_time
+
+shot_cooldown_time = 1.5*room_speed;
 
 for(i = 0; i < 8; i += 1){	
 	alarms[i] = -1;

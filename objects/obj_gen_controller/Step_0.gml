@@ -7,6 +7,10 @@ if once == false && roomgenerated >= roomstogenerate {
 	global.gen = false;
 	
 	ds_list_destroy(available_rooms);
+	
+	instance_create_layer( 0, 0, "IF", obj_AI_controller);
+	comp += 10;
+	
 	instance_destroy();
 }
 

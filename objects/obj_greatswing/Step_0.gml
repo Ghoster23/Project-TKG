@@ -7,7 +7,7 @@ if global.pause{
 
 //sounds for hittin stuff 
 //hitting bomb
-if place_meeting(x,y,obj_bomb_hs) and impact==false{
+if place_meeting(x,y,obj_simple_bomb) and impact==false{
 	impact=true;
 	scr_sound(snd_hit_wall);
 }

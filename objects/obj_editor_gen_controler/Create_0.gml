@@ -99,6 +99,10 @@ file_text_close(temp_room_file);
 
 for(i=0;i<9;i++){
 	for(j=0;j<19;j++){
+		
+		//liquid tiles
+		instance_create_layer(32+j*32,96+i*32,"BH",obj_fluid_tile);
+		
 		object=ds_grid_get(global.room_grid, j, i);
 		var offset=0;
 		if (object != "#"){

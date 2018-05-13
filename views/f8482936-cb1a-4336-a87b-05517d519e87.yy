@@ -16,7 +16,8 @@
         "3a67c650-781b-4592-b5b0-8e7a84231bd3",
         "3edef168-a805-4a40-9aef-77437094772f",
         "3d4dfe82-03c0-4ea4-9653-542b6023a9fb",
-        "2363c397-1edb-41fd-b2d4-fd04b505cfad"
+        "2363c397-1edb-41fd-b2d4-fd04b505cfad",
+        "cb17e03c-7651-4d5f-9f93-cf903eb8661c"
     ],
     "filterType": "GMSprite",
     "folderName": "Particles",
