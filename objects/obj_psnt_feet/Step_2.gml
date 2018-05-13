@@ -13,15 +13,12 @@ if(not global.pause){
 					var py = (other.y + 9 - y) div cell_size;
 					
 					if(px < grid_size && py < grid_size){
-						var type = tiles[px + py * grid_size] div 30;
+						var type = tiles[px + py * grid_size];
 			
-						switch(type){
-							case 0:
-								other.poison_counter++;
-							break;
-							case 1:
-								scr_status_apply(statuses.wet,5,owner);
-							break;
+						if(0 < type && type < 30){
+							other.poison_counter++;
+						}else if(30 < type && type < 60){
+							scr_status_apply(statuses.wet,5,other.owner);
 						}
 					}
 				}

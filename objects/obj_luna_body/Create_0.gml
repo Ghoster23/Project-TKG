@@ -32,6 +32,6 @@ is = 0.2;
 hs = false;
 
 //Abillity
-global.p_LVB_water = 0;
+global.p_LVB_water = 100000;
 
 //fl_gen = instance_create_layer(phy_position_x,phy_position_y,layer,obj_luna_fluid_gen);

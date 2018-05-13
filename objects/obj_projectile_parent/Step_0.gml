@@ -3,13 +3,14 @@ if(!global.pause){
 	
 	if(!collided){
 		offs -= fall_rate;
-		phy_position_y += fall_rate;
+		phy_position_y += fall_rate * abs_cos;
 	}else {
 		offs -= fall_rate * 16;
-		phy_position_y += fall_rate * 16;
+		phy_position_y += fall_rate * 16 * abs_cos;
 	}
 	
-	if(offs <= -fall_rate div 2){
+	if(offs <= 0){
+		
 		instance_destroy(shadow);
 	}
 	

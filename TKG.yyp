@@ -799,6 +799,14 @@
             }
         },
         {
+            "Key": "1827ddcf-eadc-44c4-bb6e-0f4ed78a7111",
+            "Value": {
+                "id": "0b4b10cf-b769-4b78-978d-09bcae6c52d5",
+                "resourcePath": "sprites\\spr_water_gun_bullet\\spr_water_gun_bullet.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1855bccd-d74a-4374-9cec-311415afd792",
             "Value": {
                 "id": "4cc1cd19-c125-44c8-93b1-74943f684d63",
@@ -1508,6 +1516,14 @@
                 "id": "be030e44-aa8d-4b71-a477-4dab83b4ff07",
                 "resourcePath": "sprites\\spr_CH_rcones\\spr_CH_rcones.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "2c96d5fc-ae91-4e65-ab32-933a32ca4b91",
+            "Value": {
+                "id": "be9d29c8-5d36-4142-95bb-b4142735f1a7",
+                "resourcePath": "objects\\obj_water_drop\\obj_water_drop.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -3551,6 +3567,14 @@
             }
         },
         {
+            "Key": "6b00bbb3-b65b-4224-82fb-2666460048e7",
+            "Value": {
+                "id": "f8131bcc-5130-41bb-85a1-af39cb2e13c3",
+                "resourcePath": "sprites\\spr_status_wet\\spr_status_wet.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6b368dde-fe1c-4079-ac81-9bbca51e25fa",
             "Value": {
                 "id": "7d1fda79-003d-425a-9c1f-a6cb46805ecc",
@@ -3667,6 +3691,14 @@
             "Value": {
                 "id": "6b3577b0-22af-45f4-a55f-11f0109e6b78",
                 "resourcePath": "sprites\\spr_wall_right_down\\spr_wall_right_down.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6e8d9793-e7b8-4699-9b2f-9c3b04710c7f",
+            "Value": {
+                "id": "3489ddf9-bffb-47be-bfdd-94f5dc04d8b1",
+                "resourcePath": "sprites\\spr_status_frozen\\spr_status_frozen.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -3899,6 +3931,14 @@
             "Value": {
                 "id": "e7f4ae13-7252-4521-a44e-7265e823b187",
                 "resourcePath": "sprites\\spr_psnt_b4f\\spr_psnt_b4f.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "7552eacc-de5f-4115-925f-a3f530ec4bfb",
+            "Value": {
+                "id": "af9d4fd3-1ffd-4212-9eec-ab94855097f9",
+                "resourcePath": "sprites\\spr_status_frost\\spr_status_frost.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -6983,6 +7023,14 @@
             }
         },
         {
+            "Key": "d48ea3b6-a0a3-4e03-b6af-f62253cc6b9b",
+            "Value": {
+                "id": "01da9dbb-5726-4d93-ba02-ab81d3d7c8fd",
+                "resourcePath": "objects\\obj_water_gun_bullet\\obj_water_gun_bullet.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d49c4c07-8c10-4321-b9a3-a75c137c5cb6",
             "Value": {
                 "id": "3ecc8c74-a78b-4303-92da-b0c3c83726e6",
@@ -7935,14 +7983,6 @@
             }
         },
         {
-            "Key": "f011e5c0-110a-4aa4-b87e-934ee1bacbbb",
-            "Value": {
-                "id": "d39f29c0-115c-484b-96fc-fa3b59d98685",
-                "resourcePath": "scripts\\scr_break_object\\scr_break_object.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "f01aadec-3518-43fd-8935-34b4a1c90121",
             "Value": {
                 "id": "2f90d90a-4604-4153-8580-84b74f80cbb3",
@@ -8530,7 +8570,6 @@
         "818c35bc-1af7-456a-bcf0-45b2573d1467",
         "dbad1b9e-be7e-4a53-83d3-131bc14572c2",
         "1d79937b-1c36-469a-96d3-e40d79ca0025",
-        "f011e5c0-110a-4aa4-b87e-934ee1bacbbb",
         "4f0aef4a-300e-4bee-af2f-50971d6a46a7",
         "f3f7954f-c8e5-4bfa-a1b8-0a226dd8a3e5",
         "ba61d9d4-8141-4d7a-9a6f-1d673d0c448a",
