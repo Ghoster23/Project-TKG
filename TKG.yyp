@@ -247,6 +247,14 @@
             }
         },
         {
+            "Key": "064f6e0c-3d5c-4a0d-a562-6e1207c5c9fc",
+            "Value": {
+                "id": "7ab6bc7e-6f70-44a9-8dc3-8fe422cb270a",
+                "resourcePath": "sounds\\snd_rock_bits2\\snd_rock_bits2.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "06b68eec-c2da-46b5-95e7-bed8a9b60f3b",
             "Value": {
                 "id": "946aeb3a-7f39-48ce-a876-df5bc5cf4c64",
@@ -4055,6 +4063,14 @@
             }
         },
         {
+            "Key": "793399cc-be1a-47b5-a6c0-1099456f95e6",
+            "Value": {
+                "id": "3982d9e6-209b-4aa6-9004-6eea43360420",
+                "resourcePath": "sounds\\snd_rock_bits1\\snd_rock_bits1.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "7933d99a-4463-4075-a3c6-ad496cbcf9fa",
             "Value": {
                 "id": "cbde94e8-ebe2-46b6-aac7-31fb08896f31",
@@ -5484,6 +5500,14 @@
                 "id": "442641a9-fdf1-462a-adf2-a53e7bb2530f",
                 "resourcePath": "sprites\\spr_CH_root_swing\\spr_CH_root_swing.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a7e9c794-8b79-4daf-bda7-280c8b0ed61c",
+            "Value": {
+                "id": "74ab1da2-603d-4bc8-9ee2-e4bc2bb338d5",
+                "resourcePath": "sounds\\snd_rock_bits3\\snd_rock_bits3.yy",
+                "resourceType": "GMSound"
             }
         },
         {
