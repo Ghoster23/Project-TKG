@@ -1,5 +1,5 @@
 //sounds
-scr_sound(snd_wood_bits1,snd_wood_bits2,snd_wood_bits3);
+scr_sound(snd_rock_bits1,snd_rock_bits2,snd_rock_bits3);
 
 repeat(5){
 	instance_create_layer(x,y,layer,obj_rockbits);
