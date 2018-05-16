@@ -29,6 +29,9 @@ stowed = -1;
 particle = global.pt_star;
 amount   = 0;
 
+offx = 0;
+offy = 0;
+
 //Mechanics
 state   = 0;
 wep_pat = -1;

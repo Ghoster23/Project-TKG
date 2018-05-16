@@ -5,11 +5,10 @@ switch wep_pat_state {
 		
 		if(attack_key){
 			
-			simple_attack=false;
-			chargeup = false;
-			progressbar = instance_create_layer(x,y,"PS",obj_circular_chargeup);
-			progressbar.time = 1.5 *room_speed;
-			progressbar.owner = self;
+			simple_attack = false;
+			chargeup      = false;
+			
+			progressbar = scr_create_charge_up( x, y, 1.5 * room_speed, self);
 			
 			wep_pat_state  = 2; //Go to windup
 			wep_ang_target = wep_ang_off + wep_ang_windup;
@@ -26,11 +25,10 @@ switch wep_pat_state {
 		
 		if(attack_key){
 			
-			simple_attack=false;
-			chargeup = false;
-			progressbar = instance_create_layer(x,y,"PS",obj_circular_chargeup);
-			progressbar.time = 1.5 *room_speed;
-			progressbar.owner = self;
+			simple_attack = false;
+			chargeup      = false;
+			
+			progressbar = scr_create_charge_up( x, y, 1.5 * room_speed, self);
 			
 			wep_pat_state  = 3; //Go to windup
 			wep_ang_target = wep_ang_off - wep_ang_windup;
@@ -45,7 +43,7 @@ switch wep_pat_state {
 		angle += wep_ang_off;
 		
 		if(attack_key_release){
-			simple_attack=true;
+			simple_attack = true;
 		}
 			
 		if(wep_ang_off < wep_ang_target){
@@ -72,7 +70,7 @@ switch wep_pat_state {
 		angle += wep_ang_off;
 		
 		if(attack_key_release){
-			simple_attack=true;
+			simple_attack = true;
 		}
 		
 		if(wep_ang_off > wep_ang_target){
@@ -81,7 +79,7 @@ switch wep_pat_state {
 		
 		if(chargeup == true and simple_attack == true){
 			instance_destroy(progressbar);
-			chargeup= false;
+			chargeup = false;
 			wep_ang_target = wep_ang_off + wep_ang_windup + 360;
 			repeat360 = 1;
 			originalangle = angle;

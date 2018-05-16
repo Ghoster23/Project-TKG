@@ -1,0 +1,1 @@
+image_blend = scr_toggle(image_blend,c_white,char_color);

@@ -67,22 +67,22 @@
     "physicsLinearDamping": 0.1,
     "physicsObject": true,
     "physicsRestitution": 0.1,
-    "physicsSensor": true,
+    "physicsSensor": false,
     "physicsShape": 0,
     "physicsShapePoints": [
         {
-            "id": "633b5d76-85a2-4602-8949-7666fb9eaaf7",
+            "id": "f2062d1c-4d81-404d-b915-c63b7a2bffbf",
             "modelName": "GMPoint",
             "mvc": "1.0",
-            "x": 32,
-            "y": 32
+            "x": 24,
+            "y": 24
         },
         {
-            "id": "d8b81254-398b-442d-b1dc-466acadd9e8e",
+            "id": "ae7d3d0b-e184-4739-8f81-68bf1ddbd5e4",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 23,
-            "y": 32
+            "y": 24
         }
     ],
     "physicsStartAwake": true,

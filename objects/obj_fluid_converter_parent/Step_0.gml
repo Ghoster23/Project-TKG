@@ -8,8 +8,8 @@ if(not global.pause and on){
 		var fly   = y;
 		var flfx  = x + sprite_width;
 		var flfy  = y + sprite_height;
-		var val   = values;
-		var mval  = value;
+		var vals  = values;
+		var val   = value;
 		var mtype = value div 30;
 		var p     = paint;
 		
@@ -50,32 +50,36 @@ if(not global.pause and on){
 				for(var i = sx; i < fx; i++){
 					for(var j = sy; j < fy; j++){
 						if(place_meeting(x + cell_size * (i + 0.5),
-						                 y + cell_size * (j + 0.5), other)){
-								var cval  = tiles[i * grid_size + j];
-								var count = cval mod 30;
+									        y + cell_size * (j + 0.5), other)){
+							
+							var cval  = tiles[i * grid_size + j];
+							var count = cval mod 30;
 								
-								if(count > 1){
-									var type  = cval div 30;
-									var diff  = type - val[type];
+							if(count > 1){
+								var type  = cval div 30;
+								var diff  = type - vals[type];
 									
-									if(diff){
-										tiles[i * grid_size + j] = cval - 29 * diff;
-										active = true;
-									}else {
-										tiles[i * grid_size + j] = mval;
-										active = true;
-									}
-								}else if(cval == 0 && p){
-									tiles[i * grid_size + j] = mval;
+								if(diff){
+									tiles[i * grid_size + j] = cval - 29 * diff;
+									active = true;
+										
+								}else {
+									tiles[i * grid_size + j] = val;
 									active = true;
 								}
+									
+							}else if(p){
+								tiles[i * grid_size + j] = val;
+								active = true;
+							}
 						}
 					}
 				}
 				
 				sprite_index = spr_slm_creep1;
 			}
-		}
+			
+		}		
 		
 		ds_list_destroy(fl_tiles);
 	}

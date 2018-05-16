@@ -13,6 +13,6 @@ damage = 0;
 shadow.phy_linear_damping = phy_linear_damping;
 shadow.visible = false;
 
-image_speed = 0;
+image_speed = 0.3;
 image_index = irandom_range(0,7);
 image_alpha = 1;

@@ -28,7 +28,10 @@ wep_proj_count  = argument7;
 wep_proj_spread = argument8;
 wep_proj_speed  = argument9;
 
-fc = -1;
+prev_ball = noone;
+
+chargeup    = false;
+progressbar = noone;
 
 tx = -1;
 ty = -1;

@@ -1,27 +1,25 @@
-/// @description Insert description here
-// You can write your code in this editor
-counter += chargeinc;
-
-if(counter>0 && counter<=time/8){
-	image_index=0;
-}else if(counter<=2*time/8){
-	image_index=1;
-}else if(counter<=3*time/8){
-	image_index=2;
-}else if(counter<=4*time/8){
-	image_index=3;
-}else if(counter<=5*time/8){
-	image_index=4;
-}else if(counter<=6*time/8){
-	image_index=5;
-}else if(counter<=7*time/8){
-	image_index=6;
-}else if(counter<time){
-	image_index=7;
-}else if(counter>=time){
-	image_index=8;
+if(segment == 0){
+	segment = time/8;
 }
 
-if (counter>=time){
+if(0 < counter && image_index < 8){
+	var i = image_index;
+	
+	while(counter > segment * i){
+		i++
+	}
+	
+	image_index = i;
+}
+
+if(counter >= time){
 	owner.chargeup = true;
+	
+	if(alarm[0] == -1){
+		alarm[0] = 0.2 * room_speed;
+	}
+	
+}else {
+	counter += chargeinc;
+	
 }

@@ -1,8 +1,10 @@
 switch wep_pat_state {
 	case 0: //Base
 		if(attack_key xor mouse_r_key){
-			wep_pat_state        = 1 + mouse_r_key; //Go to Charging
-			wep_pat_charge_count = wep_pat_charge_time;
+			wep_pat_state = 1 + mouse_r_key; //Go to Charging
+			
+			chargeup    = false;
+			progressbar = scr_create_charge_up(x,y,wep_pat_charge_time,self);
 			
 		}else if(wep_ammo == 0 || keyboard_check_released(ord("R"))){
 			wep_pat_state = 7; //Go to Reload
@@ -12,6 +14,8 @@ switch wep_pat_state {
 	break;
 	case 1: //Charging left-click
 		if(not attack_key){
+			instance_destroy(progressbar);
+				
 			if(wep_ammo > 0){
 				wep_pat_state = 3; //Go to Ice Shot
 				
@@ -20,24 +24,23 @@ switch wep_pat_state {
 				
 			}
 			
-			wep_pat_charge_count = 0;
-			
-		}else {
-			wep_pat_charge_count--;
-			
-			if(wep_pat_charge_count == 0 and global.p_LVB_water > 0){
-				wep_pat_state = 5; //Go to Water gun
+		}else if(chargeup and global.p_LVB_water > 0){
+			instance_destroy(progressbar);
+			wep_pat_state = 5; //Go to Water gun
 				
-			}
+		}else {
+			wep_pat_charge_count = 0;
+				
 		}
 		
 	break;
 	case 2: //Charging right-click
 		if(not mouse_r_key){
+			instance_destroy(progressbar);
 			wep_pat_state        = 4; //Go to Frost Cloud
 			wep_pat_charge_count = 0;
 			
-		}else if(wep_pat_charge_count == 0){
+		}else if(chargeup){
 			wep_pat_state = 6; //Go to Ice Blocks
 			
 		}
@@ -93,36 +96,30 @@ switch wep_pat_state {
 		if(attack_key and global.p_LVB_water > 0){
 			global.p_LVB_water -= 1;
 			
-			var xx  = x + lengthdir_x(24,angle);
-			var yy  = y + lengthdir_y(24,angle);
-			var rad = degtorad(angle);
+			if(global.p_LVB_water mod 2 == 0){
+				var xx  = x + lengthdir_x(24,angle);
+				var yy  = y + lengthdir_y(24,angle);
+				var rad = degtorad(angle);
 			
-			for(var i = 0; i < 1; i++){
-				var water_ball = instance_create_layer(xx,yy,"IF",obj_water_gun_bullet);
-				
-				water_ball.dir    = -rad;
-				water_ball.damage =  0;
-				water_ball.owner  = owner;
+				var water_ball = instance_create_layer(xx,yy,"IF",obj_water_ball);
+				water_ball.prev_ball = prev_ball;
+				prev_ball = water_ball;
 			}
 			
 		}else {
 			wep_pat_state  = 0; //Go to base
+			prev_ball = noone;
 			
 		}
 		
 	break;
 	case 6: //Blocks
-		if(mouse_r_key){
-			/*if(!instance_exists(obj_frost_circle)){
-				fc = instance_create_layer(x,y,layer,obj_frost_circle);
-			}*/
-			
-		}else {
-			//fc.freeze = true;
+		if(!mouse_r_key){
+			instance_destroy(progressbar);
+			instance_create_layer(x,y,layer,obj_freeze_wave);
 			
 			wep_pat_block_count = wep_pat_block_cd;
 			wep_pat_state       = 0; //Go to base
-			
 		}
 		
 	break;

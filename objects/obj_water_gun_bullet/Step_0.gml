@@ -13,7 +13,13 @@ if(!global.pause){
 	
 	if(offs <= 0){
 		instance_create_layer(x-8,y-8,layer,obj_water_drop);
-		instance_destroy(shadow);
+		
+		destroyed = true;
+	}
+	
+	if(image_index >= 3){
+		image_speed = 0;
+		image_index = 4;
 	}
 	
 }else {

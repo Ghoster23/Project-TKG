@@ -1,5 +1,5 @@
 if(not global.pause and on){
-	var fl_tiles = collision_rectangle_list( x, y, x+sprite_width, y+sprite_height, obj_fluid_tile, true, false);
+	var fl_tiles = collision_rectangle_list( x, y, x + sprite_width, y + sprite_height, obj_fluid_tile, true, false);
 	
 	if(fl_tiles != noone){
 		var len = ds_list_size(fl_tiles);
@@ -13,7 +13,7 @@ if(not global.pause and on){
 		for(var k = 0; k < len; k++){
 			var inst = fl_tiles[| k];
 			
-			with(inst){
+			with(inst){	
 				sprite_index = spr_pixel;
 				
 				//Left limit
@@ -47,7 +47,7 @@ if(not global.pause and on){
 				for(var i = sx; i < fx; i++){
 					for(var j = sy; j < fy; j++){
 						if(place_meeting(x + cell_size * (i + 0.5),
-						                 y + cell_size * (j + 0.5), other)){
+										    y + cell_size * (j + 0.5), other)){
 							tiles[i * grid_size + j] = val;
 							active = true;
 						}
@@ -56,6 +56,7 @@ if(not global.pause and on){
 				
 				sprite_index = spr_slm_creep1;
 			}
+			
 		}
 		
 		ds_list_destroy(fl_tiles);

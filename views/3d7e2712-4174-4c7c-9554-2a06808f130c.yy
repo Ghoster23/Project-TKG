@@ -8,7 +8,10 @@
         "558f4d7b-b06d-4c37-ad2f-1370e858d33c",
         "5c5b4867-eb61-4804-ad86-e3a265529650",
         "a60c10a5-042f-4896-8e67-3516f59aed07",
-        "1827ddcf-eadc-44c4-bb6e-0f4ed78a7111"
+        "1827ddcf-eadc-44c4-bb6e-0f4ed78a7111",
+        "7d196684-d7be-4308-8907-0d8ba0180759",
+        "72bb4385-43d0-43a0-bf01-ed007e3c36b0",
+        "136a598c-54b0-4ff2-917d-716a16106268"
     ],
     "filterType": "GMSprite",
     "folderName": "Luna",

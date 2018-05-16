@@ -5,7 +5,7 @@ switch state {
 			image_yscale += rate;
 			
 			x -= wd_inc;
-			y -= wd_inc;
+			y -= hg_inc;
 		}else {
 			state = 1;
 		}
@@ -16,7 +16,7 @@ switch state {
 			image_yscale -= rate;
 			
 			x += wd_inc;
-			y += wd_inc;
+			y += hg_inc;
 		}else {
 			instance_destroy();
 		}
