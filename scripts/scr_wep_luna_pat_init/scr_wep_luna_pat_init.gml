@@ -10,13 +10,13 @@ wep_pat_cd    = argument0; //Time for shot cooldown
 wep_pat_alarm = argument1; //Which alarm is the cd
 
 wep_pat_frost_cd    = argument2;
-wep_pat_frost_count = 0;
+wep_pat_frost_count = -1;
 
 wep_pat_block_cd    = argument3;
-wep_pat_block_count = 0;
+wep_pat_block_count = -1;
 
 wep_pat_reload_cd    = argument4; //Time for reload cooldown
-wep_pat_reload_count = 0;
+wep_pat_reload_count = -1;
 wep_pat_reload_rate  = argument5; //Rate of reload
 
 //Capacity

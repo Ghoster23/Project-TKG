@@ -1447,6 +1447,14 @@
             }
         },
         {
+            "Key": "2a79fd8e-f39a-46d7-b954-94222ac00cbf",
+            "Value": {
+                "id": "8027f6f3-327e-43a1-ab46-8c5ce499d60a",
+                "resourcePath": "objects\\obj_ice_cube\\obj_ice_cube.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2a8e5f5c-5d2e-4f47-93bc-0a81962feeb9",
             "Value": {
                 "id": "964e0781-6df8-47eb-8ce1-b66befbfde21",
@@ -1644,6 +1652,14 @@
                 "id": "5f743a7a-f276-4c8c-9bb8-8ef329f8a049",
                 "resourcePath": "views\\2f1f625f-50de-45e0-b1d9-85ab4c5aa89c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "2f6d1408-b7d4-4865-bd1c-60d44e90a792",
+            "Value": {
+                "id": "f8a4b36a-87f0-4c13-bc6e-2b4553654d59",
+                "resourcePath": "sprites\\spr_icy_wind_converter\\spr_icy_wind_converter.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -3580,6 +3596,14 @@
                 "id": "7155b827-553f-4f0d-ac77-6313774cda22",
                 "resourcePath": "objects\\obj_pedestal\\obj_pedestal.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6abf742c-5c71-4264-9981-aae743fcc4f1",
+            "Value": {
+                "id": "d4349263-9303-4149-a04f-f5744735bfe7",
+                "resourcePath": "sprites\\spr_ice_cube\\spr_ice_cube.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

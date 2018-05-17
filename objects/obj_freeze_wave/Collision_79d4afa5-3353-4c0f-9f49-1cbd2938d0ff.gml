@@ -12,7 +12,7 @@ if(other.active){
 		}
 	
 		if(count / array_len > 0.65){
-			instance_create_layer(x,y,"Instances",obj_rock);
+			instance_create_layer(x,y,"Instances",obj_ice_cube);
 		}
 	}
 }

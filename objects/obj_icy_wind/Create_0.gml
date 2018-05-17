@@ -1,21 +1,26 @@
+type = 2;
+
 event_inherited();
 
-values[0] = 0;
-values[1] = 3;
-values[2] = 2;
-values[3] = 3;
+life_time = 1.2 * room_speed;
 
-once = false;
+fall_rate = 0;
+
+damage = 0;
+
+piercing = true;
+
+with(shadow){
+	phy_linear_damping = phy_linear_damping;
+
+	values[0] = 0;
+	values[1] = 3;
+	values[2] = 2;
+	values[3] = 3;
+	
+	value = 119;
+}
 
 image_alpha = 0.5;
-on = true;
-
-alarm[0] = 1.2 * room_speed;
-
-dir = degtorad(-point_direction(global.body.phy_position_x,global.body.phy_position_y,
-								phy_position_x,phy_position_y));
-
-physics_apply_impulse(phy_position_x, phy_position_y,
-					  150*cos(dir),     150*sin(dir));
-					  
+		  
 em = part_emitter_create(global.ps_if);

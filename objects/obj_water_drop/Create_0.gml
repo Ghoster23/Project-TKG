@@ -15,11 +15,11 @@ image_yscale = 1;
 
 paint = true;
 
-v = 1.5;
+v = 2;
 e_time = 5;
 rate = (v - 1) / e_time;
 
-wd_inc = rate * sprite_width / 2;
+wd_inc = rate * sprite_width  / 2;
 hg_inc = rate * sprite_height / 2;
 
 state = 0;
