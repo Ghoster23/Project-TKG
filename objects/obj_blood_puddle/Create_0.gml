@@ -1,7 +1,6 @@
 randomize();
 
-value = 89;
-on    = true;
+scr_fluid_interactor_init(89,true,false);
 
 n = irandom_range(1,3);
 

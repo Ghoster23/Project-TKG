@@ -1,1 +1,3 @@
-owner = -1;
+owner = noone;
+
+step_event = null

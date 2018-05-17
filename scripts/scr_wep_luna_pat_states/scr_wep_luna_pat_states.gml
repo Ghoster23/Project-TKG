@@ -104,7 +104,7 @@ switch wep_pat_state {
 												stats.sdef);
 			
 		ice.dir    = -rad;
-		ice.spd    =  150;
+		ice.spd    =  66;
 		
 		wep_pat_frost_count = wep_pat_frost_cd;
 		

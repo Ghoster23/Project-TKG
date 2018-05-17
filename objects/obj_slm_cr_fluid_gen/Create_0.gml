@@ -1,2 +1,1 @@
-event_inherited();
-value = 29;
+scr_fluid_interactor_init(29,false,false);
