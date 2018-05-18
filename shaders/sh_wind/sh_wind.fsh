@@ -3,7 +3,7 @@ varying vec4 v_vColour;
 varying vec2 v_vTexcoord;
 
 uniform float Time;
-vec2 Size = vec2(36,55);
+vec2 Size = vec2(70,55);
 vec2 Wave = vec2(200,0.08);
 
 void main()

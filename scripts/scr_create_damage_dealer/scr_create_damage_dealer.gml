@@ -36,8 +36,6 @@ if(ko){
 		var dm = argument[7];
 		var kb = argument[8];
 	
-		var inst = instance_create_layer(xx,yy,"IF",dd);
-	
 		inst.damage    = dm * ml;
 		inst.divi      = dv;
 		inst.kb_amount = kb;

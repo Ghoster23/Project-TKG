@@ -124,22 +124,14 @@ switch wep_pat_state {
 		}
 	break;
 	case 7: //Fire		
-		if(tx == -1 && ty == -1){
-			tx = x + lengthdir_x(1000, angle);
-			ty = y + lengthdir_y(1000, angle);
-		}
-		
-		angle += wep_ang_off;
-		
-		x += lengthdir_x(20,tx);
-		y += lengthdir_y(20,ty);
-		
-		if((point_distance(tx,ty,x,y) <= 5) ||
-		place_meeting(x,y,obj_above_ground_parent) ||
-		place_meeting(x,y,obj_wall_parent)){
-			wep_pat_state = 8;
-		}
-		
+		var t_sword = scr_create_damage_dealer(x, y,							  //Position
+								 obj_greatsword_t, owner,	owner.ohko,			  //Damage dealer and owner
+								 owner.stat[stats.atk]*(1+owner.modf[stats.atk]), //Damage multiplier
+								 stats.def, 									  //Damage divider
+								 4, global.p_stats[stats.atk]*20);				  //Base damage and Knockback
+		t_sword.owner = owner; 
+		wep_pat_state = 0;
+								 
 	break;
 	case 8: //Come back
 		x += lengthdir_x(10,global.body.x);
