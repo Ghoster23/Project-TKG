@@ -3,7 +3,7 @@ y = owner.phy_position_y;
 
 if(not global.pause){
 	//Get poisoned
-	if(not owner.inv && not owner.innoc){
+	if(not owner.inv && not owner.innoc && not owner.dead){
 		var tile = instance_place( x, y, obj_fluid_tile);
 			
 		if(tile != noone){
@@ -12,7 +12,7 @@ if(not global.pause){
 					var px = (other.x - x)     div cell_size;
 					var py = (other.y + 9 - y) div cell_size;
 					
-					if(px < grid_size && py < grid_size){
+					if(0 <= px and px < grid_size and 0 <= py and py < grid_size){
 						var type = tiles[px + py * grid_size];
 			
 						if(0 < type && type < 30){

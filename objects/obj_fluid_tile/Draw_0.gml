@@ -1,6 +1,6 @@
 if(active && global.check == 1){
 	active = false;
-	
+	draw_self();
 	surface_set_target(global.fluid_surface);
 	gpu_set_blendenable(false);
 	

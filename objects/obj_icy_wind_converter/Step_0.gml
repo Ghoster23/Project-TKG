@@ -13,12 +13,13 @@ if(not global.pause and on){
 		var vals  = values;
 		var val   = value;
 		var mtype = value div 30;
-		var p     = paint;
+		var bl    = blocks;
 		
 		for(var k = 0; k < len; k++){
 			var inst = fl_tiles[| k];
 			
 			with(inst){
+				var bl_cnt = 0;
 				sprite_index = spr_pixel;
 				
 				//Left limit
@@ -63,22 +64,26 @@ if(not global.pause and on){
 								
 								if(diff != 0){									
 									tiles[i * grid_size + j] = cval - 29 * diff;
+									bl_cnt++;
 										
 								}else if(type == mtype){
 									tiles[i * grid_size + j] = val;
+									bl_cnt++;
 								}
 								
-								active = true;
-									
-							}else if(p){
-								tiles[i * grid_size + j] = val;
-								active = true;
+								active = true;	
 							}
 						}
 					}
 				}
 				
 				sprite_index = spr_slm_creep1;
+				
+				if(bl){
+					if(bl_cnt/array_len >= 0.5 and not place_meeting(x,y,obj_ice_cube)){
+						instance_create_layer(x,y,layer,obj_ice_cube);
+					}
+				}
 			}
 			
 		}		

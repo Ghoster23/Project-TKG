@@ -15,7 +15,7 @@ if(not global.pause){
 					var px = (other.x - x)     div cell_size;
 					var py = (other.y + 9 - y) div cell_size;
 					
-					if(px < grid_size && py < grid_size){
+					if(0 <= px && px < grid_size && 0 <= py && py < grid_size){
 						var type = tiles[px + py * grid_size];
 			
 						if(0 < type && type < 30){

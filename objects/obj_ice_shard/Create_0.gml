@@ -1,6 +1,7 @@
 type = 0;
 
 event_inherited();
+offs = 24;
 
 life_time = 0.3 * room_speed;
 

@@ -12,7 +12,6 @@
         "b1b088f2-c47e-4f43-a3c4-c7d5c5c6ebcf",
         "6455e47e-f403-47c5-9462-65472b7beded",
         "0b87dcec-8867-4741-9402-0f1122c7de58",
-        "2fec0747-3649-47dd-904d-cebb43fc4a11",
         "b82235e5-9a01-4bc9-b0d3-150f843388de",
         "67d72cf8-b652-4b7b-8e9a-e92d64e82210",
         "44adaa19-b7ac-40f4-ab3e-a4d44c88bf9f",
@@ -160,39 +159,13 @@
             "visible": true
         },
         {
-            "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "Floor",
-            "id": "1ca6eabe-4906-4fd9-965c-1d0079f86dd1",
-            "depth": 400,
-            "grid_x": 32,
-            "grid_y": 32,
-            "hierarchyFrozen": false,
-            "hierarchyVisible": true,
-            "inheritLayerDepth": false,
-            "inheritLayerSettings": false,
-            "inheritSubLayers": false,
-            "inheritVisibility": false,
-            "instances": [
-{"name": "inst_14909A71","id": "2fec0747-3649-47dd-904d-cebb43fc4a11","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_14909A71","objId": "9e198175-b8b5-4cda-ad17-2706b11c1830","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 336,"y": 240}
-            ],
-            "layers": [
-
-            ],
-            "m_parentID": "00000000-0000-0000-0000-000000000000",
-            "m_serialiseFrozen": false,
-            "modelName": "GMRInstanceLayer",
-            "mvc": "1.0",
-            "userdefined_depth": false,
-            "visible": true
-        },
-        {
             "__type": "GMRBackgroundLayer_Model:#YoYoStudio.MVCFormat",
             "name": "Background",
             "id": "4ca55413-fe65-4c3f-8dbb-f4bf4a70e17b",
             "animationFPS": 15,
             "animationSpeedType": "0",
-            "colour": { "Value": 4278190080 },
-            "depth": 500,
+            "colour": { "Value": 4294967295 },
+            "depth": 400,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
@@ -210,15 +183,15 @@
             "m_serialiseFrozen": false,
             "modelName": "GMRBackgroundLayer",
             "mvc": "1.0",
-            "spriteId": "00000000-0000-0000-0000-000000000000",
+            "spriteId": "7ec61ed8-87d1-4882-9089-c5668d1129f0",
             "stretch": false,
             "userdefined_animFPS": false,
             "userdefined_depth": false,
             "visible": true,
             "vspeed": 0,
             "vtiled": false,
-            "x": 0,
-            "y": 0
+            "x": 32,
+            "y": 95
         }
     ],
     "modelName": "GMRoom",

@@ -98,13 +98,11 @@ switch wep_pat_state {
 		var yy  = y + lengthdir_y(24,angle);
 		var rad = degtorad(angle);
 		
-		var ice = scr_create_damage_dealer(xx,yy,obj_icy_wind,
-												owner,false,
-												0,
-												stats.sdef);
-			
-		ice.dir    = -rad;
-		ice.spd    =  66;
+		var ice = instance_create_layer( xx, yy, "IF", obj_icy_wind);
+		
+		with(ice){
+			physics_apply_impulse(phy_position_x,phy_position_y,90*cos(rad),-90*sin(rad));
+		}
 		
 		wep_pat_frost_count = wep_pat_frost_cd;
 		
@@ -164,7 +162,7 @@ if(wep_pat_frost_count > 0){
 if(wep_pat_block_count > 0){
 	wep_pat_block_count--;
 	
-	if(wep_pat_reload_count == 0){
+	if(wep_pat_block_count == 0){
 		wep_pat_block_count = -1;
 	}
 }

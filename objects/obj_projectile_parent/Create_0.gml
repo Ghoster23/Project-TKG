@@ -1,7 +1,8 @@
 event_inherited();
 
-spd = 0;
-dir = 0;
+spd        = 0;
+dir        = 0;
+shadow_rot = dir;
 
 fall_rate = 0.4;
 life_time = 1 * room_speed;
