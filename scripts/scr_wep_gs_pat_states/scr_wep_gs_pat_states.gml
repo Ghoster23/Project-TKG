@@ -14,6 +14,7 @@ switch wep_pat_state {
 			wep_ang_target = wep_ang_off + wep_ang_windup;
 			
 		}else if(mouse_r_key){
+			simple_attack = false;
 			wep_pat_state  = 6;
 			
 		}
@@ -34,6 +35,7 @@ switch wep_pat_state {
 			wep_ang_target = wep_ang_off - wep_ang_windup;
 			
 		}else if(mouse_r_key){
+			simple_attack = false;
 			wep_pat_state  = 6;
 			
 		}
@@ -116,10 +118,16 @@ switch wep_pat_state {
 		
 	break;
 	case 6: //Align
+	
+		if(mouse_r_key_release){
+			simple_attack = true;
+		}
+	
 		angle += wep_ang_off;
 		wep_ang_off = scr_aproach(wep_ang_off, -90, 9);
 		
-		if(wep_ang_off == -90){
+		if(wep_ang_off == -90 and simple_attack){
+			simple_attack = false;
 			wep_pat_state = 7;
 		}
 	break;
@@ -130,18 +138,16 @@ switch wep_pat_state {
 								 stats.def, 									  //Damage divider
 								 4, global.p_stats[stats.atk]*20);				  //Base damage and Knockback
 		t_sword.owner = owner; 
-		wep_pat_state = 0;
+		wep_pat_state = 8;
 								 
 	break;
-	case 8: //Come back
-		x += lengthdir_x(10,global.body.x);
-		y += lengthdir_y(10,global.body.y);
-		
-		if(point_distance(global.body.x,global.body.y,x,y) <= 5){
-			wep_pat_state = wep_pat_nstate;
-			tx = -1;
-			ty = -1;
+	case 8: //wait till it comes back
+		visible = false;
+		if(!instance_exists(obj_greatsword_t)){
+			wep_pat_state = 0;
+			visible=true;
 		}
+			
 	break;
 	
 	case 9: //360 swing normal

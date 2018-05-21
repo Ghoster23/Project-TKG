@@ -19,7 +19,7 @@ scr_consumable_slot();
 ///Draw coins
 draw_sprite_ext(spr_coin, 0, xx + 160 * m, 8 * m,m,m,0,c_white,1);
 draw_set_font(font_chsl_tags);
-draw_text_ext_transformed( xx + 176 * m, 17 * m, global.weapon.wep_pat_block_count, 2 * m, 16 * m, m, m, 0);
+//draw_text_ext_transformed( xx + 176 * m, 17 * m, global.weapon.wep_pat_block_count, 2 * m, 16 * m, m, m, 0);
 draw_text_ext_transformed( yy + 63 * m, xx + 8 * m, fps_real, 2 * m, 16 * m, m, m, 0);
 
 ///Character specific

@@ -19,13 +19,17 @@ else{dash_key=keyboard_check(global.dash_key_bind); }
 if global.attack_key_bind==mb_left or global.attack_key_bind==mb_right or global.attack_key_bind==mb_middle{attack_key=mouse_check_button(global.attack_key_bind);}
 else{attack_key=keyboard_check(global.attack_key_bind); }
 
-//for checking the release
+//for checking the release of mouse1
 if global.attack_key_bind==mb_left or global.attack_key_bind==mb_right or global.attack_key_bind==mb_middle{attack_key_release=mouse_check_button_released(global.attack_key_bind);}
 else{attack_key_release=keyboard_check_released(global.attack_key_bind); }
 
 
 if global.mouse_r_key_bind==mb_left or global.mouse_r_key_bind==mb_right or global.mouse_r_key_bind==mb_middle{mouse_r_key=mouse_check_button(global.mouse_r_key_bind);}
 else{mouse_r_key=keyboard_check(global.mouse_r_key_bind); }
+
+//for checking release of mouse2
+if global.mouse_r_key_bind==mb_left or global.mouse_r_key_bind==mb_right or global.mouse_r_key_bind==mb_middle{mouse_r_key_release=mouse_check_button_released(global.mouse_r_key_bind);}
+else{mouse_r_key_release=keyboard_check_released(global.mouse_r_key_bind); }
 
 if global.interact_key_bind==mb_left or global.interact_key_bind==mb_right or global.interact_key_bind==mb_middle{interact_key=mouse_check_button(global.interact_key_bind);}
 else{interact_key=keyboard_check_pressed(global.interact_key_bind); }
