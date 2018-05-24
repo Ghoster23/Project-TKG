@@ -10,10 +10,11 @@ if(not global.pause and on){
 		var fly   = y;
 		var flfx  = x + sprite_width;
 		var flfy  = y + sprite_height;
-		var vals  = values;
-		var val   = value;
-		var mtype = value div 30;
-		var bl    = blocks;
+		
+		var vals   = values;
+		var mcount = scount;
+		var mtype  = stype;
+		var bl     = blocks;
 		
 		for(var k = 0; k < len; k++){
 			var inst = fl_tiles[| k];
@@ -55,19 +56,15 @@ if(not global.pause and on){
 						if(place_meeting(x + cell_size * (i + 0.5),
 									        y + cell_size * (j + 0.5), other)){
 							
-							var cval  = tiles[i * grid_size + j];
-							var count = cval mod 30;
+							var count = tiles[i * grid_size + j];
 								
 							if(count > 1){
-								var type = cval div 30;
+								var type = tiles_t[i * grid_size + j];
 								var diff = type - vals[type];
 								
-								if(diff != 0){									
-									tiles[i * grid_size + j] = cval - 29 * diff;
-									bl_cnt++;
-										
-								}else if(type == mtype){
-									tiles[i * grid_size + j] = val;
+								if(diff != 0 || type == mtype){					
+									tiles[i * grid_size + j]   = mcount;
+									tiles_t[i * grid_size + j] = mtype;
 									bl_cnt++;
 								}
 								
@@ -81,7 +78,7 @@ if(not global.pause and on){
 				
 				if(bl){
 					if(bl_cnt/array_len >= 0.5 and not place_meeting(x,y,obj_ice_cube)){
-						instance_create_layer(x,y,layer,obj_ice_cube);
+						instance_create_layer(x+16,y+16,layer,obj_ice_cube);
 					}
 				}
 			}

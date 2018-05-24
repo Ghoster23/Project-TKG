@@ -1,15 +1,15 @@
-if(instance_exists(shadow)){
+/*if(instance_exists(shadow)){
 	var x_ = alarm[0]/life_time;
 	
 	var scale = 0.2*ln(x_) + 1;
 	image_xscale = scale;
 	image_yscale = scale;
-	
+	show_debug_message(scale)
 	with(shadow){
 		image_xscale = scale;
 		image_yscale = scale;
 	}
-}
+}*/
 
 event_inherited();
 

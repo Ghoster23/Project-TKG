@@ -1,3 +1,3 @@
-scr_fluid_interactor_init(89,true,false);
+scr_fluid_interactor_init(180,2,true,false);
 
-i     = 0;
+i = 0;

@@ -16,11 +16,11 @@ if(not global.pause){
 					var py = (other.y + 9 - y) div cell_size;
 					
 					if(0 <= px && px < grid_size && 0 <= py && py < grid_size){
-						var type = tiles[px + py * grid_size];
+						var type = tiles_t[px + py * grid_size];
 			
-						if(0 < type && type < 30){
+						if(type == 0){
 							other.poison_counter++;
-						}else if(30 < type && type < 60){
+						}else if(type == 1){
 							scr_status_apply(statuses.wet,5,global.body);
 						}
 					}

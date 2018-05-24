@@ -1,13 +1,15 @@
 ///@description Initializes variables for a fluid converter
-///@param value
+///@param count
+///@param type
 ///@param conversion_array
 ///@param paint
 ///@param on
 ///@param visible
 {
-value   = argument0;
-values  = argument1;
-paint   = argument2;
-on      = argument3;
-visible = argument4;
+scount  = argument0;
+stype   = argument1;
+values  = argument2;
+paint   = argument3;
+on      = argument4;
+visible = argument5;
 }

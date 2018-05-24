@@ -1,9 +1,11 @@
 ///@description Initializes the variables for a fluid interactor
-///@param value
+///@param count
+///@param type
 ///@param on
 ///@param visible
 {
-value   = argument0;
-on      = argument1;
-visible = argument2;
+scount  = argument0;
+stype   = argument1;
+on      = argument2;
+visible = argument3;
 }

@@ -1,1 +1,1 @@
-scr_fluid_interactor_init(29,false,false);
+scr_fluid_interactor_init(60,0,false,false);

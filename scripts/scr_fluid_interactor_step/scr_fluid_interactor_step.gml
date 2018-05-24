@@ -8,7 +8,8 @@ if(not global.pause and on){
 		var fly  = y;
 		var flfx = x + sprite_width;
 		var flfy = y + sprite_height;
-		var val  = value;
+		var mcount = scount;
+		var mtype  = stype;
 		
 		for(var k = 0; k < len; k++){
 			var inst = fl_tiles[| k];
@@ -48,7 +49,8 @@ if(not global.pause and on){
 					for(var j = sy; j < fy; j++){
 						if(place_meeting(x + cell_size * (i + 0.5),
 										    y + cell_size * (j + 0.5), other)){
-							tiles[i * grid_size + j] = val;
+							tiles[i * grid_size + j]   = mcount;
+							tiles_t[i * grid_size + j] = mtype;
 							active = true;
 						}
 					}

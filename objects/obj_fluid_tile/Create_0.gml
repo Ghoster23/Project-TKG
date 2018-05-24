@@ -3,7 +3,8 @@ cell_size  = 32 div grid_size;
 array_len  = grid_size * grid_size;
 
 for(var i = 0; i < array_len; i++){
-	tiles[i] = 0;
+	tiles[i]   = 0;
+	tiles_t[i] = -1;
 }
 
 active = false;

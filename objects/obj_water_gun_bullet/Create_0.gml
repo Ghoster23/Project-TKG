@@ -1,18 +1,22 @@
-type = 0;
+offs = 8;
 
 event_inherited();
 
-life_time = 8;
+fall_rate = 0;
 
-spd = irandom_range(10,12);
-
-fall_rate = offs / life_time;
+life_time = -1;
 
 damage = 0;
+kb_amount = 5;
 
-shadow.phy_linear_damping = phy_linear_damping;
-shadow.visible = false;
+prev_bullet = noone;
 
-image_speed = 0.3;
-image_index = irandom_range(0,7);
-image_alpha = 1;
+with shadow {
+	phy_linear_damping = other.phy_linear_damping;
+	visible = false;
+	sprite_index = spr_circle_24b;
+	scr_fluid_converter_init(180,1,[1,1,1,3],true,true,false);
+	step_event = scr_fluid_converter_step;
+}
+
+image_speed = 0;

@@ -13,5 +13,5 @@ if(not once){
 	phy_rotation = radtodeg(dir);
 	phy_fixed_rotation = false;
 	
-	alarm[0]     = life_time;
+	alarm[0] = life_time;
 }
