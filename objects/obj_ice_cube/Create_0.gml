@@ -14,4 +14,4 @@ inc_x = sprite_width * rate / 2;
 inc_y = sprite_height * rate / 2;
 
 offset = true;
-offs   = 32;
+offs   = -16;

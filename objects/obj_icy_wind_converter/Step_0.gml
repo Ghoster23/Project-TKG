@@ -77,7 +77,7 @@ if(not global.pause and on){
 				sprite_index = spr_slm_creep1;
 				
 				if(bl){
-					if(bl_cnt/array_len >= 0.5 and not place_meeting(x,y,obj_ice_cube)){
+					if(bl_cnt/array_len >= 0.5 and not place_meeting(x,y,obj_solid_parent)){
 						instance_create_layer(x+16,y+16,layer,obj_ice_cube);
 					}
 				}
