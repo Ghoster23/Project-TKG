@@ -1,5 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
+if(once == false){
+	once = true;
+	lenchain = (num_links*180/30);
+}
 
 if((point_distance(x,y,owner.x,owner.y)>lenchain or phy_speed<10) and stop == false){
 	
@@ -22,5 +26,5 @@ if(point_distance(x,y,owner.x,owner.y)<=25 and pullback==true){
 }
 
 phy_rotation = -point_direction(global.body.x,global.body.y,x,y);
-
-//physics_joint_set_value(main_rope,phy_joint_max_length,0);
+x = phy_position_x;
+y = phy_position_y;

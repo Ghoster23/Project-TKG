@@ -130,7 +130,7 @@ for (var j=0; j<w; j++){
 ///Base Room
 instance_create_layer(gx+(global.roomwd div 2),gy+(global.roomhg div 2)-16,"IF",obj_view);
 
-scr_base_roomgn();
+scr_roomgn("base");
 
 //Player
 scr_spawn_player(gx+global.roomwd/2,gy+global.roomhg/2,"Instances");

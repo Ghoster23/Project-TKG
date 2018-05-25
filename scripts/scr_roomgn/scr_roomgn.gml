@@ -19,6 +19,9 @@ global.room_grid = ds_grid_create(19,9);
 //open the right .csv file
 
 switch type{
+	case "base":
+		room_file = file_text_open_read(working_directory+"roomtypebase.csv");
+		break;
 	case 0:
 		room_file = file_text_open_read(working_directory+"roomtype0.csv");
 		break;

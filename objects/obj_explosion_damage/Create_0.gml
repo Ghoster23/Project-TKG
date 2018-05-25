@@ -2,8 +2,8 @@ event_inherited();
 
 alarm_set(0,0.2*room_speed);
 
-image_xscale=1.2;
-image_yscale=1.2;
+image_xscale=1;
+image_yscale=1;
 image_speed=0;
 
 //Damage dealer vars

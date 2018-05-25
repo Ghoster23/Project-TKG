@@ -38,7 +38,24 @@ switch state {
 		}
 		
 	break;
-	case 2: //Cleared
+	case 2: //Cleared	
+	
+	
+		//tell all the items in this here room to come torwards me
+		var dgx = global.current_column*global.roomwd;
+		var dgy = global.current_row*global.roomhg;
+		
+		item_list = collision_rectangle_list(dgx,dgy,dgx+global.roomwd,dgy+global.roomhg,obj_item,false,true);
+		
+		if(item_list!= noone){
+			for(var i = 0; i < ds_list_size(item_list); i++){
+				var ditem = ds_list_find_value(item_list,i); 
+				ditem.fly2player = true;
+			}
+		
+			ds_list_destroy(item_list);
+		}
+		
 		if(instance_exists(obj_inventory_controller)){
 			var equiped = obj_inventory_controller.eq_active;
 	

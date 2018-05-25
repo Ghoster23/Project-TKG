@@ -34,3 +34,4 @@ physics_fixture_set_collision_group(fix1,1);
 my_fix=physics_fixture_bind(fix1, self);
 
 fallingpit = false;
+fly2player = false;

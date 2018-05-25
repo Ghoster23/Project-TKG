@@ -1,4 +1,6 @@
 linkslist = argument0;
+
+
 if(ds_list_size(linkslist)>=0){
 
 	//create rope uniting first link and parent
@@ -16,8 +18,8 @@ if(ds_list_size(linkslist)>=0){
 		}
 	}
 }
-else{
+
+if(ds_list_size(linkslist)==0){
 	ds_list_destroy(linkslist);
+	instance_destroy();
 }
-
-

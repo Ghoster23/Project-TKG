@@ -14,9 +14,14 @@ switch wep_pat_state {
 			wep_ang_target = wep_ang_off + wep_ang_windup;
 			
 		}else if(mouse_r_key){
-			simple_attack = false;
-			wep_pat_state  = 6;
 			
+			simple_attack = false;
+			chargeup      = false;
+			
+			progressbar = scr_create_charge_up( x, y, 1.5 * room_speed, self);
+			
+			wep_pat_state  = 6;
+			wep_pat_nstate = 0;
 		}
 		
 	break;
@@ -35,8 +40,15 @@ switch wep_pat_state {
 			wep_ang_target = wep_ang_off - wep_ang_windup;
 			
 		}else if(mouse_r_key){
+			
+			simple_attack = false;
+			chargeup      = false;
+			
+			progressbar = scr_create_charge_up( x, y, 1.5 * room_speed, self);
+			
 			simple_attack = false;
 			wep_pat_state  = 6;
+			wep_pat_nstate = 1;
 			
 		}
 		
@@ -97,7 +109,7 @@ switch wep_pat_state {
 	break;
 	case 4: //Swing
 		with(global.body){
-			physics_apply_impulse(phy_position_x,phy_position_y,lengthdir_x(80,other.angle),lengthdir_y(80,other.angle));
+			physics_apply_impulse(phy_position_x,phy_position_y,lengthdir_x(100,other.angle),lengthdir_y(100,other.angle));
 		}
 		angle += wep_ang_off;
 					
@@ -126,33 +138,49 @@ switch wep_pat_state {
 		angle += wep_ang_off;
 		wep_ang_off = scr_aproach(wep_ang_off, -90, 9);
 		
+		
 		if(wep_ang_off == -90 and simple_attack){
+			
 			simple_attack = false;
+			chargeup= false;
+			
+			var t_sword = scr_create_damage_dealer(x, y,							
+								 obj_greatsword_t, owner,	owner.ohko,			
+								 owner.stat[stats.atk]*(1+owner.modf[stats.atk]),
+								 stats.def, 									  
+								 4, global.p_stats[stats.atk]*20);				  
+			t_sword.owner = owner;
+			t_sword.num_links = round((progressbar.counter/progressbar.time)*30);
+			
+			visible = false;
+			owner.hs=true;
 			wep_pat_state = 7;
+			
+			instance_destroy(progressbar);
+			
 		}
+		else if(simple_attack){
+			simple_attack = false;
+			instance_destroy(progressbar);
+			chargeup= false;
+			wep_pat_state = wep_pat_nstate;
+		}
+		
+		
 	break;
-	case 7: //Fire		
-		var t_sword = scr_create_damage_dealer(x, y,							  //Position
-								 obj_greatsword_t, owner,	owner.ohko,			  //Damage dealer and owner
-								 owner.stat[stats.atk]*(1+owner.modf[stats.atk]), //Damage multiplier
-								 stats.def, 									  //Damage divider
-								 4, global.p_stats[stats.atk]*20);				  //Base damage and Knockback
-		t_sword.owner = owner; 
-		wep_pat_state = 8;
-								 
-	break;
-	case 8: //wait till it comes back
-		visible = false;
+	
+	case 7: //wait till it comes back
 		if(!instance_exists(obj_greatsword_t)){
-			wep_pat_state = 0;
+			wep_pat_state = wep_pat_nstate;
 			visible=true;
+			owner.hs=false;
 		}
 			
 	break;
 	
 	case 9: //360 swing normal
 		with(global.body){
-			physics_apply_impulse(phy_position_x,phy_position_y,lengthdir_x(60,other.angle),lengthdir_y(90,other.angle));
+			physics_apply_impulse(phy_position_x,phy_position_y,lengthdir_x(70,other.angle),lengthdir_y(70,other.angle));
 		}
 		angle = originalangle; 
 		angle += wep_ang_off;
@@ -221,7 +249,7 @@ switch wep_pat_state {
 	
 	case 10: //360 swing inverse 
 		with(global.body){
-			physics_apply_impulse(phy_position_x,phy_position_y,lengthdir_x(60,other.angle),lengthdir_y(90,other.angle));
+			physics_apply_impulse(phy_position_x,phy_position_y,lengthdir_x(70,other.angle),lengthdir_y(70,other.angle));
 		}
 		angle = originalangle; 
 		angle += wep_ang_off;

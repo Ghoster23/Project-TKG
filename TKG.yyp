@@ -1911,6 +1911,14 @@
             }
         },
         {
+            "Key": "32b4b6c6-3c30-4c91-98ef-4fc34e15e4d4",
+            "Value": {
+                "id": "334a9a6e-210a-4646-80d1-d97a2b6c2e92",
+                "resourcePath": "datafiles_yy\\roomtypebase.csv.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "32b64438-cc69-45a7-8bca-9266e464ccdc",
             "Value": {
                 "id": "fe659136-210d-451a-9aee-1c525ef64522",
@@ -5204,6 +5212,14 @@
                 "id": "6ed0ab3d-3a70-42af-a353-4d10fd0bfe1d",
                 "resourcePath": "objects\\obj_item\\obj_item.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "8b7b113c-a294-4b11-b248-7fdc68c6e156",
+            "Value": {
+                "id": "9528d43e-3ee1-4b17-8871-8384ae47d8c0",
+                "resourcePath": "sprites\\spr_heart_drop\\spr_heart_drop.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

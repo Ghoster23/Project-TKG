@@ -56,13 +56,13 @@ switch(type){
 	case item_type.heart:
 		switch(item){
 			case heart.heart:
-				draw_sprite_ext(spr_heart,amount,xx,yy,xscale,yscale,0,c_white,1);
+				draw_sprite_ext(spr_heart_drop,amount,xx,yy,xscale,yscale,0,c_white,1);
 			break;
 			case heart.armor:
-				draw_sprite_ext(spr_heart,amount,xx,yy,xscale,yscale,0,c_white,1);
+				draw_sprite_ext(spr_heart_drop,amount,xx,yy,xscale,yscale,0,c_white,1);
 			break;
 			case heart.container:
-				draw_sprite_ext(spr_heart_d,amount,xx,yy,xscale,yscale,0,c_white,1);
+				draw_sprite_ext(spr_heart_drop,amount,xx,yy,xscale,yscale,0,c_white,1);
 			break;
 		}
 	break;
