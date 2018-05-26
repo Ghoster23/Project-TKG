@@ -23,6 +23,8 @@ switch wep_pat_state {
 		wep_ammo--;
 		attack = false;
 		
+		angle = point_direction(x,y,global.body.x,global.body.y);
+		
 		var xx  = x + lengthdir_x(30,angle);
 		var yy  = y + lengthdir_y(30,angle);
 		var rad = degtorad(angle);
@@ -41,5 +43,6 @@ switch wep_pat_state {
 		wep_pat_state = 3;	
 	break;
 	case 3: //CD
+		attack = false;
 	break;
 }

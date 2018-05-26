@@ -109,7 +109,7 @@ switch wep_pat_state {
 				
 				water_ball.prev_bullet = prev_ball;
 				water_ball.dir = rad;
-				water_ball.spd = 0;
+				water_ball.spd = 20;
 				prev_ball = water_ball;
 			}
 			

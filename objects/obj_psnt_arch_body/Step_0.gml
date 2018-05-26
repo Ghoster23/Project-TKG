@@ -37,10 +37,12 @@ if(go and not global.pause){
 				dir = point_direction(x,y,global.body.x,global.body.y);
 				weapon.attack = true;
 				
-				tell = instance_create_layer(x,y-32,"IF",obj_archer_tell);
+				if(!instance_exists(tell)){
+					tell = instance_create_layer(x,y-32,"IF",obj_archer_tell);
                 
-				with tell {
-					owner = other;
+					with tell {
+						owner = other;
+					}
 				}
 			}
         

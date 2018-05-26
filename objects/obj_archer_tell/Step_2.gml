@@ -4,6 +4,6 @@ if instance_exists(owner) {
 	y = owner.y - 32;
 	
 	if(not owner.weapon.attack){
-	instance_destroy();
-}
+		instance_destroy();
+	}
 }
