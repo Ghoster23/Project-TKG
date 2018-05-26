@@ -3,7 +3,7 @@ var ratio = 1 / (1 + abs(z) / 31);
 draw_sprite_ext(spr_player_shadow,0,x+16,y+16,ratio,ratio,0,c_white,1);
 
 if(phy_speed <= 6 and z <= 3){
-	modulator=scr_aproach(modulator,1,0.04);
+	modulator=scr_approach(modulator,1,0.04);
 	 
 }else{
 	modulator = power( exp(1) , -0.2*abs(z)-1 ) + 1;  

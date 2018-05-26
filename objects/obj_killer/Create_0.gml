@@ -7,8 +7,8 @@ switch global.killer {
 	case "obj_slm_cr" :
 		sprite_index = spr_slime_down;
 	break;
-	case "obj_e_swing" :
-	case "obj_e_arrow" :
+	case "obj_swing" :
+	case "obj_arrow" :
 		sprite_index = spr_melee_tell;
 	break;
 	case "obj_mimic" :

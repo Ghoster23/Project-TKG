@@ -209,7 +209,7 @@ if(obj_ig_menu_controller.state == "closed"){
 			}
 		}
 	}else {
-		inv_x = scr_aproach(inv_x,0,8*r);
+		inv_x = scr_approach(inv_x,0,8*r);
 
 		///Quick Access
 		qa_x    = inv_x + (inv_wd / 2 - qa_wd / 2) * r;

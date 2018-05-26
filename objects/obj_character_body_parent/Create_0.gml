@@ -77,6 +77,10 @@ scr_get_input();
 //Movement
 hspd  = 0;
 vspd  = 0;
+dash_mult = 2;
+dash_time = 1/3;
+dash_cd   = 2/3;
+dash_move = false;
 
 len   = 0;
 

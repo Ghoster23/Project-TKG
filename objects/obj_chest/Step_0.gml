@@ -1,6 +1,10 @@
 scr_get_input();
 
-if(interact_key and in_range and closed){
+scr_interactable_step();
+
+show_debug_message(script_get_name(draw_script));
+
+if(interacted){
 	scr_sound(snd_open_chest);
     closed = false;
     image_speed = 1;

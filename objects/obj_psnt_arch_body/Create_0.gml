@@ -1,30 +1,18 @@
 /// @description Inicialise the enemy
 event_inherited();
 
-with head{
-	body = instance_nearest(x,y,obj_psnt_arch_body);
-	//get vars from body
-	face = body.face;
-	hair = body.hair;
-	skin_color = body.skin_color;
-	hair_color = body.hair_color;
-	
-	image_index = skin_color;
-}
-
 draw_script = scr_psnt_draw;
+spr_side = 3;
 
 image_speed = 0.4;
 
-cr_cd = false;
-cd_arrow = false;
 stun = false;
 
 shoot = false;
 tell = 0;
 
 //create weapon
-weapon = scr_create_weapon(x,y,layer,obj_e_bow,id);
+weapon = scr_create_weapon(x,y,layer,obj_bow,id);
 weapon.skin_color = skin_color;
 
 //Stats
@@ -38,16 +26,10 @@ stat[stats.spd]  =  3;
 
 prev_hp = stat[stats.hp];
 
-if instance_exists(global.body){
-	dir = point_direction(x,y,global.body.x,global.body.y);
-}
+dir = 270;
 
-d = 0;
-d_ = 0;
 offset_x = 0;
 offset_y = 0;
 
 ///Pause
-for(i = 0; i < 6; i += 1){	
-	alarms[i] = -1;
-}
+scr_pausable_init(6);

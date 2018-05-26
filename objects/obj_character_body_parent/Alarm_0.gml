@@ -11,4 +11,4 @@ inv = false;
 
 //Start dash cooldown
 state    = 0;
-alarm[1] = (2/3) * room_speed;
+alarm[1] = dash_cd * room_speed;

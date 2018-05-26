@@ -16,6 +16,12 @@ shadow.owner = self;
 
 offset = true;
 
+drop = false;
+
+type   = -1;
+item   = -1;
+amount = -1;
+
 collided  = false;
 piercing  = false;
 destroyed = false;

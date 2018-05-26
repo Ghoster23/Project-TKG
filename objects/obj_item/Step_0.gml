@@ -1,14 +1,18 @@
 if(fallingpit == true){
 	draw_script = scr_draw_item_floor;
-	image_xscale = scr_aproach(image_xscale,0,0.1);
-	image_yscale= scr_aproach(image_yscale,0,0.1);
+	
+	image_xscale = scr_approach(image_xscale,0,0.1);
+	image_yscale = scr_approach(image_yscale,0,0.1);
+	
 	if(image_xscale==0){
 		instance_destroy();
 	}
+	
 	phy_linear_damping=5;
 	exit;
 }
-if pick_up == false{
+
+if(pick_up == false and jump){
 	
 	draw_script = scr_item_jump;
 
@@ -63,6 +67,7 @@ if pick_up == false{
 else{
 	image_xscale = 1;
 	image_yscale = 1;
+	pick_up = true;
 	draw_script = scr_draw_item_floor;
 }
 

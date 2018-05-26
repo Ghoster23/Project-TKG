@@ -2,8 +2,10 @@
 ///@param type   - Type of item
 ///@param item   - Item
 ///@param amount - Amount
-///@param xx     - x
-///@param yy     - y
+///@param x      - x
+///@param y      - y
+///@param jump   - Jump or not
+///@param dir    - true = random || false = opposite player
 {
 var type   = argument0;
 var item   = argument1;
@@ -11,6 +13,9 @@ var amount = argument2;
 
 var xx = argument3;
 var yy = argument4;
+
+var jp = argument5;
+var dr = argument6;
 
 var spawn = instance_create_layer(xx,yy,"Instances",obj_item);
 
@@ -36,11 +41,10 @@ if(amount > 0){
 	
 }
 
-var dir = irandom(360);
-
 with spawn {
-	id.dir = dir;
-	physics_apply_impulse(phy_position_x,phy_position_y,lengthdir_x(6,id.dir),lengthdir_y(6,id.dir));
-	s = phy_speed;
+	jump = jp;
+	dir  = dr;
+	
+	visible = true;
 }
 }

@@ -8,7 +8,7 @@ if(not global.pause){
 	scr_pause_end(4);
 	
 	//Get direction
-	if(state == 0 || state == 1 || (state == 2 && alarm[0] == -1)){
+	if(state == 0 || state == 1 || (state == 2 && (alarm[0] == -1 || (dash_move and input)))){
 		//Get the axis
 		xaxis = (right_key - left_key);
 		yaxis = ( down_key -   up_key);
@@ -85,8 +85,5 @@ if(not global.pause){
 	
 	if(input){
 		alarm[4] = -1;
-	}
-	
-}else {
-	
+	}	
 }

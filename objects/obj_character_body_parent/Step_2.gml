@@ -74,10 +74,6 @@ switch state{
 			
 		sprite_index = roll_sprs[spr_side];
 			
-		if(spr_side == 3){
-			image_xscale = -1;
-		}
-			
 		inv = true;
 	break;
 	case 3: //Dead
@@ -99,9 +95,4 @@ if(part_emitter_exists(global.ps_if,global.body_em)){
 	part_emitter_region(global.ps_if,global.body_em,phy_position_x,phy_position_x,phy_position_y,phy_position_y,pt_shape_circle,ps_distr_gaussian);
 }else {
 	global.body_em = part_emitter_create(global.ps_if);
-}
-
-///Invulnerabillity guaranteed off
-if(inv and not instance_exists(obj_roll)){
-	inv = false;
 }

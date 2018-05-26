@@ -1,7 +1,7 @@
 event_inherited();
 
 ///Exist
-if go and not global.pause{
+if(go and not global.pause){
 	
 	scr_pause_end(6);
 	
@@ -9,30 +9,39 @@ if go and not global.pause{
     
     ///Enemy Behaevior
     switch(state){
-        case 0:  //Walk away
+		case 0: //Idle
+			scr_idle_enemy(64,30);
+			
+		break;
+        case 1: //Flee
 			image_speed = 0.4;
-            scr_move_entity(point_direction(global.body.x,global.body.y,x,y),1);
+			dir     = point_direction(global.body.x,global.body.y,x,y);
+			wep_dir = dir;
+            scr_move_entity(dir,1);
             
         break;
-        case 1:  //Go towards the player
+        case 2: //Advance
 			image_speed = 0.4;
 			scr_define_path(self, global.body);
 			path = global.ai_path;
             scr_move_entity(point_direction(x,y,path_get_point_x(path,2),path_get_point_y(path,2)),1);
             
         break;
-        case 2:  //Attack the player
-            if(shoot == false){
-                shoot = true;
-				tell  = instance_create_layer(x,y-32,"IF",obj_archer_tell);
+		case 3: //Aim
+		
+		break;
+        case 4: //Shoot
+			if(!weapon.attack){
+				weapon.attack = true;
+				tell = instance_create_layer(x,y-32,"IF",obj_archer_tell);
                 
 				with tell {
 					owner = other;
 				}
-            }
+			}
         
         break;
-        case 3:  //Dead State
+        case 4: //Dead State
 			solid = false;
 			image_speed = 0;
 			

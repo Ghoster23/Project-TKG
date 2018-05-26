@@ -163,7 +163,7 @@ if (self.object_index == obj_psnt_body) or (self.object_index == obj_psnt_arch_b
 /*---------------------------------------*/
 /*use this code to draw psnt melee weapon*/
 /*---------------------------------------*/
-} else if (self.object_index == obj_e_melee){
+} else if (self.object_index == obj_melee){
 	
 	//draw melee weapon
 	draw_self();
@@ -185,7 +185,7 @@ if (self.object_index == obj_psnt_body) or (self.object_index == obj_psnt_arch_b
 /*---------------------------------------*/
 /*use this code to draw psnt bow*/
 /*---------------------------------------*/
-} else if (self.object_index == obj_e_bow){
+} else if (self.object_index == obj_bow){
 	
 	//draw bow
 	draw_self();

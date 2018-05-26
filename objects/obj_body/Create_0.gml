@@ -11,9 +11,9 @@ body_still_sprs[3] = spr_jason_body_left_still;
 body_idle = spr_jason_body_idle;
 
 roll_sprs[0] = spr_jason_roll_up;
-roll_sprs[1] = spr_jason_roll_side;
+roll_sprs[1] = spr_jason_roll_right;
 roll_sprs[2] = spr_jason_roll_down;
-roll_sprs[3] = spr_jason_roll_side;
+roll_sprs[3] = spr_jason_roll_left;
 
 hands_spr = spr_jason_hands;
 

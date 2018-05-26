@@ -26,7 +26,7 @@ switch wep_pat_state {
 					
 		if(attack_key){
 			if(wep_ang_off < wep_ang_target){
-				wep_ang_off = scr_aproach(wep_ang_off,wep_ang_target,wep_windup_spd);
+				wep_ang_off = scr_approach(wep_ang_off,wep_ang_target,wep_windup_spd);
 			}else {
 				wep_ang_target = -(wep_ang_swing + wep_ang_windup);
 				wep_pat_nstate =    1;
@@ -41,7 +41,7 @@ switch wep_pat_state {
 					
 		if(attack_key){
 			if(wep_ang_off > wep_ang_target){
-				wep_ang_off = scr_aproach(wep_ang_off,wep_ang_target,wep_windup_spd);
+				wep_ang_off = scr_approach(wep_ang_off,wep_ang_target,wep_windup_spd);
 			}else {
 				wep_ang_target = wep_ang_swing + wep_ang_windup;
 				wep_pat_nstate =   0;

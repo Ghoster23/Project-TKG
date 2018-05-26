@@ -8,7 +8,7 @@
 	part_type_alpha3(global.pt_haze, 0.20, 0.40, 0);
 	part_type_blend(global.pt_haze, 1);
 	part_type_life(global.pt_haze, 20, 30);
-	part_type_speed(global.pt_haze, 0.20, 0.40, -0.02, 0);
-	part_type_direction(global.pt_haze, 0, 360, 0, 0);
+	part_type_speed(global.pt_haze,0.5,0.6,-0.01,0);
+    part_type_direction(global.pt_haze,0,359,0,0);
 	part_type_gravity(global.pt_haze, 0, 0);
 }

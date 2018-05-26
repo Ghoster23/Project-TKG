@@ -23,14 +23,14 @@ if(room == rm_level){
 			}
 	
 			if(not stopped){
-				x = scr_aproach(x,vfx,16);
-				y = scr_aproach(y,vfy,16);
+				x = scr_approach(x,vfx,16);
+				y = scr_approach(y,vfy,16);
 			}
 		}
 	}else {
 		if(x != global.body.phy_position_x || y != global.body.phy_position_y){
-			x = scr_aproach(x,global.body.phy_position_x,8);
-			y = scr_aproach(y,global.body.phy_position_y,8);
+			x = scr_approach(x,global.body.phy_position_x,8);
+			y = scr_approach(y,global.body.phy_position_y,8);
 		}else {
 			screen_save(working_directory + "death.png");
 			room_goto(rm_menu_1);

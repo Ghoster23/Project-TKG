@@ -10,8 +10,12 @@ if(!global.pause){
 	}
 	
 	if(offs <= 0){
-		
-		instance_destroy(shadow);
+		if(!drop){
+			instance_destroy(shadow);
+		}else if(type != -1){
+			scr_spawn_item(type,item,amount,phy_position_x,phy_position_y,false,true);
+			destroyed = true;
+		}
 	}
 	
 }else {

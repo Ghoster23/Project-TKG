@@ -1,4 +1,4 @@
-alarm_count = 2;
+alarm_count = 0;
 
 event_inherited();
 

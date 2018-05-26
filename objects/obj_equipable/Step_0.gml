@@ -1,13 +1,19 @@
 scr_get_input();
 
-if(pedestal != -1 && instance_exists(pedestal) && pedestal.dis && interact_key){
-	scr_pickup_item(type,item,amount);
+if(pedestal != -1 && instance_exists(pedestal)){
+	if(pedestal.interacted){
+		scr_pickup_item(type,item,amount);
 		
-	instance_destroy();  
-}else if(distance_to_object(global.body) <= 32 && interact_key){
-	scr_pickup_item(type,item,amount);
+		instance_destroy();
+	}
+}else {
+	scr_interactable_step();
 	
-	instance_destroy();
+	if(interacted){
+		scr_pickup_item(type,item,amount);
+	
+		instance_destroy();
+	}
 }
 
 t = (t + inc) mod 360;

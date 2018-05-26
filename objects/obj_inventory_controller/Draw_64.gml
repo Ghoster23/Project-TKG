@@ -1,4 +1,4 @@
-if room == rm_level {
+if(room == rm_level || room == rm_lvl_editor_test){
 	if obj_ig_menu_controller.state == "status" and visible{
 		
 		if(selected == -1){

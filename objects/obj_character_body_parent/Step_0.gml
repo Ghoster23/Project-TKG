@@ -15,7 +15,7 @@ if(not global.pause){
 		break;
 		case 2: //Dash
 			//Give it more speed
-			len = stat[stats.spd] * 2;
+			len = stat[stats.spd] * dash_mult;
 			
 			if(alarm[0] == -1){				
 				//Hide other player objects
@@ -25,7 +25,7 @@ if(not global.pause){
 				inv = true;
 
 				//Set dash duration
-				alarm[0] = room_speed/3;
+				alarm[0] = dash_time * room_speed;
 			}
 		break;
 		case 3: //Dead

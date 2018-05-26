@@ -30,3 +30,5 @@ global.equipable[item] = true;*/
 image_index = item;
 
 pedestal = -1;
+
+scr_interactable_init(32,16,16,16,4);

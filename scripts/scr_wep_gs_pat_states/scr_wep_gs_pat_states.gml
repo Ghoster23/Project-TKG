@@ -61,7 +61,7 @@ switch wep_pat_state {
 		}
 			
 		if(wep_ang_off < wep_ang_target){
-			wep_ang_off = scr_aproach(wep_ang_off,wep_ang_target,wep_windup_spd);
+			wep_ang_off = scr_approach(wep_ang_off,wep_ang_target,wep_windup_spd);
 		}
 		
 		if(chargeup == true and simple_attack == true){
@@ -88,7 +88,7 @@ switch wep_pat_state {
 		}
 		
 		if(wep_ang_off > wep_ang_target){
-			wep_ang_off = scr_aproach(wep_ang_off,wep_ang_target,wep_windup_spd);
+			wep_ang_off = scr_approach(wep_ang_off,wep_ang_target,wep_windup_spd);
 		}
 		
 		if(chargeup == true and simple_attack == true){
@@ -136,7 +136,7 @@ switch wep_pat_state {
 		}
 	
 		angle += wep_ang_off;
-		wep_ang_off = scr_aproach(wep_ang_off, -90, 9);
+		wep_ang_off = scr_approach(wep_ang_off, -90, 9);
 		
 		
 		if(wep_ang_off == -90 and simple_attack){
@@ -184,7 +184,7 @@ switch wep_pat_state {
 		}
 		angle = originalangle; 
 		angle += wep_ang_off;
-		wep_ang_off = scr_aproach(wep_ang_off, wep_ang_target, 30);
+		wep_ang_off = scr_approach(wep_ang_off, wep_ang_target, 30);
 		
 		if (angle >= 360){
 		     angle -= 360;
@@ -253,7 +253,7 @@ switch wep_pat_state {
 		}
 		angle = originalangle; 
 		angle += wep_ang_off;
-		wep_ang_off = scr_aproach(wep_ang_off, wep_ang_target, 30);
+		wep_ang_off = scr_approach(wep_ang_off, wep_ang_target, 30);
 		
 		if (angle >= 360){
 		     angle -= 360;

@@ -2,11 +2,7 @@ event_inherited();
 owner = noone;
 
 //Pause
-prev_image_speed = 0;
-
-for(i = 0; i < alarm_count; i++){
-	alarms[i] = -1;
-}
+scr_pausable_init(alarm_count);
 
 //Particles
 em  = part_emitter_create(global.ps_ps);
@@ -20,7 +16,6 @@ angle   = 0;
 //Visuals
 offset = true;
 offs   = 4;
-
 image_speed = 0;
 
 drawn  = -1;

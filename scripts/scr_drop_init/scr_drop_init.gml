@@ -1,6 +1,6 @@
 enum drops{
 	eyeball = 0,
-	tongue  = 1,
+	arrow   = 1,
 	count   = 2
 	
 }

@@ -26,7 +26,7 @@ switch wep_pat_state {
 		if(not attack_key){
 			instance_destroy(progressbar);
 				
-			if(wep_ammo > 0 && alarm[wep_pat_alarm] == -1){
+			if(image_index == 1){
 				wep_pat_state = 3; //Go to Ice Shot
 			}else {
 				wep_pat_state = 0; //Go to base
@@ -96,12 +96,17 @@ switch wep_pat_state {
 		if(mouse_r_key and global.p_LVB_water > 0){
 			global.p_LVB_water -= 1;
 			
-			if(global.p_LVB_water mod 4 == 0){
+			if(global.p_LVB_water mod 2 == 0){
 				var xx  = x + lengthdir_x(40,angle);
 				var yy  = y + lengthdir_y(40,angle);
 				var rad = -degtorad(angle);
 			
-				var water_ball = instance_create_layer(xx,yy,"IF",obj_water_gun_bullet);
+				if(global.p_LVB_water mod 4 == 0){
+					var water_ball = instance_create_layer(xx,yy,"IF",obj_water_gun_bullet);
+				}else {
+					var water_ball = instance_create_layer(xx,yy,"IF",obj_water_gun_fake_bullet);
+				}
+				
 				water_ball.prev_bullet = prev_ball;
 				water_ball.dir = rad;
 				water_ball.spd = 20;
@@ -118,7 +123,9 @@ switch wep_pat_state {
 	case 5: //Blocks
 		if(!attack_key){
 			instance_destroy(progressbar);
-			instance_create_layer(x,y,layer,obj_freeze_wave);
+			var xx  = x + lengthdir_x(24,angle);
+			var yy  = y + lengthdir_y(24,angle);
+			instance_create_layer(xx,yy,layer,obj_freeze_wave);
 			
 			wep_pat_block_count = wep_pat_block_cd;
 			wep_pat_state       = 0; //Go to base

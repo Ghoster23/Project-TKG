@@ -20,7 +20,11 @@ if(active && global.check == 1){
 				
 				if(global.current_column == rx && global.current_row == ry){
 					//Opacity
-					op = ln(count) * 0.05 + 0.25;
+					if(type != 3){
+						op = ln(count) * 0.05 + 0.25;
+					}else {
+						op = ln(count) * 0.05 + 0.55;
+					}
 				
 					draw_sprite_ext(spr_pixel, 0,
 								ox + i * cell_size + 2,

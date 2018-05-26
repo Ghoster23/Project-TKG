@@ -5,26 +5,6 @@
     "name": "obj_above_ground_parent",
     "eventList": [
         {
-            "id": "a4fe4d1f-e792-4068-8d5e-ea50d208ab5e",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "95308761-9733-47f4-9894-808bcda13fd7",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "95308761-9733-47f4-9894-808bcda13fd7"
-        },
-        {
-            "id": "f12e2f2f-1b17-4974-96d1-897cb11174be",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "76eb21dd-afc4-4a48-ba82-96a2aef75e34",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "95308761-9733-47f4-9894-808bcda13fd7"
-        },
-        {
             "id": "9298b7e2-9f7c-4fd7-b38a-3e506fa694f8",
             "modelName": "GMEvent",
             "mvc": "1.0",

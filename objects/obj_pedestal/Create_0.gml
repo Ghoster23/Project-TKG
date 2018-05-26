@@ -2,8 +2,8 @@
 // You can write your code in this editor
 event_inherited();
 
-dis = false;
-
 eq = instance_create_layer(x,y-32,"IF",obj_equipable);
 
 eq.pedestal = self;
+
+scr_interactable_init(48,16,15,16,-48);

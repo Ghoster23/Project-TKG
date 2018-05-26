@@ -1,8 +1,8 @@
 if(fallingpit == true){
 	draw_script = scr_draw_thing_floor;
 	
-	image_xscale = scr_aproach(image_xscale,0,0.1);
-	image_yscale = scr_aproach(image_yscale,0,0.1);
+	image_xscale = scr_approach(image_xscale,0,0.1);
+	image_yscale = scr_approach(image_yscale,0,0.1);
 	
 	if(image_xscale == 0){
 		instance_destroy();
@@ -12,8 +12,8 @@ if(fallingpit == true){
 	exit;
 }
 
-image_xscale = scr_aproach(image_xscale,2,0.2);
-image_yscale = scr_aproach(image_yscale,2,0.2);
+image_xscale = scr_approach(image_xscale,2,0.2);
+image_yscale = scr_approach(image_yscale,2,0.2);
 
 
 if z >= 10{

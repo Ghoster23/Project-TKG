@@ -61,5 +61,5 @@ switch highltd{
 		break;
 }
 //global.map_angle=lerp(global.map_angle,targetrotation,rotationspeed);
-global.map_angle=scr_aproach(global.map_angle,targetrotation,rotationspeed);
+global.map_angle=scr_approach(global.map_angle,targetrotation,rotationspeed);
 obj_clouds1.image_angle = global.map_angle;

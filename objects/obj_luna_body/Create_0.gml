@@ -11,10 +11,10 @@ body_still_sprs[3] = spr_luna_body_left_still;
 
 body_idle = spr_luna_body_idle;
 
-roll_sprs[0] = spr_jason_roll_up;
-roll_sprs[1] = spr_jason_roll_side;
-roll_sprs[2] = spr_jason_roll_down;
-roll_sprs[3] = spr_jason_roll_side;
+roll_sprs[0] = spr_luna_dash_up;
+roll_sprs[1] = spr_luna_dash_right;
+roll_sprs[2] = spr_luna_dash_down;
+roll_sprs[3] = spr_luna_dash_left;
 
 head_spr  = spr_luna_head;
 
@@ -33,5 +33,13 @@ hs = false;
 
 //Abillity
 global.p_LVB_water = 100000;
+
+wind = noone;
+dash_mult = 3;
+dash_time = 0.5;
+dash_cd   = 2/3;
+dash_move = true;
+
+phy_bullet = true;
 
 //fl_gen = instance_create_layer(phy_position_x,phy_position_y,layer,obj_luna_fluid_gen);
