@@ -15,8 +15,7 @@ if(go and not global.pause){
 		break;
         case 1: //Flee
 			image_speed = 0.4;
-			dir     = point_direction(global.body.x,global.body.y,x,y);
-			wep_dir = dir;
+			dir = point_direction(x,y,global.body.x,global.body.y) + 180;
             scr_move_entity(dir,1);
             
         break;
@@ -24,15 +23,20 @@ if(go and not global.pause){
 			image_speed = 0.4;
 			scr_define_path(self, global.body);
 			path = global.ai_path;
-            scr_move_entity(point_direction(x,y,path_get_point_x(path,2),path_get_point_y(path,2)),1);
+			
+			dir = point_direction(x,y,path_get_point_x(path,2),path_get_point_y(path,2));
+            scr_move_entity(dir,1);
             
         break;
 		case 3: //Aim
+			dir = point_direction(x,y,global.body.x,global.body.y);
 		
 		break;
         case 4: //Shoot
 			if(!weapon.attack){
+				dir = point_direction(x,y,global.body.x,global.body.y);
 				weapon.attack = true;
+				
 				tell = instance_create_layer(x,y-32,"IF",obj_archer_tell);
                 
 				with tell {

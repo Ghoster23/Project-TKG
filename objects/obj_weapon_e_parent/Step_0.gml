@@ -9,7 +9,7 @@ if(not global.pause){
 			
 			//Particles
 			///Layering
-			if(owner.spr_side == 0){
+			if(owner.spr_side == 1){
 				offs = -4;
 				
 			}else {
@@ -26,7 +26,7 @@ if(not global.pause){
 			
 			//Particles
 			///Layering
-			if(owner.spr_side != 0){
+			if(owner.spr_side != 1){
 				offs = -4;
 				
 			}else {

@@ -21,6 +21,7 @@ switch wep_pat_state {
 	break;
 	case 2: //Shoot
 		wep_ammo--;
+		attack = false;
 		
 		var xx  = x + lengthdir_x(30,angle);
 		var yy  = y + lengthdir_y(30,angle);
@@ -37,6 +38,8 @@ switch wep_pat_state {
 		image_index = 0;
 		
 		alarm[wep_pat_alarm] = wep_pat_cd * room_speed;
-		wep_pat_state = 0;	
+		wep_pat_state = 3;	
+	break;
+	case 3: //CD
 	break;
 }

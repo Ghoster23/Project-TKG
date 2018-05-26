@@ -80,7 +80,7 @@ switch wep_pat_state {
 			ice.spd    = wep_proj_speed;
 		}
 		
-		var mult = wep_proj_count * 5;
+		var mult = wep_proj_count * 30;
 		
 		with(global.body){
 			physics_apply_impulse(phy_position_x,phy_position_y,-mult*cos(rad),mult*sin(rad));
@@ -109,7 +109,7 @@ switch wep_pat_state {
 				
 				water_ball.prev_bullet = prev_ball;
 				water_ball.dir = rad;
-				water_ball.spd = 20;
+				water_ball.spd = 0;
 				prev_ball = water_ball;
 			}
 			

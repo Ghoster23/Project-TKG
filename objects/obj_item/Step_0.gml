@@ -82,7 +82,9 @@ if(point_distance(x,y,global.body.x,global.body.y)<60){
 }
 
 if(fly2player and type != item_type.heart){
-	physics_remove_fixture(self,my_fix)
+	if(my_fix != -1){
+		physics_remove_fixture(self,my_fix);
+	}
 	
 	fix1 = physics_fixture_create();
 	physics_fixture_set_circle_shape(fix1,6);

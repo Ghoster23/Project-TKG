@@ -1,2 +1,0 @@
-/// @description Collide
-impact = true;

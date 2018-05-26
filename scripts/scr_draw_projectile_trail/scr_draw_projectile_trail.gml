@@ -1,6 +1,6 @@
 {
 	//cauda aumenta com tempo ate certo trail_offset
-	var target = 50 * (phy_speed / spd);
+	var target = 50 * (shadow.phy_speed / spd);
 	trail_offset = scr_approach(trail_offset,target,(target-trail_offset) * 0.5);
 	
 	x1 = xprevious + lengthdir_x(-(trail_offset),-phy_rotation);

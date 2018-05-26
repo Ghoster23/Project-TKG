@@ -28,8 +28,14 @@ prev_hp = stat[stats.hp];
 
 dir = 270;
 
+state_check = true;
+
 offset_x = 0;
 offset_y = 0;
+
+idle_r = 300;
+aim_r  = 200;
+flee_r = 100;
 
 ///Pause
 scr_pausable_init(6);

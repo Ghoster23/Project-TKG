@@ -11,7 +11,8 @@ switch(state){
 	break;
 }
 
-spr_side = (dir + 45) div 90;
+wep_dir  = dir;
+spr_side = (dir div 90) mod 4;
 
 if(flash == false and not global.pause){
 	switch(spr_side){
@@ -35,6 +36,3 @@ if(flash == false and not global.pause){
 	    break;
 	}
 }
-
-x = phy_position_x;
-y = phy_position_y;

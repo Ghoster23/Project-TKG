@@ -16,4 +16,5 @@ pick_up = false;
 fallingpit = false;
 
 fix1 = -1;
+my_fix = -1;
 fly2player = false;

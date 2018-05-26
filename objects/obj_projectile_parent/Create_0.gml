@@ -28,3 +28,5 @@ destroyed = false;
 
 prev_image_speed = 0;
 alarms[0] = -1;
+
+phy_bullet = true;

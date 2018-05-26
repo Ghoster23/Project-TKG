@@ -50,7 +50,7 @@
     "parentObjectId": "a3c66920-061f-4c76-9fd6-cd704e6e1b55",
     "persistent": false,
     "physicsAngularDamping": 0.1,
-    "physicsDensity": 0.5,
+    "physicsDensity": 3,
     "physicsFriction": 0.2,
     "physicsGroup": 0,
     "physicsKinematic": false,

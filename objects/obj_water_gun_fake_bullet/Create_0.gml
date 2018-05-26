@@ -17,3 +17,5 @@ with shadow {
 }
 
 image_speed = 0;
+
+beam_color = make_color_rgb(8,125,204);
