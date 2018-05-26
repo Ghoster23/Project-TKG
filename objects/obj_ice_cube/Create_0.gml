@@ -15,3 +15,9 @@ inc_y = sprite_height * rate / 2;
 
 offset = true;
 offs   = -16;
+
+if(place_meeting(x,y,obj_grassblade)){
+	with(other){
+		instance_destroy();
+	}
+}

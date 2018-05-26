@@ -63,6 +63,16 @@
             "enumb": 1,
             "eventtype": 3,
             "m_owner": "89d08756-8fdd-4f6b-a114-e248957228db"
+        },
+        {
+            "id": "c2d9405f-0bc1-408a-8806-005712ed4075",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
+            "m_owner": "89d08756-8fdd-4f6b-a114-e248957228db"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -75,38 +85,38 @@
     "physicsGroup": 0,
     "physicsKinematic": false,
     "physicsLinearDamping": 1,
-    "physicsObject": true,
+    "physicsObject": false,
     "physicsRestitution": 0.5,
     "physicsSensor": false,
     "physicsShape": 1,
     "physicsShapePoints": [
         {
-            "id": "e3e2e1d0-fe4a-494f-a9ed-87b569e1b30b",
+            "id": "099cbfd1-4d5e-4a3d-867d-733f11fd8adc",
             "modelName": "GMPoint",
             "mvc": "1.0",
-            "x": 10,
-            "y": 21
+            "x": 0,
+            "y": 0
         },
         {
-            "id": "a512acfe-0a0b-4411-a072-2c3575f48407",
+            "id": "ab435dee-c159-4896-8b58-29c374bcf0d6",
             "modelName": "GMPoint",
             "mvc": "1.0",
-            "x": 22,
-            "y": 21
+            "x": 32,
+            "y": 0
         },
         {
-            "id": "0167c4ad-37fc-4128-88aa-cfa1de8bb653",
+            "id": "f5728d89-168a-4bfe-bf06-6bc0d482633f",
             "modelName": "GMPoint",
             "mvc": "1.0",
-            "x": 22,
-            "y": 33
+            "x": 32,
+            "y": 32
         },
         {
-            "id": "2b0dcf7d-d230-4abc-b4b8-db51a747ee4e",
+            "id": "0fb90593-ac0e-4ecf-b0e8-256c41996f36",
             "modelName": "GMPoint",
             "mvc": "1.0",
-            "x": 10,
-            "y": 33
+            "x": 0,
+            "y": 32
         }
     ],
     "physicsStartAwake": true,

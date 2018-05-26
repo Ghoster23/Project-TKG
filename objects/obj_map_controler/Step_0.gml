@@ -22,44 +22,9 @@ if escape_key{
 
 highltd = ds_list_find_value(ds_places,global.char);
 
-switch highltd{
-	case obj_capital:
-		targetrotation=20;
-		break;
-	case obj_hydra:
-		targetrotation=145;
-		break;
-	case obj_lighthouse:
-		targetrotation=10;
-		break;
-	case obj_windmill:
-		targetrotation=36;
-		break;
-	case obj_jungle:
-		targetrotation=69;
-		break;
-	case obj_tree:
-		targetrotation=200;
-		break;
-	case obj_birds:
-		targetrotation=130;
-		break;
-	case obj_coleseum:
-		targetrotation=300;
-		break;
-	case obj_mountains:
-		targetrotation=0;
-		break;
-	case obj_scholarplace:
-		targetrotation=130;
-		break;
-	case obj_littlehouses:
-		targetrotation=54;
-		break;
-	case obj_moderncity:
-		targetrotation=60;
-		break;
-}
 //global.map_angle=lerp(global.map_angle,targetrotation,rotationspeed);
-global.map_angle=scr_approach(global.map_angle,targetrotation,rotationspeed);
-obj_clouds1.image_angle = global.map_angle;
+//global.map_angle=scr_approach(global.map_angle,rotation++,rotationspeed);
+//obj_clouds1.image_angle = global.map_angle;
+
+global.map_angle+=rot_speed;
+obj_clouds1.image_angle+=rot_speed;

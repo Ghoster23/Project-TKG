@@ -33,13 +33,13 @@ if ds_exists(ds_menumapgrid, ds_type_grid) {
 				//draw_outline
 				for (var i = 0; i < image_number; i++){
 					outline_start(1,c_white,sprite_index,i,4);
-					draw_sprite_ext(sprite_index, i, x, y - i, image_xscale, image_yscale, global.map_angle+angle_off, c_white, image_alpha);
+					draw_sprite_ext(sprite_index, i, x, y - i*0.7, image_xscale*0.7, image_yscale*0.7, global.map_angle+angle_off, c_white, image_alpha);
 					outline_end();
 				
 				}
 			}
             for (var i = 0; i < image_number; i++){
-				draw_sprite_ext(sprite_index, i, x, y - i, image_xscale, image_yscale, global.map_angle+angle_off, c_white, image_alpha);
+				draw_sprite_ext(sprite_index, i, x, y - i*0.7, image_xscale*0.7, image_yscale*0.7, global.map_angle+angle_off, c_white, image_alpha);
             }
         
          }

@@ -1,4 +1,4 @@
-if(wep_pat_state < 7 or wep_pat_state>=9){
+if(wep_pat_state <= 10){
 	x = global.body.phy_position_x;
 	y = global.body.phy_position_y;
 }

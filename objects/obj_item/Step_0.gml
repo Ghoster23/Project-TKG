@@ -19,12 +19,12 @@ if(pick_up == false and jump){
 	if z>=10{
 		physics_remove_fixture(self,my_fix)
 		physics_fixture_set_collision_group(fix1,0);
-		my_fix = physics_fixture_bind(fix1, self);
+		my_fix=physics_fixture_bind_ext(fix1, self,-16,-20);
 		
 	}else{
 		physics_remove_fixture(self,my_fix)
 		physics_fixture_set_collision_group(fix1,1);
-		my_fix = physics_fixture_bind(fix1, self);
+		my_fix=physics_fixture_bind_ext(fix1, self,-16,-20);
 		
 	}
 
@@ -78,25 +78,23 @@ if(amount == -1){
 
 if(point_distance(x,y,global.body.x,global.body.y)<60){
 	pick_up = true;
-	physics_apply_impulse(x,y,lengthdir_x(1,point_direction(x,y,global.body.x,global.body.y)),lengthdir_y(1,point_direction(x,y,global.body.x,global.body.y)));
+	physics_apply_impulse(x,y,lengthdir_x(0.5,point_direction(x,y,global.body.x,global.body.y)),lengthdir_y(0.5,point_direction(x,y,global.body.x,global.body.y)));
 }
 
 if(fly2player and type != item_type.heart){
 	if(my_fix != -1){
 		physics_remove_fixture(self,my_fix);
 	}
-	
 	fix1 = physics_fixture_create();
 	physics_fixture_set_circle_shape(fix1,6);
 	physics_fixture_set_density(fix1,0.5);
 	physics_fixture_set_restitution(fix1,0.5);
 	physics_fixture_set_linear_damping(fix1,1);
-	physics_fixture_set_collision_group(fix1,1);
 	
 	physics_fixture_set_collision_group(fix1,0);
-	my_fix = physics_fixture_bind(fix1, self);
+	my_fix=physics_fixture_bind_ext(fix1,self,-16,-20);
 	
-	physics_apply_impulse(x,y,lengthdir_x(5,point_direction(x,y,global.body.x,global.body.y)),lengthdir_y(5,point_direction(x,y,global.body.x,global.body.y)));
+	physics_apply_impulse(x,y,lengthdir_x(3,point_direction(x,y,global.body.x,global.body.y)),lengthdir_y(3,point_direction(x,y,global.body.x,global.body.y)));
 }
 
 
