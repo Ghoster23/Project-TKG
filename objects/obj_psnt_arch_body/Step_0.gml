@@ -41,7 +41,7 @@ if(go and not global.pause){
 			}
         
         break;
-        case 4: //Dead State
+        case 5: //Dead State
 			solid = false;
 			image_speed = 0;
 			
