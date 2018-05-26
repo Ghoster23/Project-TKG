@@ -9,6 +9,7 @@ if(variable_instance_exists(other,"owner")){
 	var mine = false;
 }
 
+
 if(not damaged and 
    not immune  and 
    not inv     and

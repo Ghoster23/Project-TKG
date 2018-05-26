@@ -50,7 +50,7 @@ switch obj_name {
 	break;
 	
 	default: //normal blood
-		instance_create_layer(x,y,"IF",obj_blood_part);
+		//instance_create_layer(x,y,"IF",obj_blood_part);
 		
 	break;
 }

@@ -3719,6 +3719,14 @@
             }
         },
         {
+            "Key": "6007775d-d2bd-42a6-bf04-5316e13d5b13",
+            "Value": {
+                "id": "918a62df-6fa9-4a2e-bb61-8793cde2c00f",
+                "resourcePath": "objects\\obj_trap_parent\\obj_trap_parent.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "606ac10a-1308-4de1-bd03-3e979a87b3dc",
             "Value": {
                 "id": "aba62613-26c6-4feb-96e3-804637246e2d",

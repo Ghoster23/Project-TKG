@@ -44,7 +44,6 @@ if go and not global.pause{
 				
 			//if its not time to take a break yet just move
 			}else if(move_time_counter > 0 and breaking = false){
-				show_debug_message("lets goooooosd");
 				scr_move_entity(action_dir,1);
 				move_time_counter-=1;
 				
