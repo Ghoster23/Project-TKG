@@ -3,6 +3,7 @@ event_inherited();
 spd        = 0;
 dir        = 0;
 shadow_rot = dir;
+abs_cos    = 1;
 
 fall_rate = 0.4;
 life_time = 1 * room_speed;
@@ -30,3 +31,6 @@ prev_image_speed = 0;
 alarms[0] = -1;
 
 phy_bullet = true;
+
+x = phy_position_x;
+y = phy_position_y;

@@ -8,9 +8,14 @@ fall_rate = offs / life_time;
 
 damage = 1;
 
-shadow.phy_linear_damping = phy_linear_damping;
-shadow.visible = true;
-shadow.phy_position_y += offs;
+with shadow {
+	visible         = true;
+	phy_position_y += other.offs;
+	sprite_index    = other.sprite_index;
+	image_blend     = c_black;
+	image_alpha     = 0.3;
+}
+
 phy_fixed_rotation = true;
 
 image_index = irandom(2);

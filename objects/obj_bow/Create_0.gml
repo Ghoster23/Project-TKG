@@ -19,5 +19,5 @@ divi = stats.def;
 
 shoot = false;
 
-scr_wep_pat_bow_init(4,0,5,0.2,100,obj_arrow,30);
+scr_wep_pat_bow_init(2,0,5,0.4,100,obj_arrow,30);
 wep_pat = scr_wep_pat_bow_states;
