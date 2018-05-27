@@ -1,1 +1,0 @@
-damaged = false;

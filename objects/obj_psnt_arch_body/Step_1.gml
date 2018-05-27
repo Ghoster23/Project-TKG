@@ -83,9 +83,7 @@ if(not global.pause){
 		}
 
 		if(prev_state != state){
-			show_debug_message("Prev_State: " + string(prev_state));
-			show_debug_message("State: " + string(state));
-		    prev_state = state;
+			prev_state = state;
 		    state_change = true;
 		}
 		

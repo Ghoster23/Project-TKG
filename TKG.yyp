@@ -2511,6 +2511,14 @@
             }
         },
         {
+            "Key": "441e61c6-8adb-4971-a190-54ad50e34bb4",
+            "Value": {
+                "id": "68359dc7-753b-4c5f-8cad-0b64fda88c1a",
+                "resourcePath": "objects\\obj_hidden_enemy_parent\\obj_hidden_enemy_parent.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "4441f3c7-4134-4d29-8d36-44ff6c018e4a",
             "Value": {
                 "id": "9ad54e34-1957-40ac-b6db-6dd82d0e6a41",
