@@ -3,8 +3,6 @@
 var pot_id  = argument0;
 var pot_lvl = argument1;
 
-show_debug_message("Potion");
-
 switch(pot_id){
 	case potions.regeneration: //Health Potion
 		scr_status_apply( statuses.regen,  4 * pot_lvl + 1, global.body);

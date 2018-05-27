@@ -12,8 +12,7 @@ kb_amount = 5;
 prev_bullet = noone;
 
 with shadow {
-	visible = true;
-	image_alpha = 0.5;
+	visible = false;
 }
 
 image_speed = 0;

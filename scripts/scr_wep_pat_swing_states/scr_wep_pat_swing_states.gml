@@ -1,5 +1,3 @@
-angle = 0;
-
 switch wep_pat_state {
 	case 0: //Normal
 		wep_ang_off  =  wep_ang_base;
@@ -55,16 +53,19 @@ switch wep_pat_state {
 		}
 	break;
 	
-	case 4: //Swing
-		angle += wep_ang_off;
-					
-		if(not attack_key){
-			angle = wep_ang_target;
-			instance_create_layer(x, y, "IF", obj_swing); 
-	 		alarm[wep_pat_alarm] = wep_pat_cd * room_speed; 
-			scr_sound(snd_sword_slash);
-			wep_pat_state = 5;
-		}
+	case 4: //Swing		
+		var swing = scr_create_damage_dealer(x, y, obj_swing, owner, false, 
+											owner.stat[mult] * (1 + owner.modf[mult]), stats.def,
+											5, kb_amount);
+		swing.phy_rotation = -angle;
+		
+		angle  = wep_ang_target;
+		
+		attack = false;
+								
+	 	alarm[wep_pat_alarm] = wep_pat_cd * room_speed; 
+		scr_sound(snd_sword_slash);
+		wep_pat_state = 5;
 	break;
 	
 	case 5: //Cooldown

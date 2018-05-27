@@ -40,8 +40,8 @@ head.body = id;
 
 with head{
 	//get vars from body
-	face = other.face;
-	hair = other.hair;
+	face       = other.face;
+	hair       = other.hair;
 	skin_color = other.skin_color;
 	hair_color = other.hair_color;
 	

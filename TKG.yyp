@@ -3418,7 +3418,7 @@
             "Key": "5848682c-7c81-429a-8df5-84d2cd08646e",
             "Value": {
                 "id": "fe33b308-77f4-4d64-b5e0-3239c60fe32f",
-                "resourcePath": "scripts\\scr_wep_luna_pat_states\\scr_wep_luna_pat_states.yy",
+                "resourcePath": "scripts\\scr_wep_umb_pat_states\\scr_wep_umb_pat_states.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -6218,7 +6218,7 @@
             "Key": "a4b55558-0a9d-4afd-9996-ca0aaf260198",
             "Value": {
                 "id": "635154fb-0e1e-4366-ab45-727457d773a1",
-                "resourcePath": "scripts\\scr_wep_luna_pat_init\\scr_wep_luna_pat_init.yy",
+                "resourcePath": "scripts\\scr_wep_umb_pat_init\\scr_wep_umb_pat_init.yy",
                 "resourceType": "GMScript"
             }
         },

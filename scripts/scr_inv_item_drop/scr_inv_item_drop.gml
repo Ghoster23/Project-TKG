@@ -15,6 +15,4 @@ scr_spawn_item(type, item, amount,
 				global.body.x + lengthdir_x( 32, dir), 
 				global.body.y + lengthdir_y( 32, dir), 
 				true, false);
-				
-show_debug_message("In script: " + string(inventory[# 0, holder]));
 }

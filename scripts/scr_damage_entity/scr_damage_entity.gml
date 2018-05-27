@@ -1,16 +1,11 @@
 ///@description Damage the entity
 if(variable_instance_exists(other,"owner")){
-	show_debug_message("Owner: " + string(other.owner));
-	show_debug_message("Dealer: " + string(object_get_name(other.object_index)));
-	show_debug_message("Recipient: " + string(id));
 	
 	if(other.owner == id){
 		var mine = true;
-		show_debug_message("Mine");
 
 	}else {
 		var mine = false;
-		show_debug_message("Not mine");
 		
 	}
 }else {
@@ -37,8 +32,6 @@ if(not damaged and
 	
 	if(dmg > 0){
 		var dv  = other.divi;
-		
-		show_debug_message("Did damage: " + string(object_get_name(other.object_index)));
 	
 		//Spew blood
 		scr_blood(xx,yy,object_get_name(other.object_index));
@@ -72,5 +65,3 @@ if(not damaged and
 		}
 	}
 }
-
-show_debug_message("-- done --");

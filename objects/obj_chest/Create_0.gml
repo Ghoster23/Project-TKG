@@ -1,6 +1,8 @@
 event_inherited();
 closed = true;
 
+drop = noone;
+
 image_speed = 0;
 
 phy_fixed_rotation = true;

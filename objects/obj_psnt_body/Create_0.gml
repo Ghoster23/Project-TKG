@@ -17,5 +17,5 @@ stat[stats.spd]  =  3;
 prev_hp = stat[stats.hp];
 
 idle_r  = 200;
-swing_r = 48;
 flee_r  = 128;
+swing_r = 48;

@@ -1,9 +1,11 @@
-x = owner.phy_position_x;
-y = owner.phy_position_y;
+if(instance_exists(owner)){
+	x = owner.phy_position_x;
+	y = owner.phy_position_y;
+}
 
 if(not global.pause){
 	//Get poisoned
-	if(not owner.inv && not owner.innoc && not owner.dead){
+	if(instance_exists(owner) and not owner.inv && not owner.innoc && not owner.dead){
 		var tile = instance_place( x, y, obj_fluid_tile);
 			
 		if(tile != noone){
