@@ -1,0 +1,10 @@
+if(on==true){
+	draw_set_color(c_lime);
+	draw_text(x,y,"on"); 
+	draw_set_color(c_white);
+}
+if(on==false){
+	draw_set_color(c_red);
+	draw_text(x,y,"off"); 
+	draw_set_color(c_white);
+}

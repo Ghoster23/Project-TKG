@@ -76,8 +76,7 @@ if(amount == -1){
 	instance_destroy();
 }
 
-if(point_distance(x,y,global.body.x,global.body.y)<60){
-	pick_up = true;
+if(point_distance(x,y,global.body.x,global.body.y)<60 and pick_up==true){
 	physics_apply_impulse(x,y,lengthdir_x(0.5,point_direction(x,y,global.body.x,global.body.y)),lengthdir_y(0.5,point_direction(x,y,global.body.x,global.body.y)));
 }
 
@@ -94,7 +93,7 @@ if(fly2player and type != item_type.heart){
 	physics_fixture_set_collision_group(fix1,0);
 	my_fix=physics_fixture_bind_ext(fix1,self,-16,-20);
 	
-	physics_apply_impulse(x,y,lengthdir_x(3,point_direction(x,y,global.body.x,global.body.y)),lengthdir_y(3,point_direction(x,y,global.body.x,global.body.y)));
+	physics_apply_impulse(x,y,lengthdir_x(1.5,point_direction(x,y,global.body.x,global.body.y)),lengthdir_y(1.5,point_direction(x,y,global.body.x,global.body.y)));
 }
 
 

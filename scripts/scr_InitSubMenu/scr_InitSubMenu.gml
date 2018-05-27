@@ -20,7 +20,7 @@
   menuText[2,4] = "obj_hspider"
   menuText[2,5] = "obj_psnt_body"  
   menuText[2,6] = "obj_psnt_arch_body"
-  menuText[2,7] = "Enemy 7"
+  menuText[2,7] = "obj_blue_mage"
   menuText[2,8] = "Enemy 8"
   menuText[2,9] = "Enemy 9"  
   
@@ -49,7 +49,7 @@
   menuText[5,0] = 9;
   menuText[5,1] = "obj_pedestal"
   menuText[5,2] = "obj_training_doll"
-  menuText[5,3] = "Misc 3"
+  menuText[5,3] = "obj_blue_mage_fire"
   menuText[5,4] = "Misc 4"
   menuText[5,5] = "Misc 5" 
   menuText[5,6] = "Misc 6"

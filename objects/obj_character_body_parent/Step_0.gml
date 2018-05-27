@@ -44,12 +44,6 @@ if(not global.pause){
 		phy_position_y += vspd;
 	}
 	
-	//Pick-up
-	var pick_up = instance_place(x,y,obj_item);
-	
-	if(pick_up != noone && pick_up.pick_up){
-		pick_up.amount = scr_pickup_item(pick_up.type,pick_up.item,pick_up.amount);
-	}
 	
 	//footstep sound
 	if(len!=0){
