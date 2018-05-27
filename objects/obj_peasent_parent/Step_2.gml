@@ -3,6 +3,7 @@
 //Immunity
 event_inherited();
 
+//Sprites
 switch(state){
 	case 0:
 		dir = i_dir;

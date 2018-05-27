@@ -15,8 +15,7 @@ if(not once){
 	phy_fixed_rotation = false;
 	visible            = true;
 	
-	show_debug_message(phy_rotation);
-	spd = shadow.phy_speed;
+	spd = phy_speed;
 	
 	alarm[0] = life_time;
 }

@@ -5082,7 +5082,7 @@
             "Key": "83e1959b-a491-46aa-865c-cab746664aa7",
             "Value": {
                 "id": "5151e954-69ae-46ce-9521-a3effdcc82eb",
-                "resourcePath": "scripts\\scr_wep_pat_h_slash_states\\scr_wep_pat_h_slash_states.yy",
+                "resourcePath": "scripts\\scr_wep_pat_swing_states\\scr_wep_pat_swing_states.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -7474,7 +7474,7 @@
             "Key": "c70cf917-1850-4456-9074-9c09e0650922",
             "Value": {
                 "id": "91bbb488-bad3-4b1c-9e96-a1ef62047e4e",
-                "resourcePath": "scripts\\scr_wep_pat_h_slash_init\\scr_wep_pat_h_slash_init.yy",
+                "resourcePath": "scripts\\scr_wep_pat_swing_init\\scr_wep_pat_swing_init.yy",
                 "resourceType": "GMScript"
             }
         },

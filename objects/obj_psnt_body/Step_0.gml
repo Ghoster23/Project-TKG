@@ -2,11 +2,7 @@ event_inherited();
 
 ///Exist
 if go and not global.pause{
-    scr_pause_end(7);
-	
-	if swing == true{
-		image_speed = 0;
-	}
+    scr_pause_end(5);
     
     ///Enemy Behaevior
     switch(state){
@@ -21,14 +17,23 @@ if go and not global.pause{
 			
         break;
         case 2:  //Attack the player
-            if not cd_swing {
-                cd_swing = true;
-                alarm[4] = 5;
-                
+            if(weapon.attack){
+                weapon.attack = true;
+				
+				if(!instance_exists(tell)){
+					tell = instance_create_layer(x,y,layer,obj_melee_tell);
+					tell.owner = id;
+				}                
             }
         
         break;
-        case 3:  //Dead State
+		case 3:  //Retreat
+			image_speed = 0.4;
+			dir = point_direction(x,y,global.body.x,global.body.y) + 180;
+            scr_move_entity(dir,1);
+			
+		break;
+        case 4:  //Dead State
             solid = false;
 			image_speed = 0;
 			
@@ -59,11 +64,9 @@ if go and not global.pause{
 			with feet { instance_destroy(); }
 			
 			scr_kill_enemy();
-		
-		case "stun":
 		break;
 	}
 	
 }else if go{
-	scr_pause_start(7);	
+	scr_pause_start(5);	
 }

@@ -1,5 +1,4 @@
-///@description Draw shadow   
-draw_sprite(spr_player_shadow,1,x,y);
+event_inherited();
 
 /*if(state == 1){draw_set_color(c_red);}
 draw_circle(x,y,flee_r,true);

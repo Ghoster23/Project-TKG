@@ -33,7 +33,8 @@ body_dead_sprite = asset_get_index("spr_psnt_"+b_type[body_type]+"_dead");
 
 sprite_index = bodyf_sprite;
 
-//create head
+//Body Parts
+///Head
 head = instance_create_layer(x,y,layer,obj_psnt_head);
 head.body = id;
 
@@ -47,7 +48,24 @@ with head{
 	image_index = skin_color;
 }
 
+///Feet
 feet = instance_create_layer(x,y,layer,obj_psnt_feet);
 feet.owner = id;
 
+//Visuals
+draw_script = scr_psnt_draw;
+spr_side    = 3;
+image_speed = 0.4;
+dir         = 270;
+
+tell = noone;
+
+//Weapon
+attack  = false;
 wep_dir = 0;
+
+//States
+state_check = true;
+
+//Pause
+scr_pausable_init(5);
