@@ -1,16 +1,6 @@
 /// @description Inicialise the enemy
 event_inherited();
 
-draw_script = scr_psnt_draw;
-spr_side = 3;
-
-image_speed = 0.4;
-
-stun = false;
-
-shoot = false;
-tell = 0;
-
 //create weapon
 weapon = scr_create_weapon(x,y,layer,obj_bow,id);
 weapon.skin_color = skin_color;
@@ -26,16 +16,6 @@ stat[stats.spd]  =  3;
 
 prev_hp = stat[stats.hp];
 
-dir = 270;
-
-state_check = true;
-
-offset_x = 0;
-offset_y = 0;
-
 idle_r = 300;
 aim_r  = 200;
 flee_r = 100;
-
-///Pause
-scr_pausable_init(6);

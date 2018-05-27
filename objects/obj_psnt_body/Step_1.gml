@@ -1,36 +1,75 @@
 //@description Get distance to player and update state
-if not global.pause{
-	dis = distance_to_object(global.body);
-	dir = point_direction(x,y,global.body.x,global.body.y);
+if(not global.pause){
+	x = phy_position_x;
+	y = phy_position_y;
+	
+	dis = point_distance(x,y,global.body.x,global.body.y);
 
-	/// Enemy States
-	if state != 3 and not swing and alarm[4] == -1 and state != "stun"{
-	    if 30 < dis < 200{
-			image_speed = 0.4;
-	        state = 1;
-        
-	    }
-		
-		if dis <= 15 {
-	        state = 2;
-			image_speed = 0;
-			
-	    }
-		
-		if dis >= 200{
-			image_speed = 0.4;
-	        state = 0;
-			
-	    }
-		
-	}
-	
-	if(dead){
-		state = 3;
-	}
-	
-	if prev_state != state{
-        prev_state = state;
-        state_change = true;
+	///Die
+    if(dead){
+        state = 4;
     }
+
+	if(state_check){
+		state_check = false;
+		
+		///Enemy States
+		switch state {
+			case 0: //Idle
+				if(dis > idle_r){
+					state = 0;
+				}else if(dis > swing_r){
+					state = 1;
+				}else if(weapon.wep_pat_state == 0){
+					state = 2;
+				}else {
+					state = 2;
+				}
+			break;
+		
+			case 1: //Advance
+				if(dis > idle_r){
+					state = 0;
+				
+				}else if(dis > swing_r){
+					state = 1;
+				
+				}else if(weapon.wep_pat_state == 0){
+					state = 2;
+				}
+			break;
+		
+			case 2: //Attack
+				if(weapon.wep_pat_state == 5){
+					if(instance_exists(tell)){
+						instance_destroy(tell);
+					}
+					
+					state = 3;
+				}
+			break;
+		
+			case 3: //Retreat
+				if(dis > idle_r){
+					state = 0;
+				}else if(dis > flee_r){
+					state = 1;
+				}else if(dis > swing_r){
+					state = 3;
+				}else if(weapon.wep_pat_state == 0){
+					state = 2;
+				}
+			break;
+		
+			case 4: //Dead
+			break;
+		}
+
+		if(prev_state != state){
+		    prev_state = state;
+		    state_change = true;
+		}
+		
+		alarm[4] = 0.5 * room_speed;
+	}
 }

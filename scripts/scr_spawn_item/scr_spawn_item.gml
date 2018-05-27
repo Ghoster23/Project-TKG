@@ -37,7 +37,7 @@ if(amount > 0){
 	
 }else {
 	instance_destroy(spawn);
-	return;
+	return noone;
 	
 }
 

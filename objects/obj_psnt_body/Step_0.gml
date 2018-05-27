@@ -2,11 +2,7 @@ event_inherited();
 
 ///Exist
 if go and not global.pause{
-    scr_pause_end(7);
-	
-	if swing == true{
-		image_speed = 0;
-	}
+    scr_pause_end(5);
     
     ///Enemy Behaevior
     switch(state){
@@ -17,18 +13,28 @@ if go and not global.pause{
         case 1:  //Go towards the player
 			scr_define_path(self, global.body);
 			path = global.ai_path;
-			scr_move_entity(point_direction(x,y,path_get_point_x(path,1),path_get_point_y(path,1)),1);
+			dir = point_direction(x,y,path_get_point_x(path,1),path_get_point_y(path,1));
+			scr_move_entity(dir,1);
 			
         break;
         case 2:  //Attack the player
-            if not cd_swing {
-                cd_swing = true;
-                alarm[4] = 5;
-                
+            if(!weapon.attack){
+                weapon.attack = true;
+				
+				if(!instance_exists(tell)){
+					tell = instance_create_layer(x,y,layer,obj_melee_tell);
+					tell.owner = id;
+				}                
             }
         
         break;
-        case 3:  //Dead State
+		case 3:  //Retreat
+			image_speed = 0.4;
+			dir = point_direction(x,y,global.body.x,global.body.y) + 180;
+            scr_move_entity(dir,1);
+			
+		break;
+        case 4:  //Dead State
             solid = false;
 			image_speed = 0;
 			
@@ -46,8 +52,9 @@ if go and not global.pause{
 			dead_body.sprite_index = body_dead_sprite;
 			//link the two
 			dead_head.body=dead_body;
+			
 			if(irandom(4)==1){
-				dropped_weapon=instance_create_layer(x+weapon.offpos,y,layer,obj_dropped_melee);
+				dropped_weapon=instance_create_layer(x+weapon.offx,y,layer,obj_dropped_melee);
 				dropped_weapon.image_index=weapon.image_index;
 				dropped_weapon.phy_rotation=weapon.image_angle;
 				dropped_weapon.image_xscale=weapon.image_xscale;
@@ -55,15 +62,13 @@ if go and not global.pause{
 			}
 			
 			with weapon { instance_destroy(); }
-			with head { instance_destroy(); }
-			with feet { instance_destroy(); }
+			with head   { instance_destroy(); }
+			with feet   { instance_destroy(); }
 			
 			scr_kill_enemy();
-		
-		case "stun":
 		break;
 	}
 	
 }else if go{
-	scr_pause_start(7);	
+	scr_pause_start(5);	
 }

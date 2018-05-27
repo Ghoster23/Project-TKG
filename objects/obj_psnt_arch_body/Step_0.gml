@@ -3,7 +3,7 @@ event_inherited();
 ///Exist
 if(go and not global.pause){
 	
-	scr_pause_end(6);
+	scr_pause_end(5);
 	
 	image_blend = c_white;
     
@@ -93,5 +93,5 @@ if(go and not global.pause){
 	}
 	
 }else if go{
-	scr_pause_start(6);
+	scr_pause_start(5);
 }

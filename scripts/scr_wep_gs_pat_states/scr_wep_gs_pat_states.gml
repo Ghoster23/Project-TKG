@@ -110,9 +110,7 @@ switch wep_pat_state {
 	case 4: //Swing
 		with(global.body){
 			physics_apply_impulse(phy_position_x,phy_position_y,lengthdir_x(100,other.angle),lengthdir_y(100,other.angle));
-		}
-		angle += wep_ang_off;
-					
+		}					
 		angle = wep_ang_target;
 		
 		scr_create_damage_dealer(x, y,											  //Position
@@ -130,7 +128,6 @@ switch wep_pat_state {
 		
 	break;
 	case 6: //Align
-	
 		if(mouse_r_key_release){
 			simple_attack = true;
 		}

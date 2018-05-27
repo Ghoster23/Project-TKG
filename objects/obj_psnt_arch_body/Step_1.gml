@@ -21,7 +21,7 @@ if(not global.pause){
 					state = 0;
 				}else if(dis > aim_r){
 					state = 2;
-				}else if(dis > idle_r){
+				}else if(dis > flee_r){
 					state = 3;
 				}else {
 					state = 1;
@@ -35,7 +35,7 @@ if(not global.pause){
 				}else if(dis > aim_r){
 					state = 2;
 				
-				}else if(dis > idle_r){
+				}else if(dis > flee_r){
 					state = 3;
 				}
 			break;
@@ -83,9 +83,7 @@ if(not global.pause){
 		}
 
 		if(prev_state != state){
-			show_debug_message("Prev_State: " + string(prev_state));
-			show_debug_message("State: " + string(state));
-		    prev_state = state;
+			prev_state = state;
 		    state_change = true;
 		}
 		

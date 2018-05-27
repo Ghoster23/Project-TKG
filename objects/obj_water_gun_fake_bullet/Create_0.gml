@@ -1,4 +1,4 @@
-offs = 8;
+offs = 0;
 
 event_inherited();
 
@@ -12,7 +12,6 @@ kb_amount = 5;
 prev_bullet = noone;
 
 with shadow {
-	phy_linear_damping = other.phy_linear_damping;
 	visible = false;
 }
 
