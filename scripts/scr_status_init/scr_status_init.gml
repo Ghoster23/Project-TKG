@@ -1,14 +1,23 @@
 enum statuses {
-	poison  = 0,
-	stuck   = 1,
-	regen   = 2,
-	compass = 3,
-	ohko    = 4,
-	seeall  = 5,
-	midas   = 6,
-	immune  = 7,
-	stun    = 8,
-	frost   = 9,
-	wet     = 10,
-	frozen  = 11
+	/* - Negative status effects - */
+	poison    = 0,
+	frost     = 1,
+	stun      = 2,
+	frozen    = 3,
+	stuck     = 4,
+	neg_count = 5,
+	
+	/* - Positive status effects - */
+	regen     = 5,
+	compass   = 6,
+	ohko      = 7,
+	seeall    = 8,
+	midas     = 9,
+	immune    = 10,
+	pos_count = 6,
+	
+	/* - Neutral status effects - */
+	wet       = 11,
+	count     = 12
+	
 }

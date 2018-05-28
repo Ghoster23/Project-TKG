@@ -3,4 +3,3 @@ if(global.body.phy_position_y > y){
 }else {
 	image_alpha = 1;
 }
-draw_self();

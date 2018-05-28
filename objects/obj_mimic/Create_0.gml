@@ -15,8 +15,6 @@ stat[stats.sdef] =  5;
 stat[stats.spd]  =  0;
 prev_hp = stat[stats.mhp];
 
-damage = 5;
-
 ///Enemy unique
 //Side 2 Side
 a = 0;

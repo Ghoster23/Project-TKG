@@ -13,7 +13,7 @@ if(!global.pause){
 		if(!drop){
 			instance_destroy(shadow);
 		}else if(type != -1){
-			scr_spawn_item(type,item,amount,phy_position_x,phy_position_y,false,true);
+			scr_spawn_item(type,item,amount,phy_position_x,phy_position_y,true,(180+phy_rotation) mod 360);
 			destroyed = true;
 		}
 	}

@@ -22,15 +22,15 @@ var alpha = argument7;
 
 switch(type){
 	case item_type.unique_consumable:
-		return 1;			
+		return 1;
 	break;
 					
 	case item_type.potion:
-		scr_potion_draw_ext(amount,item,xx,yy,xscale,yscale,alpha);					
+		scr_potion_draw_ext(amount,item,xx,yy,xscale,yscale,alpha);			
 	break;
 					
 	case item_type.chess_piece:
-		draw_sprite_ext(spr_chess_pieces,item,xx,yy,xscale,yscale,0,c_white,1);		
+		draw_sprite_ext(spr_chess_pieces,item,xx,yy,xscale,yscale,0,c_white,1);
 	break;
 					
 	case item_type.constellation:
@@ -38,7 +38,7 @@ switch(type){
 	break;
 					
 	case item_type.tool:
-		draw_sprite_ext(spr_tool,item,xx,yy,xscale,yscale,0,c_white,1);	
+		draw_sprite_ext(spr_tool,item,xx,yy,xscale,yscale,0,c_white,1);
 	break;
 					
 	case item_type.weapons:
@@ -46,7 +46,7 @@ switch(type){
 	break;
 					
 	case item_type.equipable:
-		draw_sprite_ext(spr_equip,item,xx,yy,xscale,yscale,0,c_white,1);		
+		draw_sprite_ext(spr_equip,item,xx,yy,xscale,yscale,0,c_white,1);	
 	break;
 	
 	case item_type.drop:
@@ -70,5 +70,16 @@ switch(type){
 	case item_type.currency:
 		draw_sprite_ext(spr_sm_coin,-1,xx,yy,xscale,yscale,0,c_white,1);
 	break;
+}
+
+if(amount > 1 and type > 3){
+	draw_set_halign(fa_middle);
+	draw_set_valign(fa_bottom);
+	draw_set_color(c_white);
+	draw_set_font(font_chsl_tags);
+	
+	if(id.object_index != obj_inventory_controller){
+		scr_draw_text_outlined(xx+32,yy+8,string(amount),c_black,c_white);
+	}
 }
 }

@@ -37,5 +37,11 @@ switch(status){
 			immune      = false;
 		}				
 	break;
+	
+	case statuses.seeall :
+		with(obj_see_all_tell){
+			instance_destroy();
+		}
+	break;
 }
 }

@@ -1,6 +1,6 @@
 ///@description Activate enemy
 if(not go){
-	go      = true;
+	go = true;
 	
 }else {
 	damaged = false;
