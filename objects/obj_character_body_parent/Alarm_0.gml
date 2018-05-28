@@ -1,6 +1,6 @@
 /// @description Dash done
 //Become visible
-global.weapon.visible = true;
+weapon.visible = true;
 
 //Destroy roll
 sprite_index = body_sprs[spr_side];

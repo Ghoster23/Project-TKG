@@ -4,6 +4,7 @@ event_inherited();
 //create weapon
 weapon = scr_create_weapon(x,y,layer,obj_melee,id);
 weapon.skin_color = skin_color;
+weapon.draw_script = scr_psnt_draw;
 
 //Stats
 stat[stats.mhp]  = 20;

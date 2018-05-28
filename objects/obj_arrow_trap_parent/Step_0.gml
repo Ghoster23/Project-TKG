@@ -3,17 +3,21 @@ if(not global.pause){
 	
 	if(active){
 		if(alarm[1] == -1){
+			var enemy = collision_line(mid_x,mid_y,max_x,max_y,obj_grounded_enemy_parent,true,true);
+			
 			if(collision_line(mid_x,mid_y,max_x,max_y,global.body,true,true) != noone){
-				clr = c_green;
-				if(collision_line(mid_x,mid_y,max_x,max_y,obj_above_ground_parent,true,true) == noone){
+				var xx = global.body.phy_position_x;
+				var yy = global.body.phy_position_y;
+				
+				if(collision_line(mid_x,mid_y,xx,yy,obj_above_ground_parent,true,true) == noone){
 					triggered = true;
-					clr = c_yellow;
 				}
 			  
-			}else if(collision_line(mid_x,mid_y,max_x,max_y,obj_grounded_enemy_parent,true,true) != noone){
-				clr = c_green;
-				if(collision_line(mid_x,mid_y,max_x,max_y,obj_above_ground_parent,true,true) == noone){
-					clr = c_yellow;
+			}else if(enemy != noone){
+				var xx = enemy.phy_position_x;
+				var yy = enemy.phy_position_y;
+				
+				if(collision_line(mid_x,mid_y,xx,yy,obj_above_ground_parent,true,true) == noone){
 					triggered = true;
 				}
 			}

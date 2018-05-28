@@ -3,7 +3,7 @@ if not global.pause {
 	
 	if state == 0{
 		if image_index >= 1{
-			image_speed = -1;
+			image_speed = -0.2;
 			
 		}else {
 			image_speed = 0;
@@ -18,7 +18,7 @@ if not global.pause {
 		}
 		
 		if image_index <= 4 {
-			image_speed = 3;
+			image_speed = 1;
 		
 		}else {
 			image_speed = 0;

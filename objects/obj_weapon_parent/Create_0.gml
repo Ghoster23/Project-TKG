@@ -30,3 +30,4 @@ offy = 0;
 //Mechanics
 state   = 0;
 wep_pat = -1;
+base_state = 0;

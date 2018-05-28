@@ -12,9 +12,7 @@ if trap_list != noone { //If enemies were found
 		var trap = trap_list[| 0];      //Get the first entry in the list
 		ds_list_delete(trap_list,0);     //Remove it from the list
 		
-		with trap {      //Activate the obj_trap_parent
-			alarm[0] = 1 * room_speed;
-			
+		with trap {      //Activate the obj_trap_parent			
 			active = true;
 		}
 	}

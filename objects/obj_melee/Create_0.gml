@@ -19,3 +19,5 @@ skin_color = 0;
 
 scr_wep_pat_swing_init(45,15,120,2,0,5);
 wep_pat = scr_wep_pat_swing_states;
+
+amount = 8;

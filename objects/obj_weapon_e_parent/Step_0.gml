@@ -1,12 +1,20 @@
-scr_get_input();
-
 if(not global.pause){
 	scr_pause_end(alarm_count);
 	
 	if(instance_exists(owner)){
 		switch(state){
 			case 0: //Drawn
-				angle = owner.wep_dir;
+				if(not player_owned){
+					angle = owner.wep_dir;
+				}else {
+					angle = point_direction(x,y,mouse_x,mouse_y);
+					
+					scr_get_input();
+					
+					if(attack_key){
+						attack = true;
+					}
+				}
 			
 				//Particles
 				///Layering

@@ -13,7 +13,7 @@ draw_sprite_ext(spr_gui_quickslots, 0, dx, dy, scale, scale, 0, c_white, 1);
 for(var i = 0; i < 2; i++){
 	var type = inventory[# 0, i + 12];
 			
-	var xx = dx + (13 + 26 * i) * scale;
+	var xx = dx + (13 + 36 * i) * scale;
 	var yy = dy +            23 * scale;
 			
 	if(type != -1){

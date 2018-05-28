@@ -1,25 +1,25 @@
 {
 switch(argument0) {
 	case weapons.wood_stick:
-		return "Wood Stick";
+		return [obj_melee,0];
 	break;
 	case weapons.wood_sword_f:
-		return "Fragile Wood Sword";
+		return [obj_melee,1];
 	break;
 	case weapons.wood_sword:
-		return "Wood Sword";
+		return [obj_melee,2];
 	break;
 	case weapons.wood_baton:
-		return "Wood Baton";
+		return [obj_melee,3];
 	break;
 	case weapons.wood_mace:
-		return "Wood Mace";
+		return [obj_melee,4];
 	break;
 	case weapons.bow:
-		return "Bow";
+		return [obj_bow,0];
 	break;
 	default:
-		return "???";
+		return noone;
 	break;
 }
 }

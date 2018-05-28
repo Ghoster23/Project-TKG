@@ -21,6 +21,10 @@ consumable = 12;
 
 selected   = 0;
 
+wep_equip = false;
+
+tool_key = false;
+
 capacity = 9;
 
 ///Equipables

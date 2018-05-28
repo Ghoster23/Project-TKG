@@ -10,7 +10,7 @@
         "fc78f019-efd8-45c0-b439-88c0381c2377"
     ],
     "filterType": "GMScript",
-    "folderName": "Weapons",
+    "folderName": "Weapon Patterns",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

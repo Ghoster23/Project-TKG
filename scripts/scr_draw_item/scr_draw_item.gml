@@ -75,10 +75,9 @@ switch(type){
 if(amount > 1 and type > 3){
 	draw_set_halign(fa_middle);
 	draw_set_valign(fa_bottom);
-	draw_set_color(c_white);
 	draw_set_font(font_chsl_tags);
 	
-	if(id.object_index != obj_inventory_controller){
+	if(id.object_index == obj_item){
 		scr_draw_text_outlined(xx+32,yy+8,string(amount),c_black,c_white);
 	}
 }
