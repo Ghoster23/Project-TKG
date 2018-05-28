@@ -77,6 +77,7 @@ switch state {
 		   (room == rm_lvl_editor_test)){
 			
 			scr_activate_enemies();
+			scr_activate_traps();
 			
 			surface_set_target(global.fluid_surface);
 			draw_clear_alpha(c_black,0);

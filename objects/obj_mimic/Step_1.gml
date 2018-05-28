@@ -17,19 +17,25 @@ if(not global.pause){
 				go    = true;
 				
 				draw_script = null;
+				hidden = false;
 			}
 		break;
 			
 		case 1: //Wake up
-			if(sprite_index != spr_mimic_a){
-				image_speed  = .9;
-				sprite_index = spr_mimic_a;
+			if(go){
+				if(sprite_index != spr_mimic_a){
+					image_speed  = 0.8;
+					sprite_index = spr_mimic_a;
 				
-				phy_fixed_rotation = false;
-				stat[stats.spd]    = 4;
+					phy_fixed_rotation = false;
+					stat[stats.spd]    = 4;
 					
-			}else if(image_index <= 8){
-				state = 2;
+				}else if(image_index >= 8){
+					state  = 2;
+					damage = 8;
+					
+					image_speed = 1;
+				}
 			}
 		break;
 		

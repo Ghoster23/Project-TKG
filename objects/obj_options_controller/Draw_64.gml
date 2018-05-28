@@ -6,7 +6,7 @@ draw_set_font(font_ig_menu);
 //draw_set_alpha(1);
 //draw_rectangle(c - 96 * m, (off + 48 -64) * m, c + 96 * m, (off + 160 + 64 ) * m, false);
 
-draw_sprite_ext( spr_minimap, 0, 64 * m, 64 * m, m, m, 0, c_white, 1);
+draw_sprite_ext( spr_ig_map, 0, 64 * m, 64 * m, m, m, 0, c_white, 1);
 
 draw_set_color(c_white);
 draw_set_alpha(1);

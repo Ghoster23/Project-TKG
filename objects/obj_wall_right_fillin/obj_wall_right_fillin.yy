@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "obj_wall_right_fillin",
     "eventList": [
-        
+        {
+            "id": "6d678583-c921-4ec4-b204-fdffad08c914",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "161ef1c8-6be0-4546-bb58-fb67b7f48962"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

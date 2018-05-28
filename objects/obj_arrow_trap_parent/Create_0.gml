@@ -16,3 +16,4 @@ max_y = y;
 ammo = 10;
 
 booted = false;
+clr = c_white;

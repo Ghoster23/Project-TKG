@@ -8,10 +8,9 @@ state = 1;
 image_speed = 0;
 prev_image_speed = 0;
 
-damage = 2;
+damage    = 0;
 kb_amount = 0;
-ohko = false;
-divi = stats.def;
+dmg_dl = noone;
 
 alarm[0] = 2 * room_speed;
 

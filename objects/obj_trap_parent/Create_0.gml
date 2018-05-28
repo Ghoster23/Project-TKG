@@ -7,3 +7,7 @@ event_inherited();
 active    = false;
 triggered = false;
 damage    = 0;
+
+divi = stats.def;
+kb_amount = 0;
+ohko = false;

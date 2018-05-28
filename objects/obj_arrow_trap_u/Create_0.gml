@@ -2,5 +2,6 @@
 // You can write your code in this editor
 event_inherited();
 
-dir = 90;
+image_index = 1;
+
 len = global.roomhg;

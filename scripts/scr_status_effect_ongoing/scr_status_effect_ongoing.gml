@@ -19,5 +19,14 @@ switch(status){
 		}
 	break;
 	
+	case statuses.seeall :
+		with(obj_hidden_enemy_parent){
+			if(hidden and distance_to_object(global.body) < 256 and not place_meeting(x,y,obj_see_all_tell)){
+				var mark = instance_create_layer(x,y,"IF",obj_see_all_tell);
+				mark.marked = id;
+			}
+		}
+	break;
+	
 }
 }

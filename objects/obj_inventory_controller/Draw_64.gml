@@ -11,6 +11,7 @@ if(room == rm_level || room == rm_lvl_editor_test){
 			text = scr_item_get_name(inventory[# 0, selected],
 			                         inventory[# 1, selected],
 									 inventory[# 2, selected]);
+			text += " x" + string(inventory[# 2, selected]);
 		}else {
 			text = "";
 		}

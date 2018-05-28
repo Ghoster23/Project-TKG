@@ -59,7 +59,7 @@ state        =     0;
 prev_state   =     0;
 state_change = false;
 atk_cd       = false;
-
+hidden       =  true;
 
 ini_point_x  =     x;
 ini_point_y  =     y;
