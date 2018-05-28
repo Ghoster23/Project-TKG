@@ -4,7 +4,6 @@
 // Inherit the parent event
 event_inherited();
 
-event_inherited();
 
 if(state == "magego2fire"){
 	if(pair != noone){
@@ -15,11 +14,11 @@ if(state == "magego2fire"){
 	}
 }
 
-if(state == "ghostfollow"){
+if(state == "ghostfollow" or state =="attackwait"){
 	  var d_ = point_direction(x,y,global.body.x,global.body.y);
 }
 
-if(state == "magego2fire" or state == "ghostfollow") {
+if(state == "magego2fire" or state == "ghostfollow" or state =="attackwait") {
 
 	//sides
 	if (d_ >= 0 and d_ <= 45) or (d_ >= 315 and d_ <= 360){
@@ -37,9 +36,11 @@ if(state == "magego2fire" or state == "ghostfollow") {
 
 if(state == "magego2fire"){
 
-	image_speed=0.6;
+	
 
 	if flash == false and not global.pause{
+		
+	image_speed=0.6;
 	switch d {
 	    case 0:
 	        break;
@@ -67,9 +68,9 @@ if(state == "magego2fire"){
 
 if (state == "ghostfollow" or state == "attackwait") {
 	
-	image_speed=0.6;
-	
+
 	if flash == false and not global.pause{
+	image_speed=0.6;
 	switch d {
 	    case 0:
 	        break;
@@ -95,9 +96,8 @@ if (state == "ghostfollow" or state == "attackwait") {
 
 if state == "lightfire" or state == "wait"{
 	
-	image_speed=0.6;
-	
-	if flash == false and not global.pause{
+	if (flash == false and not global.pause){
+		image_speed=0.6;
 	    sprite_index = mage_stand_still;
 		image_xscale = 1;
 	}

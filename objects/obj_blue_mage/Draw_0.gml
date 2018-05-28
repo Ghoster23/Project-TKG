@@ -4,7 +4,7 @@
 // Inherit the parent event
 //draw_text(x,y+30,string(point_distance(x,y,targetfire.x+targetfire.sprite_width/2,targetfire.y+targetfire.sprite_height/2)))
 
-draw_text(x-10,y,string(phy_linear_damping)); 
+//draw_text(x-10,y,string(phy_linear_damping)); 
 /*
 draw_text(x-10,y+10,"preference: ");
 

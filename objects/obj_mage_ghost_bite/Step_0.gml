@@ -10,3 +10,7 @@ if(instance_exists(owner)){
 
 	image_xscale = owner.image_xscale;
 }
+
+counter ++;
+toot = sin(counter)
+phy_rotation+=toot*10;

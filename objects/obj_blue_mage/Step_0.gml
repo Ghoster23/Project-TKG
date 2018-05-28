@@ -2,11 +2,16 @@ event_inherited();
 
 ///Exist
 if go and not global.pause{
-	scr_pause_end(8);
+	scr_pause_end(10);
 
 	//states for enemy behaviour
 	switch(state){
         case "ghostfollow":  //move torwards player to give contact damage
+		
+			//probably not permanent - check if there is any lit fire and if there inst die
+			mages_controller.check_fires_all_off = true;
+			mages_controller.calculate = true;
+		
 			inv = true;
 			scr_define_path(self, global.body);
 			path = global.ai_path;
@@ -33,7 +38,8 @@ if go and not global.pause{
 		break;
 		
 		case "magego2fire": //make mage go to the nearest unlit fire
-			//mages_controller.calculate = true;
+			mages_controller.calculate = true;
+			
 			//check if dead and if so kill it
 			if(stat[stats.hp] <= 0) and state != 3{
 			    state = "dead";
@@ -88,7 +94,7 @@ if go and not global.pause{
 			
 			mp_grid_clear_cell(global.ai_grid,x div 32, y div 32);
 			//sounds
-			
+			instance_create_layer(x,y,layer,obj_mage_deadbody);
             scr_kill_enemy();
 			
 		break;
@@ -98,6 +104,6 @@ if go and not global.pause{
 	}   
 
 }else if go{
-	scr_pause_start(8);
+	scr_pause_start(10);
 	
 }

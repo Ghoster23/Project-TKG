@@ -16,3 +16,7 @@ kb_amount = 30;
 divi = stats.def;
 
 phy_fixed_rotation = true;
+
+counter = 0;
+
+owner = noone;

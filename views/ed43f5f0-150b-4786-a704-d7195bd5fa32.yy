@@ -8,7 +8,8 @@
         "ae6fda63-df1f-4ce1-b799-5a6a4b66d985",
         "d245ddba-ff51-44c6-90aa-ff2b32b9b77a",
         "77f400c7-ef11-43ab-bc46-b3bd2ea9f30d",
-        "6cd99d0a-d902-4096-84d3-7866b50dda93"
+        "6cd99d0a-d902-4096-84d3-7866b50dda93",
+        "94a7852a-4e70-4e98-b061-75e58931a201"
     ],
     "filterType": "GMObject",
     "folderName": "mage",
