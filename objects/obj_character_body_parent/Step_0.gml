@@ -19,7 +19,7 @@ if(not global.pause){
 			
 			if(alarm[0] == -1){				
 				//Hide other player objects
-				global.weapon.visible = false;
+				weapon.visible = false;
 
 				//Make it invulnerable
 				inv = true;

@@ -487,6 +487,14 @@
             }
         },
         {
+            "Key": "0d4c3ee7-dcd1-4583-bd5f-e3337f9dd5b7",
+            "Value": {
+                "id": "ff22ddc2-42f2-4120-858c-4e365859887e",
+                "resourcePath": "scripts\\scr_weapon_get_data\\scr_weapon_get_data.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0dac272c-d91c-4a24-bee2-161a664d24b0",
             "Value": {
                 "id": "7c1d772a-b130-44be-9cb2-bd2bfe88874c",
@@ -6023,6 +6031,14 @@
             }
         },
         {
+            "Key": "98b835b3-a564-444b-a8b1-0f3927851b50",
+            "Value": {
+                "id": "045ec6f5-6e2f-4dbd-848a-7b4b12e8e6fb",
+                "resourcePath": "scripts\\scr_equip_weapon\\scr_equip_weapon.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "98c895e1-df99-4228-9e8d-166ea6d30275",
             "Value": {
                 "id": "fc6f9862-b2e8-414c-93a0-8c4a8a4ef60c",
@@ -9799,6 +9815,14 @@
             }
         },
         {
+            "Key": "f9ce7d86-e289-4e81-be51-edccded34c64",
+            "Value": {
+                "id": "6b7a8e7b-9844-4cf1-9101-f69efb940865",
+                "resourcePath": "scripts\\scr_unequip_weapon\\scr_unequip_weapon.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f9e53050-e89c-4672-b194-a7c4621ba51c",
             "Value": {
                 "id": "5df160b9-47e9-495f-870c-43fb60e6e1b7",
@@ -10070,6 +10094,9 @@
         "5d85204c-fba8-4091-a45f-f2c773aa24d9",
         "26c1b279-dac5-4ce6-9593-223c58258011",
         "ddd664c8-add1-4a5b-8fd0-10f69ca4cef1",
+        "98b835b3-a564-444b-a8b1-0f3927851b50",
+        "f9ce7d86-e289-4e81-be51-edccded34c64",
+        "0d4c3ee7-dcd1-4583-bd5f-e3337f9dd5b7",
         "e790be6c-bbdb-41c2-a846-9fe50e54dc5a",
         "f875c878-a2bc-4f6e-98d5-3e0dda1c9afb",
         "b00faa49-6d25-4ced-ae13-fe1463230b59",

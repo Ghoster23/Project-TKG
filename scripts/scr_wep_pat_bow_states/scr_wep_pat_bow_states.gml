@@ -23,8 +23,6 @@ switch wep_pat_state {
 		wep_ammo--;
 		attack = false;
 		
-		angle = point_direction(x,y,global.body.x,global.body.y);
-		
 		var xx  = x + lengthdir_x(30,angle);
 		var yy  = y + lengthdir_y(30,angle);
 		var rad = degtorad(angle);
@@ -38,6 +36,10 @@ switch wep_pat_state {
 		arrow.spd = wep_proj_speed;
 		
 		image_index = 0;
+		
+		if(amount > 0){
+			amount--;
+		}
 		
 		alarm[wep_pat_alarm] = wep_pat_cd * room_speed;
 		wep_pat_state = 3;	

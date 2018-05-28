@@ -7,17 +7,24 @@ if(obj_ig_menu_controller.state == "closed"){
 		alarm[1] = 0.3 * room_speed;
 	}
 	
-	/*
-	if(tool_key){
-		var type = global.tool[0];
+	
+	if(tool_key && alarm[1] == -1){
+		var type   = inventory[# 0, tool_slot];
+		var wep    = inventory[# 1, tool_slot];
+		var amount = inventory[# 2, tool_slot]; 
 		
-		if      (type == 4){
-			
-		}else if(type == 5){
-			
+		if(type == item_type.weapons){
+			if(!wep_equip){
+				wep_equip = scr_equip_weapon(wep,amount);
+
+			}else {
+				scr_unequip_weapon();
+			}
 		}
+		
+		tool_key = false;
+		alarm[1] = 0.3 * room_speed;
 	}
-	*/
 	
 	inv_x = -inv_wd * r;
 	
@@ -165,7 +172,7 @@ if(obj_ig_menu_controller.state == "closed"){
 			click = true;
 		
 			var _type = inventory[# 0, holder];
-			show_debug_message("Out: " + string(inventory[# 0, holder]));
+			
 			if(_type != -1){
 				if(is_undefined(_type)){
 					scr_inv_set_pos(-1,-1,-1,holder);
@@ -187,10 +194,23 @@ if(obj_ig_menu_controller.state == "closed"){
 			
 				alarm[0] = 0.3 * room_speed;
 			
-			}else if(selected != -1 && selected != 16){
-				scr_inv_item_grab(selected);
-				alarm[0] = 0.3 * room_speed;
-			
+			}else {
+				switch selected {
+					case -1:
+					case 16:
+					break;
+					case tool_slot:
+						if(!wep_equip){
+							scr_inv_item_grab(selected);
+							alarm[0] = 0.3 * room_speed;
+						}
+					break;
+					default:
+						scr_inv_item_grab(selected);
+						alarm[0] = 0.3 * room_speed;
+					break;
+					
+				}			
 			}
 		}
 	

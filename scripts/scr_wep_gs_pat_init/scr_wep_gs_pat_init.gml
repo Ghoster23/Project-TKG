@@ -18,3 +18,5 @@ wep_windup_spd = argument5; //Speed at which windup is done
 
 tx = -1;
 ty = -1;
+
+base_state = 1;

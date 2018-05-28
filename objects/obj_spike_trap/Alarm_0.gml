@@ -1,10 +1,14 @@
-if state == 0{
-	state = 1;
-	phy_active = true;
-	triggered = true;
-	
-}else {
-	state = 0;
-	phy_active = false;
-	triggered = false;
+switch state {
+	case 0:
+	break;
+	case 1:
+		state      = 2;
+		phy_active = true;
+
+	break;
+	case 2:
+		state      = 0;
+		triggered  = false;
+		phy_active = false;
+	break;
 }

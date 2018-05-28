@@ -62,6 +62,10 @@ switch wep_pat_state {
 		angle  = wep_ang_target;
 		
 		attack = false;
+		
+		if(amount > 0 and player_owned){
+			amount--;
+		}
 								
 	 	alarm[wep_pat_alarm] = wep_pat_cd * room_speed; 
 		scr_sound(snd_sword_slash);

@@ -2,8 +2,6 @@ alarm_count = 1;
 
 event_inherited();
 
-draw_script = scr_psnt_draw;
-
 image_speed = 0;
 
 sprite_index = spr_bow;
@@ -16,6 +14,10 @@ stowed = drawn;
 
 mult = stats.atk;
 divi = stats.def;
+
+type   = item_type.weapons;
+item   = weapons.bow;
+amount = 8;
 
 shoot = false;
 

@@ -17,7 +17,13 @@ image_speed = 0;
 offx = 0;
 offy = 0;
 
+type   = item_type.weapons;
+item   = weapons.wood_stick;
+amount = 8;
+
 //Mechanics
 state   =  0;
+base_state = 0;
 wep_pat = -1;
 attack  = false;
+player_owned = false;
