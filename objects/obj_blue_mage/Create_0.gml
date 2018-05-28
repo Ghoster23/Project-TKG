@@ -23,11 +23,7 @@ transformation    = spr_mage_transform;
 
 ///Enemy unique
 //Has moved
-state = "magego2fire";
-
-//fire management
-
-targetfire = instance_nearest(x,y,obj_blue_mage_fire);
+state = "ghostfollow";
 
 //mages controller
 current_column = (x div global.roomwd);
@@ -41,21 +37,18 @@ mages_controller = collision_rectangle(dgx,dgy,dgx+global.roomwd,dgy+global.room
 if(mages_controller == noone){
 	mages_controller = instance_create_layer(x,y,layer,obj_blue_mages_controller);
 }
-//add fire to list of fires
+//add mage to the list
 ds_list_add(mages_controller.mages,id);
 mages_controller.calculate = true;
 
+//preference list
+preference = ds_list_create();
+single = true;
+pair = noone;
 
 //times 
-move_time  = 0.5*room_speed;
-move_time_counter = move_time;
-
-break_time = 0.2*room_speed;
-
-transition_time = 0.5*room_speed;
-transition_time_counter=transition_time
-
-shot_cooldown_time = 1.5*room_speed;
+lightingtime = 0.6*room_speed;
+attackpausetime = 0.7*room_speed;
 
 for(i = 0; i < 8; i += 1){	
 	alarms[i] = -1;

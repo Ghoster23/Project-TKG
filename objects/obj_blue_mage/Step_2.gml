@@ -7,7 +7,12 @@ event_inherited();
 event_inherited();
 
 if(state == "magego2fire"){
-	  var d_ = point_direction(x,y,targetfire.x,targetfire.y);
+	if(pair != noone){
+		var d_ = point_direction(x,y,pair.x,pair.y);
+	}
+	else{
+		var d_ = point_direction(x,y,global.body.x,global.body.y);
+	}
 }
 
 if(state == "ghostfollow"){
@@ -86,7 +91,7 @@ if state == "ghostfollow" {
 	}
 }
 
-if state == "lightfire" {
+if state == "lightfire" or state == "wait"{
 	
 	image_speed=0.6;
 	

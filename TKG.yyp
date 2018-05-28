@@ -3727,6 +3727,14 @@
             }
         },
         {
+            "Key": "5fcca18a-0f14-4a24-9597-718a259a2323",
+            "Value": {
+                "id": "9de334b9-9065-4059-b492-a87595e4133f",
+                "resourcePath": "scripts\\scr_part_blue_fire_init\\scr_part_blue_fire_init.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "5fdf63e3-e928-44be-a3bb-6e3e18835e99",
             "Value": {
                 "id": "e193e31c-45ef-4119-bfaf-1c629e2cd01e",
@@ -9761,6 +9769,7 @@
     ],
     "script_order": [
         "a3b977f9-97d4-4f00-9a24-99a22325d863",
+        "5fcca18a-0f14-4a24-9597-718a259a2323",
         "9eb827e5-22cf-41d7-8372-0b2635a4c902",
         "941795e9-206b-460a-96e2-c26b2e5bab09",
         "e162cfa1-3275-4d4d-b6e3-0117f0b1ea1a",

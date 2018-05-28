@@ -13,6 +13,7 @@ if(room >= rm_level){
 }
 
 scr_part_fire_init();
+scr_part_blue_fire_init();
 scr_part_smoke_init();
 scr_part_CHdirt_init();
 scr_part_cbits_init();

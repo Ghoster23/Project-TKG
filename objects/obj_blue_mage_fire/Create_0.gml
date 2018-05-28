@@ -19,5 +19,11 @@ if(mages_controller == noone){
 	mages_controller = instance_create_layer(x,y,layer,obj_blue_mages_controller);
 }
 //add fire to list of fires
-ds_list_add(mages_controller.fires,id);
 mages_controller.calculate = true;
+ds_list_add(mages_controller.fires,id);
+
+//preference list
+preference = ds_list_create();
+single = true;
+
+flameoff =0;
