@@ -74,7 +74,7 @@ switch wep_pat_state {
 			var ice = scr_create_damage_dealer(xx,yy,obj_ice_shard,
 												owner,owner.ohko,
 												owner.stat[stats.satk] * (1 + owner.modf[stats.satk]),
-												stats.sdef);
+												stats.sdef,1,60);
 			
 			ice.dir    = -rad + random_range(-wep_proj_spread,wep_proj_spread);
 			ice.spd    = wep_proj_speed;

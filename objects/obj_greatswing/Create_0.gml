@@ -7,5 +7,5 @@ impact       = false;
 offset = true;
 offs   = 32;
 
-kb_amount = 10;
+kb_amount = 50;
 damage    = 4;

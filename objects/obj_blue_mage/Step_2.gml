@@ -65,7 +65,7 @@ if(state == "magego2fire"){
 	}
 }
 
-if state == "ghostfollow" {
+if (state == "ghostfollow" or state == "attackwait") {
 	
 	image_speed=0.6;
 	
@@ -90,6 +90,8 @@ if state == "ghostfollow" {
 		}
 	}
 }
+
+
 
 if state == "lightfire" or state == "wait"{
 	

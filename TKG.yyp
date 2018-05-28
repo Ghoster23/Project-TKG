@@ -4471,6 +4471,14 @@
             }
         },
         {
+            "Key": "72c5bca8-ff77-4ff7-9e04-5bdb2e6a337f",
+            "Value": {
+                "id": "fb679522-30ee-4229-ba32-a2fee9d2b29f",
+                "resourcePath": "sprites\\spr_mage_ghost_bite\\spr_mage_ghost_bite.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "72e3d181-415d-4f74-bd80-f40fe80a8077",
             "Value": {
                 "id": "2f1b8b89-98c5-4d66-8970-286bbb4e0dd0",
@@ -6563,6 +6571,14 @@
             "Value": {
                 "id": "b4c0e173-f492-4530-96d8-065adb759b0d",
                 "resourcePath": "objects\\obj_psnt_feet\\obj_psnt_feet.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ae6fda63-df1f-4ce1-b799-5a6a4b66d985",
+            "Value": {
+                "id": "b8382801-649c-471f-b5ab-5c0ea5b17c55",
+                "resourcePath": "objects\\obj_mage_ghost_bite\\obj_mage_ghost_bite.yy",
                 "resourceType": "GMObject"
             }
         },

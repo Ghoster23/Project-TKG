@@ -3,8 +3,8 @@ event_inherited();
 image_speed = 0;
 
 //Stats
-stat[stats.mhp]  = 10;
-stat[stats.hp]   = 10;
+stat[stats.mhp]  =	5;
+stat[stats.hp]   =	5;
 stat[stats.atk]  =  5;
 stat[stats.def]  =  5;
 stat[stats.satk] =  5;
@@ -50,7 +50,4 @@ pair = noone;
 lightingtime = 0.6*room_speed;
 attackpausetime = 0.7*room_speed;
 
-for(i = 0; i < 8; i += 1){	
-	alarms[i] = -1;
-}
-
+scr_pausable_init(10);

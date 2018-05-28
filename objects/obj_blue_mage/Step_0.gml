@@ -12,10 +12,10 @@ if go and not global.pause{
 			path = global.ai_path;
 			scr_move_entity(point_direction(x,y,path_get_point_x(path,1),path_get_point_y(path,1)),0.65);
 			
-			if(point_distance(x,y,global.body.x,global.body.y)<=45){
-				alarm_set(10,attackpausetime);
+			if(point_distance(x,y,global.body.x,global.body.y)<=55){
+				alarm_set(7,0.2*room_speed);
+				physics_apply_impulse(x,y,lengthdir_x(25,player_dir),lengthdir_y(25,player_dir));
 				state = "attackwait";
-				physics_apply_impulse(x,y,lengthdir_x(20,player_dir),lengthdir_y(20,player_dir));
 			}
 
 			
