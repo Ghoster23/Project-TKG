@@ -1,1 +1,1 @@
-scr_status_apply(statuses.regen,24,id);
+global.coins += 100;

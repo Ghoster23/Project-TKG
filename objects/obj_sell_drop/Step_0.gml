@@ -8,8 +8,10 @@ if(interacted){
 	if(global.coins >= cost){
 		global.coins -= cost;
 		
-		scr_spawn_item(type, item, amount, x, y, false, false);
+		scr_spawn_item(type, item, amount, x, y, true, false);
 	
 		instance_destroy();
+	}else {
+		interacted = false;
 	}
 }

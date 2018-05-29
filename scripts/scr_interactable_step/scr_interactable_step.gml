@@ -12,7 +12,7 @@ if(instance_exists(global.body) and													//Player exists
 	draw_script = scr_draw_interact_prompt;
 	
 }else {
-	draw_script  = null;
+	draw_script  = prev_draw_script;
 	intr_key_bob = 0;
 }
 
