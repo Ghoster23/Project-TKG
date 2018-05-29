@@ -83,10 +83,7 @@ switch type{
 		break;
 	//shop rooms
 	case 15:
-		instance_create_layer(gx+(roomwd/2)-16-64,gy-16+(roomhg/2),"Instances",obj_sell_drop);
-		instance_create_layer(gx+(roomwd/2)-16,gy-16+(roomhg/2),"Instances",obj_sell_drop);
-		instance_create_layer(gx+(roomwd/2)-16+64,gy-16+(roomhg/2),"Instances",obj_sell_drop);
-		exit;
+		room_file = file_text_open_read(working_directory+"roomtypeshop.csv");
 		break;
 	//item room
 	case 16:
