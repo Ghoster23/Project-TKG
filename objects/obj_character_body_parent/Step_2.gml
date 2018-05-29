@@ -6,11 +6,6 @@ if(prev_hp != stat[stats.hp]){
 		//Flash timer
 		alarm[2] = 0.5 * room_speed;
 		
-		//Shout
-		if(shout){
-			scr_sound(snd_char1_hurt1,snd_char1_hurt2,snd_char1_hurt3,snd_char1_hurt4);
-			shout = false;
-		}
 		
 		if(stat[stats.hp] <= 0){
 			dead = true;
@@ -24,8 +19,23 @@ if(not global.pause){
 	//Flash red
 	if(damaged){
 		image_blend = scr_toggle(image_blend,c_white,c_red);
+		
+		switch(id.object_index){
+			case obj_luna_body:
+				voice=scr_voice("luna");	
+			break;
+			
+			case obj_body:
+				voice=scr_voice("jason");
+			break;
+		}
+		
 	}else {
 		image_blend = c_white;
+		if(voice!=noone){
+			audio_stop_sound(voice);
+		}
+		
 	}
 }
 

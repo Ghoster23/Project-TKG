@@ -2,7 +2,7 @@
 0,,,,,,,,,,,,,,,,,,
 "[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]",#,"[obj_crate,Instances]","[obj_crate,Instances]",#,#,#,#,"[obj_vase,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]"
 "[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]",#,#,#,#,#,#,#,#,#,#,#,"[obj_barrel,Instances]","[obj_rock,Instances]","[obj_barrel,Instances]","[obj_barrel,Instances]","[obj_barrel,Instances]"
-"[obj_rock,Instances]","[obj_crate,Instances]","[obj_rock,Instances]",#,#,#,#,#,#,#,#,#,#,#,#,#,#,"[obj_barrel,Instances]","[obj_barrel,Instances]"
+"[obj_rock,Instances]","[obj_crate,Instances]","[obj_rock,Instances]",#,#,#,#,#,#,"[obj_shopkeep,Instances]",#,#,#,#,#,#,#,"[obj_barrel,Instances]","[obj_barrel,Instances]"
 "[obj_rock,Instances]",#,#,#,#,#,"[obj_empty,Instances]","[obj_sell_drop,Instances]","[obj_empty,Instances]","[obj_sell_drop,Instances]","[obj_empty,Instances]","[obj_sell_drop,Instances]","[obj_empty,Instances]",#,#,#,#,#,#
 #,#,#,#,#,#,"[obj_empty,Instances]","[obj_empty,Instances]","[obj_empty,Instances]","[obj_shoptable,Instances]","[obj_empty,Instances]","[obj_empty,Instances]","[obj_empty,Instances]",#,#,#,#,#,#
 #,#,#,#,#,#,#,#,#,#,#,#,#,#,#,#,#,#,#
@@ -12,7 +12,7 @@
 1,,,,,,,,,,,,,,,,,,
 "[obj_pit,BH]","[obj_pit,BH]","[obj_rock,Instances]","[obj_barrel,Instances]","[obj_barrel,Instances]","[obj_crate,Instances]",#,#,#,#,#,#,"[obj_crate,Instances]","[obj_crate,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_pit,BH]","[obj_pit,BH]"
 "[obj_pit,BH]","[obj_pit,BH]","[obj_rock,Instances]","[obj_barrel,Instances]",#,#,#,#,#,#,#,#,#,#,"[obj_barrel,Instances]","[obj_rock,Instances]","[obj_rock,Instances]","[obj_pit,BH]","[obj_pit,BH]"
-"[obj_pit,BH]","[obj_pit,BH]","[obj_rock,Instances]",#,#,#,#,#,#,#,#,#,#,#,#,"[obj_rock,Instances]","[obj_rock,Instances]","[obj_pit,BH]","[obj_pit,BH]"
+"[obj_pit,BH]","[obj_pit,BH]","[obj_rock,Instances]",#,#,#,#,#,#,"[obj_shopkeep,Instances]",#,#,#,#,#,"[obj_rock,Instances]","[obj_rock,Instances]","[obj_pit,BH]","[obj_pit,BH]"
 "[obj_pit,BH]","[obj_pit,BH]",#,#,#,#,"[obj_empty,Instances]","[obj_sell_drop,Instances]","[obj_empty,Instances]","[obj_sell_drop,Instances]","[obj_empty,Instances]","[obj_sell_drop,Instances]","[obj_empty,Instances]",#,#,"[obj_barrel,Instances]","[obj_rock,Instances]","[obj_pit,BH]","[obj_pit,BH]"
 "[obj_pit,BH]","[obj_pit,BH]",#,#,#,#,"[obj_empty,Instances]","[obj_empty,Instances]","[obj_empty,Instances]","[obj_shoptable,Instances]","[obj_empty,Instances]","[obj_empty,Instances]","[obj_empty,Instances]",#,#,#,"[obj_rock,Instances]","[obj_pit,BH]","[obj_pit,BH]"
 "[obj_pit,BH]","[obj_pit,BH]","[obj_rock,Instances]",#,#,#,#,#,#,#,#,#,#,#,#,#,"[obj_rock,Instances]","[obj_pit,BH]","[obj_pit,BH]"
@@ -22,7 +22,7 @@
 2,,,,,,,,,,,,,,,,,,
 "[obj_vase,Instances]","[obj_rock,Instances]","[obj_crate,Instances]","[obj_crate,Instances]","[obj_crate,Instances]",#,#,"[obj_crate,Instances]","[obj_crate,Instances]",#,#,#,#,"[obj_crate,Instances]",#,"[obj_crate,Instances]","[obj_crate,Instances]","[obj_rock,Instances]","[obj_vase,Instances]"
 "[obj_rock,Instances]","[obj_blue_mage_fire,Instances]","[obj_rock,Instances]",#,#,#,#,#,#,#,#,#,#,#,#,#,"[obj_rock,Instances]","[obj_blue_mage_fire,Instances]","[obj_rock,Instances]"
-"[obj_crate,Instances]","[obj_rock,Instances]","[obj_crate,Instances]",#,#,#,#,#,#,#,#,#,#,#,#,#,"[obj_crate,Instances]","[obj_rock,Instances]",#
+"[obj_crate,Instances]","[obj_rock,Instances]","[obj_crate,Instances]",#,#,#,#,#,#,"[obj_shopkeep,Instances]",#,#,#,#,#,#,"[obj_crate,Instances]","[obj_rock,Instances]",#
 "[obj_chest,Instances]",#,#,#,#,#,"[obj_empty,Instances]","[obj_sell_drop,Instances]","[obj_empty,Instances]","[obj_sell_drop,Instances]","[obj_empty,Instances]","[obj_sell_drop,Instances]","[obj_empty,Instances]",#,#,#,#,#,#
 #,#,#,#,#,#,"[obj_empty,Instances]","[obj_empty,Instances]","[obj_empty,Instances]","[obj_shoptable,Instances]","[obj_empty,Instances]","[obj_empty,Instances]","[obj_empty,Instances]",#,#,#,#,#,#
 "[obj_pit,BH]","[obj_pit,BH]",#,#,#,#,#,#,#,#,#,#,#,#,#,#,#,#,"[obj_barrel,Instances]"

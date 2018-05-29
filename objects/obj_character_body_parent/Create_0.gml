@@ -5,6 +5,8 @@ hands.sprite_index = hands_spr;
 feet   = instance_create_layer(x,  y,layer,     obj_feet);
 feet.sprite_index  = feet_spr;
 
+voice =noone;
+
 weapon = noone;
 
 if(global.weapon != -1){
