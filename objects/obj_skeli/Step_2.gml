@@ -34,7 +34,7 @@ if(state == "go2head" or state == "chase" or state = "aim" or state = "wait") {
 if(state == "go2head" or state == "chase" or state =="wait"){
 
 	if flash == false and not global.pause{
-		image_speed=0.6;
+		image_speed=0.8;
 		switch d {
 		    case 0:
 		        break;
@@ -110,6 +110,15 @@ if state == "pophead"{
 	    sprite_index = skeli_pophead;
 	}
 }
+
+if state == "pickup"{
+	
+	if flash == false and not global.pause{
+		image_speed=0.6;
+	    sprite_index = skeli_pickup;
+	}
+}
+
 
 
 

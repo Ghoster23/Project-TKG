@@ -43,6 +43,36 @@
             "enumb": 0,
             "eventtype": 4,
             "m_owner": "7857b9d3-c5c0-4fcc-a451-09348177fbce"
+        },
+        {
+            "id": "a0d68484-b029-4677-b29f-3820ad03d931",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "e78a02e2-fbe9-47fb-b40f-eeeb04f32351",
+            "enumb": 0,
+            "eventtype": 4,
+            "m_owner": "7857b9d3-c5c0-4fcc-a451-09348177fbce"
+        },
+        {
+            "id": "db12ec27-763a-47ef-b7cd-cb81da322f64",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 2,
+            "eventtype": 2,
+            "m_owner": "7857b9d3-c5c0-4fcc-a451-09348177fbce"
+        },
+        {
+            "id": "76d46b1c-2d74-4e4b-ae0b-06895ac81edb",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "b8453c71-24f2-4852-a377-e9d9f6c7873d",
+            "enumb": 0,
+            "eventtype": 4,
+            "m_owner": "7857b9d3-c5c0-4fcc-a451-09348177fbce"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -56,19 +86,19 @@
     "physicsKinematic": false,
     "physicsLinearDamping": 0.1,
     "physicsObject": true,
-    "physicsRestitution": 0.1,
+    "physicsRestitution": 0.4,
     "physicsSensor": false,
     "physicsShape": 0,
     "physicsShapePoints": [
         {
-            "id": "dba8e2df-788e-42f7-a4e8-d277d17e016f",
+            "id": "971af9f2-8294-4fca-b4c9-e7cdb0efa6d1",
             "modelName": "GMPoint",
             "mvc": "1.0",
-            "x": 15,
+            "x": 11,
             "y": 10
         },
         {
-            "id": "a290d7d7-a8e0-44e8-bd3b-b1abb726491e",
+            "id": "e4699f55-0006-4192-ab31-4597ca1a835e",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 8,
@@ -78,6 +108,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "06aac20d-41f5-401c-896c-7abc43b87744",
+    "spriteId": "63eb53bc-0077-4fbd-91a1-31ac951dab2f",
     "visible": true
 }

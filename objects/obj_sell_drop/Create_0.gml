@@ -2,7 +2,8 @@ randomize();
 event_inherited();
 image_speed = 0;
 draw_script = scr_draw_item_floor;
-
+offset = true;
+offs = 100;
 cost = 0;
 
 off_x = 0;
