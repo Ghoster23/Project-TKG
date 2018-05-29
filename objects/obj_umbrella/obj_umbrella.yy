@@ -2,7 +2,7 @@
     "id": "1446406b-e035-4a6d-9392-778a717d88ab",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_luna_casting",
+    "name": "obj_umbrella",
     "eventList": [
         {
             "id": "5b6fb4c2-5350-4b1b-9673-a77654a935d5",

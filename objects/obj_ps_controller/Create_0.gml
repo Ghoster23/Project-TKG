@@ -33,3 +33,8 @@ scr_part_brewoinv_init();
 scr_part_willowisp_init();
 scr_part_blood();
 scr_part_haze_init();
+scr_part_st_regen_init();
+scr_part_st_poison_init();
+scr_part_st_frost_init();
+scr_part_st_wet_init();
+scr_part_st_frozen_init();

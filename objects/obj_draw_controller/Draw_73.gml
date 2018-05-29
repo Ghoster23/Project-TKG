@@ -10,7 +10,7 @@ if(!surface_exists(global.fluid_surface)){
 	draw_surface_ext(global.fluid_surface,
 	                 global.current_column * global.roomwd,
 					 global.current_row    * global.roomhg,
-					 1,1,0,c_white,1);			  
+					 1,1,0,c_white,1);		  
 	outline_f_end();
 	
 	//Clear Fluid Surface

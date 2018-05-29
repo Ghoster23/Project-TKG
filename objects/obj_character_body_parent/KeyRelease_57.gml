@@ -1,1 +1,1 @@
-instance_create_layer(x+32,y+32,layer,obj_dropped_melee);
+scr_status_apply(statuses.regen,24,id);

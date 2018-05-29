@@ -33,7 +33,7 @@ if(amount > 0){
 	spawn.amount = amount;
 	
 }else if(amount < 0){
-	spawn.amount = irandom(amount * -1);
+	spawn.amount = irandom((amount + 1) * -1) + 1;
 	
 }else {
 	instance_destroy(spawn);

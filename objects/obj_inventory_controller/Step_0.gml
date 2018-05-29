@@ -173,27 +173,30 @@ if(obj_ig_menu_controller.state == "closed"){
 		
 			var _type = inventory[# 0, holder];
 			
+			//Place, swap or drop items
 			if(_type != -1){
+				//Fuck up prevention
 				if(is_undefined(_type)){
 					scr_inv_set_pos(-1,-1,-1,holder);
-					
 				}
 				
+				//Drop item
 				if(selected == -1){
 					scr_inv_item_drop();
-					
+				
+				//Consume item by clicking on the player
 				}else if(selected == 16 && _type <= item_type.constellation){
 					scr_inv_consume(holder);
 			
 					obj_cursor.cursor = true;
-					
+				
+				//Place or swap item
 				}else {
 					scr_inv_item_place(selected);
 				
 				}
 			
-				alarm[0] = 0.3 * room_speed;
-			
+			//Grab item from inventory
 			}else {
 				switch selected {
 					case -1:
@@ -202,18 +205,19 @@ if(obj_ig_menu_controller.state == "closed"){
 					case tool_slot:
 						if(!wep_equip){
 							scr_inv_item_grab(selected);
-							alarm[0] = 0.3 * room_speed;
 						}
 					break;
 					default:
 						scr_inv_item_grab(selected);
-						alarm[0] = 0.3 * room_speed;
 					break;
 					
 				}			
 			}
+			
+			alarm[0] = 0.3 * room_speed;
 		}
 	
+		//Equipment effects
 		for(var i = 0; i < 3; i++){
 			var e_id = inventory[# 1, 9 + i];
 		

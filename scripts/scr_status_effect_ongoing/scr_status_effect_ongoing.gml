@@ -7,6 +7,12 @@ switch(status){
 	default:
 	break;
 	
+	case statuses.burning :
+		if(stat[stats.hp] > 0){
+			stat[stats.hp] -= 1;
+		}
+	break;
+	
 	case statuses.poison :				
 		if(stat[stats.hp] > 0){
 			stat[stats.hp] -= 2;

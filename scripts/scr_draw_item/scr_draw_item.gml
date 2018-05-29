@@ -78,7 +78,7 @@ if(amount > 1 and type > 3){
 	draw_set_font(font_chsl_tags);
 	
 	if(id.object_index == obj_item){
-		scr_draw_text_outlined(xx+32,yy+8,string(amount),c_black,c_white);
+		scr_draw_text_outlined(xx+32,yy+8,c_black,c_white,string(amount));
 	}
 }
 }
