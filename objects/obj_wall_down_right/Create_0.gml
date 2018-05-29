@@ -1,3 +1,8 @@
+// Inherit the parent event
 event_inherited();
+
+rm_x = x div global.roomwd;
+rm_y = y div global.roomhg;
+
 offset = true;
-offs = 128;
+offs   = 64;

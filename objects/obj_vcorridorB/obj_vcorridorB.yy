@@ -4,10 +4,20 @@
     "mvc": "1.0",
     "name": "obj_vcorridorB",
     "eventList": [
-        
+        {
+            "id": "ae501b0b-bf73-4559-980d-994bea1a0304",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "55c75b09-e414-48ef-97f0-1406d777e669"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "overriddenProperties": null,
+    "parentObjectId": "c22b2ab4-c395-47e5-8761-fe19903e269e",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0,
@@ -50,6 +60,7 @@
         }
     ],
     "physicsStartAwake": true,
+    "properties": null,
     "solid": false,
     "spriteId": "a0ab8acd-5d14-492c-8eb0-3c3b359cfa9f",
     "visible": true

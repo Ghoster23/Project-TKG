@@ -5,12 +5,10 @@ for(var i = 0; i < status_count; i++){
 		
 	if(count > 0){
 		scr_status_effect_ongoing(status[0]);
-		status_list[| i] = [status[0],status[1],count];
+		status_list[| i] = [status[0],status[1],count,status[3]];
 		
 	}else {
-		scr_status_effect_deactivate(status[0]);
-		ds_list_delete(status_list,i);
-		status_count--;
+		scr_status_delete_from_list(i);
 		i--;
 	}
 }

@@ -26,17 +26,17 @@ void main()
             
 			bool out_bound = check_pos.x < uvs.r || check_pos.y < uvs.g || check_pos.x > uvs.b || check_pos.y > uvs.a; 
 			
-            if (datPixel.a>tol && gl_FragColor.a<=tol && !out_bound){
+            if(datPixel.a > tol && gl_FragColor.a <= tol && !out_bound){
                 outline = true;
 				
 				if(datPixel.r - 0.478 < 0.001){
 					gl_FragColor = vec4(0.004, 0.263, 0.208, datPixel.a);
 					
-				}else if(datPixel.g - 0.482 < 0.001){
+				}else if(datPixel.r - 0.074 < 0.001){
 					gl_FragColor = vec4(  0.0, 0.074, 0.498, datPixel.a);
 					
 				}else if(datPixel.r - 0.572 < 0.001){
-					gl_FragColor = vec4(  0.0, 0.251,   0.8, datPixel.a);
+					gl_FragColor = vec4(0.278,   0.0,   0.0, datPixel.a);
 					
 				}else if(datPixel.r - 0.858 < 0.001){
 					gl_FragColor = vec4(  0.8, 0.843,   1.0, datPixel.a);

@@ -20,7 +20,7 @@ if(active && global.check == 1){
 				
 				if(global.current_column == rx && global.current_row == ry){
 					//Opacity
-					if(type != 3){
+					if(type <= 1){
 						op = ln(count) * 0.05 + 0.25;
 					}else {
 						op = ln(count) * 0.05 + 0.55;

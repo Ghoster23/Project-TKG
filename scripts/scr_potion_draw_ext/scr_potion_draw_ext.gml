@@ -18,8 +18,8 @@ var yscale = argument5;
 
 var alpha = argument6;
 
-draw_sprite_ext( spr_potion_fluid, amount, xx, yy, xscale, yscale, 0, 
+draw_sprite_ext( spr_potion_fluid, amount - 1, xx, yy, xscale, yscale, 0, 
                  scr_potion_get_color(type),alpha);
 						
-draw_sprite_ext( spr_potion_flask, amount, xx, yy, xscale, yscale, 0, c_white, alpha);
+draw_sprite_ext( spr_potion_flask, amount - 1, xx, yy, xscale, yscale, 0, c_white, alpha);
 }

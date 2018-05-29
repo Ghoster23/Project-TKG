@@ -8,3 +8,5 @@ conv.owner = id;
 		  
 em = part_emitter_create(global.ps_if);
 destroy = false;
+
+phy_bullet = true;

@@ -7,7 +7,7 @@ var status = argument0;
 var count  = argument1;
 var entity = argument2;
 
-var applied = false;
+var applied = 0;
 
 //Synergies
 var wet    = -1;
@@ -33,40 +33,51 @@ with(entity){
 	}
 
 	
-	switch(status){			
+	switch(status){
+		//Non accumulating
 		case statuses.wet:
 			if(not applied){
-				ds_list_add(status_list,[status,count,count]);
-				scr_status_effect_activate(status);
-				status_count++;
+				scr_status_add_to_list(status,count);
 			}else {
-				ds_list_replace(status_list,applied-1,[status,count,count]);
+				scr_status_replace_in_list(applied-1,status,count,false)
 			}
 		break;
-			
+		
+		//Converting
 		case statuses.frost:
 			if(wet){
-				ds_list_replace(status_list,wet-1,[statuses.frozen,5,5]);
-				scr_status_effect_activate(statuses.frozen);
+				s = status_list[| wet-1];
+				scr_status_replace_in_list(wet-1,statuses.frozen,15,false);				
+				scr_status_effect_activate(statuses.frozen,wet-1,s[3]);
 				
 			}else {
 				if(not applied){
-					ds_list_add(status_list,[status,count,count]);
-					scr_status_effect_activate(status);
-					status_count++;
+					scr_status_add_to_list(status,count);
 				}else {
-					ds_list_replace(status_list,applied-1,[status,min(s[1],c_count + count),c_count + count]);
+					scr_status_replace_in_list(applied-1,status,count,false);
 				}
 			}
 		break;
 		
+		case statuses.burning:
+			if(wet){
+				scr_status_delete_from_list(wet-1);
+				
+			}else {
+				if(not applied){
+					scr_status_add_to_list(status,count);
+				}else {
+					scr_status_replace_in_list(applied-1,status,count,false);
+				}
+			}
+		break;
+		
+		//Normal
 		default:
 			if(not applied){
-				ds_list_add(status_list,[status,count,count]);
-				scr_status_effect_activate(status);
-				status_count++;
+				scr_status_add_to_list(status,count);
 			}else {
-				ds_list_replace(status_list,applied-1,[status,min(s[1],c_count + count),c_count + count]);
+				scr_status_replace_in_list(applied-1,status,count,true);
 			}
 		break;
 	}

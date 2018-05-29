@@ -1,0 +1,15 @@
+line,Adam,"Hey man, do you know why I called you today?",0
+line,Adam,It wasn't for no reason…  I need to know,0
+question,Adam,Did you steal my cookies? Be honest!,0
+answer,Bob,"Yes, It was I MuahahahahaHAHAHAAH",6
+answer,Bob,Seriously… I thought you trusted me… ,9
+answer,Bob,"Are you kidding me i can't eat cookies dipshit im a level 5 vegan! Also now I'm gonna go on telling you about the horrible act of eating animals, or.. as they are otherwise known... the innocent children of god! Murderers the lot of you, ALL MURDERERS! ",12
+line,Adam,You motherfucker ILL KILL YOUUUU!,0
+line,Bob,Jeez cool off.. Ill buy you some for fuck sake,0
+end,scr_resolves,0,0
+line,Adam,"I do, really.. I'm just pissed OK?",0
+line,Bob,I can help you get to the bottom of this!,0
+end,scr_resolves,1,0
+line,Adam,You vegan &COCKSUCKIN' PIECE OF SHIT!!!!&  IM NOT BELIVIN ANY A YALL LIES!!! You're a dirty meat eater and we both know it !!,0
+line,Bob,Dude… it's been like three years you're well aware i can't eat anything that casts a shadow!,0
+end,scr_resolves,2,0
