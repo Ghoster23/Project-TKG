@@ -13,26 +13,32 @@ switch global.lvl_room_type{
 	case 12:
 	case 13:
 	case 14:
-		instance_create_layer(10*32+16,12*32,"Instances",global.body);
+		var xx = 10*32+16;
+		var yy = 12*32;
 		break;
 	//left
 	case 1:
 	case 6:
 	case 8: 
 	case 11:
-		instance_create_layer(1*32,7*32+16,"Instances",global.body);
+		var xx = 1*32;
+		var yy = 7*32+16;
 		break;
 	//up
 	case 2:
 	case 7:
-		instance_create_layer(10*32+16,3*32,"Instances",global.body);
+		var xx = 10*32+16;
+		var yy = 3*32;
 		break;
 	//right
-	case 3: 
-		instance_create_layer(20*32,7*32+16,"Instances",global.body);
+	case 3:
+		var xx = 20*32;
+		var yy = 7*32+16;
 		break;
 
 }
+
+scr_spawn_player(xx,yy,"Instances");
 
 global.gen = false;
 

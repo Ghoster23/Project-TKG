@@ -1,8 +1,7 @@
 if not global.pause {
-	if alarm_0 != -1{
-		alarm[0] = alarm_0;
-		alarm_0 = -1;
-	}
+	scr_get_input();
+	
+	scr_pause_end(alarm_count);
 	
 	if prev_image_speed != 0{
 		image_speed = prev_image_speed;
@@ -19,23 +18,13 @@ if not global.pause {
 		instance_destroy();
 	}
 
-	if(mouse_check_button_released(mb_left)){
+	if(attack_key){
 	    obj_CH_tree_state.bene = false;
 		obj_CH_tree_state.state = 1;
-		global.status[1,0] = 0;
 		instance_destroy();
-
 	}
 
 }else {
-	if alarm[0] != -1{
-		alarm_0 = alarm[0];
-		alarm[0] = -1;
-	}
-	
-	if prev_image_speed == 0{
-		prev_image_speed = image_speed;
-		image_speed = 0;
-	}
+	scr_pause_start(alarm_count);
 	
 }

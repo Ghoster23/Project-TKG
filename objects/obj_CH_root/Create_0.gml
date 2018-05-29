@@ -13,3 +13,6 @@ prev_image_speed = 0;
 for(i = 0; i < 3; i += 1){
 	alarms[i] = -1;
 }
+
+damage = 2;
+divi = stats.def;

@@ -15,13 +15,14 @@ alarm[0] = 3 * room_speed;
 phy_fixed_rotation = true;
 inv = false;
 
-global.b_mhp = 60;
-global.b_hp = 60;
-global.b_atk = 8;
-global.b_satk = 6;
-global.b_def = 3;
-global.b_sdef = 3;
-global.b_spd = 0;
+//Stats
+stat[stats.mhp]  = 100;
+stat[stats.hp]   = 100;
+stat[stats.atk]  =  10;
+stat[stats.def]  =  10;
+stat[stats.satk] =  10;
+stat[stats.sdef] =  10;
+stat[stats.spd]  =  3;
 
 //Roots
 ph = 0;

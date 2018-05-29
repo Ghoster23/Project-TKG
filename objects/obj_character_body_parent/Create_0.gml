@@ -44,6 +44,8 @@ stat[stats.sdef] =  5;
 stat[stats.spd]  =  3;
 stat[stats.arm]  =  0;
 stat[stats.luck] =  0;
+array_copy(stat,0,global.p_stats,0,stats.count);
+
 
 //Modifiers
 modf[stats.mhp]  = 0;
