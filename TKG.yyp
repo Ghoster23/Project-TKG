@@ -55,14 +55,6 @@
             }
         },
         {
-            "Key": "002cef07-8bec-4909-9f3d-91ac1cdf9b11",
-            "Value": {
-                "id": "71d1662a-9a3e-4d57-a61f-bcbe7fecfc94",
-                "resourcePath": "datafiles_yy\\spr_jason_roll_up.yy.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "00742854-c825-4908-b8b3-a6f0d584c6a2",
             "Value": {
                 "id": "63641d98-eb0a-4f9b-b815-22ddd2b8288e",
@@ -599,6 +591,14 @@
             }
         },
         {
+            "Key": "0f912e7a-4050-4732-a36f-6fa74d8e1679",
+            "Value": {
+                "id": "af59aebf-85ea-4e78-9146-cad13061aa0d",
+                "resourcePath": "sounds\\snd_vocal3\\snd_vocal3.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "0fc303d0-8d7f-4e3c-917c-9839812d4742",
             "Value": {
                 "id": "fb14d327-1f5d-41a4-9cfd-eef6be834d3e",
@@ -659,6 +659,14 @@
             "Value": {
                 "id": "78fe83f1-60fc-46b3-a6a3-cbd5f1bf21f1",
                 "resourcePath": "objects\\obj_copyincfiles\\obj_copyincfiles.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "1174c35d-366d-417d-a9ca-f9ffe930bb46",
+            "Value": {
+                "id": "ed5e8358-8a71-42fc-bfe9-8d302553dec3",
+                "resourcePath": "objects\\obj_music_controller\\obj_music_controller.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -5623,6 +5631,14 @@
             }
         },
         {
+            "Key": "861f5588-ef93-4811-aa99-964866d1b792",
+            "Value": {
+                "id": "e6d57f4a-6b35-4eee-9d18-e01bbb1ea202",
+                "resourcePath": "views\\861f5588-ef93-4811-aa99-964866d1b792.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "86544824-fe65-4aab-a4b2-b84e369c95fe",
             "Value": {
                 "id": "a772713d-f13b-4e12-935d-8a363d9f50c0",
@@ -8196,6 +8212,14 @@
                 "id": "b2b59358-226e-40d8-9b2d-b0cfca524e1a",
                 "resourcePath": "objects\\obj_clearroom\\obj_clearroom.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ca28037e-483d-4a57-806d-19b19c0ccc70",
+            "Value": {
+                "id": "072e6616-a4da-4ead-9b92-d57bb154c1c0",
+                "resourcePath": "sounds\\music_gauntlet\\music_gauntlet.yy",
+                "resourceType": "GMSound"
             }
         },
         {

@@ -9,6 +9,9 @@ if(prev_hp != stat[stats.hp]){
 		
 		if(stat[stats.hp] <= 0){
 			dead = true;
+			if(voice!=noone){
+				audio_stop_sound(voice);
+			}
 		}
 	}
 
@@ -87,6 +90,9 @@ switch state{
 		inv = true;
 	break;
 	case 3: //Dead
+		if(voice!=noone){
+			audio_stop_sound(voice);
+		}
 	break;
 	case 4: //Idle
 		image_speed   = 0.4;

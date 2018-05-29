@@ -7,8 +7,11 @@ switch npc{
 		var snd=snd_vocal1;
 	break;
 	
-	case "Bob":
+	case "jason":
 		var snd=snd_vocal2;
+	break;
+	case "luna":
+		var snd = snd_vocal3;
 	break;
 	default:
 		var snd=snd_vocal2;
