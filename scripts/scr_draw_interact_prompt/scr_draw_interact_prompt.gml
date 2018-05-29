@@ -12,5 +12,5 @@ draw_set_halign(fa_middle);
 draw_set_valign(fa_bottom);
 draw_text_color(x+intr_x_offs-1,y+intr_y_offs+sin(intr_key_bob)*3 - 1,key,c_black,c_black,c_black,c_black,1);
 
-scr_draw_outline();
+scr_draw_outline(prev_draw_script);
 }

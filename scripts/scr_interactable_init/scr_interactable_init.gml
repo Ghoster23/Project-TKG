@@ -12,4 +12,5 @@ intr_x_offs  = argument3;
 intr_y_offs  = argument4;
 interacted   = false;
 intr_key_bob = 0;
+prev_draw_script = draw_script;
 }
