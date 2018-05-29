@@ -18,3 +18,4 @@ status_spr[statuses.stuck]   = spr_status_stuck;
 status_spr[statuses.wet]     = spr_status_wet;
 status_spr[statuses.frost]   = spr_status_frost;
 status_spr[statuses.frozen]  = spr_status_frozen;
+status_spr[statuses.burning] = spr_status_burning;

@@ -13,12 +13,13 @@ chance = irandom(5);
 
 switch(chance){
 	case 0: //Potion
+	case 1:
 		type = item_type.potion;
 		item = irandom(potions.count);
 		cost = 2;
 		
 	break;
-	case 1: //Chess Piece
+	/*case 1: //Chess Piece
 		type = item_type.chess_piece;
 		item = irandom(chessP.count);
 		cost = 2 + item * 2;
@@ -29,7 +30,7 @@ switch(chance){
 		item = irandom(food.count);
 		cost = 4 + irandom(item);
 		
-	break;
+	break;*/
 	case 3: //Tool
 		type = item_type.tool;
 		item = irandom(tool.count);
@@ -42,6 +43,7 @@ switch(chance){
 		cost = 10 + (item div 5) * 2;
 		
 	break;
+	case 2:
 	case 5: //Heart
 		type = item_type.heart;
 		item = 0;
@@ -50,8 +52,10 @@ switch(chance){
 	break;
 }
 
-amount = irandom(scr_inv_item_stack_size(type) - 1);
+amount = irandom_range(1,scr_inv_item_stack_size(type));
 
 if(type == item_type.heart){
 	cost += amount;
 }
+
+scr_interactable_init(32,16,48,16,4);

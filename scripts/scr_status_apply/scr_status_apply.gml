@@ -10,8 +10,9 @@ var entity = argument2;
 var applied = 0;
 
 //Synergies
-var wet    = -1;
-var frozen = -1;
+var wet     = -1;
+var frozen  = -1;
+var burning = -1;
 
 with(entity){
 	for(var i = 0; i < status_count; i++){
@@ -29,6 +30,10 @@ with(entity){
 			case statuses.frozen:
 				frozen = i + 1;
 			break;
+			
+			case statuses.burning:
+				burning = i + 1;
+			break;
 		}
 	}
 
@@ -36,10 +41,15 @@ with(entity){
 	switch(status){
 		//Non accumulating
 		case statuses.wet:
-			if(not applied){
-				scr_status_add_to_list(status,count);
+			if(burning){
+				scr_status_delete_from_list(burning-1);
+				
 			}else {
-				scr_status_replace_in_list(applied-1,status,count,false)
+				if(not applied){
+					scr_status_add_to_list(status,count);
+				}else {
+					scr_status_replace_in_list(applied-1,status,count,false);
+				}
 			}
 		break;
 		

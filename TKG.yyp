@@ -9695,6 +9695,14 @@
             }
         },
         {
+            "Key": "ec35b23f-32ab-41f1-bfd3-7f24c3cfebd1",
+            "Value": {
+                "id": "933fb4d1-d857-4ecf-871a-5bec550963de",
+                "resourcePath": "sprites\\spr_status_burning\\spr_status_burning.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "eca7a478-24e3-454b-bc3c-33a2f0abcb53",
             "Value": {
                 "id": "d7c871f4-c531-471c-bd02-a1ddcd37b5e8",

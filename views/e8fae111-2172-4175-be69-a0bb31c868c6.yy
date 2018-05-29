@@ -14,7 +14,8 @@
         "e05ec090-1dbd-470e-8e48-ace85ee3a49a",
         "fa42f800-59c7-427e-8885-62b85eccfef0",
         "d2820a28-a8dd-437d-b7b2-62b0c3c72b4a",
-        "3341c12b-56b3-459f-948c-80601edd325b"
+        "3341c12b-56b3-459f-948c-80601edd325b",
+        "ec35b23f-32ab-41f1-bfd3-7f24c3cfebd1"
     ],
     "filterType": "GMSprite",
     "folderName": "Statuses",

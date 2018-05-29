@@ -27,7 +27,7 @@ if(not global.pause and booted and owner != noone and instance_exists(owner)){
 		
 		case statuses.burning:
 			part = global.pt_fire;
-			amt  = 1;
+			amt  = -3;
 		break;
 		
 		default:
