@@ -27,13 +27,23 @@ if check == true{
 			}
 	
 		break;
-		case "status":
+		case "inv":
 			///Close Status Screen and return to Menu
 			if menu_key {
 				state = "menu";
 				check = false;
 				alarm[0] = 0.5 * room_speed;
+				
+				obj_view.target = noone;
+				obj_view.t_zoom = 1;
 		
+			}else if inv_key {
+				state = "closed";
+				check = false;
+				alarm[0] = 0.5 * room_speed;
+				
+				obj_view.target = noone;
+				obj_view.t_zoom = 1;
 			}
 	
 		break;
@@ -66,6 +76,13 @@ if check == true{
 				check = false;
 				alarm[0] = 0.5 * room_speed;
 		
+			}else if inv_key {
+				state = "inv";
+				check = false;
+				alarm[0] = 0.5 * room_speed;
+				
+				obj_view.target = global.body;
+				obj_view.t_zoom = 2;
 			}
 	
 		break;
@@ -109,3 +126,5 @@ if state != "closed" || global.dead || state = "generation" {
 if(global.gen){
 	state = "generation";
 }
+
+inv_key = false;

@@ -1,89 +1,52 @@
-vfx = (0.5 + global.current_column) * global.roomwd;
-vfy = (0.5 + global.current_row)    * global.roomhg - 16;
-
-if(zooming){
-	if(zoomed){
-		zooming = false;
-		
-		if(abs(cam_wd - cam_wd_c) > tolerance){
-			cam_wd_c += (cam_wd - cam_wd_c) * rate;
-			
-			zooming = true;
-		}else {
-			cam_wd_c = cam_wd;
-		}
-		
-		if(abs(cam_hg - cam_hg_c) > tolerance){
-			cam_hg_c += (cam_hg - cam_hg_c) * rate;
-			
-			zooming = true;
-		}else {
-			cam_hg_c = cam_hg;
-		}
-		
-		if(abs(x - vfx) > tolerance){		
-			x += (vfx - x) * rate;
-			
-			zooming = true;
-		}else {
-			x = vfx;
-			
-		}
-		
-		if(abs(y - vfy) > tolerance){			
-			y += (vfy - y) * rate;
-			
-			zooming = true;
-		}else {
-			y = vfy;
-			
-		}
-		
-		if(zooming == false){			
-			zoomed  = false;
-		}
-	}else {
-		zooming = false;
-		
-		if(abs(cam_wd_z - cam_wd_c) > tolerance){
-			cam_wd_c -= (cam_wd_c - cam_wd_z) * rate;
-			
-			zooming = true;
-		}else {
-			cam_wd_c = cam_wd_z;
-		}
-		
-		if(abs(cam_hg_z - cam_hg_c) > tolerance){
-			cam_hg_c -= (cam_hg_c - cam_hg_z) * rate;
-			
-			zooming = true;
-		}else {
-			cam_hg_c = cam_hg_z;
-		}
-		
-		if(abs(x - global.body.phy_position_x) > tolerance){		
-			x += (global.body.phy_position_x - x) * rate;
-			
-			zooming = true;
-		}else {
-			x = global.body.phy_position_x;
-			
-		}
-		
-		if(abs(y - global.body.phy_position_y) > tolerance){			
-			y += (global.body.phy_position_y - y) * rate;
-			
-			zooming = true;
-		}else {
-			y = global.body.phy_position_y;
-			
-		}
-		
-		if(zooming == false){
-			zoomed = true;
-		}
+//Target
+if(room == rm_level){
+	if(target == noone){
+		cam_x_t = (0.5 + global.current_column) * global.roomwd;
+		cam_y_t = (0.5 + global.current_row)    * global.roomhg - 16;
+	}else if(instance_exists(target)){
+		cam_x_t = target.x;
+		cam_y_t = target.y;
 	}
+}
+
+if room == rm_CH_boss {
+	cam_x_t = room_width div 2;
+	cam_y_t = global.body.y;
+}
+
+if room == rm_dead{
+    instance_destroy();
+}
+
+//Movement State
+switch m_state {
+	case 0: //Stopped
+		if(cam_x_t != x || cam_y_t != y){
+			m_state = 1;
+			
+			global.shake = 0;
+			
+		}else if(global.shake != 0){
+			m_state = 2;
+			
+		}
+	break;
 	
-	camera_set_view_size(view_camera[0],cam_wd_c,cam_hg_c);
-	camera_set_view_border(view_camera[0],cam_wd_c div 2, cam_hg_c div 2);
+	case 1: //Move
+		if(abs(cam_x_t - x) < 0.5 && abs(cam_y_t - y) < 0.5){
+			x = cam_x_t;
+			y = cam_y_t;
+			
+			cam_x_c = x;
+			cam_y_c = y;
+			
+			m_state = 0;
+		}
+	break;
+	
+	case 2: //Shake
+		if(global.shake == 0){
+			m_state = 0;
+		}
+	break;
 }

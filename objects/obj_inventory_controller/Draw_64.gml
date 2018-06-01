@@ -1,5 +1,5 @@
 if(room == rm_level || room == rm_lvl_editor_test){
-	if obj_ig_menu_controller.state == "status" and visible{
+	if obj_ig_menu_controller.state == "inv" {
 		
 		if(selected == -1){
 			text = "Drop";
@@ -30,9 +30,6 @@ if(room == rm_level || room == rm_lvl_editor_test){
 			scr_boxed_text(mx,my,string_width(text),string_height(text),
 			               c_aqua, c_white, m, font_chsl_tags, text);
 		}
-		
-	}else if obj_ig_menu_controller.state == "closed" {
-		
 		
 	}
 }

@@ -26,9 +26,15 @@ if(obj_ig_menu_controller.state == "closed"){
 		alarm[1] = 0.3 * room_speed;
 	}
 	
-	inv_x = -inv_wd * r;
+	inv_x   = -inv_wd * r;
+
+	///Quick Access
+	qa_x    = inv_x + (inv_wd / 2 - qa_wd / 2) * r;
+
+	///Stats & Equipment
+	equip_x = c * 2 - inv_x - inv_wd * r;
 	
-}else if(obj_ig_menu_controller.state == "status"){
+}else if(obj_ig_menu_controller.state == "inv"){
 	mx = device_mouse_x_to_gui(0);
 	my = device_mouse_y_to_gui(0);
 	
@@ -233,7 +239,7 @@ if(obj_ig_menu_controller.state == "closed"){
 			}
 		}
 	}else {
-		inv_x = scr_approach(inv_x,0,8*r);
+		inv_x   = scr_approach(inv_x,0,8*r);
 
 		///Quick Access
 		qa_x    = inv_x + (inv_wd / 2 - qa_wd / 2) * r;

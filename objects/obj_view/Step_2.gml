@@ -1,38 +1,22 @@
-switch room {
-	case rm_level:
-		if global.shake > 0 and stopped	{
-			x = ox + random_range(-global.shake,global.shake);
-			y = oy + random_range(-global.shake,global.shake);
+switch m_state {
+	case 0: //Stopped
+	case 1: //Move
+		//Zoom
+		if(abs(zoom - t_zoom) > 0.01){
+			zoom   = scr_approach(zoom,t_zoom,m_spd);
+			cam_wd = cam_wd_o / zoom;
+			cam_hg = cam_hg_o / zoom;
+		}else {
+			zoom   = t_zoom;
+			cam_wd = cam_wd_o / zoom;
+			cam_hg = cam_hg_o / zoom;
+		}		
+	break;
 	
-		}
-		
+	case 2: //Shake		
 		global.shake *= 0.9;
 	break;
-	case rm_CH_boss:
-		if global.shake > 0.1 {
-			x = ox + random_range(-global.shake,global.shake);
-			y = oy + random_range(-global.shake,global.shake);
-			show_debug_message(global.shake);
-			
-		}else {
-			x = room_width div 2;
-			y = global.body.phy_position_y;
-			ox = x;
-			oy = y;
-			global.shake = 0;
-			
-		}
-		
-		global.shake = global.shake * 0.6;
-		view_xport[0] = x - camera_get_view_width(view_camera[0])/2 - 40;
-		
-	break;
 }
-
-if(not zooming and not zoomed and obj_ig_menu_controller.state == "status"){
-	zooming = true;
-}
-
-if(not zooming and zoomed and obj_ig_menu_controller.state != "status"){
-	zooming = true;
-}
+camera_set_view_pos(   view_camera[0], x - cam_wd / 2, y - cam_hg / 2);
+camera_set_view_size(  view_camera[0],           cam_wd,           cam_hg);
+camera_set_view_border(view_camera[0],     cam_wd / 2,     cam_hg / 2);

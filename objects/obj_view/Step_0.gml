@@ -1,49 +1,22 @@
-if(room == rm_level){
-	if(!global.dead){
-		if(not zooming and not zoomed){
-			if(x == vfx and y == vfy and not stopped){
+switch m_state {
+	case 0: //Stopped
+
+	break;
 	
-				ox = vfx;
-				oy = vfy;
+	case 1: //Move
+		x += (cam_x_t - x) * m_spd;
+		y += (cam_y_t - y) * m_spd;
+	break;
 	
-				stopped = true;
-	
-			}else if((x != vfx or y != vfy) and stopped){
-				stopped = false;
-				global.shake = 0;
-	
-				if ox != 0 and oy != 0{
-					x = ox;
-					y = oy;
-		
-					ox = 0;
-					oy = 0;
-				}
-		
-			}
-	
-			if(not stopped){
-				x = scr_approach(x,vfx,16);
-				y = scr_approach(y,vfy,16);
-			}
-		}
-	}else {
-		if(x != global.body.phy_position_x || y != global.body.phy_position_y){
-			x = scr_approach(x,global.body.phy_position_x,8);
-			y = scr_approach(y,global.body.phy_position_y,8);
-		}else {
-			screen_save(working_directory + "death.png");
-			room_goto(rm_menu_1);
-		}		
-	}
+	case 2: //Shake
+		cam_x_s = cam_x_c + random_range(-global.shake,global.shake);
+		cam_y_s = cam_y_c + random_range(-global.shake,global.shake);
+			
+		x = scr_approach(x, cam_x_s, 8);
+		y = scr_approach(y, cam_y_s, 8);
+	break;
 }
 
-if room == rm_CH_boss {
-	speed = 0;
-	stopped = true;
-
-}
-
-if room == rm_dead{
-    instance_destroy();
-}
+//FIX ME
+//screen_save(working_directory + "death.png");
+//room_goto(rm_menu_1);

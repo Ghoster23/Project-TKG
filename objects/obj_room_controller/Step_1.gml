@@ -72,7 +72,7 @@ switch state {
 	case 3: //New Room
 		/* Add enemies to active enemy list */
 		/*        Clear fluid surface       */
-		if((room == rm_level and obj_view.stopped) || 
+		if((room == rm_level and obj_view.m_state == 0) || 
 		   (room == rm_test) || 
 		   (room == rm_lvl_editor_test)){
 			
