@@ -1,14 +1,15 @@
-scr_get_input();
+mx = device_mouse_x_to_gui(0);
+my = device_mouse_y_to_gui(0);
 
 if(obj_ig_menu_controller.state == "closed"){
-	if(consumable_key && alarm[1] == -1 && inventory[# 0, consumable] != -1){
+	if(global.key_active[key_id.consume] && alarm[1] == -1 && inventory[# 0, consumable] != -1){
 		scr_inv_consume(consumable);
 		
 		alarm[1] = 0.3 * room_speed;
 	}
 	
 	
-	if(tool_key && alarm[1] == -1){
+	if(global.key_active[key_id.utilize] && alarm[1] == -1){
 		var type   = inventory[# 0, tool_slot];
 		var wep    = inventory[# 1, tool_slot];
 		var amount = inventory[# 2, tool_slot]; 
@@ -34,16 +35,13 @@ if(obj_ig_menu_controller.state == "closed"){
 	///Stats & Equipment
 	equip_x = c * 2 - inv_x - inv_wd * r;
 	
-}else if(obj_ig_menu_controller.state == "inv"){
-	mx = device_mouse_x_to_gui(0);
-	my = device_mouse_y_to_gui(0);
-	
+}else if(obj_ig_menu_controller.state == "inv"){	
 	gui_WD = display_get_gui_width();
 	gui_HG = display_get_gui_height();
 	
 	if(inv_x == 0){
 		//UP
-		if(up_key || a_up){
+		if(global.key_active[key_id.up] || global.key_active[key_id.m_up]){
 			if(selected < 9){
 				if(selected div 3 > 0){
 					selected -= 3;
@@ -58,7 +56,7 @@ if(obj_ig_menu_controller.state == "closed"){
 		}
 	
 		//RIGHT
-		if(right_key || a_right){
+		if(global.key_active[key_id.right] || global.key_active[key_id.m_right]){
 			if(selected < 9){
 				if(selected mod 3 < 2){
 					selected++;
@@ -75,7 +73,7 @@ if(obj_ig_menu_controller.state == "closed"){
 		}
 	
 		//DOWN
-		if(down_key || a_down){
+		if(global.key_active[key_id.down] || global.key_active[key_id.m_down]){
 			if(selected < 9){
 				if(selected div 3 < 2){
 					selected += 3;
@@ -90,7 +88,7 @@ if(obj_ig_menu_controller.state == "closed"){
 		}
 	
 		//LEFT
-		if(left_key || a_left){
+		if(global.key_active[key_id.left] || global.key_active[key_id.m_left]){
 			if(selected < 9){
 				if(selected mod 3 > 0){
 					selected--;
@@ -173,7 +171,7 @@ if(obj_ig_menu_controller.state == "closed"){
 			prev_my = my;
 		}
 	
-		if((mouse_click || enter_key) && 
+		if((global.key_active[key_id.m_click] || global.key_active[key_id.m_confirm]) && 
 			not click){
 			click = true;
 		

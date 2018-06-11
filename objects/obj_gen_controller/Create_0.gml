@@ -1,13 +1,12 @@
 scr_unique_inst();
-global.gen = true;
-once       = false;
+once = false;
 
 //Gen Cursor
-gx = room_width/2;
-gy = room_height/2;
+gx = room_width  / 2;
+gy = room_height / 2;
 
 //Gen Count
-roomgenerated = 0;
+roomgenerated   = 0;
 roomstogenerate = 16;
 
 global.ds_roomgrid = ds_grid_create(4,64);

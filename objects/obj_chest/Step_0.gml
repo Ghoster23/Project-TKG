@@ -1,5 +1,3 @@
-scr_get_input();
-
 scr_interactable_step();
 
 if(interacted and image_index == 0){

@@ -31,11 +31,11 @@ if(not global.pause and booted and owner != noone and instance_exists(owner)){
 		break;
 		
 		default:
-			part = null;
+			part = "NULL";
 		break;
 	}
 	
-	if(part != null){
+	if(part != "NULL"){
 		var xx = irandom_range(x,x+width);
 		var yy = irandom_range(y,y+height);
 		

@@ -6,12 +6,6 @@ global.ps    = part_system_create_layer("BH",false);
 global.ps_if = part_system_create_layer("IF",false);
 global.ps_ps = part_system_create_layer("PS",false);
 
-if(room >= rm_level){
-	part_system_automatic_draw(global.ps,    false);
-	part_system_automatic_draw(global.ps_if, false);
-	part_system_automatic_draw(global.ps_ps, false);
-}
-
 scr_part_fire_init();
 scr_part_blue_fire_init();
 scr_part_smoke_init();

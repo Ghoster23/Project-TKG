@@ -1,3 +1,3 @@
-if(step_event != null){
+if(step_event != "NULL"){
 	script_execute(step_event);
 }

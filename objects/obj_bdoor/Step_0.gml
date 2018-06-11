@@ -1,5 +1,3 @@
-scr_get_input();
-
 while(confirm == false){
 
     global.broomt = 3;
@@ -28,7 +26,7 @@ if(image_index >= 6){
     with(global.body){
         instance_destroy();
     }
-    with(obj_gui){
+    with(obj_player_hud){
         instance_destroy();
     }
     

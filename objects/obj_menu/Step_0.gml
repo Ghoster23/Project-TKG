@@ -1,6 +1,3 @@
-scr_get_input();
-
-
 switch state{
 
 	case "play":
@@ -11,18 +8,18 @@ switch state{
 			obj_pointer.x=303;
 			obj_pointer.y=267;
 		}
-		if (mouse_click and point_in_rectangle(mouse_x,mouse_y,305,258,342,275)) or enter_key{
-			obj_tittleart.fade=true;
-			obj_whiteout.fade="out";
+		if scr_GUI_button(305,258,342-305,275-258) or global.key_active[key_id.m_confirm]{
+			obj_tittleart.fade = true;
+			obj_whiteout.fade  = "out";
 			alarm[0]=room_speed*1.5;
 		}
-		if a_down{
+		if global.key_active[key_id.m_down]{
 			state="options";
 		}
-		if a_up{
+		if global.key_active[key_id.m_up]{
 			state="quit";
 		}
-		break;
+	break;
 	
 	case "options":
 		if !instance_exists(obj_pointer){
@@ -32,16 +29,16 @@ switch state{
 			obj_pointer.x=291;
 			obj_pointer.y=298;
 		}
-		if (mouse_click and point_in_rectangle(mouse_x,mouse_y,294,289,354,306)) or enter_key{
+		if scr_GUI_button(294,289,354-294,306-289) or global.key_active[key_id.m_confirm]{
 			alarm[1]=room_speed*0.2;
 		}
-		if a_down{
+		if global.key_active[key_id.m_down]{
 			state="quit";
 		}
-		if a_up{
+		if global.key_active[key_id.m_up]{
 			state="play";
 		}
-		break;
+	break;
 	
 	case "quit":
 		if !instance_exists(obj_pointer){
@@ -51,26 +48,26 @@ switch state{
 			obj_pointer.x=303;
 			obj_pointer.y=331;
 		}
-		if (mouse_click and point_in_rectangle(mouse_x,mouse_y,304,323,338,337)) or enter_key{
+		if scr_GUI_button(304,323,338-304,337-323) or global.key_active[key_id.m_confirm] {
 			alarm[2]=room_speed*0.2;
 		}
-		if a_down{
+		if global.key_active[key_id.m_down]{
 			state="play";
 		}
-		if a_up{
+		if global.key_active[key_id.m_up]{
 			state="options";
 		}
-		break;
+	break;
 
 }
 
 
-if point_in_rectangle(mouse_x,mouse_y,305,258,342,275){
+if scr_GUI_h_button_check(305,258,342-305,275-258) != 0{
 	state="play";
 }
-if point_in_rectangle(mouse_x,mouse_y,294,289,354,306){
+if scr_GUI_h_button_check(294,289,354-294,306-289) != 0{
 	state="options";
 }
-if point_in_rectangle(mouse_x,mouse_y,304,323,338,337){
+if scr_GUI_h_button_check(304,323,338-304,337-323) != 0{
 	state="quit";
 }

@@ -1,42 +1,38 @@
 application_surface_draw_enable(false);
 
 if(window_get_fullscreen()){
-	if(room == rm_level || room == rm_CH_boss){		
-		var i = round(global.MonitorW / global.roomwd);
-		global.ratio = i;
+	s_wd = global.MonitorW;
+	s_hg = global.MonitorH;
 	
-		surface_resize( application_surface, global.roomwd * i, global.roomhg * i);
-
-		global.Xoffset = (global.MonitorW - global.roomwd * i) / 2;
-		global.Yoffset = (global.MonitorH - global.roomhg * i) / 2;
-		
-	}else {
-		var i = global.MonitorW / room_width;
-		global.ratio = i;
-	
-		surface_resize(application_surface,room_width * i,room_height * i);
-
-		global.Xoffset = (global.MonitorW - (room_width )*i)/2;
-		global.Yoffset = (global.MonitorH - (room_height)*i)/2;
-	}
-}else {
-	if(room == rm_level || room == rm_CH_boss){
-		var i = round(global.MonitorW / global.roomwd);
-		global.ratio = i;
-	
-		surface_resize( application_surface, global.roomwd * i, global.roomhg * i);
-
-		global.Xoffset = (global.MonitorW - global.roomwd * i) / 2;
-		global.Yoffset = (global.MonitorH - global.roomhg * i) / 2;
-		
-	}else {		
-		var i = global.MonitorW / room_width;
-		global.ratio = i;
-	
-		surface_resize(application_surface,room_width * i,room_height * i);
-
-		global.Xoffset = (global.MonitorW - (room_width )*i)/2;
-		global.Yoffset = (global.MonitorH - (room_height)*i)/2;
-		
-	}
+}else {	
+	s_wd = global.WindowW;
+	s_hg = global.WindowH;
 }
+
+switch room {
+	case rm_level:
+	case rm_lvl_editor_test:
+	case rm_CH_boss:
+		wd = lvl_view_wd;
+		hg = lvl_view_hg;
+		
+		global.ratio = round(s_hg/hg);
+	break;
+	
+	default:
+		wd = room_width;
+		hg = room_height;
+		
+		global.ratio = s_hg/hg;
+	break;
+}
+
+show_debug_message(room_get_name(room) + " ratio: " + string(global.ratio));
+
+var sc_wd = wd * global.ratio;
+var sc_hg = hg * global.ratio;
+
+surface_resize(application_surface, sc_wd, sc_hg);
+
+global.Xoffset = (s_wd - sc_wd)/2;
+global.Yoffset = (s_hg - sc_hg)/2;

@@ -1,11 +1,5 @@
 scr_unique_inst();
 
-image_speed = 0;
-
-o_v = -1;
-
-n_potion = false;
-
 //Status sprites
 status_spr[statuses.poison]  = spr_status_poisoned;
 status_spr[statuses.regen]   = spr_status_regen;

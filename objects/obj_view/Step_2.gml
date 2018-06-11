@@ -18,5 +18,5 @@ switch m_state {
 	break;
 }
 camera_set_view_pos(   view_camera[0], x - cam_wd / 2, y - cam_hg / 2);
-camera_set_view_size(  view_camera[0],           cam_wd,           cam_hg);
+camera_set_view_size(  view_camera[0],         cam_wd,         cam_hg);
 camera_set_view_border(view_camera[0],     cam_wd / 2,     cam_hg / 2);

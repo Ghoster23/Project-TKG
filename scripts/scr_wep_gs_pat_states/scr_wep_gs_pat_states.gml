@@ -3,7 +3,7 @@ switch wep_pat_state {
 		wep_ang_off =  wep_ang_base;
 		angle       +=  wep_ang_off;
 		
-		if(attack_key){
+		if(global.key_active[key_id.skill_1]){
 			
 			simple_attack = false;
 			chargeup      = false;
@@ -13,7 +13,7 @@ switch wep_pat_state {
 			wep_pat_state  = 2; //Go to windup
 			wep_ang_target = wep_ang_off + wep_ang_windup;
 			
-		}else if(mouse_r_key){
+		}else if(global.key_active[key_id.skill_2]){
 			
 			simple_attack = false;
 			chargeup      = false;
@@ -29,7 +29,7 @@ switch wep_pat_state {
 		wep_ang_off =  -wep_ang_swing;
 		angle       +=    wep_ang_off;
 		
-		if(attack_key){
+		if(global.key_active[key_id.skill_1]){
 			
 			simple_attack = false;
 			chargeup      = false;
@@ -39,7 +39,7 @@ switch wep_pat_state {
 			wep_pat_state  = 3; //Go to windup
 			wep_ang_target = wep_ang_off - wep_ang_windup;
 			
-		}else if(mouse_r_key){
+		}else if(global.key_active[key_id.skill_2]){
 			
 			simple_attack = false;
 			chargeup      = false;
@@ -56,7 +56,7 @@ switch wep_pat_state {
 	case 2: //Normal - charging
 		angle += wep_ang_off;
 		
-		if(attack_key_release){
+		if(!global.key_active[key_id.skill_1]){
 			simple_attack = true;
 		}
 			
@@ -83,7 +83,7 @@ switch wep_pat_state {
 	case 3: //Inverted - charging
 		angle += wep_ang_off;
 		
-		if(attack_key_release){
+		if(!global.key_active[key_id.skill_1]){
 			simple_attack = true;
 		}
 		
@@ -128,7 +128,7 @@ switch wep_pat_state {
 		
 	break;
 	case 6: //Align
-		if(mouse_r_key_release){
+		if(!global.key_active[key_id.skill_2]){
 			simple_attack = true;
 		}
 	

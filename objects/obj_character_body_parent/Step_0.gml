@@ -54,6 +54,6 @@ if(not global.pause){
 	
 }else {
 	//Start Pause
-	scr_pause_start(3);
+	scr_pause_start(5);
 	
 }

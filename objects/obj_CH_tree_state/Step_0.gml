@@ -1,5 +1,3 @@
-scr_get_input();
-
 if not global.pause {
 	s_x = s_x + ss_x*5;
 

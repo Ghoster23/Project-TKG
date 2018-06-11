@@ -1,6 +1,4 @@
 if not global.pause {
-	scr_get_input();
-	
 	scr_pause_end(alarm_count);
 	
 	if prev_image_speed != 0{

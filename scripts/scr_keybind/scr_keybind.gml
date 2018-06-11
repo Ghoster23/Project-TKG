@@ -8,57 +8,57 @@ else if argument0 == "mouse"{
 switch state{
 
 	case "up_key":
-		global.up_key_bind=newkey;
+		global.key_binds[key_id.up]=newkey;
 		break;
 	
 	case "left_key":
-		global.left_key_bind=newkey;
+		global.key_binds[key_id.left]=newkey;
 		break;
 		
 	case "down_key":
-		global.down_key_bind=newkey;
+		global.key_binds[key_id.down]=newkey;
 		break;
 		
 	case "right_key":
-		global.right_key_bind=newkey;
+		global.key_binds[key_id.right]=newkey;
 		break;
 		
 	case "attack_key":
-		global.attack_key_bind=newkey;
+		global.key_binds[key_id.skill_1]=newkey;
 		break;
 		
 	case "mouse_r":
-		global.mouse_r_key_bind=newkey;
+		global.key_binds[key_id.skill_2]=newkey;
 		break;
 		
 	case "dash_key":
-		global.dash_key_bind=newkey;
+		global.key_binds[key_id.dash]=newkey;
 		break;
 	
 	//--------------------------//RIGHT//--------------------------//
 	
 	case "interact_key":
-		global.interact_key_bind=newkey;
+		global.key_binds[key_id.interact]=newkey;
 		break;
 		
 	case "consumable_key":
-		global.consumable_key_bind=newkey;
+		global.key_binds[key_id.consume]=newkey;
 		break;
 		
 	case "mmap_key":
-		global.mmap_key_bind=newkey;
+		global.key_binds[key_id.map]=newkey;
 		break;
 		
 	case "os_mmap_key":
-		global.os_mmap_key_bind=newkey;
+		global.key_binds[key_id.mmap]=newkey;
 		break;
 		
 	case "enter_key":
-		global.enter_key_bind=newkey;
+		global.key_binds[key_id.m_confirm]=newkey;
 		break;
 		
 	case "menu_key":
-		global.menu_key_bind=newkey;
+		global.key_binds[key_id.menu]=newkey;
 		break;
 }
 

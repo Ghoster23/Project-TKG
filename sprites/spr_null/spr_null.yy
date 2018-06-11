@@ -2,7 +2,7 @@
     "id": "86fba45c-ae2d-4082-a861-e78d39c2933a",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "null",
+    "name": "spr_null",
     "For3D": false,
     "HTile": false,
     "VTile": false,
@@ -13,6 +13,7 @@
     "bboxmode": 0,
     "colkind": 1,
     "coltolerance": 0,
+    "edgeFiltering": false,
     "frames": [
         {
             "id": "1223b706-c0f9-439b-9b59-e1d5f036b03c",
@@ -54,6 +55,7 @@
         }
     ],
     "origin": 0,
+    "originLocked": false,
     "playbackSpeed": 1,
     "playbackSpeedType": 1,
     "premultiplyAlpha": false,

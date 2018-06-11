@@ -2,8 +2,8 @@
 hands  = instance_create_layer(x,  y,layer,    obj_hands);
 hands.sprite_index = hands_spr;
 
-feet   = instance_create_layer(x,  y,layer,     obj_feet);
-feet.sprite_index  = feet_spr;
+feet = instance_create_layer(x, y, layer, obj_feet);
+feet.sprite_index = feet_spr;
 
 voice =noone;
 
@@ -18,12 +18,9 @@ phy_fixed_rotation = true;
 solid              = false;
 
 //Pause
-prev_image_speed = 0;
 prev_rotation    = 0;
+scr_pausable_init(5);
 
-for(var i = 0; i < alarm_count; i++){
-	alarms[i] = -1;
-}
 
 //Got damaged
 flash     = false;
@@ -75,8 +72,6 @@ state        = 4;
 prev_state   = 0;
 state_change = false;
 prev_hp      = stat[stats.hp];
-
-scr_get_input();
 
 //Movement
 hspd  = 0;

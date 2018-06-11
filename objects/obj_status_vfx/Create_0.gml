@@ -1,6 +1,6 @@
 owner  = noone;
-status = null;
-part   = null;
+status = "NULL";
+part   = "NULL";
 
 width  = 0;
 height = 0;

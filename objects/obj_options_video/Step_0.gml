@@ -1,9 +1,5 @@
-scr_get_input();
-
-//show_debug_message("x "+string(mousex));
-//show_debug_message("y "+string(mousey));
-
-if menu_key or (point_in_rectangle(mousex,mousey,c-17*m,particles_y1+particles_height+18*m,c+17*m,particles_y1+particles_height+28*m) and mouse_click){
+if(global.key_active[key_id.menu] or 
+	scr_GUI_button(c-17*m,c+17*m,particles_width+20*m,particles_height+30*m)){
 	instance_create_layer(x,y,layer,obj_options_controller);
 	instance_destroy();
 }
@@ -11,19 +7,19 @@ if menu_key or (point_in_rectangle(mousex,mousey,c-17*m,particles_y1+particles_h
 switch state{
 
 	case "fullscreen":
-		if a_left or a_right or enter_key { 
+		if global.key_active[key_id.m_left] or global.key_active[key_id.m_right] or global.key_active[key_id.m_confirm] { 
 			event_perform(ev_alarm,0);
 		}
-		if a_down                         {
+		if global.key_active[key_id.m_down]                         {
 			state = "screenshake";
 		}
-		if a_up                           {
+		if global.key_active[key_id.m_up]                           {
 			state = "particles";
 		}
 		break;
 	
 	case "screenshake":
-		if a_left {
+		if global.key_active[key_id.m_left] {
 			switch global.screenshake {
 				case "none":
 					global.screenshake = "high";
@@ -42,19 +38,19 @@ switch state{
 				break;
 			}
 		}
-		if a_right or enter_key {
+		if global.key_active[key_id.m_right] or global.key_active[key_id.m_confirm] {
 			event_perform(ev_alarm,1);
 		}
-		if a_down               {
+		if global.key_active[key_id.m_down]               {
 			state="textscroll";
 		}
-		if a_up                 {
+		if global.key_active[key_id.m_up]                 {
 			state="fullscreen";
 		}
 		break;
 	
 	case "textscroll":
-		if a_left {
+		if global.key_active[key_id.m_left] {
 			switch global.textscroll {
 				case "low":
 					global.textscroll = "high";
@@ -69,19 +65,19 @@ switch state{
 				break;
 			}
 		}
-		if a_right or enter_key {
+		if global.key_active[key_id.m_right] or global.key_active[key_id.m_confirm] {
 			event_perform(ev_alarm,2);
 		}
-		if a_down {
+		if global.key_active[key_id.m_down] {
 			state = "particles";
 		}
-		if a_up {
+		if global.key_active[key_id.m_up] {
 			state = "screenshake";
 		}
 		break;
 	
 	case "particles":
-		if a_left {
+		if global.key_active[key_id.m_left] {
 			switch global.particles {
 				case "none":
 					global.particles = "normal";
@@ -96,40 +92,46 @@ switch state{
 				break;
 			}
 		}
-		if a_right or enter_key {
+		if global.key_active[key_id.m_right] or global.key_active[key_id.m_confirm] {
 			event_perform(ev_alarm,3);
 		}
-		if a_down {
+		if global.key_active[key_id.m_down] {
 			state = "fullscreen";
 		}
-		if a_up   {
+		if global.key_active[key_id.m_up]   {
 			state = "textscroll";
 		}
 		break;
 }
 
-
-if point_in_rectangle(mousex,mousey,fullscreen_x1,fullscreen_y1,fullscreen_x2,fullscreen_y2+12*m){
+var fls = scr_GUI_h_button_check(fullscreen_x1,fullscreen_y1,fullscreen_width,fullscreen_height+12*m);
+if fls {
 	state = "fullscreen";
-	if mouse_click {
+	if fls == 1 {
 		alarm[0] = room_speed*0.1;
 	}
 }
-if point_in_rectangle(mousex,mousey,screenshake_x1,screenshake_y1,screenshake_x2,screenshake_y2+12*m){
+
+var ss = scr_GUI_h_button_check(screenshake_x1,screenshake_y1,screenshake_width,screenshake_height+12*m);
+if ss {
 	state = "screenshake";
-	if mouse_click {
+	if ss == 1 {
 		alarm[1] = room_speed*0.1;
 	}
 }
-if point_in_rectangle(mousex,mousey,textscroll_x1,textscroll_y1,textscroll_x2,textscroll_y2+12*m){
+
+var ts = scr_GUI_h_button_check(textscroll_x1,textscroll_y1,textscroll_width,textscroll_height+12*m);
+if ts {
 	state = "textscroll";
-	if mouse_click {
+	if ts {
 		alarm[2] = room_speed*0.1;
 	}
 }
-if point_in_rectangle(mousex,mousey,particles_x1,particles_y1,particles_x2,particles_y2+12*m){
+
+var pt = scr_GUI_h_button_check(particles_x1,particles_y1,particles_width,particles_height+12*m);
+if pt {
 	state = "particles";
-	if mouse_click {
+	if pt == 1 {
 		alarm[3] = room_speed*0.1;
 	}
 }

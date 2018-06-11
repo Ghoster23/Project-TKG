@@ -9,8 +9,7 @@
         "f4e7eb32-cdf5-4581-96b5-4c6d62802b88",
         "613e4e81-afd2-4826-8946-4b818adb23f1",
         "8188808b-0144-4fc6-a469-25fb85727731",
-        "dea6b4e8-ea48-4296-b2da-3a4644af557c",
-        "c04a1acd-1ee4-43b2-9c49-aee8211ff447"
+        "dea6b4e8-ea48-4296-b2da-3a4644af557c"
     ],
     "filterType": "GMObject",
     "folderName": "Level",

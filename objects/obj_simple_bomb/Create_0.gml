@@ -7,7 +7,7 @@ image_speed=0;
 phy_fixed_rotation=true;
 image_speed=0;
 alarm[0]=room_speed*1.5;
-event_perform(ev_alarm,1); //bomb delay currently null
+event_perform(ev_alarm,1); //bomb delay currently "NULL"
 
 prev_image_speed = 0;
 prev_rotation = 0;

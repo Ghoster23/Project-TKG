@@ -10,20 +10,20 @@ switch wep_pat_state {
 			image_index = 0;
 		}
 		
-		if(attack_key){
+		if(global.key_active[key_id.skill_1]){
 			wep_pat_state = 1; //Go to Charging
 			
 			chargeup    = false;
 			progressbar = scr_create_charge_up(x,y,wep_pat_charge_time,self);
 			
-		}else if(mouse_r_key){
+		}else if(global.key_active[key_id.skill_2]){
 			wep_pat_state = 2; //Go to Charging
 			
 		}
 		
 	break;
 	case 1: //Charging left-click
-		if(not attack_key){
+		if(not global.key_active[key_id.skill_1]){
 			instance_destroy(progressbar);
 				
 			if(image_index == 1){
@@ -45,7 +45,7 @@ switch wep_pat_state {
 		}
 	break;
 	case 2: //Charging right-click
-		if(mouse_r_key){
+		if(global.key_active[key_id.skill_2]){
 			if(global.p_LVB_water > 0){
 				wep_pat_state = 4; //Go to Water gun
 				
@@ -93,25 +93,26 @@ switch wep_pat_state {
 			
 	break;
 	case 4: //Throw water
-		if(mouse_r_key and global.p_LVB_water > 0){
+		if(global.key_active[key_id.skill_2] and global.p_LVB_water > 0){
 			global.p_LVB_water -= 1;
 			
-			if(global.p_LVB_water mod 2 == 0){
-				var xx  = x + lengthdir_x(40,angle);
-				var yy  = y + lengthdir_y(40,angle);
-				var rad = -degtorad(angle);
+			var xx  = x + lengthdir_x(40,angle);
+			var yy  = y + lengthdir_y(40,angle);
+			var rad = -degtorad(angle);
 			
-				if(global.p_LVB_water mod 4 == 0){
-					var water_ball = instance_create_layer(xx,yy,"IF",obj_water_gun_bullet);
-				}else {
-					var water_ball = instance_create_layer(xx,yy,"IF",obj_water_gun_fake_bullet);
-				}
-				
-				water_ball.prev_bullet = prev_ball;
-				water_ball.dir = rad;
-				water_ball.spd = 20;
-				prev_ball = water_ball;
+			if(global.p_LVB_water mod 2 == 0){
+				var water_ball = instance_create_layer(xx,yy,"IF",obj_water_gun_bullet);
+			}else {
+				var water_ball = instance_create_layer(xx,yy,"IF",obj_water_gun_fake_bullet);
 			}
+				
+			if(instance_exists(prev_ball) and abs(prev_ball.dir - rad) < pi/4){
+				water_ball.prev_bullet = prev_ball;
+			}
+				
+			water_ball.dir = rad;
+			water_ball.spd = 40;
+			prev_ball = water_ball;
 			
 		}else {
 			wep_pat_state = 0; //Go to base
@@ -121,7 +122,7 @@ switch wep_pat_state {
 		
 	break;
 	case 5: //Blocks
-		if(!attack_key){
+		if(!global.key_active[key_id.skill_1]){
 			instance_destroy(progressbar);
 			var xx  = x + lengthdir_x(24,angle);
 			var yy  = y + lengthdir_y(24,angle);

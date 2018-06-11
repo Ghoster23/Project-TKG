@@ -137,5 +137,5 @@ reset_width  = string_width_ext("Reset Controls",2,200)*m;
 reset_height = string_height_ext("Reset Controls",2,200)*m; 
 reset_x1 = c2;
 reset_y1 = (off+sep*7) * m
-reset_x2 =reset_x1 + reset_width;
-reset_y2 = reset_y1+ reset_height;
+reset_x2 = reset_x1 + reset_width;
+reset_y2 = reset_y1 + reset_height;

@@ -1,5 +1,3 @@
-scr_get_input();
-
 if(not global.pause){
 	scr_pause_end(alarm_count);
 	
@@ -19,7 +17,7 @@ if(not global.pause){
 	
 	switch(state){
 		case 0: //Drawn
-			angle = point_direction(x,y,mouse_x,mouse_y);
+			angle = point_direction(x,y,obj_cursor.ir_mx,obj_cursor.ir_my);
 			
 			sprite_index              = drawn;
 			global.body.hands.visible = false;
@@ -81,7 +79,7 @@ if(not global.pause){
 	}
 	
 	///Clear if dash
-	if(dash_key){
+	if(global.key_active[key_id.dash]){
 		part_emitter_clear(global.ps   ,em_);
 		part_emitter_clear(global.ps_ps, em);
 	}

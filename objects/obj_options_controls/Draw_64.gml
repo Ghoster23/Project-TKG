@@ -25,7 +25,7 @@ draw_text_transformed(c1, up_key_y1,"Up key",m,m,0);
 //draw_rectangle(up_key_x1,up_key_y1,up_key_x2,up_key_y2,true);
 
 if !(listen_for_key and state == "up_key"){
-	var text = scr_keyname(global.up_key_bind);
+	var text = scr_keyname(global.key_binds[key_id.up]);
 	var bx   = (string_width_ext(text,2,200)*m)/2;
 	draw_roundrect(ic1-(bx+2*m),up_key_y1,ic1+(bx+2*m),up_key_y2,false);
 	draw_set_color(c_black);
@@ -40,7 +40,7 @@ draw_text_transformed(c1, left_key_y1,"Left key",m,m,0);
 //draw_rectangle(left_key_x1,left_key_y1,left_key_x2,left_key_y2,true);
 
 if !(listen_for_key and state == "left_key"){
-	var text = scr_keyname(global.left_key_bind);
+	var text = scr_keyname(global.key_binds[key_id.left]);
 	var bx   = (string_width_ext(text,2,200)*m)/2;
 	draw_roundrect(ic1-(bx+2*m),left_key_y1,ic1+(bx+2*m),left_key_y2,false);
 	draw_set_color(c_black);
@@ -55,7 +55,7 @@ draw_text_transformed(c1, down_key_y1,"Down key",m,m,0);
 //draw_rectangle(down_key_x1,down_key_y1,down_key_x2,down_key_y2,true);
 
 if !(listen_for_key and state == "down_key"){
-	var text = scr_keyname(global.down_key_bind);
+	var text = scr_keyname(global.key_binds[key_id.down]);
 	var bx   = (string_width_ext(text,2,200)*m)/2;
 	draw_roundrect(ic1-(bx+2*m),down_key_y1,ic1+(bx+2*m),down_key_y2,false);
 	draw_set_color(c_black);
@@ -70,7 +70,7 @@ draw_text_transformed(c1, right_key_y1,"Right key",m,m,0);
 //draw_rectangle(right_key_x1,right_key_y1,right_key_x2,right_key_y2,true);
 
 if !(listen_for_key and state == "right_key"){
-	var text = scr_keyname(global.right_key_bind);
+	var text = scr_keyname(global.key_binds[key_id.right]);
 	var bx   = (string_width_ext(text,2,200)*m)/2;
 	draw_roundrect(ic1-(bx+2*m),right_key_y1,ic1+(bx+2*m),right_key_y2,false);
 	draw_set_color(c_black);
@@ -85,7 +85,7 @@ draw_text_transformed(c1, attack_key_y1,"Ability 1",m,m,0);
 //draw_rectangle(attack_key_x1,attack_key_y1,attack_key_x2,attack_key_y2,true);
 
 if !(listen_for_key and state == "attack_key"){
-	var text = scr_keyname(global.attack_key_bind);
+	var text = scr_keyname(global.key_binds[key_id.skill_1]);
 	var bx   = (string_width_ext(text,2,200)*m)/2;
 	draw_roundrect(ic1-(bx+2*m),attack_key_y1,ic1+(bx+2*m),attack_key_y2,false);
 	draw_set_color(c_black);
@@ -100,7 +100,7 @@ draw_text_transformed(c1, mouse_r_y1,"Ability 2",m,m,0);
 //draw_rectangle(mouse_r_x1,mouse_r_y1,mouse_r_x2,mouse_r_y2,true);
 
 if !(listen_for_key and state == "mouse_r"){
-	var text = scr_keyname(global.mouse_r_key_bind);
+	var text = scr_keyname(global.key_binds[key_id.skill_2]);
 	var bx   = (string_width_ext(text,2,200)*m)/2;
 	draw_roundrect(ic1-(bx+2*m),mouse_r_y1,ic1+(bx+2*m),mouse_r_y2,false);
 	draw_set_color(c_black);
@@ -115,7 +115,7 @@ draw_text_transformed(c1, dash_key_y1,"Ability 3",m,m,0);
 //draw_rectangle(dash_key_x1,dash_key_y1,dash_key_x2,dash_key_y2,true);
 
 if !(listen_for_key and state == "dash_key"){
-	var text = scr_keyname(global.dash_key_bind);
+	var text = scr_keyname(global.key_binds[key_id.dash]);
 	var bx   = (string_width_ext(text,2,200)*m)/2;
 	draw_roundrect(ic1-(bx+2*m),dash_key_y1,ic1+(bx+2*m),dash_key_y2,false);
 	draw_set_color(c_black);
@@ -131,7 +131,7 @@ draw_text_transformed(c2, interact_key_y1,"Interact key",m,m,0);
 //draw_rectangle(interact_key_x1,interact_key_y1,interact_key_x2,interact_key_y2,true);
 
 if !(listen_for_key and state == "interact_key"){
-	var text = scr_keyname(global.interact_key_bind);
+	var text = scr_keyname(global.key_binds[key_id.interact]);
 	var bx   = (string_width_ext(text,2,200)*m)/2;
 	draw_roundrect(ic2-(bx+2*m),interact_key_y1,ic2+(bx+2*m),interact_key_y2,false);
 	draw_set_color(c_black);
@@ -146,7 +146,7 @@ draw_text_transformed(c2, consumable_key_y1,"Use Item",m,m,0);
 //draw_rectangle(consumable_key_x1,consumable_key_y1,consumable_key_x2,consumable_key_y2,true);
 
 if !(listen_for_key and state == "consumable_key"){
-	var text = scr_keyname(global.consumable_key_bind);
+	var text = scr_keyname(global.key_binds[key_id.consume]);
 	var bx   = (string_width_ext(text,2,200)*m)/2;
 	draw_roundrect(ic2-(bx+2*m),consumable_key_y1,ic2+(bx+2*m),consumable_key_y2,false);
 	draw_set_color(c_black);
@@ -161,7 +161,7 @@ draw_text_transformed(c2, mmap_key_y1,"Map key",m,m,0);
 //draw_rectangle(map_key_x1,mmap_key_y1,mmap_key_x2,mmap_key_y2,true);
 
 if !(listen_for_key and state == "mmap_key"){
-	var text = scr_keyname(global.mmap_key_bind);
+	var text = scr_keyname(global.key_binds[key_id.map]);
 	var bx   = (string_width_ext(text,2,200)*m)/2;
 	draw_roundrect(ic2-(bx+2*m),mmap_key_y1,ic2+(bx+2*m),mmap_key_y2,false);
 	draw_set_color(c_black);
@@ -176,7 +176,7 @@ draw_text_transformed(c2, os_mmap_key_y1,"Minimap",m,m,0);
 //draw_rectangle(os_mmap_key_x1,os_mmap_key_y1,os_mmap_key_x2,os_mmap_key_y2,true);
 
 if !(listen_for_key and state == "os_mmap_key"){
-	var text=scr_keyname(global.os_mmap_key_bind);
+	var text=scr_keyname(global.key_binds[key_id.mmap]);
 	var bx = (string_width_ext(text,2,200)*m)/2;
 	draw_roundrect(ic2-(bx+2*m),os_mmap_key_y1,ic2+(bx+2*m),os_mmap_key_y2,false);
 	draw_set_color(c_black);
@@ -188,10 +188,10 @@ if !(listen_for_key and state == "os_mmap_key"){
 draw_set_halign(fa_left);
 draw_set_color(c_white);
 draw_text_transformed(c2, enter_key_y1,"Select",m,m,0);
-//draw_rectangle(enter_key_x1,enter_key_y1,enter_key_x2,enter_key_y2,true);
+//draw_rectangle(global.key_active[key_id.m_confirm]_x1,global.key_active[key_id.m_confirm]_y1,global.key_active[key_id.m_confirm]_x2,global.key_active[key_id.m_confirm]_y2,true);
 
 if !(listen_for_key and state == "enter_key"){
-	var text=scr_keyname(global.enter_key_bind);
+	var text=scr_keyname(global.key_binds[key_id.m_confirm]);
 	var bx = (string_width_ext(text,2,200)*m)/2;
 	draw_roundrect(ic2-(bx+2*m),enter_key_y1,ic2+(bx+2*m),enter_key_y2,false);
 	draw_set_color(c_black);
@@ -206,7 +206,7 @@ draw_text_transformed(c2, menu_key_y1,"Menu/Back",m,m,0);
 //draw_rectangle(menu_key_x1,menu_key_y1,menu_key_x2,menu_key_y2,true);
 
 if !(listen_for_key and state == "menu_key"){
-	var text=scr_keyname(global.menu_key_bind);
+	var text=scr_keyname(global.key_binds[key_id.menu]);
 	var bx = (string_width_ext(text,2,200)*m)/2;
 	draw_roundrect(ic2-(bx+2*m),menu_key_y1,ic2+(bx+2*m),menu_key_y2,false);
 	draw_set_color(c_black);

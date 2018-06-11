@@ -6,10 +6,10 @@ global.pause = false;
 
 ///Gen
 //Generation on-going
-global.gen = false;
+global.gen   = false;
 
 //Door lock
-global.lock = false;
+global.lock  = false;
 
 //Current Level
 global.level = 0;
@@ -57,6 +57,7 @@ bodies[12] = obj_body;/*Nox*/
 //Stats
 scr_char_stats();
 global.p_stats[stats.arm] = 0;
+scr_status_init();
 
 ///Rooms
 //Current Room

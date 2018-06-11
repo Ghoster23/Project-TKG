@@ -1,5 +1,3 @@
-scr_get_input();
-
 //Stats
 if(room == rm_char_select){
 	scr_char_stats();
@@ -10,8 +8,8 @@ if(room == rm_char_select){
 }
 
 ///Create GUI
-if(instance_exists(global.body) && !instance_exists(obj_gui)){
-    instance_create_layer(global.body.x-240,global.body.y-176,"IF",obj_gui);
+if(instance_exists(global.body) && !instance_exists(obj_player_hud)){
+    instance_create_layer(global.body.x-240,global.body.y-176,"IF",obj_player_hud);
 }
 
 //Physics toggling for game pausing

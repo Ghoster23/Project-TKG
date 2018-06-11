@@ -1,25 +1,23 @@
 /// @description States
-scr_get_input();
-
 if(instance_exists(obj_cursor)){
 	mousex = obj_cursor.x;
 	mousey = obj_cursor.y;
 }else {
-	mousex = mouse_x;
-	mousey = mouse_y;
+	mousex = device_mouse_x_to_gui(0);
+	mousey = device_mouse_y_to_gui(0);
 }
 
 if check == true{
 	switch state{
 		case "menu":
 			///Unpause Game and close Menu
-			if menu_key {
+			if global.key_active[key_id.menu] {
 				state = "closed";
 				check = false;
 				alarm[0] = 0.5 * room_speed;
 		
 			///Open Mini Map
-			}else if mmap_key	{
+			}else if global.key_active[key_id.mmap]{
 				state = "mmap";
 				check = false;
 				alarm[0] = 0.5 * room_speed;
@@ -29,7 +27,7 @@ if check == true{
 		break;
 		case "inv":
 			///Close Status Screen and return to Menu
-			if menu_key {
+			if global.key_active[key_id.menu] {
 				state = "menu";
 				check = false;
 				alarm[0] = 0.5 * room_speed;
@@ -37,7 +35,7 @@ if check == true{
 				obj_view.target = noone;
 				obj_view.t_zoom = 1;
 		
-			}else if inv_key {
+			}else if global.key_active[key_id.inv] {
 				state = "closed";
 				check = false;
 				alarm[0] = 0.5 * room_speed;
@@ -49,13 +47,13 @@ if check == true{
 		break;
 		case "mmap":
 			///Close Mini Map and return to Menu
-			if menu_key {
+			if global.key_active[key_id.menu] {
 				state = "menu";
 				check = false;
 				alarm[0] = 0.5 * room_speed;
 		
 			///Close Mini Map and Unpause Game	
-			}else if mmap_key	{
+			}else if global.key_active[key_id.mmap]{
 				state = "closed";
 				check = false;
 				alarm[0] = 0.5 * room_speed;
@@ -65,18 +63,18 @@ if check == true{
 		break;
 		case "closed":
 			///Pause Game and open Menu
-			if menu_key {
+			if global.key_active[key_id.menu] {
 				state = "menu";
 				check = false;
 				alarm[0] = 0.5 * room_speed;
 			
 			///Pause Game and open Mini Map
-			}else if mmap_key	{
+			}else if global.key_active[key_id.mmap]{
 				state = "mmap";
 				check = false;
 				alarm[0] = 0.5 * room_speed;
 		
-			}else if inv_key {
+			}else if global.key_active[key_id.inv] {
 				state = "inv";
 				check = false;
 				alarm[0] = 0.5 * room_speed;
@@ -97,7 +95,7 @@ if check == true{
 		break;
 		
 		case "death":
-			if menu_key {
+			if global.key_active[key_id.menu] {
 				room_goto(rm_menu_1);
 			}
 		
@@ -126,5 +124,3 @@ if state != "closed" || global.dead || state = "generation" {
 if(global.gen){
 	state = "generation";
 }
-
-inv_key = false;

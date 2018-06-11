@@ -1,8 +1,8 @@
-scr_get_input();
+var b = scr_GUI_h_button(426,232,555,259,-1,false,"",0,0);
 
-if point_in_rectangle(mouse_x,mouse_y,426,232,555,259){
+if(b){
 	image_index=1;
-	if mouse_click{
+	if(b == 1){
 		event_perform_object(obj_charselect_ctrl,ev_keypress,vk_enter);
 	}
 }

@@ -2,15 +2,25 @@ global.check++;
 global.check = global.check % 3;
 
 if(!surface_exists(global.fluid_surface)){
-	global.fluid_surface = surface_create(global.roomwd,
-	                                      global.roomhg);
+	global.fluid_surface = surface_create(fl_s_wd,
+	                                      fl_s_hg);
 }else {
 	//Draw Fluid Surface
 	outline_f_start_surface(1,global.fluid_surface,4);
-	draw_surface_ext(global.fluid_surface,
-	                 global.current_column * global.roomwd,
-					 global.current_row    * global.roomhg,
-					 1,1,0,c_white,1);		  
+	
+	switch room {
+		case rm_level:
+			draw_surface_ext(global.fluid_surface,
+							 global.current_column * global.roomwd,
+							 global.current_row    * global.roomhg,
+							 1,1,0,c_white,1);
+		break;
+		default:
+			draw_surface_ext(global.fluid_surface,
+							 0,0,1,1,0,c_white,1);
+		break;
+	}
+	
 	outline_f_end();
 	
 	//Clear Fluid Surface
@@ -60,7 +70,7 @@ if ds_exists(ds_depthgrid, ds_type_grid) {
 					shader_reset();	
 			}
 			//execute custom drawing if object has any
-			else if(draw_script != null and instanceID.visible){
+			else if(draw_script != "NULL" and instanceID.visible){
 				script_execute(draw_script);
 				
 			}
@@ -76,6 +86,8 @@ if ds_exists(ds_depthgrid, ds_type_grid) {
 	}
 	
 	ds_grid_clear(ds_depthgrid, 0);
+}else {
+	ds_depth_grid = ds_grid_create(2,1);
 }
 
 part_system_drawit(global.ps_if);

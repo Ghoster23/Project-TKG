@@ -1738,7 +1738,7 @@
             "Key": "296cdb55-286e-4d4f-a923-b5c6a01276e2",
             "Value": {
                 "id": "9026aba3-3f9f-4a31-81b2-a8b7aefb0ffe",
-                "resourcePath": "objects\\obj_gui\\obj_gui.yy",
+                "resourcePath": "objects\\obj_player_hud\\obj_player_hud.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2671,14 +2671,6 @@
             }
         },
         {
-            "Key": "432dfd92-babd-4b1e-bca4-9db76f53ab4a",
-            "Value": {
-                "id": "4f7611f5-6400-43af-8c18-6ac9d48e21df",
-                "resourcePath": "scripts\\scr_get_input\\scr_get_input.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "43483419-01b0-4024-8195-4f0f5567abfd",
             "Value": {
                 "id": "54f72b46-6125-4f74-94de-5e22f25696cc",
@@ -3228,6 +3220,14 @@
                 "id": "93d9721e-1c89-4a59-86f0-42eab9ee1fae",
                 "resourcePath": "sprites\\spr_melee_tell\\spr_melee_tell.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "4ce3fe32-8fa4-49b1-b5ef-ca4be74e27d0",
+            "Value": {
+                "id": "794b805a-f24f-4e10-b9ab-0ed87f411aa4",
+                "resourcePath": "views\\4ce3fe32-8fa4-49b1-b5ef-ca4be74e27d0.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -4583,6 +4583,14 @@
             }
         },
         {
+            "Key": "6cae2492-7903-4e80-8c54-08077d37abee",
+            "Value": {
+                "id": "f5e77b45-6f69-445a-935f-74349f6b6e77",
+                "resourcePath": "scripts\\scr_GUI_h_button\\scr_GUI_h_button.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "6cc21b18-6342-463b-9831-4a6cfd932674",
             "Value": {
                 "id": "bc88fe84-099a-41cc-82eb-188bf2458a19",
@@ -5487,6 +5495,14 @@
             }
         },
         {
+            "Key": "82592fc9-4800-4688-bf9b-3e600c240b75",
+            "Value": {
+                "id": "0dc27ae6-2cec-4884-83f5-481d12054312",
+                "resourcePath": "scripts\\scr_GUI_button\\scr_GUI_button.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "82b9987d-6f0c-40cd-b854-e9f0e0057076",
             "Value": {
                 "id": "3f6c5e5a-ba62-412a-9313-18889b9cb773",
@@ -5666,7 +5682,7 @@
             "Key": "86fba45c-ae2d-4082-a861-e78d39c2933a",
             "Value": {
                 "id": "7d74c310-b77b-4384-aaf4-c5e90cb56ef9",
-                "resourcePath": "sprites\\null\\null.yy",
+                "resourcePath": "sprites\\spr_null\\spr_null.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -5852,6 +5868,14 @@
                 "id": "264147ef-a0a7-49fb-83ed-4df2693f72a7",
                 "resourcePath": "objects\\obj_a_textbox\\obj_a_textbox.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "8cf224ca-d940-4b37-b0d0-309b0628a050",
+            "Value": {
+                "id": "c091797c-c4ad-4f3e-ae29-d77b75fa4c36",
+                "resourcePath": "views\\8cf224ca-d940-4b37-b0d0-309b0628a050.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -6411,6 +6435,14 @@
             "Value": {
                 "id": "03b3a0aa-622a-4bb9-93bb-64f31d6f8d37",
                 "resourcePath": "objects\\obj_door_parent\\obj_door_parent.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9c197b14-efcd-47db-b2e4-6d28dc1c131e",
+            "Value": {
+                "id": "b35915c9-356f-4496-8ea8-e1cf6f2ac3ed",
+                "resourcePath": "objects\\obj_input_controller\\obj_input_controller.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -8204,6 +8236,14 @@
                 "id": "b2b59358-226e-40d8-9b2d-b0cfca524e1a",
                 "resourcePath": "objects\\obj_clearroom\\obj_clearroom.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ca14b31e-c686-4a39-a355-761d6f8ee8e9",
+            "Value": {
+                "id": "c2709cf3-66f0-443a-a959-ec4a47c91d8f",
+                "resourcePath": "scripts\\scr_GUI_h_button_check\\scr_GUI_h_button_check.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -10375,6 +10415,14 @@
             }
         },
         {
+            "Key": "fcf37040-a0d5-48bc-82b9-b1c3a85e9c46",
+            "Value": {
+                "id": "24d31c48-a778-4b72-8875-2116585d3479",
+                "resourcePath": "scripts\\scr_input_init\\scr_input_init.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fd21c7a2-2489-474f-8510-c21f2a632faa",
             "Value": {
                 "id": "b6c7aad1-1474-4494-8151-48db661661a4",
@@ -10491,7 +10539,6 @@
         "063a1891-e073-4594-8f5d-a53fe1f1a34b",
         "161b4ddc-68e0-4b4a-9baa-aa45c1af3dc4",
         "ce4b4c78-19ab-49d7-9eec-273e7085983e",
-        "432dfd92-babd-4b1e-bca4-9db76f53ab4a",
         "31c00a38-d4df-4221-93d0-4bfde00c4bb4",
         "173040b3-ff00-40d4-a958-2bcc5fd3039f",
         "86544824-fe65-4aab-a4b2-b84e369c95fe",
@@ -10558,6 +10605,9 @@
         "d83ff0fb-fbd5-47e1-8937-253923692306",
         "40101a3c-310c-4564-a631-3c2778ac0abd",
         "1d738e32-c44f-4144-abb0-f7bef23b8d57",
+        "82592fc9-4800-4688-bf9b-3e600c240b75",
+        "ca14b31e-c686-4a39-a355-761d6f8ee8e9",
+        "6cae2492-7903-4e80-8c54-08077d37abee",
         "77dfd3e2-4088-4c09-9919-9ca49dd0ac52",
         "c8585593-156b-4eb9-9361-431a110ba32d",
         "2d270c68-b640-47d2-b116-34fafdf68ecc",
@@ -10580,6 +10630,7 @@
         "72e3d181-415d-4f74-bd80-f40fe80a8077",
         "c50eeba1-1fc8-4210-9e55-a0a0d1690336",
         "fced9e3c-aa7a-4197-b0fe-b4dfd12de127",
+        "fcf37040-a0d5-48bc-82b9-b1c3a85e9c46",
         "4dc79388-29f4-4bdd-b7b0-3c7116a86638",
         "ecd69029-6318-4ab9-aeea-20ae9791dce4",
         "2fef601d-cf35-4479-be0f-f2592a2b690f",

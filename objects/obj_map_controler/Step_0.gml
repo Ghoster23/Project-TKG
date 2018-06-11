@@ -1,22 +1,18 @@
-//global.map_angle-=0.2;
-
-scr_get_input();
-
-if keyboard_check_pressed(vk_enter){
+if global.key_active[key_id.m_confirm]{
 	room_goto(rm_level);
 }
 
-if(a_left || menu_left_key){
+if(global.key_active[key_id.m_left] || global.key_active[key_id.left]){
 	global.char -= 1;
 	global.char  = scr_wrap(global.char,0,11);
 }
 
-if(a_right || menu_right_key){
+if(global.key_active[key_id.m_right] || global.key_active[key_id.right]){
 	global.char += 1;
 	global.char  = scr_wrap(global.char,0,11);
 }
 
-if escape_key{
+if global.key_active[key_id.menu]{
 	room_goto_previous();
 }
 

@@ -1,6 +1,5 @@
-scr_get_input();
-
-if menu_key or (point_in_rectangle(mousex,mousey,c-17*m,controls_y1+controls_height+18*m,c+17*m,controls_y1+controls_height+28*m) and mouse_click){
+if (global.key_active[key_id.menu] or 
+	scr_GUI_button(c-17*m,c+17*m,controls_width+20*m,controls_height+30*m)){
 	instance_activate_object(obj_menu);
 	var thislayer = layer_background_get_id("buttons");
 	layer_background_visible(thislayer,true);
@@ -13,37 +12,40 @@ if menu_key or (point_in_rectangle(mousex,mousey,c-17*m,controls_y1+controls_hei
 switch state {
 
 	case "audio":
-		if (mouse_click and point_in_rectangle(mousex,mousey,audio_x1,audio_y1,audio_x2,audio_y2)) or enter_key {
+		if(scr_GUI_button(audio_x1,audio_y1,audio_width,audio_height) or 
+		global.key_active[key_id.m_confirm]){
 			alarm[0] = room_speed*0.2;
 		}
-		if a_down {
+		if global.key_active[key_id.m_down] {
 			state = "video";
 		}
-		if a_up   {
+		if global.key_active[key_id.m_up]   {
 			state = "controls";
 		}
 		break;
 	
 	case "video":
-		if (mouse_click and point_in_rectangle(mousex,mousey,video_x1,video_y1,video_x2,video_y2)) or enter_key {
+		if(scr_GUI_button(video_x1,video_y1,video_width,video_height) or 
+		global.key_active[key_id.m_confirm]){
 			alarm[1] = room_speed*0.2;
 		}
-		if a_down {
+		if global.key_active[key_id.m_down] {
 			state = "controls";
 		}
-		if a_up   {
+		if global.key_active[key_id.m_up]   {
 			state = "audio";
 		}
 		break;
 	
 	case "controls":
-		if (mouse_click and point_in_rectangle(mousex,mousey,controls_x1,controls_y1,controls_x2,controls_y2)) or enter_key {
+		if(scr_GUI_button(controls_x1,controls_y1,controls_width,controls_height) or 
+			global.key_active[key_id.m_confirm]){
 			alarm[2] = room_speed*0.2;
 		}
-		if a_down {
+		if global.key_active[key_id.m_down] {
 			state = "audio";
 		}
-		if a_up   {
+		if global.key_active[key_id.m_up]   {
 			state = "video";
 		}
 		break;
@@ -51,12 +53,12 @@ switch state {
 }
 
 
-if point_in_rectangle(mousex,mousey,audio_x1,audio_y1,audio_x2,audio_y2) {
+if scr_GUI_h_button_check(audio_x1,audio_y1,audio_x2,audio_y2) != 0{
 	state = "audio";
 }
-if point_in_rectangle(mousex,mousey,video_x1,video_y1,video_x2,video_y2) {
+if scr_GUI_h_button_check(video_x1,video_y1,video_x2,video_y2) != 0{
 	state = "video";
 }
-if point_in_rectangle(mousex,mousey,controls_x1,controls_y1,controls_x2,controls_y2) {
+if scr_GUI_h_button_check(controls_x1,controls_y1,controls_x2,controls_y2) != 0{
 	state = "controls";
 }

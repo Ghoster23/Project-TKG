@@ -1,5 +1,4 @@
 randomize();
-scr_get_input();
 event_inherited();
 
 if(not global.pause){

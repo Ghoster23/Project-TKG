@@ -13,5 +13,10 @@ if(not stuck){
 	//Move
 	phy_position_x += hspd;
 	phy_position_y += vspd;
+	
+	var inst = instance_place(phy_position_x,phy_position_y,obj_breakable_parent);
+	return inst;
 }
+
+return noone;
 }

@@ -55,8 +55,8 @@ switch global.char {
 	break;
 	
 	case 5: //Mahli Ueno
-		global.p_stats[stats.mhp] = 10;
-		global.p_stats[stats.hp]    = 10;
+		global.p_stats[stats.mhp] = 12;
+		global.p_stats[stats.hp]    = 12;
 		global.p_stats[stats.atk]   =  4;
 		global.p_stats[stats.def]   =  4;
 		global.p_stats[stats.satk]  =  4;
@@ -66,8 +66,8 @@ switch global.char {
 	break;
 	
 	case 6: //Thalia Fowler
-		global.p_stats[stats.mhp] = 18;
-		global.p_stats[stats.hp]    = 18;
+		global.p_stats[stats.mhp] = 16;
+		global.p_stats[stats.hp]    = 16;
 		global.p_stats[stats.atk]   =  1;
 		global.p_stats[stats.def]   =  3;
 		global.p_stats[stats.satk]  =  7;
@@ -121,8 +121,8 @@ switch global.char {
 	break;
 	
 	case 11: //Dorothea Alma
-		global.p_stats[stats.mhp] = 18;
-		global.p_stats[stats.hp]    = 18;
+		global.p_stats[stats.mhp] = 16;
+		global.p_stats[stats.hp]    = 16;
 		global.p_stats[stats.atk]   =  1;
 		global.p_stats[stats.def]   =  5;
 		global.p_stats[stats.satk]  =  7;

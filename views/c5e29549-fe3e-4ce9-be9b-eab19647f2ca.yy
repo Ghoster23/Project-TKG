@@ -15,7 +15,8 @@
         "4baada2d-ffcb-4b77-ac92-b4ef39ad9585",
         "df80c40e-3980-4fcd-b4c9-188149d4fc32",
         "c50eeba1-1fc8-4210-9e55-a0a0d1690336",
-        "fced9e3c-aa7a-4197-b0fe-b4dfd12de127"
+        "fced9e3c-aa7a-4197-b0fe-b4dfd12de127",
+        "4ce3fe32-8fa4-49b1-b5ef-ca4be74e27d0"
     ],
     "filterType": "GMScript",
     "folderName": "Technical Scripts",

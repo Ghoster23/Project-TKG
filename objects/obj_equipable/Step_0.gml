@@ -1,5 +1,3 @@
-scr_get_input();
-
 if(pedestal != -1 && instance_exists(pedestal)){
 	if(pedestal.interacted){
 		scr_pickup_item(type,item,amount);

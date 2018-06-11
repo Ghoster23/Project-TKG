@@ -3,7 +3,7 @@ if room == rm_level {
 	if(obj_ig_menu_controller.state == "mmap"){
 		var i = 0;
 	
-		m = display_get_gui_width() / global.roomwd;
+		m = global.ratio;
 		
 		var map_x = c  - map_wd * m / 2;
 		var map_y = c_ - map_hg * m / 2;

@@ -9,9 +9,7 @@ if(not global.pause){
 				}else {
 					angle = point_direction(x,y,mouse_x,mouse_y);
 					
-					scr_get_input();
-					
-					if(attack_key){
+					if(global.key_active[key_id.skill_1]){
 						attack = true;
 					}
 				}

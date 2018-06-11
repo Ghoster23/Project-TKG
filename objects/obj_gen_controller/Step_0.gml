@@ -23,9 +23,9 @@ if(global.gen){
 	l_size = ds_list_size(available_rooms);
 	
 	if(l_size > 0){
-		pos    = irandom(l_size - 1);
+		pos   = irandom(l_size - 1);
 	
-		room_  = ds_list_find_value(available_rooms,pos);
+		room_ = ds_list_find_value(available_rooms,pos);
 		
 		//Get grid coords
 		col = room_ mod 10;
@@ -57,12 +57,12 @@ if(global.gen){
 
 			}
 	
-			if(l == "NULL" && ds_list_find_index(available_rooms,  room_ - 1) == -1){
+			if(l == "NULL" && ds_list_find_index(available_rooms, room_ -  1) == -1){
 				ds_list_add(available_rooms,  room_ - 1);
 
 			}
 	
-			if(r == "NULL" && ds_list_find_index(available_rooms,  room_ + 1) == -1){
+			if(r == "NULL" && ds_list_find_index(available_rooms, room_ +  1) == -1){
 				ds_list_add(available_rooms,  room_ + 1);
 
 			}

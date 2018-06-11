@@ -1,14 +1,13 @@
-scr_get_input();
-
-//show_debug_message("x "+string(mousex));
-//show_debug_message("y "+string(mousey));
-
-if menu_key or (point_in_rectangle(mousex,mousey,c-17*m,creatures_y1+creatures_height+18*m,c+17*m,creatures_y1+creatures_height+28*m) and mouse_click){
+if(global.key_active[key_id.menu] or
+   scr_GUI_button(c-17*m,creatures_y1+creatures_height+18*m,c+17*m,creatures_y1+creatures_height+28*m)){
 	instance_create_layer(x,y,layer,obj_options_controller);
 	instance_destroy();
 }
 
-if mouse_click {
+mousex = obj_cursor.x;
+mousey = obj_cursor.y;
+
+if global.key_active[key_id.m_click] {
 	offx=c-63*m;
 	
 	if mousex > offx+0 and mousex <offx+7*m {
@@ -78,76 +77,76 @@ if mouse_click {
 switch state {
 
 	case "master":
-		if a_left  {
+		if global.key_active[key_id.m_left]  {
 			global.masterVolume = scr_limmit(global.masterVolume-0.2,0,2);
 		}
-		if a_right {
+		if global.key_active[key_id.m_right] {
 			global.masterVolume = scr_limmit(global.masterVolume+0.2,0,2);
 		}
-		if a_down  {
+		if global.key_active[key_id.m_up]  {
 			state = "music";
 		}
-		if a_up    {
+		if global.key_active[key_id.m_up]    {
 			state = "creatures";
 		}
 		break;
 	
 	case "music":
-		if a_left  {
+		if global.key_active[key_id.m_left]  {
 			global.musicVolume = scr_limmit(global.musicVolume-0.2,0,2);
 		}
-		if a_right {
+		if global.key_active[key_id.m_right] {
 			global.musicVolume = scr_limmit(global.musicVolume+0.2,0,2);
 		}
-		if a_down  {
+		if global.key_active[key_id.m_up]  {
 			state = "effects";
 		}
-		if a_up    {
+		if global.key_active[key_id.m_up]    {
 			state = "master";
 		}
 		break;
 	
 	case "effects":
-		if a_left  {
+		if global.key_active[key_id.m_left]  {
 			global.effectsVolume = scr_limmit(global.effectsVolume-0.2,0,2);
 		}
-		if a_right {
+		if global.key_active[key_id.m_right] {
 			global.effectsVolume = scr_limmit(global.effectsVolume+0.2,0,2);
 		}
-		if a_down  {
+		if global.key_active[key_id.m_up]  {
 			state = "ambient";
 		}
-		if a_up    {
+		if global.key_active[key_id.m_up]    {
 			state = "music";
 		}
 		break;
 	
 	case "ambient":
-		if a_left  {
+		if global.key_active[key_id.m_left]  {
 			global.ambientVolume = scr_limmit(global.ambientVolume-0.2,0,2);
 		}
-		if a_right {
+		if global.key_active[key_id.m_right] {
 			global.ambientVolume = scr_limmit(global.ambientVolume+0.2,0,2);
 		}
-		if a_down  {
+		if global.key_active[key_id.m_up]  {
 			state = "creatures";
 		}
-		if a_up    {
+		if global.key_active[key_id.m_up]    {
 			state = "effects";
 		}
 		break;
 		
 	case "creatures":
-		if a_left  {
+		if global.key_active[key_id.m_left]  {
 			global.creatureNoise = scr_limmit(global.creatureNoise-0.2,0,2);
 		}
-		if a_right {
+		if global.key_active[key_id.m_right] {
 			global.creatureNoise = scr_limmit(global.creatureNoise+0.2,0,2);
 		}
-		if a_down  {
+		if global.key_active[key_id.m_up]  {
 			state = "master";
 		}
-		if a_up    {
+		if global.key_active[key_id.m_up]    {
 			state = "ambient";
 		}
 		break;

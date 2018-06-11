@@ -8,7 +8,7 @@
         "a4b55558-0a9d-4afd-9996-ca0aaf260198"
     ],
     "filterType": "GMScript",
-    "folderName": "Luna",
+    "folderName": "Umbrella",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

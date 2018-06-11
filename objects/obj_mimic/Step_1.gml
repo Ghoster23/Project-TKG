@@ -16,7 +16,7 @@ if(not global.pause){
 				state = 1;
 				go    = true;
 				
-				draw_script = null;
+				draw_script = "NULL";
 				hidden = false;
 			}
 		break;

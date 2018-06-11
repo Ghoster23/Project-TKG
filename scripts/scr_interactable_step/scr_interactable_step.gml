@@ -3,7 +3,7 @@ if(instance_exists(global.body) and													//Player exists
 	point_distance(x+intr_x,y+intr_y,global.body.x,global.body.y) < intr_dist and   //Is within interact radius
 	not interacted){																//Hasn't been interacted
 	
-	if(interact_key){
+	if(global.key_active[key_id.interact]){
 		interacted  = true;
 	}
 	

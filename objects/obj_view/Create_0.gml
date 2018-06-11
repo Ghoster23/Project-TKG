@@ -5,6 +5,21 @@ camera = room_get_camera(room,0);
 cam_wd = camera_get_view_width(camera);
 cam_hg = camera_get_view_height(camera);
 
+//Movement
+m_spd = 0.1;
+
+switch(room){
+	case rm_level:
+		x = 4.5 * global.roomwd;
+		y = 4.5 * global.roomhg - 16;
+	break;
+	
+	default:
+		x = room_width  / 2;
+		y = room_height / 2;
+	break;
+}
+
 //Position
 cam_x_c = x;
 cam_y_c = y;
@@ -14,9 +29,6 @@ cam_x_t = x;
 cam_y_t = y;
 
 target = noone;
-
-//Movement
-m_spd = 0.1;
 
 //Zoom
 cam_wd_o = cam_wd;

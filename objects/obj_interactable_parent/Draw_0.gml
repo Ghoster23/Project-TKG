@@ -7,6 +7,6 @@ if distance_to_object(global.body) <= dis {
 	in_range    = true;
 	
 }else {
-	draw_script = null;
+	draw_script = "NULL";
 	
 }

@@ -20,5 +20,4 @@ enum statuses {
 	/* - Neutral status effects - */
 	wet       = 12,
 	count     = 13
-	
 }

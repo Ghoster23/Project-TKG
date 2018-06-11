@@ -28,7 +28,7 @@ switch(status){
 	case statuses.ohko :
 		if(ohko){
 			if(variable_instance_exists(id,"weapon") && instance_exists(weapon)){
-				weapon.draw_script = null;
+				weapon.draw_script = "NULL";
 			}
 				
 			ohko = false;
@@ -37,7 +37,7 @@ switch(status){
 
 	case statuses.immune :
 		if(immune){
-			draw_script = null;
+			draw_script = "NULL";
 			immune      = false;
 		}				
 	break;
