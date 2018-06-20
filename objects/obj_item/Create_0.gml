@@ -17,6 +17,8 @@ fallingpit = false;
 
 fly2player = false;
 
+frame = 0;
+
 fix1 = physics_fixture_create();
 physics_fixture_set_circle_shape(fix1,6);
 physics_fixture_set_density(fix1,0.5);

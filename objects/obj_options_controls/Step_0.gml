@@ -189,10 +189,10 @@ if listen_for_key==false{
 			if global.key_active[key_id.m_confirm] {
 				ini_open("saveoptions.ini");
 				
-				global.key_binds[key_id.right]     = ord("R");
-				global.key_binds[key_id.left]      = ord("L");
-				global.key_binds[key_id.down]      = ord("D");
-				global.key_binds[key_id.up]        = ord("U");
+				global.key_binds[key_id.right]     = ord("D");
+				global.key_binds[key_id.left]      = ord("A");
+				global.key_binds[key_id.down]      = ord("S");
+				global.key_binds[key_id.up]        = ord("W");
 				global.key_binds[key_id.dash]      = vk_shift;
 				global.key_binds[key_id.skill_1]   = mb_left;
 				global.key_binds[key_id.skill_2]   = mb_right;
@@ -312,19 +312,20 @@ if listen_for_key==false{
 		state = "reset";
 		if scr_GUI_button(reset_x1,reset_y1,reset_width,reset_height+12*m) {
 			ini_open("saveoptions.ini");
-			global.right_key_bind      = ord("D");
-			global.left_key_bind       = ord("A");
-			global.down_key_bind       = ord("S");
-			global.up_key_bind         = ord("W");
-			global.dash_key_bind       = vk_shift;
-			global.attack_key_bind     = mb_left;
-			global.mouse_r_key_bind    = mb_right;
-			global.interact_key_bind   = ord("F");
-			global.consumable_key_bind = ord("E");
-			global.menu_key_bind       = vk_escape;
-			global.mmap_key_bind       = ord("M");
-			global.os_mmap_key_bind    = vk_tab;
-			global.enter_key_bind      = vk_enter;
+			global.key_binds[key_id.right]     = ord("D");
+			global.key_binds[key_id.left]      = ord("A");
+			global.key_binds[key_id.down]      = ord("S");
+			global.key_binds[key_id.up]        = ord("W");
+			global.key_binds[key_id.dash]      = vk_shift;
+			global.key_binds[key_id.skill_1]   = mb_left;
+			global.key_binds[key_id.skill_2]   = mb_right;
+			global.key_binds[key_id.interact]  = ord("F");
+			global.key_binds[key_id.consume]   = ord("E");
+			global.key_binds[key_id.menu]      = vk_escape;
+			global.key_binds[key_id.map]       = ord("M");
+			global.key_binds[key_id.mmap]      = vk_tab;
+			global.key_binds[key_id.inv]       = ord("I");
+			global.key_binds[key_id.m_confirm] = vk_enter;
 			
 			ini_write_real("controls",      "right_key", global.key_binds[key_id.right]);
 			ini_write_real("controls",       "left_key", global.key_binds[key_id.left]);

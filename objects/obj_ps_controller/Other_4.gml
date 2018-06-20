@@ -1,9 +1,6 @@
 switch room {
 	case rm_level:
-		global.ps    = part_system_create_layer("BH",false);
-		global.ps_if = part_system_create_layer("IF",false);
-		global.ps_ps = part_system_create_layer("PS",false);
-		
+	case rm_lvl_editor_test:
 		part_system_automatic_draw(global.ps,    false);
 		part_system_automatic_draw(global.ps_if, false);
 		part_system_automatic_draw(global.ps_ps, false);
@@ -32,10 +29,6 @@ switch room {
 		part_system_destroy(global.ps_ps);*/
 	break;
 	default:
-		global.ps    = part_system_create_layer("BH",false);
-		global.ps_if = part_system_create_layer("IF",false);
-		global.ps_ps = part_system_create_layer("PS",false);
-		
 		part_system_automatic_update(global.ps,    true);
 		part_system_automatic_update(global.ps_if, true);
 		part_system_automatic_update(global.ps_ps, true);

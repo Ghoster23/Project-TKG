@@ -1,5 +1,5 @@
 {
-var key    = scr_keyname(global.interact_key_bind);
+var key    = scr_keyname(global.key_active[key_id.interact]);
 var key_wd = string_width(key);
 var x_sc   = 1;
 

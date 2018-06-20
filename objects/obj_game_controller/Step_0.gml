@@ -33,25 +33,3 @@ if(room == rm_level && global.gen && not instance_exists(obj_gen_controller)){
 	show_debug_message("--  Retry  --")
 	room_restart();
 }
-
-///Debug
-if keyboard_check_pressed(vk_f11){
-    room_goto(rm_test);
-}
-
-if keyboard_check_pressed(vk_f12){
-    room_restart();
-}
-
-if keyboard_check_pressed(vk_f4){
-    room_goto(rm_CH_boss);
-}
-
-if keyboard_check_pressed(vk_f3){
-    room_goto(rm_level);
-}
-
-if(keyboard_check_pressed(vk_f1)){
-	scr_status_apply( statuses.immune, 60, global.body);
-	scr_status_apply(   statuses.ohko, 60, global.body);
-}

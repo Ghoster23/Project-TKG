@@ -2,7 +2,7 @@
     "id": "9f6440d2-5e4e-4dcd-8110-be18ed5b246f",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "spr_heart",
+    "name": "spr_HUD_heart",
     "For3D": false,
     "HTile": false,
     "VTile": false,

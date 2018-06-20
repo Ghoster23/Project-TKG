@@ -6,12 +6,13 @@
     "children": [
         "71021b35-953e-4f32-9148-badf83fc1fcf",
         "16e4c052-fe2c-4530-8fa6-e04c22d2993d",
+        "962b21b0-c257-4132-9943-af9b22881b69",
         "e78a02e2-fbe9-47fb-b40f-eeeb04f32351",
         "051a82a8-6bda-42c2-ae30-f135458a582b",
         "66dc8e49-141f-419f-81e8-a6523bee0476"
     ],
     "filterType": "GMObject",
-    "folderName": "Weapons",
+    "folderName": "Weapons & Tools",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

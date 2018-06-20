@@ -1,4 +1,5 @@
 input = false;
+text = "";
 
 for(var i = 0; i < key_id.count; i++){
 	var bind = global.key_binds[i];
@@ -20,9 +21,9 @@ for(var i = 0; i < key_id.count; i++){
 		}
 	}
 	
-	/*if(global.key_active[i]){
+	if(global.key_active[i]){
 		text += scr_keyname(bind) + "\n";
-	}*/
+	}
 }
 
 if(global.key_active[key_id.right]    ||

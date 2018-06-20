@@ -2,9 +2,9 @@ scr_unique_inst();
 
 once = false;
 
-global.ps    = part_system_create_layer("BH",false);
-global.ps_if = part_system_create_layer("IF",false);
-global.ps_ps = part_system_create_layer("PS",false);
+global.ps    = part_system_create_layer("BH",true);
+global.ps_if = part_system_create_layer("IF",true);
+global.ps_ps = part_system_create_layer("PS",true);
 
 scr_part_fire_init();
 scr_part_blue_fire_init();

@@ -45,6 +45,19 @@ with spawn {
 	jump = jp;
 	dir  = dr;
 	
+	switch type {
+		default:
+		break;
+		case item_type.heart:
+			if(item > 0){
+				image_speed = 0.4;
+			}
+		break;
+		case item_type.currency:
+			image_speed = 0.4;
+		break;
+	}
+	
 	visible = true;
 }
 }

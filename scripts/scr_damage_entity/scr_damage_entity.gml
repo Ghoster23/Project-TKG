@@ -36,12 +36,15 @@ if(not damaged and
 		//Spew blood
 		scr_blood(xx,yy,object_get_name(other.object_index));
 	
-	
 		//Deal Damage
-		if(!other.ohko){
-			stat[stats.hp] -= ceil(dmg / (stat[dv] * (1 + modf[dv])));
+		if(stat[stats.arm] == 0){
+			if(!other.ohko){
+				stat[stats.hp] -= ceil(dmg / (stat[dv] * (1 + modf[dv])));
+			}else {
+				stat[stats.hp]  = 0;
+			}
 		}else {
-			stat[stats.hp]  = 0;
+			stat[stats.arm]--;
 		}
 	
 		if(stat[stats.hp] <= 0){

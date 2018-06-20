@@ -39,8 +39,6 @@ switch state {
 		
 	break;
 	case 2: //Cleared	
-	
-	
 		//tell all the items in this here room to come torwards me
 		var dgx = global.current_column*global.roomwd;
 		var dgy = global.current_row*global.roomhg;

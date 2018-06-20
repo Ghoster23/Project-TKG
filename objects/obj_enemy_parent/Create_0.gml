@@ -29,6 +29,8 @@ stat[stats.def]  =  5;
 stat[stats.satk] =  5;
 stat[stats.sdef] =  5;
 stat[stats.spd]  =  3;
+stat[stats.arm]  =  0;
+stat[stats.luck] =  0;
 
 //Modifiers
 modf[stats.mhp]  = 0;
@@ -38,6 +40,8 @@ modf[stats.def]  = 0;
 modf[stats.satk] = 0;
 modf[stats.sdef] = 0;
 modf[stats.spd]  = 0;
+modf[stats.arm]  =  0;
+modf[stats.luck] =  0;
 
 //Contact Damage
 damage = 0;

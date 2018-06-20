@@ -1,1 +1,1 @@
-scr_inv_set_pos(item_type.potion,irandom(potions.count),4,0);
+scr_spawn_item(item_type.heart, heart.armor, 1, x, y, true, 0);

@@ -59,7 +59,7 @@ switch(type){
 				draw_sprite_ext(spr_heart_drop,amount,xx,yy,xscale,yscale,0,c_white,1);
 			break;
 			case heart.armor:
-				draw_sprite_ext(spr_heart_drop,amount,xx,yy,xscale,yscale,0,c_white,1);
+				draw_sprite_ext(spr_armor_drop,frame,xx,yy,xscale,yscale,0,c_white,1);
 			break;
 			case heart.container:
 				draw_sprite_ext(spr_heart_drop,amount,xx,yy,xscale,yscale,0,c_white,1);
@@ -68,17 +68,19 @@ switch(type){
 	break;
 	
 	case item_type.currency:
-		draw_sprite_ext(spr_sm_coin,-1,xx,yy,xscale,yscale,0,c_white,1);
+		draw_sprite_ext(spr_coin_drop,frame,xx,yy,xscale,yscale,0,c_white,1);
 	break;
 }
 
-if(amount > 1 and type > 3){
+if(amount >= 1){
 	draw_set_halign(fa_middle);
 	draw_set_valign(fa_bottom);
 	draw_set_font(font_chsl_tags);
 	
 	if(id.object_index == obj_item){
 		scr_draw_text_outlined(xx+32,yy+8,c_black,c_white,string(amount));
+		//scr_draw_text_outlined(xx+32,yy+24,c_black,c_white,string(item));
+		//scr_draw_text_outlined(xx+32,yy+40,c_black,c_white,string(type));
 	}
 }
 }

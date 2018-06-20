@@ -9,7 +9,7 @@ spawns[1] = -1;
 var chance = irandom(99) + 1;
 
 if(chance <= 10){
-	spawns[0] = scr_spawn_item(   item_type.heart,  0,  -4, x, y, true, false);
+	spawns[0] = scr_spawn_item(   item_type.heart,  -1,  -4, x, y, true, false);
               
 }else if chance <= 50{
 	spawns[0] = scr_spawn_item(item_type.currency,  0, -16, x, y, true, -2);
@@ -25,7 +25,7 @@ if(chance >= 90){
 	chance = irandom(99);
 	
 	if(chance <= 10){
-		spawns[1] = scr_spawn_item(   item_type.heart,  0,  -4, x, y, true, -2);
+		spawns[1] = scr_spawn_item(   item_type.heart,  heart.heart,  -4, x, y, true, -2);
               
 	}else if chance <= 50{
 		spawns[1] = scr_spawn_item(item_type.currency,  0, -16, x, y, true, -2);
