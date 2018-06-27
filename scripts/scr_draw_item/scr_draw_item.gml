@@ -73,7 +73,7 @@ switch(type){
 }
 
 if(amount >= 1){
-	draw_set_halign(fa_middle);
+	draw_set_halign(fa_center);
 	draw_set_valign(fa_bottom);
 	draw_set_font(font_chsl_tags);
 	
@@ -82,5 +82,8 @@ if(amount >= 1){
 		//scr_draw_text_outlined(xx+32,yy+24,c_black,c_white,string(item));
 		//scr_draw_text_outlined(xx+32,yy+40,c_black,c_white,string(type));
 	}
+	
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_top);
 }
 }

@@ -8,7 +8,9 @@ switch state{
 			obj_pointer.x=303;
 			obj_pointer.y=267;
 		}
-		if scr_GUI_button(305,258,342-305,275-258) or global.key_active[key_id.m_confirm]{
+		if scr_GUI_button(305 * global.ratio, 258 * global.ratio,
+						  (342-305) * global.ratio, (275-258) * global.ratio) or
+						  global.key_active[key_id.m_confirm]{
 			obj_tittleart.fade = true;
 			obj_whiteout.fade  = "out";
 			alarm[0]=room_speed*1.5;
@@ -29,7 +31,9 @@ switch state{
 			obj_pointer.x=291;
 			obj_pointer.y=298;
 		}
-		if scr_GUI_button(294,289,354-294,306-289) or global.key_active[key_id.m_confirm]{
+		if scr_GUI_button(294 * global.ratio, 289 * global.ratio,
+						  (354-294) * global.ratio, (306-289) * global.ratio) or
+						  global.key_active[key_id.m_confirm]{
 			alarm[1]=room_speed*0.2;
 		}
 		if global.key_active[key_id.m_down]{
@@ -48,7 +52,9 @@ switch state{
 			obj_pointer.x=303;
 			obj_pointer.y=331;
 		}
-		if scr_GUI_button(304,323,338-304,337-323) or global.key_active[key_id.m_confirm] {
+		if scr_GUI_button(304 * global.ratio,323 * global.ratio,
+						  (338-304) * global.ratio, (337-323) * global.ratio) or
+						  global.key_active[key_id.m_confirm] {
 			alarm[2]=room_speed*0.2;
 		}
 		if global.key_active[key_id.m_down]{
@@ -59,15 +65,4 @@ switch state{
 		}
 	break;
 
-}
-
-
-if scr_GUI_h_button_check(305,258,342-305,275-258) != 0{
-	state="play";
-}
-if scr_GUI_h_button_check(294,289,354-294,306-289) != 0{
-	state="options";
-}
-if scr_GUI_h_button_check(304,323,338-304,337-323) != 0{
-	state="quit";
 }

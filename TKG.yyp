@@ -6159,6 +6159,14 @@
             }
         },
         {
+            "Key": "9298ea42-1898-4b20-9486-f27d2198777f",
+            "Value": {
+                "id": "ee40ffca-9a5b-46f1-a0d4-d6d87315289a",
+                "resourcePath": "sprites\\spr_menu_frame_9s\\spr_menu_frame_9s.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "92dc449f-f82a-4f4a-b57b-9191a76c357c",
             "Value": {
                 "id": "ebd52820-bfab-4e68-bcd5-2d31094acb8f",

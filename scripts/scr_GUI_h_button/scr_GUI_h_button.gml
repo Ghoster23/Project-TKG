@@ -25,34 +25,27 @@ var bt = scr_GUI_h_button_check(xx,yy,wd,hg);
 
 if(!sb9){
 	switch(he){
-		case 0:
-			if(spr != -1){
-				draw_sprite_ext(spr, 0, xx, yy, global.ratio, global.ratio, 0, c_white, 1);
-			}
+		case 0:			
 			
-			draw_set_halign(fa_middle);
-			draw_set_valign(fa_center);
-			draw_text_ext_transformed(xx + wd/2, yy + hg/2, txt, 2, wd, global.ratio, global.ratio, 0);
 		break;
 		
-		case 1:
-			if(spr != -1){
-				draw_sprite_ext(spr, 0, xx, yy, global.ratio, global.ratio, 0, c_white, 1);
-			}
-			
-			draw_set_halign(fa_middle);
-			draw_set_valign(fa_center);
-			
+		case 1:			
 			if(bt != 0){
 				draw_set_alpha(hp);
 			}
-			
-			draw_text_ext_transformed(xx + wd/2, yy + hg/2, txt, 2, wd, global.ratio, global.ratio, 0);
-			
-			draw_set_alpha(1);
 		break;
 	}
 }
+
+if(spr != -1){
+	draw_sprite_ext(spr, 0, xx, yy, global.ratio, global.ratio, 0, c_white, 1);
+}
+
+draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
+draw_text_transformed(xx + wd/2, yy + hg/2, txt, global.ratio, global.ratio, 0);
+
+draw_set_alpha(1);
 
 return bt;
 }

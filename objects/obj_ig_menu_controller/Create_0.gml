@@ -14,3 +14,6 @@ mn_hg  = 160;
 //Mouse position
 mousex = 0;
 mousey = 0;
+
+options = ["Continue","Inventory","Map","Options","Exit"];
+n_state = ["closed","inv","mmap","options",""];

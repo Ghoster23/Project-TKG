@@ -53,12 +53,12 @@ switch state {
 }
 
 
-if scr_GUI_h_button_check(audio_x1,audio_y1,audio_x2,audio_y2) != 0{
+if scr_GUI_h_button_check(audio_x1,audio_y1,audio_width,audio_height) != 0{
 	state = "audio";
 }
-if scr_GUI_h_button_check(video_x1,video_y1,video_x2,video_y2) != 0{
+if scr_GUI_h_button_check(video_x1,video_y1,video_width,video_height) != 0{
 	state = "video";
 }
-if scr_GUI_h_button_check(controls_x1,controls_y1,controls_x2,controls_y2) != 0{
+if scr_GUI_h_button_check(controls_x1,controls_y1,controls_width,controls_height) != 0{
 	state = "controls";
 }

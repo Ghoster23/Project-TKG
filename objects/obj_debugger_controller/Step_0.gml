@@ -51,6 +51,11 @@ switch state {
 				debug_text += "WD: " + string(global.MonitorW) + " HG: " + string(global.MonitorH) + "\n";
 			}
 		}
+		
+		if(keyboard_check_released(ord("L"))){ 
+			screen_lines++;
+			screen_lines = screen_lines mod 2;
+		}
 	break;
 	case 4: //Input and cursor
 		debug_text += "Mouse: \n";
@@ -65,7 +70,9 @@ switch state {
 	case 5: //Gen controller
 	break;
 	case 6: //Player
-		debug_text += "Player State: " + string(global.body.state) + "\n";
-		debug_text += "Weapon State: " + string(global.body.weapon.state) + "\n";
+		if(instance_exists(global.body)){
+			debug_text += "Player State: " + string(global.body.state) + "\n";
+			debug_text += "Weapon State: " + string(global.body.weapon.state) + "\n";
+		}
 	break;
 }

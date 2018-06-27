@@ -24,6 +24,15 @@ switch state {
 		}
 	break;
 	case 3: //View and Screen
+		draw_rectangle(0,0,16,16,false);
+		
+		if(screen_lines){
+			var g_wd = surface_get_width(application_surface);
+			var g_hg = surface_get_height(application_surface);
+			
+			draw_line(0,g_hg/2,g_wd,g_hg/2);
+			draw_line(g_wd/2,0,g_wd/2,g_hg);
+		}
 	break;
 	case 4: //Input and cursor
 	break;

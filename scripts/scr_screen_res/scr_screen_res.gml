@@ -23,11 +23,13 @@ switch room {
 		wd = room_width;
 		hg = room_height;
 		
-		global.ratio = s_hg/hg;
+		if(s_hg/hg < s_wd/wd){
+			global.ratio = s_hg/hg;
+		}else {
+			global.ratio = s_wd/wd;
+		}
 	break;
 }
-
-show_debug_message(room_get_name(room) + " ratio: " + string(global.ratio));
 
 var sc_wd = wd * global.ratio;
 var sc_hg = hg * global.ratio;
