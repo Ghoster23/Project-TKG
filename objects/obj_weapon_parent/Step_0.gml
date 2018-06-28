@@ -45,7 +45,7 @@ if(not global.pause){
 			}
 			
 			//Mechanics
-			script_execute(wep_pat);
+			script_execute(pat);
 			
 		break;
 		case 1: //Stowed

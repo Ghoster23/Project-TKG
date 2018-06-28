@@ -1,1 +1,1 @@
-scr_spawn_item(item_type.heart, heart.armor, 1, x, y, true, 0);
+scr_spawn_item(item_type.tool, tool.pickaxe, 8, x, y, true, 0);

@@ -1,4 +1,4 @@
-switch wep_pat_state {
+switch pat_state {
 	case 0: //Normal
 		wep_ang_off =  wep_ang_base;
 		angle       +=  wep_ang_off;
@@ -10,7 +10,7 @@ switch wep_pat_state {
 			
 			progressbar = scr_create_charge_up( x, y, 1.5 * room_speed, self);
 			
-			wep_pat_state  = 2; //Go to windup
+			pat_state  = 2; //Go to windup
 			wep_ang_target = wep_ang_off + wep_ang_windup;
 			
 		}else if(global.key_active[key_id.skill_2]){
@@ -20,8 +20,8 @@ switch wep_pat_state {
 			
 			progressbar = scr_create_charge_up( x, y, 1.5 * room_speed, self);
 			
-			wep_pat_state  = 6;
-			wep_pat_nstate = 0;
+			pat_state  = 6;
+			pat_nstate = 0;
 		}
 		
 	break;
@@ -36,7 +36,7 @@ switch wep_pat_state {
 			
 			progressbar = scr_create_charge_up( x, y, 1.5 * room_speed, self);
 			
-			wep_pat_state  = 3; //Go to windup
+			pat_state  = 3; //Go to windup
 			wep_ang_target = wep_ang_off - wep_ang_windup;
 			
 		}else if(global.key_active[key_id.skill_2]){
@@ -47,8 +47,8 @@ switch wep_pat_state {
 			progressbar = scr_create_charge_up( x, y, 1.5 * room_speed, self);
 			
 			simple_attack = false;
-			wep_pat_state  = 6;
-			wep_pat_nstate = 1;
+			pat_state  = 6;
+			pat_nstate = 1;
 			
 		}
 		
@@ -70,13 +70,13 @@ switch wep_pat_state {
 			wep_ang_target = wep_ang_off - wep_ang_windup - 360;
 			repeat360 = 1;
 			originalangle = angle;
-			wep_pat_state  =    9;	
+			pat_state  =    9;	
 		}
 		else if(simple_attack == true and wep_ang_off >= wep_ang_target){
 			instance_destroy(progressbar);
 			wep_ang_target = -(wep_ang_swing + wep_ang_windup);
-			wep_pat_nstate =    1;
-			wep_pat_state  =    4;
+			pat_nstate =    1;
+			pat_state  =    4;
 		}
 		
 	break;
@@ -97,13 +97,13 @@ switch wep_pat_state {
 			wep_ang_target = wep_ang_off + wep_ang_windup + 360;
 			repeat360 = 1;
 			originalangle = angle;
-			wep_pat_state  =    10;
+			pat_state  =    10;
 		}
 		else if(simple_attack == true and wep_ang_off <= wep_ang_target){
 			instance_destroy(progressbar);
 			wep_ang_target = wep_ang_swing + wep_ang_windup;
-			wep_pat_nstate =   0;
-			wep_pat_state  =   4;
+			pat_nstate =   0;
+			pat_state  =   4;
 		}
 
 	break;
@@ -118,9 +118,9 @@ switch wep_pat_state {
 								 owner.stat[stats.atk]*(1+owner.modf[stats.atk]), //Damage multiplier
 								 stats.def);									  //Damage divider
 		
-	 	alarm[wep_pat_alarm] = wep_pat_cd * room_speed; 
+	 	alarm[pat_alarm] = pat_cd * room_speed; 
 		scr_sound(snd_sword_slash);
-		wep_pat_state = 5;
+		pat_state = 5;
 		
 	break;
 	case 5: //Cooldown
@@ -151,7 +151,7 @@ switch wep_pat_state {
 			
 			visible = false;
 			owner.hs=true;
-			wep_pat_state = 7;
+			pat_state = 7;
 			
 			instance_destroy(progressbar);
 			
@@ -160,7 +160,7 @@ switch wep_pat_state {
 			simple_attack = false;
 			instance_destroy(progressbar);
 			chargeup= false;
-			wep_pat_state = wep_pat_nstate;
+			pat_state = pat_nstate;
 		}
 		
 		
@@ -168,7 +168,7 @@ switch wep_pat_state {
 	
 	case 7: //wait till it comes back
 		if(!instance_exists(obj_greatsword_t)){
-			wep_pat_state = wep_pat_nstate;
+			pat_state = pat_nstate;
 			visible=true;
 			owner.hs=false;
 		}
@@ -234,9 +234,9 @@ switch wep_pat_state {
 		
 		if(wep_ang_off ==  wep_ang_target){
 			if(repeat360 == 0){
-				wep_pat_state = 0;
+				pat_state = 0;
 			}else{
-				wep_pat_state = 9;
+				pat_state = 9;
 				wep_ang_target = wep_ang_off - wep_ang_windup - 360;
 				repeat360--;
 			}
@@ -301,9 +301,9 @@ switch wep_pat_state {
 		
 		if(wep_ang_off ==  wep_ang_target){
 			if(repeat360 == 0){
-				wep_pat_state = 1;
+				pat_state = 1;
 			}else{
-				wep_pat_state = 10;
+				pat_state = 10;
 				wep_ang_target = wep_ang_off - wep_ang_windup + 360;
 				repeat360--;
 			}

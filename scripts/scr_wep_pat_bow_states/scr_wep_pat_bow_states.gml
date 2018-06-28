@@ -1,8 +1,8 @@
-switch wep_pat_state {
+switch pat_state {
 	case 0: //Base		
 		if(attack){
 			if(wep_ammo > 0){
-				wep_pat_state = 1; //Go to Charging
+				pat_state = 1; //Go to Charging
 			}else {
 				attack = false;
 			}
@@ -10,12 +10,12 @@ switch wep_pat_state {
 		
 	break;
 	case 1: //Charging animation
-		if(image_index < wep_pat_img_ind_charged - wep_pat_img_spd){
-			image_speed = wep_pat_img_spd;
+		if(image_index < pat_img_ind_charged - pat_img_spd){
+			image_speed = pat_img_spd;
 		}else {
 			image_speed   = 0;
-			image_index	  = wep_pat_img_ind_charged;
-			wep_pat_state = 2;
+			image_index	  = pat_img_ind_charged;
+			pat_state = 2;
 		}
 		
 	break;
@@ -41,8 +41,8 @@ switch wep_pat_state {
 			amount--;
 		}
 		
-		alarm[wep_pat_alarm] = wep_pat_cd * room_speed;
-		wep_pat_state = 3;	
+		alarm[pat_alarm] = pat_cd * room_speed;
+		pat_state = 3;	
 	break;
 	case 3: //CD
 		attack = false;

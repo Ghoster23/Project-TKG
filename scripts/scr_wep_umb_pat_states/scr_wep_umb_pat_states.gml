@@ -1,23 +1,23 @@
-switch wep_pat_state {
+switch pat_state {
 	case 0: //Base
 		if(instance_exists(progressbar)){
 			instance_destroy(progressbar);
 		}
 		
-		if(wep_ammo > 0 && alarm[wep_pat_alarm] == -1){
+		if(wep_ammo > 0 && alarm[pat_alarm] == -1){
 			image_index = 1;
 		}else {
 			image_index = 0;
 		}
 		
 		if(global.key_active[key_id.skill_1]){
-			wep_pat_state = 1; //Go to Charging
+			pat_state = 1; //Go to Charging
 			
 			chargeup    = false;
-			progressbar = scr_create_charge_up(x,y,wep_pat_charge_time,self);
+			progressbar = scr_create_charge_up(x,y,pat_charge_time,self);
 			
 		}else if(global.key_active[key_id.skill_2]){
-			wep_pat_state = 2; //Go to Charging
+			pat_state = 2; //Go to Charging
 			
 		}
 		
@@ -27,19 +27,19 @@ switch wep_pat_state {
 			instance_destroy(progressbar);
 				
 			if(image_index == 1){
-				wep_pat_state = 3; //Go to Ice Shot
+				pat_state = 3; //Go to Ice Shot
 			}else {
-				wep_pat_state = 0; //Go to base
+				pat_state = 0; //Go to base
 			}
 			
 		}else{
-			if(wep_pat_block_count == -1){
+			if(pat_block_count == -1){
 				if(chargeup){
-					wep_pat_state = 5; //Go to Blocks of ice
+					pat_state = 5; //Go to Blocks of ice
 				}
 				
 			}else {
-				wep_pat_state = 0; //Go to base
+				pat_state = 0; //Go to base
 				instance_destroy(progressbar);
 			}	
 		}
@@ -47,15 +47,15 @@ switch wep_pat_state {
 	case 2: //Charging right-click
 		if(global.key_active[key_id.skill_2]){
 			if(global.p_LVB_water > 0){
-				wep_pat_state = 4; //Go to Water gun
+				pat_state = 4; //Go to Water gun
 				
 			}else {
-				wep_pat_state = 0; //Go to base
+				pat_state = 0; //Go to base
 				
 			}
 
 		}else {
-			wep_pat_state = 0; //Go to base
+			pat_state = 0; //Go to base
 
 		}
 		
@@ -88,8 +88,8 @@ switch wep_pat_state {
 		
 		image_index = 0;
 		
-		alarm[wep_pat_alarm] = wep_pat_cd * room_speed;
-		wep_pat_state = 0;
+		alarm[pat_alarm] = pat_cd * room_speed;
+		pat_state = 0;
 			
 	break;
 	case 4: //Throw water
@@ -115,7 +115,7 @@ switch wep_pat_state {
 			prev_ball = water_ball;
 			
 		}else {
-			wep_pat_state = 0; //Go to base
+			pat_state = 0; //Go to base
 			prev_ball	  = noone;
 			
 		}
@@ -128,8 +128,8 @@ switch wep_pat_state {
 			var yy  = y + lengthdir_y(24,angle);
 			instance_create_layer(xx,yy,layer,obj_freeze_wave);
 			
-			wep_pat_block_count = wep_pat_block_cd;
-			wep_pat_state       = 0; //Go to base
+			pat_block_count = pat_block_cd;
+			pat_state       = 0; //Go to base
 		}
 		
 	break;
@@ -138,32 +138,32 @@ switch wep_pat_state {
 angle -= 90;
 
 //Timers
-if(wep_pat_frost_count > 0){
-	wep_pat_frost_count--;
+if(pat_frost_count > 0){
+	pat_frost_count--;
 	
-	if(wep_pat_frost_count == 0){
-		wep_pat_frost_count = -1;
+	if(pat_frost_count == 0){
+		pat_frost_count = -1;
 	}
 }
 
-if(wep_pat_block_count > 0){
-	wep_pat_block_count--;
+if(pat_block_count > 0){
+	pat_block_count--;
 	
-	if(wep_pat_block_count == 0){
-		wep_pat_block_count = -1;
+	if(pat_block_count == 0){
+		pat_block_count = -1;
 	}
 }
 
 if(wep_ammo < wep_capacity){
-	if(wep_pat_reload_count == -1){
-		wep_pat_reload_count = wep_pat_reload_cd;
+	if(pat_reload_count == -1){
+		pat_reload_count = pat_reload_cd;
 	
 	}else {
-		wep_pat_reload_count--;
+		pat_reload_count--;
 				
-		if(wep_pat_reload_count == 0){
+		if(pat_reload_count == 0){
 			wep_ammo++;
-			wep_pat_reload_count = -1;
+			pat_reload_count = -1;
 		}
 	}
 }

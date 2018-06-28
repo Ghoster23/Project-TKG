@@ -1,9 +1,9 @@
 {
-var wep = -1;
+var tl  = -1;
 var amt = -1;
 
 with global.body {
-	wep = weapon.item;
+	tl  = weapon.item;
 	amt = weapon.amount;
 	
 	instance_destroy(weapon);
@@ -14,8 +14,8 @@ with global.body {
 if(amt < 1){
 	scr_inv_set_pos(-1,-1,-1,obj_inventory_controller.tool_slot);
 }else {
-	scr_inv_set_pos(item_type.weapons,wep,amt,obj_inventory_controller.tool_slot);
+	scr_inv_set_pos(item_type.tool,tl,amt,obj_inventory_controller.tool_slot);
 }
 
-wep_equip = false;
+obj_inventory_controller.equip = false;
 }

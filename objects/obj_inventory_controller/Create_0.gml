@@ -21,7 +21,7 @@ consumable = 12;
 
 selected   = 0;
 
-wep_equip = false;
+equip = false;
 
 tool_key = false;
 

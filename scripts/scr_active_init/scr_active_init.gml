@@ -1,0 +1,4 @@
+enum active{
+	frozone,
+	count
+}

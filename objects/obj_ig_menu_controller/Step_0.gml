@@ -15,6 +15,7 @@ if check == true{
 				state = "closed";
 				check = false;
 				alarm[0] = 0.5 * room_speed;
+				box_wd = 20;
 		
 			///Open Mini Map
 			}else if global.key_active[key_id.mmap]{

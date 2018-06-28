@@ -8,7 +8,7 @@
         "33d94e23-5f6a-4a5f-916c-eb0d7eb71c07"
     ],
     "filterType": "GMSprite",
-    "folderName": "Tools",
+    "folderName": "Weapons & Tools",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

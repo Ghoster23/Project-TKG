@@ -7,7 +7,7 @@ if(not global.pause){
 				if(not player_owned){
 					angle = owner.wep_dir;
 				}else {
-					angle = point_direction(x,y,mouse_x,mouse_y);
+					angle = point_direction(x,y,obj_cursor.ir_mx,obj_cursor.ir_my);
 					
 					if(global.key_active[key_id.skill_1]){
 						attack = true;
@@ -25,7 +25,7 @@ if(not global.pause){
 				}
 			
 				//Mechanics
-				script_execute(wep_pat);
+				script_execute(pat);
 			
 			break;
 			case 1: //Stowed

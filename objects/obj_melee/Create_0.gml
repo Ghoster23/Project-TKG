@@ -18,7 +18,7 @@ mult      = stats.atk;
 skin_color = 0;
 
 scr_wep_pat_swing_init(45,15,120,2,0,5);
-wep_pat = scr_wep_pat_swing_states;
+pat = scr_wep_pat_swing_states;
 
 item   = weapons.wood_stick + image_index;
 amount = 8;

@@ -9,23 +9,21 @@ switch state{
 		draw_set_color(c_black);
 		draw_set_alpha(1);
 		
-		if(box_wd < 68){
+		if(box_wd < 52){
 			box_wd += 4;
 			alpha   = 0;
 		}
 		
-		scr_9SB(spr_9S_frame, wc - box_wd * m, hc - off, wc + box_wd * m, hc + off);
+		scr_9SB_tiles(spr_menu_frame_9s, wc - box_wd * m, hc - off, wc + box_wd * m, hc + off, m);
 		
 		draw_set_color(c_white);
 		draw_set_alpha(alpha);
 		
 		//Write the options
-		if(box_wd >= 64){
+		if(box_wd >= 52){
 			if(alpha < 1){
 				alpha += 0.2;
 			}
-			
-			draw_sprite_ext(spr_small_rect, 0, wc, hc - off, m, m, 0, c_white, alpha);
 			
 			for(var i = 0; i < 5; i++){
 				var wd = string_width(options[i]) * m;
@@ -35,7 +33,7 @@ switch state{
 				if(scr_GUI_h_button( wc - wd/2, hc + off * j / 3 - hg/2, wd, hg,
 									-1,false,options[i],1,0.6) == 1){
 					if(i < 4){
-						box_wd   = 0;
+						box_wd   = 20;
 						state    = n_state[i];
 						check    = false;
 						alarm[0] = 0.5 * room_speed;
@@ -57,10 +55,10 @@ switch state{
 	case "inv":
 		var wd = string_width("Back") * m;
 		var hg = string_height("Back") * m;
-		if(scr_GUI_h_button(wc - wd/2, hc * 2 - 32 * global.ratio, 
+		if(scr_GUI_h_button(wc - wd/2, hc * 2 - 16 * global.ratio, 
 							wd, hg,
 							-1,false,"Back",1,0.6) == 1){
-			box_wd   = 0;
+			box_wd   = 20;
 			state    = "menu";
 			check    = false;
 			alarm[0] = 0.5 * room_speed;
@@ -72,10 +70,10 @@ switch state{
 	case "mmap":
 		var wd = string_width("Back") * m;
 		var hg = string_height("Back") * m;
-		if(scr_GUI_h_button(wc - wd/2, hc * 2 - 32 * global.ratio,
+		if(scr_GUI_h_button(wc - wd/2, hc * 2 - 16 * global.ratio,
 							wd, hg,
 							-1,false,"Back",1,0.6) == 1){
-			box_wd   = 0;
+			box_wd   = 20;
 			state    = "menu";
 			check    = false;
 			alarm[0] = 0.5 * room_speed;

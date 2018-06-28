@@ -6,7 +6,7 @@
 /// @argument    y2
 {
 var sprite = argument0;
-var size   = sprite_get_width(sprite) /3;
+var size   = sprite_get_width(sprite)/3;
 var x1     = argument1;
 var y1     = argument2;
 var x2     = argument3;

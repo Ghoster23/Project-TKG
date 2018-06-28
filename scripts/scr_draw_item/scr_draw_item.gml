@@ -49,6 +49,10 @@ switch(type){
 		draw_sprite_ext(spr_equip,item,xx,yy,xscale,yscale,0,c_white,1);	
 	break;
 	
+	case item_type.active:
+		draw_sprite_ext(spr_actives,item,xx,yy,xscale,yscale,0,c_white,1);	
+	break;
+	
 	case item_type.drop:
 		draw_sprite_ext(spr_drops,item,xx,yy,xscale,yscale,0,c_white,1);
 	break;

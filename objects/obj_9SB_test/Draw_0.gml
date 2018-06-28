@@ -1,0 +1,1 @@
+scr_9SB_tiles(spr_menu_frame_9s,x,y,obj_cursor.ir_mx,obj_cursor.ir_my,1);

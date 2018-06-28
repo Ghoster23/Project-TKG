@@ -7,7 +7,7 @@ check = true; //Check for a state change
 
 m = display_get_gui_width() / global.roomwd; //ratio
 
-box_wd = 0; //Animation
+box_wd = 20; //Animation
 alpha  = 0;
 mn_hg  = 160;
 

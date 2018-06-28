@@ -24,6 +24,6 @@ amount = 8;
 //Mechanics
 state   =  0;
 base_state = 0;
-wep_pat = -1;
+pat = -1;
 attack  = false;
 player_owned = false;

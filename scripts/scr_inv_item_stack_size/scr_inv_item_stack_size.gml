@@ -29,6 +29,10 @@ switch(type){
 	case item_type.weapons:
 		return 8;
 	break;
+	
+	case item_type.active:
+		return 8;
+	break;
 					
 	case item_type.equipable:
 		return 1;		

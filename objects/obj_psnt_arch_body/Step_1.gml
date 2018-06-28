@@ -56,7 +56,7 @@ if(not global.pause){
 			break;
 		
 			case 3: //Aim
-				if(not bl_sight and !weapon.wep_pat_state and weapon.wep_ammo > 0){
+				if(not bl_sight and !weapon.pat_state and weapon.wep_ammo > 0){
 					state = 4;
 				
 				}else {
@@ -73,7 +73,7 @@ if(not global.pause){
 			break;
 		
 			case 4: //Shoot
-				if(weapon.wep_pat_state == 3){
+				if(weapon.pat_state == 3){
 					state = 3;
 				}
 			break;

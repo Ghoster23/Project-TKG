@@ -1,23 +1,23 @@
 //States
-wep_pat_state  = 0; //State to start at
-wep_pat_nstate = 0;
+pat_state  = 0; //State to start at
+pat_nstate = 0;
 
-wep_pat_charge_time  = argument10;
-wep_pat_charge_count = 0;
+pat_charge_time  = argument10;
+pat_charge_count = 0;
 
 //Cooldown
-wep_pat_cd    = argument0; //Time for shot cooldown
-wep_pat_alarm = argument1; //Which alarm is the cd
+pat_cd    = argument0; //Time for shot cooldown
+pat_alarm = argument1; //Which alarm is the cd
 
-wep_pat_frost_cd    = argument2;
-wep_pat_frost_count = -1;
+pat_frost_cd    = argument2;
+pat_frost_count = -1;
 
-wep_pat_block_cd    = argument3;
-wep_pat_block_count = -1;
+pat_block_cd    = argument3;
+pat_block_count = -1;
 
-wep_pat_reload_cd    = argument4; //Time for reload cooldown
-wep_pat_reload_count = -1;
-wep_pat_reload_rate  = argument5; //Rate of reload
+pat_reload_cd    = argument4; //Time for reload cooldown
+pat_reload_count = -1;
+pat_reload_rate  = argument5; //Rate of reload
 
 //Capacity
 wep_capacity = argument6;

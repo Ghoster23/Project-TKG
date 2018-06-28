@@ -13,13 +13,13 @@ image_speed = 0;
 offx = 0;
 offy = 0;
 
-type   = item_type.weapons;
-item   = weapons.wood_stick;
+type   = item_type.tool;
+item   = tool.pickaxe;
 amount = 8;
 
 //Mechanics
-state   =  0;
-base_state = 0;
-wep_pat = -1;
-attack  = false;
+state      =  0;
+base_state =  0;
+pat     = -1;
+use        = false;
 player_owned = false;

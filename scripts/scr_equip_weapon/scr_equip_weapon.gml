@@ -1,6 +1,6 @@
 {
 with global.body {
-	if(weapon.wep_pat_state <= weapon.base_state){
+	if(weapon.pat_state <= weapon.base_state){
 		var wep = argument0;
 		var amt = argument1;
 

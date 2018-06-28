@@ -25,8 +25,11 @@ if(pos < 9){
 	}else if(type     == h_type &&  //The same type in holder and in inv
 	         sub_type == h_item &&  //The same item in holder and in inv
 			 maximum  >  amount &&  //The amount in inv is less than the max
-			 not (type == item_type.potion || 
-			      type == item_type.chess_piece)){ //The type is not potion nor chess piece (don't stack)
+			 not (type == item_type.potion      || 
+			      type == item_type.chess_piece ||
+				  type == item_type.weapons     ||
+				  type == item_type.tool        ||
+				  type == item_type.active      )){ //The type is not potion nor chess piece (don't stack)
 	
 		if(maximum >= amount + h_amount){ //Total amount is less or equal to maximum
 			inventory[# 2, pos] += h_amount;
@@ -52,7 +55,8 @@ if(pos < 9){
 }else if((pos <  12         &&  h_type == item_type.equipable     ) ||
 		 (pos == consumable &&  h_type <= item_type.constellation ) ||
 		 (pos == tool_slot  && (h_type == item_type.weapons         || 
-		                        h_type == item_type.tool          ))){
+		                        h_type == item_type.tool            ||
+								h_type == item_type.active        ))){
 	//Place it
 	if(type == -1){
 		scr_inv_swap_pos(pos,holder);

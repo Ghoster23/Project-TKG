@@ -17,5 +17,5 @@ if(amt < 1){
 	scr_inv_set_pos(item_type.weapons,wep,amt,obj_inventory_controller.tool_slot);
 }
 
-wep_equip = false;
+obj_inventory_controller.equip = false;
 }

@@ -1,26 +1,24 @@
 switch state {
 	case 0: //Unlocked
 		if(room == rm_level){
-			var xx = global.body.phy_position_x;
-			var yy = global.body.phy_position_y;
+			var cx = global.body.phy_position_x div global.roomwd;
+			var cy = global.body.phy_position_y div global.roomhg;
 			
-			if(xx < global.current_column * global.roomwd - 24 ||
-			   yy < global.current_row    * global.roomhg - 32 ||
-				(global.current_column + 1) * global.roomwd + 24 < xx ||
-				(global.current_row    + 1) * global.roomhg + 64 < yy ){
-				
+			if(cx != global.current_column || cy != global.current_row){
 				/// Get current Player room
-				global.current_column = xx div global.roomwd;
-				global.current_row    = yy div global.roomhg;
+				global.current_column = cx;
+				global.current_row    = cy;
 				
-				///Mark room
-				if(instance_exists(obj_minimap_controller)){
-					with(obj_minimap_controller){
-						current_room = scr_room_get();
+				if(!global.ds_roomgrid[# 2, global.current_row * 8 + global.current_column]){
+					///Mark room
+					if(instance_exists(obj_minimap_controller)){
+						with(obj_minimap_controller){
+							current_room = scr_room_get();
+						}
 					}
-				}
 				
-				state = 3;
+					state = 3;
+				}
 			}
 			
 		}else if(room = rm_lvl_editor_test){
@@ -39,22 +37,16 @@ switch state {
 		
 	break;
 	case 2: //Cleared	
-		//tell all the items in this here room to come torwards me
-		var dgx = global.current_column*global.roomwd;
-		var dgy = global.current_row*global.roomhg;
-		
-		item_list = collision_rectangle_list(dgx,dgy,dgx+global.roomwd,dgy+global.roomhg,obj_item,false,true);
-		
-		if(item_list!= noone){
-			for(var i = 0; i < ds_list_size(item_list); i++){
-				var ditem = ds_list_find_value(item_list,i); 
-				ditem.fly2player = true;
-			}
-		
-			ds_list_destroy(item_list);
-		}
-		
 		if(instance_exists(obj_inventory_controller)){
+			//Charge up on-hand active item
+			var in_slot = scr_inv_get_pos(obj_inventory_controller.tool_slot);
+			
+			if(in_slot[0] == item_type.active &&
+			   in_slot[2] < scr_active_get_data(in_slot[1])){
+				scr_inv_set_pos(in_slot[0],in_slot[1],in_slot[2] + 1,obj_inventory_controller.tool_slot);
+			}
+			
+			//Activate equipment effects on room clear
 			var equiped = obj_inventory_controller.eq_active;
 	
 			for(var i = 0; i < 3; i++){

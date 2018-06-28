@@ -11,16 +11,32 @@ if(obj_ig_menu_controller.state == "closed"){
 	
 	if(global.key_active[key_id.utilize] && alarm[1] == -1){
 		var type   = inventory[# 0, tool_slot];
-		var wep    = inventory[# 1, tool_slot];
+		var item   = inventory[# 1, tool_slot];
 		var amount = inventory[# 2, tool_slot]; 
 		
-		if(type == item_type.weapons){
-			if(!wep_equip){
-				wep_equip = scr_equip_weapon(wep,amount);
+		switch(type){
+			case item_type.weapons:
+				if(!equip){
+					equip = scr_equip_weapon(item,amount);
 
-			}else {
-				scr_unequip_weapon();
-			}
+				}else {
+					scr_unequip_weapon();
+				}
+			break;
+			case item_type.tool:
+				if(!equip){
+					equip = scr_equip_tool(item,amount);
+
+				}else {
+					scr_unequip_tool();
+				}
+			break;
+			case item_type.active:
+				if(amount == scr_active_get_data(item)){
+					equip = scr_use_active(item);
+					inventory[# 2, tool_slot] = 1;
+				}
+			break;
 		}
 		
 		tool_key = false;
@@ -207,8 +223,13 @@ if(obj_ig_menu_controller.state == "closed"){
 					case 16:
 					break;
 					case tool_slot:
-						if(!wep_equip){
-							scr_inv_item_grab(selected);
+						if(!equip){
+							if(inventory[# 0,tool_slot] != item_type.active){
+								scr_inv_item_grab(selected);
+							}else {
+								scr_inv_item_grab(selected);
+								inventory[# 2,holder] = 1;
+							}
 						}
 					break;
 					default:

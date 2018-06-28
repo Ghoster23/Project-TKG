@@ -18,6 +18,7 @@ switch(type){
 	break;
 	case item_type.unique_consumable:
 		return scr_unique_consume_get_name(item);
+	break;
 	case item_type.drop:
 		return scr_drop_get_name(item);
 	break;
@@ -26,6 +27,9 @@ switch(type){
 	break;
 	case item_type.weapons:
 		return scr_weapon_get_name(item);
+	break;
+	case item_type.active:
+		return scr_active_get_name(item);
 	break;
 	case item_type.tool:
 		return scr_tool_get_name(item);

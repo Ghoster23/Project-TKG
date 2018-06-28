@@ -1,14 +1,14 @@
 //States
-wep_pat_state  = 0; //State to start at
-wep_pat_nstate = 0;
+pat_state  = 0; //State to start at
+pat_nstate = 0;
 
 //Cooldown
-wep_pat_cd    = argument0; //Time for shot cooldown
-wep_pat_alarm = argument1; //Which alarm is the cd
+pat_cd    = argument0; //Time for shot cooldown
+pat_alarm = argument1; //Which alarm is the cd
 
 //Charge
-wep_pat_img_ind_charged = argument2;
-wep_pat_img_spd         = argument3;
+pat_img_ind_charged = argument2;
+pat_img_spd         = argument3;
 
 //Capacity
 wep_capacity = argument4;
