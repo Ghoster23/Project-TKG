@@ -28,7 +28,8 @@ if go and not global.pause{
             }
 			
 		break;
-		case "pause":
+		
+		case 6: //Stun
 		break;
 
     }

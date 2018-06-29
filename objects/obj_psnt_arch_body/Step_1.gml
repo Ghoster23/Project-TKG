@@ -10,6 +10,11 @@ if(not global.pause){
     if(dead){
         state = 5;
     }
+	
+	///Stun
+    if(stun){
+        state = 6;
+    }
 
 	if(state_check){
 		state_check = false;
@@ -79,6 +84,20 @@ if(not global.pause){
 			break;
 		
 			case 5: //Dead
+			break;
+			
+			case 6: //Stun
+				if(not stun){
+					if(dis > idle_r){
+						state = 0;
+					}else if(dis > aim_r){
+						state = 2;
+					}else if(dis > flee_r){
+						state = 3;
+					}else {
+						state = 1;
+					}
+				}
 			break;
 		}
 

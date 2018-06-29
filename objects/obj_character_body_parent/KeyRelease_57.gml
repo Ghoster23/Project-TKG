@@ -1,1 +1,1 @@
-scr_spawn_item(item_type.tool, tool.pickaxe, 8, x, y, true, 0);
+scr_inv_set_pos(item_type.active, active.frozone, 6, obj_inventory_controller.tool_slot);

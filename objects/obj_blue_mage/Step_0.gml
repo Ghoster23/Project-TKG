@@ -7,7 +7,6 @@ if go and not global.pause{
 	//states for enemy behaviour
 	switch(state){
         case "ghostfollow":  //move torwards player to give contact damage
-		
 			//probably not permanent - check if there is any lit fire and if there inst die
 			mages_controller.check_fires_all_off = true;
 			mages_controller.calculate = true;
@@ -22,8 +21,6 @@ if go and not global.pause{
 				physics_apply_impulse(x,y,lengthdir_x(25,player_dir),lengthdir_y(25,player_dir));
 				state = "attackwait";
 			}
-
-			
         break;
 		
 		case "ghost2mage": //transition state between ghost and mage
@@ -56,8 +53,8 @@ if go and not global.pause{
 					alarm_set(8,lightingtime/2);
 				}
 			}
-			
 		break;
+		
 		case "attackwait":
 		case "wait":
 			
@@ -87,7 +84,6 @@ if go and not global.pause{
 		
 		
 		case "dead": //dead
-			
 			ds_list_delete(mages_controller.mages,ds_list_find_index(mages_controller.mages,id));
 			solid = false;
 			image_speed = 0;
@@ -100,6 +96,10 @@ if go and not global.pause{
 		break;
 		
 		case "pause":	
+		break;
+		
+		case 6: //Stun
+			
 		break;
 	}   
 

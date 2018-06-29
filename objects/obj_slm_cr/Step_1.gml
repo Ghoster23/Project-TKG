@@ -13,14 +13,20 @@ if not global.pause and go{
 		    state = 0;
 		}
 		
+		if(stun){
+			state = 6;
+		}
+		
 		///Die
-	    if stat[stats.hp] <= 0 and sprite_index != spr_slime_d{
+	    if dead and sprite_index != spr_slime_d{
 	        sprite_index = spr_slime_d;
 	        image_index = 0;
 	        image_speed = 0.2;
 	        state = 2;
         
 	    }
+		
+		
 	}
 	
 	if prev_state != state{

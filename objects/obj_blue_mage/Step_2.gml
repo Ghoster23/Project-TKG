@@ -38,29 +38,29 @@ if(state == "magego2fire"){
 
 	
 
-	if flash == false and not global.pause{
+	if(not flash and not stun and not global.pause){
 		
-	image_speed=0.6;
-	switch d {
-	    case 0:
-	        break;
-	    case -1: //Left
-	        image_xscale = -1;
-		    sprite_index = mage_right_follow;
-	        break;
-	    case -2: //Up and Right
-		case -3: //Up
-		case -4: //Up and Left
-	        sprite_index = mage_up_follow;
-	        break;
-	    case 1: //Right
-	        image_xscale = 1;
-	        sprite_index = mage_right_follow;
-	        break;
-	    case 2: //Left and Down
-	    case 3: //Down
-	    case 4: //Down and Right
-	        sprite_index = mage_down_follow;
+		image_speed=0.6;
+		switch d {
+		    case 0:
+		        break;
+		    case -1: //Left
+		        image_xscale = -1;
+			    sprite_index = mage_right_follow;
+		        break;
+		    case -2: //Up and Right
+			case -3: //Up
+			case -4: //Up and Left
+		        sprite_index = mage_up_follow;
+		        break;
+		    case 1: //Right
+		        image_xscale = 1;
+		        sprite_index = mage_right_follow;
+		        break;
+		    case 2: //Left and Down
+		    case 3: //Down
+		    case 4: //Down and Right
+		        sprite_index = mage_down_follow;
 	        break;
 		}
 	}
@@ -69,7 +69,7 @@ if(state == "magego2fire"){
 if (state == "ghostfollow" or state == "attackwait") {
 	
 
-	if flash == false and not global.pause{
+	if flash == false and not stun and not global.pause{
 	image_speed=0.6;
 	switch d {
 	    case 0:
@@ -96,7 +96,7 @@ if (state == "ghostfollow" or state == "attackwait") {
 
 if state == "lightfire" or state == "wait"{
 	
-	if (flash == false and not global.pause){
+	if (flash == false and not stun and not global.pause){
 		image_speed=0.6;
 	    sprite_index = mage_stand_still;
 		image_xscale = 1;

@@ -17,7 +17,7 @@ if(not global.pause and booted and owner != noone and instance_exists(owner)){
 		
 		case statuses.frozen:
 			part = global.pt_st_frozen;
-			amt  = -6;
+			amt  = -9;
 		break;
 		
 		case statuses.wet:

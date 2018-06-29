@@ -9,6 +9,11 @@ if(not global.pause){
     if(dead){
         state = 4;
     }
+	
+	///Stun
+    if(stun){
+        state = 6;
+    }
 
 	if(state_check){
 		state_check = false;
@@ -62,6 +67,20 @@ if(not global.pause){
 			break;
 		
 			case 4: //Dead
+			break;
+			
+			case 6: //Stun
+				if(not stun){
+					if(dis > idle_r){
+						state = 0;
+					}else if(dis > swing_r){
+						state = 1;
+					}else if(weapon.pat_state == 0){
+						state = 2;
+					}else {
+						state = 2;
+					}
+				}
 			break;
 		}
 

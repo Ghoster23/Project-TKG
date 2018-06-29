@@ -1,10 +1,13 @@
 /// @description decide the state
-if(stat[stats.hp] <= 0) and state != 3{
+if(dead){
     state = 3;
-        
+}
+
+if(stun){
+    state = 6;
 }
 	
-if state != 3{   //if not dead decide between state 0 or 1
+if(not dead and not stun){   //if not dead decide between state 0 or 1
 	scr_define_path(self, global.body);
 	
 	path       = global.ai_path;

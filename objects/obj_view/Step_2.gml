@@ -14,7 +14,7 @@ switch m_state {
 	break;
 	
 	case 2: //Shake		
-		global.shake *= 0.9;
+		global.shake *= 0.5;
 	break;
 }
 camera_set_view_pos(   view_camera[0], x - cam_wd / 2, y - cam_hg / 2);

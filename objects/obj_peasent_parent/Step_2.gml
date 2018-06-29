@@ -15,7 +15,7 @@ switch(state){
 wep_dir  = dir;
 spr_side = (dir div 90) mod 4;
 
-if(flash == false and not global.pause){
+if(not flash and not stun and not global.pause){
 	switch(spr_side){
 	    case 2://Left
 	        image_xscale = -1;

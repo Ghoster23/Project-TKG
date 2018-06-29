@@ -69,6 +69,10 @@ if go and not global.pause{
 			
 			scr_kill_enemy();
 		break;
+		
+		case 6: //Stun
+			image_blend = c_teal;
+		break;
 	}
 	
 }else if go{
