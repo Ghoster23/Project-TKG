@@ -4,7 +4,7 @@ var inst = argument0;
 var xx = inst.x+16;
 var yy = inst.y+16;
 
-var len = 256;
+var len = 300;
 
 var a1  = point_direction(x,y,xx,yy);
 var a2  = a1;
@@ -19,6 +19,9 @@ var points = [[0,0],[0,0],[0,0],[0,0]];
 
 //Get first point
 while(collision_line(x,y,xr,yr,inst,true,true)){
+	
+	show_debug_message("1");
+	
 	a1 += 0.1;
 	
 	xr = x + lengthdir_x(len,a1);
@@ -33,6 +36,9 @@ yr = y + lengthdir_y(len,a2);
 
 //Get second point
 while(collision_line(x,y,xr,yr,inst,true,true)){
+	
+	show_debug_message("2");
+	
 	a2 -= 0.1;
 	
 	xr = x + lengthdir_x(len,a2);
@@ -46,6 +52,9 @@ xr = x;
 yr = y;
 
 while(!collision_circle(xr,yr,0.1,inst,true,true)){
+	
+	show_debug_message("3");
+	
 	ln1 += 0.1;
 	
 	xr = x + lengthdir_x(ln1,a1-0.1);
@@ -59,6 +68,9 @@ xr = x;
 yr = y;
 
 while(!collision_circle(xr,yr,0.1,inst,true,true)){
+	
+	show_debug_message("4");
+	
 	ln2 += 0.1;
 	
 	xr = x + lengthdir_x(ln2,a2+0.1);

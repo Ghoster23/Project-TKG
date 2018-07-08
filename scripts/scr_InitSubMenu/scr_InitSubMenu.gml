@@ -30,7 +30,7 @@
   menuText[3,3] = "obj_shoptable"
   menuText[3,4] = "obj_sell_drop"
   menuText[3,5] = "obj_shopkeep"  
-  menuText[3,6] = "Cosmetic 6"
+  menuText[3,6] = "obj_light_test"
   menuText[3,7] = "Cosmetic 7"
   menuText[3,8] = "Cosmetic 8"
   menuText[3,9] = "Cosmetic 9" 

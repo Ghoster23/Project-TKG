@@ -1,6 +1,6 @@
 /// @description Inicialise the enemy
 event_inherited();
-
+d=0;
 image_speed = 0.2;
 image_alpha = 0.7;
 
@@ -27,3 +27,4 @@ for(i = 0; i < 6; i++){
 fl_gen = instance_create_layer(x - 20, y - 2,
 							   layer, obj_slm_cr_fluid_gen);
 fl_gen.creator = self;
+
