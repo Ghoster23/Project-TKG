@@ -1,20 +1,10 @@
 if(instance_exists(global.body)){
+	on = true;
+	
 	m = global.ratio;
 
-	xx = 64 * m;
-	yy = 64 * m;
-
-	///Draw health bar
-	scr_health_bar();
-
-	///Draw status bar
-	scr_status_bar();
-
-	///Draw tool slot
-	scr_tool_slot();
-
-	///Draw Consumable slot
-	scr_consumable_slot();
+	xx = 16 * m;
+	yy = 16 * m;
 
 	///Draw coins
 	draw_sprite_ext(spr_HUD_coin, 0, xx + 160 * m, 8 * m,m,m,0,c_white,1);
@@ -33,4 +23,11 @@ if(instance_exists(global.body)){
 	if(global.body.stat[stats.hp] <= 0){
 		instance_destroy();
 	}
+}else {
+	on = false;
+}
+
+if(not global.pause){
+	counter++;
+	counter = counter mod 360;
 }

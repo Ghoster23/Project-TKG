@@ -3,9 +3,6 @@ switch(argument0) {
 	case potions.regeneration:
 		return "Elixir of Life";
 	break;
-	case potions.midas:
-		return "Midas' Favourite";
-	break;
 	case potions.seeall:
 		return "Crystal Clear";
 	break;

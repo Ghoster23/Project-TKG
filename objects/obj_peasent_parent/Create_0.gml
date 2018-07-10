@@ -33,6 +33,8 @@ body_dead_sprite = asset_get_index("spr_psnt_"+b_type[body_type]+"_dead");
 
 sprite_index = bodyf_sprite;
 
+sprs = [bodys_sprite,bodyb_sprite,bodyf_sprite];
+
 //Body Parts
 ///Head
 head = instance_create_layer(x,y,layer,obj_psnt_head);

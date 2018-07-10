@@ -8,17 +8,6 @@ if(not global.pause){
 	switch(state){
 		//Concealed
 		case 0:			
-			///Mimic Tell
-			if(blink){
-				if(image_speed == 0){
-				    image_speed = 0.2;
-					
-				}else if(image_speed == 0.2 and (image_index == 0 or image_index == 9)){
-				    image_speed = 0;
-				    image_index = 0;
-				    blink = false;
-				}
-			}
 		break;
 	
 		//Chase and attack player
@@ -35,16 +24,12 @@ if(not global.pause){
 	
 		//Death
 		case 3:
-			if(sprite_index != spr_mimic_d){
-				//Die
-		        alarm[5]     = 20;
-		        sprite_index = spr_mimic_d;
-				
-			}
-			
 			//Wooble
 		    a += 1;
 		    phy_rotation = 25 * sin(a);
+		break;
+		
+		case 6: //Stun
 		break;
 	}	
 }else {

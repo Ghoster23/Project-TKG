@@ -8,22 +8,18 @@ if go and not global.pause{
     switch(state){
 		///Idle
         case 0:
-			image_speed = 1.5;
 			scr_idle_enemy(32,20);
             
         break;
 		
 		///Chase the player
         case 1:
-			image_speed = 1.5;
             scr_move_entity(point_direction(x,y,global.body.x,global.body.y),1);
             
         break;
 		
 		///Dash towards the player
-        case 2:
-			image_speed = 0;
-			
+        case 2:			
 			if(alarm[4] == -1 and not dash_cd){
 				alarm[4] = (1/3) * room_speed;
 			}
@@ -47,9 +43,9 @@ if go and not global.pause{
 			//Change sprite
 			if sprite_index != spr_bat_d {
 	            sprite_index = spr_bat_d;
-				image_index = 0;
-				image_speed = 0.5;
-				flash = false;
+				image_index  = 0;
+				image_speed  = 0.5;
+				flash        = false;
 			}
 			
 			if image_index == 3{

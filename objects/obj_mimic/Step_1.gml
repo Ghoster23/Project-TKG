@@ -3,8 +3,10 @@ if(not global.pause){
 	y = phy_position_y;
 
 	///Die
-    if(stat[stats.hp] <= 0){
+    if(dead and state != 3){
         state = 3;
+		alarm[5]     = 20;
+		sprite_index = spr_mimic_d;		
     }
 
 	///Enemy States
@@ -22,20 +24,14 @@ if(not global.pause){
 		break;
 			
 		case 1: //Wake up
-			if(go){
-				if(sprite_index != spr_mimic_a){
-					image_speed  = 0.8;
-					sprite_index = spr_mimic_a;
-				
-					phy_fixed_rotation = false;
-					stat[stats.spd]    = 4;
+			if(go and sprite_index == spr_mimic_a and image_index >= 8){				
+				phy_fixed_rotation = false;
+				stat[stats.spd]    = 4;
 					
-				}else if(image_index >= 8){
-					state  = 2;
-					damage = 8;
+				state  = 2;
+				damage = 8;
 					
-					image_speed = 1;
-				}
+				image_speed = 1;
 			}
 		break;
 		

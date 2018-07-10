@@ -13,26 +13,22 @@ switch(state){
 }
 
 wep_dir  = dir;
-spr_side = (dir div 90) mod 4;
+spr_side = ((dir + 45) div 90) mod 4;
+
+scr_entity_sprite_control(sprs,dir,0);
 
 if(not flash and not stun and not global.pause){
 	switch(spr_side){
 	    case 2://Left
-	        image_xscale = -1;
-		    sprite_index = bodys_sprite;
 			head.facing = "left";
 	    break;
 	    case 1: //Up
-	        sprite_index = bodyb_sprite;
 			head.facing = "up";
 	    break;
 	    case 0: //Right
-	        image_xscale = 1;
-	        sprite_index = bodys_sprite;
 			head.facing = "right";
 	    break;
 	    case 3: //Down
-	        sprite_index = bodyf_sprite;
 			head.facing = "down";
 	    break;
 	}
