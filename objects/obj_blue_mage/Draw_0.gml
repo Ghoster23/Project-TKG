@@ -14,7 +14,7 @@ for(var i=0; i< ds_list_size(preference);i++){
 
 }
 */
-/* 
+/*
 if(pair != noone){
 	draw_arrow(x,y,pair.x,pair.y,6);
 }

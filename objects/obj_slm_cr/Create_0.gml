@@ -29,3 +29,4 @@ for(i = 0; i < 6; i++){
 fl_gen = instance_create_layer(x - 20, y - 2,
 							   layer, obj_slm_cr_fluid_gen);
 fl_gen.creator = self;
+

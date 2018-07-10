@@ -10055,6 +10055,14 @@
             }
         },
         {
+            "Key": "ec42f502-ccab-4c92-b252-86a2d2d935e8",
+            "Value": {
+                "id": "b7fa25cf-bfeb-4483-a998-2c2aedd974ce",
+                "resourcePath": "sprites\\spr_bulb\\spr_bulb.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "eca7a478-24e3-454b-bc3c-33a2f0abcb53",
             "Value": {
                 "id": "d7c871f4-c531-471c-bd02-a1ddcd37b5e8",
@@ -10644,6 +10652,14 @@
                 "id": "1c737a32-55e4-4043-8488-5e1496772fa6",
                 "resourcePath": "sprites\\spr_HUD_armor\\spr_HUD_armor.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "fa39dac4-98c8-4bb1-8354-f2e5e0a9ef51",
+            "Value": {
+                "id": "253a2963-b9fa-4373-af43-b67b0e0058fd",
+                "resourcePath": "objects\\obj_light_test\\obj_light_test.yy",
+                "resourceType": "GMObject"
             }
         },
         {

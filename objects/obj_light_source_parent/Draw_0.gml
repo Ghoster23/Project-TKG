@@ -1,3 +1,5 @@
+draw_self();
+
 if(ds_exists(in_range,ds_type_list)){
 	ds_list_destroy(in_range);
 }

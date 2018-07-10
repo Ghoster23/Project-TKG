@@ -1,6 +1,6 @@
 active = true;
 
-radius = 128;
+radius = 400;
 
 color  = c_white;
 
