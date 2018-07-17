@@ -1,5 +1,7 @@
 event_inherited();
 
+no_shadows = true;
+
 //Pause
 scr_pausable_init(alarm_count);
 

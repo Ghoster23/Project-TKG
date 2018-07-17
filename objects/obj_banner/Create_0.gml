@@ -7,3 +7,5 @@ image_index=irandom_range(0,31);
 if place_meeting(x,y,obj_wallvegetation){
 	instance_destroy();
 }
+
+no_shadows = true;

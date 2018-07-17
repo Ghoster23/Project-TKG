@@ -20,3 +20,6 @@ phy_fixed_rotation = true;
 counter = 0;
 
 owner = noone;
+
+
+no_shadows = true;

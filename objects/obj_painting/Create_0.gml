@@ -7,3 +7,5 @@ runonce = true;
 if place_meeting(x,y,obj_wallvegetation){
 	instance_destroy();
 }
+
+no_shadows = true;

@@ -13,3 +13,4 @@ if(instance_exists(obj_inventory_controller) && cursor == false){
 			  obj_inventory_controller.inventory[# 1, 12],
 			  obj_inventory_controller.inventory[# 2, 12]];
 }
+

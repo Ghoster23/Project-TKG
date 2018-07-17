@@ -27,3 +27,8 @@ preference = ds_list_create();
 single = true;
 
 flameoff =0;
+
+no_shadows = true;
+
+front_light = scr_create_light(x+16,y+16,true,40,make_color_hsv(150,255,200));
+back_light = scr_create_light(x+16,y+16,false,65,make_color_hsv(130,255,150));

@@ -8,3 +8,5 @@ offset =  true;
 offs   =    17;
 
 visible = false;
+
+no_shadows = true;

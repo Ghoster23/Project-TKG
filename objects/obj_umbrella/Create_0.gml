@@ -12,3 +12,5 @@ stowed = spr_umbrella;
 //Mechanics
 scr_wep_umb_pat_init( 0.5, 0, 3 * room_speed, 6 * room_speed, 2 * room_speed, 1, 4, 10, pi/12, 60, 10);
 pat = scr_wep_umb_pat_states;
+
+no_shadows = true;

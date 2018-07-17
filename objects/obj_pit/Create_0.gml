@@ -14,3 +14,5 @@ d_r = 0;
 d_l = 0;
 
 ad = 0;
+
+no_shadows = true;

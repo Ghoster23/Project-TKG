@@ -7,3 +7,5 @@ event_inherited();
 image_speed=0;
 
 once = false;
+
+no_shadows = true;

@@ -8,7 +8,7 @@ if global.pause == false{
 	///this is the bit when the the item connects with the ground and decides the bouncin
 
 	z = (zzero + (speedzero*t) + (0.5*a*(t*t)));
-	show_debug_message(string(z));
+	//show_debug_message(string(z));
 	
 	if(z<=2){
 		impact = true;

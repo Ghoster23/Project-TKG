@@ -10,3 +10,5 @@ o = 0;
 
 event_inherited();
 
+
+front_light = scr_create_light(x+16,y+4,true,25,make_color_hsv(30,255,255));

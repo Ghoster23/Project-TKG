@@ -1,6 +1,8 @@
 event_inherited();
 owner = noone;
 
+no_shadows = true;
+
 //Pause
 scr_pausable_init(alarm_count);
 

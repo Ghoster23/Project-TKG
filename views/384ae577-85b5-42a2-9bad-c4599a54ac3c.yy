@@ -6,7 +6,8 @@
     "children": [
         "98757afd-6345-4027-9915-0d30eae7991a",
         "e46cf251-01f6-440c-94ef-1edcc2880fd8",
-        "921e1f94-0539-414f-9a77-bea7defa25af"
+        "921e1f94-0539-414f-9a77-bea7defa25af",
+        "5bbd23b5-4d9c-4c7d-a048-5873a5dded9d"
     ],
     "filterType": "GMScript",
     "folderName": "Light",

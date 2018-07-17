@@ -28,3 +28,5 @@ physics_fixture_set_collision_group(fix1,1);
 my_fix=physics_fixture_bind_ext(fix1, self,-16,-16);
 
 phy_fixed_rotation = true;
+
+no_shadows = true;

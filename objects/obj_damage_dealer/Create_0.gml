@@ -1,5 +1,7 @@
 event_inherited();
 
+no_shadows = true;
+
 owner = noone;
 
 kb_amount = 0; //Knock back amount

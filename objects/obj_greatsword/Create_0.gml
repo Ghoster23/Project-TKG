@@ -10,3 +10,5 @@ particle = global.pt_sow_fire;
 //Mechanics
 scr_wep_gs_pat_init(0,20,180,0.4,0,4);
 pat = scr_wep_gs_pat_states;
+
+no_shadows = true;

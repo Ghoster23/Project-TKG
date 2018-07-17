@@ -92,3 +92,8 @@ if ds_exists(ds_depthgrid, ds_type_grid) {
 
 part_system_drawit(global.ps_if);
 part_system_drawit(global.ps_ps);
+
+//lights that go in front of everything
+with obj_light_front{
+	script_execute(draw_script,false);
+}

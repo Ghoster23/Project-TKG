@@ -13,6 +13,7 @@
     "bboxmode": 2,
     "colkind": 1,
     "coltolerance": 0,
+    "edgeFiltering": false,
     "frames": [
         {
             "id": "a3ec7a01-8ec1-4ee7-85d9-b95d91afcafb",
@@ -193,7 +194,7 @@
     ],
     "gridX": 0,
     "gridY": 0,
-    "height": 39,
+    "height": 37,
     "layers": [
         {
             "id": "b29085ab-ecbc-4ac2-94cd-a4c16bbb3b5f",
@@ -208,6 +209,7 @@
         }
     ],
     "origin": 9,
+    "originLocked": false,
     "playbackSpeed": 1,
     "playbackSpeedType": 1,
     "premultiplyAlpha": false,

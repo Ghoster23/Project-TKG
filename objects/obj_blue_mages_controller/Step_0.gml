@@ -40,7 +40,6 @@ if(check_fires_all_off == true){
 
 
 if(calculate == true){
-	show_debug_message("CALCULATING");
 
 	calculate = false;
 	mage = noone;
