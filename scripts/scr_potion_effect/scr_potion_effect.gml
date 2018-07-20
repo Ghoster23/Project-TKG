@@ -8,10 +8,6 @@ switch(pot_id){
 		scr_status_apply( statuses.regen,  4 * pot_lvl, global.body);
 		
 	break;
-	case potions.midas: //Midas Potion
-		scr_status_apply( statuses.midas, 15 * (pot_lvl), global.body);
-		
-	break;
 	case potions.seeall: //See All Potion
 		scr_status_apply( statuses.seeall, 60 * (pot_lvl), global.body);
 		

@@ -1,4 +1,6 @@
 /// @description Initiate Variables
+event_inherited();
+
 hands  = instance_create_layer(x,  y,layer,    obj_hands);
 hands.sprite_index = hands_spr;
 
@@ -32,32 +34,9 @@ dead      = false;
 path = 0;
 
 //Stats
-stat[stats.mhp]  = 10;
-stat[stats.hp]   = 10;
-stat[stats.atk]  =  5;
-stat[stats.def]  =  5;
-stat[stats.satk] =  5;
-stat[stats.sdef] =  5;
-stat[stats.spd]  =  3;
-stat[stats.arm]  =  0;
-stat[stats.luck] =  0;
 array_copy(stat,0,global.p_stats,0,stats.count);
 
-
-//Modifiers
-modf[stats.mhp]  = 0;
-modf[stats.hp]   = 0;
-modf[stats.atk]  = 0;
-modf[stats.def]  = 0;
-modf[stats.satk] = 0;
-modf[stats.sdef] = 0;
-modf[stats.spd]  = 0;
-modf[stats.arm]  = 0;
-modf[stats.luck] = 0;
-
 //Statuses
-status_list  = ds_list_create();
-status_count = 0;
 event_perform(ev_alarm,3);
 
 stuck  = false;
@@ -98,8 +77,6 @@ hs          = false;
 spr_body = body_sprs[3];
 
 shout = false;
-
-event_inherited();
 
 //Body particle emitter
 global.body_em = part_emitter_create(global.ps_if);

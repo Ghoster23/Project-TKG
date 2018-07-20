@@ -6,10 +6,6 @@ switch(type){
 		return c_red;
 	break;
 	
-	case potions.midas:
-		return make_color_rgb(255,198,0);
-	break;
-	
 	case potions.compass:
 		return c_navy;		
 	break;

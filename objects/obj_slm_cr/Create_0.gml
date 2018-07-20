@@ -1,8 +1,10 @@
 /// @description Inicialise the enemy
 event_inherited();
-d=0;
-image_speed = 0.2;
+
+image_speed = 0.3;
 image_alpha = 0.7;
+
+sprs = [spr_slime_side,spr_slime_up,spr_slime_down];
 
 //Stats
 stat[stats.mhp]  = 20;

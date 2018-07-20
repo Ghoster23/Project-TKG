@@ -21,6 +21,8 @@ skeli_pophead   = spr_skeli_pophead;
 skeli_pickup    = spr_skeli_pickup;
 skeli_aim       = spr_skeli_aim; 
 
+sprs = [spr_skeli_right,spr_skeli_up,spr_skeli_down];
+
 ///Enemy unique
 
 state = "chase";

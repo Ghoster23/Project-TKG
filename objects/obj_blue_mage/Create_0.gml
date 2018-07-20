@@ -19,7 +19,9 @@ mage_up_follow    = spr_mage_walk_up;
 mage_down_follow  = spr_mage_walk_down;
 mage_stand_still  = spr_mage_still;
 ghost_follow      = spr_mage_ghost;
-transformation    = spr_mage_transform; 
+transformation    = spr_mage_transform;
+
+sprs = [mage_right_follow,mage_up_follow,mage_down_follow];
 
 ///Enemy unique
 //Has moved

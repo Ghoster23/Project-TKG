@@ -1,1 +1,3 @@
-scr_inv_set_pos(item_type.active, active.frozone, 6, obj_inventory_controller.tool_slot);
+var i = irandom(statuses.count);
+scr_status_apply(i,10,self);
+show_debug_message(i);

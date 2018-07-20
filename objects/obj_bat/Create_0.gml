@@ -1,6 +1,6 @@
 /// @description Initialise the enemy
 event_inherited();
-image_speed=1.5;
+image_speed = 1.5;
 
 offset = true;
 offs   = 48;

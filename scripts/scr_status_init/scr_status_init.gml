@@ -13,11 +13,10 @@ enum statuses {
 	compass   = 7,
 	ohko      = 8,
 	seeall    = 9,
-	midas     = 10,
-	immune    = 11,
-	pos_count = 6,
+	immune    = 10,
+	pos_count = 5,
 	
 	/* - Neutral status effects - */
-	wet       = 12,
-	count     = 13
+	wet       = 11,
+	count     = 14
 }
