@@ -1,5 +1,5 @@
-var wc  = display_get_gui_width()  / 2;
-var hc  = display_get_gui_height() / 2;
+var wc  = global.gui_WD / 2;
+var hc  = global.gui_HG / 2;
 var m   = global.ratio;
 var off = (mn_hg / 2) * m;
 draw_set_font(font_ig_menu);
@@ -41,6 +41,8 @@ switch state{
 						if(i == 1){
 							obj_view.target = global.body;
 							obj_view.t_zoom = 2;
+						}else if(i == 3){
+							instance_create_layer(x,y,layer,obj_options_controller);
 						}
 						
 					}else {

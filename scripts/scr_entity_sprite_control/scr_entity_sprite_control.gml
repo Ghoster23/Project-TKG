@@ -9,6 +9,8 @@ var mode = argument2;
 
 var ori  = scr_orientate_entity(dir);
 
+spr_side = ori;
+
 if(is_array(sprs)){
 	if(array_length_1d(sprs) == 4){
 		sprite_index = sprs[ori];

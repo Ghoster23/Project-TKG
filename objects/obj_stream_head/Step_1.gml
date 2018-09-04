@@ -1,0 +1,1 @@
+path_clear_points(stream_path);

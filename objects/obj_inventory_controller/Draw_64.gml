@@ -27,8 +27,7 @@ if(room == rm_level || room == rm_lvl_editor_test){
 		
 		
 		if(text != ""){
-			scr_boxed_text(mx,my,string_width(text),string_height(text),
-			               c_aqua, c_white, m, font_chsl_tags, text);
+			scr_boxed_text( mx + 8 * m, my + 8 * m, c_white, c_white, m, font_chsl_tags, text, spr_HUD_9SB);
 		}
 		
 	}

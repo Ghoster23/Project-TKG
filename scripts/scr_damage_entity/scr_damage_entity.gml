@@ -18,7 +18,7 @@ if(not damaged and
    not mine and
    instance_exists(other)){
 	   
-	var kb  = other.kb_amount;
+	var kb = other.kb_amount;
 	var xx = other.x;
 	var yy = other.y;
 	var d  = point_direction(xx,yy,x,y);

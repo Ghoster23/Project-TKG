@@ -30,49 +30,45 @@ switch(type){
 	break;
 					
 	case item_type.chess_piece:
-		draw_sprite_ext(spr_chess_pieces,item,xx,yy,xscale,yscale,0,c_white,1);
+		draw_sprite_ext(spr_i_chess_piece,item,xx,yy,xscale,yscale,0,c_white,1);
 	break;
 					
 	case item_type.constellation:
-		draw_sprite_ext(spr_constellations,item,xx,yy,xscale,yscale,0,c_white,1);
+		draw_sprite_ext(spr_i_constellation,item,xx,yy,xscale,yscale,0,c_white,1);
 	break;
 					
-	case item_type.tool:
-		draw_sprite_ext(spr_tool,item,xx,yy,xscale,yscale,0,c_white,1);
-	break;
-					
-	case item_type.weapons:
-		draw_sprite_ext(spr_weapon,item,xx,yy,xscale,yscale,0,c_white,1);
+	case item_type.tl_n_wep:
+		draw_sprite_ext(spr_i_tl_n_wep,item,xx,yy,xscale,yscale,0,c_white,1);
 	break;
 					
 	case item_type.equipable:
-		draw_sprite_ext(spr_equip,item,xx,yy,xscale,yscale,0,c_white,1);	
+		draw_sprite_ext(spr_i_equip,item,xx,yy,xscale,yscale,0,c_white,1);	
 	break;
 	
 	case item_type.active:
-		draw_sprite_ext(spr_actives,item,xx,yy,xscale,yscale,0,c_white,1);	
+		draw_sprite_ext(spr_i_active,item,xx,yy,xscale,yscale,0,c_white,1);	
 	break;
 	
 	case item_type.drop:
-		draw_sprite_ext(spr_drops,item,xx,yy,xscale,yscale,0,c_white,1);
+		draw_sprite_ext(spr_i_drop,item,xx,yy,xscale,yscale,0,c_white,1);
 	break;
 	
 	case item_type.heart:
 		switch(item){
 			case heart.heart:
-				draw_sprite_ext(spr_heart_drop,amount,xx,yy,xscale,yscale,0,c_white,1);
+				draw_sprite_ext(spr_i_heart,amount,xx,yy,xscale,yscale,0,c_white,1);
 			break;
 			case heart.armor:
-				draw_sprite_ext(spr_armor_drop,frame,xx,yy,xscale,yscale,0,c_white,1);
+				draw_sprite_ext(spr_i_armor,frame,xx,yy,xscale,yscale,0,c_white,1);
 			break;
 			case heart.container:
-				draw_sprite_ext(spr_heart_drop,amount,xx,yy,xscale,yscale,0,c_white,1);
+				draw_sprite_ext(spr_i_heart,amount,xx,yy,xscale,yscale,0,c_white,1);
 			break;
 		}
 	break;
 	
 	case item_type.currency:
-		draw_sprite_ext(spr_coin_drop,frame,xx,yy,xscale,yscale,0,c_white,1);
+		draw_sprite_ext(spr_i_coin,frame,xx,yy,xscale,yscale,0,c_white,1);
 	break;
 }
 

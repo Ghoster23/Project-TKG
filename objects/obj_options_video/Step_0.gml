@@ -1,5 +1,5 @@
 if(global.key_active[key_id.menu] or 
-	scr_GUI_button(c-17*m,c+17*m,particles_width+20*m,particles_height+30*m)){
+	scr_GUI_button(hc-17*m,hc+17*m,particles_width+20*m,particles_height+30*m)){
 	instance_create_layer(x,y,layer,obj_options_controller);
 	instance_destroy();
 }

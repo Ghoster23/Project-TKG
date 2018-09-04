@@ -8,8 +8,7 @@ scr_chessP_init();
 scr_constellation_init();
 scr_food_init();
 scr_unique_consume_init();
-scr_tool_init();
-scr_weapon_init();
+scr_tw_init();
 scr_equip_init();
 scr_drop_init();
 

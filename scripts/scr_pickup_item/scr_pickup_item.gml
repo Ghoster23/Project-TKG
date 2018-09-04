@@ -12,7 +12,7 @@ show_debug_message("Item: " + string(item));
 show_debug_message("Amount: " + string(amount));
 
 if(amount > 0){
-	if(type < 10){
+	if(type < 9){
 		with(obj_inventory_controller){
 			for(var i = 0; i < 9; i++){
 				var temp_type   = inventory[# 0, i];

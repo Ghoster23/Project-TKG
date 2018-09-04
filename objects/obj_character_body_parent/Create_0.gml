@@ -11,9 +11,7 @@ voice =noone;
 
 weapon = noone;
 
-if(global.weapon != -1){
-	weapon = scr_create_weapon(x,y,layer,global.weapon,id);
-}
+weapon = scr_create_tw(global.weapon,-1);
 
 visible            = true;
 phy_fixed_rotation = true;

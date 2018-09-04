@@ -1,9 +1,8 @@
-if(obj_player_hud.on){
-	counter = obj_player_hud.counter;
-	var m = global.ratio;
-
+if(obj_player_hud.visible){
+	//Total Heart Count
 	var h_count = global.body.stat[stats.mhp] div 4;
 	
+	//Current HP
 	var hp = global.body.stat[stats.hp];
 
 	switch state {
@@ -86,11 +85,20 @@ if(obj_player_hud.on){
 		hp -= ch;
 	}
 	
+	slot_c = i;
+	
 	var ar = global.body.stat[stats.arm];
 
-	if(global.body.stat[stats.arm] > 0){	
-		draw_sprite_ext(spr_HUD_armor,  0,
-						(start_x + ((i + 1) * heart_wd)) * m, start_y * m,
-						m, m, 0, c_white, 1);	
+	if(ar > 0){
+		var xx = (start_x + ((slot_c + 1) * heart_wd)) * m;
+		var yy = start_y * m;
+		
+		draw_sprite_ext(spr_HUD_armor, 0, xx, yy, m, m, 0, c_white, 1);
+		
+		draw_set_halign(fa_center);
+		draw_set_valign(fa_middle);
+		draw_set_font(font_chsl_tags);
+		draw_text_transformed(xx + (-1 + heart_wd / 2) * m, yy + (2 + heart_hg / 2) * m, 
+								string(ar), ceil(m / 2), ceil(m / 2), 0);
 	}
 }

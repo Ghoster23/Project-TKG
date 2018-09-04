@@ -4,19 +4,15 @@
     "mvc": "1.1",
     "name": "4baada2d-ffcb-4b77-ac92-b4ef39ad9585",
     "children": [
-        "2d270c68-b640-47d2-b116-34fafdf68ecc",
-        "82cc035b-9db4-4cfc-a6ba-a113ba803cfe",
-        "1c0513bd-731c-4875-97ae-b032a8040606",
-        "b201d489-0769-4362-82d0-02dd28ad04cc",
-        "68130a2e-3532-4e1d-ba95-b8e1b2072345",
-        "7f895d0c-14fd-404b-ac9f-326a86a738a3",
         "87536863-9bb2-43f6-af38-cdd94892776a",
-        "4697dba9-4525-4110-8c4a-be714d98f7e3",
-        "be15132b-7809-4871-8f07-1360c8d3a8ef",
-        "a4519f18-fdf9-4304-b352-d3cb5caa17b6"
+        "b53f7555-9d97-4294-9d67-4bfd84b0cd39",
+        "0e896b12-dd55-4e29-97a6-71378b040974",
+        "6d9a7772-c5b6-45cb-9c91-6361d6ec4640",
+        "c742ef9e-3b2e-4d9f-be24-44b57f47ad22",
+        "749257d1-f617-408d-9296-a9da312b9f3b"
     ],
     "filterType": "GMScript",
-    "folderName": "drawing",
+    "folderName": "Drawing",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

@@ -4,10 +4,10 @@
 ///@param object_index
 ///@param owner
 ///@param ohko
-///@param multiplier(OPTIONAL)
-///@param divider(OPTIONAL)
-///@param base_damage(OPTIONAL)
-///@param knockback(OPTIONAL)
+///@param multiplier_opt
+///@param divider_opt
+///@param base_damage_opt
+///@param knockback_opt
 
 {
 var xx = argument[0];

@@ -7,8 +7,7 @@
         "9b791dcd-ae6d-4ede-9ef6-b51bdc1f8710",
         "69979dcf-3f00-4d31-80d0-bc657f878a28",
         "241b618a-b28a-4e78-bba8-016958677616",
-        "3d7e2712-4174-4c7c-9554-2a06808f130c",
-        "0cacb280-7e35-452a-8974-fea5096a7f38"
+        "3d7e2712-4174-4c7c-9554-2a06808f130c"
     ],
     "filterType": "GMSprite",
     "folderName": "player",

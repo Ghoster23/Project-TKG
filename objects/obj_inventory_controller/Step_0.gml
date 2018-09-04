@@ -15,20 +15,11 @@ if(obj_ig_menu_controller.state == "closed"){
 		var amount = inventory[# 2, tool_slot]; 
 		
 		switch(type){
-			case item_type.weapons:
+			case item_type.tl_n_wep:
 				if(!equip){
-					equip = scr_equip_weapon(item,amount);
-
+					equip = scr_tw_equip(item,amount);
 				}else {
-					scr_unequip_weapon();
-				}
-			break;
-			case item_type.tool:
-				if(!equip){
-					equip = scr_equip_tool(item,amount);
-
-				}else {
-					scr_unequip_tool();
+					equip = scr_tw_unequip();
 				}
 			break;
 			case item_type.active:

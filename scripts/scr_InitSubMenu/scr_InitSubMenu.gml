@@ -22,7 +22,7 @@
   menuText[2,6] = "obj_psnt_arch_body"
   menuText[2,7] = "obj_blue_mage"
   menuText[2,8] = "obj_skeli"
-  menuText[2,9] = "Enemy 9"  
+  menuText[2,9] = "obj_bloob"  
   
   menuText[3,0] = 9;
   menuText[3,1] = "obj_heart"

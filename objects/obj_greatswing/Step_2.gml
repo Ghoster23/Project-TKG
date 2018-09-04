@@ -1,2 +1,2 @@
-x = global.body.phy_position_x;
-y = global.body.phy_position_y;
+x = owner.phy_position_x;
+y = owner.phy_position_y;

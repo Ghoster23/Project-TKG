@@ -2,8 +2,6 @@ if(obj_player_hud.on){
 	var j = 0;
 	var st_count = global.body.status_count;
 	var st_list  = global.body.status_list;
-	
-	var m = global.ratio;
 
 	for(var i = 0; i < st_count; i++){
 		var entry = st_list[| i];

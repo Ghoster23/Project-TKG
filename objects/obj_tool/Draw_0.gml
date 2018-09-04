@@ -1,0 +1,1 @@
+draw_text(x+120,y,"Img spd: " + string(image_speed) + " img_spd: " + string(img_spd));

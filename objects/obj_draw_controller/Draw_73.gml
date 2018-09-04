@@ -1,3 +1,8 @@
+//Reset
+part_IF_drawn = false;
+part_PS_drawn = false;
+
+#region Fluid surface
 global.check++;
 global.check = global.check % 3;
 
@@ -30,70 +35,101 @@ if(!surface_exists(global.fluid_surface)){
 		surface_reset_target();
 	}
 }
+#endregion
 
+//First particle layer
 part_system_drawit(global.ps);
 
-if ds_exists(ds_depthgrid, ds_type_grid) {
+#region Instances
+if(ds_exists(ds_depthgrid, ds_type_grid)){
+	#region Initialization
+	//Assign grid and find instance count
 	var depthgrid = ds_depthgrid;
 	var instNum   = instance_number(obj_depth_parent);
 	
-	if instNum != 0{
+	//If there are any
+	if(instNum != 0){
 		ds_grid_resize(depthgrid, 2, instNum);
 	}
 	
+	//List all the:
+	/// depth children
+	/// visible
+	/// instances
 	var yy = 0;
 	
-	with obj_depth_parent {
-		if offset == false{
+	with(obj_depth_parent){
+		if(visible){
+			var layer_offs = (layer - other.layers[0]) * 1000;
+		
 			depthgrid[# 0, yy] = id;
-			depthgrid[# 1, yy] = y;
-			yy += 1;
-		}else {
-			depthgrid[# 0, yy] = id;
-			depthgrid[# 1, yy] = y + offs;
+			
+			if(not offset){
+				depthgrid[# 1, yy] = y - layer_offs;
+			}else {
+				depthgrid[# 1, yy] = y + offs - layer_offs;
+			}
+			
 			yy += 1;
 		}
 	}
 	
+	//Sort the instances by Y
 	ds_grid_sort(ds_depthgrid, 1, true);
 	
+	#endregion
+	
+	#region Draw everything
 	yy = 0;
 	
 	repeat(instNum){
 		var instanceID = ds_depthgrid[# 0, yy];
+		var instanceY  = ds_depthgrid[# 1, yy];
 		
+		#region Particles
+		if(not part_IF_drawn && instanceY >= -(1000 * IF_layer-1)){
+			part_IF_drawn = true;
+			part_system_drawit(global.ps_if);
+		}
+		
+		if(not part_PS_drawn && instanceY >= -(1000 * PS_layer-1)){
+			part_PS_drawn = true;
+			part_system_drawit(global.ps_ps);
+		}
+		#endregion
+		
+		#region Instances
 		with(instanceID){
-			//physics_draw_debug();
-			if instanceID.flash {
+			if(instanceID.flash){
 					shader_set(sh_white);
 					draw_self();
 					shader_reset();	
 			}
 			//execute custom drawing if object has any
-			else if(draw_script != "NULL" and instanceID.visible){
+			else if(draw_script != "NULL"){
 				script_execute(draw_script);
 				
 			}
-			else if instanceID.visible {
-				
+			else {
 				draw_self();
 				
 				shader_reset();
 			}
 		}
+		#endregion
 		
 		yy += 1;
 	}
 	
 	ds_grid_clear(ds_depthgrid, 0);
+	#endregion
+	
 }else {
 	ds_depth_grid = ds_grid_create(2,1);
 }
+#endregion
 
-part_system_drawit(global.ps_if);
-part_system_drawit(global.ps_ps);
-
-//lights that go in front of everything
+//Lights that go in front of everything
 with obj_light_front{
 	script_execute(draw_script,false);
 }

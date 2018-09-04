@@ -1,0 +1,1 @@
+image_alpha = helper.image_alpha;

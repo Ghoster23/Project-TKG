@@ -1,33 +1,39 @@
 ///@param xx
 ///@param yy
-///@param box_wd
-///@param box_hg
 ///@param box_color
 ///@param text_color
 ///@param scale
 ///@param font
 ///@param text
+///@param sprite
 {
 var xx         = argument0;
 var yy         = argument1;
-var box_wd     = argument2;
-var box_hg     = argument3;
-var box_color  = argument4;
-var text_color = argument5;
-var scale      = argument6;
-var font       = argument7;
-var text       = argument8;
+var box_color  = argument2;
+var text_color = argument3;
+var scale      = argument4;
+var font       = argument5;
+var text       = argument6;
+var spr        = argument7;
 
-draw_set_font(font);
-draw_set_valign(fa_top);
-draw_set_halign(fa_left);
+draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
+
+var wd = (string_width(text)  + 6) * scale;
+var hg = (string_height(text) + 6) * scale;
 
 draw_set_color(box_color);
-draw_rectangle(                 xx,                  yy,
-               xx + box_wd * scale, yy + box_hg * scale, false);
 
+if(spr == -1){
+	draw_rectangle( xx, yy, xx + wd, yy + hg, false);
+}else {
+	scr_9SB_ext(spr, xx, yy, xx + wd, yy + hg, scale, scale);
+}
+
+draw_set_font(font);
 draw_set_color(text_color);
-draw_text_ext_transformed(xx, yy, text, 4 * scale, box_wd * scale, scale, scale, 0);
+draw_text_ext_transformed(xx + wd * 0.5, yy + hg * 0.5,
+						  text, 4 * scale, wd, scale, scale, 0);
 
 draw_set_color(c_white);
 }

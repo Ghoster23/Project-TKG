@@ -4,6 +4,8 @@ switch pat_state {
 			instance_destroy(progressbar);
 		}
 		
+		progressbar = noone;
+		
 		if(wep_ammo > 0 && alarm[pat_alarm] == -1){
 			image_index = 1;
 		}else {
@@ -14,7 +16,7 @@ switch pat_state {
 			pat_state = 1; //Go to Charging
 			
 			chargeup    = false;
-			progressbar = scr_create_charge_up(x,y,pat_charge_time,self);
+			//progressbar = scr_create_charge_up(x,y,pat_charge_time,self);
 			
 		}else if(global.key_active[key_id.skill_2]){
 			pat_state = 2; //Go to Charging

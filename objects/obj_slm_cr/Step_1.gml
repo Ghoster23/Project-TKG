@@ -19,11 +19,17 @@ if not global.pause and go{
 		
 		///Die
 	    if dead and sprite_index != spr_slime_d{
-	        sprite_index = spr_slime_d;
-	        image_index = 0;
-	        image_speed = 0.2;
 	        state = 2;
         
+			if(scr_status_is_applied(statuses.frozen,id)){
+				frozen = true;
+			}
+			
+			if(not frozen){
+				sprite_index = spr_slime_d;
+		        image_index = 0;
+		        image_speed = 0.2;
+			}
 	    }
 		
 		

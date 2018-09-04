@@ -19,7 +19,7 @@ trail_offset = 0;
 
 draw_script = scr_draw_projectile_trail;
 
-drop = true;
+drop = false;
 type = item_type.drop;
 item = drops.arrow;
 amount = 1;

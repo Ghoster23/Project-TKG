@@ -20,14 +20,16 @@ if go and not global.pause{
 			
         break;
         case 2:  //Attack the player
-            if(!weapon.attack){
-                weapon.attack = true;
+            if(!weapon.key[0]){
+                key[0] = true;
 				
 				if(!instance_exists(tell)){
 					tell = instance_create_layer(x,y,layer,obj_melee_tell);
 					tell.owner = id;
 				}                
-            }
+            }else {
+				key[0] = false;
+			}
         
         break;
 		case 3:  //Retreat

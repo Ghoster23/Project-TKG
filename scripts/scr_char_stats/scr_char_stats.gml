@@ -7,7 +7,7 @@ switch global.char {
 		global.p_stats[stats.satk]  =  5;
 		global.p_stats[stats.sdef]  =  5;
 		global.p_stats[stats.spd]   =  4;
-		global.weapon = obj_greatsword;
+		global.weapon = tl_n_wep.jason_greatsword;
 	break;
 	
 	case 1: //Harlow Barone
@@ -51,7 +51,7 @@ switch global.char {
 		global.p_stats[stats.satk]  =  8;
 		global.p_stats[stats.sdef]  =  8;
 		global.p_stats[stats.spd]   =  4;
-		global.weapon = obj_umbrella;
+		global.weapon = tl_n_wep.luna_umbrella;
 	break;
 	
 	case 5: //Mahli Ueno

@@ -22,12 +22,8 @@ switch(type){
 		return 1;
 	break;
 					
-	case item_type.tool:
-		return 8;		
-	break;
-					
-	case item_type.weapons:
-		return 8;
+	case item_type.tl_n_wep:
+		return 32;		
 	break;
 	
 	case item_type.active:

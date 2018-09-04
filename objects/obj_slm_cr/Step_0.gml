@@ -17,15 +17,25 @@ if go and not global.pause{
             
         break;
         case 2:  //Dead state
-			image_speed = 0.2;
+			if(!frozen){
+				image_speed = 0.2;
 			 
-            if image_index == 5{
+	            if image_index == 5{
+					if(instance_exists(fl_gen)){
+						instance_destroy(fl_gen);
+					}
+				
+					scr_kill_enemy();
+	            }
+			}else {
+				part_particles_create(global.ps_if,x,y,global.pt_icebits,24);
+				
 				if(instance_exists(fl_gen)){
 					instance_destroy(fl_gen);
 				}
 				
 				scr_kill_enemy();
-            }
+			}
 			
 		break;
 		

@@ -14,7 +14,8 @@
         "affb7018-f9d3-4759-9dbf-117a84c44533",
         "c5e5a0c3-0044-4be8-b88b-2c9a944942f9",
         "4588972c-de7a-4b60-9a8e-c5ca1d0cc0c3",
-        "63b5d9ff-9dcb-4c55-8968-9728b58157fe"
+        "63b5d9ff-9dcb-4c55-8968-9728b58157fe",
+        "2ac721a2-e09a-4f62-ad99-2fa0fe48f689"
     ],
     "filterType": "GMObject",
     "folderName": "Room",

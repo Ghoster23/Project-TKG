@@ -128,8 +128,8 @@
         },
         {
             "__type": "GMRBackgroundLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "White",
-            "id": "c13f3bad-085c-4777-8bcb-af5b9210908a",
+            "name": "Backgrounds_1",
+            "id": "732ea92b-62a4-4b2e-bed0-d6b8bac058c2",
             "animationFPS": 15,
             "animationSpeedType": "0",
             "colour": { "Value": 4294967295 },
@@ -154,7 +154,7 @@
             "spriteId": "00000000-0000-0000-0000-000000000000",
             "stretch": false,
             "userdefined_animFPS": false,
-            "userdefined_depth": true,
+            "userdefined_depth": false,
             "visible": true,
             "vspeed": 0,
             "vtiled": false,
@@ -198,7 +198,7 @@
         "id": "d1b4f847-78a7-4671-b510-096f68835028",
         "clearDisplayBuffer": true,
         "clearViewBackground": true,
-        "enableViews": false,
+        "enableViews": true,
         "inheritViewSettings": false,
         "modelName": "GMRoomViewSettings",
         "mvc": "1.0"

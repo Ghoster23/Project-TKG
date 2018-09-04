@@ -1,3 +1,3 @@
-if(instance_exists(owner) and not owner.weapon.attack){
+if(instance_exists(owner) and owner.weapon.executing == -1){
 	instance_destroy();
 }

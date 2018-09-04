@@ -53,3 +53,6 @@ damage = 0;
 divi   = stats.def;
 
 kb_amount = 0;
+
+shadow = instance_create_layer(x,y,layer,obj_entity_shadow);
+shadow.owner = id;

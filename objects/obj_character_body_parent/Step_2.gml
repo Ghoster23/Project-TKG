@@ -42,6 +42,9 @@ if(not global.pause){
 	}
 }
 
+//Orientation
+spr_side = scr_orientate_entity(rotation);
+
 switch state{
 	case 0: //Free
 		image_xscale = 1;
@@ -70,19 +73,19 @@ switch state{
 		
 		//Orientation
 		if(dir > 315 or dir < 45){ //Right    
-			spr_side = 1;
+			spr_side = 0;
 		}
 			
 		else if(dir < 135){ //Up
-			spr_side = 0; 
+			spr_side = 1; 
 		}
 			
 		else if(dir < 225){ //Left
-			spr_side = 3;     
+			spr_side = 2;     
 		}
 			
 		else if(dir < 315){ //Down
-			spr_side = 2;        
+			spr_side = 3;        
 		}
 			
 		sprite_index = roll_sprs[spr_side];

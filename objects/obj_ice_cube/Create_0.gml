@@ -14,7 +14,7 @@ inc_x = sprite_width * rate / 2;
 inc_y = sprite_height * rate / 2;
 
 offset = true;
-offs   = -16;
+offs   = 28;
 
 if(place_meeting(x,y,obj_grassblade)){
 	with(other){

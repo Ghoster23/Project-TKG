@@ -10,3 +10,6 @@ if move==true{
 		image_angle=0;
 	}
 }
+if(place_meeting(x,y,obj_solid_parent)){
+	instance_destroy();
+}

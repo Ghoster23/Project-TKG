@@ -15,21 +15,8 @@ if(not global.pause){
 		dir = point_direction( 0, 0, xaxis, yaxis);
 	}
 	
-	//Orientation
-	if(rotation > 315 or rotation < 45){ //Right    
-		spr_side = 1;
-	}
-			
-	else if(rotation < 135){ //Up
-		spr_side = 0; 
-	}
-			
-	else if(rotation < 225){ //Left
-		spr_side = 3;     
-	}
-			
-	else if(rotation < 315){ //Down
-		spr_side = 2;        
+	if(dead){
+		state = 3;
 	}
 
 	/// Player States

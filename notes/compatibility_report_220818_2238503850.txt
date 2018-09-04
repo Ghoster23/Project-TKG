@@ -1,0 +1,15 @@
+Converting GML script: ${project_dir}\scripts\draw_path_sprite\draw_path_sprite.gml
+Converted description /// @description draw_path_sprite(path, x, y, width, sprite, spriteIndex, spriteScaleX, spriteScaleY, color, alpha, segments, tiled)/// @param path
+/// @param  x
+/// @param  y
+/// @param  width
+/// @param  sprite
+/// @param  spriteIndex
+/// @param  spriteScaleX
+/// @param  spriteScaleY
+/// @param  color
+/// @param  alpha
+/// @param  segments
+/// @param  tiled
+
+Added compatibility script 'texture/texture_set_repeat.gml'

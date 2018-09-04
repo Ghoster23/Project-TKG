@@ -16,4 +16,4 @@ else{
 	room_active = false;
 }
 
-radius = base_radius + irandom_range(-5,5);
+radius = base_radius + irandom_range(-range,range);

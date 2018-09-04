@@ -1,3 +1,5 @@
+scr_unique_inst();
+
 //Status sprites
 status_spr[statuses.poison]  = spr_status_poisoned;
 status_spr[statuses.regen]   = spr_status_regen;

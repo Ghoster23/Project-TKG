@@ -4,7 +4,7 @@ mousey = obj_cursor.y;
 if listen_for_key==false{
 
 	if(global.key_active[key_id.menu] or 
-	   scr_GUI_button(c-17*m,c+17*m,reset_width+20*m,reset_height+30*m)){
+	   scr_GUI_button(hc-17*m,hc+17*m,reset_width+20*m,reset_height+30*m)){
 		instance_create_layer(x,y,layer,obj_options_controller);
 		instance_destroy();
 	}

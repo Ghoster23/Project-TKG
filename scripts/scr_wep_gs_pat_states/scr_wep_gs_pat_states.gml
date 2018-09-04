@@ -2,13 +2,13 @@ switch pat_state {
 	case 0: //Normal
 		wep_ang_off =  wep_ang_base;
 		angle       +=  wep_ang_off;
-		
+		progressbar = noone;
 		if(global.key_active[key_id.skill_1]){
 			
 			simple_attack = false;
 			chargeup      = false;
 			
-			progressbar = scr_create_charge_up( x, y, 1.5 * room_speed, self);
+			//progressbar = scr_create_charge_up( x, y, 1.5 * room_speed, self);
 			
 			pat_state  = 2; //Go to windup
 			wep_ang_target = wep_ang_off + wep_ang_windup;
@@ -18,7 +18,7 @@ switch pat_state {
 			simple_attack = false;
 			chargeup      = false;
 			
-			progressbar = scr_create_charge_up( x, y, 1.5 * room_speed, self);
+			//progressbar = scr_create_charge_up( x, y, 1.5 * room_speed, self);
 			
 			pat_state  = 6;
 			pat_nstate = 0;
@@ -34,7 +34,7 @@ switch pat_state {
 			simple_attack = false;
 			chargeup      = false;
 			
-			progressbar = scr_create_charge_up( x, y, 1.5 * room_speed, self);
+			//progressbar = scr_create_charge_up( x, y, 1.5 * room_speed, self);
 			
 			pat_state  = 3; //Go to windup
 			wep_ang_target = wep_ang_off - wep_ang_windup;
@@ -44,7 +44,7 @@ switch pat_state {
 			simple_attack = false;
 			chargeup      = false;
 			
-			progressbar = scr_create_charge_up( x, y, 1.5 * room_speed, self);
+			//progressbar = scr_create_charge_up( x, y, 1.5 * room_speed, self);
 			
 			simple_attack = false;
 			pat_state  = 6;
@@ -142,7 +142,7 @@ switch pat_state {
 			chargeup= false;
 			
 			var t_sword = scr_create_damage_dealer(x, y,							
-								 obj_greatsword_t, owner,	owner.ohko,			
+								 obj_greatsword_t, owner, owner.ohko,			
 								 owner.stat[stats.atk]*(1+owner.modf[stats.atk]),
 								 stats.def, 									  
 								 4, global.p_stats[stats.atk]*20);				  
@@ -179,6 +179,7 @@ switch pat_state {
 		with(global.body){
 			physics_apply_impulse(phy_position_x,phy_position_y,lengthdir_x(70,other.angle),lengthdir_y(70,other.angle));
 		}
+		
 		angle = originalangle; 
 		angle += wep_ang_off;
 		wep_ang_off = scr_approach(wep_ang_off, wep_ang_target, 30);

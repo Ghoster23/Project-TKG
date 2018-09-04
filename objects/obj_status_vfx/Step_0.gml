@@ -12,6 +12,7 @@ if(not global.pause and booted and owner != noone and instance_exists(owner)){
 		
 		case statuses.frost:
 			part = global.pt_st_frost;
+			owner.image_blend = c_aqua;
 			amt  = -4;
 		break;
 		

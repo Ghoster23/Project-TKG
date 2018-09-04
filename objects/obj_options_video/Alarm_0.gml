@@ -4,9 +4,15 @@ if global.fullscreen == "ON"{
 	global.fullscreen = "OFF";
 	window_set_fullscreen(false);
 	
-	//display_set_gui_size(window_get_width()/room_width,window_get_height()/room_height);
+	with obj_screen_controller {
+		scr_screen_res();
+	}
 }
 else {
 	global.fullscreen = "ON";
 	window_set_fullscreen(true);
+	
+	with obj_screen_controller {
+		scr_screen_res();
+	}
 }

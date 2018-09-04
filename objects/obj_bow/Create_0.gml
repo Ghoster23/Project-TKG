@@ -4,7 +4,7 @@ event_inherited();
 
 image_speed = 0;
 
-sprite_index = spr_e_bow;
+sprite_index = spr_bow;
 
 offs = 4;
 offset = true;
@@ -15,11 +15,8 @@ stowed = drawn;
 mult = stats.atk;
 divi = stats.def;
 
-type   = item_type.weapons;
-item   = weapons.bow;
+type   = item_type.tl_n_wep;
+item   = tl_n_wep.bow;
 amount = 8;
 
-shoot = false;
-
-scr_wep_pat_bow_init(2,0,5,0.4,100,obj_arrow,30);
-pat = scr_wep_pat_bow_states;
+pat = scr_skill_shoot_states;

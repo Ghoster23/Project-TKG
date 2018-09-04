@@ -4,6 +4,7 @@ if(roomgenerated < 12){
 			instance_destroy(instance_nearest(gx+(global.roomwd/2),(gy-2),obj_wall_down_fillin));
 			instance_destroy(instance_nearest(gx+(global.roomwd/2),(gy+2),obj_wall_up_fillin));
 			instance_create_layer(gx+(global.roomwd/2)-48,(gy-64),"Instances",obj_vcorridor);
+			instance_create_layer(gx+(global.roomwd/2)-48,(gy-64),"IF",obj_vcorridorB);
 							
 			global.ds_roomgrid[# 3, grid_id - 8] = grid_array_set_value(global.ds_roomgrid[# 3, grid_id - 8], 2, 1);
 			global.ds_roomgrid[# 3, grid_id]     = grid_array_set_value(global.ds_roomgrid[# 3, grid_id],     0, 1);
@@ -15,7 +16,7 @@ if(roomgenerated < 12){
 			instance_destroy(instance_nearest(gx+2,gy+(global.roomwd/2),obj_wall_left_fillin));
 			instance_destroy(instance_nearest(gx-2,gy+(global.roomwd/2),obj_wall_right_fillin));
 			instance_create_layer(gx-32,gy+(global.roomhg/2)-96,"Instances",obj_hcorridor);
-			instance_create_layer(gx-32,gy+(global.roomhg/2)+32,"Instances",obj_hcorridorB);
+			instance_create_layer(gx-32,gy+(global.roomhg/2)+32,"IF",obj_hcorridorB);
 							
 			global.ds_roomgrid[# 3, grid_id - 1] = grid_array_set_value(global.ds_roomgrid[# 3, grid_id - 1], 3, 1);
 			global.ds_roomgrid[# 3, grid_id]     = grid_array_set_value(global.ds_roomgrid[# 3, grid_id],     1, 1);
@@ -27,6 +28,7 @@ if(roomgenerated < 12){
 			instance_destroy(instance_nearest(gx+(global.roomwd/2),gy+global.roomhg-2,obj_wall_down_fillin));
 			instance_destroy(instance_nearest(gx+(global.roomwd/2),gy+global.roomhg+2,obj_wall_up_fillin));
 			instance_create_layer(gx+(global.roomwd/2)-48,(gy+global.roomhg-64),"Instances",obj_vcorridor);
+			instance_create_layer(gx+(global.roomwd/2)-48,(gy+global.roomhg-64),"IF",obj_vcorridorB);
 							
 			global.ds_roomgrid[# 3, grid_id + 8] = grid_array_set_value(global.ds_roomgrid[# 3, grid_id + 8], 0, 1);
 			global.ds_roomgrid[# 3, grid_id]     = grid_array_set_value(global.ds_roomgrid[# 3, grid_id],     2, 1);
@@ -38,7 +40,7 @@ if(roomgenerated < 12){
 			instance_destroy(instance_nearest(gx+global.roomwd-2,gy+(global.roomhg/2),obj_wall_right_fillin));
 			instance_destroy(instance_nearest(gx+global.roomwd+2,gy+(global.roomhg/2),obj_wall_left_fillin));
 			instance_create_layer((gx+global.roomwd-32),(gy+(global.roomhg/2)-96),"Instances",obj_hcorridor);
-			instance_create_layer((gx+global.roomwd-32),(gy+(global.roomhg/2)+32),"Instances",obj_hcorridorB);
+			instance_create_layer((gx+global.roomwd-32),(gy+(global.roomhg/2)+32),"IF",obj_hcorridorB);
 							
 			global.ds_roomgrid[# 3, grid_id + 1] = grid_array_set_value(global.ds_roomgrid[# 3, grid_id + 1], 1, 1);
 			global.ds_roomgrid[# 3, grid_id]     = grid_array_set_value(global.ds_roomgrid[# 3, grid_id],     3, 1);
@@ -50,6 +52,7 @@ if(roomgenerated < 12){
 			instance_destroy(instance_nearest(gx+(global.roomwd/2),gy+global.roomhg-2,obj_wall_down_fillin));
 			instance_destroy(instance_nearest(gx+(global.roomwd/2),gy+global.roomhg+2,obj_wall_up_fillin));
 			instance_create_layer(gx+(global.roomwd/2)-48,(gy+global.roomhg-64),"Instances",obj_vcorridor);
+			instance_create_layer(gx+(global.roomwd/2)-48,(gy+global.roomhg-64),"IF",obj_vcorridorB);
 							
 			global.ds_roomgrid[# 3, grid_id + 8] = grid_array_set_value(global.ds_roomgrid[# 3, grid_id + 8], 0, 1);
 			global.ds_roomgrid[# 3, grid_id]     = grid_array_set_value(global.ds_roomgrid[# 3, grid_id],     2, 1);
@@ -60,7 +63,7 @@ if(roomgenerated < 12){
 			instance_destroy(instance_nearest(gx+2,gy+(global.roomwd/2),obj_wall_left_fillin));
 			instance_destroy(instance_nearest(gx-2,gy+(global.roomwd/2),obj_wall_right_fillin));
 			instance_create_layer(gx-32,gy+(global.roomhg/2)-96,"Instances",obj_hcorridor);
-			instance_create_layer(gx-32,gy+(global.roomhg/2)+32,"Instances",obj_hcorridorB);
+			instance_create_layer(gx-32,gy+(global.roomhg/2)+32,"IF",obj_hcorridorB);
 							
 			global.ds_roomgrid[# 3, grid_id - 1] = grid_array_set_value(global.ds_roomgrid[# 3, grid_id - 1], 3, 1);
 			global.ds_roomgrid[# 3, grid_id]     = grid_array_set_value(global.ds_roomgrid[# 3, grid_id],     1, 1);
@@ -71,7 +74,7 @@ if(roomgenerated < 12){
 			instance_destroy(instance_nearest(gx+global.roomwd-2,gy+(global.roomhg/2),obj_wall_right_fillin));
 			instance_destroy(instance_nearest(gx+global.roomwd+2,gy+(global.roomhg/2),obj_wall_left_fillin));
 			instance_create_layer((gx+global.roomwd-32),(gy+(global.roomhg/2)-96),"Instances",obj_hcorridor);
-			instance_create_layer((gx+global.roomwd-32),(gy+(global.roomhg/2)+32),"Instances",obj_hcorridorB);
+			instance_create_layer((gx+global.roomwd-32),(gy+(global.roomhg/2)+32),"IF",obj_hcorridorB);
 							
 			global.ds_roomgrid[# 3, grid_id + 1] = grid_array_set_value(global.ds_roomgrid[# 3, grid_id + 1], 1, 1);
 			global.ds_roomgrid[# 3, grid_id]     = grid_array_set_value(global.ds_roomgrid[# 3, grid_id],     3, 1);
@@ -82,6 +85,7 @@ if(roomgenerated < 12){
 			instance_destroy(instance_nearest(gx+(global.roomwd/2),(gy-2),obj_wall_down_fillin));
 			instance_destroy(instance_nearest(gx+(global.roomwd/2),(gy+2),obj_wall_up_fillin));
 			instance_create_layer(gx+(global.roomwd/2)-48,(gy-64),"Instances",obj_vcorridor);
+			instance_create_layer(gx+(global.roomwd/2)-48,(gy-64),"IF",obj_vcorridorB);
 							
 			global.ds_roomgrid[# 3, grid_id - 8] = grid_array_set_value(global.ds_roomgrid[# 3, grid_id - 8], 2, 1);
 			global.ds_roomgrid[# 3, grid_id]     = grid_array_set_value(global.ds_roomgrid[# 3, grid_id],     0, 1);

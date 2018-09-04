@@ -1,9 +1,9 @@
 if(not global.pause and on){
-	var fl_tiles = collision_rectangle_list( x, y, x + sprite_width, y + sprite_height, obj_fluid_tile, true, false);
+	var fl_tiles = ds_list_create();
+	//var tl_count = collision_rectangle_list( x, y, x + sprite_width, y + sprite_height, obj_fluid_tile,
+	//										true, false, fl_tiles, false);
 	
-	if(fl_tiles != noone){
-		var len = ds_list_size(fl_tiles);
-		
+	if(tl_count > 0){
 		var flx  = x;
 		var fly  = y;
 		var flfx = x + sprite_width;
@@ -11,7 +11,7 @@ if(not global.pause and on){
 		var mcount = scount;
 		var mtype  = stype;
 		
-		for(var k = 0; k < len; k++){
+		for(var k = 0; k < tl_count; k++){
 			var inst = fl_tiles[| k];
 			
 			with(inst){	

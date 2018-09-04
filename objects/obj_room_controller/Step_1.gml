@@ -11,8 +11,8 @@ switch state {
 				
 				if(!global.ds_roomgrid[# 2, global.current_row * 8 + global.current_column]){
 					///Mark room
-					if(instance_exists(obj_minimap_controller)){
-						with(obj_minimap_controller){
+					if(instance_exists(obj_map_controller)){
+						with(obj_map_controller){
 							current_room = scr_room_get();
 						}
 					}

@@ -2,11 +2,7 @@
 draw_set_valign(fa_top);
 draw_set_font(font_ig_menu);
 
-//draw_set_color(c_black);
-//draw_set_alpha(1);
-//draw_rectangle(c - 96 * m, (off + 48 -64) * m, c + 96 * m, (off + 160 + 64 ) * m, false);
-
-draw_sprite_ext( spr_ig_map, 0, 64 * m, 64 * m, m, m, 0, c_white, 1);
+scr_9SB_ext(spr_menu_frame_9s, hc - 176 * m, vc - 128 * m, hc + 182 * m, vc + 176 * m, m, m);
 
 draw_set_alpha(1);
 
@@ -14,7 +10,7 @@ draw_set_alpha(1);
 
 draw_set_halign(fa_center);
 draw_set_color(c_white);
-draw_text_transformed(c, controls_y1,"Controls Options",m,m,0);
+draw_text_transformed(hc, controls_y1,"Controls Options",m,m,0);
 draw_line_width(controls_x1,controls_y2,controls_x2,controls_y2,2*m);
 //draw_rectangle(controls_x1,controls_y1,controls_x2,controls_y2,true);
 //----------------------------------------------------------------------
@@ -222,7 +218,7 @@ draw_rectangle(reset_x1,reset_y1,reset_x2,reset_y2,true);
 
 //---------------------------------------------------------------------------
 
-draw_sprite_ext(spr_back,0,c,reset_y1+reset_height+20*m,m,m,0,c_white,1);
+draw_sprite_ext(spr_back,0,hc,reset_y1+reset_height+20*m,m,m,0,c_white,1);
 
 
 
@@ -330,7 +326,7 @@ if listen_for_key {
 		draw_set_halign(fa_center);
 		draw_set_valign(fa_middle);
 		draw_set_color(c_white);
-		if pointer_x >= c{
+		if pointer_x >= hc{
 			draw_text_transformed(ic2,pointer_y,"Press Key",m,m,0);
 		}
 		else{

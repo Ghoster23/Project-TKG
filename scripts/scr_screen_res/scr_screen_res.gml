@@ -5,8 +5,8 @@ if(window_get_fullscreen()){
 	s_hg = global.MonitorH;
 	
 }else {	
-	s_wd = global.WindowW;
-	s_hg = global.WindowH;
+	s_wd = window_get_width();
+	s_hg = window_get_height();
 }
 
 switch room {
@@ -38,3 +38,6 @@ surface_resize(application_surface, sc_wd, sc_hg);
 
 global.Xoffset = (s_wd - sc_wd)/2;
 global.Yoffset = (s_hg - sc_hg)/2;
+
+global.gui_WD = display_get_gui_width();
+global.gui_HG = display_get_gui_height();

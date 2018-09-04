@@ -8,37 +8,27 @@ global.roomhg = 416;
 //Ratios
 global.rm_as_ratio = 1;
 
-//Start
-if(window_get_fullscreen()){
-	global.MonitorW =  display_get_width();
-	global.MonitorH = display_get_height();
-	global.as_ratio = global.MonitorW/global.MonitorH;
+global.MonitorW =  display_get_width();
+global.MonitorH = display_get_height();
+global.as_ratio = global.MonitorW/global.MonitorH;
 	
-	if(round(global.MonitorH / global.roomhg) < round(global.MonitorW / global.roomwd)){
-		global.ratio = round(global.MonitorH / global.roomhg);
-		lvl_view_hg = global.MonitorH / global.ratio;
-		lvl_view_wd = lvl_view_hg * global.as_ratio;
-	}else {
-		global.ratio = round(global.MonitorW / global.roomwd);
-		lvl_view_wd = global.MonitorW / global.ratio;
-		lvl_view_hg = lvl_view_wd / global.as_ratio;
-	}
+if(round(global.MonitorH / global.roomhg) < round(global.MonitorW / global.roomwd)){
+	global.ratio = round(global.MonitorH / global.roomhg);
+	lvl_view_hg = global.MonitorH / global.ratio;
+	lvl_view_wd = lvl_view_hg * global.as_ratio;
+}else {
+	global.ratio = round(global.MonitorW / global.roomwd);
+	lvl_view_wd = global.MonitorW / global.ratio;
+	lvl_view_hg = lvl_view_wd / global.as_ratio;
+}
+
+//Start
+if(global.fullscreen == "ON"){
+	window_set_fullscreen(true);
 	
 	t = 0;
 }else {
-	global.WindowW =  window_get_width();
-	global.WindowH = window_get_height();
-	global.as_ratio = global.WindowW/global.WindowH;
-	
-	if(round(global.WindowH / global.roomhg) < round(global.WindowW / global.roomwd)){
-		global.ratio = round(global.WindowH / global.roomhg);
-		lvl_view_hg = global.WindowH / global.ratio;
-		lvl_view_wd = lvl_view_hg * global.as_ratio;
-	}else {
-		global.ratio = round(global.WindowW / global.roomwd);
-		lvl_view_wd = global.WindowW / global.ratio;
-		lvl_view_hg = lvl_view_wd / global.as_ratio;
-	}
+	window_set_fullscreen(false);
 	
 	t = 1;
 }

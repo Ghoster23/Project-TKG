@@ -65,3 +65,9 @@ global.current_column = 4;
 global.current_row    = 4;
 
 global.fluid_detail = 16;
+
+///Tools and Weapons
+global.ds_grid_tl_n_wep = load_data_to_grid(8,9,0,0,"tools_n_weapons.csv");
+
+///Skills
+global.ds_grid_skills = load_data_to_grid(4,9,0,0,"skills.csv");

@@ -1,3 +1,5 @@
+//Deprecated
+
 event_inherited();
 
 no_shadows = true;
@@ -15,7 +17,7 @@ image_speed = 0;
 offx = 0;
 offy = 0;
 
-type   = item_type.tool;
+type   = item_type.tl_n_wep;
 item   = tool.pickaxe;
 amount = 8;
 

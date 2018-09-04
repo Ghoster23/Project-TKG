@@ -1,16 +1,7 @@
 {
 switch(argument0){
 	case active.frozone:
-		if(variable_global_exists("act_enemy_list")){
-			var len = ds_list_size(global.act_enemy_list);
-			for(var i = 0; i < len; i++){
-				var e = global.act_enemy_list[| i];
-				
-				if(instance_exists(e)){
-					scr_status_apply(statuses.frozen,30,e);
-				}
-			}
-		}
+		instance_create_layer(global.body.phy_position_x,global.body.phy_position_y,layer,obj_frozone);
 	break;
 	default:
 	break;

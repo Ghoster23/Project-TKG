@@ -7,10 +7,6 @@ roomwd=global.roomwd;
 roomhg=global.roomhg;
 
 ///Base Room
-/*
-instance_create_layer(gx + (global.roomwd / 2) + 64,gy + 48,"Instances",obj_torch);
-instance_create_layer(gx+global.roomwd/2-96,gy+48,"Instances",obj_torch);
-*/
 scr_base_roomgn();
 
 //create grid to house the room
@@ -316,7 +312,7 @@ if ((ds_grid_get(obj_gen_controller.floor_grid,gxtile+14,gytile+2) == "blue") an
 if ((ds_grid_get(obj_gen_controller.floor_grid,gxtile+1,gytile+10) == "blue") and 
 	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+1,gytile+11) == "blue") and 
 	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+1,gytile+12) == "blue")){
-		vegie = instance_create_layer(gx,gy,"IF",obj_wallvegetation);
+		vegie = instance_create_layer(gx,gy,"PS",obj_wallvegetation);
 		with vegie{
 			num = 5;
 		}
@@ -325,7 +321,7 @@ if ((ds_grid_get(obj_gen_controller.floor_grid,gxtile+1,gytile+10) == "blue") an
 if ((ds_grid_get(obj_gen_controller.floor_grid,gxtile+17,gytile+10) == "blue") and 
 	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+17,gytile+11) == "blue") and 
 	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+17,gytile+12) == "blue")){
-		vegie = instance_create_layer(gx,gy,"IF",obj_wallvegetation);
+		vegie = instance_create_layer(gx,gy,"PS",obj_wallvegetation);
 		with vegie{
 			num = 6;
 		}
@@ -335,7 +331,7 @@ if ((ds_grid_get(obj_gen_controller.floor_grid,gxtile+17,gytile+10) == "blue") a
 if ((ds_grid_get(obj_gen_controller.floor_grid,gxtile+1,gytile+10) == "blue") and 
 	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+2,gytile+10) == "blue") and 
 	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+3,gytile+10) == "blue")){
-		vegie = instance_create_layer(gx,gy,"IF",obj_wallvegetation);
+		vegie = instance_create_layer(gx,gy,"PS",obj_wallvegetation);
 		with vegie{
 			num = 7;
 		}
@@ -346,7 +342,7 @@ if ((ds_grid_get(obj_gen_controller.floor_grid,gxtile+4,gytile+10) == "blue") an
 	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+6,gytile+10) == "blue") and
 	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+7,gytile+10) == "blue") and
 	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+8,gytile+10) == "blue")){
-		vegie = instance_create_layer(gx,gy,"IF",obj_wallvegetation);
+		vegie = instance_create_layer(gx,gy,"PS",obj_wallvegetation);
 		with vegie{
 			num = 8;
 		}
@@ -357,7 +353,7 @@ if ((ds_grid_get(obj_gen_controller.floor_grid,gxtile+13,gytile+10) == "blue") a
 	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+15,gytile+10) == "blue") and
 	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+16,gytile+10) == "blue") and
 	(ds_grid_get(obj_gen_controller.floor_grid,gxtile+17,gytile+10) == "blue")){
-		vegie = instance_create_layer(gx,gy,"IF",obj_wallvegetation);
+		vegie = instance_create_layer(gx,gy,"PS",obj_wallvegetation);
 		with vegie{
 			num = 9;
 		}

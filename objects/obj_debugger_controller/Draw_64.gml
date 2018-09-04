@@ -1,7 +1,11 @@
 if(state > 0){
-	draw_set_color(c_red);
-	draw_circle(0, 0, 8, false);
 	draw_set_color(c_white);
+	
+	for(var i = 1; i < 6; i++){
+		scr_boxed_text((160 + i * 32) * global.ratio, 0,
+						c_white, c_white, global.ratio, font_chsl_tags,
+						ops[i], spr_HUD_9SB);
+	}
 	
 	switch state {
 		case 3:

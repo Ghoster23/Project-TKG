@@ -1,9 +1,10 @@
-var file_name=argument0;          //file name, should include .csv ex: "stats.csv"
-var ds_grid=argument1;		      //ds_grid that should have already been created and passed on t
-var lines=argument2;              //number of lines to copy
-var collums=argument3;            //number of collums to copy
-var file_start_line=argument4;    //line from which to start reading from file (leave at 0 for default)
-var grid_start_line=argument5;    //line from which to start writing to grid   (leave at 0 for default)
+{
+var file_name = argument0;          //file name, should include .csv ex: "stats.csv"
+var ds_grid   = argument1;		    //ds_grid that should have already been created and passed on t
+var lines     = argument2;          //number of lines to copy
+var collums   = argument3;          //number of collums to copy
+var file_start_line = argument4;    //line from which to start reading from file (leave at 0 for default)
+var grid_start_line = argument5;    //line from which to start writing to grid   (leave at 0 for default)
 
 //open file
 var file_read=file_text_open_read(working_directory + string(file_name));
@@ -16,7 +17,7 @@ if (file_start_line!=0){
 }
 
 //ready to parse through the lines
-var j=0, i=0, index, count;
+var j=0, i=0, index, count, line = "", content = "";
 
 //iterate through lines
 repeat(lines){
@@ -55,7 +56,7 @@ repeat(lines){
 			}
 			else{
 				//keep pacing throught the letters until you find a comma 
-				while(string_char_at(line,index)!=chr(44)){
+				while(string_char_at(line,index)!=chr(59)){
 					index++;
 					count++;
 				}	
@@ -79,5 +80,7 @@ repeat(lines){
 
 //close the file his job is done :3
 file_text_close(file_read);
+
 //done
 return ds_grid;
+}

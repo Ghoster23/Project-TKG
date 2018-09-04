@@ -39,6 +39,9 @@ switch global.lvl_room_type{
 }
 
 scr_char_stats();
+with obj_game_controller {
+	global.body = bodies[global.char];
+}
 scr_spawn_player(xx,yy,"Instances");
 
 global.gen = false;
@@ -133,7 +136,7 @@ for(i=0;i<9;i++){
 			//determine weather it should have an ofset or not
 			for(var q = 1; q < 6; q++){
 				for(var t = 0; t < menuText[q,0]; t++){
-					if menuText[q,t] == obj_name{
+					if menuText[q,t+1] == obj_name{
 						category = q;
 					}
 				}

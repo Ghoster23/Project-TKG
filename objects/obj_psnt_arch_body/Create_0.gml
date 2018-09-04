@@ -2,7 +2,7 @@
 event_inherited();
 
 //create weapon
-weapon = scr_create_weapon(x,y,layer,obj_bow,id);
+weapon = scr_create_tw(tl_n_wep.bow,32);
 weapon.skin_color = skin_color;
 weapon.draw_script = scr_psnt_draw;
 

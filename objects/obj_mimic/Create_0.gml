@@ -1,6 +1,8 @@
 /// @description Inicialise the enemy
 event_inherited();
 
+instance_destroy(shadow);
+
 phy_fixed_rotation = true;
 
 image_speed = 0;

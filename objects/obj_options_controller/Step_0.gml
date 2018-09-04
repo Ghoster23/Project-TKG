@@ -1,5 +1,5 @@
 if (global.key_active[key_id.menu] or 
-	scr_GUI_button(c-17*m,c+17*m,controls_width+20*m,controls_height+30*m)){
+	scr_GUI_button(hc-17*m,hc+17*m,controls_width+20*m,controls_height+30*m)){
 	instance_activate_object(obj_menu);
 	var thislayer = layer_background_get_id("buttons");
 	layer_background_visible(thislayer,true);
@@ -14,7 +14,7 @@ switch state {
 	case "audio":
 		if(scr_GUI_button(audio_x1,audio_y1,audio_width,audio_height) or 
 		global.key_active[key_id.m_confirm]){
-			alarm[0] = room_speed*0.2;
+			alarm[0] = room_speed * 0.2;
 		}
 		if global.key_active[key_id.m_down] {
 			state = "video";
@@ -22,12 +22,12 @@ switch state {
 		if global.key_active[key_id.m_up]   {
 			state = "controls";
 		}
-		break;
+	break;
 	
 	case "video":
 		if(scr_GUI_button(video_x1,video_y1,video_width,video_height) or 
 		global.key_active[key_id.m_confirm]){
-			alarm[1] = room_speed*0.2;
+			alarm[1] = room_speed * 0.2;
 		}
 		if global.key_active[key_id.m_down] {
 			state = "controls";
@@ -35,12 +35,12 @@ switch state {
 		if global.key_active[key_id.m_up]   {
 			state = "audio";
 		}
-		break;
+	break;
 	
 	case "controls":
 		if(scr_GUI_button(controls_x1,controls_y1,controls_width,controls_height) or 
 			global.key_active[key_id.m_confirm]){
-			alarm[2] = room_speed*0.2;
+			alarm[2] = room_speed * 0.2;
 		}
 		if global.key_active[key_id.m_down] {
 			state = "audio";
@@ -48,7 +48,7 @@ switch state {
 		if global.key_active[key_id.m_up]   {
 			state = "video";
 		}
-		break;
+	break;
 
 }
 

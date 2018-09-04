@@ -31,15 +31,10 @@ switch(chance){
 		cost = 4 + irandom(item);
 		
 	break;*/
-	case 3: //Tool
-		type = item_type.tool;
-		item = irandom(tool.count);
-		cost = 10 + item div 2;
-		
-	break;
-	case 4: //Weapon
-		type = item_type.weapons;
-		item = irandom(weapons.count);
+	case 3: //Tool and weapon
+	case 4:
+		type = item_type.tl_n_wep;
+		item = irandom(tl_n_wep.count);
 		cost = 10 + (item div 5) * 2;
 		
 	break;

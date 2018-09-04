@@ -286,15 +286,15 @@ if argument0 = (vk_decimal)
 }
 
 if argument0 == (mb_left){
-	return "Mouse 1";
+	return "Ms 1";
 }
 
 if argument0 == (mb_right){
-	return "Mouse 2";
+	return "Ms 2";
 }
 
 if argument0 == (mb_middle){
-	return "Mouse 3";
+	return "Ms 3";
 }
 
 // Printable characters.

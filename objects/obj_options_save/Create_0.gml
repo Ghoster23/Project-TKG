@@ -4,7 +4,7 @@
 //read options file if it does exist
 
 if file_exists("saveoptions.ini"){
-	show_debug_message("load from file");
+	show_debug_message("Load from file.");
 	ini_open("saveoptions.ini");
 	global.masterVolume      =ini_read_real("audio",    "master", 0);
 	global.musicVolume       =ini_read_real("audio",     "music", 0);
@@ -90,14 +90,6 @@ else{
 	ini_write_real("controls",      "enter_key", global.key_binds[key_id.m_confirm]);
 	ini_close();
 }
-
-/*if global.fullscreen == "OFF"{
-	window_set_size(global.MonitorW,global.MonitorH);
-	window_set_position(0, 0);
-	window_center();
-	window_set_fullscreen(false);
-}*/
-
 
 //set master volume gain
 audio_master_gain(global.masterVolume);

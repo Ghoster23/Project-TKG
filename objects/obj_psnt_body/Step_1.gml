@@ -25,7 +25,7 @@ if(not global.pause){
 					state = 0;
 				}else if(dis > swing_r){
 					state = 1;
-				}else if(weapon.pat_state == 0){
+				}else if(weapon.alarm[0] == -1){
 					state = 2;
 				}else {
 					state = 2;
@@ -39,17 +39,18 @@ if(not global.pause){
 				}else if(dis > swing_r){
 					state = 1;
 				
-				}else if(weapon.pat_state == 0){
+				}else if(weapon.alarm[0] == -1){
 					state = 2;
 				}
 			break;
 		
 			case 2: //Attack
-				if(weapon.pat_state == 5){
+				if(weapon.alarm[0] != -1){
 					if(instance_exists(tell)){
 						instance_destroy(tell);
 					}
 					
+					key[0] = false;
 					state = 3;
 				}
 			break;
@@ -61,7 +62,7 @@ if(not global.pause){
 					state = 1;
 				}else if(dis > swing_r){
 					state = 3;
-				}else if(weapon.pat_state == 0){
+				}else if(weapon.alarm[0] == -1){
 					state = 2;
 				}
 			break;
@@ -75,7 +76,7 @@ if(not global.pause){
 						state = 0;
 					}else if(dis > swing_r){
 						state = 1;
-					}else if(weapon.pat_state == 0){
+					}else if(weapon.alarm[0] == -1){
 						state = 2;
 					}else {
 						state = 2;

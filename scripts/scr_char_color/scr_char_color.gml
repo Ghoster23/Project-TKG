@@ -1,6 +1,6 @@
 switch (global.char){
     case 0:
-        return c_gray;
+        return c_white;
         break;
     case 1:
         return make_colour_rgb(140,20,20)

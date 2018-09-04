@@ -33,9 +33,9 @@ if(go and not global.pause){
 		
 		break;
         case 4: //Shoot
-			if(!weapon.attack){
-				dir = point_direction(x,y,global.body.x,global.body.y);
-				weapon.attack = true;
+			if(!weapon.chargeup){
+				dir    = point_direction(x,y,global.body.x,global.body.y);
+				key[0] = true;
 				
 				if(!instance_exists(tell)){
 					tell = instance_create_layer(x,y-32,"IF",obj_archer_tell);
@@ -44,8 +44,9 @@ if(go and not global.pause){
 						owner = other;
 					}
 				}
+			}else {
+				key[0] = false;
 			}
-        
         break;
         case 5: //Dead State
 			solid = false;

@@ -10,7 +10,7 @@ instance_create_layer(gx+368,gy,"Instances",obj_wall_up_right);
 instance_create_layer(gx+304,gy,"Instances",obj_wall_up_fillin);
 
 instance_create_layer(gx,gy+global.roomhg-64,"PS",obj_wall_down_left);
-instance_create_layer(gx+304,gy+global.roomhg-64,"PS",obj_wall_down_fillin);
+instance_create_layer(gx+304-16,gy+global.roomhg-64,"PS",obj_wall_down_fillin);
 instance_create_layer(gx+368,gy+global.roomhg-64,"PS",obj_wall_down_right);
 
 instance_create_layer(gx+global.roomwd-32,gy,"Instances",obj_wall_right_up);

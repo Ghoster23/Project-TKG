@@ -18,7 +18,7 @@ if check == true{
 				box_wd = 20;
 		
 			///Open Mini Map
-			}else if global.key_active[key_id.mmap]{
+			}else if global.key_active[key_id.map]{
 				state = "mmap";
 				check = false;
 				alarm[0] = 0.5 * room_speed;
@@ -54,7 +54,7 @@ if check == true{
 				alarm[0] = 0.5 * room_speed;
 		
 			///Close Mini Map and Unpause Game	
-			}else if global.key_active[key_id.mmap]{
+			}else if global.key_active[key_id.map]{
 				state = "closed";
 				check = false;
 				alarm[0] = 0.5 * room_speed;
@@ -70,7 +70,7 @@ if check == true{
 				alarm[0] = 0.5 * room_speed;
 			
 			///Pause Game and open Mini Map
-			}else if global.key_active[key_id.mmap]{
+			}else if global.key_active[key_id.map]{
 				state = "mmap";
 				check = false;
 				alarm[0] = 0.5 * room_speed;

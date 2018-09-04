@@ -115,9 +115,9 @@ else{
 				//find the category and subcategory of the obj name in the arra
 				for(var q=1; q<6; q++){
 					for(var t=0; t<menuText[q,0]; t++){
-						if menuText[q,t]==obj_name{
+						if menuText[q,t+1]==obj_name{
 							category=q;
-							subcategory=t;
+							subcategory=t+1;
 						}
 					}
 				}

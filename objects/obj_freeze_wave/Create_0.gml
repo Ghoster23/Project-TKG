@@ -1,4 +1,5 @@
 dir = point_direction(x,y,mouse_x,mouse_y);
+shadow = noone;
 
 phy_rotation       = -dir - 45;
 phy_fixed_rotation = true;
@@ -17,3 +18,8 @@ with(ice){
 	alarm[0] = -1;
 	owner    = other;
 }
+
+damage = 0;
+mult = 0;
+divi = 0;
+kb_amount = 0;

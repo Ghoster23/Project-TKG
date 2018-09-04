@@ -5,7 +5,7 @@ state = "generation"; //State to start in
 
 check = true; //Check for a state change
 
-m = display_get_gui_width() / global.roomwd; //ratio
+m = global.ratio; //ratio
 
 box_wd = 20; //Animation
 alpha  = 0;

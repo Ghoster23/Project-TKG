@@ -1,4 +1,4 @@
-c = display_get_gui_width() / 2;
+c = global.gui_WD / 2;
 
 m = global.ratio;
 

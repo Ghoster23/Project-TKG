@@ -7,6 +7,7 @@ var status = s[0];
 var vfx = s[3];
 
 if(vfx != noone){
+	vfx.owner.image_blend = c_white;
 	instance_destroy(vfx);
 }
 

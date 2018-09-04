@@ -1,5 +1,5 @@
 if(global.key_active[key_id.menu] or
-   scr_GUI_button(c-17*m,creatures_y1+creatures_height+18*m,c+17*m,creatures_y1+creatures_height+28*m)){
+   scr_GUI_button(hc-17*m,creatures_y1+creatures_height+18*m,hc+17*m,creatures_y1+creatures_height+28*m)){
 	instance_create_layer(x,y,layer,obj_options_controller);
 	instance_destroy();
 }

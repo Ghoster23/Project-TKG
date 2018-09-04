@@ -152,7 +152,7 @@ comp = 0;
 instance_create_layer( 0, 0, "IF", obj_room_controller);
 comp += 7;
 
-instance_create_layer( 0, 0, "PS", obj_minimap_controller);
+instance_create_layer( 0, 0, "PS", obj_map_controller);
 comp += 7;
 
 

@@ -5,31 +5,11 @@
     "name": "obj_wall_parent",
     "eventList": [
         {
-            "id": "7be041b3-4804-4e5a-b3b7-c6e5b5be42dc",
+            "id": "265eeead-9476-4df6-a0b8-572a9d0b26e1",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
-            "collisionObjectId": "748cab6e-7a35-46a0-9cd4-d45e9879dfcc",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "0eb59043-ff9a-4694-af4f-f069f6e0dd25"
-        },
-        {
-            "id": "42eef7e4-ab99-469d-9335-1a0868ab93bc",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "58371276-295f-47b3-b2e7-892bb302b870",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "0eb59043-ff9a-4694-af4f-f069f6e0dd25"
-        },
-        {
-            "id": "2c32622f-ce82-4021-a135-b125ca71ee06",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "a3c66920-061f-4c76-9fd6-cd704e6e1b55",
+            "collisionObjectId": "bf4325ce-f095-4f67-8c3d-b24d1bdfd0db",
             "enumb": 0,
             "eventtype": 4,
             "m_owner": "0eb59043-ff9a-4694-af4f-f069f6e0dd25"

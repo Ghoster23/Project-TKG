@@ -1,14 +1,17 @@
 ///@description Updates the Active Enemies List
 {
+var trap_list = ds_list_create();
+
 if(room == rm_level){
-	var trap_list = collision_rectangle_list(global.current_column * global.roomwd + 32,global.current_row * global.roomhg + 96,
-		(global.current_column + 1) * global.roomwd - 32,(global.current_row + 1) * global.roomhg - 32,obj_trap_parent,false,false);
+	//var count = collision_rectangle_list(global.current_column * global.roomwd + 32,global.current_row * global.roomhg + 96,
+	//										(global.current_column + 1) * global.roomwd - 32,(global.current_row + 1) * global.roomhg - 32,
+	//										obj_trap_parent,false,false,trap_list,false);
 }else {
-	var trap_list = collision_rectangle_list(0,0,room_width,room_height,obj_trap_parent,false,false);
+	//var count = collision_rectangle_list(0,0,room_width,room_height,obj_trap_parent,false,false,trap_list,false);
 }
 
-if trap_list != noone { //If enemies were found
-	while not ds_list_empty(trap_list) { //While the list of found enemies isn't empty
+if count > 0 { //If enemies were found
+	repeat count { //While the list of found enemies isn't empty
 		var trap = trap_list[| 0];      //Get the first entry in the list
 		ds_list_delete(trap_list,0);     //Remove it from the list
 		

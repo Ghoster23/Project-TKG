@@ -11,7 +11,7 @@
         "f3691597-b973-4249-8f43-2adc1eee62c9"
     ],
     "filterType": "GMSprite",
-    "folderName": "body",
+    "folderName": "Body",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

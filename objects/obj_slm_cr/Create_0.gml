@@ -21,6 +21,8 @@ damage = 2;
 mult = stats.satk;
 divi = stats.sdef;
 
+frozen = false;
+
 //Pause
 for(i = 0; i < 6; i++){
 	alarms[i] = -1;

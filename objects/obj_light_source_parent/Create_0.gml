@@ -1,11 +1,12 @@
 event_inherited();
 
-draw_script =  scr_draw_light;
+draw_script = scr_draw_light;
 
 room_active = false;
 
 radius = 400;
 base_radius = radius;
+range = 5;
 
 image_blend = c_white;
 

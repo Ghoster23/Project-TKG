@@ -1,5 +1,5 @@
-hc = display_get_gui_width() / 2;
-vc = display_get_gui_height() / 2;
+hc = global.gui_WD / 2;
+vc = global.gui_HG / 2;
 
 if(check){
 	switch state {
@@ -7,7 +7,7 @@ if(check){
 			if(keyboard_check_pressed(vk_end) and
 			   keyboard_check_pressed(vk_alt)){
 				state = prev_state;
-			
+				show_debug_overlay(true);
 				check = false;
 				alarm[0] = 0.5 * room_speed;
 			}
@@ -31,7 +31,7 @@ if(check){
 			   keyboard_check_pressed(vk_alt)){
 				prev_state = state;
 				state = 0;
-				
+				show_debug_overlay(false);
 				check = false;
 				alarm[0] = 0.5 * room_speed;
 			}	

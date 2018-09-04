@@ -10,7 +10,7 @@
         "d6360cde-58de-44a4-99b3-b8d331f5e396"
     ],
     "filterType": "GMSprite",
-    "folderName": "body",
+    "folderName": "General",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

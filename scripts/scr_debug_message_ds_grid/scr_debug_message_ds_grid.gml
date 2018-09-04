@@ -8,7 +8,7 @@ if(ds_exists(gr,ds_type_grid)){
 	var text = "";
 	
 	for(var i = 0; i < hg; i++){
-		text = "[";
+		text = "[ ";
 		for(var j = 0; j < wd; j++){
 			text += (string(gr[# j, i]) + " ");
 		}

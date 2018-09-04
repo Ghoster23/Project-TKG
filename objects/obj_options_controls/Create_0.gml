@@ -2,14 +2,15 @@ state="up_key";
 vis=true;
 alarm[1]=0.6*room_speed;
 
-m = display_get_gui_width() / global.roomwd;
-c = display_get_gui_width() / 2;
+m = global.gui_WD / global.roomwd;
+hc = global.gui_WD / 2;
+vc = global.gui_HG / 2;
 
-c1 = (c*10/18);
-c2 = c + (c/18);
+c1 = (hc*10/18);
+c2 = hc + (hc/18);
 
-ic1 = c - (2*c/18)
-ic2 = c + (8*c/18)
+ic1 = hc - (2*hc/18)
+ic2 = hc + (8*hc/18)
 
 off = 96;
 sep = 28;
@@ -21,7 +22,7 @@ listen_for_key=false;
 //controlls
 controls_width  = string_width_ext("Controls Options",2,200)*m;
 controls_height = string_height_ext("Controls Options",2,200)*m; 
-controls_x1 = c-((controls_width)/2);
+controls_x1 = hc-((controls_width)/2);
 controls_y1 = (off) * m;
 controls_x2 = controls_x1 + controls_width;
 controls_y2 = controls_y1+ controls_height;

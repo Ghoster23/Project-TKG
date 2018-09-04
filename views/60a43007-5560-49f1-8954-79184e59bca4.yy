@@ -4,11 +4,10 @@
     "mvc": "1.1",
     "name": "60a43007-5560-49f1-8954-79184e59bca4",
     "children": [
-        "9f6440d2-5e4e-4dcd-8110-be18ed5b246f",
-        "9ff8c767-e7c8-46d2-bfa3-b90538974b8d",
-        "41f5d3c1-f620-4e64-bbf9-82473fb783f2",
-        "fa34c943-2be8-4f6e-b918-ce484c60980d",
-        "c2e9e498-cd0c-4de0-96a5-24ce6e634f78"
+        "a3a32e29-3dfd-432b-948e-870c8dad74c4",
+        "4b46532a-c6a3-49f3-8a30-856a90dc4bb0",
+        "fe521d55-3227-4340-9719-28ed5da933a1",
+        "bb90110c-e3e4-4ed0-8ca7-09ab9af3e324"
     ],
     "filterType": "GMSprite",
     "folderName": "HUD",
