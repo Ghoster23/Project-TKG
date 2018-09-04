@@ -1,3 +1,6 @@
+///@param value
+///@param minimum
+///@param maximum
 {
 var val     = argument0;
 var min_val = argument1;

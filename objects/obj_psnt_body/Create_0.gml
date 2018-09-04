@@ -3,7 +3,7 @@ event_inherited();
 
 //create weapon
 weapon = scr_create_tw(irandom_range(0,5),32);
-weapon.skin_color = skin_color;
+weapon.skin_color  = skin_color;
 weapon.draw_script = scr_psnt_draw;
 
 //Stats
@@ -20,3 +20,6 @@ prev_hp = stat[stats.hp];
 idle_r  = 200;
 flee_r  = 128;
 swing_r = 48;
+
+key[0] = false;
+key[1] = false;

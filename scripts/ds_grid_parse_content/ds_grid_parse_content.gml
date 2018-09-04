@@ -13,7 +13,7 @@ var hg = ds_grid_height(gr);
 
 for(var i = 0; i < wd; i++){
 	for(var j = 0; j < hg; j++){		
-		show_debug_message("Cell - " + string(i) + " " + string(j));
+		//show_debug_message("Cell - " + string(i) + " " + string(j));
 		gr[# i, j] = scr_parse_string(gr[# i, j]);
 	}
 }

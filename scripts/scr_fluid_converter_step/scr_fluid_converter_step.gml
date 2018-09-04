@@ -1,8 +1,8 @@
 if(not global.pause and on){
 	var fl_tiles = ds_list_create();
-	//var tl_count = collision_rectangle_list( x, y, 
-	//										 x+sprite_width*image_xscale, y+sprite_height*image_yscale, 
-	//										 obj_fluid_tile, true, false,fl_tiles,false);
+	var tl_count = collision_rectangle_list( x, y, 
+											 x+sprite_width*image_xscale, y+sprite_height*image_yscale, 
+											 obj_fluid_tile, true, false,fl_tiles,false);
 	
 	if(tl_count > 0){
 		var flx    = x;

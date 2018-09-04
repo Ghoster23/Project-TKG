@@ -3,11 +3,11 @@
 var trap_list = ds_list_create();
 
 if(room == rm_level){
-	//var count = collision_rectangle_list(global.current_column * global.roomwd + 32,global.current_row * global.roomhg + 96,
-	//										(global.current_column + 1) * global.roomwd - 32,(global.current_row + 1) * global.roomhg - 32,
-	//										obj_trap_parent,false,false,trap_list,false);
+	var count = collision_rectangle_list(global.current_column * global.roomwd + 32,global.current_row * global.roomhg + 96,
+											(global.current_column + 1) * global.roomwd - 32,(global.current_row + 1) * global.roomhg - 32,
+											obj_trap_parent,false,false,trap_list,false);
 }else {
-	//var count = collision_rectangle_list(0,0,room_width,room_height,obj_trap_parent,false,false,trap_list,false);
+	var count = collision_rectangle_list(0,0,room_width,room_height,obj_trap_parent,false,false,trap_list,false);
 }
 
 if count > 0 { //If enemies were found

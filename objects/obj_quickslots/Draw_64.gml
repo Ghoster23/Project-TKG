@@ -3,8 +3,8 @@ if(obj_player_hud.visible){
 	var text = scr_keyname(global.key_binds[key_id.consume]);
 	var slot = scr_inv_get_pos(obj_inventory_controller.consumable);
 	
-	scr_boxed_text((start_x + 2/3 * box_wd) * m, (start_y + 5/3 * box_hg) * m, c_white, c_black, m div 2,
-					font_ig_menu, text, spr_HUD_key);
+	//scr_boxed_text((start_x + 2/3 * box_wd) * m, (start_y + 5/3 * box_hg) * m, c_white, c_black, m div 2,
+	//				font_ig_menu, text, spr_HUD_key);
 	
 	scr_9SB_ext(spr_HUD_9SB, (start_x + 2/3 * box_wd) * m, (start_y + 2/3 * box_hg) * m, 
 						 (start_x + 5/3 * box_wd) * m, (start_y + 5/3 * box_hg) * m, m, m);
@@ -20,8 +20,8 @@ if(obj_player_hud.visible){
 	var text = scr_keyname(global.key_binds[key_id.utilize]);
 	var slot = scr_inv_get_pos(obj_inventory_controller.tool_slot);
 	
-	scr_boxed_text(start_x * m, (start_y + box_hg) * m, c_white, c_black, m div 2,
-					font_chsl_tags, text, spr_HUD_key);
+	//scr_boxed_text(start_x * m, (start_y + box_hg) * m, c_white, c_black, m div 2,
+	//				font_chsl_tags, text, spr_HUD_key);
 	
 	scr_9SB_ext(spr_HUD_9SB, start_x * m, start_y * m,
 				(start_x + box_wd) * m, (start_y + box_hg) * m,

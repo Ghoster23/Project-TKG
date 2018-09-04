@@ -24,10 +24,13 @@ if(not global.pause){
 				//Mechanics
 				
 				//Execute skill
-				if(executing != -1 && skills[executing] != -1){ script_execute(skills[executing],executing);}
-				
-				//Listen for input
-				else {
+				if(executing != -1){
+					if(skills[executing] != -1){
+						script_execute(skills[executing],executing);
+					}else {
+						executing = -1;
+					}
+				}else {
 					//Key is pressed
 					if(key[0] || key[1]){
 						//Create a meter
@@ -35,11 +38,11 @@ if(not global.pause){
 							//Skill 0 and 1
 							if(key[0]){
 								//Check skill 1 cd
-								if(alarm[1] == -1){
+								if(skills[1] != -1 && alarm[1] == -1){
 									meter = scr_create_charge_up( x, y, charge[0], id, 0);
 								
 								//Check skill 0 cd
-								}else if(alarm[0] == -1){
+								}else if(skills[0] != -1 && alarm[0] == -1){
 									executing = 0;
 								}
 							}
@@ -47,11 +50,11 @@ if(not global.pause){
 							//Skill 2 and 3
 							else if(key[1]){
 								//Check skill 3 cd
-								if(alarm[3] == -1){
+								if(skills[3] != -1 && alarm[3] == -1){
 									meter = scr_create_charge_up( x, y, charge[1], id, 2);
 									
 								//Check skill 2 cd
-								}else if(alarm[2] == -1){
+								}else if(skills[2] != -1 && alarm[2] == -1){
 									executing = 2;
 								}
 							}
@@ -70,15 +73,13 @@ if(not global.pause){
 									//Hide meter
 									if(meter != noone){
 										meter.visible = false;
+										var c = charge[meter.skill] * room_speed;
+										chr_spd = (spr_cnt+1) / c;
 									}
 								
-									//Start animation
-									if(image_speed == 0 && image_index != sprite_get_number(sprite_index) - 1){
-										image_speed = img_spd;
-										
-									//Stop animation
-									}else {
-										image_speed = 0;
+									//Animate
+									if(image_index < spr_cnt){
+										image_index += chr_spd;
 									}
 								break;
 								
@@ -107,7 +108,7 @@ if(not global.pause){
 				}
 			break;
 			case 1: //Stowed
-				angle = 0;
+				angle = 90;
 			
 				//Particles
 				///Layering

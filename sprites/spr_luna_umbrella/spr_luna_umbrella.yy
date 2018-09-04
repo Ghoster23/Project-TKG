@@ -6,9 +6,9 @@
     "For3D": false,
     "HTile": false,
     "VTile": false,
-    "bbox_bottom": 42,
+    "bbox_bottom": 30,
     "bbox_left": 1,
-    "bbox_right": 30,
+    "bbox_right": 42,
     "bbox_top": 1,
     "bboxmode": 0,
     "colkind": 1,
@@ -62,7 +62,7 @@
     ],
     "gridX": 0,
     "gridY": 0,
-    "height": 44,
+    "height": 32,
     "layers": [
         {
             "id": "f68434a7-0047-453d-9124-a2c5e92a0ee8",
@@ -84,9 +84,9 @@
     "sepmasks": false,
     "swatchColours": null,
     "swfPrecision": 2.525,
-    "textureGroupId": "1225f6b0-ac20-43bd-a82e-be73fa0b6f4f",
+    "textureGroupId": "963275bf-7790-4990-9a43-eb7aa77be0a9",
     "type": 0,
-    "width": 32,
-    "xorig": 16,
-    "yorig": 40
+    "width": 44,
+    "xorig": 1,
+    "yorig": 17
 }

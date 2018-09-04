@@ -4,18 +4,17 @@ var num = argument0;
 var parameters = params[num];
 
 //Shoot		
-var xx  = x + lengthdir_x(30,angle);
-var yy  = y + lengthdir_y(30,angle);
+var xx  = x + lengthdir_x(sprite_width,angle);
+var yy  = y + lengthdir_y(sprite_width,angle);
 var rad = degtorad(angle);
 
 for(var i = 0; i < parameters[3]; i++){
-	var pr = scr_create_damage_dealer(xx,yy,parameters[2],
+	var range = degtorad(parameters[1]);
+	
+	var pr = scr_create_projectile( xx, yy, parameters[2],
 										owner, owner.ohko,
-										owner.stat[mult] * (1 + owner.modf[mult]),
-										divi);
-
-	pr.spd = parameters[0];
-	pr.dir = -rad + random_range(-parameters[1],parameters[1]);
+										parameters[0], -rad + random_range(-range,range),
+										owner.stat[mult] * (1 + owner.modf[mult]), divi);
 }
 		
 image_index = 0;

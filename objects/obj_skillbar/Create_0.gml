@@ -6,3 +6,5 @@ gui_HG = 0;
 
 start_x = 8;
 start_y = 64;
+
+bk_color = make_color_rgb(43,43,43);

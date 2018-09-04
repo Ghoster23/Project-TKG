@@ -1,14 +1,21 @@
-mx = device_mouse_x_to_gui(0);
-my = device_mouse_y_to_gui(0);
+m = global.ratio;
+
+gui_WD = global.gui_WD;
+gui_HG = global.gui_HG;
+
+hc = gui_WD / 2;
+vc = gui_HG / 2;
 
 if(obj_ig_menu_controller.state == "closed"){
+	
+	/// Consumable Slot
 	if(global.key_active[key_id.consume] && alarm[1] == -1 && inventory[# 0, consumable] != -1){
 		scr_inv_consume(consumable);
 		
 		alarm[1] = 0.3 * room_speed;
 	}
 	
-	
+	/// Tool Slot
 	if(global.key_active[key_id.utilize] && alarm[1] == -1){
 		var type   = inventory[# 0, tool_slot];
 		var item   = inventory[# 1, tool_slot];
@@ -30,22 +37,22 @@ if(obj_ig_menu_controller.state == "closed"){
 			break;
 		}
 		
-		tool_key = false;
 		alarm[1] = 0.3 * room_speed;
 	}
 	
-	inv_x   = -inv_wd * r;
+	inv_x   = -inv_wd * r; //Reset inv_x
 
 	///Quick Access
 	qa_x    = inv_x + (inv_wd / 2 - qa_wd / 2) * r;
 
 	///Stats & Equipment
-	equip_x = c * 2 - inv_x - inv_wd * r;
+	equip_x = hc * 2 - inv_x - inv_wd * r;
 	
-}else if(obj_ig_menu_controller.state == "inv"){	
-	gui_WD = display_get_gui_width();
-	gui_HG = display_get_gui_height();
+}else if(obj_ig_menu_controller.state == "inv"){
+	mx = device_mouse_x_to_gui(0);
+	my = device_mouse_y_to_gui(0);
 	
+	//If inventory animation is done
 	if(inv_x == 0){
 		//UP
 		if(global.key_active[key_id.up] || global.key_active[key_id.m_up]){
@@ -164,8 +171,8 @@ if(obj_ig_menu_controller.state == "closed"){
 				}
 	
 			//Body
-			}else if(c - 32 * m < mx && mx < c + 32 * m &&
-					 c_ - 32 * m < my && my < c_ + 32 * m){
+			}else if(hc - 32 * m < mx && mx < hc + 32 * m &&
+					 vc - 32 * m < my && my < vc + 32 * m){
 				selected = 16;
 			
 			//Drop
@@ -186,7 +193,7 @@ if(obj_ig_menu_controller.state == "closed"){
 			
 			//Place, swap or drop items
 			if(_type != -1){
-				//Fuck up prevention
+				//F*** up prevention
 				if(is_undefined(_type)){
 					scr_inv_set_pos(-1,-1,-1,holder);
 				}
@@ -255,6 +262,6 @@ if(obj_ig_menu_controller.state == "closed"){
 		qa_x    = inv_x + (inv_wd / 2 - qa_wd / 2) * r;
 
 		///Stats & Equipment
-		equip_x = c * 2 - inv_x - inv_wd * r;
+		equip_x = hc * 2 - inv_x - inv_wd * r;
 	}
 }

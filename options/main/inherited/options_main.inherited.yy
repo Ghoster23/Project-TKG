@@ -3,6 +3,48 @@
     "option_lastchanged": "07 April 2018 1:47:36",
     "option_sci_usesci": false,
     "option_game_speed": 30
+}←be5f1418-b31b-48af-a023-f04cdf6e5121|{
+    "textureGroups": {
+        "Additions": [
+            {
+                "Key": 1,
+                "Value": {
+                    "id": "4d4d965d-b771-4876-9fe5-6f6b4999d485",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "Jason",
+                    "targets": 461609314234257646,
+                    "autocrop": false,
+                    "border": 2,
+                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
+            },
+            {
+                "Key": 2,
+                "Value": {
+                    "id": "963275bf-7790-4990-9a43-eb7aa77be0a9",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "Luna",
+                    "targets": 461609314234257646,
+                    "autocrop": false,
+                    "border": 2,
+                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
+            }
+        ],
+        "Checksum": "ࢺ懜璙ᓆ锯翋꤯맫",
+        "Deletions": [
+            
+        ],
+        "Ordering": [
+            
+        ]
+    }
 }←1225f6b0-ac20-43bd-a82e-be73fa0b6f4f|{
     "targets": 461609314234257646,
     "autocrop": false

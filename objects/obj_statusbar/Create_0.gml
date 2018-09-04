@@ -24,5 +24,5 @@ start_y = 36;
 status_wd = sprite_get_width(spr_status_regen) + 2;
 status_hg = sprite_get_height(spr_status_regen);
 
-stop = 0;
+stop  = 0;
 reset = true;

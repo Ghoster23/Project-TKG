@@ -20,3 +20,6 @@ prev_hp = stat[stats.hp];
 idle_r = 300;
 aim_r  = 200;
 flee_r = 100;
+
+key[0] = false;
+key[1] = false;

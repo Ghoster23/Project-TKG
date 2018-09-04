@@ -1,6 +1,8 @@
 /// @description Inicialise the enemy
 event_inherited();
 
+instance_destroy(shadow);
+
 image_speed = 0.3;
 image_alpha = 0.7;
 

@@ -8,7 +8,7 @@ with global.body {
 	
 	instance_destroy(weapon);
 	
-	weapon = scr_create_tw(global.weapon, 1);
+	weapon = scr_create_tw(global.weapon, -1);
 }
 
 if(amt < 1){

@@ -14,6 +14,7 @@ var data = scr_tw_get_data(tl_id);
 var tl = instance_create_layer(x,y,layer,obj_tool);
 	
 with tl {
+	name  = data[0];
 	owner = other;
 	
 	if(durab == -1){
@@ -27,7 +28,7 @@ with tl {
 	//Visuals
 	sprite_index = data[1];
 	
-	if(data[1] >= 0){
+	if(data[2] >= 0){
 		image_index = data[2];
 	}
 	else {

@@ -1,19 +1,13 @@
 scr_unique_inst();
+
+// Inventory grid
 inventory = ds_grid_create(3,15);
 ds_grid_set_region(inventory,0,0,2,14,-1);
 
+// Enums
 scr_inv_types_init();
-scr_potion_init();
-scr_chessP_init();
-scr_constellation_init();
-scr_food_init();
-scr_unique_consume_init();
-scr_tw_init();
-scr_equip_init();
-scr_drop_init();
 
-global.equiped = [-1,-1,-1];
-
+// Slot IDs
 holder     = 14;
 tool_slot  = 13;
 consumable = 12;
@@ -21,8 +15,6 @@ consumable = 12;
 selected   = 0;
 
 equip = false;
-
-tool_key = false;
 
 capacity = 9;
 
@@ -33,6 +25,8 @@ for(var i = 0; i < equips.count; i++){
 	global.equipable[i] = false;
 		   
 }
+
+global.equiped = [-1,-1,-1];
 
 //Active
 for(var i = 0; i < 3; i++){
@@ -55,24 +49,24 @@ equip_wd = sprite_get_width( spr_equipslots);
 equip_hg = sprite_get_height(spr_equipslots);
 
 ///GUI
-c  = display_get_gui_width()  / 2;
-c_ = display_get_gui_height() / 2;
+hc = global.gui_WD  / 2;
+vc = global.gui_HG / 2;
 
 //Scale
-m = display_get_gui_width() / global.roomwd;
+m = global.gui_WD / global.roomwd;
 r = m * 1.8;
 		
 //Placements
 ///Inventory
 inv_x   = 0;
-inv_y   = c_ - ((inv_hg + qa_hg) / 2) * r;
+inv_y   = vc - ((inv_hg + qa_hg) / 2) * r;
 
 ///Quick Access
 qa_x    = inv_x + (inv_wd / 2 - qa_wd / 2) * r;
 qa_y    = inv_y + inv_hg * r;
 
 ///Stats & Equipment
-equip_x = c * 2 - inv_x - inv_wd * r;
+equip_x = hc * 2 - inv_x - inv_wd * r;
 equip_y = inv_y;
 
 prev_mx = 0;

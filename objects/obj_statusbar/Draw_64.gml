@@ -1,4 +1,4 @@
-if(obj_player_hud.on){
+if(obj_player_hud.visible){
 	var j = 0;
 	var st_count = global.body.status_count;
 	var st_list  = global.body.status_list;

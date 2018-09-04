@@ -1,8 +1,8 @@
 if(not global.pause and on){
 	var fl_tiles = ds_list_create();
-	//var tl_count = collision_rectangle_list( x, y, 
-	//										 x+sprite_width*image_xscale, y+sprite_height*image_yscale, 
-	//										 obj_fluid_tile, true, false, fl_tiles, false);
+	var tl_count = collision_rectangle_list( x, y, 
+											 x+sprite_width*image_xscale, y+sprite_height*image_yscale, 
+											 obj_fluid_tile, true, false, fl_tiles, false);
 	
 	if(tl_count > 0){
 		var flx   = x;
@@ -76,7 +76,7 @@ if(not global.pause and on){
 				
 				
 				if(bl_cnt/array_len >= 0.5 and not place_meeting(x,y,obj_solid_parent)){
-					instance_create_layer(x+16,y+16,layer,obj_ice_cube);
+					instance_create_layer(x+16,y+16,"Instances",obj_ice_cube);
 				}
 			}	
 		}		

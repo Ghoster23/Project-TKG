@@ -23,9 +23,9 @@ switch parameters[0] {
 		}else {
 			parameters[3] = angle + ang_off; //Determine original target
 			
-			angle += angle_off;
+			angle += ang_off;
 			
-			angle_off = 0;
+			ang_off = 0;
 			
 			parameters[7] = parameters[6];
 			
@@ -44,7 +44,7 @@ switch parameters[0] {
 		angle = parameters[3];
 		
 		if(parameters[7] > 0){
-			ang_off = scr_approach(ang_off,360,parameters[4]); //Approach target
+			ang_off = scr_approach(ang_off,360,parameters[4]*10); //Approach target
 			
 			var ori = ((ang_off + 45) div 90) mod 4;
 			
@@ -62,12 +62,14 @@ switch parameters[0] {
 				scr_sound(snd_sword_slash);
 			
 				parameters[8] = ori;
-				parameters[7]--;
 			}
+		}else {
+			parameters[0] = 3;
 		}
 		
 		if(ang_off == 360){
 			ang_off = 0;
+			parameters[7]--;
 		}
 		
 	break;
@@ -79,6 +81,8 @@ switch parameters[0] {
 		if(amount > 0 and player_owned){
 			amount--;
 		}
+		
+		parameters[0] = 0;
 	break;
 }
 

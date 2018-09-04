@@ -11,7 +11,7 @@ m = 0;
 counter = 0;
 
 start_x = 64;
-start_y = 16;
+start_y = 8;
 
 heart_wd = sprite_get_width(spr_HUD_heart) + 2;
 heart_hg = sprite_get_height(spr_HUD_heart);

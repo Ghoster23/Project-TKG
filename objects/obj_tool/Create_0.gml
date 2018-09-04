@@ -18,7 +18,10 @@ drawn  = -1;
 stowed = -1;
 
 image_speed = 0;
+image_index = 0;
 img_spd     = 0;
+spr_cnt     = 0;
+chr_spd     = 0;
 
 offx = 0;
 offy = 0;
@@ -45,6 +48,8 @@ cds    = [-1,-1,-1,-1];
 charge = [-1,-1]; 
 key[0] = false;
 key[1] = false;
+
+icons = [-1,-1,-1,-1];
 
 meter    = noone;
 chargeup = false;
