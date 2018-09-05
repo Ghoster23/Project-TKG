@@ -11,7 +11,7 @@
 //
 /// GMLscripts.com/license
 {
-    var x1,y1,x2,y2,obj,prec,notme,dsid,i;
+    var x1,y1,x2,y2,obj,prec,notme,dsid,i; 
     x1 = argument0;
     y1 = argument1;
     x2 = argument2;

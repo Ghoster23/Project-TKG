@@ -11,14 +11,19 @@ if(global.selected_light == id){
 		draw_sprite(spr_legendadebugg,0,x,y);
 	}
 	
-	if(keyboard_check_pressed(ord("K"))){
+	if(keyboard_check_pressed(ord("R"))){
 		keyboard_string = "";
 		typing_radius = true;
 	}
 	
-	if(keyboard_check_pressed(ord("L"))){
+	if(keyboard_check_pressed(ord("C"))){
 		keyboard_string = "";
 		typing_color = true;
+	}
+	
+	if(keyboard_check_pressed(ord("O"))){
+		keyboard_string = "";
+		typing_opacity = true;
 	}
 	
 	if(typing_radius == true){
@@ -51,6 +56,15 @@ if(global.selected_light == id){
 			}
 			image_blend = make_color_hsv(string_copy(keyboard_string,0,sep1),string_copy(keyboard_string,sep1+1,sep2-(sep1+1)),string_copy(keyboard_string,sep2+1,string_length(keyboard_string)));
 			typing_color = false;
+		}
+	}
+	
+	if(typing_opacity == true){
+		draw_text(x+10,y-5,"Opacity---> " + keyboard_string);
+		if(keyboard_check_pressed(vk_enter)){
+			var text = keyboard_string;
+			opacity = real(text);
+			typing_opacity = false;
 		}
 	}
 }

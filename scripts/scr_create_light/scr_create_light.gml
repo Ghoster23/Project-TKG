@@ -11,7 +11,7 @@
 	var front   = argument2;
 	var radius_ = argument3;
 	var color_  = argument4;
-	var range_  = argument5;
+	var opacity_= argument5;
 
 	if(front == true){
 		var light = instance_create_layer(x_,y_,"Instances",obj_light_front);
@@ -21,10 +21,11 @@
 	}
 	
 	with(light){
-		radius = radius_; 
+		radius      = radius_; 
 		base_radius = radius;
 		range = range_;
 		image_blend = color_;
+		opacity     = opacity_;
 	}
 	
 	return light;

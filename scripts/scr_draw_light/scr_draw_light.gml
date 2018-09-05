@@ -31,7 +31,7 @@ if(room_active == true){
 	shader_set_uniform_f( LightPosRadius, x, y, radius,0.0 );
 	
 	gpu_set_blendmode(bm_add);
-	draw_surface_ext(surf,0,0,1,1,0,image_blend,0.5);
+	draw_surface_ext(surf,0,0,1,1,0,image_blend,opacity);
 	gpu_set_blendmode(bm_normal);
 	
 	shader_reset();

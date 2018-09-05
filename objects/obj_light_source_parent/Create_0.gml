@@ -10,6 +10,8 @@ range = 5;
 
 image_blend = c_white;
 
+opacity = 0.5;
+
 in_range = 0;
 
 //defining a vertex format and buffer (what we pass to shader)

@@ -1,4 +1,4 @@
-{
+
 var count = ds_list_size(argument0);
 
 for(var i = 0; i < count; i++){
@@ -21,5 +21,4 @@ for(var i = 0; i < count; i++){
 	
 	scr_draw_shadows(dots,inst);
 	
-}
 }

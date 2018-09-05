@@ -15,3 +15,4 @@ if(!variable_global_exists("selected_light")){
 
 typing_radius = false;
 typing_color = false;
+typing_opacity = false;

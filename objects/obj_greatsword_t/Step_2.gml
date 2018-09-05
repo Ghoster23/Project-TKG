@@ -47,3 +47,8 @@ if(stop == true and ds_exists(linkslist, ds_type_list)){
 		}
 	}
 }
+
+if(instance_exists(target) and target != noone){
+	target.phy_position_x = phy_position_x;
+	target.phy_position_y = phy_position_y;
+}

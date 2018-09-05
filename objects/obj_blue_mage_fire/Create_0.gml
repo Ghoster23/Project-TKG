@@ -30,5 +30,5 @@ flameoff =0;
 
 no_shadows = true;
 
-front_light = scr_create_light(x+16,y+16,true,40,make_color_hsv(150,255,200),1);
-back_light = scr_create_light(x+16,y+16,false,65,make_color_hsv(130,255,150),1);
+front_light = scr_create_light(x+16,y+16,true,40,make_color_hsv(150,255,200),0.5);
+back_light = scr_create_light(x+16,y+16,false,65,make_color_hsv(130,255,150),0.5);

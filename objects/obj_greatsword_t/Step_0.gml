@@ -28,3 +28,8 @@ if(point_distance(x,y,owner.x,owner.y)<=25 and pullback==true){
 phy_rotation = -point_direction(global.body.x,global.body.y,x,y);
 x = phy_position_x;
 y = phy_position_y;
+
+//Get OVER HERE
+if(place_meeting(x,y,obj_enemy_parent) and target == noone){
+	target = instance_nearest(x,y,obj_enemy_parent);
+}

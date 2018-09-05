@@ -1,4 +1,5 @@
 ///@description Damage the entity
+
 if(variable_instance_exists(other,"owner")){
 	
 	if(other.owner == id){
