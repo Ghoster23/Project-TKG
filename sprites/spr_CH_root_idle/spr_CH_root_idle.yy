@@ -6,13 +6,14 @@
     "For3D": false,
     "HTile": false,
     "VTile": false,
-    "bbox_bottom": 161,
-    "bbox_left": 0,
-    "bbox_right": 37,
-    "bbox_top": 0,
+    "bbox_bottom": 178,
+    "bbox_left": 257,
+    "bbox_right": 294,
+    "bbox_top": 15,
     "bboxmode": 0,
     "colkind": 0,
     "coltolerance": 0,
+    "edgeFiltering": false,
     "frames": [
         {
             "id": "4adc67b3-48c9-4203-ae93-354a3532dd40",
@@ -340,6 +341,7 @@
         }
     ],
     "origin": 9,
+    "originLocked": false,
     "playbackSpeed": 0.4,
     "playbackSpeedType": 1,
     "premultiplyAlpha": false,

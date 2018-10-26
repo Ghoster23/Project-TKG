@@ -160,5 +160,5 @@ for(i=0;i<9;i++){
 //delete the ds grid and we are done :)
 ds_grid_destroy(global.room_grid);
 
-global.current_column = 0;
+global.current_col = 0;
 global.current_row    = 0;

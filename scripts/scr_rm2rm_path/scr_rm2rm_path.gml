@@ -23,7 +23,7 @@
 		i = 0;
 		
 		for(j = 1; j < current[0] + 1; j++){
-			adj = scr_room_get_adjacent(current[j]);
+			//adj = scr_room_get_adjacent(current[j]); FIX ME
 
 			for(i = 0; i < 4; i++){
 				if(adj[i] != -1 and list[| adj[i]] == -1){

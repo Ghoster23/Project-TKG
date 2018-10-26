@@ -21,27 +21,26 @@ var j=0, i=0, index, count, line = "", content = "";
 
 //iterate through lines
 repeat(lines){
+	line  = file_text_read_string(file_read);
+	index = 1;
+	count = 0;
 
-	line=file_text_read_string(file_read);
-	index=1;
-	count=0;
-
-	for(i=0;i<collums;i++){
-		
+	for(i = 0; i < collums; i++){
 		//if its between "" aka a string
-		if string_char_at(line,index)==chr(34) {
-		
+		if(string_char_at(line,index) == chr(34)){
 			//if its the last collum
-			if (i==collums-1){
-				content=string_copy(line,index+1,string_length(line)-(index+2));
+			if (i == collums-1){
+				content = string_copy(line,index+1,string_length(line)-(index+1));
 			}
 			else{
 				//keep pacing throught the letters until you find aspas again
-				index+=1;
-				while(string_char_at(line,index)!=chr(34)){
+				index += 1;
+				
+				while(string_char_at(line,index) != chr(34)){
 					index++;
 					count++;
-				}	
+				}
+				
 				//when you do, copy it to content
 				content=string_copy(line,index-count,count);
 				index+=2;
@@ -51,14 +50,17 @@ repeat(lines){
 		
 		//if its not aka value
 		else{
-			if (i==collums-1){
+			if (i == collums-1){
 				content=real(string_copy(line,index,string_length(line)-(index)));
 			}
 			else{
-				//keep pacing throught the letters until you find a comma 
-				while(string_char_at(line,index)!=chr(59)){
+				//keep pacing throught the letters until you find a ;
+				var c = string_char_at(line,index);
+				
+				while(c != chr(59)){
 					index++;
 					count++;
+					c = string_char_at(line,index);
 				}	
 				content=real(string_copy(line,index-count,count));
 				index+=1;

@@ -12,14 +12,14 @@ global.MonitorW =  display_get_width();
 global.MonitorH = display_get_height();
 global.as_ratio = global.MonitorW/global.MonitorH;
 	
-if(round(global.MonitorH / global.roomhg) < round(global.MonitorW / global.roomwd)){
-	global.ratio = round(global.MonitorH / global.roomhg);
-	lvl_view_hg = global.MonitorH / global.ratio;
-	lvl_view_wd = lvl_view_hg * global.as_ratio;
+if(round(global.roomwd / global.roomhg) < round(global.as_ratio)){
+	global.cam_ratio = round(global.MonitorH / global.roomhg);
+	lvl_view_hg  = global.MonitorH / global.cam_ratio;
+	lvl_view_wd  = lvl_view_hg * global.as_ratio;
 }else {
-	global.ratio = round(global.MonitorW / global.roomwd);
-	lvl_view_wd = global.MonitorW / global.ratio;
-	lvl_view_hg = lvl_view_wd / global.as_ratio;
+	global.cam_ratio = round(global.MonitorW / global.roomwd);
+	lvl_view_wd  = global.MonitorW / global.cam_ratio;
+	lvl_view_hg  = lvl_view_wd / global.as_ratio;
 }
 
 //Start

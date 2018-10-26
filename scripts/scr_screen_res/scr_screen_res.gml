@@ -16,7 +16,7 @@ switch room {
 		wd = lvl_view_wd;
 		hg = lvl_view_hg;
 		
-		global.ratio = round(s_hg/hg);
+		global.cam_ratio = round(s_hg/hg);
 	break;
 	
 	default:
@@ -24,15 +24,15 @@ switch room {
 		hg = room_height;
 		
 		if(s_hg/hg < s_wd/wd){
-			global.ratio = s_hg/hg;
+			global.cam_ratio = s_hg/hg;
 		}else {
-			global.ratio = s_wd/wd;
+			global.cam_ratio = s_wd/wd;
 		}
 	break;
 }
 
-var sc_wd = wd * global.ratio;
-var sc_hg = hg * global.ratio;
+var sc_wd = wd * global.cam_ratio;
+var sc_hg = hg * global.cam_ratio;
 
 surface_resize(application_surface, sc_wd, sc_hg);
 

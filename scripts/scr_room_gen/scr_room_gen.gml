@@ -1,0 +1,62 @@
+///@param gx
+///@param gy
+///@param type
+{
+var gx = argument0;
+var gy = argument1;
+
+var type = argument2;
+var _typ = type;
+
+var roomwd = global.roomwd;
+var roomhg = global.roomhg;
+
+var hcells = roomwd div 32;
+var vcells = roomhg div 32;
+
+switch type {
+	case "base":
+	default:
+	break;
+	
+	//shop rooms
+	case 15:
+	case 16:
+	case 17:
+	case 18:
+		_typ = "base";
+	break;
+}
+
+var gr = scr_load_room_to_grid(_typ,-1);
+
+//Construct Room
+scr_construct_room( gx, gy, gr);
+
+switch type {
+	default:
+	break;
+	
+	//item room
+	case 16:
+		_rm_insts[_rm_count] = instance_create_layer(gx+(roomwd/2)-16,gy-16+(roomhg/2),"Instances",obj_pedestal);
+		_rm_count++;
+	break;
+	//special room
+	case 17:
+		_rm_insts[_rm_count] = instance_create_layer(gx+(roomwd/2),gy+(roomhg/2),"Instances",obj_beacon);
+		_rm_count++;
+	break;
+	//boss room	
+	case 18:
+		_rm_insts[_rm_count] = instance_create_layer(gx+(roomwd/2),gy+(roomhg/2),"Instances",obj_bdoor);
+		_rm_count++;
+	break;
+}
+
+//Decorate Room
+scr_decorate_room( gx, gy, type, gr);
+
+//delete the ds grid and we are done :)
+ds_grid_destroy(gr);
+}

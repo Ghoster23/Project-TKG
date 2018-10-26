@@ -1,75 +1,42 @@
 /// @description Draw the Map
-if(room == rm_level){
+if(room == rm_level && obj_ig_menu_controller.state == "mmap" && state){
 	r = m * 1.8;
 	
-	if(obj_ig_menu_controller.state == "mmap"){
-		//Window position on-screen
-		var map_x = hc - map_wd * m / 2;
-		var map_y = vc - map_hg * m / 2;
+	//Window position on-screen
+	var map_x = hc - map_wd * m / 2;
+	var map_y = vc - map_hg * m / 2;
 	
-		//Draw window
-		draw_sprite_ext( spr_ig_map, 0, map_x, map_y, m, m, 0, c_white, 1);
+	//Draw window
+	draw_sprite_ext( spr_ig_map, 0, map_x, map_y, m, m, 0, c_white, 1);
 		
-		//Where to start drawing rooms
-		var rm_x = map_x + 16 * m;
-		var rm_y = map_y + 22 * m;
+	//Where to start drawing rooms
+	var rm_x = map_x + 16 * m;
+	var rm_y = map_y + 22 * m;
 	
-		///Check all the rooms
-		for(var i = 0; i < 64; i++){
-			//Get room info
-			var coords = global.ds_roomgrid[# 0, i];
-			var doors = global.ds_roomgrid[# 3, i];
-			
-			var row = coords div 10;
-			var col = coords mod 10;
-			
-			///If it was already visited
-			if(global.ds_roomgrid[# 2, i] and global.ds_roomgrid[# 1, i] != "NULL"){
-				///Directions
-				var spr = scr_mm_tile(i);
+	for(var i = 0; i < dg_space; i++){
+		var info = dungeon_layout[i];
+		
+		if(info != -1){
+			switch info[2] {
+				case 0: //Not visited
+				break;
 				
-				///Type
-				var type = 0;
+				case 1: //Not visited but connects to a visited room
+					scr_map_room(rm_x,rm_y,i div dg_col,i mod dg_col,0,0,c_white,true);
+				break;
 				
-				switch global.ds_roomgrid[# 1, i] {
-					case 15:
-						type = 2;
-					break;
-					case 16:
-						type = 3;
-					break;
-					case 18:
-						type = 1;
-					break;
-					case 17:
-						type = 4;
-					break;
-				}
-				
-				if(row == global.current_row and 
-				   col == global.current_column){
-					type = 5;
-				}
-				
-				///Colour
-				var colour = c_white;
-				
-				if(type == 5 and global.char != 0){
-					colour = scr_char_color();
-				}
-				
-				scr_map_room(rm_x,rm_y,row,col,spr,type,colour,true);
-				
-			///Rooms adjacent to visited rooms that have not been visisted
-			}else if ((i - 8 >= 0  and global.ds_roomgrid[# 2, i - 8] and doors[0]) or 
-					  (i - 1 >= 0  and global.ds_roomgrid[# 2, i - 1] and doors[1]) or 
-					  (i + 8 <= 63 and global.ds_roomgrid[# 2, i + 8] and doors[2]) or 
-					  (i + 1 <= 63 and global.ds_roomgrid[# 2, i + 1] and doors[3])) and 
-					  global.ds_roomgrid[# 1, i]!="NULL"{
-				
-				scr_map_room(rm_x,rm_y,row,col,0,0,c_white,true);
+				default://Visited rooms
+					var colour = c_white;
+					var type   = info[1];
+					
+					if(i == c_rid){ 
+						colour = scr_char_color();
+						type   = 5;
+					}
+					
+					scr_map_room(rm_x,rm_y,i div dg_col,i mod dg_col,scr_mm_tile(info[0]),type,colour,true);
+				break;
 			}
 		}
-		
 	}
 }

@@ -18,7 +18,7 @@ if(active && global.check == 1){
 					count--;
 				}
 				
-				if(global.current_column == rx && global.current_row == ry){
+				if(global.current_col == rx && global.current_row == ry){
 					//Opacity
 					if(type <= 1){
 						op = ln(count) * 0.05 + 0.25;
@@ -26,11 +26,11 @@ if(active && global.check == 1){
 						op = ln(count) * 0.05 + 0.55;
 					}
 				
-					draw_sprite_ext(spr_pixel, 0,
+					/*draw_sprite_ext(spr_pixel, 0,
 								ox + i * cell_size + 2,
 								oy + j * cell_size + 2,
 								cell_size,   cell_size,
-								0, colors[type], op);
+								0, colors[type], op);*/
 				}
 				
 				tiles[ind] = count;

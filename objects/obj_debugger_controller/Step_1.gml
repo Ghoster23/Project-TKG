@@ -4,7 +4,7 @@ vc = global.gui_HG / 2;
 if(check){
 	switch state {
 		case 0:
-			if(keyboard_check_pressed(vk_end) and
+			if(keyboard_check_pressed(vk_delete) and
 			   keyboard_check_pressed(vk_alt)){
 				state = prev_state;
 				show_debug_overlay(true);
@@ -26,6 +26,28 @@ if(check){
 			}else if(keyboard_check_released(vk_f6)){
 				state = 6;
 			}
+			
+			///Debug
+			if keyboard_check_pressed(vk_f12){
+			    room_goto(rm_test);
+			}
+
+			if keyboard_check_pressed(vk_f11){
+			    room_restart();
+			}
+
+			if keyboard_check_pressed(vk_f10){
+			    room_goto(rm_CH_boss);
+			}
+
+			if keyboard_check_pressed(vk_f9){
+			    room_goto(rm_level);
+			}
+
+			if(keyboard_check_pressed(vk_f8)){
+				scr_status_apply( statuses.immune, 60, global.body);
+				scr_status_apply(   statuses.ohko, 60, global.body);
+			}
 		
 			if(keyboard_check_pressed(vk_end) and
 			   keyboard_check_pressed(vk_alt)){
@@ -37,26 +59,4 @@ if(check){
 			}	
 		break;
 	}
-}
-
-///Debug
-if keyboard_check_pressed(vk_f12){
-    room_goto(rm_test);
-}
-
-if keyboard_check_pressed(vk_f11){
-    room_restart();
-}
-
-if keyboard_check_pressed(vk_f10){
-    room_goto(rm_CH_boss);
-}
-
-if keyboard_check_pressed(vk_f9){
-    room_goto(rm_level);
-}
-
-if(keyboard_check_pressed(vk_f8)){
-	scr_status_apply( statuses.immune, 60, global.body);
-	scr_status_apply(   statuses.ohko, 60, global.body);
 }

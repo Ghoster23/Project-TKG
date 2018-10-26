@@ -1,6 +1,8 @@
+scr_InitSubMenu();
+
 if x<200{
-	index = "type";
+	vari = "type";
 }
 else{
-	index = "edit";
+	vari = "edit";
 }

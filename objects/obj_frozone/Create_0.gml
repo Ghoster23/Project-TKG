@@ -16,7 +16,7 @@ switch room {
 	break;
 	
 	case rm_level:
-		tx = global.roomwd * global.current_column / 2;
+		tx = global.roomwd * global.current_col / 2;
 		ty = global.roomhg * global.current_row    / 2;
 	break;
 }

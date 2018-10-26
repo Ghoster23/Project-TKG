@@ -6,7 +6,11 @@ repeat(5){
 }
 
 part_particles_create(global.ps,x,y+16,global.pt_haze,8);
-mp_grid_clear_rectangle(global.ai_grid,x,y,x+31,y+31);
+
+if(region != noone){
+	mp_grid_clear_rectangle(region.mp_grid,x,y,x+31,y+31);
+}
+
 instance_create_layer(x,y,layer,obj_fluid_tile);
 
 instance_destroy();

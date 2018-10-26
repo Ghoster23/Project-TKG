@@ -116,12 +116,8 @@ if check == true{
 
 }
 
-if state != "closed" || global.dead || state = "generation" {
+if state != "closed" || global.dead {
 	global.pause = true;
 }else {
 	global.pause = false;
-}
-
-if(global.gen){
-	state = "generation";
 }

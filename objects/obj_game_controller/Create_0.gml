@@ -4,15 +4,14 @@ scr_unique_inst();
 //Game pause
 global.pause = false;
 
-///Gen
-//Generation on-going
-global.gen   = false;
+///Level
+level_state = 0;
 
 //Door lock
 global.lock  = false;
 
-//Current Level
-global.level = 0;
+//Level
+global.gen = 0;
 
 ///Enemies
 //Active enemies
@@ -59,10 +58,9 @@ scr_char_stats();
 global.p_stats[stats.arm] = 0;
 scr_status_init();
 
-///Rooms
 //Current Room
-global.current_column = 4;
-global.current_row    = 4;
+global.current_col = 0;
+global.current_row = 0;
 
 global.fluid_detail = 16;
 

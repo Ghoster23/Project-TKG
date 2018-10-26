@@ -1,6 +1,8 @@
 /// @description proper view
 application_surface_draw_enable(true);
 
+scr_InitSubMenu();
+
 global.frozen=false
 
 ///currently selected block (0,0) - (terrain,space)
@@ -29,8 +31,6 @@ if file_exists(working_directory + "roomtypetemp.csv")==false{
 	scr_loadroom(global.lvl_room_type,global.lvl_room_number);
 }
 else{
-
-	scr_InitSubMenu();
 	
 	//open file
 	
@@ -141,7 +141,3 @@ else{
 	ds_grid_destroy(global.room_grid);
 
 }
-
-
-
-

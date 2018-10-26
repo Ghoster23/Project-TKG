@@ -4,8 +4,8 @@ if(cursor){
 			draw_sprite_ext(spr_cursor,0,
 							x,
 							y,
-							global.ratio, 
-							global.ratio,
+							global.cam_ratio, 
+							global.cam_ratio,
 							0,c_white,1);
 		break;
 	}
@@ -14,5 +14,5 @@ if(cursor){
 	scr_draw_item(obj_inventory_controller.inventory[# 0, pos],
 					obj_inventory_controller.inventory[# 1, pos],
 					obj_inventory_controller.inventory[# 2, pos],
-		            x, y, global.ratio, global.ratio, 1);
+		            x, y, global.cam_ratio, global.cam_ratio, 1);
 }

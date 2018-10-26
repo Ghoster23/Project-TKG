@@ -23,7 +23,6 @@
 	with(light){
 		radius      = radius_; 
 		base_radius = radius;
-		range = range_;
 		image_blend = color_;
 		opacity     = opacity_;
 	}

@@ -2,7 +2,7 @@ if global.frozen=true{
     exit;
 }
 
-if index == "type"{
+if vari == "type"{
 	//left arrow
 	if point_in_rectangle(mouse_x,mouse_y,x,y,x+8,y+14){
 		if mouse_check_button_pressed(mb_left){
@@ -32,7 +32,7 @@ if index == "type"{
 		}
 	}
 }
-else if index == "edit"{
+else if vari == "edit"{
 	//left arrow
 	if point_in_rectangle(mouse_x,mouse_y,x,y,x+8,y+14){
 		if mouse_check_button_pressed(mb_left){

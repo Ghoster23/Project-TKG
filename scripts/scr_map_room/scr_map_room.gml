@@ -11,7 +11,7 @@ var color = argument6;
 
 var map   = argument7;
 
-var m = global.ratio;
+var m = global.cam_ratio;
 
 if(map){ 
 	var spr1 = spr_mm_rm;

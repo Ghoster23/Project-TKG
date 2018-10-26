@@ -1,1 +1,1 @@
-image_index=global.lvl_room_type
+image_index=global.lvl_room_type;

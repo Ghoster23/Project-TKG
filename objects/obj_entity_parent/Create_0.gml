@@ -54,5 +54,8 @@ divi   = stats.def;
 
 kb_amount = 0;
 
+ai_grid = 0;
+ai_path = 0;
+
 shadow = instance_create_layer(x,y,layer,obj_entity_shadow);
 shadow.owner = id;

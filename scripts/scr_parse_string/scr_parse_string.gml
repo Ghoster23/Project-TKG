@@ -3,6 +3,7 @@ var str = argument0;
 
 if(!is_string(str)){ return str; }
 
+if(str == "" || str == "#"){ return 0;}
 
 //show_debug_message("Begin parsing...");
 

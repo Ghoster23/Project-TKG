@@ -10,7 +10,7 @@ switch(argument_count){
 }
 
 
-var seed =global.gen_seed + num;
+var seed =gen_seed + num;
 
 random_set_seed(seed);
 rand = irandom_range(0,range);

@@ -2,13 +2,13 @@ switch state {
 	case 0:
 	break;
 	case 1: //Room controller
-		if(instance_exists(obj_room_controller)){
+		if(instance_exists(obj_chunk_controller)){
 			debug_text += "Locked: ";
 			if(global.lock){debug_text += "true "}else {debug_text += "false "}
-			debug_text += "State: " + string(obj_room_controller.state) + "\n";
+			debug_text += "State: " + string(obj_chunk_controller.state) + "\n";
 		
 			debug_text += "Row: " + string(global.current_row) + " Collumn: " + string(global.current_row) + "\n";
-			debug_text += "Pr_Row: " + string(obj_room_controller.pr_row) + " Pr_Collumn: " + string(obj_room_controller.pr_column) + "\n";
+			debug_text += "Pr_Row: " + string(obj_chunk_controller.pr_row) + " Pr_Collumn: " + string(obj_chunk_controller.pr_column) + "\n";
 		
 			debug_text += "Active enemies:\n";
 			var ls_sz = ds_list_size(global.act_enemy_list);

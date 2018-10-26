@@ -5,16 +5,6 @@
     "name": "obj_draw_controller",
     "eventList": [
         {
-            "id": "f538227f-75dd-4250-b3bb-d05e81838bff",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 73,
-            "eventtype": 8,
-            "m_owner": "cb0870d4-1695-4719-8bf4-388502efbe37"
-        },
-        {
             "id": "21b07d77-89e5-4d06-ad4d-7202f28d4c72",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -52,6 +42,16 @@
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 4,
             "eventtype": 7,
+            "m_owner": "cb0870d4-1695-4719-8bf4-388502efbe37"
+        },
+        {
+            "id": "306356e5-bc2a-4fa2-8d69-37648153999f",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
             "m_owner": "cb0870d4-1695-4719-8bf4-388502efbe37"
         }
     ],

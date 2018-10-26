@@ -1,20 +1,22 @@
 //Target
 switch room {
 	case rm_level:
-		if(room == rm_level){
-			if(target == noone){
-				cam_x_t = (0.5 + global.current_column) * global.roomwd;
-				cam_y_t = (0.5 + global.current_row)    * global.roomhg - 16;
-			}else if(instance_exists(target)){
-				cam_x_t = target.x;
-				cam_y_t = target.y;
-			}
+		if(target == noone){
+			cam_x_t = (0.5 + global.current_col) * global.roomwd;
+			cam_y_t = (0.5 + global.current_row) * global.roomhg - 16;
+		}else if(instance_exists(target)){
+			cam_x_t = target.x;
+			cam_y_t = target.y;
 		}
+		
 	break;
 	
 	case rm_CH_boss:
 		cam_x_t = room_width div 2;
-		cam_y_t = global.body.y;
+		
+		if(instance_exists(global.body)){
+			cam_y_t = global.body.y;
+		}
 	break;
 	
 	case rm_dead:

@@ -3,7 +3,7 @@
     "modelName": "GMSound",
     "mvc": "1.0",
     "name": "music_gauntlet",
-    "audioGroupGuid": "ef18c455-5c0e-48a1-b9a3-27ff660464af",
+    "audioGroupGuid": "7b2c4976-1e09-44e5-8256-c527145e03bb",
     "bitDepth": 1,
     "bitRate": 128,
     "kind": 1,

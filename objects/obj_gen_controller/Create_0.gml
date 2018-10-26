@@ -1,40 +1,46 @@
-scr_unique_inst();
 once = false;
 
-//Gen Cursor
-gx = room_width  / 2;
-gy = room_height / 2;
+state = 0;
 
-//Gen Count
-roomgenerated   = 0;
-roomstogenerate = 16;
+dungeon = noone;
 
-global.ds_roomgrid = ds_grid_create(4,64);
-available_rooms    = ds_list_create();
+gen_rooms = [-1];
 
-for(i = 0; i < 64; i++){
-	global.ds_roomgrid[# 0, i] = (i div 8) * 10 + i mod 8;
-	global.ds_roomgrid[# 1, i] = "NULL";
-	global.ds_roomgrid[# 2, i] = false;
-	global.ds_roomgrid[# 3, i] = [0,0,0,0];
-	
-}
+sp_places = [-1,-1,-1,-1];
 
-global.ds_roomgrid[# 0, 36] = 44;
-global.ds_roomgrid[# 1, 36] = "Start";
-global.ds_roomgrid[# 2, 36] = true;
+#region Gen parameters
+level = 0;
 
-ds_list_add(available_rooms,43);
-ds_list_add(available_rooms,45);
-ds_list_add(available_rooms,34);
-ds_list_add(available_rooms,54);
+rm_count = 0;
+rm_gened = 0;
 
-//Control Vars
-comp    = 0;
+specials = [ 0, 0, 0];
 
-//generate perlin noise grid to map the floor
+fin = -1;
+
+gen_col = 0;
+gen_row = 0;
+
+start_col = 0;
+start_row = 0;
+#endregion
+
+gx = x;
+gy = y;
+
+rm = noone;
+
+rm_connected = 0;
+rm_built     = 0;
+
+pros_rms = 0;
+
+rm_min = [7,7];
+rm_max = [0,0];
+
+#region Generate perlin noise grid to map the floor
 //makes a seed
-global.gen_seed = round(random_range(1000000,10000000));
+gen_seed = round(random_range(1000000,10000000));
 
 blockSize = 32;
 width     = room_width / blockSize;
@@ -124,39 +130,4 @@ for (var j=0; j<w; j++){
 		}
 	}
 }
-
-
-///Base Room
-instance_create_layer(gx+(global.roomwd div 2),gy+(global.roomhg div 2)-16,"IF",obj_view);
-
-scr_roomgn("base");
-
-//Player
-scr_spawn_player(gx+global.roomwd/2,gy+global.roomhg/2,"Instances");
-
-//Room counts
-for(var i = 0; i < 8; i += 1;){
-    for(var j = 0; j < 8; j += 1;){
-        l[i,j] = false;
-    }
-}
-
-//Unique Rooms
-global.rm_store_id = 0;
-global.rm_item_id  = 0;
-global.rm_sp_id    = 0;
-global.rm_boss_id  = 0;
-
-comp = 0;
-
-instance_create_layer( 0, 0, "IF", obj_room_controller);
-comp += 7;
-
-instance_create_layer( 0, 0, "PS", obj_map_controller);
-comp += 7;
-
-
-if(!instance_exists(obj_inventory_controller)){
-	instance_create_layer( 0, 0, "IF", obj_inventory_controller);
-}
-comp += 12;
+#endregion

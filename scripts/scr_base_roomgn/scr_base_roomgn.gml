@@ -1,31 +1,42 @@
-//instance_create_layer(gx + (global.roomwd / 2) + 64,gy + 48,"Instances",obj_torch);
-//instance_create_layer(gx+global.roomwd/2-96,gy+48,"Instances",obj_torch);
+{
+var gx = argument0;
+var gy = argument1;
 
-instance_create_layer(gx,gy,"Instances",obj_wall_left_up);
-instance_create_layer(gx,gy+176+32,"Instances",obj_wall_left_fillin);
-instance_create_layer(gx,gy+176+96,"Instances",obj_wall_left_down);
+#region Walls
+var r = [];
+var u = [];
+var l = [];
+var d = [];
 
-instance_create_layer(gx,gy,"Instances",obj_wall_up_left);
-instance_create_layer(gx+368,gy,"Instances",obj_wall_up_right);
-instance_create_layer(gx+304,gy,"Instances",obj_wall_up_fillin);
+r[0] = instance_create_layer(gx+global.roomwd-32,                  gy, "Instances", obj_wall_right_up);
+r[1] = instance_create_layer(gx+global.roomwd-32,           gy+176+96, "Instances", obj_wall_right_down);
 
-instance_create_layer(gx,gy+global.roomhg-64,"PS",obj_wall_down_left);
-instance_create_layer(gx+304-16,gy+global.roomhg-64,"PS",obj_wall_down_fillin);
-instance_create_layer(gx+368,gy+global.roomhg-64,"PS",obj_wall_down_right);
+u[0] = instance_create_layer(             gx+368,                  gy, "Instances", obj_wall_up_right);
+u[1] = instance_create_layer(              gx+32,                  gy, "Instances", obj_wall_up_left);
 
-instance_create_layer(gx+global.roomwd-32,gy,"Instances",obj_wall_right_up);
-instance_create_layer(gx+global.roomwd-32,gy+176+32,"Instances",obj_wall_right_fillin);
-instance_create_layer(gx+global.roomwd-32,gy+176+96,"Instances",obj_wall_right_down);
+l[0] = instance_create_layer(                 gx,                  gy, "Instances", obj_wall_left_up);
+l[1] = instance_create_layer(                 gx,           gy+176+96, "Instances", obj_wall_left_down);
 
+d[0] = instance_create_layer(             gx+368, gy+global.roomhg-64,        "PS", obj_wall_down_right);
+d[1] = instance_create_layer(                 gx, gy+global.roomhg-64,        "PS", obj_wall_down_left);
+#endregion
 
-	
-//lets generate that floor boiiii
+#region Fillins
+fillin[2] = instance_create_layer(                 gx,           gy+176+32, "Instances", obj_wall_left_fillin);
+fillin[1] = instance_create_layer(             gx+304,                  gy, "Instances", obj_wall_up_fillin);
+fillin[3] = instance_create_layer(          gx+304-16, gy+global.roomhg-64,        "PS", obj_wall_down_fillin);
+fillin[0] = instance_create_layer(gx+global.roomwd-32,           gy+176+32, "Instances", obj_wall_right_fillin);
+#endregion
 
-//find first entry in the table
-gxtile=gx/32;
-gytile=gy/32;
+#region Floor
+var gxtile = gx/32;
+var gytile = gy/32;
 
-flr=instance_create_layer(gx+(global.roomwd/2),gy+(global.roomhg/2)+31,"Floor",obj_floor);
+var flr = instance_create_layer(gx+(global.roomwd/2),gy+(global.roomhg/2)+31,"Floor",obj_floor);
+
 flr.gxtile=gxtile;
 flr.gytile=gytile;
+#endregion
 
+_rm_walls = [r,u,l,d,flr];
+}

@@ -14,3 +14,9 @@ m = 0;
 	
 gui_WD = 0;
 gui_HG = 0;
+
+sqr_layout = [-1];
+
+for(var i = 0; i < 9; i++){
+	sqr_layout[i] = -1;
+}

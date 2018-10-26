@@ -3,8 +3,8 @@ switch(room){
 		x = device_mouse_x_to_gui(0);
 		y = device_mouse_y_to_gui(0);
 		
-		ir_mx = (x / global.ratio) + camera_get_view_x(view_camera[0]) - global.Xoffset;
-		ir_my = (y / global.ratio) + camera_get_view_y(view_camera[0]) - global.Yoffset;
+		ir_mx = (x / global.cam_ratio) + camera_get_view_x(view_camera[0]) - global.Xoffset;
+		ir_my = (y / global.cam_ratio) + camera_get_view_y(view_camera[0]) - global.Yoffset;
 	break;
 }
 
