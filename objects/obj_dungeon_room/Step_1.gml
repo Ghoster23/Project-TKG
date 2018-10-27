@@ -15,6 +15,15 @@ switch state {
 		if(col_match + row_match == 0 and not cleared){
 			state = 3;
 			
+			//Doors
+			for(var i = 0; i < 4; i++){
+				var inst = corridors[i];
+				if(inst.object_index == obj_vcorridor ||
+				   inst.object_index == obj_hcorridor){
+					inst.state = 1;	   
+				}
+			}
+			
 		}else if(col_match + row_match >= 2){
 			state = 5;
 			
@@ -30,6 +39,15 @@ switch state {
 			state = 2;
 			
 			cleared = true;
+			
+			//Doors
+			for(var i = 0; i < 4; i++){
+				var inst = corridors[i];
+				if(inst.object_index == obj_vcorridor ||
+				   inst.object_index == obj_hcorridor){
+					inst.state = 0;	   
+				}
+			}
 		}
 	break;
 	

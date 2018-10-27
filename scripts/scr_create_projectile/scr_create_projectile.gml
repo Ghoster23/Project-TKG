@@ -45,17 +45,17 @@ if(ko){
 	
 }else {
 	if(argument_count == 9){
-		var ml = argument[5];
-		var dv = argument[6];
+		var ml = argument[7];
+		var dv = argument[8];
 	
 		inst.damage *= ml;
 		inst.divi    = dv;
 	
 	}else if(argument_count == 11){
-		var ml = argument[5];
-		var dv = argument[6];
-		var dm = argument[7];
-		var kb = argument[8];
+		var ml = argument[7];
+		var dv = argument[8];
+		var dm = argument[9];
+		var kb = argument[10];
 	
 		var inst = instance_create_layer(xx,yy,"IF",dd);
 	

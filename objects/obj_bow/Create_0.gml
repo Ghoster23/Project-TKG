@@ -18,5 +18,3 @@ divi = stats.def;
 type   = item_type.tl_n_wep;
 item   = tl_n_wep.bow;
 amount = 8;
-
-pat = scr_skill_shoot_states;

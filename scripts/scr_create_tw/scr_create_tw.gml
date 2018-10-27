@@ -12,7 +12,7 @@ if(durab < -1 || durab == 0){ return noone;}
 var data = scr_tw_get_data(tl_id);
 	
 var tl = instance_create_layer(x,y,layer,obj_tool);
-	
+
 with tl {
 	name  = data[0];
 	owner = other;

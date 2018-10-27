@@ -13,7 +13,8 @@ switch state {
 	case 2: //Open
 	break;
 	
-	case 3: //Activating stuff
+	case 3: //Activating stuff	
+		//Enemies
 		var c = scr_activate_enemies();
 		
 		if(c != noone){

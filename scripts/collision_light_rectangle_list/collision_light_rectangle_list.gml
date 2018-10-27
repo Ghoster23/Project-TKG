@@ -20,17 +20,17 @@
     prec = argument5;
     notme = argument6;
     dsid = ds_list_create();
+	i = collision_rectangle_list(x1,y1,x2,y2,obj,prec,notme,dsid,false);
 	
-    with (obj) {
-        if (!notme || id != other.id) {
-            i = collision_rectangle(x1,y1,x2,y2,id,prec,false);
-            if (i != noone){
-				if(!variable_instance_exists(id,"no_shadows")){
-					ds_list_add(dsid,i);
-				}
-			}
-        }
-    }
+	for(var j = 0; j < i; j++){
+		var inst = dsid[| j];
+		
+		if(variable_instance_exists(inst, "no_shadows")){
+			ds_list_delete(dsid,j);
+			j--;
+			i--;
+		}
+	}
 	
     if (ds_list_empty(dsid)) {
         ds_list_destroy(dsid);

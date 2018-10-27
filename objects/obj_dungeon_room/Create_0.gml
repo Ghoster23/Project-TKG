@@ -1,3 +1,5 @@
+image_speed = 0;
+
 dungeon      = noone;
 content_grid = [];
 

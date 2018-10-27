@@ -19,7 +19,7 @@ if(not global.pause){
 				image_speed = 1;
 			
 			}else if (image_index >= 8){
-				image_index = 9;
+				image_index = 8;
 				image_speed = 0;
 			}
 		break;

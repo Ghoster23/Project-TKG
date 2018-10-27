@@ -12,7 +12,20 @@ instance_activate_object(walls[4]);
 	
 //Content
 for(var i = 0; i < ctt_cnt; i++){
-	instance_activate_object(content[i]);
+	if(content[i] != noone){
+		instance_activate_object(content[i]);
+	
+		switch content[i].object_index {
+			case obj_psnt_body:
+			case obj_psnt_arch_body:
+				instance_activate_object(content[i].weapon);
+			break;
+		
+			case obj_torch:
+				instance_activate_object(content[i].front_light);
+			break;
+		}
+	}
 }
 			
 //Decor
