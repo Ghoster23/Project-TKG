@@ -2,7 +2,7 @@ image_speed = 0;
 image_index = irandom(4);
 event_inherited();
 
-mp_grid_add_rectangle(global.ai_grid,x,y,x+31,y+31);
+mp_grid_add_rectangle(mp_grid,x,y,x+31,y+31);
 global.shake += 3;
 
 image_xscale = 0.1;

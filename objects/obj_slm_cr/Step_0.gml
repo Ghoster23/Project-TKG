@@ -12,8 +12,7 @@ if go and not global.pause{
         break;
         case 1:  //Go after the player
 			scr_define_path(self, global.body);
-			path = global.ai_path;
-			scr_move_entity(point_direction(x,y,path_get_point_x(path,1),path_get_point_y(path,1)),1);
+			scr_move_entity(point_direction(x,y,path_get_point_x(mp_path,1),path_get_point_y(mp_path,1)),1);
             
         break;
         case 2:  //Dead state

@@ -10,13 +10,6 @@ switch state {
 
 			mp_grid_draw(global.dungeon.mp_grid);
 
-			for(i = 0; i < room_width; i += 32){
-				draw_line(i,0,i,room_height);
-			}
-			for(i = 0; i < room_height; i += 32){
-				draw_line(i,0,i,room_width);
-			}
-
 			draw_set_color(c_white);
 			draw_set_alpha(1);
 

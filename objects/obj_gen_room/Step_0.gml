@@ -83,13 +83,13 @@ switch state {
 				var rm_max = generator.rm_max;
 
 				with(generator.dungeon){
-					var lf = rm_min[0] * global.roomwd;
-					var tp = rm_min[1] * global.roomhg;
+					mp_grid_x = x + rm_min[0] * global.roomwd;
+					mp_grid_y = y + rm_min[1] * global.roomhg;
 					
 					var hc = (rm_max[0] - rm_min[0] + 1) * global.roomwd div 32;
 					var vc = (rm_max[1] - rm_min[1] + 1) * global.roomhg div 32;
 					
-					mp_grid = mp_grid_create(lf, tp, hc, vc, 32, 32);
+					mp_grid = mp_grid_create(mp_grid_x, mp_grid_y, hc, vc, 32, 32);
 				}
 			}
 			#endregion
@@ -235,6 +235,7 @@ switch state {
 			
 			#region MP Grid
 			var mg = dungeon.mp_grid;
+			var pt = dungeon.mp_path;
 			
 			//Walls
 			for(var i = 0; i < 4; i++){
@@ -247,7 +248,7 @@ switch state {
 			
 			//Fillins
 			for(var i = 0; i < 4; i++){
-				if(object_is_ancestor(corridors[i], obj_wall_parent)){
+				if(object_is_ancestor(corridors[i].object_index, obj_wall_parent)){
 					mp_grid_add_instances(mg, corridors[i], false);
 				}
 			}
@@ -261,7 +262,12 @@ switch state {
 						if(object_is_ancestor(inst.object_index, obj_above_ground_parent) or
 						   object_is_ancestor(inst.object_index, obj_below_ground_parent) or
 						   object_is_ancestor(inst.object_index, obj_door_parent)){
+							inst.mp_grid = mg;
 							mp_grid_add_instances(mg, inst, false);
+							
+						}else if(object_is_ancestor(inst.object_index, obj_entity_parent)){
+							inst.mp_grid = mg;
+							inst.mp_path = pt;
 						}
 					}else {
 						content[i] = noone;

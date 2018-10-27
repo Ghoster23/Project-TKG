@@ -2,9 +2,7 @@ part_type_direction(global.pt_cbits,point_direction(global.body.x,global.body.y,
 part_emitter_burst(global.ps_if,sm,global.pt_smoke,10)
 part_emitter_burst(global.ps,em,global.pt_cbits,5)
 
-if(region != noone){
-	mp_grid_clear_cell(region.mp_grid,x div 32, y div 32);
-}
+mp_grid_clear_rectangle(mp_grid, x, y, x + 4, y + 4);
 
 instance_create_layer(x,y,layer,obj_fluid_tile);
 part_emitter_destroy(global.ps, em);

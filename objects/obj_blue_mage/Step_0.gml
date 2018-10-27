@@ -13,8 +13,7 @@ if go and not global.pause{
 		
 			inv = true;
 			scr_define_path(self, global.body);
-			path = global.ai_path;
-			scr_move_entity(point_direction(x,y,path_get_point_x(path,1),path_get_point_y(path,1)),0.65);
+			scr_move_entity(point_direction(x,y,path_get_point_x(mp_path,1),path_get_point_y(mp_path,1)),0.65);
 			
 			if(point_distance(x,y,global.body.x,global.body.y)<=55){
 				alarm_set(7,0.2*room_speed);
@@ -45,8 +44,7 @@ if go and not global.pause{
 			if(pair!=noone){
 				
 				scr_define_path(self, pair);
-				path = global.ai_path;
-				scr_move_entity(point_direction(x,y,path_get_point_x(path,1),path_get_point_y(path,1)),1);
+				scr_move_entity(point_direction(x,y,path_get_point_x(mp_path,1),path_get_point_y(mp_path,1)),1);
 			
 				if(point_distance(x,y,pair.x+pair.sprite_width/2,pair.y+pair.sprite_height/2)<=30 and pair.on==false){
 					state = "wait";
@@ -88,7 +86,7 @@ if go and not global.pause{
 			solid = false;
 			image_speed = 0;
 			
-			mp_grid_clear_cell(global.ai_grid,x div 32, y div 32);
+			mp_grid_clear_cell(mp_grid,x div 32, y div 32);
 			//sounds
 			instance_create_layer(x,y,layer,obj_mage_deadbody);
             scr_kill_enemy();

@@ -12,8 +12,7 @@ if go and not global.pause{
         break;
         case 1:  //Go towards the player
 			scr_define_path(self, global.body);
-			path = global.ai_path;
-			dir = point_direction(x,y,path_get_point_x(path,1),path_get_point_y(path,1));
+			dir = point_direction(x,y,path_get_point_x(mp_path,1),path_get_point_y(mp_path,1));
 			var col = scr_move_entity(dir,1);
 			
 			if(col != noone){ state = 2;}

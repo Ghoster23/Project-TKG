@@ -15,8 +15,7 @@ if go and not global.pause{
 				exit;
 			}
 			scr_define_path(self, skullt);
-			path = global.ai_path;
-			scr_move_entity(point_direction(x,y,path_get_point_x(path,1),path_get_point_y(path,1)),1.2);
+			scr_move_entity(point_direction(x,y,path_get_point_x(mp_path,1),path_get_point_y(mp_path,1)),1.2);
 			
 			if(point_distance(x,y,skullt.x,skullt.y)<=30 and skullt.z <= 8){
 				skullt.phy_speed_x=0;
@@ -36,8 +35,7 @@ if go and not global.pause{
 			
 			head.visible = true;
 			scr_define_path(self, global.body);
-			path = global.ai_path;
-			scr_move_entity(point_direction(x,y,path_get_point_x(path,1),path_get_point_y(path,1)),1);
+			scr_move_entity(point_direction(x,y,path_get_point_x(mp_path,1),path_get_point_y(mp_path,1)),1);
 			
 			if(point_distance(x,y,global.body.x,global.body.y)<=200){
 				state = "pophead";
@@ -98,7 +96,7 @@ if go and not global.pause{
 			solid = false;
 			image_speed = 0;
 			
-			mp_grid_clear_cell(global.ai_grid,x div 32, y div 32);
+			mp_grid_clear_cell(mp_grid,x div 32, y div 32);
 			//sounds
 			instance_create_layer(x,y,layer,obj_skeli_deadbody);
 			if(!instance_exists(skullt)){

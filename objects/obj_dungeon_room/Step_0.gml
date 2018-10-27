@@ -10,7 +10,7 @@ switch state {
 	break;
 	#endregion
 	
-	case 2: //Loaded
+	case 2: //Open
 	break;
 	
 	case 3: //Activating stuff
@@ -27,11 +27,8 @@ switch state {
 	case 4: //Closed
 	break;
 	
-	case 5: //Open
-	break;
-	
 	#region Unloading
-	case 6:
+	case 5:
 		scr_room_deactivate();
 		
 		state = 0;

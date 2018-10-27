@@ -20,9 +20,7 @@ if go and not global.pause{
 				moved = true;
 				
 				scr_define_path(self, global.body);
-	
-				path       = global.ai_path;
-				action_dir = point_direction( x, y,path_get_point_x(global.ai_path,1), path_get_point_y(global.ai_path,1));
+				action_dir = point_direction( x, y,path_get_point_x(mp_path,1), path_get_point_y(mp_path,1));
 				
 				sprite_index=spr_hspider_walk;
 				image_speed=1.2;
@@ -157,7 +155,7 @@ if go and not global.pause{
             part_particles_create(global.ps,x,y,global.pt_bbits,8);
 			part_particles_create(global.ps,x,y,global.pt_hspider_deadbits,2);
 			
-			mp_grid_clear_cell(global.ai_grid,x div 32, y div 32);
+			mp_grid_clear_cell(mp_grid,x div 32, y div 32);
 			//sounds
 			scr_sound(snd_hit_barrel);
 			scr_sound(snd_wood_bits1,snd_wood_bits2,snd_wood_bits3);

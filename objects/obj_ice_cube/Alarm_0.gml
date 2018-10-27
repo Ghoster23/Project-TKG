@@ -7,9 +7,7 @@ repeat(5){
 
 part_particles_create(global.ps,x,y+16,global.pt_haze,8);
 
-if(region != noone){
-	mp_grid_clear_rectangle(region.mp_grid,x,y,x+31,y+31);
-}
+mp_grid_clear_rectangle(mp_grid, x, y, x + 4, y + 4);
 
 instance_create_layer(x,y,layer,obj_fluid_tile);
 

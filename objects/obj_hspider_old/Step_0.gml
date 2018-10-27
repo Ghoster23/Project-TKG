@@ -69,7 +69,7 @@ if go and not global.pause{
             part_particles_create(global.ps,x,y,global.pt_bbits,8);
 			part_particles_create(global.ps,x,y,global.pt_hspider_deadbits,2);
 			
-			mp_grid_clear_cell(global.ai_grid,x div 32, y div 32);
+			mp_grid_clear_cell(mp_grid,x div 32, y div 32);
 			//sounds
 			scr_sound(snd_wood_bits1,snd_wood_bits2,snd_wood_bits3);
 			
