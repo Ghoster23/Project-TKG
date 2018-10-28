@@ -13,7 +13,6 @@ PS_layer  = 0;
 IF_layer  = 0;
 
 part_IF_drawn = false;
-part_PS_drawn = false;
 
 switch room {
 	case rm_level:

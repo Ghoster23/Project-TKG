@@ -1,6 +1,5 @@
 //Reset
 part_IF_drawn = false;
-part_PS_drawn = false;
 
 #region Fluid surface
 global.check++;
@@ -60,7 +59,7 @@ if(ds_exists(ds_depthgrid, ds_type_grid)){
 	
 	with(obj_depth_parent){
 		if(visible){
-			var layer_offs = (layer - other.layers[0]) * 1000;
+			var layer_offs = (layer - other.layers[0]) * room_height;
 		
 			depthgrid[# 0, yy] = id;
 			
@@ -87,14 +86,9 @@ if(ds_exists(ds_depthgrid, ds_type_grid)){
 		var instanceY  = ds_depthgrid[# 1, yy];
 		
 		#region Particles
-		if(not part_IF_drawn && instanceY >= -(1000 * IF_layer-1)){
+		if(not part_IF_drawn && instanceY >= -(room_height * PS_layer)){
 			part_IF_drawn = true;
 			part_system_drawit(global.ps_if);
-		}
-		
-		if(not part_PS_drawn && instanceY >= -(1000 * PS_layer-1)){
-			part_PS_drawn = true;
-			part_system_drawit(global.ps_ps);
 		}
 		#endregion
 		
@@ -128,6 +122,9 @@ if(ds_exists(ds_depthgrid, ds_type_grid)){
 	ds_depth_grid = ds_grid_create(2,1);
 }
 #endregion
+
+//PS-Layer Particles
+part_system_drawit(global.ps_ps);
 
 //Lights that go in front of everything
 with obj_light_front{

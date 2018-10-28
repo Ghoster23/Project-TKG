@@ -8,17 +8,23 @@ with obj_map_controller {
 			var pos  = srm + i * dg_col + j;
 			var info = scr_map_get_room(pos);
 			
-			if(is_array(info)){
+			if(info != -1){
+				switch info[2] {
+					case 0: //Not visited
+						obj_minimap.sqr_layout[i * 3 + j] = -1;
+					break;
 				
-				if(info[2]){
-					var doors = info[0];
-					if(info[2] == 1){ doors = [0,0,0,0]; }
+					case 1: //Not visited but connects to a visited room
+						obj_minimap.sqr_layout[i * 3 + j] = [scr_mm_tile([0,0,0,0]),info[1]];
+					break;
 				
-					obj_minimap.sqr_layout[i * 3 + j] = [doors,info[1]];
+					default://Visited rooms
+						obj_minimap.sqr_layout[i * 3 + j] = [scr_mm_tile(info[0]),info[1]];
+					break;
 				}
 			}else {
 				obj_minimap.sqr_layout[i * 3 + j] = -1;
-			}
+			}			
 		}
 	}
 }

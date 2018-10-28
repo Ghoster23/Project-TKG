@@ -8,10 +8,6 @@ for(var i = 0; i < array_length_1d(layers); i++){
 	var name = layer_get_name(layers[i]);
 	
 	switch name {
-		case "BH":
-			BH_layer = i;
-		break;
-		
 		case "PS":
 			PS_layer = i;
 		break;
@@ -22,6 +18,10 @@ for(var i = 0; i < array_length_1d(layers); i++){
 		
 		case "Instances":
 			INT_layer = i;
+		break;
+		
+		case "BH":
+			BH_layer = i;
 		break;
 	}
 }

@@ -19,13 +19,11 @@ if(visible and obj_player_hud.visible and room == rm_level and global.region){
 			var info = sqr_layout[c_rm];
 			
 			if(info != -1){
-				var spr = 0;
 				var typ = info[1];
 				
 				if(i == 1 && j == 1){ typ = 5; }
-				if(info[1] != 0){ spr = scr_mm_tile(info[0]); }
 			
-				scr_map_room(rm_x,rm_y,i,j,spr,typ,c_white,false);
+				scr_map_room(rm_x,rm_y,i,j,info[0],typ,c_white,false);
 			}
 		}
 	}
