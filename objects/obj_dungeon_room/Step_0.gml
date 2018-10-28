@@ -5,8 +5,6 @@ switch state {
 	#region Loading
 	case 1:
 		scr_room_activate();
-		
-		state = 2;
 	break;
 	#endregion
 	
