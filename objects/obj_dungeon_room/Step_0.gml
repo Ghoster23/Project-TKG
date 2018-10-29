@@ -15,11 +15,17 @@ switch state {
 		//Enemies
 		var c = scr_activate_enemies();
 		
+		surface_set_target(global.fluid_surface);
+		draw_clear_alpha(c_black,0);
+		surface_reset_target();
+		
 		if(c != noone){
 			state = 4;
+			
 		}else {
 			cleared = true;
-			state   = 5;
+			
+			state   = 2;
 		}
 	break;
 	

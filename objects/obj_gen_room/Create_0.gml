@@ -57,10 +57,3 @@ _rm_d_cnt = 0;
 
 fillin = [ noone, noone, noone, noone];
 #endregion
-
-#region Debug
-cor[0] = c_blue;
-cor[1] = c_red;
-cor[2] = c_green;
-cor[3] = c_purple;
-#endregion

@@ -8,7 +8,7 @@ mousex = obj_cursor.x;
 mousey = obj_cursor.y;
 
 if global.key_active[key_id.m_click] {
-	offx=c-63*m;
+	offx=hc-63*m;
 	
 	if mousex > offx+0 and mousex <offx+7*m {
 		level = 0;

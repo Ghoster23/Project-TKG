@@ -1,5 +1,3 @@
-global.gen = true;
-
 scr_InitSubMenu();
 
 //spawn player
@@ -42,9 +40,8 @@ scr_char_stats();
 with obj_game_controller {
 	global.body = bodies[global.char];
 }
-scr_spawn_player(xx,yy,"Instances");
 
-global.gen = false;
+scr_spawn_player(xx,yy,"Instances");
 
 temp_room_file   = file_text_open_read(working_directory+"roomtypetemp.csv");
 global.room_grid = ds_grid_create(19,9);

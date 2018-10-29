@@ -2,25 +2,19 @@ switch state {
 	case 0:
 	break;
 	case 1: //Room controller
-		if(instance_exists(obj_chunk_controller)){
-			debug_text += "Locked: ";
-			if(global.lock){debug_text += "true "}else {debug_text += "false "}
-			debug_text += "State: " + string(obj_chunk_controller.state) + "\n";
 		
-			debug_text += "Row: " + string(global.current_row) + " Collumn: " + string(global.current_row) + "\n";
-			debug_text += "Pr_Row: " + string(obj_chunk_controller.pr_row) + " Pr_Collumn: " + string(obj_chunk_controller.pr_column) + "\n";
+		debug_text += "Active enemies:\n";
+		var ls_sz = ds_list_size(global.act_enemy_list);
 		
-			debug_text += "Active enemies:\n";
-			var ls_sz = ds_list_size(global.act_enemy_list);
-		
-			for(var i = 0; i < ls_sz; i++){
-				var en = global.act_enemy_list[| i];
+		for(var i = 0; i < ls_sz; i++){
+			var en = global.act_enemy_list[| i];
 			
-				if(instance_exists(en)){
-					debug_text += object_get_name(en.object_index) + "\n";
-				}
+			if(instance_exists(en)){
+				debug_text += object_get_name(en.object_index) + "\n";
 			}
 		}
+		
+		//FIXME
 	break;
 	case 2: //AI controller
 	break;

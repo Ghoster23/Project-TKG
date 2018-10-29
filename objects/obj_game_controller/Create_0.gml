@@ -7,17 +7,13 @@ global.pause = false;
 ///Level
 level_state = 0;
 
-//Door lock
-global.lock  = false;
-
-//Level
-global.gen = 0;
-
 ///Enemies
 //Active enemies
 global.kld_enemies = 0;
 
 global.killer      = 0;
+
+global.act_enemy_list = 0;
 
 //Coins
 global.coins       = 0;
@@ -58,11 +54,14 @@ scr_char_stats();
 global.p_stats[stats.arm] = 0;
 scr_status_init();
 
-//Current Room
+global.fluid_detail = 16;
+
+//Current region
+global.region = 0;
+
+//Current room
 global.current_col = 0;
 global.current_row = 0;
-
-global.fluid_detail = 16;
 
 ///Tools and Weapons
 global.ds_grid_tl_n_wep = load_data_to_grid(8,9,0,0,"tools_n_weapons.csv");

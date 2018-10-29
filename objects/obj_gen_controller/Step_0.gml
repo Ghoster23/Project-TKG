@@ -24,7 +24,6 @@ switch state {
 			sp_rooms = other.sp_places;
 		}
 		
-		global.gen--;
 		instance_destroy();
 	break;
 }

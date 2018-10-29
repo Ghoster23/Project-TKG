@@ -1,9 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-if not global.pause {
+/*if not global.pause {
 	if global.n_room {
 		state = 0;
-		
+		//FIX ME
 	}
 	
 	if state == 0{
@@ -12,7 +12,7 @@ if not global.pause {
 	}
 	
 	image_index = state;
-}
+}*/
 
 if instance_exists(global.body) {
 	phy_position_x = global.body.phy_position_x;

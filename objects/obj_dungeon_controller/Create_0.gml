@@ -32,11 +32,8 @@ mp_path = path_add();
 
 comp = 0;
 
-instance_create_layer( 0, 0, "IF", obj_chunk_controller);
+
 comp += 7;
 
 
-if(!instance_exists(obj_inventory_controller)){
-	instance_create_layer( 0, 0, "IF", obj_inventory_controller);
-}
 comp += 12;

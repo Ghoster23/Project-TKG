@@ -188,7 +188,6 @@ switch state {
 	case 7: //Wait
 		if(generator.rm_built == generator.rm_count){
 			state++;
-			_rm = instance_create_layer(x,y,layer,obj_dungeon_room);
 		}
 	break;
 	
@@ -197,6 +196,8 @@ switch state {
 		scr_connect_rooms( x, y, doors);
 		
 		generator.rm_gened--;
+		
+		_rm = instance_create_layer(x,y,layer,obj_dungeon_room);
 		
 		//Room Controller
 		with _rm {
@@ -264,6 +265,12 @@ switch state {
 						   object_is_ancestor(inst.object_index, obj_door_parent)){
 							inst.mp_grid = mg;
 							mp_grid_add_instances(mg, inst, false);
+							
+							if(inst.object_index == obj_pit){
+								with inst {
+									scr_autotile(id);
+								}
+							}
 							
 						}else if(object_is_ancestor(inst.object_index, obj_entity_parent)){
 							inst.mp_grid = mg;

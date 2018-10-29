@@ -2,7 +2,6 @@ switch state {
 	case 0: ///Gen
 		switch gen_state {
 			case 0:
-				global.gen++;
 				generator = scr_create_generator( rm_count, gen_col, gen_row, start_col, start_row, level, specials);
 				gen_state++;
 			break;
@@ -10,7 +9,6 @@ switch state {
 			case 1:
 				if(!instance_exists(generator)){
 					state++;
-					global.gen--;
 				}
 			break;
 		}

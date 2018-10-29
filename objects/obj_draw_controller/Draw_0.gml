@@ -14,10 +14,12 @@ if(!surface_exists(global.fluid_surface)){
 	
 	switch room {
 		case rm_level:
-			draw_surface_ext(global.fluid_surface,
-							 global.current_col * global.roomwd,
-							 global.current_row    * global.roomhg,
-							 1,1,0,c_white,1);
+			if(global.region != 0){
+				draw_surface_ext(global.fluid_surface,
+								 global.current_col * global.roomwd,
+								 global.current_row * global.roomhg,
+								 1,1,0,c_white,1);
+			}
 		break;
 		default:
 			draw_surface_ext(global.fluid_surface,

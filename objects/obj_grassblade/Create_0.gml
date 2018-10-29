@@ -25,3 +25,6 @@ image_index=irandom_range(0,image_number);
 
 no_shadows = true;
 
+if(place_meeting(x,y,obj_solid_parent)){
+	instance_destroy();
+}

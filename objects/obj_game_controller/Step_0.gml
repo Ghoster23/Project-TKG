@@ -18,13 +18,27 @@ switch room {
 	case rm_level:	
 		switch level_state {
 			case 0: //Generation
-				if(not global.gen){
+				//Wait for dungeons to build themselves
+				
+				var done = true;
+				
+				with obj_dungeon_controller {
+					if(not state){
+						done = false;
+					}
+				}
+				
+				if(done){
 					///Create HUD
 					if(instance_exists(global.body) && !instance_exists(obj_player_hud)){
 					    instance_create_layer(0,0,"IF",obj_player_hud);
 					}
 		
-					instance_create_layer(0,0,"Instances",obj_map_controller);
+					instance_create_layer( 0, 0, "Instances", obj_map_controller);
+					
+					instance_create_layer( 0, 0,        "IF", obj_inventory_controller);
+					
+					global.act_enemy_list = ds_list_create();
 					
 					level_state++;
 				}

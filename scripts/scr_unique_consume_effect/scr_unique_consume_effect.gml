@@ -9,9 +9,10 @@ switch(argument0) {
 	break;
 	case unique_consume.map:
 		for(var i = 0; i < 64; i++){
-			if(global.ds_roomgrid[# 1, i] != "NULL"){
+			/*if(global.ds_roomgrid[# 1, i] != "NULL"){
 				global.ds_roomgrid[# 2, i] = true;
-			}
+			}*/
+			//FIXME
 		}
 	break;
 	default:

@@ -27,6 +27,18 @@ switch state {
 		if(global.region != p_region){
 			p_region = global.region;
 			state    = 0;
+			
+			#region Dungeon data
+			dungeon_layout = -1;
+
+			dg_col = 0;
+			dg_row = 0;
+
+			dg_space = 0;
+
+			global.room_change = false;
+			c_rid = 0;
+			#endregion
 		}
 	break;
 }
