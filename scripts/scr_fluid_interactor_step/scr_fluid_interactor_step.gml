@@ -1,66 +1,56 @@
 if(not global.pause and on){
-	var fl_tiles = ds_list_create();
-	var tl_count = collision_rectangle_list( x, y, x + sprite_width, y + sprite_height, obj_fluid_tile,
-											true, false, fl_tiles, false);
+	var xx = (x - sprite_xoffset);
+	var yy = (y - sprite_yoffset);
+	xx = xx - xx mod cell_size;
+	yy = yy - yy mod cell_size;
 	
-	if(tl_count > 0){
-		var flx  = x;
-		var fly  = y;
-		var flfx = x + sprite_width;
-		var flfy = y + sprite_height;
-		var mcount = scount;
-		var mtype  = stype;
+	var tl_cnt = collision_rectangle_list(               xx,                 yy, 
+										  xx + sprite_width, yy + sprite_height,
+										  obj_fluid_tile, true, false, tiles, false);
+	
+	repeat tl_cnt {
+		var tl = tiles[| 0];
+		tl.act = true;
+		ds_list_delete(tiles, tl);
 		
-		for(var k = 0; k < tl_count; k++){
-			var inst = fl_tiles[| k];
-			
-			with(inst){	
-				sprite_index = spr_pixel;
-				
-				//Left limit
-				if(flx <= x){
-					var sx = 0;	
-				}else {
-					var sx = (flx - x) div cell_size;		
-				}
+		var dx = (xx - tl.flx) div cell_size;
 		
-				//Right limit
-				if(flfx < x + 32){
-					var fx = (flfx - x) div cell_size;
-				}else {
-					var fx = grid_size;
-				}
-		
-				//Upper limit
-				if(fly <= y){
-					var sy = 0;	
-				}else {
-					var sy = (fly - y) div cell_size;	
-				}
-		
-				//Lower limit
-				if(flfy < y + 32){
-					var fy = (flfy - y) div cell_size;
-				}else {
-					var fy = grid_size;
-				}
-				
-				for(var i = sx; i < fx; i++){
-					for(var j = sy; j < fy; j++){
-						if(place_meeting(x + cell_size * (i + 0.5),
-										    y + cell_size * (j + 0.5), other)){
-							tiles[i * grid_size + j]   = mcount;
-							tiles_t[i * grid_size + j] = mtype;
-							active = true;
-						}
-					}
-				}
-				
-				sprite_index = spr_slm_creep1;
-			}
-			
+		if(dx >= 0){
+			var bxs =   0;
+			var txs =  dx;
+		}else {
+			var bxs = -dx;
+			var txs =   0;
 		}
 		
-		ds_list_destroy(fl_tiles);
+		var xl = min(tl.h_cells - txs, h_cells - bxs);
+		
+		var dy = (yy - tl.fly) div cell_size;
+		
+		if(dy >= 0){
+			var bys =   0;
+			var tys =  dy;
+		}else {
+			var bys = -dy;
+			var tys =   0;
+		}
+		
+		var yl = min(tl.v_cells - tys, v_cells - bys);
+		
+		for(var i = 0; i < yl; i++){
+			var col_line = col_grid[bys + i];
+			var line  = tl.tiles[tys + i];
+			var linet = tl.tiles_t[tys + i];
+			
+			for(var j = 0; j < xl; j++){
+				if(col_line[bxs + j]){
+					line[ txs + j]  = scount;
+					linet[ txs + j] = stype;
+				}
+			}
+			
+			tl.tiles[tys + i]   = line;
+			tl.tiles_t[tys + i] = linet;
+		}
 	}
 }

@@ -1,48 +1,45 @@
-if(active && global.check == 1){
-	active = false;
-	
-	surface_set_target(global.fluid_surface);
-	gpu_set_blendenable(false);
-	
-	for(var i = 0; i < grid_size; i++){
-		for(var j = 0; j < grid_size; j++){
-			var ind   = i * grid_size + j;
-			var count = tiles[ind];
-			var type  = tiles_t[ind];
-					
+if(act && global.check == 1){
+	act = false;
+	draw_self();
+	for(var i = 0; i < v_cells; i++){
+		for(var j = 0; j < h_cells; j++){
+			var count = array_2d_get_value(tiles, i, j);
+			var type  = array_2d_get_value(tiles_t, i, j);
+			var drawn = array_2d_get_value(tiles_d, i, j);
+			
 			if(count > 1){
-				active = true;
+				act = true;
 				
 				//Ticks
 				if(not global.pause){
 					count--;
 				}
 				
-				if(global.current_col == rx && global.current_row == ry){
-					//Opacity
-					if(type <= 1){
-						op = ln(count) * 0.05 + 0.25;
-					}else {
-						op = ln(count) * 0.05 + 0.55;
-					}
-				
-					/*draw_sprite_ext(spr_pixel, 0,
-								ox + i * cell_size + 2,
-								oy + j * cell_size + 2,
-								cell_size,   cell_size,
-								0, colors[type], op);*/
+				if(not drawn){
+					var cx = gx + j;
+					var cy = gy + i;
+					
+					var data = tilemap_get(global.fluid_tlm, cx, cy);
+					tile_set_index(data, type + 1);
+					tilemap_set(global.fluid_tlm, data, cx, cy);
+					show_debug_message("Drawing");
+					tiles_d = array_2d_set_value(tiles_d, i, j, 1);
 				}
 				
-				tiles[ind] = count;
+				tiles = array_2d_set_value(tiles, i, j, count);
 				
 			}else {
-				tiles[ind]   = 0;
-				tiles_t[ind] = -1;
+				tiles   = array_2d_set_value(  tiles, i, j,  0);
+				tiles_t = array_2d_set_value(tiles_t, i, j, -1);
+				tiles   = array_2d_set_value(tiles_d, i, j,  0);
 				
+				var cx = gx + j;
+				var cy = gy + i;
+					
+				var data = tilemap_get(global.fluid_tlm, cx, cy);
+				tile_set_index(data, 0);
+				tilemap_set(global.fluid_tlm, data, cx, cy);
 			}
 		}
 	}
-	
-	gpu_set_blendenable(true);
-	surface_reset_target();
 }

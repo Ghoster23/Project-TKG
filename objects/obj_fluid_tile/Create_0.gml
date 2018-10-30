@@ -1,13 +1,24 @@
-grid_size  = global.fluid_detail;
-cell_size  = 32 div grid_size;
-array_len  = grid_size * grid_size;
+cell_size  = 32 div global.fluid_detail;
 
-for(var i = 0; i < array_len; i++){
-	tiles[i]   = 0;
-	tiles_t[i] = -1;
+h_cells = global.fluid_detail;
+v_cells = h_cells;
+
+gx = x div cell_size;
+gy = y div cell_size;
+
+flx = x - x mod cell_size;
+fly = y - y mod cell_size;
+
+for(var i = 0; i < v_cells; i++){
+	var line  = array_create(h_cells, 0);
+	var linet = array_create(h_cells, -1);
+	
+	tiles[i]   = line;
+	tiles_t[i] = linet;
+	tiles_d[i] = line;
 }
 
-active = false;
+act = false;
 
 colors[0] = make_color_rgb(122,199, 21); //Slime
 colors[1] = make_color_rgb(  0,123,255); //Water

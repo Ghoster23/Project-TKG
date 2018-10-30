@@ -1,10 +1,11 @@
 //Reset
 part_IF_drawn = false;
 
-#region Fluid surface
+
+//#region Fluid surface
 global.check++;
 global.check = global.check % 3;
-
+/*
 if(!surface_exists(global.fluid_surface)){
 	global.fluid_surface = surface_create(fl_s_wd,
 	                                      fl_s_hg);
@@ -37,6 +38,7 @@ if(!surface_exists(global.fluid_surface)){
 	}
 }
 #endregion
+*/
 
 //First particle layer
 part_system_drawit(global.ps);

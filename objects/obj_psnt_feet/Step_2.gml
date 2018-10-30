@@ -10,8 +10,8 @@ if(not global.pause){
 			
 		if(tile != noone){
 			with(tile){
-				if(active){
-					var px = (other.x - x)     div cell_size;
+				if(act){
+					/*var px = (other.x - x)     div cell_size;
 					var py = (other.y + 9 - y) div cell_size;
 					
 					if(0 <= px and px < grid_size and 0 <= py and py < grid_size){
@@ -22,7 +22,8 @@ if(not global.pause){
 						}else if(type == 1){
 							scr_status_apply(statuses.wet,5,other.owner);
 						}
-					}
+					}*/
+					//FIX ME
 				}
 			}
 		}
