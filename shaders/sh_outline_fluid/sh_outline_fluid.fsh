@@ -30,7 +30,7 @@ void main()
                 outline = true;
 				
 				if(datPixel.r - 0.478 < 0.001){
-					gl_FragColor = vec4(0.004, 0.263, 0.208, datPixel.a);
+					gl_FragColor = vec4(0.024, 0.263, 0.212, datPixel.a);
 					
 				}else if(datPixel.r - 0.074 < 0.001){
 					gl_FragColor = vec4(  0.0, 0.074, 0.498, datPixel.a);

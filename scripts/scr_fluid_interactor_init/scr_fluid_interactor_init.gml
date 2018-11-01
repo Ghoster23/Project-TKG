@@ -21,6 +21,4 @@ if(argument_count == 5){
 }else {
 	scr_fluid_make_col_grid();
 }
-
-show_debug_message(col_grid);
 }

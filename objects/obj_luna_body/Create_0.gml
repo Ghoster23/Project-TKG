@@ -42,4 +42,4 @@ dash_move = true;
 
 phy_bullet = true;
 
-//fl_gen = instance_create_layer(phy_position_x,phy_position_y,layer,obj_luna_fluid_gen);
+fl_gen = instance_create_layer(phy_position_x,phy_position_y,layer,obj_luna_fluid_gen);

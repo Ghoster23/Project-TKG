@@ -3,20 +3,27 @@ cell_size  = 32 div global.fluid_detail;
 h_cells = global.fluid_detail;
 v_cells = h_cells;
 
+cell_count = h_cells * v_cells;
+
 gx = x div cell_size;
 gy = y div cell_size;
 
-flx = x - x mod cell_size;
-fly = y - y mod cell_size;
+flx = (x - x mod cell_size) div cell_size;
+fly = (y - y mod cell_size) div cell_size;
+
+tiles   = [];
+tiles_t = [];
+tiles_d = [];
 
 for(var i = 0; i < v_cells; i++){
-	var line  = array_create(h_cells, 0);
-	var linet = array_create(h_cells, -1);
-	
-	tiles[i]   = line;
-	tiles_t[i] = linet;
-	tiles_d[i] = line;
+	for(var j = 0; j < h_cells; j++){
+		tiles[i * h_cells + j]   =  0;
+		tiles_t[i * h_cells + j] = -1;
+		tiles_d[i * h_cells + j] =  0;
+	}
 }
+
+cell_data = tilemap_get(global.fluid_tlm, 0, 0);
 
 act = false;
 

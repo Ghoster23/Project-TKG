@@ -1,1 +1,1 @@
-scr_fluid_converter_init(60,1,[1,1,1,3],true,true,false);
+scr_fluid_converter_init(120,fluid.water,[fluid.water,fluid.water,fluid.water,fluid.ice],true,true,false);

@@ -1,34 +1,29 @@
 //Reset
 part_IF_drawn = false;
 
-
-//#region Fluid surface
+#region Fluid surface
 global.check++;
 global.check = global.check % 3;
-/*
+
 if(!surface_exists(global.fluid_surface)){
-	global.fluid_surface = surface_create(fl_s_wd,
-	                                      fl_s_hg);
-}else {
-	//Draw Fluid Surface
-	outline_f_start_surface(1,global.fluid_surface,4);
+	global.fluid_surface = surface_create( room_width, room_height);
 	
-	switch room {
-		case rm_level:
-			if(global.region != 0){
-				draw_surface_ext(global.fluid_surface,
-								 global.current_col * global.roomwd,
-								 global.current_row * global.roomhg,
-								 1,1,0,c_white,1);
-			}
-		break;
-		default:
-			draw_surface_ext(global.fluid_surface,
-							 0,0,1,1,0,c_white,1);
-		break;
+}else {
+	if(global.check){
+		//Draw tiles
+		surface_set_target(global.fluid_surface);
+	
+		draw_tilemap(global.fluid_tlm, 0, 0);
+	
+		surface_reset_target();
 	}
 	
-	outline_f_end();
+	//Draw Fluid Surface
+	outline_start_surface( 2, c_white, global.fluid_surface, 4, 8);
+	
+	draw_surface_ext(global.fluid_surface, 0, 0, 1, 1, 0, c_white, 0.6);
+	
+	outline_end();
 	
 	//Clear Fluid Surface
 	if(global.check == 1){
@@ -38,7 +33,6 @@ if(!surface_exists(global.fluid_surface)){
 	}
 }
 #endregion
-*/
 
 //First particle layer
 part_system_drawit(global.ps);

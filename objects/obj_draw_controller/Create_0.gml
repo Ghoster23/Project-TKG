@@ -4,10 +4,12 @@ ds_depthgrid = ds_grid_create(2,1);
 
 //Fluids
 global.check = 0;
-global.fluid_surface = -1;
+global.fluid_surface = surface_create(room_width, room_height);
 global.fluid_tlm     = layer_tilemap_get_id(layer_get_id("Fluid"));
-outline_f_init();
-layer_shader(layer_get_id("Fluid"), sh_outline_fluid);
+
+layer_set_visible(layer_get_id("Fluid"), false)
+
+outline_init();
 
 BH_layer  = 0;
 INT_layer = 0;

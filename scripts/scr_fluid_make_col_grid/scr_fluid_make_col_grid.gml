@@ -19,6 +19,7 @@ for(var i = 0; i < vc; i++){
 	}
 	
 	col_grid[i] = line;
+	show_debug_message(col_grid[i]);
 }
 
 instance_destroy(ch);

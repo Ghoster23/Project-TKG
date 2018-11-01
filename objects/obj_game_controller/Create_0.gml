@@ -55,6 +55,7 @@ global.p_stats[stats.arm] = 0;
 scr_status_init();
 
 global.fluid_detail = 16;
+scr_fluids_init();
 
 //Current region
 global.region = 0;

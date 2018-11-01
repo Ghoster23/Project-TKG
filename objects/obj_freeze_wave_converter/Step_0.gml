@@ -1,86 +1,83 @@
 if(not global.pause and on){
-	var fl_tiles = ds_list_create();
-	var tl_count = collision_rectangle_list( x, y, 
-											 x+sprite_width*image_xscale, y+sprite_height*image_yscale, 
-											 obj_fluid_tile, true, false, fl_tiles, false);
+	var xx = (x - sprite_xoffset);
+	var yy = (y - sprite_yoffset);
 	
-	if(tl_count > 0){
-		var flx   = x;
-		var fly   = y;
-		var flfx  = x + sprite_width;
-		var flfy  = y + sprite_height;
+	var vals   = values;
+	var mcount = scount;
+	var mtype  = stype;
+	var p = paint;
+	
+	var tl_cnt = collision_rectangle_list(               xx,                 yy, 
+										  xx + sprite_width, yy + sprite_height,
+										  obj_fluid_tile, true, false, tiles, false);
+	
+	xx = (xx - xx mod cell_size) div cell_size;
+	yy = (yy - yy mod cell_size) div cell_size;
+	
+	repeat tl_cnt {
+		var tl = tiles[| 0];
+		tl.act = true;
+		ds_list_delete(tiles, 0);
 		
-		var vals   = values;
-		var mcount = scount;
-		var mtype  = stype;
+		var bl_cnt = 0;
 		
-		for(var k = 0; k < tl_count; k++){
-			var inst = fl_tiles[| k];
+		#region xx
+		var dx = xx - tl.flx;
+		
+		if(dx >= 0){
+			var bxs =   0;
+			var txs =  dx;
+		}else {
+			var bxs = -dx;
+			var txs =   0;
+		}
+		
+		var xl = min(tl.h_cells - txs, h_cells - bxs);
+		#endregion
+		
+		#region yy
+		var dy = yy - tl.fly;
+		
+		if(dy >= 0){
+			var bys =   0;
+			var tys =  dy;
+		}else {
+			var bys = -dy;
+			var tys =   0;
+		}
+		
+		var yl = min(tl.v_cells - tys, v_cells - bys);
+		#endregion
+		
+		for(var i = 0; i < yl; i++){
+			var col_line = col_grid[bys + i];
 			
-			with(inst){
-				var bl_cnt = 0;
-				sprite_index = spr_pixel;
-				
-				//Left limit
-				if(flx <= x){
-					var sx = 0;	
-				}else {
-					var sx = (flx - x) div cell_size;		
-				}
-		
-				//Right limit
-				if(flfx < x + 32){
-					var fx = (flfx - x) div cell_size;
-				}else {
-					var fx = grid_size;
-				}
-		
-				//Upper limit
-				if(fly <= y){
-					var sy = 0;	
-				}else {
-					var sy = (fly - y) div cell_size;	
-				}
-		
-				//Lower limit
-				if(flfy < y + 32){
-					var fy = (flfy - y) div cell_size;
-				}else {
-					var fy = grid_size;
-				}
-				
-				for(var i = sx; i < fx; i++){
-					for(var j = sy; j < fy; j++){
-						if(place_meeting(x + cell_size * (i + 0.5),
-									        y + cell_size * (j + 0.5), other)){
+			for(var j = 0; j < xl; j++){
+				if(col_line[bxs + j]){
+					with tl {
+						var ind = (tys + i) * h_cells + (txs + j);
+						
+						var count = tiles[ind];
+						
+						if(count > 1){
+							var type = tiles_t[ind];
+							var diff = type - vals[type];
 							
-							var count = tiles[i * grid_size + j];
+							if(diff || type == mtype){
+								tiles[ind]   = mcount;
+								tiles_t[ind] = type - diff;
+								tiles_d[ind] = 0;
 								
-							if(count > 1){
-								var type = tiles_t[i * grid_size + j];
-								var diff = type - vals[type];
-								
-								if(diff != 0 || type == mtype){					
-									tiles[i * grid_size + j]   = mcount;
-									tiles_t[i * grid_size + j] = mtype;
-									bl_cnt++;
-								}
-								
-								active = true;	
+								bl_cnt++
 							}
 						}
 					}
 				}
-				
-				sprite_index = spr_slm_creep1;
-				
-				
-				if(bl_cnt/array_len >= 0.5 and not place_meeting(x,y,obj_solid_parent)){
-					instance_create_layer(x+16,y+16,"Instances",obj_ice_cube);
-				}
-			}	
-		}		
+			}
+		}
 		
-		ds_list_destroy(fl_tiles);
+		if(bl_cnt/tl.cell_count >= 0.66){
+			instance_create_layer( tl.x, tl.y, "Instances", obj_ice_cube);
+		}
 	}
 }

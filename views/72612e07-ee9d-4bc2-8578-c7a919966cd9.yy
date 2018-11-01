@@ -12,7 +12,8 @@
         "d80228a5-f8f7-4a95-bf3f-5c06defea638",
         "520bf381-630e-4591-859d-84244c3ed08e",
         "0a07c8fa-b5e3-4c50-a9c8-0528c8f9d7d8",
-        "814245b7-6a55-431f-a700-b0a23e006b10"
+        "814245b7-6a55-431f-a700-b0a23e006b10",
+        "0cc2c8ce-4d72-4f1c-a2f7-dba70caecbc2"
     ],
     "filterType": "GMSprite",
     "folderName": "Fluids",
