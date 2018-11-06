@@ -5,7 +5,7 @@ if(not global.pause and on){
 	var vals   = values;
 	var mcount = scount;
 	var mtype  = stype;
-	var p = paint;
+	var p      = paint;
 	
 	var tl_cnt = collision_rectangle_list(               xx,                 yy, 
 										  xx + sprite_width, yy + sprite_height,
@@ -63,20 +63,20 @@ if(not global.pause and on){
 							var type = tiles_t[ind];
 							var diff = type - vals[type];
 							
-							if(diff || type == mtype){
+							if(diff != 0 || type == mtype){
 								tiles[ind]   = mcount;
 								tiles_t[ind] = type - diff;
 								tiles_d[ind] = 0;
-								
-								bl_cnt++
 							}
 						}
+						
+						if(tiles_t[ind] == mtype){ bl_cnt++; }
 					}
 				}
 			}
 		}
 		
-		if(bl_cnt/tl.cell_count >= 0.66){
+		if(bl_cnt/tl.cell_count >= 0.66 and not place_meeting(tl.x + 16,tl.y + 16, obj_ice_cube)){
 			instance_create_layer( tl.x, tl.y, "Instances", obj_ice_cube);
 		}
 	}

@@ -61,7 +61,7 @@ if(not global.pause and on){
 							var type = tiles_t[ind];
 							var diff = type - vals[type];
 							
-							if(diff || type == mtype){
+							if(diff != 0 || type == mtype){
 								tiles[ind]   = mcount;
 								tiles_t[ind] = type - diff;
 								tiles_d[ind] = 0;
