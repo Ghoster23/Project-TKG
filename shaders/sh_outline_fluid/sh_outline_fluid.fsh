@@ -13,6 +13,11 @@ uniform vec4 uvs;
 
 const float rad_circle = 6.28319;
 
+const vec3 cSlime = vec3(0.478, 0.780, 0.082);
+const vec3 cWater = vec3(0.286, 0.773, 0.969);
+const vec3 cBlood = vec3(0.400, 0.000, 0.020);
+const vec3 cIce   = vec3(0.675, 0.867, 0.910);
+
 void main()
 {
     vec4 col     = texture2D( gm_BaseTexture, v_vTexcoord );
@@ -29,17 +34,17 @@ void main()
             if(datPixel.a > tol && gl_FragColor.a <= tol && !out_bound){
                 outline = true;
 				
-				if(datPixel.r - 0.478 < 0.001){
-					gl_FragColor = vec4(0.024, 0.263, 0.212, datPixel.a);
+				if      (datPixel.r - cSlime.r < 0.001 && datPixel.g - cSlime.g < 0.001 && datPixel.b - cSlime.b < 0.001){
+					gl_FragColor = vec4(0.024, 0.263, 0.212,0.5);
 					
-				}else if(datPixel.r - 0.074 < 0.001){
-					gl_FragColor = vec4(  0.0, 0.074, 0.498, datPixel.a);
+				}else if(datPixel.r - cWater.r < 0.001 && datPixel.g - cWater.g < 0.001 && datPixel.b - cWater.b < 0.001){
+					gl_FragColor = vec4(0.580, 0.922, 0.969, 0.5);
 					
-				}else if(datPixel.r - 0.572 < 0.001){
-					gl_FragColor = vec4(0.278,   0.0,   0.0, datPixel.a);
+				}else if(datPixel.r - cBlood.r < 0.001 && datPixel.g - cBlood.g < 0.001 && datPixel.b - cBlood.b < 0.001){
+					gl_FragColor = vec4(0.235, 0.482, 0.118, 1.0);
 					
-				}else if(datPixel.r - 0.858 < 0.001){
-					gl_FragColor = vec4(  0.8, 0.843,   1.0, datPixel.a);
+				}else if(datPixel.r - cIce.r < 0.001 && datPixel.g - cIce.g < 0.001 && datPixel.b - cIce.b < 0.001){
+					gl_FragColor = vec4(0.898, 0.965, 1.000, 0.5);
 					
 				}else {
 					gl_FragColor = vec4(  1.0,   1.0,   1.0, 1.0);

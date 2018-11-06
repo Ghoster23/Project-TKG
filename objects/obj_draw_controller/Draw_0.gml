@@ -9,28 +9,24 @@ if(!surface_exists(global.fluid_surface)){
 	global.fluid_surface = surface_create( room_width, room_height);
 	
 }else {
-	if(global.check){
+	if(global.check == 1){
+		//Clear Fluid Surface
+		surface_set_target(global.fluid_surface);
+		draw_clear_alpha(c_black,0);
+		surface_reset_target();
+		
 		//Draw tiles
 		surface_set_target(global.fluid_surface);
-	
 		draw_tilemap(global.fluid_tlm, 0, 0);
-	
 		surface_reset_target();
 	}
 	
 	//Draw Fluid Surface
-	outline_start_surface( 2, c_white, global.fluid_surface, 4, 8);
+	outline_f_start_surface( 1, global.fluid_surface, 4);
 	
-	draw_surface_ext(global.fluid_surface, 0, 0, 1, 1, 0, c_white, 0.6);
+	draw_surface_ext(global.fluid_surface, 0, 0, 1, 1, 0, c_white, 0.5);
 	
-	outline_end();
-	
-	//Clear Fluid Surface
-	if(global.check == 1){
-		surface_set_target(global.fluid_surface);
-		draw_clear_alpha(c_black,0);
-		surface_reset_target();
-	}
+	outline_f_end();
 }
 #endregion
 

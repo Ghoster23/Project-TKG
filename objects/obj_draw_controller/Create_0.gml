@@ -9,7 +9,7 @@ global.fluid_tlm     = layer_tilemap_get_id(layer_get_id("Fluid"));
 
 layer_set_visible(layer_get_id("Fluid"), false)
 
-outline_init();
+outline_f_init();
 
 BH_layer  = 0;
 INT_layer = 0;
