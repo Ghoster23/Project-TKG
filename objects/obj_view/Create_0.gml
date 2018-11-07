@@ -1,5 +1,9 @@
 scr_unique_inst();
 
+//Dungeon room measurements
+dr_wd = global.roomwd;
+dr_hg = global.roomhg;
+
 //Get camera
 camera = room_get_camera(room,0);
 cam_wd = camera_get_view_width(camera);

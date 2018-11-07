@@ -42,16 +42,22 @@ state      = 0;
 base_state = 0;
 
 executing = -1;
+charging  = -1;
 
 skills = [-1,-1,-1,-1];
 cds    = [-1,-1,-1,-1];
-charge = [-1,-1]; 
+
+///Charge
+charge_scr = -1;
+charge     = [-1,-1,-1,-1];
+meter      = noone;
+chargeup   = false;
+
 key[0] = false;
 key[1] = false;
 
 icons = [-1,-1,-1,-1];
 
-meter    = noone;
-chargeup = false;
+resetting = false;
 
 player_owned = false;

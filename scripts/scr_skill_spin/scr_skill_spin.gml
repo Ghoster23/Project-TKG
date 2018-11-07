@@ -1,55 +1,48 @@
+///parameters - [ count, speed, damage dealer]
+///spin_vars  - [ state, inverted flag, start angle, counter, dmd orientation]
 {
 var num = argument0;
 
 var parameters = params[num];
 
-switch parameters[0] {
+if(not variable_instance_exists(id, "spin_vars")) { spin_vars = [0,1,angle,parameters[0],0]; }
+
+switch spin_vars[0] {
 	case 0: //Start
-		parameters[0] = 1; //Go to windup
-		
 		if(ang_off == ang_off_base){
-			parameters[1] = 1;
+			spin_vars[1] =  1;
 		}else {
-			parameters[1] = -1;
+			spin_vars[1] = -1;
 		}
 		
-		parameters[3] = ang_off + parameters[2] * parameters[1]; //Calculate target angle
+		angle += ang_off;
 		
+		ang_off = 0;
+		
+		spin_vars[2] = angle;
+		
+		spin_vars[3] = parameters[0];
+		
+		spin_vars[4] = ((ang_off + 45) div 90) mod 4 - 1;
+		
+		spin_vars[0] = 1; //Go to spin
 	break;
 	
-	case 1: //Charging
-		if((parameters[1] == 1 && ang_off < parameters[3]) || (parameters[1] == -1 && ang_off > parameters[3])){
-			ang_off = scr_approach(ang_off,parameters[3],parameters[4]); //Approach target
-		}else {
-			parameters[3] = angle + ang_off; //Determine original target
-			
-			angle += ang_off;
-			
-			ang_off = 0;
-			
-			parameters[7] = parameters[6];
-			
-			parameters[8] = ((ang_off + 45) div 90) mod 4 - 1;
-				
-			parameters[0] = 2; //Go to swing
-		}
-	break;
-	
-	case 2: //Spin
+	case 1: //Spin
 		with(owner){
 			physics_apply_impulse(phy_position_x,phy_position_y,
-								  lengthdir_x(parameters[9],other.angle),lengthdir_y(parameters[9],other.angle));
+								  lengthdir_x(spin_vars[3],other.angle),lengthdir_y(spin_vars[3],other.angle));
 		}
 		
-		angle = parameters[3];
+		angle = spin_vars[2];
 		
-		if(parameters[7] > 0){
-			ang_off = scr_approach(ang_off,360,parameters[4]*10); //Approach target
+		if(spin_vars[3] > 0){
+			ang_off = scr_approach(ang_off,360,parameters[1]); //Approach target
 			
 			var ori = ((ang_off + 45) div 90) mod 4;
 			
-			if(ori != parameters[8]){
-				var swing = scr_create_damage_dealer(x, y, parameters[5], owner, false, 
+			if(ori != spin_vars[4]){
+				var swing = scr_create_damage_dealer(x, y, parameters[2], owner, false, 
 													owner.stat[mult] * (1 + owner.modf[mult]), divi,
 													5, kb_amount);
 		
@@ -61,20 +54,20 @@ switch parameters[0] {
 		
 				scr_sound(snd_sword_slash);
 			
-				parameters[8] = ori;
+				spin_vars[2] = ori;
 			}
 		}else {
-			parameters[0] = 3;
+			parameters[0] = 2;
 		}
 		
 		if(ang_off == 360){
 			ang_off = 0;
-			parameters[7]--;
+			spin_vars[3]--;
 		}
 		
 	break;
 	
-	case 3: //End
+	case 2: //End
 		alarm[num] = cds[num] * room_speed;
 		executing  = -1;
 		
@@ -82,7 +75,7 @@ switch parameters[0] {
 			amount--;
 		}
 		
-		parameters[0] = 0;
+		spin_vars[0] = 0;
 	break;
 }
 

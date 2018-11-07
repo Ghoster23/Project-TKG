@@ -6,7 +6,9 @@
     "children": [
         "f3f7954f-c8e5-4bfa-a1b8-0a226dd8a3e5",
         "ba61d9d4-8141-4d7a-9a6f-1d673d0c448a",
-        "ca582616-9bf1-4b10-b520-e753167fa3ef"
+        "ca582616-9bf1-4b10-b520-e753167fa3ef",
+        "b9cc1da5-b540-4290-837e-a51e84dbb9cc",
+        "5f53780f-ad68-454d-af97-43cc105b1c66"
     ],
     "filterType": "GMScript",
     "folderName": "Weapons & Tools",

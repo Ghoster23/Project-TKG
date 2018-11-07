@@ -1,3 +1,4 @@
+///parameters - [ projectile speed, angle deviation range, projectile, projectile count]
 {
 var num = argument0;
 
@@ -18,13 +19,13 @@ for(var i = 0; i < parameters[3]; i++){
 }
 		
 image_index = 0;
-		
-alarm[num] = cds[num] * room_speed;
-executing  = -1;
 
-if(amount > 0 and player_owned){
+if(player_owned and amount > 0){
 	amount--;
 }
+
+alarm[num] = cds[num] * room_speed;
+executing  = -1;
 
 params[num] = parameters;
 }

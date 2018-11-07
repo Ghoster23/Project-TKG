@@ -12,11 +12,10 @@ switch m_state {
 			cam_hg = cam_hg_o / zoom;
 		}		
 	break;
-	
-	case 2: //Shake		
-		global.shake *= 0.5;
-	break;
 }
+
+global.shake *= 0.5;
+
 camera_set_view_pos(   view_camera[0], x - cam_wd / 2, y - cam_hg / 2);
 camera_set_view_size(  view_camera[0],         cam_wd,         cam_hg);
 camera_set_view_border(view_camera[0],     cam_wd / 2,     cam_hg / 2);

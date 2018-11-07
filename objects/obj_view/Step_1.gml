@@ -2,8 +2,18 @@
 switch room {
 	case rm_level:
 		if(target == noone){
-			cam_x_t = (0.5 + global.current_col) * global.roomwd;
-			cam_y_t = (0.5 + global.current_row) * global.roomhg - 16;
+			var xx = global.body.phy_position_x;
+			var yy = global.body.phy_position_y;
+			var rx = (global.current_col + 0.5) * dr_wd;
+			var ry = (global.current_row + 0.5) * dr_hg;
+			var dx = abs(rx - xx);
+			var dy = abs(ry - yy);
+			
+			var dir = point_direction(rx,ry,xx,yy);
+			
+			cam_x_t = rx + (dx / (dr_wd/2)) * 32 * cos(degtorad(dir));
+			cam_y_t = ry - (dy / (dr_hg/2)) * 32 * sin(degtorad(dir));
+			
 		}else if(instance_exists(target)){
 			cam_x_t = target.x;
 			cam_y_t = target.y;
@@ -37,28 +47,17 @@ switch m_state {
 		if(cam_x_t != x || cam_y_t != y){
 			m_state = 1;
 			
-			global.shake = 0;
-			
-		}else if(global.shake != 0){
-			m_state = 2;
-			
 		}
 	break;
 	
 	case 1: //Move
-		if(abs(cam_x_t - x) < 0.5 && abs(cam_y_t - y) < 0.5){
+		if(abs(cam_x_t - x) < 0.01 && abs(cam_y_t - y) < 0.01){
 			x = cam_x_t;
 			y = cam_y_t;
 			
 			cam_x_c = x;
 			cam_y_c = y;
 			
-			m_state = 0;
-		}
-	break;
-	
-	case 2: //Shake
-		if(global.shake == 0){
 			m_state = 0;
 		}
 	break;

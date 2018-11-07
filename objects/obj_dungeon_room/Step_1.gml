@@ -15,14 +15,52 @@ switch state {
 		if(col_match + row_match == 0 and not cleared){
 			state = 3;
 			
-			//Doors
+			#region Close doors
 			for(var i = 0; i < 4; i++){
 				var inst = corridors[i];
 				if(inst.object_index == obj_vcorridor ||
 				   inst.object_index == obj_hcorridor){
-					inst.state = 1;	   
+					var  xx = x;
+					var  yy = y;
+					var _wd = wd;
+					var _hg = hg;
+					
+					with inst {
+						state = 1;
+						
+						#region Guarantee player gets in room
+						if(place_meeting(x,y,global.body)){
+							switch i {
+								case 0:
+									show_debug_message("Right");
+									global.body.phy_position_x = xx + _wd - 16;
+									global.body.phy_position_y = yy + _hg / 2;
+								break;
+							
+								case 1:
+									show_debug_message("Up");
+									global.body.phy_position_x = xx + _wd / 2;
+									global.body.phy_position_y = yy + 64;
+								break;
+							
+								case 2:
+									show_debug_message("Left");
+									global.body.phy_position_x = xx + 32;
+									global.body.phy_position_y = yy + _hg / 2;
+								break;
+							
+								case 3:
+									show_debug_message("Down");
+									global.body.phy_position_x = xx + _wd / 2;
+									global.body.phy_position_y = yy + _hg - 16;
+								break;
+							}
+						}
+						#endregion
+					}
 				}
 			}
+			#endregion
 			
 		}else if(col_match + row_match >= 2){
 			state = 5;
@@ -40,7 +78,7 @@ switch state {
 			
 			cleared = true;
 			
-			//Doors
+			#region Open Doors
 			for(var i = 0; i < 4; i++){
 				var inst = corridors[i];
 				if(inst.object_index == obj_vcorridor ||
@@ -48,6 +86,7 @@ switch state {
 					inst.state = 0;	   
 				}
 			}
+			#endregion
 			
 			#region On clear effects
 			if(instance_exists(obj_inventory_controller)){

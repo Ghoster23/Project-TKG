@@ -7,14 +7,14 @@ switch m_state {
 		x += (cam_x_t - x) * m_spd;
 		y += (cam_y_t - y) * m_spd;
 	break;
-	
-	case 2: //Shake
-		cam_x_s = cam_x_c + random_range(-global.shake,global.shake);
-		cam_y_s = cam_y_c + random_range(-global.shake,global.shake);
+}
+
+if(global.shake){
+	cam_x_s = x + random_range(-global.shake,global.shake) * 4;
+	cam_y_s = y + random_range(-global.shake,global.shake) * 4;
 			
-		x = scr_approach(x, cam_x_s, 8);
-		y = scr_approach(y, cam_y_s, 8);
-	break;
+	x = scr_approach(x, cam_x_s, 16);
+	y = scr_approach(y, cam_y_s, 16);
 }
 
 //FIX ME

@@ -42,7 +42,7 @@ switch state {
 			var bds = borders[global.region - 1];
 			
 			var xx = global.body.phy_position_x;
-			var yy = global.body.phy_position_y;
+			var yy = global.body.phy_position_y-32;
 			
 			var c_row = (yy - bds[0]) div global.roomhg;
 			var c_col = (xx - bds[1]) div global.roomwd;

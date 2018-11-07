@@ -12,7 +12,7 @@ if(not global.pause){
 		spr_cnt = sprite_get_number(sprite_index) - 1;
 	}
 	
-	switch animations[0] {
+	switch animation {
 		case 0:
 			if(image_speed != 0 && executing == -1){
 				image_speed = 0;

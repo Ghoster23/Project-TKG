@@ -1,28 +1,32 @@
+///parameters  - [ speed, node, head]
+///stream_vars - [ state, head_id]
 {
 var num = argument0;
 
 var parameters = params[num];
 
-switch parameters[0] {
+if(not variable_instance_exists(id, "stream_vars")) { stream_vars = [0,noone]; }
+
+switch stream_vars[0] {
 	case 0: //Prepare		
-		parameters[3] = instance_create_layer(x,y,"IF",parameters[4]);
+		stream_vars[1] = instance_create_layer(x,y,"IF",parameters[2]);
 		
-		with(parameters[3]){ 
+		with(stream_vars[1]){ 
 			owner = other.id;
 		}
 		
-		parameters[0] = 1;
+		stream_vars[0] = 1;
 	break;
 	
 	case 1: //Shoot		
-		var xx  = x + lengthdir_x(sprite_width,angle);
-		var yy  = y + lengthdir_y(sprite_width,angle);
-		var rad = degtorad(angle);
-		var head = parameters[3];
+		var xx   = x + lengthdir_x(sprite_width,angle);
+		var yy   = y + lengthdir_y(sprite_width,angle);
+		var rad  = degtorad(angle);
+		var head = stream_vars[1];
 
-		var pr = scr_create_projectile( xx, yy, parameters[2],
+		var pr = scr_create_projectile( xx, yy, parameters[1],
 										owner, owner.ohko,
-										parameters[1], -rad,
+										parameters[0], -rad,
 										owner.stat[mult] * (1 + owner.modf[mult]), divi);
 		ds_list_add(head.node_list,pr);
 		head.node_count++;
@@ -32,18 +36,18 @@ switch parameters[0] {
 			y = yy;
 		}
 		
-		parameters[0] = 2;
+		stream_vars[0] = 2;
 		
 		if(not key[num div 2]){
-			parameters[0] = 3;
+			stream_vars[0] = 3;
 		}
 	break;
 	
 	case 2: //Rest
-		var xx  = x + lengthdir_x(sprite_width,angle);
-		var yy  = y + lengthdir_y(sprite_width,angle);
-		var rad = degtorad(angle);
-		var head = parameters[3];
+		var xx   = x + lengthdir_x(sprite_width,angle);
+		var yy   = y + lengthdir_y(sprite_width,angle);
+		var rad  = degtorad(angle);
+		var head = stream_vars[1];
 
 		var pr = scr_create_projectile( xx, yy, obj_stream_node_parent,
 										owner, owner.ohko,
@@ -57,10 +61,10 @@ switch parameters[0] {
 			y = yy;
 		}
 	
-		parameters[0] = 1;
+		stream_vars[0] = 1;
 		
 		if(not key[num div 2]){
-			parameters[0] = 3;
+			stream_vars[0] = 3;
 		}
 	break;
 	
@@ -68,11 +72,12 @@ switch parameters[0] {
 		alarm[num] = cds[num] * room_speed;
 		executing  = -1;
 		
-		with(parameters[3]){
+		with(stream_vars[1]){
 			destroyed = true;
 		}
+		stream_vars[1] = noone;
 		
-		parameters[0] = 0;
+		stream_vars[0] = 0;
 
 		if(amount > 0 and player_owned){
 			amount--;

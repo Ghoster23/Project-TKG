@@ -35,26 +35,28 @@ with tl {
 		img_spd = -1 * data[2];
 	}
 	
-	animations = data[3];
+	animation = data[3];
 		
-	if(animations[0]){
+	if(animation == 1){
 		image_speed = img_spd;
 	}else   {
 		image_speed = 0;
 	}
 	
-	ang_off_base = data[4];
-	ang_off      = data[4];
+	charge_scr = data[4];
+	
+	ang_off_base = data[5];
+	ang_off      = data[5];
 	
 	//Mechanics
-	var mech = data[5];
+	var mech = data[6];
 		
 	mult      = mech[0];
 	divi      = mech[1];
 	kb_amount = mech[2];
 	
 	//Skills
-	var s_ids = data[6];
+	var s_ids = data[7];
 	
 	for(var i = 0; i < 4; i++){
 		var skill_id = s_ids[i];
@@ -64,14 +66,12 @@ with tl {
 				
 			skills[i] = skill_data[0];
 			params[i] = skill_data[1];
-			if(i == 1 || i == 3){
-				charge[i div 2] = skill_data[2];
-			}
+			charge[i] = skill_data[2];
 			icons[i]  = skill_data[3];
 		}
 	}
 	
-	cds = data[7];
+	cds = data[8];
 }
 	
 return tl;
