@@ -10,6 +10,7 @@ segment   = 0;
 counter   = 0;
 chargeinc = 1;
 owner     = noone;
+prog = 0;
 
 image_index = 0;
 image_speed = 0;

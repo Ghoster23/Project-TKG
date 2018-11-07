@@ -13,7 +13,7 @@ if(0 < counter && image_index < 8){
 }
 
 if(counter >= time){
-	owner.chargeup = true;
+	prog = 1;
 	
 	if(alarm[0] == -1){
 		alarm[0] = 0.2 * room_speed;
@@ -21,5 +21,5 @@ if(counter >= time){
 	
 }else {
 	counter += chargeinc;
-	
+	prog = counter/time;
 }

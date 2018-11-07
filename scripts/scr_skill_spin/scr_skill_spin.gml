@@ -28,10 +28,10 @@ switch spin_vars[0] {
 		spin_vars[0] = 1; //Go to spin
 	break;
 	
-	case 1: //Spin
+	case 1: //Spin		
 		with(owner){
 			physics_apply_impulse(phy_position_x,phy_position_y,
-								  lengthdir_x(spin_vars[3],other.angle),lengthdir_y(spin_vars[3],other.angle));
+								  lengthdir_x(parameters[1]*2,other.angle),lengthdir_y(parameters[1]*2,other.angle));
 		}
 		
 		angle = spin_vars[2];
@@ -57,7 +57,7 @@ switch spin_vars[0] {
 				spin_vars[2] = ori;
 			}
 		}else {
-			parameters[0] = 2;
+			spin_vars[0] = 2;
 		}
 		
 		if(ang_off == 360){

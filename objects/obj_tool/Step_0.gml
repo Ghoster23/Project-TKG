@@ -31,22 +31,30 @@ if(not global.pause){
 				}else if(charging != -1){
 					if(key[charging div 2]){
 						#region Do charging
-						if(not chargeup){
+						if(chargeup < 1){
 							if(charge_scr != -1){
-								script_execute(charge_scr, charge[charging]);
-							}else if(meter == noone){
-								meter = scr_create_charge_up( x, y, charge[charging], 0);
+								chargeup = script_execute(charge_scr, charge[charging]);
+							}else {
+								if(meter == noone){
+									meter = scr_create_charge_up( x, y, charge[charging], 0);
+								}else {
+									chargeup = meter.prog;
+								}
 							}
 						}
 						#endregion
 					}else {
 						#region Go to execute
-						if(chargeup){
+						if      (chargeup >= 1){
 							executing = charging;
-							charging  = -1;
-						}else {
-							executing = charging - 1;
+							
+						}else if(charging mod 2 != 0 &&  rd_skills[charging - 1]){
+							var limit = charge[charging-1]/charge[charging];
+							if(chargeup >= limit){ executing = charging-1; }
 						}
+						
+						charging = -1;
+						chargeup =  0;
 						
 						if(charge_scr != -1){ script_execute(charge_scr, -1) };
 						
@@ -58,17 +66,15 @@ if(not global.pause){
 					}
 				}else {
 					//Key is pressed
-					if((key[0] || key[1]) && not resetting){
-						for(var i = 0; i < 4; i++){
-							if(key[i div 2] and skills[i] != -1 and alarm[i] == -1){
-								if(charge[i] == -1){
-									executing = i;
-									break;
-								}else {
-									charging  = i;
-									break;
-								}
-							}
+					if(not resetting){
+						if      (rd_skills[1] and key[0]){
+							charging = 1;
+						}else if(rd_skills[0] and key[0]){
+							charging = 0;
+						}else if(rd_skills[3] and key[1]){
+							charging = 3;
+						}else if(rd_skills[2] and key[1]){
+							charging = 2;
 						}
 					}
 				}
