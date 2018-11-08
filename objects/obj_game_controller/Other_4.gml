@@ -3,7 +3,6 @@ switch(room){
 		level_state = 0;
 	
 		//Level Global Variables Init
-		
 		#region Map
 		//Region
 		global.region = 0;
@@ -24,6 +23,7 @@ switch(room){
 		global.current_row = 0;
 		#endregion
 		
+		global.act_enemy_list = ds_list_create();
 	break;
 	
 	case rm_CH_boss:

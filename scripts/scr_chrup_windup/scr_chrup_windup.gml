@@ -17,5 +17,11 @@ if(windup_start == -ang_off_base){ var targ = windup_start - 30; }
 
 ang_off = scr_approach(ang_off, targ, amnt);
 
-return (ang_off-windup_start)/(targ-windup_start);
+var res = (ang_off-windup_start)/(targ-windup_start);
+
+if(res == 1){
+	ang_off += random_range(-amnt*2,amnt*2);
+}
+
+return res;
 }

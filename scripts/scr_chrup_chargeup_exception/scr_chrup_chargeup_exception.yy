@@ -1,8 +1,8 @@
 {
-    "id": "a4b55558-0a9d-4afd-9996-ca0aaf260198",
+    "id": "00f56122-a1f4-424a-bb5e-137dd7ca4b95",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scr_wep_umb_pat_init",
+    "name": "scr_chrup_chargeup_exception",
     "IsCompatibility": false,
     "IsDnD": false
 }

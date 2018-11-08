@@ -31,21 +31,21 @@ if(not global.pause){
 				}else if(charging != -1){
 					if(key[charging div 2]){
 						#region Do charging
-						if(chargeup < 1){
-							if(charge_scr != -1){
-								chargeup = script_execute(charge_scr, charge[charging]);
+						if(charge_scr != -1){
+							chargeup = script_execute(charge_scr, charge[charging]);
+						}else {
+							if(meter == noone || not instance_exists(meter)){
+								meter = scr_create_charge_up( x, y, charge[charging], id);
 							}else {
-								if(meter == noone){
-									meter = scr_create_charge_up( x, y, charge[charging], 0);
-								}else {
-									chargeup = meter.prog;
-								}
+								chargeup = meter.prog;
 							}
 						}
+						
+						if(chargeup == 1){ scr_chrup_hold_exception(); }  
 						#endregion
 					}else {
 						#region Go to execute
-						if      (chargeup >= 1){
+						if      (chargeup >= 1 || not charge[charging]){
 							executing = charging;
 							
 						}else if(charging mod 2 != 0 &&  rd_skills[charging - 1]){
@@ -53,8 +53,11 @@ if(not global.pause){
 							if(chargeup >= limit){ executing = charging-1; }
 						}
 						
+						if(not scr_chrup_chargeup_exception()){
+							chargeup =  0;
+						}
+						
 						charging = -1;
-						chargeup =  0;
 						
 						if(charge_scr != -1){ script_execute(charge_scr, -1) };
 						
@@ -66,15 +69,20 @@ if(not global.pause){
 					}
 				}else {
 					//Key is pressed
+					var order = [1,0,3,2];
+					
 					if(not resetting){
-						if      (rd_skills[1] and key[0]){
-							charging = 1;
-						}else if(rd_skills[0] and key[0]){
-							charging = 0;
-						}else if(rd_skills[3] and key[1]){
-							charging = 3;
-						}else if(rd_skills[2] and key[1]){
-							charging = 2;
+						for(var i = 0; i < 4; i++){
+							var k = order[i];
+							
+							if(rd_skills[k] and key[k div 2]){
+								if(charge[k]){
+									charging  = k;
+								}else {
+									executing = k;
+								}
+								break;
+							}
 						}
 					}
 				}
@@ -86,10 +94,8 @@ if(not global.pause){
 				///Layering
 				if(owner.spr_side != 1){
 					offs = -4;
-				
 				}else {
 					offs = 4;
-				
 				}
 			break;
 		}

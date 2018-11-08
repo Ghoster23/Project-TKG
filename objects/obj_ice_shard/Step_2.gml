@@ -1,3 +1,7 @@
+if(destroyed){
+	part_particles_create(global.ps_if,x,y,global.pt_icebits,5);
+}
+
 event_inherited();
 
 if(collided){

@@ -13,7 +13,7 @@ global.kld_enemies = 0;
 
 global.killer      = 0;
 
-global.act_enemy_list = 0;
+global.act_enemy_list = -1;
 
 //Coins
 global.coins       = 0;

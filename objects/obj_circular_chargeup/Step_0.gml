@@ -23,3 +23,5 @@ if(counter >= time){
 	counter += chargeinc;
 	prog = counter/time;
 }
+
+if(counter > 10){ visible = true; }

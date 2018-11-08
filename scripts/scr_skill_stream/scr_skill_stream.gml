@@ -9,40 +9,45 @@ if(not variable_instance_exists(id, "stream_vars")) { stream_vars = [0,noone]; }
 
 switch stream_vars[0] {
 	case 0: //Prepare		
-		stream_vars[1] = instance_create_layer(x,y,"IF",parameters[2]);
+		stream_vars[1] = instance_create_layer(x,y,"IF",parameters[2]); //Make the head
 		
-		with(stream_vars[1]){ 
+		with(stream_vars[1]){ //Tell it you own it
 			owner = other.id;
 		}
 		
-		stream_vars[0] = 1;
+		stream_vars[0] = 1; //Go to shoot
 	break;
 	
-	case 1: //Shoot		
+	case 1: //Shoot
+		///Determine spawn coords
 		var xx   = x + lengthdir_x(sprite_width,angle);
 		var yy   = y + lengthdir_y(sprite_width,angle);
-		var rad  = degtorad(angle);
+		var rad  = degtorad(angle); ///Projectile movement direction
 		var head = stream_vars[1];
 
 		var pr = scr_create_projectile( xx, yy, parameters[1],
 										owner, owner.ohko,
 										parameters[0], -rad,
 										owner.stat[mult] * (1 + owner.modf[mult]), divi);
-		ds_list_add(head.node_list,pr);
-		head.node_count++;
 		
 		with(head){
+			///Add new node
+			ds_list_add(node_list,pr);
+			node_count++;
+			
+			///Reposition head
 			x = xx;
 			y = yy;
 		}
 		
-		stream_vars[0] = 2;
+		//stream_vars[0] = 2; 
 		
 		if(not key[num div 2]){
 			stream_vars[0] = 3;
 		}
 	break;
 	
+	/*
 	case 2: //Rest
 		var xx   = x + lengthdir_x(sprite_width,angle);
 		var yy   = y + lengthdir_y(sprite_width,angle);
@@ -66,7 +71,7 @@ switch stream_vars[0] {
 		if(not key[num div 2]){
 			stream_vars[0] = 3;
 		}
-	break;
+	break;*/
 	
 	case 3: //Finish
 		alarm[num] = cds[num] * room_speed;

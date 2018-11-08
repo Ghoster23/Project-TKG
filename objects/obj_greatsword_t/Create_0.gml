@@ -13,7 +13,7 @@ physics_apply_impulse(x, y, lengthdir_x(150, point_direction(x,y,mouse_x,mouse_y
 phy_fixed_rotation = true;
 phy_rotation = -point_direction(x,y,mouse_x,mouse_y);
 num_links = 30;
-lenchain = 180;
+lenchain  = 180;
 
 pullback_time = 0.05*room_speed;
 original_pb_time = pullback_time;

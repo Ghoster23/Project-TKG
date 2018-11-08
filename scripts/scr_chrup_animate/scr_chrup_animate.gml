@@ -10,5 +10,5 @@ var targ = image_number - 1;
 
 image_index = scr_approach(image_index, targ, amnt);
 
-return amnt/targ;
+return image_index/targ;
 }
