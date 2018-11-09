@@ -43,20 +43,22 @@ with tl {
 		image_speed = 0;
 	}
 	
-	charge_scr = data[4];
+	one_handed = data[4];
 	
-	ang_off_base = data[5];
-	ang_off      = data[5];
+	charge_scr = data[5];
+	
+	ang_off_base = data[6];
+	ang_off      = data[6];
 	
 	//Mechanics
-	var mech = data[6];
+	var mech = data[7];
 		
 	mult      = mech[0];
 	divi      = mech[1];
 	kb_amount = mech[2];
 	
 	//Skills
-	var s_ids = data[7];
+	var s_ids = data[8];
 	
 	for(var i = 0; i < 4; i++){
 		var skill_id = s_ids[i];
@@ -71,7 +73,7 @@ with tl {
 		}
 	}
 	
-	cds = data[8];
+	cds = data[9];
 }
 	
 return tl;

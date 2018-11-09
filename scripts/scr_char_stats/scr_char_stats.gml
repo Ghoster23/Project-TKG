@@ -11,7 +11,7 @@ switch global.char {
 	break;
 	
 	case 1: //Harlow Barone
-		global.p_stats[stats.mhp] = 24;
+		global.p_stats[stats.mhp]   = 24;
 		global.p_stats[stats.hp]    = 24;
 		global.p_stats[stats.atk]   = 12;
 		global.p_stats[stats.def]   =  3;
@@ -22,7 +22,7 @@ switch global.char {
 	break;
 	
 	case 2: //Brenton Guillory
-		global.p_stats[stats.mhp] = 20;
+		global.p_stats[stats.mhp]   = 20;
 		global.p_stats[stats.hp]    = 20;
 		global.p_stats[stats.atk]   =  8;
 		global.p_stats[stats.def]   =  5;

@@ -54,6 +54,8 @@ with head{
 feet = instance_create_layer(x,y,layer,obj_psnt_feet);
 feet.owner = id;
 
+hand = 0;
+
 //Visuals
 draw_script = scr_psnt_draw;
 spr_side    = 3;

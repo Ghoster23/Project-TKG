@@ -21,10 +21,10 @@ global.coins       = 0;
 global.total_coins = 0;
 
 ///Player Character
-global.body    =       obj_body;
-global.weapon  = obj_greatsword;
-global.flight  =          false;
-global.p_level =              0;
+global.body    =                  obj_body;
+global.weapon  = tl_n_wep.jason_greatsword;
+global.flight  =                     false;
+global.p_level =                         0;
 
 global.dead    = false;
 
@@ -65,7 +65,7 @@ global.current_col = 0;
 global.current_row = 0;
 
 ///Tools and Weapons
-global.ds_grid_tl_n_wep = load_data_to_grid(9,9,0,0,"tools_n_weapons.csv");
+global.ds_grid_tl_n_wep = load_data_to_grid(10,9,0,0,"tools_n_weapons.csv");
 
 ///Skills
 global.ds_grid_skills = load_data_to_grid(4,9,0,0,"skills.csv");

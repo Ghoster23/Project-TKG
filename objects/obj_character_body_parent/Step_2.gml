@@ -1,24 +1,25 @@
 ///@description Get everything in place
-if(prev_hp != stat[stats.hp]){
-	if(prev_hp > stat[stats.hp]){
-		damaged = true;
+#region Got damaged
+if(not global.pause){
+	if(prev_hp != stat[stats.hp]){
+		if(prev_hp > stat[stats.hp]){
+			damaged = true;
 		
-		//Flash timer
-		alarm[2] = 0.5 * room_speed;
+			//Flash timer
+			alarm[2] = 0.5 * room_speed;
 		
 		
-		if(stat[stats.hp] <= 0){
-			dead = true;
-			if(voice!=noone){
-				audio_stop_sound(voice);
+			if(stat[stats.hp] <= 0){
+				dead = true;
+				if(voice!=noone){
+					audio_stop_sound(voice);
+				}
 			}
 		}
+
+		prev_hp = stat[stats.hp];
 	}
 
-	prev_hp = stat[stats.hp];
-}
-
-if(not global.pause){
 	//Flash red
 	if(damaged){
 		image_blend = scr_toggle(image_blend,c_white,c_red);
@@ -41,33 +42,27 @@ if(not global.pause){
 		
 	}
 }
+#endregion
 
 //Orientation
 spr_side = scr_orientate_entity(rotation);
 
-switch state{
+switch state {
 	case 0: //Free
 		image_xscale = 1;
 		
 		if(len != 0){
 			sprite_index = body_sprs[spr_side];
 			image_speed  = is * len;
-			
 		}else {
 			sprite_index = body_still_sprs[spr_side];
 			image_speed  = 0.4;
-			
-		}
-		
-		hands.visible = hs;
-
-		if(hands.visible){
-			hands.image_index = spr_side;
-			hands.image_xscale = image_xscale;
 		}
 	break;
+	
 	case 1: //Stuck
 	break;
+	
 	case 2: //Dash						
 		image_speed  = is * len * 0.5;
 		
@@ -92,15 +87,16 @@ switch state{
 			
 		inv = true;
 	break;
+	
 	case 3: //Dead
 		if(voice!=noone){
 			audio_stop_sound(voice);
 		}
 	break;
+	
 	case 4: //Idle
-		image_speed   = 0.4;
-		sprite_index  = body_idle;
-		hands.visible = true;
+		image_speed  = 0.4;
+		sprite_index = body_still_sprs[spr_side];
 	break;
 }
 

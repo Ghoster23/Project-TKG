@@ -4,31 +4,27 @@ if(not global.pause){
 	if(instance_exists(owner)){
 		switch(state){
 			case 0: //Drawn
-				//Base Direction
+				#region Base Direction
 				if(not player_owned){
 					angle = owner.wep_dir;
 				}else {
 					angle = point_direction(x,y,obj_cursor.ir_mx,obj_cursor.ir_my);
 				}
-			
-				//Particles
-				///Layering
-				if(owner.spr_side == 1){
-					offs = -4;
-				}else {
-					offs = 4;
-				}
+				#endregion
 			
 				//Mechanics
 				
 				//Execute skill
 				if(executing != -1){
+					#region Execute Skill
 					if(skills[executing] != -1){
 						script_execute(skills[executing],executing);
 					}else {
 						executing = -1;
 					}
+					#endregion
 				}else if(charging != -1){
+					#region Charge Skill
 					if(key[charging div 2]){
 						#region Do charging
 						if(charge_scr != -1){
@@ -67,8 +63,9 @@ if(not global.pause){
 						}
 						#endregion
 					}
+					#endregion
 				}else {
-					//Key is pressed
+					#region Select Skill
 					var order = [1,0,3,2];
 					
 					if(not resetting){
@@ -85,21 +82,13 @@ if(not global.pause){
 							}
 						}
 					}
+					#endregion
 				}
 			break;
-			case 1: //Stowed
-				angle = 90;
 			
-				//Particles
-				///Layering
-				if(owner.spr_side != 1){
-					offs = -4;
-				}else {
-					offs = 4;
-				}
+			case 1: //Stowed
 			break;
 		}
-	
 	}else {
 		instance_destroy();
 	}

@@ -16,8 +16,12 @@ if(executing == -1 and charging == -1){
 		}
 	}
 		
-	if(animation != 1 && image_index != 0){
-		image_index = scr_approach(image_index, 0, chr_spd * 2);
+	if(animation != 2 && image_speed != 0){
+		image_speed = 0;
+	}
+	
+	if(animation == 0 && image_index != 0){
+		image_index = scr_approach(image_index, 0, img_spd * 2);
 			
 		resetting = true;
 	}

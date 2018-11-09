@@ -20,11 +20,10 @@ stowed = -1;
 image_speed = 0;
 image_index = 0;
 img_spd     = 0;
-spr_cnt     = 0;
-chr_spd     = 0;
+p_image_angle = image_angle;
 
-offx = 0;
-offy = 0;
+one_handed = 0;
+hand = 1;
 
 //Weapon
 mult = stats.atk;
@@ -58,6 +57,7 @@ key[1] = false;
 
 icons = [-1,-1,-1,-1];
 
+rd_skills = [0,0,0,0];
 resetting = false;
 
 player_owned = false;
