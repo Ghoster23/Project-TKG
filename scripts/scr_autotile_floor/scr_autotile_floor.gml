@@ -1,4 +1,4 @@
-grid=obj_gen_controller.floor_grid;
+grid=generator.floor_grid;
 type= argument0;
 
 u = 0;  // up

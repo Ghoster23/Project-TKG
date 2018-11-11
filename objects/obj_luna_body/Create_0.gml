@@ -18,9 +18,9 @@ roll_sprs[2] = spr_luna_dash_left;
 
 head_spr  = spr_luna_head;
 
-hands_spr = spr_luna_hands;
-
 feet_spr  = spr_jason_feet;
+
+hand = 1;
 
 alarm_count = 4;
 
@@ -29,7 +29,6 @@ event_inherited();
 
 //Visuals
 is = 0.2;
-hs = false;
 
 //Abillity
 global.p_LVB_water = 100000;

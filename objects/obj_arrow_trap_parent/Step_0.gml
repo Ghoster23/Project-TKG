@@ -1,7 +1,7 @@
 if(not global.pause){
 	scr_pause_end(2);
 	
-	if(active){
+	if(on){
 		if(alarm[1] == -1){
 			var enemy = collision_line(mid_x,mid_y,max_x,max_y,obj_grounded_enemy_parent,true,true);
 			
@@ -25,11 +25,9 @@ if(not global.pause){
 	
 		if(triggered and ammo > 0){
 			triggered = false;
-			
-			var arrow = scr_create_damage_dealer(mid_x + lengthdir_x(16,dir),mid_y + lengthdir_y(16,dir),
-									 obj_arrow,id,false,1,stats.def,2,5);
-			arrow.dir = -degtorad(dir);
-			arrow.spd = 7;
+							 
+			scr_create_projectile(mid_x + lengthdir_x(16,dir),mid_y + lengthdir_y(16,dir),
+									obj_arrow,id,false,7,-degtorad(dir),1,stats.def,2,5);
 			part_particles_create(global.ps_if,mid_x + lengthdir_x(16,dir),mid_y + lengthdir_y(16,dir),global.pt_smoke,5);
 			ammo--;
 			

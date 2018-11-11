@@ -56,28 +56,18 @@ switch state {
 	case 0:
 		#region Drawn
 		if(one_handed){
+			#region One-handed
 			switch(owner.spr_side){
 				case 0:
 				case 2:
-					var xx =  0;
-			
-					var inv = (owner.spr_side == 0 ? 1 : -1);
-			
-					if(hand){
-						offs =  4 * inv;
-					}else {
-						offs = -4 * inv;
-					}
+					var xx = 4;
+					offs = (hand == 1 ? 4 : -4) * (owner.spr_side == 0 ? 1 : -1);
 				break;
 		
 				case 1:
-					var xx = -7;
-					offs = -4;
-				break;
-		
 				case 3:
-					var xx =  7;
-					offs = 4;
+					var xx = (owner.spr_side == 1 ? -7 : 7);
+					offs = (owner.spr_side == 1 ? -4 : 4);
 				break;
 			}
 		
@@ -86,7 +76,9 @@ switch state {
 			if(hand){
 				xx = -xx;
 			}
+			#endregion
 		}else {
+			#region Two-handed
 			var xx = 0;
 			var yy = 0;
 			
@@ -101,6 +93,7 @@ switch state {
 					offs = -4;
 				break;
 			}
+			#endregion
 		}
 		#endregion
 	break;
@@ -109,17 +102,26 @@ switch state {
 		#region Stowed
 		switch(owner.spr_side){
 			case 0:
+				var xx = -8;
+				offs = -6;
+			break;
+			
 			case 3:
+				var xx = 0;
+				offs = -6;
+			break;
+			
 			case 2:
+				var xx = 8;
 				offs = -6;
 			break;
 		
 			case 1:
+				var xx = 0;
 				offs =  6;
 			break;
 		}
 		
-		var xx = 0;
 		var yy = 0;		
 		#endregion
 	break;

@@ -1,4 +1,4 @@
-if(not global.pause and active){
+if(not global.pause and on){
 	switch state {
 		//Close
 		case 0:

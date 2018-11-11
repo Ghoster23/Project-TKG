@@ -12,21 +12,28 @@ switch state {
 	break;
 	
 	case 3: //Activating stuff	
-		//Enemies
+		#region Enemies and state change
 		var c = scr_activate_enemies();
 		
-		surface_set_target(global.fluid_surface);
-		draw_clear_alpha(c_black,0);
-		surface_reset_target();
+		scr_mech_toggle_region();
 		
 		if(c != noone){
 			state = 4;
-			
 		}else {
 			cleared = true;
-			
 			state   = 2;
 		}
+		#endregion
+		
+		scr_mech_toggle_region();
+		
+		/*
+		#region Clear fluids
+		surface_set_target(global.fluid_surface);
+		draw_clear_alpha(c_black,0);
+		surface_reset_target();
+		#endregion
+		*/
 	break;
 	
 	case 4: //Closed
@@ -34,6 +41,8 @@ switch state {
 	
 	#region Unloading
 	case 5:
+		scr_mech_toggle_region();
+	
 		scr_room_deactivate();
 		
 		state = 0;

@@ -81,7 +81,7 @@ if(not global.pause){
 		
 			case 4: //Shoot
 				if(weapon.alarm[0] != -1){
-					state = 3;
+					state  = 3;
 					key[0] = false;
 				}
 			break;

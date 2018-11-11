@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "obj_flying_enemy_parent",
     "eventList": [
-        
+        {
+            "id": "51d10c4d-6760-43d8-bc8d-7907d13b5b73",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "e78a02e2-fbe9-47fb-b40f-eeeb04f32351",
+            "enumb": 0,
+            "eventtype": 4,
+            "m_owner": "3b953ffe-fde5-4671-9c9f-cce971135dbe"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

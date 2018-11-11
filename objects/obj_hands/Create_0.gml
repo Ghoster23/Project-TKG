@@ -15,6 +15,7 @@ offs   =    17;
 state = 0;
 
 hand = 1;
+color = global.char;
 
 one_handed = false;
 

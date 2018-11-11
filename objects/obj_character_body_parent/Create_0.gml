@@ -2,10 +2,8 @@
 event_inherited();
 
 #region Hands
-hand = 1;
 hands = instance_create_layer(x, y, layer, obj_hands);
 hands.body = id;
-hands.sprite_index = hands_spr;
 hands.hand = hand;
 #endregion
 

@@ -1,0 +1,1 @@
+draw_line(x,y,shadow.x,shadow.y);

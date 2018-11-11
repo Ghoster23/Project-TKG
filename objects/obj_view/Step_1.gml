@@ -33,10 +33,15 @@ switch room {
 		instance_destroy();
 	break;
 	
+	case rm_lvl_editor_test :
+		cam_x_t = room_width div 2;
+		cam_y_t = room_height div 2;
+	break;
+	
 	default:
 		if(instance_exists(target)){
-			cam_x_t = target.x;
-			cam_y_t = target.y;
+			cam_x_t = room_width div 2;
+			cam_y_t = room_height div 2;
 		}
 	break;
 }

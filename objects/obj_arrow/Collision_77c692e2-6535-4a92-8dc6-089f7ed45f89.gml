@@ -1,1 +1,3 @@
-collided = true;
+if(other.id != owner){
+	collided = true;
+}

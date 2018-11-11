@@ -31,7 +31,7 @@ if(wep_exists){
 		break;
 	
 		case 1: //Stowed
-			offs += 4 * ((body.spr_side == 1) ? 1 : -1);
+			offs += body.offs + 4 * ((body.spr_side == 1) ? -1 : 1);
 		break;
 	}
 }

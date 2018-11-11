@@ -15,11 +15,11 @@ roll_sprs[0] = spr_jason_roll_right;
 roll_sprs[3] = spr_jason_roll_down;
 roll_sprs[2] = spr_jason_roll_left;
 
-hands_spr = spr_jason_hands;
-
 feet_spr  = spr_jason_feet;
 
 alarm_count = 4;
+
+hand = 1;
 
 event_inherited();
 

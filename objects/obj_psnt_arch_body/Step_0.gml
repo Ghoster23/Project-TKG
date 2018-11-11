@@ -32,7 +32,7 @@ if(go and not global.pause){
 		
 		break;
         case 4: //Shoot
-			if(!weapon.chargeup){
+			if(weapon.chargeup < 1){
 				dir    = point_direction(x,y,global.body.x,global.body.y);
 				key[0] = true;
 				
@@ -44,6 +44,7 @@ if(go and not global.pause){
 					}
 				}
 			}else {
+				state  = 3;
 				key[0] = false;
 			}
         break;

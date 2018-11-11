@@ -16,6 +16,8 @@ var tl = instance_create_layer(x,y,layer,obj_tool);
 with tl {
 	name  = data[0];
 	owner = other;
+	if(variable_instance_exists(other.id,"hand")){ hand = other.hand; }
+	else {hand = 1;}
 	
 	if(durab == -1){
 		player_owned = true;

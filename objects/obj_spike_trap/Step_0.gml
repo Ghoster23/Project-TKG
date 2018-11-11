@@ -1,7 +1,7 @@
 if not global.pause {
 	scr_pause_end(alarm_count);
 	
-	if(active){
+	if(on){
 		switch state {
 			//OFF
 			case 0:
@@ -16,13 +16,13 @@ if not global.pause {
 				}
 		
 			break;
+			
 			//Charging
 			case 1:
-
 			break;
+			
 			//ON
 			case 2:
-
 			break;
 		}
 	}

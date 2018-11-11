@@ -9,3 +9,5 @@ damage    = 0; //Base damage
 ohko      = false;
 
 divi = stats.def;
+
+grounded = false;

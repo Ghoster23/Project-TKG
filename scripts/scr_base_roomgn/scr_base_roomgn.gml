@@ -34,6 +34,7 @@ var gytile = gy/32;
 
 var flr = instance_create_layer(gx+(global.roomwd/2),gy+(global.roomhg/2)+31,"Floor",obj_floor);
 
+flr.generator = generator;
 flr.gxtile=gxtile;
 flr.gytile=gytile;
 #endregion

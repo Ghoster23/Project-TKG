@@ -18,8 +18,7 @@ switch state {
 	break;
 	
 	case 2: ///Conclude generation and Register
-		with dungeon {
-			///Fill MP Grid			
+		with dungeon {		
 			rooms    = other.gen_rooms;
 			sp_rooms = other.sp_places;
 		}

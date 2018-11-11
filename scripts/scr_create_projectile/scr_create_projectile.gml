@@ -28,6 +28,7 @@ with inst {
 	
 	with(shadow){
 		phy_rotation = radtodeg(other.shadow_rot);
+		visible = true;
 	}
 	
 	physics_apply_impulse(phy_position_x,phy_position_y,

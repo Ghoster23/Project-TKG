@@ -2,19 +2,22 @@ switch state {
 	case 0:
 	break;
 	case 1: //Room controller
+		if(room == rm_level && obj_game_controller.level_state == 1){
+			debug_text += "Active enemies:\n";
+			var ls_sz = ds_list_size(global.act_enemy_list);
 		
-		debug_text += "Active enemies:\n";
-		var ls_sz = ds_list_size(global.act_enemy_list);
-		
-		for(var i = 0; i < ls_sz; i++){
-			var en = global.act_enemy_list[| i];
+			for(var i = 0; i < ls_sz; i++){
+				var en = global.act_enemy_list[| i];
 			
-			if(instance_exists(en)){
-				debug_text += object_get_name(en.object_index) + "\n";
+				if(instance_exists(en)){
+					debug_text += object_get_name(en.object_index) + "\n";
+				}
 			}
-		}
 		
-		//FIXME
+			debug_text += "Region: " + string(global.region) +
+						  " Col: " + string(global.current_col) +
+						  " Row: " + string(global.current_row) + "\n";
+		}
 	break;
 	case 2: //AI controller
 	break;

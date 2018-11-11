@@ -7,7 +7,7 @@ if (self.object_index == obj_psnt_body) or (self.object_index == obj_psnt_arch_b
 	v_normal = body_color/256;
 
 	palette_swap_sampler = shader_get_sampler_index(shdr_palette_swap,"Palette");
-	texture_palette = sprite_get_texture(palette_psnt_body,0);
+	texture_palette = sprite_get_texture(spr_color_swap_palette,0);
 	
 	shader_set(shdr_palette_swap);
 
@@ -36,7 +36,7 @@ if (self.object_index == obj_psnt_body) or (self.object_index == obj_psnt_arch_b
 
 	v_offset= shader_get_uniform(shdr_palette_swap, "Offset");
 	palette_swap_sampler = shader_get_sampler_index(shdr_palette_swap,"Palette");
-	texture_palette = sprite_get_texture(palette_psnt_body,0);
+	texture_palette = sprite_get_texture(spr_color_swap_palette,0);
 
 	//draw face and hair
 	switch facing {
@@ -171,7 +171,7 @@ if (self.object_index == obj_psnt_body) or (self.object_index == obj_psnt_arch_b
 	//hand that holds weapon
 	v_offset= shader_get_uniform(shdr_palette_swap, "Offset");
 	palette_swap_sampler = shader_get_sampler_index(shdr_palette_swap,"Palette");
-	texture_palette = sprite_get_texture(palette_psnt_body,0);
+	texture_palette = sprite_get_texture(spr_color_swap_palette,0);
 		
 	v_normal=skin_color/256;
 	shader_set(shdr_palette_swap);
@@ -193,7 +193,7 @@ if (self.object_index == obj_psnt_body) or (self.object_index == obj_psnt_arch_b
 	//hands that holds bow
 	v_offset= shader_get_uniform(shdr_palette_swap, "Offset");
 	palette_swap_sampler = shader_get_sampler_index(shdr_palette_swap,"Palette");
-	texture_palette = sprite_get_texture(palette_psnt_body,0);
+	texture_palette = sprite_get_texture(spr_color_swap_palette,0);
 		
 	v_normal=skin_color/256;
 	shader_set(shdr_palette_swap);
@@ -208,7 +208,7 @@ else if (self.object_index == obj_psnt_deadbody){
 	v_normal=body_color/256;
 
 	palette_swap_sampler = shader_get_sampler_index(shdr_palette_swap,"Palette");
-	texture_palette = sprite_get_texture(palette_psnt_body,0);
+	texture_palette = sprite_get_texture(spr_color_swap_palette,0);
 	
 	shader_set(shdr_palette_swap);
 
@@ -228,7 +228,7 @@ else if(self.object_index == obj_psnt_deadhead){
 
 	v_offset= shader_get_uniform(shdr_palette_swap, "Offset");
 	palette_swap_sampler = shader_get_sampler_index(shdr_palette_swap,"Palette");
-	texture_palette = sprite_get_texture(palette_psnt_body,0);
+	texture_palette = sprite_get_texture(spr_color_swap_palette,0);
 
 	v_normal=skin_color/256;
 	shader_set(shdr_palette_swap);

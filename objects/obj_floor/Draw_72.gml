@@ -1,4 +1,4 @@
-if (first_time==true && room == rm_level){
+if (first_time==true && (room == rm_level or room == rm_lvl_editor_test)){
 
 	surface_set_target(floor_surface);
 	draw_rectangle_color(0,0,surface_get_width(floor_surface),surface_get_height(floor_surface),dirt_color,dirt_color,dirt_color,dirt_color,false);
@@ -7,7 +7,7 @@ if (first_time==true && room == rm_level){
 	{
 	    for (var j=0; j<21; j++){
 			draw_set_alpha(1);
-			 switch ds_grid_get(obj_gen_controller.floor_grid,gxtile+j,gytile+i){
+			 switch ds_grid_get(generator.floor_grid,gxtile+j,gytile+i){
 				case "green": break;
 			
 				case "blue": 

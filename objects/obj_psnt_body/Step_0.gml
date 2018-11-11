@@ -57,7 +57,7 @@ if go and not global.pause{
 			dead_head.body=dead_body;
 			
 			if(irandom(4)==1){
-				dropped_weapon=instance_create_layer(x+weapon.offx,y,layer,obj_dropped_melee);
+				dropped_weapon=instance_create_layer(x,y,layer,obj_dropped_melee);
 				dropped_weapon.image_index=weapon.image_index;
 				dropped_weapon.phy_rotation=weapon.image_angle;
 				dropped_weapon.image_xscale=weapon.image_xscale;

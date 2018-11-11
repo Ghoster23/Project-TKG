@@ -10,26 +10,32 @@ if point_in_rectangle(mouse_x,mouse_y,x,y,x+55,y+25){
 		//create temp text file
 		temp_room_file=file_text_open_write(working_directory + "roomtypetemp.csv");
 		
+		file_text_write_real(temp_room_file,1);
+		file_text_writeln(temp_room_file);
+		file_text_write_real(temp_room_file,0);
+		file_text_writeln(temp_room_file);
+		
 		scr_InitSubMenu();
 		
 		var id_counter=0;
-		for(i=0;i<9;i++){
+		for(var i=0;i<9;i++){
 
 			var amalgamation="";
 	
-			for(j=0;j<19;j++){
+			for(var j=0;j<19;j++){
 				var category = global.square_ID[id_counter].block_ID[0];
 				var subcategory = global.square_ID[id_counter].block_ID[1];
 		
 				if (category == 0 and subcategory ==0){
-					amalgamation+="#,";
+					amalgamation += "0";
 				}
 				else{
 					var obj_name = menuText[category,subcategory];
 					var obj_layer = scr_objlayer(obj_name);
-					amalgamation+=("\"["+obj_name+","+obj_layer+"]\",");
+					amalgamation+=("\"["+obj_name+","+obj_layer+"]\"");
 			
 				}
+				if(j < 18){ amalgamation += ";"; }
 				id_counter+=1;
 			}
 			amalgamation = string_delete(amalgamation,string_length(amalgamation),1)

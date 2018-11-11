@@ -1,12 +1,20 @@
 ///@param gx
 ///@param gy
 ///@param type
+///@param alt_optional
 {
-var gx = argument0;
-var gy = argument1;
+if(argument_count < 3 or argument_count > 4){ show_error("scr_room_gen - Arguments should be gx gy type alt(opt).", true); };
 
-var type = argument2;
+var gx = argument[0];
+var gy = argument[1];
+
+var type = argument[2];
 var _typ = type;
+
+var alt = -1;
+if(argument_count == 4){
+	alt = argument[3];
+}
 
 var roomwd = global.roomwd;
 var roomhg = global.roomhg;
@@ -28,7 +36,7 @@ switch type {
 	break;
 }
 
-var gr = scr_load_room_to_grid(_typ,-1);
+var gr = scr_load_room_to_grid(_typ,alt);
 
 //Construct Room
 scr_construct_room( gx, gy, gr);

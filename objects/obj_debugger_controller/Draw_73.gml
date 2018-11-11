@@ -1,7 +1,7 @@
 switch state {
 	case 0:
 	break;
-	case 1: //Room controller
+	case 1: //Map
 	break;
 	case 2: //AI controller
 		if(variable_global_exists("dungeon") && instance_exists(global.dungeon)){

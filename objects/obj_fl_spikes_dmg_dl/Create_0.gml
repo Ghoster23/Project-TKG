@@ -6,3 +6,5 @@ kb_amount = 0;
 ohko = false;
 divi = stats.def;
 alarm[0] = 2;
+
+grounded = true;
