@@ -18,6 +18,8 @@ if(not global.pause){
 	if(dead){
 		state = 3;
 	}
+	
+	var attacking = instance_exists(weapon) and weapon.executing != -1;
 
 	/// Player States
 	switch state {
@@ -31,7 +33,10 @@ if(not global.pause){
 				state = 1;
 				
 			}else if(input){
-				if(global.key_active[key_id.dash] && alarm[1] == -1 && (xaxis != 0 || yaxis != 0)){
+				if(global.key_active[key_id.dash] && 
+				   alarm[1] == -1                 &&
+				   (xaxis != 0 || yaxis != 0)     &&
+				   not attacking){
 					state = 2;
 				}
 				

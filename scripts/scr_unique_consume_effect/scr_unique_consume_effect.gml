@@ -8,11 +8,19 @@ switch(argument0) {
 		
 	break;
 	case unique_consume.map:
-		for(var i = 0; i < 64; i++){
-			/*if(global.ds_roomgrid[# 1, i] != "NULL"){
-				global.ds_roomgrid[# 2, i] = true;
-			}*/
-			//FIXME
+		with obj_map_controller {
+			for(var i = 0; i < dg_space; i++){
+				var info = dungeon_layout[i];
+				
+				if(info != -1){
+					switch info[2] {
+						case 0: //Not visited				
+						case 1: //Not visited but connects to a visited room
+							scr_map_set_room(-1,-1,2,i);
+						break;
+					}
+				}
+			}
 		}
 	break;
 	default:

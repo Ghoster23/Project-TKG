@@ -77,6 +77,7 @@ switch state {
 			state = 2;
 			
 			cleared = true;
+			scr_map_set_room(-1,-1,3,row,col);
 			
 			#region Open Doors
 			for(var i = 0; i < 4; i++){

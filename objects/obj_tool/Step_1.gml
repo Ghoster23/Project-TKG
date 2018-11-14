@@ -37,7 +37,11 @@ if(charging == -1 && executing == -1){
 }
 
 if(not global.pause){
+	key[0] = false;
+	key[1] = false;
+	
 	if(player_owned){
+		if(owner.state == 2){ exit; }
 		key[0] = (global.key_active[key_id.skill_1] && (rd_skills[0] || rd_skills[1]));
 		key[1] = (global.key_active[key_id.skill_2] && (rd_skills[2] || rd_skills[3]));
 	}else {

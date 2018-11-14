@@ -21,6 +21,7 @@ switch state {
 			state = 4;
 		}else {
 			cleared = true;
+			scr_map_set_room(-1,-1,3,row,col);
 			state   = 2;
 		}
 		#endregion

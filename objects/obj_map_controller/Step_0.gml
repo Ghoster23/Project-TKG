@@ -61,7 +61,6 @@ switch state {
 		if(global.room_change){
 			//Update Map
 			var info = dungeon_layout[c_rid];
-			show_debug_message("N_Room: " + string(c_rid))
 			
 			if(info[2] != 2){
 				scr_map_update(c_rid);

@@ -48,6 +48,7 @@ ds_list_destroy(dn_list);
 #endregion
 
 #region Dungeon data
+dungeon = noone;
 dungeon_layout = -1;
 
 dg_col = 0;

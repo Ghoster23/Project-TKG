@@ -28,8 +28,11 @@ switch state {
 			p_region = global.region;
 			state    = 0;
 			
-			#region Dungeon data
-			dungeon_layout = -1;
+			#region Dungeon data reset
+			if(dungeon_layout != -1){
+				dungeon.rooms  = dungeon_layout;
+				dungeon_layout = -1;
+			}
 
 			dg_col = 0;
 			dg_row = 0;
