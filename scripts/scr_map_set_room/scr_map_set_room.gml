@@ -1,6 +1,11 @@
 ///@description Returns the array of room info based on room id or coords
 ///@param check_script
 {
+if(!instance_exists(obj_map_controller)){ 
+	scr_show_error(1,true,["scr_map_set_room","obj_map_controller"]);
+	return;
+}
+
 var rid = -1;
 
 var r_spr = argument[0];
@@ -9,7 +14,7 @@ var r_stt = argument[2];
 
 switch argument_count {
 	default:
-		show_error("scr_map_set_room requires 4 or 5 arguments.",false);
+		scr_show_error(0,false,["scr_map_set_room",4,5]);
 		return;
 	break;
 	

@@ -1,5 +1,15 @@
 ///@description Updates the minimap info
 {
+if(!instance_exists(obj_map_controller)){
+	scr_show_error(1,true,["scr_minimap_update","obj_map_controller"]);
+	return;
+}
+
+if(!instance_exists(obj_minimap)){
+	scr_show_error(1,true,["scr_minimap_update","obj_minimap"]);
+	return;
+}
+
 with obj_map_controller {
 	var srm = (global.current_row - 1) * dg_col + global.current_col - 1;
 	

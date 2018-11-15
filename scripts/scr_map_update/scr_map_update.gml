@@ -1,5 +1,10 @@
 ///Updates Map when new rooms are discovered
 {
+if(!instance_exists(obj_map_controller)){ 
+	scr_show_error(1,true,["scr_map_update","obj_map_controller"]);
+	return;
+}
+
 switch argument_count {
 	case 1:
 		var rid = argument0;
@@ -8,6 +13,7 @@ switch argument_count {
 		var rid = argument0 * obj_map_controller.dg_col + argument[1];
 	break;
 	default:
+		scr_show_error(0,true,["scr_map_update",4,5]);
 		return;
 	break;
 }
