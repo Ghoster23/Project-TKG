@@ -1,4 +1,4 @@
-///@description Initializes the variables for a fluid interactor
+///@description Initializes the variables for a fluid painter
 ///@param count
 ///@param type
 ///@param on

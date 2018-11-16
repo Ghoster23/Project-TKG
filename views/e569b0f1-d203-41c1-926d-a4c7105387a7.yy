@@ -8,7 +8,7 @@
         "62a17cf4-c5c4-4108-a90a-5e1c99932e4f"
     ],
     "filterType": "GMScript",
-    "folderName": "Interactor",
+    "folderName": "Painter",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

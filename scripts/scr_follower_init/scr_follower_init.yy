@@ -1,8 +1,8 @@
 {
-    "id": "62a17cf4-c5c4-4108-a90a-5e1c99932e4f",
+    "id": "df7df912-07bc-44e6-bff6-ff647f69f9e2",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scr_fluid_interactor_step",
+    "name": "scr_follower_init",
     "IsCompatibility": false,
     "IsDnD": false
 }

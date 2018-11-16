@@ -7,9 +7,9 @@ hands.body = id;
 hands.hand = hand;
 #endregion
 
-#region Feet
-feet = instance_create_layer(x, y, layer, obj_feet);
-feet.sprite_index = feet_spr;
+#region Floor interactor
+flr_intr = instance_create_layer(x, y, layer, obj_entity_floor_interactor);
+flr_intr.owner = id;
 #endregion
 
 #region Weapon
@@ -82,6 +82,8 @@ spr_body = body_sprs[3];
 shout = false;
 
 voice = noone;
+
+parts = [hands,flr_intr,weapon];
 
 //Body particle emitter
 global.body_em = part_emitter_create(global.ps_if);

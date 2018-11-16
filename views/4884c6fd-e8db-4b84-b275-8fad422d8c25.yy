@@ -6,7 +6,8 @@
     "children": [
         "893cc434-c31a-4a9b-af2c-bcc17d6f9430",
         "70c74468-d0c4-4b5b-9dfc-950b6a8e1b80",
-        "feab6082-0a85-4bd7-96f8-548460c5dbea"
+        "feab6082-0a85-4bd7-96f8-548460c5dbea",
+        "05b1a947-57ef-4457-a011-ecd6f84849b2"
     ],
     "filterType": "GMScript",
     "folderName": "Object Interfaces",

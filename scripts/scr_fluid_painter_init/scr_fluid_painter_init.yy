@@ -1,8 +1,8 @@
 {
-    "id": "7d0ddea0-e289-4b26-884b-7eac20c9fbd9",
+    "id": "6696e942-bc58-4915-a2d2-e5335e28feff",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scr_fluid_tile_v21",
+    "name": "scr_fluid_painter_init",
     "IsCompatibility": false,
     "IsDnD": false
 }

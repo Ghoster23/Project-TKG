@@ -51,8 +51,8 @@ with head{
 }
 
 ///Feet
-feet = instance_create_layer(x,y,layer,obj_psnt_feet);
-feet.owner = id;
+flr_intr = instance_create_layer(x,y,layer,obj_entity_floor_interactor);
+flr_intr.owner = id;
 
 hand = 0;
 
