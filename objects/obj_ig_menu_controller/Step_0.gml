@@ -9,6 +9,7 @@ if(instance_exists(obj_cursor)){
 
 if check == true{
 	switch state{
+		
 		case "menu":
 			///Unpause Game and close Menu
 			if global.key_active[key_id.menu] {
@@ -108,6 +109,11 @@ if check == true{
 			}
 		break;
 		
+		
+		case"debug":
+			
+		break;
+		
 	}
 	
 	if(room == rm_dead){
@@ -116,7 +122,7 @@ if check == true{
 
 }
 
-if state != "closed" || global.dead {
+if state != "closed" || global.dead  {
 	global.pause = true;
 }else {
 	global.pause = false;
