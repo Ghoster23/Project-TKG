@@ -5,7 +5,7 @@ if(boot){
 		//Get poisoned
 		if(!owner.inv && !owner.innoc){
 			var tp = scr_fluid_detect_at_position(x,y);
-		
+			show_debug_message(tp);
 			if(tp != -1){
 				switch(tp){
 					case fluid.poison:

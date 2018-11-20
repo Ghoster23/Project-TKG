@@ -5,7 +5,7 @@ if not global.pause {
 		switch state {
 			//OFF
 			case 0:
-				if((place_meeting(x,y,obj_feet) or 
+				if((place_meeting(x,y,obj_entity_floor_interactor) or 
 				    place_meeting(x,y,obj_grounded_enemy_parent) and not triggered)){
 					triggered = true;
 				}

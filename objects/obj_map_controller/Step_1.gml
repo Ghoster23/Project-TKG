@@ -30,7 +30,9 @@ switch state {
 			
 			#region Dungeon data reset
 			if(dungeon_layout != -1){
-				dungeon.rooms  = dungeon_layout;
+				if(dungeon != noone){
+					dungeon.rooms = dungeon_layout;
+				}
 				dungeon_layout = -1;
 			}
 
