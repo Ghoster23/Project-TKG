@@ -1,3 +1,6 @@
+///@param type
+///@param item
+///@param amount 
 {
 var type   = argument0;
 var item   = argument1;

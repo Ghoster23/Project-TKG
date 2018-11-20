@@ -1,0 +1,1 @@
+draw_sprite(sprite79,0,x,y);

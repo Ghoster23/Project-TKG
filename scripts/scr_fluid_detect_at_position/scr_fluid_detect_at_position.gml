@@ -7,17 +7,15 @@ var yy = argument1;
 
 var tl = instance_place( xx, yy, obj_fluid_tile);
 
-show_debug_message("Tile: " + string(tl));
-
 if(tl != noone and tl.act){
-	xx = xx - xx mod 2;
-	yy = yy - yy mod 2;
-
 	with tl {
-		var cx = xx - flx;
-		var cy = yy - fly;
-	
-		return tiles_t[cy * h_cells + cx];
+		var cx = xx div cell_size - gx;
+		var cy = yy div cell_size - gy;
+		var ind = cy * h_cells + cx;
+		
+		if(0 <= ind and ind < 256){
+			return tiles_t[ind];
+		}
 	}
 }
 

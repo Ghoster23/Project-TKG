@@ -1,8 +1,8 @@
 {
-    "id": "ce414019-8a58-4f72-9a32-6ef6f01df35b",
+    "id": "10a957e9-d257-4575-b4ce-b968b30a7f99",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scr_consumable_slot",
+    "name": "scr_item_type_count_items",
     "IsCompatibility": false,
     "IsDnD": false
 }

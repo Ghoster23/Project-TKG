@@ -8,10 +8,10 @@ if(instance_exists(follr_targ)){ //Target exists
 		var yy = follr_targ.y;
 	}
 	
-	x = scr_approach(x,xx,(xx-x)*follr_spd);
-	y = scr_approach(y,yy,(yy-y)*follr_spd);
+	xx += follr_x_offs;
+	yy += follr_y_offs;
 	
-	x += follr_x_offs;
-	y += follr_y_offs;
+	x = scr_approach(x,xx,abs(xx-x)*follr_spd);
+	y = scr_approach(y,yy,abs(yy-y)*follr_spd);
 }
 }

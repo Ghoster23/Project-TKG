@@ -9,7 +9,8 @@ enum item_type{
 	equipable,
 	drop,
 	heart,
-	currency          
+	currency,
+	count
 }
 
 scr_potion_init();

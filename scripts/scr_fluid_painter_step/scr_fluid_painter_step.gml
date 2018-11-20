@@ -6,8 +6,8 @@ if(not global.pause and on){
 										  xx + sprite_width, yy + sprite_height,
 										  obj_fluid_tile, true, false, tiles, false);
 	
-	xx = (xx - xx mod cell_size) div cell_size;
-	yy = (yy - yy mod cell_size) div cell_size;
+	xx = xx div cell_size;
+	yy = yy div cell_size;
 	
 	repeat tl_cnt {
 		var tl = tiles[| 0];
@@ -15,7 +15,7 @@ if(not global.pause and on){
 		ds_list_delete(tiles, 0);
 		
 		#region xx
-		var dx = xx - tl.flx;
+		var dx = xx - tl.gx;
 		
 		if(dx >= 0){
 			var bxs =   0;
@@ -29,7 +29,7 @@ if(not global.pause and on){
 		#endregion
 		
 		#region yy
-		var dy = yy - tl.fly;
+		var dy = yy - tl.gy;
 		
 		if(dy >= 0){
 			var bys =   0;

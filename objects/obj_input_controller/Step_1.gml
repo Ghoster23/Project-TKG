@@ -1,28 +1,35 @@
 input = false;
 text = "";
 
-for(var i = 0; i < key_id.count; i++){
-	var bind = global.key_binds[i];
-	
-	if(bind == mb_left || bind == mb_right || bind == mb_middle){
-		if(i < key_id.interact){
-			global.key_active[i] = mouse_check_button(bind);
-		}
-		else {
-			global.key_active[i] = mouse_check_button_pressed(bind);
-		}
-	}
-	else {
-		if(i < key_id.interact){
-			global.key_active[i] = keyboard_check(bind);
-		}
-		else {
-			global.key_active[i] = keyboard_check_pressed(bind);
-		}
+if(instance_exists(obj_console) and obj_console.show_log){
+	for(var i = 0; i < key_id.count; i++){
+		global.key_active[i] = false;
 	}
 	
-	if(global.key_active[i]){
-		text += scr_keyname(bind) + "\n";
+}else {
+	for(var i = 0; i < key_id.count; i++){
+		var bind = global.key_binds[i];
+	
+		if(bind == mb_left || bind == mb_right || bind == mb_middle){
+			if(i < key_id.interact){
+				global.key_active[i] = mouse_check_button(bind);
+			}
+			else {
+				global.key_active[i] = mouse_check_button_pressed(bind);
+			}
+		}
+		else {
+			if(i < key_id.interact){
+				global.key_active[i] = keyboard_check(bind);
+			}
+			else {
+				global.key_active[i] = keyboard_check_pressed(bind);
+			}
+		}
+	
+		if(global.key_active[i]){
+			text += scr_keyname(bind) + "\n";
+		}
 	}
 }
 

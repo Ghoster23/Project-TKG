@@ -12,7 +12,13 @@ if(chance <= 10){
 	spawns[0] = scr_spawn_item(   item_type.heart,  -1,  -4, x, y, true, false);
               
 }else if chance <= 50{
-	spawns[0] = scr_spawn_item(item_type.currency,  0, -16, x, y, true, -2);
+	var count = irandom(15) + 1;
+	
+	spawns[0] = scr_spawn_item(item_type.currency, 0, 1, x, y, true, -2);
+	
+	for(var i = 0; i < count - 1; i++){
+		scr_spawn_item(item_type.currency, 0, 1, x, y, true, -2);
+	}
 	
 }else if chance <= 65{
 	spawns[0] = scr_spawn_item( item_type.potion , -7,  -3, x, y, true, -2);
@@ -25,13 +31,13 @@ if(chance >= 90){
 	chance = irandom(99);
 	
 	if(chance <= 10){
-		spawns[1] = scr_spawn_item(   item_type.heart,  heart.heart,  -4, x, y, true, -2);
+		spawns[1] = scr_spawn_item( item_type.heart, heart.heart,  -4, x, y, true, -2);
               
 	}else if chance <= 50{
-		spawns[1] = scr_spawn_item(item_type.currency,  0, 1, x, y, true, -2);
+		spawns[1] = scr_spawn_item( item_type.currency, 0, 1, x, y, true, -2);
 	
 	}else if chance <= 65{
-		spawns[1] = scr_spawn_item( item_type.potion , -7,  -3, x, y, true, -2);
+		spawns[1] = scr_spawn_item( item_type.potion , -7, -3, x, y, true, -2);
 	
 	}
 }

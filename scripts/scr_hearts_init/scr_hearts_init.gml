@@ -1,6 +1,6 @@
 enum heart{
-	heart     = 0,
-	armor     = 1,
-	container = 2
-	
+	heart     ,
+	armor     ,
+	container ,
+	count     
 }

@@ -31,6 +31,18 @@ command_help[9]="pause()-> pauses and unpauses the game";
 command_list[10]="killall_active";
 command_help[10]="killall_active()-> kills all active enemies";
 
+command_list[11]="entity_stat_set";
+command_help[11]="entity_stat_set(instance_id/object_name, stat, value)-> changes a stat of an entity or entities of a type\n Use info(stats) for details.\n";
+
+command_list[12]="info";
+command_help[12]="info(keyword)-> provides information on a topic, provide ? to list keywords\n";
+
+command_list[13]="create_item_at_cursor";
+command_help[13]="create_item_at_cursor(type,item,amount)-> creates the specified item at the cursor.\n";
+
+command_list[14]="list_items";
+command_help[14]="list_items(type)-> lists the items of a given type.\n";
+
 number_of_commands = array_length_1d(command_list);
 
 

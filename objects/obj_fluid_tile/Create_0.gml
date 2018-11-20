@@ -9,9 +9,6 @@ cell_count = h_cells * v_cells;
 gx = x div cell_size;
 gy = y div cell_size;
 
-flx = (x - x mod cell_size) div cell_size;
-fly = (y - y mod cell_size) div cell_size;
-
 tiles   = [];
 tiles_t = [];
 tiles_d = [];

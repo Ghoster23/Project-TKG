@@ -1,23 +1,28 @@
 //scr_draw_text_outlined(x, y, outline color, string color, string)
+///@param x
+///@param y
+///@param outline_color
+///@param string_color
+///@param string
 {
 var xx,yy;  
-xx = argument[0];  
-yy = argument[1];  
+xx = argument0;  
+yy = argument1;  
 
 //Outline  
-draw_set_color(argument[2]);  
-draw_text(xx+1, yy+1, argument[4]);  
-draw_text(xx-1, yy-1, argument[4]);  
-draw_text(xx,   yy+1, argument[4]);  
-draw_text(xx+1,   yy, argument[4]);  
-draw_text(xx,   yy-1, argument[4]);  
-draw_text(xx-1,   yy, argument[4]);  
-draw_text(xx-1, yy+1, argument[4]);  
-draw_text(xx+1, yy-1, argument[4]);  
+draw_set_color(argument2);  
+draw_text(xx+1, yy+1, argument4);  
+draw_text(xx-1, yy-1, argument4);  
+draw_text(xx,   yy+1, argument4);  
+draw_text(xx+1,   yy, argument4);  
+draw_text(xx,   yy-1, argument4);  
+draw_text(xx-1,   yy, argument4);  
+draw_text(xx-1, yy+1, argument4);  
+draw_text(xx+1, yy-1, argument4);  
 
 //Text  
-draw_set_color(argument[3]);  
-draw_text(xx, yy, argument[4]);
+draw_set_color(argument3);
+draw_text(xx, yy, argument4);
 
 draw_set_color(c_white);
 }

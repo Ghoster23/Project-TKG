@@ -13,7 +13,8 @@
         "9446ca49-a70b-4749-a2f4-bcd5f3221cb7",
         "361f5604-4407-44a5-bf3e-fdf589cb9528",
         "0dbae85a-3f62-4620-8fb9-809b5365df7e",
-        "a9605f58-49fd-4fef-bf6a-a0df89fef73e"
+        "a9605f58-49fd-4fef-bf6a-a0df89fef73e",
+        "eb4a2f7a-9367-4e4b-8d50-8fac41c580bc"
     ],
     "filterType": "GMScript",
     "folderName": "Console Scripts",

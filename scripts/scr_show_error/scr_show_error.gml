@@ -33,5 +33,5 @@ switch(err_id){
 
 err_tx += "\n";
 
-show_debug_message(err_tx);
+obj_console.console_text += err_tx;
 }

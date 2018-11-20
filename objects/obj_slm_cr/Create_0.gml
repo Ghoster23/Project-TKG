@@ -20,7 +20,7 @@ stat[stats.spd]  =  2;
 prev_hp = stat[stats.hp];
 
 damage = 2;
-mult = stats.satk;
+mult = stats.atk;
 divi = stats.sdef;
 
 frozen = false;

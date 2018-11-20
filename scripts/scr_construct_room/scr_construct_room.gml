@@ -28,7 +28,7 @@ for(var i = 0; i < 9; i++){
 			#region Determine offset
 			for(var q = 1; q < 6; q++){
 				for(var t = 0; t < menuText[q,0]; t++){
-					if menuText[q,t] == obj_name{
+					if menuText[q,t+1] == obj_name{
 						category = q;
 					}
 				}

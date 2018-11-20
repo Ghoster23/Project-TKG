@@ -36,7 +36,6 @@ with(entity){
 			break;
 		}
 	}
-
 	
 	switch(status){
 		//Non accumulating

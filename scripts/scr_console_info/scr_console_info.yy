@@ -1,8 +1,8 @@
 {
-    "id": "90e7bf76-c160-4f2f-ae12-37bb21b75bba",
+    "id": "eb4a2f7a-9367-4e4b-8d50-8fac41c580bc",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scr_tool_slot",
+    "name": "scr_console_info",
     "IsCompatibility": false,
     "IsDnD": false
 }
