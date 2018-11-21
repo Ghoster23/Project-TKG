@@ -49,7 +49,7 @@ if go and not global.pause{
 			dead_head.image_xscale=image_xscale;
 			
 			instance_create_layer(x,y,layer,obj_blood_puddle);
-			dead_body=instance_create_layer(x,y,"Instances",obj_psnt_deadbody);
+			dead_body = instance_create_layer(floor(x),floor(y),"Instances",obj_psnt_deadbody);
 			dead_body.body_color=body_color;
 			dead_body.image_xscale=image_xscale;
 			dead_body.sprite_index = body_dead_sprite;
@@ -57,16 +57,16 @@ if go and not global.pause{
 			dead_head.body=dead_body;
 			
 			if(irandom(4)==1){
-				dropped_weapon=instance_create_layer(x,y,layer,obj_dropped_melee);
+				dropped_weapon=instance_create_layer(floor(x),floor(y),layer,obj_dropped_melee);
 				dropped_weapon.image_index=weapon.image_index;
 				dropped_weapon.phy_rotation=weapon.image_angle;
 				dropped_weapon.image_xscale=weapon.image_xscale;
 				dropped_weapon.image_yscale=weapon.image_yscale;
 			}
 			
-			with weapon { instance_destroy(); }
-			with head   { instance_destroy(); }
-			with feet   { instance_destroy(); }
+			for(var i = 0; i < array_length_1d(parts); i++){
+				instance_destroy(parts[i]);
+			}
 			
 			scr_kill_enemy();
 		break;

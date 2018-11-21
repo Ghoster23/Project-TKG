@@ -6,6 +6,8 @@ weapon = scr_create_tw(tl_n_wep.bow,32);
 weapon.skin_color = skin_color;
 weapon.draw_script = scr_psnt_draw;
 
+parts = [head,weapon,flr_intr];
+
 //Stats
 stat[stats.mhp]  = 20;
 stat[stats.hp]   = 20;

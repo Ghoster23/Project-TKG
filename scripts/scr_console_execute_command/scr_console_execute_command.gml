@@ -104,6 +104,7 @@ switch(command){
 	break;
 	
 	case "create_instance_at_cursor":
+		#region Command
 		args = scr_string_split(arguments_string,",");
 		
 		if(array_length_1d(args) != 1){
@@ -111,10 +112,16 @@ switch(command){
 			break;
 		}
 		
-		instance_create_layer(mouse_x,mouse_y,"Instances", asset_get_index(args[0]));
+		var inst = instance_create_layer(mouse_x,mouse_y,"Instances", asset_get_index(args[0]));
+		
+		if(inst != noone and instance_exists(inst)){
+			console_text += "Created instance " + string(inst.id) + ".";
+		}
+		#endregion
 	break;
 	
 	case "pause":
+		#region Command
 		if(obj_ig_menu_controller.state != "debug"){
 			obj_ig_menu_controller.state = "debug";
 			console_text +="Game is paused!!\n";
@@ -123,10 +130,11 @@ switch(command){
 			obj_ig_menu_controller.state = "closed";
 			console_text +="Game is not paused!!\n";
 		}
-		
+		#endregion
 	break;
 	
 	case "killall_active":
+		#region Command
 		var n = ds_list_size(global.act_enemy_list);
 		repeat(n){
 			var inst = ds_list_find_value(global.act_enemy_list, 0);
@@ -136,6 +144,7 @@ switch(command){
 			ds_list_delete(global.act_enemy_list,0);
 		}
 		console_text +="Killed " + string(n) + " enemie(s)\n";
+		#endregion
 	break;
 	
 	case "entity_stat_set":
@@ -246,6 +255,29 @@ switch(command){
 		for(var i = 0; i < n; i++){
 			console_text += string(i) + " - " + scr_item_get_name(type,i,0) + "\n";
 		}
+		#endregion
+	break;
+	
+	case "activate_enemy":
+		#region Command
+			args = scr_string_split(arguments_string,",");
+		
+			if(array_length_1d(args) != 1){
+				console_text += "Incorrect number of arguments.\n";
+				break;
+			}
+			
+			var iid = int64(args[0]);
+			
+			if(instance_exists(iid) and
+			   ((iid >= 100000 and is_descended(iid.object_index, obj_enemy_parent)) or
+				(iid  < 100000 and is_descended(iid,obj_enemy_parent)              ))){
+				with iid {
+					alarm[0] = 0.5 * room_speed;
+					
+					scr_add_to_active_list();
+				}
+			}
 		#endregion
 	break;
 }

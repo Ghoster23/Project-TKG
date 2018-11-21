@@ -43,6 +43,9 @@ command_help[13]="create_item_at_cursor(type,item,amount)-> creates the specifie
 command_list[14]="list_items";
 command_help[14]="list_items(type)-> lists the items of a given type.\n";
 
+command_list[15]="activate_enemy";
+command_help[15]="activate_enemy(instance_id)-> Activates an enemy.\n";
+
 number_of_commands = array_length_1d(command_list);
 
 

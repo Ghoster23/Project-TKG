@@ -18,8 +18,6 @@ roll_sprs[2] = spr_luna_dash_left;
 
 head_spr  = spr_luna_head;
 
-feet_spr  = spr_jason_feet;
-
 hand = 1;
 
 alarm_count = 4;

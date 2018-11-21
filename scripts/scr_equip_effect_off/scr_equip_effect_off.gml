@@ -46,7 +46,6 @@ switch item {
 			var bd = scr_spawn_player(global.body.x,global.body.y,"Instances");
 		
 			with global.body {
-				instance_destroy(feet);
 				instance_destroy(hands);
 				instance_destroy();
 			}

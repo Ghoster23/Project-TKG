@@ -12,6 +12,7 @@ body_color=0;
 
 dir=point_direction(global.body.x,global.body.y,x,y);
 physics_apply_impulse(x, y, lengthdir_x(210, dir ),lengthdir_y(210, dir ));
+alarm[0] = 1.5 * room_speed;
 
 //determine the side the dude goes
 if(dir>90 and dir<=270){

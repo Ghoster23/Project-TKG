@@ -71,7 +71,7 @@ with argument0 {
 						}
 					}
 							
-				}else if(object_is_ancestor(inst.object_index, obj_entity_parent)){
+				}else if(is_descended(inst.object_index, obj_entity_parent)){
 					inst.mp_grid = mg;
 					inst.mp_path = pt;
 				}
