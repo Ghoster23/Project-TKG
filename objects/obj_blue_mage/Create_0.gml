@@ -1,5 +1,8 @@
 /// @description Inicialize the enemy
 event_inherited();
+
+type = entity_type.monster;
+
 image_speed = 0;
 
 //Stats
@@ -52,4 +55,4 @@ pair = noone;
 lightingtime = 0.6*room_speed;
 attackpausetime = 0.7*room_speed;
 
-scr_pausable_init(10);
+scr_pausable_init(11);

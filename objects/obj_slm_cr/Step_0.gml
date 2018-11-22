@@ -2,7 +2,7 @@ event_inherited();
 
 ///Exist
 if go and not global.pause{
-    scr_pause_end(5);
+    scr_pause_end(alarm_count);
     
     ///Enemy Behaevior
     switch(state){
@@ -50,5 +50,5 @@ if go and not global.pause{
 	}
     
 }else if go{
-	scr_pause_start(5);
+	scr_pause_start(alarm_count);
 }

@@ -1,5 +1,7 @@
 event_inherited();
 
+type = entity_type.human;
+
 //get number of specific parts so its cool to add more later and it wont ruin anything 
 n_faces = sprite_get_number(spr_psnt_ff);
 n_hairs = sprite_get_number(spr_psnt_hf);

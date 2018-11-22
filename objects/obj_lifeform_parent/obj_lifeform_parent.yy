@@ -15,56 +15,6 @@
             "m_owner": "748cab6e-7a35-46a0-9cd4-d45e9879dfcc"
         },
         {
-            "id": "4add9700-3dd8-4ee8-8138-44317fef78fb",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "748cab6e-7a35-46a0-9cd4-d45e9879dfcc",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "748cab6e-7a35-46a0-9cd4-d45e9879dfcc"
-        },
-        {
-            "id": "8e79993f-b253-4f0f-9a98-5b16dd8899c3",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "58371276-295f-47b3-b2e7-892bb302b870",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "748cab6e-7a35-46a0-9cd4-d45e9879dfcc"
-        },
-        {
-            "id": "6384c7ac-2ef3-4110-848b-7acdde89580b",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "9bb6a458-48be-46b4-8c2a-9adf896daa37",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "748cab6e-7a35-46a0-9cd4-d45e9879dfcc"
-        },
-        {
-            "id": "3cbc456d-2879-4d66-a136-bb472bb36d32",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "0eb59043-ff9a-4694-af4f-f069f6e0dd25",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "748cab6e-7a35-46a0-9cd4-d45e9879dfcc"
-        },
-        {
-            "id": "1cf259a0-6203-4f5f-b651-65dcbb9501f9",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "e78a02e2-fbe9-47fb-b40f-eeeb04f32351",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "748cab6e-7a35-46a0-9cd4-d45e9879dfcc"
-        },
-        {
             "id": "7cc58f0e-5523-4c1e-9504-4d530f2d3f10",
             "modelName": "GMEvent",
             "mvc": "1.0",

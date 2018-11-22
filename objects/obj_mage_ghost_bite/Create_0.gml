@@ -21,5 +21,4 @@ counter = 0;
 
 owner = noone;
 
-
 no_shadows = true;

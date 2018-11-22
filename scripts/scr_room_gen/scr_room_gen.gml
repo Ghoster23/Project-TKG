@@ -3,7 +3,9 @@
 ///@param type
 ///@param alt_optional
 {
-if(argument_count < 3 or argument_count > 4){ show_error("scr_room_gen - Arguments should be gx gy type alt(opt).", true); };
+if(argument_count < 3 or argument_count > 4){
+	scr_show_error(0,"scr_room_gen",[3,4]);
+}
 
 var gx = argument[0];
 var gy = argument[1];

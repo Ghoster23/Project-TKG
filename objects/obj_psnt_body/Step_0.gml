@@ -24,6 +24,7 @@ if go and not global.pause{
 				
 				if(!instance_exists(tell)){
 					tell = instance_create_layer(x,y,layer,obj_melee_tell);
+					parts[3] = tell;
 					tell.owner = id;
 				}                
             }else {

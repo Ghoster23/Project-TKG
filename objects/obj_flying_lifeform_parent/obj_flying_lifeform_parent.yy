@@ -4,16 +4,7 @@
     "mvc": "1.0",
     "name": "obj_flying_lifeform_parent",
     "eventList": [
-        {
-            "id": "3b3d7310-3277-4fe2-8985-db04c91b8ea3",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "0eb59043-ff9a-4694-af4f-f069f6e0dd25",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "b279ea35-ee12-4aab-aee5-fab0c0d8cb11"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

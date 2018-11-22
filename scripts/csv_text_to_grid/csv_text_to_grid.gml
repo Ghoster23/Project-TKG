@@ -76,7 +76,6 @@ repeat(lines){
 		}
 		
 		//add content to grid (with account for offset)
-		//show_debug_message(content+string(i)+":"+string(j));
 		ds_grid_add(ds_grid,i,j+grid_start_line,content);
 	
 	}

@@ -35,7 +35,6 @@ if go and not global.pause{
 					dash_cd  = true;
 		        }
 			}
-			
         break;
 		
 		///Die

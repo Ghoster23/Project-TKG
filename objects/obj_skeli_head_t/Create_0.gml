@@ -24,3 +24,5 @@ zmax      = zzero + ((speedzero*speedzero)/(2*-a));
 phy_linear_damping=0.5;
 
 draw_script = scr_skull_throw;
+
+scr_pausable_init(1);

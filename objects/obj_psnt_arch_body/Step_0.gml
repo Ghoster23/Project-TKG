@@ -38,7 +38,9 @@ if(go and not global.pause){
 				
 				if(!instance_exists(tell)){
 					tell = instance_create_layer(x,y-32,"IF",obj_archer_tell);
-                
+					
+					parts[3] = tell;
+					
 					with tell {
 						owner = other;
 					}

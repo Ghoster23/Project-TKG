@@ -5,3 +5,6 @@
 event_inherited();
 
 mp_grid = -1;
+
+offset = true;
+offs = 32;

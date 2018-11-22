@@ -1,5 +1,8 @@
 /// @description Inicialize the enemy
 event_inherited();
+
+type = entity_type.monster;
+
 image_speed = 0;
 
 //Stats

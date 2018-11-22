@@ -1,5 +1,8 @@
 /// @description Inicialize the enemy
 event_inherited();
+
+type = entity_type.animal;
+
 image_speed = 0;
 
 //Stats
@@ -31,6 +34,4 @@ transition_time_counter=transition_time
 
 shot_cooldown_time = 1.5*room_speed;
 
-for(i = 0; i < 8; i += 1){	
-	alarms[i] = -1;
-}
+scr_pausable_init(10);

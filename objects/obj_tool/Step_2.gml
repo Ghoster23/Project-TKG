@@ -127,6 +127,8 @@ switch state {
 	break;
 }
 
+offs = offs + owner.offs;
+
 x = owner.phy_position_x + xx;
 y = owner.phy_position_y + yy;
 #endregion

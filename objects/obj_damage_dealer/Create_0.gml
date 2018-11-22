@@ -6,8 +6,6 @@ owner = noone;
 
 kb_amount = 0; //Knock back amount
 damage    = 0; //Base damage
-ohko      = false;
+ohko      = 0;
 
 divi = stats.def;
-
-grounded = false;

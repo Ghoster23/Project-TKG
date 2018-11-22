@@ -25,26 +25,6 @@
             "m_owner": "441e61c6-8adb-4971-a190-54ad50e34bb4"
         },
         {
-            "id": "76329e42-d23f-4dc5-b786-21065143be64",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "58371276-295f-47b3-b2e7-892bb302b870",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "441e61c6-8adb-4971-a190-54ad50e34bb4"
-        },
-        {
-            "id": "924c75c2-7da6-445f-a6a4-fcc24e36fba9",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "748cab6e-7a35-46a0-9cd4-d45e9879dfcc",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "441e61c6-8adb-4971-a190-54ad50e34bb4"
-        },
-        {
             "id": "48ec4ce5-e71f-48de-b0fd-b7e6f42f039c",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -52,26 +32,6 @@
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 2,
             "eventtype": 3,
-            "m_owner": "441e61c6-8adb-4971-a190-54ad50e34bb4"
-        },
-        {
-            "id": "fdb44ae5-4e7b-4292-ab40-ca64839a526a",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "e78a02e2-fbe9-47fb-b40f-eeeb04f32351",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "441e61c6-8adb-4971-a190-54ad50e34bb4"
-        },
-        {
-            "id": "cfe9dad5-f5ca-4ae0-a3dc-9607f4f213d8",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 12,
             "m_owner": "441e61c6-8adb-4971-a190-54ad50e34bb4"
         },
         {
@@ -102,16 +62,6 @@
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 3,
             "eventtype": 2,
-            "m_owner": "441e61c6-8adb-4971-a190-54ad50e34bb4"
-        },
-        {
-            "id": "6f71f045-7b0f-4475-99d0-fda213efb3e2",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "6007775d-d2bd-42a6-bf04-5316e13d5b13",
-            "enumb": 0,
-            "eventtype": 4,
             "m_owner": "441e61c6-8adb-4971-a190-54ad50e34bb4"
         }
     ],

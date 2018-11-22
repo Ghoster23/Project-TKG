@@ -8,4 +8,6 @@ for(var i = 0; i < alarm_count; i++){
 }
 
 prev_image_speed = 0;
+
+pause_prv_state = 0;
 }

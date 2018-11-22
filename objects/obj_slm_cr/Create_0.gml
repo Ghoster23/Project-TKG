@@ -1,7 +1,7 @@
 /// @description Inicialise the enemy
 event_inherited();
 
-instance_destroy(shadow);
+type = entity_type.slime;
 
 image_speed = 0.3;
 image_alpha = 0.7;
@@ -19,17 +19,12 @@ stat[stats.spd]  =  2;
 
 prev_hp = stat[stats.hp];
 
-damage = 2;
-mult = stats.atk;
-divi = stats.sdef;
-
 frozen = false;
 
 //Pause
-for(i = 0; i < 6; i++){
-	alarms[i] = -1;
-}
+scr_pausable_init(4);
 
+//Creep
 fl_gen = instance_create_layer(x - 20, y - 2,
 							   layer, obj_slm_cr_fluid_gen);
 fl_gen.creator = self;

@@ -15,8 +15,6 @@ if not global.pause {
 	}
 	
 	scr_pause_end(10);
-	
-	scr_damage_entity(true);
 
 	///Action state based changes
 	switch(state){

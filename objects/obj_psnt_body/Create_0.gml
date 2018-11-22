@@ -6,7 +6,9 @@ weapon = scr_create_tw(irandom_range(0,5),32);
 weapon.skin_color  = skin_color;
 weapon.draw_script = scr_psnt_draw;
 
-parts = [weapon, head, flr_intr];
+tell = noone;
+
+parts = [weapon, head, flr_intr, tell];
 
 //Stats
 stat[stats.mhp]  = 20;

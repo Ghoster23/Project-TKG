@@ -1,5 +1,7 @@
-/// @description Inicialise the enemy
+/// @description Initialize the enemy
 event_inherited();
+
+type = entity_type.monster;
 
 instance_destroy(shadow);
 

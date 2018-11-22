@@ -2,21 +2,19 @@ event_inherited();
 
 ///Exist
 if go and not global.pause{
-	scr_pause_end(8);
+	scr_pause_end(alarm_count);
+	
+	//check if dead and if so kill it
+	if(stat[stats.hp] <= 0){
+		state = "dead";
+	}
 
 	//states for enemy behaviour
 	switch(state){
         case "follow":  //move like a spider
-			
-			//check if dead and if so kill it
-			if(stat[stats.hp] <= 0) and state != 3{
-			    state = "dead";
-				exit;
-			}
-			
 			//bit that runs once before each spurt of movement
 			if moved == false{ 
-				show_debug_message("bit that runs once before each spurt of movement");
+				//show_debug_message("bit that runs once before each spurt of movement");
 				moved = true;
 				
 				scr_define_path(self, global.body);
@@ -27,16 +25,14 @@ if go and not global.pause{
 				
 				if (action_dir <= 90 or action_dir >= 270){
 					image_xscale=-1;
-				}
-				
-				else{
+				}else{
 					image_xscale=1;
 				}
             } 
 			
 			//if youve detected that the time to break is here, stop
 			if(move_time_counter <= 0 and breaking = false){
-				show_debug_message("breaktime");
+				//show_debug_message("breaktime");
 				alarm_set(8,break_time); //this alarm is the break between strides
 				breaking = true;
 				
@@ -57,15 +53,8 @@ if go and not global.pause{
         break;
 		
 		case "go2hide": //transition state between follow and hide
-			
-			//check if dead and if so kill it
-			if(stat[stats.hp] <= 0) and state != 3{
-			    state = "dead";
-				exit;
-			}
-		
-			sprite_index=spr_hspider_hide;
-			image_speed=1;
+			sprite_index = spr_hspider_hide;
+			image_speed  = 1;
 			transition_time_counter-=1;
 			
 			if(transition_time_counter<=0){
@@ -73,18 +62,13 @@ if go and not global.pause{
 				image_index=8;
 				image_speed=0;
 				state = "hide";
+				inv = true;
 				exit;
 			}
 			
 		break;
 		
 		case "go2follow": //transition state between follow and hide
-		
-			//check if dead and if so kill it
-			if(stat[stats.hp] <= 0) and state != 3{
-			    state = "dead";
-				exit;
-			}
 			transition_time_counter-=1;
 			
 			if(transition_time_counter<=0){
@@ -97,17 +81,10 @@ if go and not global.pause{
 			
 		break;
 		
-		case "hide": //hide and shoot
-		
-			//check if dead and if so kill it
-			if(stat[stats.hp] <= 0) and state != 3{
-			    state = "dead";
-				exit;
-			}
-			
+		case "hide": //hide and shoot	
 			//this bit runs once perr shot
 			if shot == false{ 
-				show_debug_message("bit that runs once before each shot");
+				//show_debug_message("bit that runs once before each shot");
 				shot = true;
 				
 				if(!collision_line(x,y,global.body.x,global.body.y,obj_solid_parent,false,true)){
@@ -136,6 +113,7 @@ if go and not global.pause{
 					sprite_index=spr_hspider_hide;
 					image_speed=-1;
 					image_index=8;
+					inv = false;
 					exit;	
 				}
 			}
@@ -144,7 +122,6 @@ if go and not global.pause{
 		break;
 		
 		case "dead": //dead
-		
 			solid = false;
 			image_speed = 0;
 			
@@ -161,14 +138,9 @@ if go and not global.pause{
 			scr_sound(snd_wood_bits1,snd_wood_bits2,snd_wood_bits3);
 			
             scr_kill_enemy();
-			
-		break;
-		
-		case "pause":	
 		break;
 	}   
 
 }else if go{
-	scr_pause_start(8);
-	
+	scr_pause_start(alarm_count);
 }

@@ -26,7 +26,7 @@ if(c == "["){
 	
 	//show_debug_message("Array - ");
 	
-	while(c != "]"){
+	while(c != "]" and c != ""){
 		var s_str = c;
 		i++;
 		c = string_char_at(str,i);

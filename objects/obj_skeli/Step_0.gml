@@ -2,15 +2,15 @@ event_inherited();
 
 ///Exist
 if go and not global.pause{
-	scr_pause_end(8);
+	scr_pause_end(alarm_count);
+	
+	if(stat[stats.hp] <= 0){
+		state = "dead";
+	}
 
 	//states for enemy behaviour
 	switch(state){
         case "go2head":  //move torwards player to give contact damage
-			if(stat[stats.hp] <= 0) and state != 3{
-					state = "dead";
-					exit;
-			}
 			if(skullt==noone){
 				exit;
 			}
@@ -27,12 +27,6 @@ if go and not global.pause{
         break;
 		
 		case "chase":  //move torwards player to give contact damage
-			if(stat[stats.hp] <= 0) and state != 3{
-			
-				state = "dead";
-				exit;
-			}
-			
 			head.visible = true;
 			scr_define_path(self, global.body);
 			scr_move_entity(point_direction(x,y,path_get_point_x(mp_path,1),path_get_point_y(mp_path,1)),1);
@@ -44,38 +38,17 @@ if go and not global.pause{
 		
 		case "pophead": //remove head to fire
 			head.visible = false;
-			if(stat[stats.hp] <= 0) and state != 3{
-		
-			    state = "dead";
-				exit;
-			}
 		break;
 		
 		case "pickup": //pickupyourskull
-			if(stat[stats.hp] <= 0) and state != 3{
-		
-			    state = "dead";
-				exit;
-			}
 		break;
 		
 		
 		case "wait":
 		case "aim": //aim torwards player
-			if(stat[stats.hp] <= 0) and state != 3{
-
-			    state = "dead";
-				exit;
-			}
-			
 		break;
 		
 		case "throwhead": //throw that head at em
-			if(stat[stats.hp] <= 0) and state != 3{
-			    state = "dead";
-				exit;
-			}
-			
 			skullt = scr_create_damage_dealer(x+lengthdir_x(10,player_dir),
 								y+lengthdir_y(10,player_dir),
 								obj_skeli_head_t,id,false,
@@ -92,11 +65,11 @@ if go and not global.pause{
 		
 		
 		case "dead": //dead
-			
 			solid = false;
 			image_speed = 0;
 			
 			mp_grid_clear_cell(mp_grid,x div 32, y div 32);
+			
 			//sounds
 			instance_create_layer(x,y,layer,obj_skeli_deadbody);
 			if(!instance_exists(skullt)){
@@ -109,6 +82,7 @@ if go and not global.pause{
 					physics_apply_impulse(x,y,lengthdir_x(20,180+other.player_dir),lengthdir_y(20,180+other.player_dir));
 				}
 			}
+			
             scr_kill_enemy();		
 		break;
 		
@@ -117,6 +91,5 @@ if go and not global.pause{
 	}   
 
 }else if go{
-	scr_pause_start(8);
-	
+	scr_pause_start(alarm_count);	
 }

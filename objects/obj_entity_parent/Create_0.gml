@@ -4,6 +4,9 @@ visible            = false;
 phy_fixed_rotation = true;
 solid              = false;
 
+offset = true;
+offs = sprite_height - sprite_yoffset;
+
 parts = [];
 
 //Pause
@@ -50,14 +53,7 @@ immune = false;
 innoc  = false;
 ohko   = false;
 
-//Contact Damage
-damage = 0;
-divi   = stats.def;
-
-kb_amount = 0;
+type = -1;
 
 mp_grid = -1;
 mp_path = -1;
-
-shadow = instance_create_layer(x,y,layer,obj_entity_shadow);
-shadow.owner = id;
