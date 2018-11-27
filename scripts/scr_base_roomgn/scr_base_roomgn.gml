@@ -32,7 +32,7 @@ fillin[0] = instance_create_layer(gx+global.roomwd-32,           gy+176+32, "Ins
 var gxtile = gx/32;
 var gytile = gy/32;
 
-var flr = instance_create_layer(gx+(global.roomwd/2),gy+(global.roomhg/2)+31,"Floor",obj_floor);
+var flr = instance_create_layer(gx+32,gy+95,"Floor",obj_floor);
 
 flr.generator = generator;
 flr.gxtile=gxtile;

@@ -166,9 +166,9 @@ for (var j=0; j<w; j++){
 }
 #endregion
 
-scr_room_gen(0,0,"temp",0);
+scr_room_gen(x,y,"temp",0);
 
-_rm = instance_create_layer(0,0,layer,obj_dungeon_room);
+_rm = instance_create_layer(x,y,layer,obj_dungeon_room);
 
 //Room Controller
 scr_room_init(_rm);

@@ -10,8 +10,8 @@ command_help[2]="get_mouse_coords() -> returns the coords of the mouse in the ro
 command_list[3]="clear";
 command_help[3]="clear() -> clears the console";
 
-command_list[4]="get_closest_id";
-command_help[4]="get_closest_id(object_name) -> returns id of closest (to mouse) object with given name";
+command_list[4]="instance_get_id_closest";
+command_help[4]="instance_get_id_closest(object_name) -> returns id of closest (to mouse) object with given name";
 
 command_list[5]="create_instance";
 command_help[5]="create_instance(x,y,object_name)-> spawns instance with given name at given coords";
@@ -45,6 +45,15 @@ command_help[14]="list_items(type)-> lists the items of a given type.\n";
 
 command_list[15]="activate_enemy";
 command_help[15]="activate_enemy(instance_id)-> Activates an enemy.\n";
+
+command_list[16]="instance_get_var";
+command_help[16]="instance_get_var(instance_id,variable_name)-> Gets the value of a variable in an instance.\n";
+
+command_list[17]="instance_set_var";
+command_help[17]="instance_set_var(instance_id,variable_name,value)-> Sets the value of a variable in an instance.\n";
+
+command_list[18]="instance_track_var";
+command_help[18]="instance_track_var(instance_id,variable_name)-> Creates a window that tracks the instance variable if none exists or adds it to an existing tracker";
 
 number_of_commands = array_length_1d(command_list);
 

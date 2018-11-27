@@ -69,3 +69,7 @@ global.ds_grid_tl_n_wep = load_data_to_grid(10,9,0,0,"tools_n_weapons.csv");
 
 ///Skills
 global.ds_grid_skills = load_data_to_grid(4,9,0,0,"skills.csv");
+
+///Items
+global.ds_grid_items = load_data_to_grid(3,56,0,0,"item_index.csv");
+global.item_type_ind = scr_item_type_get_indexes();

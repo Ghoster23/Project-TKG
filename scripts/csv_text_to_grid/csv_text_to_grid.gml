@@ -2,7 +2,7 @@
 ///@param file_name
 ///@param ds_grid
 ///@param lines
-///@param collumns
+///@param columns
 ///@param file_start_line
 ///@param grid_start_line
 {

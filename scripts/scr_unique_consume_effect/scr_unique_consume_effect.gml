@@ -1,12 +1,6 @@
 ///@description Applies statuses based on unique consumables
 {
 switch(argument0) {
-	case unique_consume.eat_me:
-		
-	break;
-	case unique_consume.blue_pancake:
-		
-	break;
 	case unique_consume.map:
 		with obj_map_controller {
 			for(var i = 0; i < dg_space; i++){
@@ -23,6 +17,7 @@ switch(argument0) {
 			}
 		}
 	break;
+	
 	default:
 	break;
 }

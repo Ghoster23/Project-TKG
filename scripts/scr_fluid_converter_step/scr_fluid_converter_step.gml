@@ -7,20 +7,14 @@ if(not global.pause and on){
 	var mtype  = stype;
 	var p = paint;
 	
-	var tl_cnt = collision_rectangle_list(               xx,                 yy, 
-										  xx + sprite_width, yy + sprite_height,
-										  obj_fluid_tile, true, false, tiles, false);
-	
 	xx = xx div cell_size;
 	yy = yy div cell_size;
-	
-	repeat tl_cnt {
-		var tl = tiles[| 0];
-		tl.act = true;
-		ds_list_delete(tiles, 0);
-		
+
+	var flr = instance_place(x,y,obj_floor);
+
+	if(flr != noone){
 		#region xx
-		var dx = xx - tl.gx;
+		var dx = xx - flr.gx;
 		
 		if(dx >= 0){
 			var bxs =   0;
@@ -30,7 +24,7 @@ if(not global.pause and on){
 			var txs =   0;
 		}
 		
-		var xl = min(tl.h_cells - txs, h_cells - bxs);
+		var xl = min(flr.cells_p_line - txs, h_cells - bxs);
 		#endregion
 		
 		#region yy
@@ -44,7 +38,7 @@ if(not global.pause and on){
 			var tys =   0;
 		}
 		
-		var yl = min(tl.v_cells - tys, v_cells - bys);
+		var yl = min(flr.cells_p_colm - tys, v_cells - bys);
 		#endregion
 		
 		for(var i = 0; i < yl; i++){
@@ -53,7 +47,8 @@ if(not global.pause and on){
 			for(var j = 0; j < xl; j++){
 				if(col_line[bxs + j]){
 					with tl {
-						var ind = (tys + i) * h_cells + (txs + j);
+						sqrs[((tys + i) div sqr_v_cells) * h_sqrs + (txs + j) div sqr_h_cells] = true;
+						var ind = (tys + i) * cells_p_line + txs + j;
 						
 						var count = tiles[ind];
 						
@@ -61,10 +56,13 @@ if(not global.pause and on){
 							var type = tiles_t[ind];
 							var diff = type - vals[type];
 							
-							if(diff != 0 || type == mtype){
+							if(diff != 0){
 								tiles[ind]   = mcount;
 								tiles_t[ind] = type - diff;
 								tiles_d[ind] = 0;
+							}else if(type == mtype){
+								tiles[ind]   = mcount;
+								tiles_t[ind] = mtype;
 							}
 						}else if(p){
 							tiles[ind]   = mcount;

@@ -21,36 +21,10 @@ var yscale = argument6;
 var alpha = argument7;
 
 switch(type){
-	case item_type.unique_consumable:
-		return 1;
-	break;
-					
-	case item_type.potion:
-		scr_potion_draw_ext(amount,item,xx,yy,xscale,yscale,alpha);			
-	break;
-					
-	case item_type.chess_piece:
-		draw_sprite_ext(spr_i_chess_piece,item,xx,yy,xscale,yscale,0,c_white,1);
-	break;
-					
-	case item_type.constellation:
-		draw_sprite_ext(spr_i_constellation,item,xx,yy,xscale,yscale,0,c_white,1);
-	break;
-					
-	case item_type.tl_n_wep:
-		draw_sprite_ext(spr_i_tl_n_wep,item,xx,yy,xscale,yscale,0,c_white,1);
-	break;
-					
-	case item_type.equipable:
-		draw_sprite_ext(spr_i_equip,item,xx,yy,xscale,yscale,0,c_white,1);	
-	break;
-	
-	case item_type.active:
-		draw_sprite_ext(spr_i_active,item,xx,yy,xscale,yscale,0,c_white,1);	
-	break;
-	
-	case item_type.drop:
-		draw_sprite_ext(spr_i_drop,item,xx,yy,xscale,yscale,0,c_white,1);
+	default:
+		draw_sprite_ext(global.ds_grid_items[# 1, global.item_type_ind[type] + 1],
+						global.ds_grid_items[# 2, global.item_type_ind[type] + 1],
+						xx, yy, xscale, yscale, 0, c_white, 1);
 	break;
 	
 	case item_type.heart:
@@ -59,7 +33,7 @@ switch(type){
 				draw_sprite_ext(spr_i_heart,amount,xx,yy,xscale,yscale,0,c_white,1);
 			break;
 			case heart.armor:
-				draw_sprite_ext(spr_i_armor,frame,xx,yy,xscale,yscale,0,c_white,1);
+				draw_sprite_ext(spr_i_armor, frame,xx,yy,xscale,yscale,0,c_white,1);
 			break;
 			case heart.container:
 				draw_sprite_ext(spr_i_heart,amount,xx,yy,xscale,yscale,0,c_white,1);

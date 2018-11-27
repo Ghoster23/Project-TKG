@@ -1,7 +1,5 @@
 ///@params charge_time
 {
-if(not variable_instance_exists(id, "windup_start")){ windup_start = ang_off; }
-
 if(argument0 == -1){
 	ang_off = windup_start;
 	return;

@@ -33,17 +33,6 @@ if count != noone { //If enemies were found
 		
 		with enemy {      //Activate the obj_enemy_parent
 			alarm[0] = 0.5 * room_speed;
-			
-			if(mp_grid == -1 || mp_path == -1){
-				var rm = instance_place(x - x mod global.roomwd, y - y mod global.roomhg, obj_dungeon_room);
-				
-				if(rm != noone){
-					mp_grid = rm.dungeon.mp_grid;
-					mp_path = rm.dungeon.mp_path;
-				}
-				///FIXME
-			}
-			
 			scr_add_to_active_list();
 		}
 	}

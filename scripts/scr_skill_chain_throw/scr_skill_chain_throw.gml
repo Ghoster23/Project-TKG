@@ -5,7 +5,10 @@ var num = argument0;
 
 var parameters = params[num];
 
-if(not variable_instance_exists(id, "chain_th_vars")) { chain_th_vars = [0,noone]; }
+if(!booted_skills[num]) {
+	chain_th_vars = [0,noone];
+	booted_skills[num] = true;
+}
 
 switch chain_th_vars[0] {
 	case 0: //Align

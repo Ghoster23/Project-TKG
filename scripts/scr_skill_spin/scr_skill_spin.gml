@@ -5,7 +5,10 @@ var num = argument0;
 
 var parameters = params[num];
 
-if(not variable_instance_exists(id, "spin_vars")) { spin_vars = [0,1,angle,parameters[0],0]; }
+if(not booted_skills[num]) {
+	spin_vars = [0,1,angle,parameters[0],0];
+	booted_skills[num] = true;
+}
 
 switch spin_vars[0] {
 	case 0: //Start

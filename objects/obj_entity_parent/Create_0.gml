@@ -1,5 +1,10 @@
 event_inherited();
 
+//Activation
+path    = 0;
+go      = false;
+start   = false;
+
 visible            = false;
 phy_fixed_rotation = true;
 solid              = false;

@@ -9,14 +9,12 @@ if(tx == x && ty == y){
 	part_particles_create(global.ps_if,x,y,global.pt_icebits,18);
 	part_particles_create(global.ps_ps,x,y,global.pt_haze,9);
 	
-	if(variable_global_exists("act_enemy_list")){
-		var len = ds_list_size(global.act_enemy_list);
-		for(var i = 0; i < len; i++){
-			var e = global.act_enemy_list[| i];
+	var len = ds_list_size(global.act_enemy_list);
+	for(var i = 0; i < len; i++){
+		var e = global.act_enemy_list[| i];
 				
-			if(instance_exists(e)){
-				scr_status_apply(statuses.frozen,30,e);
-			}
+		if(instance_exists(e)){
+			scr_status_apply(statuses.frozen,30,e);
 		}
 	}
 	

@@ -5,5 +5,6 @@ if instance_exists(body){
 	flash       = body.flash;
 	image_blend = body.image_blend;
 	visible     = body.visible;
+	offs        = body.offs + 4;
 }
 

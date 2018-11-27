@@ -30,9 +30,3 @@ my_fix=physics_fixture_bind_ext(fix1, self,-16,-16);
 phy_fixed_rotation = true;
 
 no_shadows = true;
-
-while(place_meeting(x,y,obj_item)){
-	var a = random_range(0,2*pi);
-	x += 8 * cos(a);
-	y += 8 * sin(a);
-}

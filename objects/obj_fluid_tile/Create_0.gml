@@ -1,5 +1,4 @@
 cell_size = 32 div global.fluid_detail;
-cell_bits = cell_size div 2;
 
 h_cells = global.fluid_detail;
 v_cells = h_cells;
@@ -24,8 +23,3 @@ for(var i = 0; i < v_cells; i++){
 cell_data = tilemap_get(global.fluid_tlm, 0, 0);
 
 act = false;
-
-colors[0] = make_color_rgb(122,199, 21); //Slime
-colors[1] = make_color_rgb(  0,123,255); //Water
-colors[2] = make_color_rgb(146,  0,  0); //Blood
-colors[3] = make_color_rgb(178,255,250); //Ice

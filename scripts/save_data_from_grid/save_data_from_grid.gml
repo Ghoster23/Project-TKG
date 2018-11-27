@@ -2,7 +2,7 @@
 ///@param file_start_line
 ///@param grid_start_line
 ///@param file_name
-///@param collumn_type_array_optional
+///@param column_type_array_optional
 {
 var grid = argument[0];
 

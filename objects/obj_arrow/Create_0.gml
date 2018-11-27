@@ -20,9 +20,6 @@ trail_offset = 0;
 draw_script = scr_draw_projectile_trail;
 
 drop = false;
-type = item_type.drop;
-item = drops.arrow;
-amount = 1;
 
 divi   = stats.def;
 damage = 2;

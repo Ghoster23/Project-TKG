@@ -43,6 +43,8 @@ base_state = 0;
 executing = -1;
 charging  = -1;
 
+booted_skills = [false,false,false,false];
+
 skills = [-1,-1,-1,-1];
 cds    = [-1,-1,-1,-1];
 

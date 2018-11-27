@@ -5,7 +5,8 @@
     "name": "e569b0f1-d203-41c1-926d-a4c7105387a7",
     "children": [
         "6696e942-bc58-4915-a2d2-e5335e28feff",
-        "62a17cf4-c5c4-4108-a90a-5e1c99932e4f"
+        "62a17cf4-c5c4-4108-a90a-5e1c99932e4f",
+        "e08681b3-d914-4083-81c9-d6720c3c1109"
     ],
     "filterType": "GMScript",
     "folderName": "Painter",

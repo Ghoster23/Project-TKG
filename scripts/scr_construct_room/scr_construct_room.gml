@@ -71,13 +71,13 @@ for(var i = 0; i < 9; i++){
 			#endregion
 			
 			//Add fluid tile
-			if(object_get_parent(obj_ind) != obj_above_ground_parent){
-				instance_create_layer( x_pos, y_pos, "BH", obj_fluid_tile);
-			}
+			//if(object_get_parent(obj_ind) != obj_above_ground_parent){
+			//	instance_create_layer( x_pos, y_pos, "BH", obj_fluid_tile);
+			//}
 			
 		}else{
 			//Add fluid tile
-			instance_create_layer( gx+32+j*32, gy+96+i*32, "BH", obj_fluid_tile);
+			//instance_create_layer( gx+32+j*32, gy+96+i*32, "BH", obj_fluid_tile);
 			
 			//Floor decor
 			switch floor_tile {

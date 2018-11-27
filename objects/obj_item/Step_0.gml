@@ -15,7 +15,7 @@ if(fallingpit == true){
 if(booted){
 	if(!pick_up and jump){
 	
-		draw_script = scr_item_jump;
+		draw_script = scr_draw_item_jump;
 
 		if(z >= 10){
 			physics_remove_fixture(self,my_fix)

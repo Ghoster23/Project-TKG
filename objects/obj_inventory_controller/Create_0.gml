@@ -5,7 +5,7 @@ inventory = ds_grid_create(3,15);
 ds_grid_set_region(inventory,0,0,2,14,-1);
 
 // Enums
-scr_inv_types_init();
+scr_item_types_init();
 
 // Slot IDs
 holder     = 14;
@@ -20,7 +20,7 @@ capacity = 9;
 
 ///Equipables
 for(var i = 0; i < equips.count; i++){
-	
+///FIXME	
 	//Spawned
 	global.equipable[i] = false;
 		   

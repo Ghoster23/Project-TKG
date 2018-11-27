@@ -5,7 +5,10 @@ var num = argument0;
 
 var parameters = params[num];
 
-if(not variable_instance_exists(id, "stream_vars")) { stream_vars = [0,noone]; }
+if(not booted_skills[num]) { 
+	stream_vars = [0,noone];
+	booted_skills[num] = true;
+}
 
 switch stream_vars[0] {
 	case 0: //Prepare		

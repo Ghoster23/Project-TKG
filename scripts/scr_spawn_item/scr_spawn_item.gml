@@ -59,4 +59,6 @@ with spawn {
 	
 	visible = true;
 }
+
+return spawn;
 }

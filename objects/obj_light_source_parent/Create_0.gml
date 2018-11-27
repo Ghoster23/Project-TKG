@@ -12,7 +12,7 @@ image_blend = c_white;
 
 opacity = 0.5;
 
-in_range = 0;
+in_range = -1;
 
 //defining a vertex format and buffer (what we pass to shader)
 vertex_format_begin();
@@ -23,5 +23,7 @@ VertexFormat = vertex_format_end();
 VBuffer = vertex_create_buffer();
 
 surf = -1;
+
+no_shadows = true;
 
 LightPosRadius = shader_get_uniform(sh_light,"u_fLightPositionRadius");

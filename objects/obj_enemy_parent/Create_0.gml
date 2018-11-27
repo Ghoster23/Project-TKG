@@ -1,11 +1,6 @@
 /// @description inicialise the Enemy
 event_inherited();
 
-//Activation
-path    = 0;
-go      = false;
-start   = false;
-
 //States
 state        =     0;
 prev_state   =     0;

@@ -1,0 +1,1 @@
+scr_window_close();

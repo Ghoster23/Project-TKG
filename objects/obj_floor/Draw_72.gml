@@ -1,3 +1,4 @@
+#region Gen
 if (first_time==true && (room == rm_level or room == rm_lvl_editor_test)){
 
 	surface_set_target(floor_surface);
@@ -37,7 +38,7 @@ if (first_time==true && (room == rm_level or room == rm_lvl_editor_test)){
 			
 		}
 	}
-	floor_sprite=sprite_create_from_surface(floor_surface,0,0,21*32,13*32,false,false,21*16,13*16);
+	floor_sprite=sprite_create_from_surface(floor_surface,0,0,21*32,13*32,false,false,32,95);
 	sprite_index=floor_sprite;
 	surface_reset_target();
 	first_time=false;
@@ -45,3 +46,4 @@ if (first_time==true && (room == rm_level or room == rm_lvl_editor_test)){
 else{
 	draw_self();
 }
+#endregion

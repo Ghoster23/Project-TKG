@@ -25,7 +25,7 @@
 	for(var j = 0; j < i; j++){
 		var inst = dsid[| j];
 		
-		if(variable_instance_exists(inst, "no_shadows")){
+		if(no_shadows){
 			ds_list_delete(dsid,j);
 			j--;
 			i--;

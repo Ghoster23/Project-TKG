@@ -57,10 +57,6 @@ switch(status){
 	
 	case statuses.ohko :
 		if(not ohko){
-			if(variable_instance_exists(id,"weapon") && instance_exists(weapon)){
-				weapon.draw_script = scr_draw_outline;
-			}
-				
 			ohko = true;
 		}				
 	break;

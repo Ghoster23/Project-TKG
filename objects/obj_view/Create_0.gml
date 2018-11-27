@@ -10,7 +10,7 @@ cam_wd = camera_get_view_width(camera);
 cam_hg = camera_get_view_height(camera);
 
 //Movement
-m_spd = 0.1;
+m_spd = 0.25;
 
 switch(room){
 	case rm_level:

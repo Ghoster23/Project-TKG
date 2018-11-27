@@ -6,9 +6,36 @@ frame += image_speed;
 if(!booted and jump){
 	booted = true;
 	
-	if(dir == -1){
+	#region Sprite
+	switch type {
+		default:
+		
+		break;
+		
+		case item_type.equipable:
+			sprite_index = spr_i_equip;
+		break;
+		
+		case item_type.potion:
+			sprite_index = spr_i_potion_flask;
+			image_index  = amount;
+		break;
+	
+		case item_type.chess_piece:
+			sprite_index = spr_i_chess_piece;
+		break;
+	
+		case item_type.currency:
+			sprite_index = spr_i_coin;
+		break;
+	}
+	#endregion
+	
+	shd_wd_r = (bbox_right  - bbox_left) / 32;
+	
+	if(dir){
 		dir = random_range(0,360);
-	}else if(dir == -2){
+	}else {
 		dir = point_direction(global.body.phy_position_x,global.body.phy_position_y,mouse_x,mouse_y);
 	}
 	
@@ -25,5 +52,5 @@ if(!booted and jump){
 	phy_linear_damping=0.5;
 
 	modulator   = 1;
-	draw_script = scr_item_jump;
+	draw_script = scr_draw_item_jump;
 }
