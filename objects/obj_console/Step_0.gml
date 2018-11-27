@@ -1,5 +1,3 @@
-/// @description Insert description here
-// You can write your code in this editor
 mousex = device_mouse_x_to_gui(0);
 mousey = device_mouse_y_to_gui(0);
 

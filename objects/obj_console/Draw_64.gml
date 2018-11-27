@@ -1,4 +1,3 @@
-/// @description Insert description here
 // You can write your code in this editor
 /*
 draw_text(display_mouse_get_x(),display_mouse_get_y(),"x: "+string(display_mouse_get_x()) + " y: "+string(display_mouse_get_y()));

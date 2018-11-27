@@ -46,6 +46,11 @@ switch(command){
 		console_text = "";
 	break;
 	
+	case "debug_overlay":
+		db_overlay = !db_overlay;
+		show_debug_overlay(db_overlay);
+	break;
+	
 	case "get_mouse_coords":
 		console_text += "(" + string(mouse_x) + "," + string(mouse_y) + ")\n";
 		

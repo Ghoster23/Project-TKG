@@ -55,6 +55,9 @@ command_help[17]="instance_set_var(instance_id,variable_name,value)-> Sets the v
 command_list[18]="instance_track_var";
 command_help[18]="instance_track_var(instance_id,variable_name)-> Creates a window that tracks the instance variable if none exists or adds it to an existing tracker";
 
+command_list[19]="debug_overlay";
+command_help[19]="debug_overlay() -> toggles the display of the debug overlay";
+
 number_of_commands = array_length_1d(command_list);
 
 

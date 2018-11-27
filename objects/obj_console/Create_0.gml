@@ -1,6 +1,3 @@
-/// @description Insert description here
-// You can write your code in this editor
-
 /*
 ___________________________| ADD A NEW COMMAND! |__________________________________________
 
@@ -38,6 +35,7 @@ scroll_max_offset = 0;
 
 scr_console_commands();
 
+db_overlay = false;
 																	
 //================ commandline bar =====================================
 cmdline_left   = display_w - console_w;
