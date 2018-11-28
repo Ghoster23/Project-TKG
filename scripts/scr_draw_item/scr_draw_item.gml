@@ -22,9 +22,11 @@ var alpha = argument7;
 
 switch(type){
 	default:
-		draw_sprite_ext(global.ds_grid_items[# 1, global.item_type_ind[type] + 1],
-						global.ds_grid_items[# 2, global.item_type_ind[type] + 1],
-						xx, yy, xscale, yscale, 0, c_white, 1);
+		var     ind = global.item_type_ind[type];
+		var spr_ind = global.ds_grid_items[# 1, ind + item];
+		var img_ind = global.ds_grid_items[# 2, ind + item];
+		
+		draw_sprite_ext(spr_ind, img_ind, xx, yy, xscale, yscale, 0, c_white, 1);
 	break;
 	
 	case item_type.heart:

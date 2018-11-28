@@ -25,7 +25,7 @@ while(!file_text_eof(dialg_file)){
 	//lines follow the format:   id - name - text - tag
 	//example:                  "line","Bob","Hi!","0" 
 	
-	//go through the 4 collums of the grid
+	//go through the 4 column of the grid
 	line=file_text_read_string(dialg_file);
 	index=1;
 	count=0;

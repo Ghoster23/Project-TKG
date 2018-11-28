@@ -69,7 +69,7 @@ if(ind != -1){
 	
 			case item_type.tl_n_wep:
 				if(amount == -1){
-					return [type,weapon.item,16];
+					return [type,wep_type,16];
 				}else {
 					if(item < 0){
 						item = irandom(scr_item_type_count_items(type) - 1);

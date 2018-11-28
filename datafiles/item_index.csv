@@ -1,26 +1,26 @@
-0;1;
+0;1;0
 "Map";"spr_i_unique_consume";0
-1;2;
+1;2;0
 "Cookie";"spr_i_food";0
 "Apple";"spr_i_food";1
-2;6;
+2;6;0
 "Elixir of Life";"spr_i_potion_flask";0
 "Crystal Clear";"spr_i_potion_flask";0
 "Nightshade Juice";"spr_i_potion_flask";0
 "Immunazation of the Void";"spr_i_potion_flask";0
 "Compass Concoction";"spr_i_potion_flask";0
 "Mango Brew";"spr_i_potion_flask";0
-3;6;
+3;6;0
 "Pawn";"spr_i_chess_piece";0
 "Tower";"spr_i_chess_piece";1
 "Knight";"spr_i_chess_piece";2
 "Bishop";"spr_i_chess_piece";3
 "Queen";"spr_i_chess_piece";4
 "King";"spr_i_chess_piece";5
-4;2;
+4;2;0
 "Pisces";"spr_i_constellation";0
 "Andromeda";"spr_i_constellation";1
-5;9;
+5;9;0
 "Wood Stick";"spr_i_tl_n_wep";0
 "Wood Sword";"spr_i_tl_n_wep";1
 "Damaged Wooden Sword";"spr_i_tl_n_wep";2
@@ -30,9 +30,9 @@
 "Bow";"spr_i_tl_n_wep";6
 "Jason's Greatsword";"spr_i_tl_n_wep";7
 "Luna's Umbrella";"spr_i_tl_n_wep";8
-6;1;
+6;1;0
 "Frozone";"spr_i_active";0
-7;11;
+7;11;0
 "Crown of Thorns";"spr_i_equip";0
 "Rod of Asclepius";"spr_i_equip";1
 "Styx's Water";"spr_i_equip";2
@@ -44,13 +44,14 @@
 "Sandals of Hermes";"spr_i_equip";8
 "Shield of Zeus";"spr_i_equip";9
 "Crystal Bubble";"spr_i_equip";10
-8;4;
+8;4;0
 "Slime Ball";"spr_i_drop";0
 "Bat Wing";"spr_i_drop";1
 "Enchanted Cloth";"spr_i_drop";2
 "Bone";"spr_i_drop";3
-9;2;
-"Half Heart";"spr_i_heart";0
-"Heart";"spr_i_heart";1
-10;1;
+9;3;0
+"Heart";"spr_i_heart";0
+"Armor";"spr_i_armor";0
+"Heart Container";"spr_i_heart";0
+10;1;0
 "Coin";"spr_i_coin";0
