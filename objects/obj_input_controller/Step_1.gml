@@ -1,7 +1,7 @@
 input = false;
 text = "";
 
-if(instance_exists(obj_console) and obj_console.show_log){
+if(instance_exists(obj_console) and obj_console.selected){
 	for(var i = 0; i < key_id.count; i++){
 		global.key_active[i] = false;
 	}

@@ -73,3 +73,7 @@ global.ds_grid_skills = load_data_to_grid(4,9,0,0,"skills.csv");
 ///Items
 global.ds_grid_items = load_data_to_grid(3,56,0,0,"item_index.csv");
 global.item_type_ind = scr_item_type_get_indexes();
+
+///Loot Table
+global.ds_grid_loot_table = load_data_to_grid(8,8,0,0,"loot_table.csv");
+global.loot_table_ind     = scr_loot_table_indexes();
