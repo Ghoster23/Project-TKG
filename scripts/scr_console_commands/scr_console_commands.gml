@@ -58,6 +58,9 @@ command_help[18]="instance_track_var(instance_id,variable_name)-> Creates a wind
 command_list[19]="debug_overlay";
 command_help[19]="debug_overlay() -> toggles the display of the debug overlay";
 
+command_list[20]="check_controller";
+command_help[20]="check_controller() -> checks for controller connection";
+
 number_of_commands = array_length_1d(command_list);
 
 

@@ -422,6 +422,11 @@ switch(command){
 		
 		#endregion
 	break;
+	
+	case "check_controller":
+		obj_input_controller.check_controller = true;
+		console_text +="Checking Controller connection:\n";
+	break;
 }
 
 scr_scroll2max();
