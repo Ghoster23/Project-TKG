@@ -8,7 +8,7 @@ if(not global.pause){
 				if(not player_owned){
 					angle = owner.wep_dir;
 				}else {
-					angle = point_direction(x,y,obj_cursor.ir_mx,obj_cursor.ir_my);
+					angle = point_direction(x,y,obj_cursor.x,obj_cursor.y);
 				}
 				#endregion
 			

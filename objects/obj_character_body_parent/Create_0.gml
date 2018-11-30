@@ -71,7 +71,7 @@ dir   = 0;
 #endregion
 
 #region Appearence
-image_speed =   1;
+image_speed =   0.6;
 spr_side    =   1;
 rotation    =   0;
 is          = 0.4;

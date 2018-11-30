@@ -10119,6 +10119,14 @@
             }
         },
         {
+            "Key": "d7b32a20-44fe-4126-8e58-39343162ca98",
+            "Value": {
+                "id": "f823ebcd-822a-4397-8c79-c935e82ccb23",
+                "resourcePath": "objects\\obj_temp_check_controller_button\\obj_temp_check_controller_button.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d80228a5-f8f7-4a95-bf3f-5c06defea638",
             "Value": {
                 "id": "1c6f65c1-cdf3-431d-8a81-1e62b5d68705",
@@ -10628,6 +10636,14 @@
                 "id": "469ac0b2-a742-41c0-8145-a7c94a5f7115",
                 "resourcePath": "views\\e3750357-177a-44fc-b9ee-db410506b413.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e37b0731-14f2-4c11-a071-85438e1a72bb",
+            "Value": {
+                "id": "14a9241f-45c5-405f-a082-94264c2a72ad",
+                "resourcePath": "sprites\\spr_temp_check_controller_button\\spr_temp_check_controller_button.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
