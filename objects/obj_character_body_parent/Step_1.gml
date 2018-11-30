@@ -1,5 +1,5 @@
 if(not global.pause){
-	rotation = point_direction(x,y,obj_cursor.ir_mx,obj_cursor.ir_my);
+	rotation = point_direction(x,y,obj_cursor.x,obj_cursor.y);
 	input    = obj_input_controller.input;
 	
 	//End Pause

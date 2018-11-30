@@ -12,7 +12,7 @@ if(window_get_fullscreen()){
 switch room {
 	case rm_level:
 	case rm_lvl_editor_test:
-	case rm_CH_boss:
+
 		wd = lvl_view_wd;
 		hg = lvl_view_hg;
 		

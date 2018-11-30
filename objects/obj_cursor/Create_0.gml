@@ -5,3 +5,4 @@ cursor = true;
 holder = [-1,-1,-1];
 
 player = noone;
+c_rot = 0;
