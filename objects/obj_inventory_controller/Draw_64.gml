@@ -17,13 +17,13 @@ if(room == rm_level || room == rm_lvl_editor_test){
 		}
 	
 		///Inventory
-		scr_inventory_window(inv_x, inv_y, r);
+		scr_inventory_window(inv_x, inv_y, m);
 		
 		///Quick Slots
-		scr_quick_slots(qa_x, qa_y, r);
+		scr_quick_slots(qa_x, qa_y, m);
 		
 		///Equipment
-		scr_stats_equips_window(equip_x, equip_y, r);
+		scr_stats_equips_window(equip_x, equip_y, m);
 		
 		
 		if(text != ""){

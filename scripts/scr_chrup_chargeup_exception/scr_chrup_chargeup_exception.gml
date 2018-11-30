@@ -3,6 +3,7 @@ var skill_id = skills[charging];
 
 switch skill_id {	
 	case scr_skill_chain_throw:
+	case scr_skill_throw:
 		executing = charging;
 		charging  = -1;
 		

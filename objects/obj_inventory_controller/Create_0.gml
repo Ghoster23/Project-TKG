@@ -54,7 +54,7 @@ vc = global.gui_HG / 2;
 
 //Scale
 m = global.gui_WD / global.roomwd;
-r = m * 1.8;
+r = m;
 		
 //Placements
 ///Inventory

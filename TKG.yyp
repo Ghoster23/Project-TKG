@@ -2807,6 +2807,14 @@
             }
         },
         {
+            "Key": "3d12f19d-8e54-4576-8e02-d36b73d86d51",
+            "Value": {
+                "id": "c794cd2c-e838-4122-b7f5-5c0e91c949cc",
+                "resourcePath": "views\\3d12f19d-8e54-4576-8e02-d36b73d86d51.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "3d4dfe82-03c0-4ea4-9653-542b6023a9fb",
             "Value": {
                 "id": "11c395e4-237a-4654-ab70-126642ca5fde",
@@ -8751,14 +8759,6 @@
             }
         },
         {
-            "Key": "bcca9faf-3f95-421b-982d-77b6612cc8b9",
-            "Value": {
-                "id": "66b32770-14c0-4a10-b9bb-cf1e8e09290e",
-                "resourcePath": "objects\\obj_hspider_old\\obj_hspider_old.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "bd1ba7ca-71c9-489d-a147-a911dbdded65",
             "Value": {
                 "id": "25c45ec9-977c-45a2-add7-d40bcad69130",
@@ -10895,6 +10895,14 @@
             }
         },
         {
+            "Key": "e8d8ea58-8982-4726-abf0-33086db3e540",
+            "Value": {
+                "id": "e583213f-26cf-419b-ae5f-2d989f476d6f",
+                "resourcePath": "scripts\\scr_skill_throw\\scr_skill_throw.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e8fae111-2172-4175-be69-a0bb31c868c6",
             "Value": {
                 "id": "0814a99c-0c7c-4c05-abe8-2c8c594ebc18",
@@ -12150,6 +12158,7 @@
         "76a7930e-684a-4e9b-86e5-ccf578da4f4b",
         "1d564b10-2530-43fa-a19a-8f934d5dcd73",
         "e08aeb8a-cee1-432b-8f55-81d99ac35b3d",
+        "e8d8ea58-8982-4726-abf0-33086db3e540",
         "19645cfc-c087-481a-b7ca-06e50e05bc86",
         "f554a0da-5a10-4bc7-8866-6761a8034015",
         "fc78f019-efd8-45c0-b439-88c0381c2377",

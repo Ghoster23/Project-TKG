@@ -40,13 +40,13 @@ if(obj_ig_menu_controller.state == "closed"){
 		alarm[1] = 0.3 * room_speed;
 	}
 	
-	inv_x   = -inv_wd * r; //Reset inv_x
+	inv_x   = -inv_wd * m; //Reset inv_x
 
 	///Quick Access
-	qa_x    = inv_x + (inv_wd / 2 - qa_wd / 2) * r;
+	qa_x    = inv_x + (inv_wd / 2 - qa_wd / 2) * m;
 
 	///Stats & Equipment
-	equip_x = hc * 2 - inv_x - inv_wd * r;
+	equip_x = hc * 2 - inv_x - inv_wd * m;
 	
 }else if(obj_ig_menu_controller.state == "inv"){
 	mx = device_mouse_x_to_gui(0);
@@ -120,17 +120,17 @@ if(obj_ig_menu_controller.state == "closed"){
 	
 		if(mx != prev_mx && my != prev_my){
 			//Inventory
-			if(inv_x < mx && mx < inv_x + inv_wd * r &&
-			   inv_y < my && my < inv_y + inv_hg * r){
+			if(inv_x < mx && mx < inv_x + inv_wd * m &&
+			   inv_y < my && my < inv_y + inv_hg * m){
 				for(i = 0; i < 9; i++){			
 					var j = i mod 3;
 					var k = i div 3;
 			
-					var xx = inv_x + 8  * r + (40 * j) * r;
-					var yy = inv_y + 18 * r + (40 * k) * r;
+					var xx = inv_x + 8  * m + (40 * j) * m;
+					var yy = inv_y + 18 * m + (40 * k) * m;
 			
-					var xx_ = xx + 32 * r;
-					var yy_ = yy + 32 * r;
+					var xx_ = xx + 32 * m;
+					var yy_ = yy + 32 * m;
 			
 					//MOUSE
 					if(xx < mx && mx < xx_ && yy < my && my < yy_){
@@ -140,28 +140,28 @@ if(obj_ig_menu_controller.state == "closed"){
 				}
 	
 			//Consumable Slot
-			}else if(qa_x + 13 * r < mx && mx < qa_x + 44 * r &&
-			         qa_y + 23 * r < my && my < qa_y + 55 * r){
+			}else if(qa_x + 13 * m < mx && mx < qa_x + 44 * m &&
+			         qa_y + 23 * m < my && my < qa_y + 55 * m){
 				selected = consumable;
 	
 			//Tool Slot
-			}else if(qa_x + 49 * r < mx && mx < qa_x + 80 * r &&
-			         qa_y + 23 * r < my && my < qa_y + 55 * r){
+			}else if(qa_x + 49 * m < mx && mx < qa_x + 80 * m &&
+			         qa_y + 23 * m < my && my < qa_y + 55 * m){
 				selected = tool_slot;
 	
 			//Equipment
-			}else if(gui_WD - inv_x - inv_wd * r < mx && 
+			}else if(gui_WD - inv_x - inv_wd * m < mx && 
 			         mx < gui_WD - inv_x &&
-					 inv_y < my && my < inv_y + inv_hg * r){
+					 inv_y < my && my < inv_y + inv_hg * m){
 					 
 				for(i = 0; i < 3; i++){
 					var type = inventory[# 0, 8 + i];
 			
-					var xx = gui_WD - inv_x - inv_wd * r + 8 * r;
-					var yy = inv_y    + 18 * r + (40 * i) * r;
+					var xx = gui_WD - inv_x - inv_wd * m + 8 * m;
+					var yy = inv_y    + 18 * m + (40 * i) * m;
 			
-					var xx_ = xx + 32 * r;
-					var yy_ = yy + 32 * r;
+					var xx_ = xx + 32 * m;
+					var yy_ = yy + 32 * m;
 			
 					//MOUSE
 					if(xx < mx && mx < xx_ && yy < my && my < yy_){
@@ -256,12 +256,12 @@ if(obj_ig_menu_controller.state == "closed"){
 			}
 		}
 	}else {
-		inv_x   = scr_approach(inv_x,0,8*r);
+		inv_x   = scr_approach(inv_x,0,8*m);
 
 		///Quick Access
-		qa_x    = inv_x + (inv_wd / 2 - qa_wd / 2) * r;
+		qa_x    = inv_x + (inv_wd / 2 - qa_wd / 2) * m;
 
 		///Stats & Equipment
-		equip_x = hc * 2 - inv_x - inv_wd * r;
+		equip_x = hc * 2 - inv_x - inv_wd * m;
 	}
 }
