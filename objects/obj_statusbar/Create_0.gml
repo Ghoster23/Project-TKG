@@ -19,7 +19,7 @@ state = 0;
 counter = 0;
 
 start_x = 8;
-start_y = 24;
+start_y = 28;
 
 status_wd = sprite_get_width(spr_status_regen) + 2;
 status_hg = sprite_get_height(spr_status_regen);

@@ -27,12 +27,17 @@ for(var i = 0; i < 2; i++){
 		selected = i + 12;
 	}
 	
+	if(i + 12 == selected){
+		draw_circle(xx + sl_sd / 2, yy + sl_sd / 2, sl_sd/2, true);
+	}
+	
 	#region Key-Bind tag
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
+	draw_set_color(c_black);
 	
-	xx += 16;
-	yy += 39;
+	xx += 16 * scale;
+	yy += 39 * scale;
 	
 	if(not i){
 		var kid = global.key_binds[key_id.consume];
@@ -40,8 +45,9 @@ for(var i = 0; i < 2; i++){
 		var kid = global.key_binds[key_id.utilize];
 	}
 	
-	draw_text_transformed(xx,yy,scr_keyname(kid),scale,scale,0);
+	draw_text(xx,yy,scr_keyname(kid));
 	
+	draw_set_color(c_white);
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
 	#endregion

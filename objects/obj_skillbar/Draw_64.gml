@@ -15,8 +15,8 @@ if(obj_player_hud.visible){
 			var alr = equiped.alarm[i];
 			var cd  = equiped.cds[i] * room_speed;
 			
-			var xx = (start_x + 40 + 32 * cnt) * m;
-			var yy = gui_HG - 54 * m;
+			var xx = (start_x + 32 * cnt) * m;
+			var yy = gui_HG - start_y * m;
 				
 			scr_9SB_ext(spr_HUD_9SB, xx, yy, xx + 26 * m, yy + 26 * m, m, m);
 			
@@ -26,11 +26,11 @@ if(obj_player_hud.visible){
 				var p = 0;
 			}
 				
-			draw_sprite_ext(spr, ind, xx + 13 * m, yy + 13 * m, ceil(m / 2), ceil(m / 2), 0, c_black, 1);
+			draw_sprite_ext(spr, ind, xx + 13 * m, yy + 13 * m, m / 2, m / 2, 0, c_black, 1);
 			
 			draw_sprite_part_ext(spr, ind, 0, 32 * p, 32, 32 - 32 * p,
-								 xx + 2.5 * m, yy + 2.5 * m + (32 * p) * ceil(m / 2), 
-								 ceil(m / 2), ceil(m / 2), c_white, 1);
+								 xx + 5 * m, yy + 5 * m + (32 * p) * (m / 2), 
+								 m / 2, m / 2, c_white, 1);
 				
 			switch i {
 				case 0:

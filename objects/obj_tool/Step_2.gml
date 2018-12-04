@@ -8,30 +8,30 @@ if(amount == 0 and player_owned){
 }
 #endregion
 
-if(not global.pause){
-	//Angle to draw at
-	switch state {
-		case 0:
-			image_angle = angle + ang_off;
+//Angle to draw at
+switch state {
+	case 0:
+		image_angle = angle + ang_off;
 			
-			#region Flip weapon
-			if(abs(p_image_angle - image_angle) > 5){
-				if(90 < image_angle && image_angle < 270){
-					image_yscale = -1;
-				}else{
-					image_yscale =  1;
-				}
-		
-				p_image_angle = image_angle;
+		#region Flip weapon
+		if(abs(p_image_angle - image_angle) > 5){
+			if(90 < image_angle && image_angle < 270){
+				image_yscale = -1;
+			}else{
+				image_yscale =  1;
 			}
-			#endregion
-		break;
 		
-		case 1:
-			image_angle = 90;
-		break;
-	}
-	
+			p_image_angle = image_angle;
+		}
+		#endregion
+	break;
+		
+	case 1:
+		image_angle = 90;
+	break;
+}
+
+if(not global.pause){
 	#region Animate
 	switch animation {
 		case 0:

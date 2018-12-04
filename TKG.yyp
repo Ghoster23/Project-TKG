@@ -6263,14 +6263,6 @@
             }
         },
         {
-            "Key": "8322ffb3-6893-462e-9cc5-692df20bda11",
-            "Value": {
-                "id": "3edab086-c948-456f-99d4-e3194e464d2f",
-                "resourcePath": "objects\\obj_currencycounter\\obj_currencycounter.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "83dd4390-b20e-4e09-bf51-088335d48637",
             "Value": {
                 "id": "2d416023-a650-4308-b75f-67e186d8a32f",
@@ -7260,14 +7252,6 @@
                 "id": "e54df102-6324-42fa-825d-f6d2c21c35a1",
                 "resourcePath": "views\\99452a7c-4195-4f8f-a5c9-459afe08e840.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "998a7e98-5784-456a-9bc8-c10bfb9f3cbc",
-            "Value": {
-                "id": "065dc9cf-dd74-412f-b39b-f233d8be99d6",
-                "resourcePath": "sprites\\spr_gui_quickslots\\spr_gui_quickslots.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
@@ -9332,14 +9316,6 @@
                 "id": "832f8225-dd08-43fc-a530-e548c0c5ec23",
                 "resourcePath": "sprites\\spr_mountains_2\\spr_mountains_2.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "c9992f09-3385-41ba-8bdb-8c30c144ebc5",
-            "Value": {
-                "id": "85342653-f283-49ac-a671-d44a6931a303",
-                "resourcePath": "objects\\obj_quickslots\\obj_quickslots.yy",
-                "resourceType": "GMObject"
             }
         },
         {

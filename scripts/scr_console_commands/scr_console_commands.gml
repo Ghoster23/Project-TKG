@@ -61,6 +61,9 @@ command_help[19]="debug_overlay() -> toggles the display of the debug overlay";
 command_list[20]="check_controller";
 command_help[20]="check_controller() -> checks for controller connection";
 
+command_list[21]="entity_status_apply";
+command_help[21]="entity_status_apply(instance,status,duration) -> applies a status effect to an entity";
+
 number_of_commands = array_length_1d(command_list);
 
 

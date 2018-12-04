@@ -95,5 +95,4 @@ if(not global.pause){
 	
 }else {
 	scr_pause_start(alarm_count);
-	
 }

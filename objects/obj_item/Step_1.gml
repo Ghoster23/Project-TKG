@@ -1,6 +1,3 @@
-x = phy_position_x;
-y = phy_position_y;
-
 frame += image_speed;
 
 if(!booted and jump){

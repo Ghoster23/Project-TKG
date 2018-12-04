@@ -21,7 +21,8 @@ if(amount > 0){
 				   temp_item   == item    &&
 				   temp_amount  < maximum &&
 				   type != item_type.potion      && 
-				   type != item_type.chess_piece){
+				   type != item_type.chess_piece &&
+				   type != item_type.tl_n_wep){
 				   
 					temp_amount = amount + temp_amount;
 			

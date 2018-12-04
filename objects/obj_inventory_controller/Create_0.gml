@@ -54,7 +54,7 @@ m = global.gui_WD / camera_get_view_width(view_camera[0]);
 //Placements
 ///Inventory
 inv_x =  8 * m;
-inv_y = 32 * m;
+inv_y = 52 * m;
 
 //Quick Slots
 qa_x = inv_x + 113 * m;

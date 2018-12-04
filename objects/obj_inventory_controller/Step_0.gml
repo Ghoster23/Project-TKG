@@ -6,8 +6,8 @@ gui_HG = global.gui_HG;
 hc = gui_WD / 2;
 vc = gui_HG / 2;
 
-inv_y   = 32 * m;
-equip_y = inv_y + 128 * m;
+inv_y   = 52 * m;
+equip_y = inv_y + 132 * m;
 
 if(obj_ig_menu_controller.state == "closed"){
 	#region Consumable Slot
@@ -48,93 +48,79 @@ if(obj_ig_menu_controller.state == "closed"){
 	equip_x = inv_x;
 	
 }else if(obj_ig_menu_controller.state == "inv"){
-	mx = obj_cursor.x;
-	my = obj_cursor.y;
-	
 	//If inventory animation is done
 	if(inv_x == 8 * m){
 		#region Arrows
 		//UP
 		if(global.key_active[key_id.up] || global.key_active[key_id.m_up]){
-			if(selected < 9){
+			if(selected < 12){
 				if(selected div 3 > 0){
 					selected -= 3;
 				}else {
-					selected = 12 + selected mod 2;
+					selected = 9 + selected mod 3;
 				}
-			}else if(9 < selected && selected < 12){
-				selected -= 1;
-			}else if(selected == 9){
-				selected = 11;
+			}else if(selected == 13){
+				selected = 12;
+			}else if(selected == 12){
+				selected = 13;
 			}
 		}
 	
 		//RIGHT
 		if(global.key_active[key_id.right] || global.key_active[key_id.m_right]){
-			if(selected < 9){
+			if(selected < 12){
 				if(selected mod 3 < 2){
 					selected++;
 				}else {
-					selected = 9 + selected div 3;
+					if(selected == 5){
+						selected = 12;
+					}else if(selected == 8){
+						selected = 13;
+					}else {
+						selected = selected - 2;
+					}
 				}
-			}else if(8 < selected && selected < 12){
-				selected = (selected - 9) * 3;
-			}else if(selected == 12){
-				selected = 13;
-			}else {
-				selected = 12;
+			}else if(11 < selected && selected < 14){
+				selected = (selected - 11) * 3;
 			}
 		}
 	
 		//DOWN
 		if(global.key_active[key_id.down] || global.key_active[key_id.m_down]){
-			if(selected < 9){
-				if(selected div 3 < 2){
+			if(selected < 12){
+				if(selected div 3 < 3){
 					selected += 3;
 				}else {
-					selected = 12 + selected mod 2;
+					selected = selected mod 3;
 				}
-			}else if(8 < selected && selected < 12){
+			}else if(selected == 12){
 				selected += 1;
-			}else {
-				selected = selected mod 2;
+			}else if(selected == 13){
+				selected -= 1;
 			}
 		}
 	
 		//LEFT
 		if(global.key_active[key_id.left] || global.key_active[key_id.m_left]){
-			if(selected < 9){
+			if(selected < 12){
 				if(selected mod 3 > 0){
 					selected--;
 				}else {
-					selected = 9 + selected div 3;
+					if(selected == 3){
+						selected = 12;
+					}else if(selected == 6){
+						selected = 13;
+					}else {
+						selected = selected + 2;
+					}
 				}
-			}else if(8 < selected && selected < 12){
-				selected = (selected mod 3) * 3 + 2;
 			}else if(selected == 12){
-				selected = 13;
-			}else {
-				selected = 12;
+				selected = 5;
+			}else if(selected == 13){
+				selected = 8;
 			}
 		}
 		#endregion
-	
-		if(mx != prev_mx && my != prev_my){
-			mouse_moved = true;
-			
-			if(hc - 32 * m < mx && mx < hc + 32 * m &&
-					 vc - 32 * m < my && my < vc + 32 * m){
-				selected = 16;
-			
-			//Drop
-			}else {
-				selected = -1;
-		
-			}
-		
-			prev_mx = mx;
-			prev_my = my;
-		}
 	
 		if((global.key_active[key_id.m_click] || global.key_active[key_id.m_confirm]) && 
 			not click){

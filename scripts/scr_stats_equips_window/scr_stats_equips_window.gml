@@ -32,28 +32,29 @@ for(var i = 0; i < 3; i++){
 		xx < mx and mx < xx + sl_sd and yy < my and my < yy + sl_sd){
 		selected = i + 9;
 	}
+	
+	if(i + 9 == selected){
+		draw_circle(xx + sl_sd / 2, yy + sl_sd / 2, sl_sd/2, true);
+	}
 }
 
-///Check Stats and draw pips
-for(var i = 0; i < 6; i++){
-	if(i == 0){
-		var st = global.body.stat[i];
-	}else {
-		var st = global.body.stat[i+1]; // Skip HP
-	}
+///Check Stats
+var st = global.body.stat[0];
+
+draw_sprite_ext(spr_gui_statbar, st div 2,
+			            dx + sx, dy + sy, 
+						scale, scale, 0, c_white, 1);
+
+for(var i = 2; i < 7; i++){
+	var st = global.body.stat[i];
 	
-	if(i == 5){
+	if(i == 6){
 		var count = st;
 	}else {
 		var count = st div 2;
-		
 	}
 
-	if(i == 0){
-		draw_sprite_ext(spr_gui_statbar, count,
-			            dx + sx, dy + sy, 
-						scale, scale, 0, c_white, 1);
-	}else if(i < 4){
+	if(i < 4){
 		draw_sprite_ext(spr_gui_statbar, count,
 			            dx + sx, dy + sy + 16 * (i - 1) * scale, 
 						scale, scale, 0, c_white, 1);

@@ -12,7 +12,7 @@ if(type < item_type.count){
 	if(type < item_type.count - 1){
 		var cnt = global.item_type_ind[type+1] - ind;
 	}else {
-		var cnt = ds_grid_height(global.item_type_ind) - ind;
+		var cnt = global.item_type_ind[item_type.count-1] - ind;
 	}
 	
 	if(item < cnt){

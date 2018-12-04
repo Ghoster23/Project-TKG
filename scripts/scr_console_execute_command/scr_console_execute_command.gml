@@ -365,7 +365,7 @@ switch(command){
 			}else {
 				#region Add var to tracker
 				if(ds_list_find_index(fnd.tr_vars,args[1]) != -1){
-					other.console_text += "Variable is already being tracked.";
+					other.console_text += "Variable is already being tracked.\n";
 				}else {
 					ds_list_add(fnd.tr_vars,args[1]);
 					fnd.tr_cnt++;
@@ -414,9 +414,9 @@ switch(command){
 		with(wnd){
 			if(ds_list_find_index(tr_vars,args[1]) != -1){
 				ds_list_delete(tr_vars,args[1]);
-				other.console_text += "The variable has been untracked.";
+				other.console_text += "The variable has been untracked.\n";
 			}else {
-				other.console_text += "The variable is not being tracked.";
+				other.console_text += "The variable is not being tracked.\n";
 			}
 		}
 		
@@ -426,6 +426,41 @@ switch(command){
 	case "check_controller":
 		obj_input_controller.check_controller = true;
 		console_text +="Checking Controller connection:\n";
+	break;
+	
+	case "entity_status_apply":
+		#region Command
+		args = scr_string_split(arguments_string,",");
+		
+		if(array_length_1d(args) != 3){
+			console_text += "Incorrect number of arguments.\n";
+			break;
+		}
+			
+		var iid = int64(args[0]);
+		
+		if(!instance_exists(iid)){
+			console_text += "Instance does not exist.\n";
+			break;
+		}
+		
+		var stt = int64(args[1]);
+		
+		if(stt >= statuses.count){
+			console_text += "The specified status doesn't exist.\n";
+			break;
+		}
+		
+		var cnt = int64(args[2]);
+		
+		if(cnt <= 0){
+			console_text += "The duration must be positive.\n";
+			break;
+		}
+		
+		scr_status_apply(stt,cnt,iid);
+		
+		#endregion
 	break;
 }
 

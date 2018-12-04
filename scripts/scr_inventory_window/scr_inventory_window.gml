@@ -19,7 +19,7 @@ for(var i = 0; i < 9; i++){
 	var k = i div 3;
 			
 	var xx = dx + ( 5 + 34 * j) * scale;
-	var yy = dy + (15 + 46 * k) * scale;
+	var yy = dy + (15 + 36 * k) * scale;
 			
 	if(type != -1){
 		var item   = inventory[# 1, i];
@@ -31,6 +31,10 @@ for(var i = 0; i < 9; i++){
 	if(mouse_moved and
 		xx < mx and mx < xx + sl_sd and yy < my and my < yy + sl_sd){
 		selected = i;
+	}
+	
+	if(i == selected){
+		draw_circle(xx + sl_sd / 2, yy + sl_sd / 2, sl_sd/2, true);
 	}
 }
 
