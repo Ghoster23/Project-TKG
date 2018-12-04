@@ -39,14 +39,6 @@
             }
         },
         {
-            "Key": "00177ef7-23c9-4828-a818-dbac8440709d",
-            "Value": {
-                "id": "c3070736-538e-4049-8480-f1148a8b5dd9",
-                "resourcePath": "sprites\\spr_gui_pip\\spr_gui_pip.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "002302d5-0375-417e-9e7f-79a499643c98",
             "Value": {
                 "id": "85c821fc-d2f2-47d3-9319-189501df6c1d",
@@ -4719,6 +4711,14 @@
             }
         },
         {
+            "Key": "6298fd45-19f7-4ae4-ac52-4925766bfe59",
+            "Value": {
+                "id": "e9f106c6-c6ee-4dbc-b29f-e7dc1a8fd455",
+                "resourcePath": "sprites\\spr_gui_statbar\\spr_gui_statbar.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "62a17cf4-c5c4-4108-a90a-5e1c99932e4f",
             "Value": {
                 "id": "b24ee2cb-fb36-48d8-9507-483f5fd16ad1",
@@ -6811,14 +6811,6 @@
             "Value": {
                 "id": "62be912e-35a1-41b0-9325-0147221f68ec",
                 "resourcePath": "sprites\\spr_chsl_name\\spr_chsl_name.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "901e8e99-ff73-4f4e-9d3c-6760a75b5668",
-            "Value": {
-                "id": "26834933-0f2e-46b7-bd8b-bd103df715f8",
-                "resourcePath": "sprites\\spr_ig_stats\\spr_ig_stats.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -11068,14 +11060,6 @@
                 "id": "500cefdd-9be5-426e-8961-9e4b9fcb5b4d",
                 "resourcePath": "views\\ed24faa3-ca76-4f5a-9364-42ca7f87c97c.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "ed431551-0a7b-46c5-b174-b8958b9dfa1d",
-            "Value": {
-                "id": "0c9ccba2-1a71-40c4-9b77-1095a25159dd",
-                "resourcePath": "sprites\\spr_equipslots\\spr_equipslots.yy",
-                "resourceType": "GMSprite"
             }
         },
         {

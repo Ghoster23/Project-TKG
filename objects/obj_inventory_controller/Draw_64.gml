@@ -1,4 +1,6 @@
 if(room == rm_level || room == rm_lvl_editor_test){
+	var text = "";
+	
 	if obj_ig_menu_controller.state == "inv" {
 		
 		if(selected == -1){
@@ -12,23 +14,19 @@ if(room == rm_level || room == rm_lvl_editor_test){
 			                         inventory[# 1, selected],
 									 inventory[# 2, selected]);
 			text += " x" + string(inventory[# 2, selected]);
-		}else {
-			text = "";
 		}
+	}
 	
-		///Inventory
-		scr_inventory_window(inv_x, inv_y, m);
+	///Inventory
+	scr_inventory_window(inv_x, inv_y, m);
 		
-		///Quick Slots
-		scr_quick_slots(qa_x, qa_y, m);
-		
-		///Equipment
-		scr_stats_equips_window(equip_x, equip_y, m);
+	///Equipment
+	scr_stats_equips_window(equip_x, equip_y, m);
 		
 		
-		if(text != ""){
-			scr_boxed_text( mx + 8 * m, my + 8 * m, c_white, c_white, m, font_chsl_tags, text, spr_HUD_9SB);
-		}
-		
+	if(text != ""){
+		scr_boxed_text( mx + 8 * m, my + 8 * m, c_white, c_white, m, font_chsl_tags, text, spr_HUD_9SB);
 	}
 }
+
+mouse_moved = false;

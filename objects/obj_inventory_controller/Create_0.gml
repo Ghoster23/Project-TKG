@@ -40,36 +40,33 @@ global.erase = false;
 inv_wd   = sprite_get_width( spr_gui_inventory);
 inv_hg   = sprite_get_height(spr_gui_inventory);
 
-///Quick Access window
-qa_wd    = sprite_get_width( spr_gui_quickslots);
-qa_hg    = sprite_get_height(spr_gui_quickslots);
-
 ///Stats & Equipment window
-equip_wd = sprite_get_width( spr_equipslots);
-equip_hg = sprite_get_height(spr_equipslots);
+equip_wd = sprite_get_width( spr_gui_statsequips);
+equip_hg = sprite_get_height(spr_gui_statsequips);
 
 ///GUI
-hc = global.gui_WD  / 2;
+hc = global.gui_WD / 2;
 vc = global.gui_HG / 2;
 
 //Scale
-m = global.gui_WD / global.roomwd;
-r = m;
+m = global.gui_WD / camera_get_view_width(view_camera[0]);
 		
 //Placements
 ///Inventory
-inv_x   = 0;
-inv_y   = vc - ((inv_hg + qa_hg) / 2) * r;
+inv_x =  8 * m;
+inv_y = 32 * m;
 
-///Quick Access
-qa_x    = inv_x + (inv_wd / 2 - qa_wd / 2) * r;
-qa_y    = inv_y + inv_hg * r;
+//Quick Slots
+qa_x = inv_x + 113 * m;
+qa_y = inv_y + 30  * m;
 
 ///Stats & Equipment
-equip_x = hc * 2 - inv_x - inv_wd * r;
-equip_y = inv_y;
+equip_x = inv_x;
+equip_y = inv_y + 128 * m;
 
 prev_mx = 0;
 prev_my = 0;
+mouse_moved = false;
+
 text = "";
 click = false;

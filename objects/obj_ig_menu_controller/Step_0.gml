@@ -43,7 +43,6 @@ if check == true{
 				alarm[0] = 0.5 * room_speed;
 				
 				obj_view.target = noone;
-				obj_view.t_zoom = 1;
 			}
 	
 		break;
@@ -82,7 +81,6 @@ if check == true{
 				alarm[0] = 0.5 * room_speed;
 				
 				obj_view.target = global.body;
-				obj_view.t_zoom = 2;
 			}
 	
 		break;
