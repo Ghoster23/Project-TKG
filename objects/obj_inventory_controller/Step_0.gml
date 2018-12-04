@@ -6,16 +6,19 @@ gui_HG = global.gui_HG;
 hc = gui_WD / 2;
 vc = gui_HG / 2;
 
+inv_y   = 32 * m;
+equip_y = inv_y + 128 * m;
+
 if(obj_ig_menu_controller.state == "closed"){
-	
-	/// Consumable Slot
+	#region Consumable Slot
 	if(global.key_active[key_id.consume] && alarm[1] == -1 && inventory[# 0, consumable] != -1){
 		scr_inv_consume(consumable);
 		
 		alarm[1] = 0.3 * room_speed;
 	}
+	#endregion
 	
-	/// Tool Slot
+	#region Tool Slot
 	if(global.key_active[key_id.utilize] && alarm[1] == -1){
 		var type   = inventory[# 0, tool_slot];
 		var item   = inventory[# 1, tool_slot];
@@ -39,21 +42,18 @@ if(obj_ig_menu_controller.state == "closed"){
 		
 		alarm[1] = 0.3 * room_speed;
 	}
+	#endregion
 	
-	inv_x   = -inv_wd * r; //Reset inv_x
-
-	///Quick Access
-	qa_x    = inv_x + (inv_wd / 2 - qa_wd / 2) * r;
-
-	///Stats & Equipment
-	equip_x = hc * 2 - inv_x - inv_wd * r;
+	inv_x   = (-inv_wd + 38) * m; //Reset inv_x
+	equip_x = inv_x;
 	
 }else if(obj_ig_menu_controller.state == "inv"){
-	mx = device_mouse_x_to_gui(0);
-	my = device_mouse_y_to_gui(0);
+	mx = obj_cursor.x;
+	my = obj_cursor.y;
 	
 	//If inventory animation is done
-	if(inv_x == 0){
+	if(inv_x == 8 * m){
+		#region Arrows
 		//UP
 		if(global.key_active[key_id.up] || global.key_active[key_id.m_up]){
 			if(selected < 9){
@@ -117,61 +117,12 @@ if(obj_ig_menu_controller.state == "closed"){
 				selected = 12;
 			}
 		}
+		#endregion
 	
 		if(mx != prev_mx && my != prev_my){
-			//Inventory
-			if(inv_x < mx && mx < inv_x + inv_wd * r &&
-			   inv_y < my && my < inv_y + inv_hg * r){
-				for(i = 0; i < 9; i++){			
-					var j = i mod 3;
-					var k = i div 3;
+			mouse_moved = true;
 			
-					var xx = inv_x + 8  * r + (40 * j) * r;
-					var yy = inv_y + 18 * r + (40 * k) * r;
-			
-					var xx_ = xx + 32 * r;
-					var yy_ = yy + 32 * r;
-			
-					//MOUSE
-					if(xx < mx && mx < xx_ && yy < my && my < yy_){
-						selected = i;
-				
-					}
-				}
-	
-			//Consumable Slot
-			}else if(qa_x + 13 * r < mx && mx < qa_x + 44 * r &&
-			         qa_y + 23 * r < my && my < qa_y + 55 * r){
-				selected = consumable;
-	
-			//Tool Slot
-			}else if(qa_x + 49 * r < mx && mx < qa_x + 80 * r &&
-			         qa_y + 23 * r < my && my < qa_y + 55 * r){
-				selected = tool_slot;
-	
-			//Equipment
-			}else if(gui_WD - inv_x - inv_wd * r < mx && 
-			         mx < gui_WD - inv_x &&
-					 inv_y < my && my < inv_y + inv_hg * r){
-					 
-				for(i = 0; i < 3; i++){
-					var type = inventory[# 0, 8 + i];
-			
-					var xx = gui_WD - inv_x - inv_wd * r + 8 * r;
-					var yy = inv_y    + 18 * r + (40 * i) * r;
-			
-					var xx_ = xx + 32 * r;
-					var yy_ = yy + 32 * r;
-			
-					//MOUSE
-					if(xx < mx && mx < xx_ && yy < my && my < yy_){
-						selected = 9 + i;
-				
-					}
-				}
-	
-			//Body
-			}else if(hc - 32 * m < mx && mx < hc + 32 * m &&
+			if(hc - 32 * m < mx && mx < hc + 32 * m &&
 					 vc - 32 * m < my && my < vc + 32 * m){
 				selected = 16;
 			
@@ -256,12 +207,9 @@ if(obj_ig_menu_controller.state == "closed"){
 			}
 		}
 	}else {
-		inv_x   = scr_approach(inv_x,0,8*r);
-
-		///Quick Access
-		qa_x    = inv_x + (inv_wd / 2 - qa_wd / 2) * r;
+		inv_x   = scr_approach( inv_x, 8 * m, 8 * m);
 
 		///Stats & Equipment
-		equip_x = hc * 2 - inv_x - inv_wd * r;
+		equip_x = inv_x;
 	}
 }

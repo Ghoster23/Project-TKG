@@ -40,7 +40,6 @@ switch state{
 						
 						if(i == 1){
 							obj_view.target = global.body;
-							obj_view.t_zoom = 2;
 						}else if(i == 3){
 							instance_create_layer(x,y,layer,obj_options_controller);
 						}
