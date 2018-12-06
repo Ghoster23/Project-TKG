@@ -4,8 +4,7 @@ switch(room){
 	case rm_level:
 	case rm_lvl_editor_test:
 		if(not global.pause){
-			draw_sprite_ext(spr_cursor,0,x,y,1, 1,c_rot,c_white,1);
-			c_rot ++;
+			draw_sprite_ext(spr_cursor,0,x,y,1, 1, 0,c_white,1);
 		}
 	break;
 	

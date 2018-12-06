@@ -38,12 +38,12 @@ if(!sb9){
 }
 
 if(spr != -1){
-	draw_sprite_ext(spr, 0, xx, yy, global.cam_ratio, global.cam_ratio, 0, c_white, 1);
+	draw_sprite_ext(spr, 0, xx, yy, global.gui_ratio, global.gui_ratio, 0, c_white, 1);
 }
 
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-draw_text_transformed(xx + wd/2, yy + hg/2, txt, global.cam_ratio, global.cam_ratio, 0);
+draw_text_transformed(xx + wd/2, yy + hg/2, txt, global.gui_ratio, global.gui_ratio, 0);
 
 draw_set_alpha(1);
 

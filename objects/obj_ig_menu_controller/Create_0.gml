@@ -5,7 +5,7 @@ state = "generation"; //State to start in
 
 check = true; //Check for a state change
 
-m = global.cam_ratio; //ratio
+m = global.gui_ratio; //ratio
 
 box_wd = 20; //Animation
 alpha  = 0;

@@ -2,7 +2,7 @@
 if(instance_exists(global.body)){
 	visible = true;
 	
-	m = global.cam_ratio;
+	m = global.gui_ratio;
 	
 	gui_WD = global.gui_WD;
 	gui_HG = global.gui_HG;

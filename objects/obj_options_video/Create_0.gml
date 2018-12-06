@@ -1,6 +1,6 @@
 state="fullscreen";
 
-m  = global.cam_ratio;
+m  = global.gui_ratio;
 hc = global.gui_WD / 2;
 vc = global.gui_HG / 2;
 off = 96;

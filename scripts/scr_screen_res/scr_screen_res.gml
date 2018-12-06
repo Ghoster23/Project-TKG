@@ -1,3 +1,4 @@
+#region App Surface
 application_surface_draw_enable(false);
 
 if(window_get_fullscreen()){
@@ -12,7 +13,6 @@ if(window_get_fullscreen()){
 switch room {
 	case rm_level:
 	case rm_lvl_editor_test:
-
 		wd = lvl_view_wd;
 		hg = lvl_view_hg;
 		
@@ -38,6 +38,13 @@ surface_resize(application_surface, sc_wd, sc_hg);
 
 global.Xoffset = (s_wd - sc_wd)/2;
 global.Yoffset = (s_hg - sc_hg)/2;
+#endregion
+
+#region GUI
+display_set_gui_size(sc_wd,sc_hg);
 
 global.gui_WD = display_get_gui_width();
 global.gui_HG = display_get_gui_height();
+
+global.gui_ratio = 1 + global.gui_WD / 640;
+#endregion
