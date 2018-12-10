@@ -19,8 +19,12 @@ var spr        = argument7;
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
-var wd = (string_width(text)  + 6) * scale;
-var hg = (string_height(text) + 6) * scale;
+var wd = (string_width(text)  + 16) * scale;
+var hg = (string_height(text) + 16) * scale;
+
+if(wd < hg){
+	wd = hg;
+}
 
 draw_set_color(box_color);
 

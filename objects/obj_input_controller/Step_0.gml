@@ -1,7 +1,3 @@
-/// @description Insert description here
-// You can write your code in this editor
-
-
 //if check controller was triggered check controllers connected
 if(check_controller == true){
 	check_controller = false;

@@ -54,7 +54,7 @@ switch wep_state {
 			
 			shader_reset();
 			return;
-		}else {
+		}else if(weapon != noone){
 			switch(weapon.item){
 				default:
 					image_index = 4;

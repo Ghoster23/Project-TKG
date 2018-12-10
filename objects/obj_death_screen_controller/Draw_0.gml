@@ -4,8 +4,6 @@ draw_set_halign(fa_left);
 
 draw_text_transformed(x,y-48,"Enemies defeated: " + string(global.kld_enemies),1,1,0);
 
-draw_text_transformed(x,y-16,"Coins Collected: " + string(global.total_coins),1,1,0);
-
 draw_text_transformed(x,y+16,"Level Reached: " + string(global.level),1,1,0);
 
 draw_text_transformed(x,y+48,"Character Level: " + string(global.p_level),1,1,0);

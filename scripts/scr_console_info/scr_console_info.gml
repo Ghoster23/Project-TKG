@@ -12,8 +12,8 @@ switch(argument0){
 	break;
 	
 	case "item types":
-		console_text += " 0 - unique_consumable\n 1 - food\n 2 - potion\n 3 - chess_piece\n 4 - constellation\n" +
-						" 5 - tl_n_wep\n 6 - active\n 7 - equipable\n 8 - drop\n 9 - heart\n 10 - currency\n"    +
+		console_text += " 0 - unique_consumable\n 1 - food\n 2 - potion\n 3 - chess_piece\n" +
+						" 4 - tl_n_wep\n 5 - equipable\n 6 - drop\n 7 - heart\n"    +
 						"\n Use list_items(type) for a list of the items of a given type.\n";
 	break;
 	

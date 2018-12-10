@@ -7,4 +7,4 @@ event_inherited();
 mp_grid = -1;
 
 offset = true;
-offs = 32;
+offs   = sprite_height - sprite_yoffset;

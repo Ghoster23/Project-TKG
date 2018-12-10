@@ -6,31 +6,31 @@
 //Left
 if argument0 = (vk_left)
 {
-    return "Left";
+    return "<-";
 }
 
 //Right
 if argument0 = (vk_right)
 {
-    return "Right";
+    return "->";
 }
 
 //Up
 if argument0 = (vk_up)
 {
-    return "Up";
+    return "^\n|";
 }
 
 //Down
 if argument0 = (vk_down)
 {
-    return "Down";
+    return "|\nv";
 }
 
 //Enter
 if argument0 = (vk_enter)
 {
-    return "Enter";
+    return "<_|";
 }
 
 //Escape
@@ -42,19 +42,19 @@ if argument0 = (vk_escape)
 //Space
 if argument0 = (vk_space)
 {
-    return "Space";
+    return "|___|";
 }
 
 //Shift
 if argument0 = (vk_shift) or argument0 = (vk_lshift) or argument0 = (vk_rshift)
 {
-    return "Shift";
+    return "Shf";
 }
 
 //Control
 if argument0 = (vk_control) or argument0 = (vk_rcontrol) or argument0 = (vk_lcontrol)
 {
-    return "Control";
+    return "Ctrl";
 }
 
 //Alt
@@ -66,13 +66,13 @@ if argument0 = (vk_alt) or argument0 = (vk_ralt) or argument0 = (vk_lalt)
 //Backspace
 if argument0 = (vk_backspace)
 {
-    return "Backspace";
+    return "<==";
 }
 
 //Tab
 if argument0 = (vk_tab)
 {
-    return "Tab";
+    return "|<--\n-->|";
 }
 
 //Home
@@ -90,25 +90,25 @@ if argument0 = (vk_end)
 //Delete
 if argument0 = (vk_delete)
 {
-    return "Delete";
+    return "Del";
 }
 
 //Insert
 if argument0 = (vk_insert)
 {
-    return "Insert";
+    return "Ins";
 }
 
 //Page Up
 if argument0 = (vk_pageup)
 {
-    return "Page Up";
+    return "Pg ^";
 }
 
 //Page Down
 if argument0 = (vk_pagedown)
 {
-    return "Page Down";
+    return "Pg v";
 }
 
 //Pause
@@ -198,91 +198,91 @@ if argument0 = (vk_f12)
 //Numpad 0
 if argument0 = (vk_numpad0)
 {
-    return "Numpad 0";
+    return "Nmp 0";
 }
 
 //Numpad 1
 if argument0 = (vk_numpad1)
 {
-    return "Numpad 1";
+    return "Nmp 1";
 }
 
 //Numpad 2
 if argument0 = (vk_numpad2)
 {
-    return "Numpad 2";
+    return "Nmp 2";
 }
 
 //Numpad 3
 if argument0 = (vk_numpad3)
 {
-    return "Numpad 3";
+    return "Nmp 3";
 }
 
 //Numpad 4
 if argument0 = (vk_numpad4)
 {
-    return "Numpad 4";
+    return "Nmp 4";
 }
 
 //Numpad 5
 if argument0 = (vk_numpad5)
 {
-    return "Numpad 5";
+    return "Nmp 5";
 }
 
 //Numpad 6
 if argument0 = (vk_numpad6)
 {
-    return "Numpad 6";
+    return "Nmp 6";
 }
 
 //Numpad 7
 if argument0 = (vk_numpad7)
 {
-    return "Numpad 7";
+    return "Nmp 7";
 }
 
 //Numpad 8
 if argument0 = (vk_numpad8)
 {
-    return "Numpad 8";
+    return "Nmp 8";
 }
 
 //Numpad 9
 if argument0 = (vk_numpad9)
 {
-    return "Numpad 9";
+    return "Nmp 9";
 }
 
 //Multiply
 if argument0 = (vk_multiply)
 {
-    return "Multiply";
+    return "Nmp *";
 }
 
 //Divide
 if argument0 = (vk_divide)
 {
-    return "Divide";
+    return "Nmp /";
 }
 
 //Add
 if argument0 = (vk_add)
 {
-    return "Add";
+    return "Nmp +";
 }
 
 //Subtract
 if argument0 = (vk_subtract)
 {
-    return "Subtract";
+    return "Nmp -";
 }
 
 //Decimal
 if argument0 = (vk_decimal)
 {
-    return "Decimal";
+    return "Nmp .";
 }
 
 if argument0 == (mb_left){

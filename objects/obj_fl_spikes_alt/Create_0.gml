@@ -13,4 +13,6 @@ dmg_dl = noone;
 
 alarm[0] = 2 * room_speed;
 
+layer = "BH";
+
 scr_pausable_init(1);

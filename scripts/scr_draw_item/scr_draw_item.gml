@@ -42,13 +42,9 @@ switch(type){
 			break;
 		}
 	break;
-	
-	case item_type.currency:
-		draw_sprite_ext(spr_i_coin,frame,xx,yy,xscale,yscale,0,c_white,1);
-	break;
 }
 
-if(type < item_type.heart){
+if(type < item_type.heart and amount > 1){
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_bottom);
 	draw_set_font(font_chsl_tags);

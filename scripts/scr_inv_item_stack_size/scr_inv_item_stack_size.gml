@@ -18,16 +18,8 @@ switch(type){
 		return 1;		
 	break;
 					
-	case item_type.constellation:
-		return 1;
-	break;
-					
 	case item_type.tl_n_wep:
 		return 32;		
-	break;
-	
-	case item_type.active:
-		return 8;
 	break;
 					
 	case item_type.equipable:
@@ -39,9 +31,6 @@ switch(type){
 	break;
 	case item_type.heart:
 		return 4;
-	break;
-	case item_type.currency:
-		return 16;
 	break;
 }
 }

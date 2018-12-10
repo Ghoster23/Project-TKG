@@ -28,7 +28,7 @@ if(not global.pause and on){
 		#endregion
 		
 		#region yy
-		var dy = yy - tl.gy;
+		var dy = yy - flr.gy;
 		
 		if(dy >= 0){
 			var bys =   0;
@@ -46,7 +46,7 @@ if(not global.pause and on){
 			
 			for(var j = 0; j < xl; j++){
 				if(col_line[bxs + j]){
-					with tl {
+					with flr {
 						sqrs[((tys + i) div sqr_v_cells) * h_sqrs + (txs + j) div sqr_h_cells] = true;
 						var ind = (tys + i) * cells_p_line + txs + j;
 						

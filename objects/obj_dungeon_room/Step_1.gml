@@ -91,14 +91,6 @@ switch state {
 			
 			#region On clear effects
 			if(instance_exists(obj_inventory_controller)){
-				//Charge up on-hand active item
-				var in_slot = scr_inv_get_pos(obj_inventory_controller.tool_slot);
-			
-				if(in_slot[0] == item_type.active &&
-				   in_slot[2] < scr_active_get_data(in_slot[1])){
-					scr_inv_set_pos(in_slot[0],in_slot[1],in_slot[2] + 1,obj_inventory_controller.tool_slot);
-				}
-			
 				//Activate equipment effects on room clear
 				var equiped = obj_inventory_controller.eq_active;
 	

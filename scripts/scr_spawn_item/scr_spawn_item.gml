@@ -52,9 +52,6 @@ with spawn {
 				image_speed = 0.4;
 			}
 		break;
-		case item_type.currency:
-			image_speed = 0.4;
-		break;
 	}
 	
 	visible = true;

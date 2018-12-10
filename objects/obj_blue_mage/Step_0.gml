@@ -2,7 +2,7 @@ event_inherited();
 
 ///Exist
 if go and not global.pause{
-	scr_pause_end(10);
+	scr_pause_end(alarm_count);
 
 	//states for enemy behaviour
 	switch(state){
@@ -102,6 +102,6 @@ if go and not global.pause{
 	}   
 
 }else if go{
-	scr_pause_start(10);
+	scr_pause_start(alarm_count);
 	
 }

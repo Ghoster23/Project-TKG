@@ -1,6 +1,10 @@
 switch(room){
 	case rm_level:
 		level_state = 0;
+		
+		if(not instance_exists(obj_draw_controller)){
+			instance_create_layer(x,y,layer,obj_draw_controller);
+		}
 	
 		//Level Global Variables Init
 		#region Map
@@ -14,6 +18,11 @@ switch(room){
 	break;
 	
 	case rm_lvl_editor_test:
+		if(not instance_exists(obj_draw_controller)){
+			instance_create_layer(x,y,layer,obj_draw_controller);
+		}
+		
+		//Level Global Variables Init
 		#region Map
 		//Region
 		global.region = 0;
@@ -24,10 +33,5 @@ switch(room){
 		#endregion
 		
 		global.act_enemy_list = ds_list_create();
-	break;
-	
-	case rm_CH_boss:
-		instance_create_layer(0,0,"Instances",obj_draw_controller);
-		
 	break;
 }

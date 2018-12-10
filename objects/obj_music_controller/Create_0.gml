@@ -1,5 +1,1 @@
-/// @description Insert description here
-// You can write your code in this editor
-
-
-
+if(scr_unique_inst()) {exit;}

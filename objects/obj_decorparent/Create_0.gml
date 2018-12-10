@@ -4,3 +4,5 @@
 // Inherit the parent event
 event_inherited();
 
+offset = true;
+offs   = sprite_height - sprite_yoffset;

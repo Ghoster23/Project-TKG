@@ -15,7 +15,7 @@ zone  = 0;
 
 rm_count = 16;
 
-specials = [1,1,1,1];
+specials = [1];
 
 gen_col = 8;
 gen_row = 8;
@@ -30,10 +30,7 @@ mp_grid = 0;
 mp_path = path_add();
 #endregion
 
-comp = 0;
 
-
-comp += 7;
-
-
-comp += 12;
+if(not instance_exists(obj_inventory_controller)){
+	instance_create_layer(x,y,layer,obj_inventory_controller);
+}

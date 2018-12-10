@@ -27,14 +27,6 @@ switch state {
 		#endregion
 		
 		scr_mech_toggle_region();
-		
-		/*
-		#region Clear fluids
-		surface_set_target(global.fluid_surface);
-		draw_clear_alpha(c_black,0);
-		surface_reset_target();
-		#endregion
-		*/
 	break;
 	
 	case 4: //Closed

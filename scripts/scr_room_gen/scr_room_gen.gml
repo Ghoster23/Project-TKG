@@ -29,11 +29,7 @@ switch type {
 	default:
 	break;
 	
-	//shop rooms
 	case 15:
-	case 16:
-	case 17:
-	case 18:
 		_typ = "base";
 	break;
 }
@@ -48,18 +44,8 @@ switch type {
 	break;
 	
 	//item room
-	case 16:
+	case 15:
 		_rm_insts[_rm_count] = instance_create_layer(gx+(roomwd/2)-16,gy-16+(roomhg/2),"Instances",obj_pedestal);
-		_rm_count++;
-	break;
-	//special room
-	case 17:
-		_rm_insts[_rm_count] = instance_create_layer(gx+(roomwd/2),gy+(roomhg/2),"Instances",obj_beacon);
-		_rm_count++;
-	break;
-	//boss room	
-	case 18:
-		_rm_insts[_rm_count] = instance_create_layer(gx+(roomwd/2),gy+(roomhg/2),"Instances",obj_bdoor);
 		_rm_count++;
 	break;
 }

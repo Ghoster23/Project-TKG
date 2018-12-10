@@ -53,7 +53,7 @@ if(ds_exists(ds_depthgrid, ds_type_grid)){
 	
 	with(obj_depth_parent){
 		if(visible){
-			var layer_offs = (layer - other.layers[0]) * room_height;
+			var layer_offs = (other.layers[other.l_count-1] - layer) * room_height;
 		
 			depthgrid[# 0, yy] = id;
 			
@@ -80,7 +80,7 @@ if(ds_exists(ds_depthgrid, ds_type_grid)){
 		var instanceY  = ds_depthgrid[# 1, yy];
 		
 		#region Particles
-		if(not part_IF_drawn && instanceY >= -(room_height * PS_layer)){
+		if(not part_IF_drawn && (instanceY >= -(room_height * PS_layer) || yy == instNum - 1)){
 			part_IF_drawn = true;
 			part_system_drawit(global.ps_if);
 		}

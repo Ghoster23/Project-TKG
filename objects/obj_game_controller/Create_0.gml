@@ -1,5 +1,5 @@
 ///Game
-scr_unique_inst();
+if(scr_unique_inst()) {exit;}
 
 //Game pause
 global.pause = false;
@@ -14,11 +14,6 @@ global.kld_enemies = 0;
 global.killer      = 0;
 
 global.act_enemy_list = -1;
-
-//Coins
-global.coins       = 0;
-
-global.total_coins = 0;
 
 ///Player Character
 global.body    =                  obj_body;
@@ -71,7 +66,7 @@ global.ds_grid_tl_n_wep = load_data_to_grid(10,9,0,0,"tools_n_weapons.csv");
 global.ds_grid_skills = load_data_to_grid(4,9,0,0,"skills.csv");
 
 ///Items
-global.ds_grid_items = load_data_to_grid(3,56,0,0,"item_index.csv");
+global.ds_grid_items = load_data_to_grid(3,50,0,0,"item_index.csv");
 global.item_type_ind = scr_item_type_get_indexes();
 
 ///Loot Table

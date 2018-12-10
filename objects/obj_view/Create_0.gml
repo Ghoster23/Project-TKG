@@ -1,4 +1,4 @@
-scr_unique_inst();
+if(scr_unique_inst()) {exit;}
 
 //Dungeon room measurements
 dr_wd = global.roomwd;

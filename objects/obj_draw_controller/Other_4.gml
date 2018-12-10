@@ -3,10 +3,11 @@ cam_wd = camera_get_view_width(camera);
 cam_hg = camera_get_view_height(camera);
 
 layers = layer_get_all();
+l_count = 0;
 
 for(var i = 0; i < array_length_1d(layers); i++){
 	var name = layer_get_name(layers[i]);
-	
+	l_count ++;
 	switch name {
 		case "PS":
 			PS_layer = i;

@@ -14,12 +14,11 @@ if(room == rm_level || room == rm_lvl_editor_test){
 	}
 	
 	///Inventory
-	scr_inventory_window(inv_x, inv_y, m);
-		
-	///Equipment
-	scr_stats_equips_window(equip_x, equip_y, m);		
+	scr_inventory_window(inv_x, inv_y, m);	
 	
 	if obj_ig_menu_controller.state == "inv" {
+		///Equipment
+		scr_stats_equips_window(equip_x, equip_y, m);	
 		
 		if(selected == -1){
 			text = "Drop";

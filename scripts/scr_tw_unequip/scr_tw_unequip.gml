@@ -8,13 +8,11 @@ with global.body {
 	
 	instance_destroy(weapon);
 	
-	weapon = scr_create_tw(global.weapon, -1);
+	weapon = noone;
 }
 
-if(amt < 1){
-	scr_inv_set_pos(-1,-1,-1,obj_inventory_controller.tool_slot);
-}else {
-	scr_inv_set_pos(item_type.tl_n_wep,wep,amt,obj_inventory_controller.tool_slot);
+with(obj_inventory_controller){
+	scr_inv_set_pos(item_type.tl_n_wep,wep,amt,tool_slot + selected_tl);
 }
 
 return false;

@@ -21,7 +21,7 @@ if(visible and obj_player_hud.visible and room == rm_level and global.region){
 			if(info != -1){
 				var typ = info[1];
 				
-				if(i == 1 && j == 1){ typ = 5; }
+				if(i == 1 && j == 1){ typ = 4; }
 			
 				scr_map_room(rm_x,rm_y,i,j,info[0],typ,c_white,false);
 			}

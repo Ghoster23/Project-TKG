@@ -14,7 +14,6 @@ if not global.pause {
 					alarm[0] = 0.33 * room_speed;
 					state = 1;
 				}
-		
 			break;
 			
 			//Charging

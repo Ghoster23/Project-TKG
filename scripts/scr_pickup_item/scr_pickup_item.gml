@@ -84,11 +84,6 @@ if(amount > 0){
 				}
 			break;
 		}
-
-	}else if(type == item_type.currency){
-		global.coins       += amount;
-		global.total_coins += amount;
-		amount = -1;
 	}
 }
 

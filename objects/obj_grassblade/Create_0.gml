@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 offset      = true;
-offs        =  -20;
+offs        = sprite_height/2 - sprite_yoffset;
 
 draw_script=scr_drawwind;
 uTime = shader_get_uniform(sh_wind,"Time");

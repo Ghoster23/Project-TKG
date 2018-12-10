@@ -1,4 +1,4 @@
-scr_unique_inst();
+if(scr_unique_inst()) {exit;}
 
 for(var i = 0; i < 10; i++){
 	anim_off[i] = 0;

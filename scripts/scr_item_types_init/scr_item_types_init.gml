@@ -4,13 +4,10 @@ enum item_type{
 	food,
 	potion,
 	chess_piece,
-	constellation,
 	tl_n_wep,
-	active,
 	equipable,
 	drop,
 	heart,
-	currency,
 	count
 }
 #endregion
@@ -54,14 +51,6 @@ enum chessP {
 }
 #endregion
 
-#region Constellation
-enum constellation{
-	pisces,
-	andromeda,
-	count
-}
-#endregion
-
 #region Tools and Weapons
 enum tl_n_wep {
 	wood_stick,
@@ -100,13 +89,6 @@ enum drops{
 	bat_wing,
 	ench_cloth,
 	bone,
-	count
-}
-#endregion
-
-#region Actives
-enum active {
-	frozone,
 	count
 }
 #endregion

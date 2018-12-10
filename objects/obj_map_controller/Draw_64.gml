@@ -31,7 +31,7 @@ if(room == rm_level && obj_ig_menu_controller.state == "mmap" && state){
 					
 					if(i == c_rid){ 
 						colour = scr_char_color();
-						type   = 5;
+						type   = 4;
 					}
 					
 					scr_map_room(rm_x,rm_y,i div dg_col,i mod dg_col,scr_mm_tile(info[0]),type,colour,true);

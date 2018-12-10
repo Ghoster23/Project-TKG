@@ -18,7 +18,7 @@ var fl_grid = generator.floor_grid;
 //Generate the decor
 #region Plants
 var vegie;
-
+/*
 #region Phase one : the top wall
 //case one the left most tree
 if ((ds_grid_get(fl_grid,gxtile+1,gytile+2) == "blue") and 
@@ -106,6 +106,7 @@ if ((ds_grid_get(fl_grid,gxtile+13,gytile+10) == "blue") and
 		}
 }
 #endregion
+*/
 #endregion
 
 #region Wall Decor

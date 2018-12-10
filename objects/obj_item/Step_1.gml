@@ -21,10 +21,6 @@ if(!booted and jump){
 		case item_type.chess_piece:
 			sprite_index = spr_i_chess_piece;
 		break;
-	
-		case item_type.currency:
-			sprite_index = spr_i_coin;
-		break;
 	}
 	#endregion
 	

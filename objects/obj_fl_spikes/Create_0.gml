@@ -1,11 +1,10 @@
 event_inherited();
 
-offs   =  -32;
-offset = true;
-
 state = 1;
 
 image_speed = 0;
+
+layer = "BH";
 
 damage    = 0;
 kb_amount = 0;

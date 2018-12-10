@@ -1,5 +1,5 @@
 application_surface_draw_enable(false);
-scr_unique_inst();
+if(scr_unique_inst()) {exit;}
 
 //Room measurements
 global.roomwd = 672;

@@ -26,11 +26,11 @@
   
   menuText[3,0] = 9;
   menuText[3,1] = "obj_heart"
-  menuText[3,2] = "obj_coin"
-  menuText[3,3] = "obj_shoptable"
-  menuText[3,4] = "obj_sell_drop"
-  menuText[3,5] = "obj_shopkeep"  
-  menuText[3,6] = "obj_light_test"
+  menuText[3,2] = "obj_light_test"
+  menuText[3,3] = "Cosmetic 3"
+  menuText[3,4] = "Cosmetic 4"
+  menuText[3,5] = "Cosmetic 5"  
+  menuText[3,6] = "Cosmetic 6"
   menuText[3,7] = "Cosmetic 7"
   menuText[3,8] = "Cosmetic 8"
   menuText[3,9] = "Cosmetic 9" 

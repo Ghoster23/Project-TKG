@@ -1,6 +1,6 @@
 #region Update inventory
 if(amount != -1 and player_owned){
-	scr_inv_set_pos(type,item,amount,obj_inventory_controller.tool_slot);
+	scr_inv_set_pos(type,item,amount,slot);
 }
 
 if(amount == 0 and player_owned){

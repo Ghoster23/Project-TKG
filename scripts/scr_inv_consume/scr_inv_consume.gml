@@ -10,22 +10,27 @@ switch(type){
 		scr_unique_consume_effect(item);
 		scr_inv_set_pos(-1,-1,-1,pos);
 	break;
+	
 	case item_type.food:
 		scr_food_effect(item);
-		scr_inv_set_pos(-1,-1,-1,pos);
+		
+		if(amount > 1){
+			scr_inv_set_pos(type,item,amount-1,pos);
+		}else {
+			scr_inv_set_pos(-1,-1,-1,pos);
+		}
 	break;
+	
 	case item_type.potion:
 		scr_potion_effect(item,amount);
 		scr_inv_set_pos(-1,-1,-1,pos);
 	break;
+	
 	case item_type.chess_piece:
 		scr_chessP_effect(item,amount);
 		scr_inv_set_pos(-1,-1,-1,pos);
 	break;
-	case item_type.constellation:
-		scr_constellation_effect(item);
-		scr_inv_set_pos(-1,-1,-1,pos);
-	break;
+	
 	default:
 	break;
 }

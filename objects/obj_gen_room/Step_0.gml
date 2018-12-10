@@ -121,8 +121,9 @@ switch state {
 	case 4:
 		if(not start and (shape == 0 || shape == 1 || shape == 3 || shape == 7)){
 			var sps = generator.specials;
+			var len = array_length_1d(sps);
 			
-			for(var i = 0; i < 3; i++){
+			for(var i = 0; i < len; i++){
 				if(sps[i]){
 					generator.specials[i] -= 1;
 					type = i + 1;

@@ -11,8 +11,6 @@ ________________________________________________________________________________
 image_xscale = 1/2.5;
 image_yscale = 1/2.5;
 
-display_set_gui_size(1920,1080);
-
 display_w = display_get_gui_width();
 display_h = display_get_gui_height();
 

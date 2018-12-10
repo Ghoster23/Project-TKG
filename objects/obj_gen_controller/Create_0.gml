@@ -6,7 +6,7 @@ dungeon = noone;
 
 gen_rooms = [-1];
 
-sp_places = [-1,-1,-1,-1];
+sp_places = [-1];
 
 #region Gen parameters
 level = 0;
@@ -14,7 +14,7 @@ level = 0;
 rm_count = 0;
 rm_gened = 0;
 
-specials = [ 0, 0, 0];
+specials = [ 0];
 
 fin = -1;
 

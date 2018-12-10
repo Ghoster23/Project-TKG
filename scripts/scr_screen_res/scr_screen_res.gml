@@ -47,5 +47,5 @@ display_set_gui_size(sc_wd,sc_hg);
 global.gui_WD = display_get_gui_width();
 global.gui_HG = display_get_gui_height();
 
-global.gui_ratio = 1 + global.gui_WD / 640;
+global.gui_ratio = global.gui_WD / 640;
 #endregion

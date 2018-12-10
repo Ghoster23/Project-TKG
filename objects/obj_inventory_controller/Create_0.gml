@@ -1,18 +1,20 @@
-scr_unique_inst();
-
 // Inventory grid
-inventory = ds_grid_create(3,15);
-ds_grid_set_region(inventory,0,0,2,14,-1);
+inventory = ds_grid_create(3,16);
+
+if(scr_unique_inst()) {exit;}
+
+ds_grid_set_region(inventory,0,0,2,16,-1);
 
 // Enums
 scr_item_types_init();
 
 // Slot IDs
-holder     = 14;
+holder     = 15;
 tool_slot  = 13;
 consumable = 12;
+selected_tl = 0;
 
-selected   = 0;
+selected = 0;
 
 equip = false;
 

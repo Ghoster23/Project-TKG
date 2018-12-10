@@ -20,31 +20,19 @@ if(obj_ig_menu_controller.state == "closed"){
 	
 	#region Tool Slot
 	if(global.key_active[key_id.utilize] && alarm[1] == -1){
-		var type   = inventory[# 0, tool_slot];
-		var item   = inventory[# 1, tool_slot];
-		var amount = inventory[# 2, tool_slot]; 
+		var type = inventory[# 0, tool_slot + selected_tl];
 		
-		switch(type){
-			case item_type.tl_n_wep:
-				if(!equip){
-					equip = scr_tw_equip(item,amount);
-				}else {
-					equip = scr_tw_unequip();
-				}
-			break;
-			case item_type.active:
-				if(amount == scr_active_get_data(item)){
-					equip = scr_use_active(item);
-					inventory[# 2, tool_slot] = 1;
-				}
-			break;
+		if(type == item_type.tl_n_wep){
+			if(!scr_tw_equip()){
+				scr_tw_unequip();
+			}
 		}
 		
 		alarm[1] = 0.3 * room_speed;
 	}
 	#endregion
 	
-	inv_x   = (-inv_wd + 38) * m; //Reset inv_x
+	inv_x   = scr_approach(inv_x,(-inv_wd + 40) * m,8 * m); //Reset inv_x
 	equip_x = inv_x;
 	
 }else if(obj_ig_menu_controller.state == "inv"){
@@ -59,10 +47,10 @@ if(obj_ig_menu_controller.state == "closed"){
 				}else {
 					selected = 9 + selected mod 3;
 				}
-			}else if(selected == 13){
-				selected = 12;
+			}else if(selected == 13 || selected == 14){
+				selected -= 1;
 			}else if(selected == 12){
-				selected = 13;
+				selected = 14;
 			}
 		}
 	
@@ -72,16 +60,14 @@ if(obj_ig_menu_controller.state == "closed"){
 				if(selected mod 3 < 2){
 					selected++;
 				}else {
-					if(selected == 5){
-						selected = 12;
-					}else if(selected == 8){
-						selected = 13;
-					}else {
-						selected = selected - 2;
+					selected = 12 + selected div 3;
+					
+					if(selected == 15){
+						selected = 9;
 					}
 				}
-			}else if(11 < selected && selected < 14){
-				selected = (selected - 11) * 3;
+			}else if(selected < 15){
+				selected = (selected - 12) * 3;
 			}
 		}
 	
@@ -93,10 +79,10 @@ if(obj_ig_menu_controller.state == "closed"){
 				}else {
 					selected = selected mod 3;
 				}
-			}else if(selected == 12){
+			}else if(selected < 14){
 				selected += 1;
-			}else if(selected == 13){
-				selected -= 1;
+			}else if(selected == 14){
+				selected  = 12;
 			}
 		}
 	
@@ -106,18 +92,14 @@ if(obj_ig_menu_controller.state == "closed"){
 				if(selected mod 3 > 0){
 					selected--;
 				}else {
-					if(selected == 3){
-						selected = 12;
-					}else if(selected == 6){
-						selected = 13;
-					}else {
-						selected = selected + 2;
+					selected = 12 + selected div 3;
+					
+					if(selected == 15){
+						selected = 9;
 					}
 				}
-			}else if(selected == 12){
-				selected = 5;
-			}else if(selected == 13){
-				selected = 8;
+			}else if(selected < 15){
+				selected = (selected - 12) * 3 + 2;
 			}
 		}
 		#endregion
@@ -140,7 +122,7 @@ if(obj_ig_menu_controller.state == "closed"){
 					scr_inv_item_drop();
 				
 				//Consume item by clicking on the player
-				}else if(selected == 16 && _type <= item_type.constellation){
+				}else if(selected == 16 && _type <= item_type.chess_piece){
 					scr_inv_consume(holder);
 			
 					obj_cursor.cursor = true;
@@ -157,14 +139,16 @@ if(obj_ig_menu_controller.state == "closed"){
 					case -1:
 					case 16:
 					break;
-					case tool_slot:
-						if(!equip){
-							if(inventory[# 0,tool_slot] != item_type.active){
+					case 13:
+					case 14:
+						var current = global.body.weapon;
+						
+						if(current != noone){
+							if(current.slot != selected){
 								scr_inv_item_grab(selected);
-							}else {
-								scr_inv_item_grab(selected);
-								inventory[# 2,holder] = 1;
 							}
+						}else {
+							scr_inv_item_grab(selected);
 						}
 					break;
 					default:

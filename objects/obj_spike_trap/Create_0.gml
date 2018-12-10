@@ -1,13 +1,14 @@
 event_inherited();
 
+layer = "Instances";
+
 state = 0;
+
+offs = 12;
 
 on = true;
 
-divi      = stats.def;
-damage    = 15;
-kb_amount = 0;
-ohko      = false;
+type = "Trap";
 
 image_speed = 0;
 

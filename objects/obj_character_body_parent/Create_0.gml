@@ -14,7 +14,8 @@ flr_intr.owner = id;
 
 #region Weapon
 weapon = noone;
-weapon = scr_create_tw(global.weapon,-1);
+scr_inv_set_pos(item_type.tl_n_wep,global.weapon,-1,obj_inventory_controller.tool_slot);
+scr_tw_equip();
 #endregion
 
 visible            = true;

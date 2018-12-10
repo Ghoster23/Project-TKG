@@ -1,4 +1,4 @@
-scr_unique_inst();
+if(scr_unique_inst()) {exit;}
 
 //Status sprites
 status_spr[statuses.poison]  = spr_status_poisoned;

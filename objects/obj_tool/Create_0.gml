@@ -17,6 +17,8 @@ animations = [0,0];
 drawn  = -1;
 stowed = -1;
 
+slot = obj_inventory_controller.tool_slot;
+
 image_speed = 0;
 image_index = 0;
 img_spd     = 0;

@@ -1,5 +1,5 @@
 /// @description Initialize vars
-scr_unique_inst();
+if(scr_unique_inst()) {exit;}
 
 #region Draw variables
 //Widths and Height

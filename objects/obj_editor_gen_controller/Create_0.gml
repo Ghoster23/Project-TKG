@@ -1,5 +1,9 @@
 scr_InitSubMenu();
 
+if(not instance_exists(obj_inventory_controller)){
+	instance_create_layer(x,y,layer,obj_inventory_controller);
+}
+
 //spawn player
 switch global.lvl_room_type{
 	//down

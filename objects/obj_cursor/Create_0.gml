@@ -1,4 +1,4 @@
-scr_unique_inst();
+if(scr_unique_inst()) {exit;}
 
 window_set_cursor(cr_none);
 cursor = true;

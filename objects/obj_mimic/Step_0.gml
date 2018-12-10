@@ -2,7 +2,7 @@ randomize();
 event_inherited();
 
 if(not global.pause){
-	scr_pause_end(5);
+	scr_pause_end(alarm_count);
 	
 	///Enemy Behaevior
 	switch(state){
@@ -32,5 +32,5 @@ if(not global.pause){
 		break;
 	}	
 }else {
-	scr_pause_start(5);
+	scr_pause_start(alarm_count);
 }

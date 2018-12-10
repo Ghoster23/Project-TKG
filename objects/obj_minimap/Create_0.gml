@@ -1,4 +1,4 @@
-scr_unique_inst();
+if(scr_unique_inst()) {exit;}
 
 //Widths and Height
 mm_wd = sprite_get_width( spr_HUD_minimap);

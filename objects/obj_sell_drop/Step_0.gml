@@ -2,7 +2,7 @@
 // You can write your code in this editor
 scr_interactable_step();
 
-if(interacted){
+/*if(interacted){
 	if(global.coins >= cost){
 		global.coins -= cost;
 		
@@ -12,4 +12,4 @@ if(interacted){
 	}else {
 		interacted = false;
 	}
-}
+}*/

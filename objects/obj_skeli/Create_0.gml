@@ -41,4 +41,4 @@ waittime = 0.5*room_speed;
 
 skullt=noone;
 
-scr_pausable_init(10);
+scr_pausable_init(9);
