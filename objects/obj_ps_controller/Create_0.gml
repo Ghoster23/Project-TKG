@@ -32,3 +32,6 @@ scr_part_st_poison_init();
 scr_part_st_frost_init();
 scr_part_st_wet_init();
 scr_part_st_frozen_init();
+scr_part_grass_blades1_init();
+scr_part_grass_blades2_init();
+scr_part_grass_blades3_init();

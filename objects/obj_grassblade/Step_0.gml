@@ -10,3 +10,10 @@ if move==true{
 		image_angle=0;
 	}
 }
+
+if(place_meeting(x,y,obj_damage_dealer)){
+	part_particles_create(global.ps_if, x, y, global.pt_grass_blades1, irandom_range(0,2));
+	part_particles_create(global.ps_if, x, y, global.pt_grass_blades2, irandom_range(0,2));
+	part_particles_create(global.ps_if, x, y, global.pt_grass_blades3, irandom_range(0,2));
+	instance_destroy();
+}

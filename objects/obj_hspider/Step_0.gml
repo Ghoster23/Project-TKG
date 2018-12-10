@@ -125,11 +125,14 @@ if go and not global.pause{
 			solid = false;
 			image_speed = 0;
 			
-			part_type_direction(global.pt_bbits,point_direction(global.body.x,global.body.y,x,y),point_direction(global.body.x,global.body.y,x,y),0,0);
 			part_type_direction(global.pt_hspider_deadbits,point_direction(global.body.x,global.body.y,x,y),point_direction(global.body.x,global.body.y,x,y),0,0);
 			
 			part_particles_create(global.ps_if,x,y,global.pt_smoke,10);
-            part_particles_create(global.ps,x,y,global.pt_bbits,8);
+            
+			repeat(5){
+				instance_create_layer(x,y,layer,obj_barrelbits);
+			}
+			
 			part_particles_create(global.ps,x,y,global.pt_hspider_deadbits,2);
 			
 			mp_grid_clear_cell(mp_grid,x div 32, y div 32);
