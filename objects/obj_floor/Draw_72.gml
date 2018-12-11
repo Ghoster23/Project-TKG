@@ -38,7 +38,7 @@ if (first_time==true && (room == rm_level or room == rm_lvl_editor_test)){
 			
 		}
 	}
-	floor_sprite=sprite_create_from_surface(floor_surface,0,-32,21*32,13*32,false,false,32,95);
+	floor_sprite=sprite_create_from_surface(floor_surface,0,-32,21*32,14*32,false,false,32,95);
 	sprite_index=floor_sprite;
 	surface_reset_target();
 	first_time=false;

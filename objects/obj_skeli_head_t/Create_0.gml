@@ -6,7 +6,7 @@ flash = false;
 image_index = 0;
 
 offset = true;
-offs = 5;
+offs   = sprite_height - sprite_yoffset;
 
 skullrot = 0;
 rotinc= 0;

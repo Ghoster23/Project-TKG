@@ -56,6 +56,7 @@ if go and not global.pause{
 								stats.sdef,
 								2,0);
 			with(skullt){
+				layer = layer_get_id("Instances");
 				physics_apply_impulse(x,y,lengthdir_x(80,other.player_dir),lengthdir_y(80,other.player_dir));
 			}
 			alarm_set(7,waittime);

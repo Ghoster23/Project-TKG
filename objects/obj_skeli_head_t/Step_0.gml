@@ -9,9 +9,9 @@ if global.pause == false{
 	///this is the bit when the the item connects with the ground and decides the bouncin
 
 	z = (zzero + (speedzero*t) + (0.5*a*(t*t)));
-	offs = 11-z;
+	
 	//show_debug_message(string(z));
-	obj_console.console_text += "skull offs - " + string(y + offs) + "\n";
+	//obj_console.console_text += "skull offs - " + string(y + offs) + "\n";
 	if(z<=2){
 		impact = true;
 		t=0.001;
