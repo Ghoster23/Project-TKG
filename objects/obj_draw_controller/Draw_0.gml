@@ -58,9 +58,9 @@ if(ds_exists(ds_depthgrid, ds_type_grid)){
 			depthgrid[# 0, yy] = id;
 			
 			if(not offset){
-				depthgrid[# 1, yy] = y - layer_offs;
+				depthgrid[# 1, yy] = y + layer_offs;
 			}else {
-				depthgrid[# 1, yy] = y + offs - layer_offs;
+				depthgrid[# 1, yy] = y + offs + layer_offs;
 			}
 			
 			yy += 1;
@@ -80,7 +80,7 @@ if(ds_exists(ds_depthgrid, ds_type_grid)){
 		var instanceY  = ds_depthgrid[# 1, yy];
 		
 		#region Particles
-		if(not part_IF_drawn && (instanceY >= -(room_height * PS_layer) || yy == instNum - 1)){
+		if(not part_IF_drawn && (instanceY >= ((l_count - PS_layer) * room_height) || yy == instNum - 1)){
 			part_IF_drawn = true;
 			part_system_drawit(global.ps_if);
 		}
