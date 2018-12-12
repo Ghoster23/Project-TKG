@@ -13,7 +13,7 @@
   menuText[1,8] = "Terrain 8"
   menuText[1,9] = "Terrain 9"  
   
-  menuText[2,0] = 9;
+  menuText[2,0] = 10;
   menuText[2,1] = "obj_bat"
   menuText[2,2] = "obj_mimic"
   menuText[2,3] = "obj_slm_cr"
@@ -22,7 +22,8 @@
   menuText[2,6] = "obj_psnt_arch_body"
   menuText[2,7] = "obj_blue_mage"
   menuText[2,8] = "obj_skeli"
-  menuText[2,9] = "obj_bloob"  
+  menuText[2,9] = "obj_bloob" 
+  menuText[2,10] = "obj_armor_ghost"
   
   menuText[3,0] = 9;
   menuText[3,1] = "obj_heart"

@@ -6,9 +6,7 @@ else{
 	part_type_direction(global.pt_bbits,explosiondir,explosiondir,0,0);
 	part_emitter_burst(global.ps_if,sm,global.pt_smoke,10)
 
-	repeat(5){
-		instance_create_layer(x,y,layer,obj_barrelbits);
-	}
+	scr_physics_particle(5,spr_barrel_bits,0,360);
 
 	part_emitter_destroy(global.ps_if, sm);
 	//sounds

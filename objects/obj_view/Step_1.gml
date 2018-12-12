@@ -34,17 +34,7 @@ switch room {
 	break;
 	
 	case rm_lvl_editor_test :
-		var xx = global.body.phy_position_x;
-		var yy = global.body.phy_position_y;
-		var rx = room_width  / 2;
-		var ry = room_height / 2;
-		var dx = abs(rx - xx);
-		var dy = abs(ry - yy);
-			
-		var dir = point_direction(rx,ry,xx,yy);
-			
-		cam_x_t = rx + (dx / (room_width /2)) * 32 * cos(degtorad(dir));
-		cam_y_t = ry - (dy / (room_height/2)) * 32 * sin(degtorad(dir));
+	
 	break;
 	
 	default:

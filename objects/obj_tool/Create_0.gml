@@ -65,3 +65,6 @@ rd_skills = [0,0,0,0];
 resetting = false;
 
 player_owned = false;
+
+offx = 0;
+offy = 0;

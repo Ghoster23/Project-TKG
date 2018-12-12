@@ -129,6 +129,6 @@ switch state {
 
 offs = offs + owner.offs;
 
-x = owner.phy_position_x + xx;
-y = owner.phy_position_y + yy;
+x = owner.phy_position_x + xx + offx;
+y = owner.phy_position_y + yy + offy;
 #endregion

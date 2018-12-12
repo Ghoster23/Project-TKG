@@ -17,7 +17,7 @@
 "Bishop";"spr_i_chess_piece";3
 "Queen";"spr_i_chess_piece";4
 "King";"spr_i_chess_piece";5
-4;9;0
+4;10;0
 "Wood Stick";"spr_i_tl_n_wep";0
 "Wood Sword";"spr_i_tl_n_wep";1
 "Damaged Wooden Sword";"spr_i_tl_n_wep";2
@@ -27,6 +27,7 @@
 "Bow";"spr_i_tl_n_wep";6
 "Jason's Greatsword";"spr_i_tl_n_wep";7
 "Luna's Umbrella";"spr_i_tl_n_wep";8
+"Spear";"spr_spear";9
 5;11;0
 "Crown of Thorns";"spr_i_equip";0
 "Rod of Asclepius";"spr_i_equip";1

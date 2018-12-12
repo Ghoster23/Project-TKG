@@ -9,6 +9,8 @@ var macros = ds_map_create();
 ds_map_add(macros, vk_backspace, "clear()");
 ds_map_add(macros, ord("Q"),     "quit()");
 ds_map_add(macros, ord("K"),     "killall_active()");
+ds_map_add(macros, ord("1"),     "create_instance_at_cursor(obj_simple_bomb)");
+ds_map_add(macros, ord("2"),     "check_controller()");
 
 
 //print the list of programmed macros

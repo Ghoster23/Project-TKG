@@ -7,3 +7,4 @@
 "scr_skill_shoot";"[50,25,obj_ice_shard,5]";0;"[spr_luna_skills,0]"
 "scr_skill_shoot";"[80,0,obj_freeze_wave,1]";"1";"[spr_luna_skills,1]"
 "scr_skill_stream";"[25,obj_water_stream_node,obj_water_stream_head]";0;"[spr_luna_skills,2]"
+"scr_skill_jab";"[25,5,obj_jab]";0;"[spr_skill_icons,3]"

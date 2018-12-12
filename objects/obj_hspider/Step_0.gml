@@ -129,9 +129,7 @@ if go and not global.pause{
 			
 			part_particles_create(global.ps_if,x,y,global.pt_smoke,10);
             
-			repeat(5){
-				instance_create_layer(x,y,layer,obj_barrelbits);
-			}
+			scr_physics_particle(5,spr_barrel_bits,0,360);
 			
 			part_particles_create(global.ps,x,y,global.pt_hspider_deadbits,2);
 			

@@ -1,4 +1,5 @@
 /// @description shot -> false
 
-shot = false;
-//show_debug_message("end waiting to shoot time");
+state = "reconstruct";
+spear_apear = true;
+alarm_set(10,involn_time);

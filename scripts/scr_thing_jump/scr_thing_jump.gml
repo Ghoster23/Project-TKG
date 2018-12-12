@@ -9,4 +9,4 @@ if(phy_speed <= 6 and z <= 3){
 	modulator = power( exp(1) , -0.2*abs(z)-1 ) + 1;  
 }
 
-draw_sprite_ext(sprite_index,image_index,x - (sprite_width*(clamp(modulator,1,1.3)-1))/2, (y - z) + (sprite_width*(clamp(modulator,1,1.3)-1))/2 ,clamp(modulator,1,1.3),image_yscale+(1-clamp(modulator,1,1.3)),0,c_white,image_alpha);
+draw_sprite_ext(sprite_index,image_index,x - (sprite_width*(clamp(modulator,1,1.3)-1))/2, (y - z) + (sprite_width*(clamp(modulator,1,1.3)-1))/2 ,clamp(modulator,1,1.3),image_yscale+(1-clamp(modulator,1,1.3)),image_angle,c_white,image_alpha);
