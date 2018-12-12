@@ -8,7 +8,7 @@ var item   = argument1;
 var amount = argument2;
 
 if(amount > 0){
-	if(type < 9){
+	if(type < item_type.heart){
 		with(obj_inventory_controller){
 			for(var i = 0; i < 9; i++){
 				var temp_type   = inventory[# 0, i];
