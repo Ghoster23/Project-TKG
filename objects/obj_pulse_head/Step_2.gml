@@ -11,7 +11,7 @@ if(destroyed){
 	sprite_index = -1;
 	
 	path_delete(pulse_path);
-	node.destroyed = true;
+	instance_destroy(node);
 	instance_destroy();
 	
 }else {

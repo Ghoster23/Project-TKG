@@ -68,7 +68,7 @@ with dtt {
 	}
 }
 
-//instance_destroy(dtt);
+instance_destroy(dtt);
 
 return [xx,yy,inst];
 }

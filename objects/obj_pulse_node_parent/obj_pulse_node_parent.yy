@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "obj_pulse_node_parent",
     "eventList": [
-        
+        {
+            "id": "c92706a9-2902-469f-856c-b35d768fd2e9",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "7462b2e3-e655-42fb-a80e-00738708f64c"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
@@ -39,6 +48,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "1827ddcf-eadc-44c4-bb6e-0f4ed78a7111",
+    "spriteId": "00000000-0000-0000-0000-000000000000",
     "visible": false
 }

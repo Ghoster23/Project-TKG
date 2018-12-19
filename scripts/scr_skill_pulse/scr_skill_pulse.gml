@@ -12,7 +12,7 @@ if(not booted_skills[num]) {
 
 switch pulse_vars[0] {
 	case 0: //Prepare
-		pulse_vars[1] = instance_create_layer(x,y,"IF",parameters[1]); //Make the head
+		pulse_vars[1] = instance_create_layer(x,y,"Instances",parameters[1]); //Make the head
 		
 		with(pulse_vars[1]){ //Tell it you own it
 			owner = other.id;

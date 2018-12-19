@@ -10015,6 +10015,14 @@
             }
         },
         {
+            "Key": "d2c6f883-3e02-4656-9f73-226e2693669c",
+            "Value": {
+                "id": "ebd66a27-9375-4b6b-a31e-f7b4740c2725",
+                "resourcePath": "sprites\\spr_dark_pukse_impact\\spr_dark_pukse_impact.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d2da8979-05cf-4bfd-ae55-7e12812dda25",
             "Value": {
                 "id": "61aefff1-976f-4251-a14f-a433051608f9",
