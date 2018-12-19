@@ -20,53 +20,72 @@ switch wep_state {
 	break;
 	
 	case 0: //Holding
-		if(one_handed){
-			//Hand that holds the weapon
-			if((!hand or body.spr_side != 2) and (hand or body.spr_side != 0)){
-				draw_sprite_ext(sprite_index, 5, weapon.x, weapon.y, 1, 1, weapon.image_angle, c_white, 1);
-			}
+		if(weapon != noone){
+			switch handed {
+				case 1: //One
+					#region One-handed
+					//Hand that holds the weapon
+					if((!hand or body.spr_side != 2) and (hand or body.spr_side != 0)){
+						draw_sprite_ext(sprite_index, 5, weapon.x, weapon.y, 1, 1, weapon.image_angle, c_white, 1);
+					}
 			
-			#region Offhand
-			if((global.char == 4 and body.len == 0) or global.char != 4){
-				switch body.spr_side {
-					case 0:
-						if(!hand){
-							draw_sprite(sprite_index, 5, x, y + 1);
+					#region Offhand
+					if((global.char == 4 and body.len == 0) or global.char != 4){
+						switch body.spr_side {
+							case 0:
+								if(!hand){
+									draw_sprite(sprite_index, 5, x, y + 1);
+								}
+							break;
+					
+							case 1:
+								draw_sprite(sprite_index, 5, x + 8 * (hand == 0 ? 1 : -1), y + 1);
+							break;
+					
+							case 2:
+								if(hand){
+									draw_sprite(sprite_index, 5, x, y + 1);
+								}
+							break;
+					
+							case 3:
+								draw_sprite(sprite_index, 5, x + 8 * (hand == 0 ? -1 : 1), y + 1);
+							break;
 						}
-					break;
-					
-					case 1:
-						draw_sprite(sprite_index, 5, x + 8 * (hand == 0 ? 1 : -1), y + 1);
-					break;
-					
-					case 2:
-						if(hand){
-							draw_sprite(sprite_index, 5, x, y + 1);
-						}
-					break;
-					
-					case 3:
-						draw_sprite(sprite_index, 5, x + 8 * (hand == 0 ? -1 : 1), y + 1);
-					break;
-				}
-			}
-			#endregion
+					}
+					#endregion
 			
-			shader_reset();
-			return;
-		}else if(weapon != noone){
-			switch(weapon.item){
-				default:
-					image_index = 4;
-					image_angle = weapon.image_angle;
+					shader_reset();
+					return;
+					#endregion
+				break;
+				case 0: //Two
+					#region Two-handed
+					switch(weapon.item){
+						default:
+							image_index = 4;
+							image_angle = weapon.image_angle;
+							draw_self();
+						break;
+					
+						case tl_n_wep.bow:
+							draw_sprite_ext(spr_bow_hands, weapon.image_index, 
+											weapon.x, weapon.y, 1, weapon.image_yscale, weapon.image_angle, c_white, 1);
+						break;
+					}
+					#endregion
+				break;
+				
+				case 2: //None
+					#region No-hands
+					image_index = body.spr_side;
 					draw_self();
-				break;
-					
-				case tl_n_wep.bow:
-					draw_sprite_ext(spr_bow_hands, weapon.image_index, 
-									weapon.x, weapon.y, 1, weapon.image_yscale, weapon.image_angle, c_white, 1);
+					#endregion
 				break;
 			}
+		} else {
+			image_index = body.spr_side;
+			draw_self();
 		}
 	break;
 }

@@ -5,7 +5,7 @@ var num = argument0;
 
 var parameters = params[num];
 
-var dmg_dl = scr_create_damage_dealer(x, y, parameters[1], owner, false, 
+var dmg_dl = scr_create_damage_dealer(x+offx, y+offy, parameters[1], owner, false, 
 									owner.stat[mult] * (1 + owner.modf[mult]), divi,
 									5, kb_amount);
 

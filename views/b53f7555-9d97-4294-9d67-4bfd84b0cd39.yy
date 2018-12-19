@@ -10,7 +10,8 @@
         "be15132b-7809-4871-8f07-1360c8d3a8ef",
         "2d270c68-b640-47d2-b116-34fafdf68ecc",
         "7f895d0c-14fd-404b-ac9f-326a86a738a3",
-        "12c6f02f-b80d-4749-9b77-fe0aff6e1140"
+        "12c6f02f-b80d-4749-9b77-fe0aff6e1140",
+        "86543ea9-a1ea-4951-bc15-b75fa7afdda2"
     ],
     "filterType": "GMScript",
     "folderName": "Object Draw Scripts",

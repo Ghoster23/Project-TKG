@@ -19,13 +19,12 @@ if(obj_ig_menu_controller.state == "closed"){
 	#endregion
 	
 	#region Tool Slot
-	if(global.key_active[key_id.utilize] && alarm[1] == -1){
+	if(alarm[1] == -1 and selected_tl != p_selected_tl){
+		p_selected_tl = selected_tl;
 		var type = inventory[# 0, tool_slot + selected_tl];
 		
 		if(type == item_type.tl_n_wep){
-			if(!scr_tw_equip()){
-				scr_tw_unequip();
-			}
+			scr_tw_equip();
 		}
 		
 		alarm[1] = 0.3 * room_speed;
@@ -145,6 +144,9 @@ if(obj_ig_menu_controller.state == "closed"){
 						
 						if(current != noone){
 							if(current.slot != selected){
+								scr_inv_item_grab(selected);
+							}else {
+								scr_tw_unequip();
 								scr_inv_item_grab(selected);
 							}
 						}else {

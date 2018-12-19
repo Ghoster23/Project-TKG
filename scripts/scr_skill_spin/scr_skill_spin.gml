@@ -45,7 +45,7 @@ switch spin_vars[0] {
 			var ori = ((ang_off + 45) div 90) mod 4;
 			
 			if(ori != spin_vars[4]){
-				var swing = scr_create_damage_dealer(x, y, parameters[2], owner, owner.ohko, 
+				var swing = scr_create_damage_dealer(x+offx, y+offy, parameters[2], owner, owner.ohko, 
 													owner.stat[mult] * (1 + owner.modf[mult]), divi,
 													5, kb_amount);
 		

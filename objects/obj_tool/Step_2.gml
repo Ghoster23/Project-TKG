@@ -34,18 +34,30 @@ switch state {
 if(not global.pause){
 	#region Animate
 	switch animation {
-		case 0:
+		case 0: //On skill use animation
 			if(image_speed != 0 && executing == -1){
 				image_speed = 0;
 				image_index = 0;
 			}
 		break;
 		
-		case 1:
+		case 1: //Never animated
 		break;
 		
-		case 2:
+		case 2: //Always animated
 			image_speed = img_spd;
+		break;
+		
+		case 3: //Frames per direction
+			image_speed = 0;
+			var a = image_angle;
+			
+			var inc = 360 / image_number;
+			
+			image_index = (image_angle + inc/2) div inc;
+			image_angle = a - image_index * inc;
+			
+			image_yscale = 1;
 		break;
 	}
 	#endregion
@@ -55,45 +67,68 @@ if(not global.pause){
 switch state {
 	case 0:
 		#region Drawn
-		if(one_handed){
-			#region One-handed
-			switch(owner.spr_side){
-				case 0:
-				case 2:
-					var xx = 4;
-					offs = (hand == 1 ? 4 : -4) * (owner.spr_side == 0 ? 1 : -1);
-				break;
-		
-				case 1:
-				case 3:
-					var xx = (owner.spr_side == 1 ? -7 : 7);
-					offs = (owner.spr_side == 1 ? -4 : 4);
-				break;
-			}
-		
-			var yy = 0;
-	
-			if(hand){
-				xx = -xx;
-			}
-			#endregion
-		}else {
-			#region Two-handed
-			var xx = 0;
-			var yy = 0;
+		switch(handed){
+			case 0: //two_handed
+				#region Two-handed
+				var xx = 0;
+				var yy = 0;
 			
-			switch(owner.spr_side){
-				case 0:
-				case 2:
-				case 3:
-					offs =  4;
-				break;
+				switch(owner.spr_side){
+					case 0:
+					case 2:
+					case 3:
+						offs =  4;
+					break;
 				
-				case 1:
-					offs = -4;
-				break;
-			}
-			#endregion
+					case 1:
+						offs = -4;
+					break;
+				}
+				#endregion
+			break;
+			
+			case 1: //one_handed
+				#region One-handed
+				switch(owner.spr_side){
+					case 0:
+					case 2:
+						var xx = 4;
+						offs = (hand == 1 ? 4 : -4) * (owner.spr_side == 0 ? 1 : -1);
+					break;
+		
+					case 1:
+					case 3:
+						var xx = (owner.spr_side == 1 ? -7 : 7);
+						offs = (owner.spr_side == 1 ? -4 : 4);
+					break;
+				}
+		
+				var yy = 0;
+	
+				if(hand){
+					xx = -xx;
+				}
+				#endregion
+			break;
+			
+			case 2: //no_handed
+				#region No-handed
+				var xx = 0;
+				var yy = 0;
+			
+				switch(owner.spr_side){
+					case 3:
+						offs =  4;
+					break;
+				
+					case 0:
+					case 2:
+					case 1:
+						offs = -4;
+					break;
+				}
+				#endregion
+			break;
 		}
 		#endregion
 	break;

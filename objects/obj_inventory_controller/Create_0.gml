@@ -12,7 +12,8 @@ scr_item_types_init();
 holder     = 15;
 tool_slot  = 13;
 consumable = 12;
-selected_tl = 0;
+selected_tl   = 0;
+p_selected_tl = 0;
 
 selected = 0;
 

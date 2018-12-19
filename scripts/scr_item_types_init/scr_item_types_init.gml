@@ -63,6 +63,7 @@ enum tl_n_wep {
 	jason_greatsword,
 	luna_umbrella,
 	spear,
+	nox_grimoire,
 	count
 }
 #endregion

@@ -20,10 +20,6 @@ if(current == noone){
 		}
 	}
 }else {
-	if(current.slot == slot){
-		return false;
-	}
-	
 	with global.body {	
 		//Make new weapon
 		weapon = scr_create_tw(new[1],new[2]);

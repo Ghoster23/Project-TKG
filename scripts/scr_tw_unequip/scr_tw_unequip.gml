@@ -3,12 +3,14 @@ var wep = -1;
 var amt = -1;
 
 with global.body {
-	wep = weapon.item;
-	amt = weapon.amount;
+	if(weapon != noone){
+		wep = weapon.item;
+		amt = weapon.amount;
 	
-	instance_destroy(weapon);
+		instance_destroy(weapon);
 	
-	weapon = noone;
+		weapon = noone;
+	}
 }
 
 with(obj_inventory_controller){

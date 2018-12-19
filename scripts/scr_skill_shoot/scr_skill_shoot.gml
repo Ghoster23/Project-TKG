@@ -5,8 +5,8 @@ var num = argument0;
 var parameters = params[num];
 
 //Shoot		
-var xx  = x + lengthdir_x(sprite_width,angle);
-var yy  = y + lengthdir_y(sprite_width,angle);
+var xx  = x + lengthdir_x(skill_dist,angle) + offx;
+var yy  = y + lengthdir_y(skill_dist,angle) + offy;
 var rad = degtorad(angle);
 
 for(var i = 0; i < parameters[3]; i++){

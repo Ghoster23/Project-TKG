@@ -12,7 +12,7 @@ if(not booted_skills[num]) {
 
 switch stream_vars[0] {
 	case 0: //Prepare		
-		stream_vars[1] = instance_create_layer(x,y,"IF",parameters[2]); //Make the head
+		stream_vars[1] = instance_create_layer(skill_dist,skill_dist,"IF",parameters[2]); //Make the head
 		
 		with(stream_vars[1]){ //Tell it you own it
 			owner = other.id;
@@ -23,8 +23,8 @@ switch stream_vars[0] {
 	
 	case 1: //Shoot
 		///Determine spawn coords
-		var xx   = x + lengthdir_x(sprite_width,angle);
-		var yy   = y + lengthdir_y(sprite_width,angle);
+		var xx   = x + lengthdir_x(skill_dist,angle) + offx;
+		var yy   = y + lengthdir_y(skill_dist,angle) + offy;
 		var rad  = degtorad(angle); ///Projectile movement direction
 		var head = stream_vars[1];
 

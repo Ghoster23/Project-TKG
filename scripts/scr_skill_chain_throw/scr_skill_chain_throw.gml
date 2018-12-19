@@ -23,7 +23,7 @@ switch chain_th_vars[0] {
 		chain_th_vars[2] = chargeup;
 		chargeup = 0;
 		
-		chain_th_vars[1] = scr_create_damage_dealer(x, y,							
+		chain_th_vars[1] = scr_create_damage_dealer(x+offx, y+offy,							
 							parameters[1], owner, owner.ohko,			
 							owner.stat[mult] * (1 + owner.modf[mult]),
 							divi,						  

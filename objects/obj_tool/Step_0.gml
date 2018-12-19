@@ -3,7 +3,8 @@ if(not global.pause){
 	
 	if(instance_exists(owner)){
 		switch(state){
-			case 0: //Drawn
+			case 0: 
+				#region Drawn
 				#region Base Direction
 				if(not player_owned){
 					angle = owner.wep_dir;
@@ -13,8 +14,6 @@ if(not global.pause){
 				#endregion
 			
 				//Mechanics
-				
-				//Execute skill
 				if(executing != -1){
 					#region Execute Skill
 					if(skills[executing] != -1){
@@ -84,6 +83,7 @@ if(not global.pause){
 					}
 					#endregion
 				}
+				#endregion
 			break;
 			
 			case 1: //Stowed

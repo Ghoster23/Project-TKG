@@ -44,7 +44,7 @@ with tl {
 		image_speed = 0;
 	}
 	
-	one_handed = data[4];
+	handed = data[4];
 	
 	charge_scr = data[5];
 	
@@ -75,7 +75,18 @@ with tl {
 		}
 	}
 	
+	//Cooldowns
 	cds = data[9];
+	
+	skill_dist = sprite_width * 3/4;
+	
+	#region Skill Distance Exceptions
+	switch item {
+		case tl_n_wep.nox_grimoire:
+			skill_dist = skill_dist / 2;
+		break;
+	}
+	#endregion
 }
 	
 return tl;
